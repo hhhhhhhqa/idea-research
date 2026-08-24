@@ -29,6 +29,7 @@ def parse_substack_feed(
     collected_at = now.isoformat()
     parsed = feedparser.parse(xml)
     items: list[SignalItem] = []
+    source_type = str(publication.get("source_type") or "substack")
     for entry in parsed.entries:
         link = str(entry.get("link") or "")
         published = iso_datetime(entry.get("published") or entry.get("updated"), collected_at)
@@ -41,8 +42,8 @@ def parse_substack_feed(
         item_key = str(entry.get("id") or entry.get("guid") or link or entry.get("title"))
         items.append(
             SignalItem(
-                id=stable_id("substack", item_key),
-                source_type="substack",
+                id=stable_id(source_type, item_key),
+                source_type=source_type,
                 source_name=str(publication.get("name") or parsed.feed.get("title") or publication.get("url")),
                 title=clean_html(entry.get("title")) or "Untitled",
                 url=link,
@@ -50,7 +51,10 @@ def parse_substack_feed(
                 collected_at=collected_at,
                 body=body,
                 author=str(entry.get("author") or publication.get("author") or ""),
-                metadata={"publication_url": publication.get("url", "")},
+                metadata={
+                    "publication_url": publication.get("url", ""),
+                    "publication_platform": publication.get("platform", "substack"),
+                },
             )
         )
         if len(items) >= max_items:
@@ -66,7 +70,7 @@ def collect_substack(config: dict[str, Any], client: httpx.Client | None = None)
         result.notes.append("No Substack publications configured")
         return result
     owns_client = client is None
-    client = client or httpx.Client(timeout=30, follow_redirects=True, headers={"User-Agent": "ai-signal-research/0.1"})
+    client = client or httpx.Client(timeout=30, follow_redirects=True, headers={"User-Agent": "idea-research/0.1"})
     try:
         for raw in publications:
             publication = {"url": raw} if isinstance(raw, str) else raw

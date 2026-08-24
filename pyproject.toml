@@ -3,16 +3,19 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "ai-signal-research"
+name = "idea-research"
 version = "0.1.0"
 description = "Agent-first signal collection and personalized public-equity research digests"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+  "beautifulsoup4>=4.12,<5",
   "feedparser>=6.0.11,<7",
   "httpx>=0.27,<1",
   "PyYAML>=6.0.2,<7",
   "yfinance>=0.2.65,<2",
+  # Cookie-based X/Twitter scraping transport via TWITTER_COOKIES (auth_token + ct0).
+  "twscrape>=0.20,<1",
 ]
 
 [project.optional-dependencies]
@@ -22,10 +25,10 @@ dev = [
 ]
 
 [project.scripts]
-ai-signal = "ai_signal.cli:main"
+idea-research = "idea_research.cli:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/ai_signal"]
+packages = ["src/idea_research"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

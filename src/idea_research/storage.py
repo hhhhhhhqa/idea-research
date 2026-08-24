@@ -51,7 +51,7 @@ def build_feed(
             "total": len(items),
             **{
                 name: sum(1 for item in items if item.source_type == name)
-                for name in ("substack", "reddit", "x", "price")
+                for name in ("substack", "rss", "reddit", "x", "price")
             },
         },
         "items": [item.to_dict() for item in items],

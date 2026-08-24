@@ -2,11 +2,12 @@ name: AI 二级市场 idea generation
 language: zh-CN
 detail: standard
 report_focus: >-
-  寻找未来 1–12 周可能改变上市公司盈利预期、估值叙事或资金关注度的 AI 产业信号；
-  优先识别市场尚未充分定价的变化，不把热度本身当作投资结论。
+  展示 AI、互联网与软件二级市场相关来源在当日说了什么；
+  不对来源或观点打分，也不把热度本身当作投资结论。
 
 enabled_sources:
   - substack
+  - rss
   - reddit
   - x
   - price
@@ -15,9 +16,15 @@ lookback_hours:
   daily: 36
   weekly: 192
 
-max_items:
-  daily: 30
-  weekly: 80
+reddit_discussions:
+  enabled: true
+  subreddit: wallstreetbets
+  max_symbols: 3
+  max_hot_posts: 3
+  min_mentions: 1
+  # WSB is summarized as a separate attention signal instead of competing with
+  # research articles for the main report's limited item slots.
+  rollup_only: true
 
 # 留空表示不过滤；填入后，非价格内容至少命中一个词才进入上下文。
 include_keywords: []
@@ -96,10 +103,3 @@ watchlist:
   - ticker: 2513.HK
     name: Zhipu AI
     aliases: [智谱, GLM]
-
-ranking:
-  source_weights:
-    substack: 2.0
-    reddit: 1.0
-    x: 1.5
-    price: 1.0

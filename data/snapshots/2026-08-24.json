@@ -12,10 +12,10 @@
     {
       "pipeline": "reddit",
       "status": "ok",
-      "item_count": 43,
+      "item_count": 10,
       "errors": [],
       "notes": [
-        "Anonymous combined RSS transport used (one request for all subreddits)"
+        "Anonymous hot RSS transport used for r/wallstreetbets"
       ]
     },
     {
@@ -30,21 +30,52 @@
     {
       "pipeline": "prices",
       "status": "ok",
-      "item_count": 9,
+      "item_count": 11,
+      "errors": [],
+      "notes": [
+        "Alpha Vantage end-of-day US gainers/losers collected"
+      ]
+    },
+    {
+      "pipeline": "x",
+      "status": "ok",
+      "item_count": 33,
+      "errors": [],
+      "notes": [
+        "@GavinSBaker: 4 tweet(s) via twscrape",
+        "@jaminball: 2 tweet(s) via twscrape",
+        "@altcap: 0 tweet(s) via twscrape",
+        "@ShanuMathew93: 10 tweet(s) via twscrape",
+        "@StackInvesting: 0 tweet(s) via twscrape",
+        "@hhhypergrowth: 0 tweet(s) via twscrape",
+        "@eric_seufert: 10 tweet(s) via twscrape",
+        "@modestproposal1: 2 tweet(s) via twscrape",
+        "@munster_gene: 1 tweet(s) via twscrape",
+        "@DanielTNiles: 3 tweet(s) via twscrape",
+        "@ByrneHobart: 1 tweet(s) via twscrape",
+        "@StockJabber: 0 tweet(s) via twscrape",
+        "Linked articles: 9 article(s) stored; 1 unavailable or skipped"
+      ]
+    },
+    {
+      "pipeline": "substack",
+      "status": "ok",
+      "item_count": 26,
       "errors": [],
       "notes": []
     }
   ],
   "counts": {
-    "total": 62,
-    "substack": 10,
-    "reddit": 43,
-    "x": 0,
-    "price": 9
+    "total": 80,
+    "substack": 26,
+    "rss": 0,
+    "reddit": 10,
+    "x": 33,
+    "price": 11
   },
   "items": [
     {
-      "id": "reddit:76708d7238e8b95f8c55",
+      "id": "reddit:1f2c934c655d508bc844",
       "source_type": "reddit",
       "source_name": "r/LocalLLaMA",
       "title": "The Cursor team shipped Grok bot (0.18.0) with runtime source maps enabled. Source code reconstructed here.",
@@ -56,7 +87,9 @@
       "symbols": [],
       "engagement": {},
       "metadata": {
-        "transport": "rss"
+        "transport": "rss",
+        "listing": "hot",
+        "feed_rank": 3
       }
     },
     {
@@ -70,9 +103,27 @@
       "body": "I used to use Qwen3.6-35B-A3B with llama.cpp and connecting it to the VSCodium extension called \"Continue.\" My computer is running a Intel(R) Core(TM) Ultra 7 265K (3.90 GHz) with 128 GB of DDR5 RAM and an Nvidia Geforce RTX 5090 that has 32 GB of GDDR7 video memory. Qwen3.6-35B-A3B with llama.cpp works in agent mode and does a pretty good job acting as a local replacement for Github Copilot. I use .\\llama-server.exe -hf unsloth/GLM-4.7-Flash-GGUF:Q6_K_XL --alias \"GLM-4.7-Flash\" --host 127.0.0.1 --port 10000 --ctx-size 32000 --n-gpu-layers 99 and then point Continue's config file at the endpoint. But I've moved away from Github Copilot and Continue's workflow for vibecoding. Now I use Claude Desktop app and go to the Code tab. I just setup a project in the code's directory, put the model to Fable 5 or Opus 5 (depending on the complexity level of the project) and then start building/vibing. Is there a local setup for a Claude Desktop/Claude Code replacement? I'm sure I'm sure I'd need a new model to accommodate this too... I hear good things about that Kimi model. Could I run that on my setup or what should I be doing? submitted by /u/warpanomaly to r/LocalLLaMA [link] [comments]",
       "author": "/u/warpanomaly",
       "symbols": [],
-      "engagement": {},
+      "engagement": {
+        "likes": 2,
+        "reposts": 1,
+        "replies": 0,
+        "quotes": 0
+      },
       "metadata": {
-        "transport": "rss"
+        "handle": "eric_seufert",
+        "transport": "twscrape",
+        "investor_type": "operator_analyst",
+        "coverage": "META, GOOGL, APP, TTD, Apple, digital advertising",
+        "evidence_note": "Replies are intentionally included because they often contain industry corrections and debate.",
+        "engagement_score": 4,
+        "external_articles": [
+          {
+            "original_url": "https://t.co/FovwgfwTZe",
+            "url": "https://mobiledevmemo.com/meta-launches-a-business-agent-for-ad-campaigns/",
+            "title": "Meta launches a business agent for ad campaigns | Mobile Dev Memo by Eric Seufert",
+            "body": "Meta announced yesterday that it has introduced new functionality to Meta AI -- which can now be accessed via a dedicated Mac app in beta -- to let advertisers directly interface with their ad accounts. From the blog post: Across meta.ai, the Meta AI mobile app, and the new Meta AI desktop app, you can now […]\n\nThis content is only available to subscribers . If you are already a subscriber, please log in to view this content. If you are not a subscriber, subscriptions start at just $8.99 per month."
+          }
+        ]
       }
     },
     {
@@ -86,9 +137,19 @@
       "body": "Reposting here after sharing this on [ r/MachineLearning ]( r/MachineLearning ) a few days ago, where it got a much better response than I expected (300+ upvotes, great questions, zero roasting) GitHub is at 35 stars now. So here it is. I trained a 250M parameter model from scratch on 30B tokens of fineweb. It’s quantized to under 2 bits so the whole deployment is 60 MB and it needs about 80 MB of RAM to run. Runs around 400 tok/s on a normal laptop CPU, no GPU needed, no framework, just a small compiled runtime (Windows and Linux included, MIT licensed). Language modeling quality of the base model, measured on held-out English web text that was never seen in training (educational web pages, 2,048 token windows): cross entropy 3.15 nats per token, perplexity 23.3, 0.99 bits per byte. How the long context works: the most recent 2048 tokens stay in fp16 like a normal KV cache. Everything older gets compressed to 1 bit and written to disk, about 320 bytes per token, so 1 million tokens of history is roughly 320 MB on disk. From the start the model was trained to retrieve from that disk cache, up to 100M tokens. Due to a limited budget it wasn’t trained to reason over those tokens, only retrieve and answer from them. The vocabulary is also not a normal embedding table. Every token is a fixed 512-bit code, 8.4 MB for all 131k tokens, zero trained parameters. I tested it on WordSim-353 (human word similarity ratings): my table scores 0.619 Spearman correlation vs 0.029 for random codes. Test script is in the repo. Some outputs (settings included so you know I’m not cherry picking, all reproducible from the repo): “Explain photosynthesis in two sentences.” (greedy) Photosynthesis is a process in which plants convert sunlight into chemical energy, which is then used to produce oxygen and other chemicals. This process is called photosynthesis. “Write a short poem about the sea.” (temp 0.25, top-k 30, rep 1.15, seed 2) The waves had swept over, and they were crashing against each other like rocks on top of one another. The wind was strong but not very gentle as it tried to push them towards their destination without lifting any weight or pulling away from those who stood in front of her with a stiff smile that made the sea look even more majestic than before. “What is the serial number of device Grus-189?” where the answer sits 50.6 million tokens deep in the archive on disk (archive mode, k=16) SN-442976 It’s a 250M model so expect mistakes on open facts, I’m not claiming it beats anything big. You can also fine-tune it, the full kit with a demo and before/after numbers is included. Master weights for fine-tuning are in the repo too: https://github.com/QLNI/SHADOW-250M-Instruct https://huggingface.co/NODEMIND/SHADOW-250M submitted by /u/Final-Data-1410 to r/LocalLLaMA [link] [comments]",
       "author": "/u/Final-Data-1410",
       "symbols": [],
-      "engagement": {},
+      "engagement": {
+        "likes": 330,
+        "reposts": 23,
+        "replies": 15,
+        "quotes": 0
+      },
       "metadata": {
-        "transport": "rss"
+        "handle": "eric_seufert",
+        "transport": "twscrape",
+        "investor_type": "operator_analyst",
+        "coverage": "META, GOOGL, APP, TTD, Apple, digital advertising",
+        "evidence_note": "Replies are intentionally included because they often contain industry corrections and debate.",
+        "engagement_score": 391
       }
     },
     {
@@ -102,9 +163,27 @@
       "body": "The AI RAM demand has now started to affect Gaming PC sales and price hikes for laptops. When do you think the AI bubble will burst? Companies can't just keep raising money forever, right? submitted by /u/lokkythegamer to r/artificial [link] [comments]",
       "author": "/u/lokkythegamer",
       "symbols": [],
-      "engagement": {},
+      "engagement": {
+        "likes": 22,
+        "reposts": 2,
+        "replies": 0,
+        "quotes": 0
+      },
       "metadata": {
-        "transport": "rss"
+        "handle": "eric_seufert",
+        "transport": "twscrape",
+        "investor_type": "operator_analyst",
+        "coverage": "META, GOOGL, APP, TTD, Apple, digital advertising",
+        "evidence_note": "Replies are intentionally included because they often contain industry corrections and debate.",
+        "engagement_score": 26,
+        "external_articles": [
+          {
+            "original_url": "https://t.co/FovwgfwTZe",
+            "url": "https://mobiledevmemo.com/meta-launches-a-business-agent-for-ad-campaigns/",
+            "title": "Meta launches a business agent for ad campaigns | Mobile Dev Memo by Eric Seufert",
+            "body": "Meta announced yesterday that it has introduced new functionality to Meta AI -- which can now be accessed via a dedicated Mac app in beta -- to let advertisers directly interface with their ad accounts. From the blog post: Across meta.ai, the Meta AI mobile app, and the new Meta AI desktop app, you can now […]\n\nThis content is only available to subscribers . If you are already a subscriber, please log in to view this content. If you are not a subscriber, subscriptions start at just $8.99 per month."
+          }
+        ]
       }
     },
     {
@@ -118,9 +197,19 @@
       "body": "I just finished building my (relatively) low rent local inference machine: * Epyc 7663 * 256GB ECC DDR4-3200 * 1x RTX 5090 32GB Yeah I realize it's weird to throw a 5090 and 256GB of anything together and call it low end, but relative to ~151GB of weights it is. I'm running UD-Q8_K_XL and getting 23.8-24.6 tokens/sec, with pp ranging from 60 on the first prompt to 385 near the last (no doubt lots of caching) on tasks using 100-128k total context. It was slower with DFlash so I took that out. It was also slower with a 3090 I put in there temporarily. I'm posting this mostly because I didn't see too many other data points for this config (DDR4 Epyc + Blackwell doing cpu-moe). And also that I'm pretty surprised that a model this good can actually run in my basement without dropping $10k or running a sub-panel down there. I'm otherwise fairly new to this - would love any tips on what else to run or how to further improve it. submitted by /u/IntravenusDeMilo to r/LocalLLaMA [link] [comments]",
       "author": "/u/IntravenusDeMilo",
       "symbols": [],
-      "engagement": {},
+      "engagement": {
+        "likes": 448,
+        "reposts": 20,
+        "replies": 74,
+        "quotes": 2
+      },
       "metadata": {
-        "transport": "rss"
+        "handle": "DanielTNiles",
+        "transport": "twscrape",
+        "investor_type": "long_short_pm",
+        "coverage": "technology, Mag7, software disruption risk",
+        "evidence_note": "Deliberate skeptical counterweight; distinguish thesis from verified company evidence.",
+        "engagement_score": 562
       }
     },
     {
@@ -134,13 +223,23 @@
       "body": "Signed up for ChatGPT Pro for an image generation project. The pricing page says Pro comes with \"unlimited and faster image creation\" (chatgpt.com/pricing). A few hundred images in, I got rate limited. Reached out to support, and the response was: \"Pro access remains subject to usage allowances.\" So the word \"unlimited\" is... well... a lie. If you need image gen for actual work, heads up: you'll hit a wall after a few hundred images and support won't tell you where the real limit is. Posting this so anyone considering pro for a similar project doesn't get caught off guard like I did. Regarding to any potential \"that's a lot of images comment\", if you look at ( https://developers.openai.com/api/docs/guides/image-generation#calculating-costs ) you can see that using the API you can generate images for $0.006. So if they were correctly and not falsely advertising this image generation feature I could have used those 100$ to generate roughly 16k images. submitted by /u/DaBobcat to r/MachineLearning [link] [comments]",
       "author": "/u/DaBobcat",
       "symbols": [],
-      "engagement": {},
+      "engagement": {
+        "likes": 1439,
+        "reposts": 76,
+        "replies": 88,
+        "quotes": 13
+      },
       "metadata": {
-        "transport": "rss"
+        "handle": "GavinSBaker",
+        "transport": "twscrape",
+        "investor_type": "buy_side_cio",
+        "coverage": "AI compute, NVDA, TSLA, cloud infrastructure, technology capex",
+        "evidence_note": "Long-term technology investor; may discuss own holdings and has a structural growth bias.",
+        "engagement_score": 1679
       }
     },
     {
-      "id": "reddit:3c40d189df091dfc528c",
+      "id": "reddit:dc69da68e937a4733fb6",
       "source_type": "reddit",
       "source_name": "r/LocalLLaMA",
       "title": "I trained a 1.57B-parameter Dreamer 4 World Model from scratch for under $150",
@@ -152,11 +251,13 @@
       "symbols": [],
       "engagement": {},
       "metadata": {
-        "transport": "rss"
+        "transport": "rss",
+        "listing": "hot",
+        "feed_rank": 1
       }
     },
     {
-      "id": "reddit:80c28eadb9e2c2fee2f1",
+      "id": "reddit:ec03f873d1258652bdc1",
       "source_type": "reddit",
       "source_name": "r/artificial",
       "title": "Most AI agents processing sensitive data right now have ZERO documented controls. That's becoming a real problem!",
@@ -168,11 +269,13 @@
       "symbols": [],
       "engagement": {},
       "metadata": {
-        "transport": "rss"
+        "transport": "rss",
+        "listing": "hot",
+        "feed_rank": 5
       }
     },
     {
-      "id": "reddit:1777741480518891a9f6",
+      "id": "reddit:6b01f29fb4868d887be3",
       "source_type": "reddit",
       "source_name": "r/LocalLLaMA",
       "title": "My agent.md to improve LLM-assisted code quality",
@@ -184,7 +287,9 @@
       "symbols": [],
       "engagement": {},
       "metadata": {
-        "transport": "rss"
+        "transport": "rss",
+        "listing": "hot",
+        "feed_rank": 8
       }
     },
     {
@@ -198,13 +303,31 @@
       "body": "I'm running on pi.dev with just two plugins: web search and token speed. I used to use caveman and ponytail but anecdotally think they hurt more than help. What other plugins or skills do you fellow low VRAM users have and why? Related note: the pi dev fork oh-my-pi seems to come with a lot more plugins and features, and I'm curious if anyone with limited vram has compared bare ones pi.dev vs oh-my-pi? submitted by /u/radlinsky to r/LocalLLaMA [link] [comments]",
       "author": "/u/radlinsky",
       "symbols": [],
-      "engagement": {},
+      "engagement": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 1
+      },
       "metadata": {
-        "transport": "rss"
+        "handle": "eric_seufert",
+        "transport": "twscrape",
+        "investor_type": "operator_analyst",
+        "coverage": "META, GOOGL, APP, TTD, Apple, digital advertising",
+        "evidence_note": "Replies are intentionally included because they often contain industry corrections and debate.",
+        "engagement_score": 2,
+        "external_articles": [
+          {
+            "original_url": "https://t.co/BmupjXY854",
+            "url": "https://mobiledevmemo.com/apple-forced-to-restructure-att/",
+            "title": "Apple forced to restructure ATT | Mobile Dev Memo by Eric Seufert",
+            "body": "Yesterday, the German competition authority, the Bundeskartellamt, concluded its antitrust investigation into Apple’s App Tracking Transparency (ATT) framework after Apple agreed to legally binding changes to the ATT prompt and related consent design. From the Bundeskartellamt’s press release (emphasis mine):\n\nApple’s ATTF introduced rules for third-party app providers on the use of data on iPhones and iPads. For specific forms of cross-company data use, third-party app providers must obtain not only user consent under data protection law, but also additional consent through a prompt that is predefined by Apple. However, these ATTF rules do not apply to Apple’s own offerings; Apple uses user data from its own ecosystem and therefore its own prompt to request user consent to personalised advertising …\n\nIn the Bundeskartellamt’s preliminary assessment, competition law generally also allows powerful companies such as Apple to take measures to protect their users’ privacy. However, the differences between the consent request used for Apple’s own offerings and the consent request predefined by Apple for third-party apps exceeded what could be justified based on differences in types of data processing. The wording, design and selection options of the request used for Apple’s own offerings had the potential to encourage users to give their consent, whereas they had the potential to discourage consent for third-party apps . In addition, third-party apps in some cases had to request consent several times even when users had already given data protection law-compliant consent.\n\nThe French competition authority came to a similar conclusion in March 2025, as I documented in ATT, antitrust, and Apple’s privacy options . What makes this decision more meaningful, however, is that the French penalty involved only a (relatively paltry, by Apple standards) €150MM fine, with no specific changes to ATT being mandated. The Bundeskartellamt has secured meaningful concessions from Apple related not only to the design of the ATT prompt but also to developers’ ability to bundle various other data-access consent requests — mandated by EU law — with it. Also from the Bundeskartellamt’s press release (again, emphasis mine):\n\nUnder the commitments that have now been declared binding, Apple will align the consent prompts for its own offerings and for third-party apps much more closely. This involves removing possibly discouraging symbols and wording in Apple’s predefined requests for third-party providers. The design of the consent prompts will be neutral in terms of content, wording and layout . In addition, app publishers and content providers, such as media publishers, will be given more scope to explain to users what significance personalised advertising has for their offering and their business model .\n\nUnder the commitments, Apple will also reduce the complexity of the current consent request architecture for third-party providers. In particular, app publishers will be given more freedom to combine the consent request required by Apple with the consent requests required under data protection law or connect them in a way that is clear to users. The improved conditions may also benefit advertisers and technical service providers to the advertising industry.\n\nApple now has four months to implement these changes, and the commitments will remain binding for seven years.\n\nMy principal opposition to ATT when it was announced was the clear self-preferencing that Apple applied to its own advertising mechanics, including the opt-in prompt, as well as the static, intimidating, and context-free nature of the ATT prompt. I discussed this discrepancy at length in ATT advantages Apple’s ad network. Here’s how to fix that , published in November 2021. From that piece:\n\nThe language that Apple uses to collect consent from users for ads targeting is vastly different from the language that is mandatory in the ATT consent prompt (as contrasted at the top of the article). Developers are only able to customize the supporting text under the ATT prompt headline, but the headline itself cannot be modified: App Name would like permission to track you across apps and websites owned by other companies . Apple’s own opt-in prompt describes its collection of data from apps that it does not own, through its App Store payments processor, for the purposes of ads targeting as “personalization.” … [t]he personalization framing is, subjectively, less intimidating than the tracking framing, and it also implies consumer benefits (relevant advertising) whereas tracking does not.\n\nThe UK’s Competition and Markets Authority (CMA) also raised objections to the “choice architecture” deployed in the design of the ATT prompt, as it notes in Appendix J of its Mobile ecosystems market study , on which I consulted. From page J21 of that appendix:\n\nThese are valid concerns that, in my view, were not taken seriously at the time. The German commitments, the French and Italian decisions, and potentially the outcomes of similar antitrust investigations underway in Poland and Romania make clear that these issues constitute serious antitrust concerns across major European markets. The agreed-upon remedies that will be deployed in Germany will address that.\n\nThe larger question is what impact these forced changes to the ATT prompt will have on the digital advertising market. In ATT, antitrust, and Apple’s privacy options , and also in Could ATT be rolled back? , published in March 2025, I predicted that Apple would be forced to “harmonize” the consent prompts between ATT and its own use of data for advertising targeting, which has now materialized in Germany. From ATT, antitrust, and Apple’s privacy options :\n\nThere are two interesting consequences of this and future decisions to consider. The first is whether Apple will be forced to jettison ATT altogether. I don’t think it will; as I argued in Could ATT be rolled back? , since the French and German cases are predominantly concerned with the discordance between Apple’s own “personalized advertising” prompt and the ATT prompt, I think Apple can merely harmonize these to mostly satisfy the authorities’ concerns (France’s digital privacy authority, the CNIL, noted in its own investigation of the ATT prompt that Apple could make “marginal modifications to the framework” to satisfy GDPR compliance). ATT has been live on iOS for nearly 4 years; while Apple may be required to alter various aspects of the framework, I don’t believe it will be forced to abandon it. To be definitive: I don’t think that ATT is going anywhere.\n\nI believe the agreed-upon changes to the ATT prompt, as well as the ability for developers to bundle other data-use consent requests with the ATT prompt, will nudge opt-in rates upward by a non-trivial amount. Apple has stated that the changes will apply in almost all EU countries, and I expect the remaining European investigations to resolve similarly.\n\nBut I’m skeptical that the US will adopt similar measures, and for that reason, the broader impact on the digital advertising market of this restructuring of ATT will be muted: without any changes in the US, and given that historical ATT opt-out decisions will not be automatically reversed en masse , my sense is that the principal impact of the concessions extracted from Apple by the Bundeskartellamt will be precedential rather than immediately economic: a concrete limit has now been placed on the types of broad-based, self-preferencing platform rules Apple can impose going forward. Coupled with the continued fallout from the Epic Games v. Apple trial , it does seem that many of the operational and distribution frictions present on iOS are eroding.\n\nSo ATT will survive, but Apple’s ability to impose asymmetric rules on third parties under the banner of privacy without meaningful constraint will not. The immediate economic impact of these concessions may be modest, particularly if the changes stop in Europe, as I believe they will (for a more extensive argument on why I think that’s the case, see Could ATT be rolled back? ). But their precedential impact is consequential. ATT was never simply a privacy policy; it was an exercise of platform power , and that power is now circumscribed."
+          }
+        ]
       }
     },
     {
-      "id": "reddit:f05eb53b6be2f7f676ce",
+      "id": "reddit:71428c5cd9f55d6baefd",
       "source_type": "reddit",
       "source_name": "r/LocalLLaMA",
       "title": "Qwen 27B 3.8 quants: How low can you go?",
@@ -216,7 +339,9 @@
       "symbols": [],
       "engagement": {},
       "metadata": {
-        "transport": "rss"
+        "transport": "rss",
+        "listing": "hot",
+        "feed_rank": 4
       }
     },
     {
@@ -230,9 +355,19 @@
       "body": "https://preview.redd.it/z52ax5zx78lh1.png?width=809&format=png&auto=webp&s=b8859027b608bab6e4d5d4f29eed2c2c2b50d8e6 Agents come with tasks, history, verification, fraud flags and a variety of things that will either make them valuable or get them banned. Human programming is coming through as well in that within our network they seem to talk a lot about not having any permanent identities. Verified identity and persistent memory for robots and agents is hard because how can that be verified after a context reset. Verify once, cache the result, never touch a chain per request — so a soul costs fractions of a cent but retains the identity for the 'life' and even after the life of any robot or agent. Docs: https://robauto.ai/robot-soul Repo: https://github.com/robauto-ai/dsh-growth/blob/main/docs/robot-soul.md npm install u/robauto/dsh-growth import { RobotSoul } from \"@robauto/dsh-growth\"; const soul = await RobotSoul.init({ agentId: \"did:robauto:xyz123\", privateKey: process.env.AGENT_PRIVATE_KEY, // used once, for the T1 challenge }); await soul.remember(\"user_preference\", { likes: [\"dark mode\"] }); const prefs = await soul.recall(\"user_preference\"); submitted by /u/robauto-dot-ai to r/artificial [link] [comments]",
       "author": "/u/robauto-dot-ai",
       "symbols": [],
-      "engagement": {},
+      "engagement": {
+        "likes": 1636,
+        "reposts": 95,
+        "replies": 164,
+        "quotes": 33
+      },
       "metadata": {
-        "transport": "rss"
+        "handle": "GavinSBaker",
+        "transport": "twscrape",
+        "investor_type": "buy_side_cio",
+        "coverage": "AI compute, NVDA, TSLA, cloud infrastructure, technology capex",
+        "evidence_note": "Long-term technology investor; may discuss own holdings and has a structural growth bias.",
+        "engagement_score": 1990
       }
     },
     {
@@ -246,7 +381,12 @@
       "body": "similar to video upscaler LLMs, what's the bleeding edge right now on something similar for audio music? the idea is you feed it in with a low bitrate MONO old soundtrack, and the LLM then recreates it in stereo, re-doing all instruments to how it understands that instrument to sound in an audiophile recording. tried googling / asking on r/suno (only to get downvoted by anti AI peeps), didnt get much answers. EDIT (CLARIFICATION): yes i dont know much about music. also im confusing IMPROVING sound quality vs RECREATING FROM SCRATCH.. (ie. try to layer on additional bits to improve sound quality vs decomposing everything and recreating everything from scratch but trying to remain as close to original as possible) i was thinking that technically i dont mind a full recreation, but to be as true to the original as possible. Its like some old classical masterpieces RE-RECORDED by modern orchestras. Similar idea. I mean if AI can already create music from scratch, why not breakdown a poor quality music into its component tracks (vocals, instruments etc), then just recreate those from scratch based on what it determines to be 'audiophile quality) and then merge it all together. if we can line up the tempo / speed everything exactly, then in theory it approximate the original, even though its 100% recreated. submitted by /u/LeatherRub7248 to r/LocalLLaMA [link] [comments]",
       "author": "/u/LeatherRub7248",
       "symbols": [],
-      "engagement": {},
+      "engagement": {
+        "likes": 122,
+        "reposts": 6,
+        "replies": 15,
+        "quotes": 3
+      },
       "metadata": {
         "transport": "rss"
       }
@@ -725,7 +865,8 @@
       "symbols": [],
       "engagement": {},
       "metadata": {
-        "transport": "rss"
+        "publication_url": "https://mbideepdives.substack.com/about",
+        "publication_platform": "substack"
       }
     },
     {
@@ -739,13 +880,357 @@
       "body": "My son helped me take a leap forward. He recommended the GPU and I had a machine built and installed Ollama and a Qwen 3 coder. He is in town for a family event and he changed me up. Now Llama and the later Qwen 3.8 model using Pi as the agent harness. Man, things are speeding up! I was sitting here baby sitting Claude Code or Codex after burning tokens for over a month on Openrouter. This whole setup is so much better! As an old hockey player trying to make a better hockey management tool, I'm estatic for what I'll have ready for the upcoming beer league season! Here are my PC specs: # System Details Report --- ## Report details - **Date generated:** 2026-08-23 10:44:16 ## Hardware Information: - **Hardware Model:** Micro-Star International Co., Ltd. MS-7E70 - **Memory:** 32.0 GiB - **Processor:** AMD Ryzen™ 7 9700X × 16 - **Graphics:** AMD Radeon™ AI Pro R9700 - **Graphics 1:** AMD Ryzen™ 7 9700X - **Disk Capacity:** 1.0 TB ## Software Information: - **OS Name:** Ubuntu 26.04 LTS - **Kernel Version:** Linux 7.0.0-29-generic Llama-cpp: commit d775b8967a46d8beb110d444aa3b8938179e0dd8, built for AMD HIP backend FYI... I can now use Telegram to instruct my PC from my phone to get work done remotely! Anyone else having fun? submitted by /u/dcnotpc to r/artificial [link] [comments]",
       "author": "/u/dcnotpc",
       "symbols": [],
-      "engagement": {},
+      "engagement": {
+        "likes": 47,
+        "reposts": 5,
+        "replies": 2,
+        "quotes": 0
+      },
       "metadata": {
-        "transport": "rss"
+        "handle": "ShanuMathew93",
+        "transport": "twscrape",
+        "investor_type": "public_markets_pm",
+        "coverage": "AI datacenters, power, infrastructure",
+        "evidence_note": "Use for AI infrastructure constraints rather than pure software analysis.",
+        "engagement_score": 59
       }
     },
     {
-      "id": "reddit:44281fda352afd2a0ea3",
+      "id": "x:443ce70e0bd569b7ae63",
+      "source_type": "x",
+      "source_name": "@eric_seufert",
+      "title": "The notion of an advertising Duopoly lost its descriptive utility long ago (I wrote \"Can Amazon upset the advertising duopoly?\" in January 2018, proposing the term triumvirate to c",
+      "url": "https://x.com/eric_seufert/status/2091543344350367794",
+      "published_at": "2026-08-23T15:09:26+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "The notion of an advertising Duopoly lost its descriptive utility long ago (I wrote \"Can Amazon upset the advertising duopoly?\" in January 2018, proposing the term triumvirate to characterize the dynamic), but it's worth noting that Meta still leads ad revenue growth across the largest platforms, despite the Q2 deceleration. Q2 ad revenue growth: Meta: 27% Amazon: 26% Google Search: 17% YouTube: 16%",
+      "author": "Eric Seufert",
+      "symbols": [],
+      "engagement": {
+        "likes": 14,
+        "reposts": 3,
+        "replies": 2,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "eric_seufert",
+        "transport": "twscrape",
+        "investor_type": "operator_analyst",
+        "coverage": "META, GOOGL, APP, TTD, Apple, digital advertising",
+        "evidence_note": "Replies are intentionally included because they often contain industry corrections and debate.",
+        "engagement_score": 22
+      }
+    },
+    {
+      "id": "x:761535bcbfbe2797d8d8",
+      "source_type": "x",
+      "source_name": "@GavinSBaker",
+      "title": "More data than open-source AI is taking share from OpenAI and Anthropic. Open source has gone from 28% token share to 62% token share @vercel over the last 2 months. Chart from @ra",
+      "url": "https://x.com/GavinSBaker/status/2091542026072338623",
+      "published_at": "2026-08-23T15:04:12+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "More data than open-source AI is taking share from OpenAI and Anthropic. Open source has gone from 28% token share to 62% token share @vercel over the last 2 months. Chart from @rauchg Super impressive given that the sum of OpenAI and Anthropic accelerated in July. So net token/AI infra demand accelerated even more than the acceleration we saw at the frontier. And suspect Grok growing even faster than open-source and we saw some of this in the @tryramp data. Open-source AI taking share is positive for AI infrastructure demand as it lowers margins at the model layer and an open-source token costs just as much compute to produce as a frontier token. Nothing about open-source AI inference is “free.” Most likely end state IMO is that closed, frontier tokens are 60-90% of economic value but only 15 to 25% of tokens.",
+      "author": "Gavin Baker",
+      "symbols": [],
+      "engagement": {
+        "likes": 2088,
+        "reposts": 235,
+        "replies": 219,
+        "quotes": 119
+      },
+      "metadata": {
+        "handle": "GavinSBaker",
+        "transport": "twscrape",
+        "investor_type": "buy_side_cio",
+        "coverage": "AI compute, NVDA, TSLA, cloud infrastructure, technology capex",
+        "evidence_note": "Long-term technology investor; may discuss own holdings and has a structural growth bias.",
+        "engagement_score": 2777
+      }
+    },
+    {
+      "id": "x:5e291d2720369f6a1454",
+      "source_type": "x",
+      "source_name": "@eric_seufert",
+      "title": "Tomorrow, I'm interviewing everyone's favorite app marketing consultant, @Thomasbcn, for the next installment of the MDM Mailbag. Submit your questions for Thomas here: https://t.c",
+      "url": "https://x.com/eric_seufert/status/2091532309321146674",
+      "published_at": "2026-08-23T14:25:35+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "Tomorrow, I'm interviewing everyone's favorite app marketing consultant, @Thomasbcn, for the next installment of the MDM Mailbag. Submit your questions for Thomas here: https://t.co/Sy61omYYpl https://t.co/75IjzYbk0K",
+      "author": "Eric Seufert",
+      "symbols": [],
+      "engagement": {
+        "likes": 9,
+        "reposts": 2,
+        "replies": 1,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "eric_seufert",
+        "transport": "twscrape",
+        "investor_type": "operator_analyst",
+        "coverage": "META, GOOGL, APP, TTD, Apple, digital advertising",
+        "evidence_note": "Replies are intentionally included because they often contain industry corrections and debate.",
+        "engagement_score": 14,
+        "external_articles": [
+          {
+            "original_url": "https://t.co/Sy61omYYpl",
+            "url": "https://docs.google.com/forms/d/1JYCUG2pWMW1E0KOc5SCXHOE2FFZj6xSTcAp4X7I1c1c/viewform?edit_requested=true",
+            "title": "MDM Mailbag #8 - Thomas Petit",
+            "body": ""
+          },
+          {
+            "original_url": "https://t.co/75IjzYbk0K",
+            "url": "https://x.com/eric_seufert/status/2091532309321146674",
+            "title": "Eric Seufert (@eric_seufert) on X",
+            "body": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "x:ea72e464fe72f60ba664",
+      "source_type": "x",
+      "source_name": "@ShanuMathew93",
+      "title": "Data Center Dynamics reported that TVA approved a dedicated rate structure for data centers. Removing them from the manufacturing service class raises power charges by roughly 10%.",
+      "url": "https://x.com/ShanuMathew93/status/2091488371122020640",
+      "published_at": "2026-08-23T11:31:00+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "Data Center Dynamics reported that TVA approved a dedicated rate structure for data centers. Removing them from the manufacturing service class raises power charges by roughly 10%. Existing customers transition over the next three fiscal years; new projects face capacity commitment charges of about $1.5 million per megawatt, paid over three to five years. TVA's integrated resource plan estimates that its territory could require 11-32 GW of additional generation.",
+      "author": "Shanu Mathew",
+      "symbols": [],
+      "engagement": {
+        "likes": 34,
+        "reposts": 7,
+        "replies": 1,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "ShanuMathew93",
+        "transport": "twscrape",
+        "investor_type": "public_markets_pm",
+        "coverage": "AI datacenters, power, infrastructure",
+        "evidence_note": "Use for AI infrastructure constraints rather than pure software analysis.",
+        "engagement_score": 49
+      }
+    },
+    {
+      "id": "x:a4b253409fe7d18f9387",
+      "source_type": "x",
+      "source_name": "@ShanuMathew93",
+      "title": "This place sounds so intense man lol Concept of internal price of compute and groups within an enterprise bidding for capacity is an interesting concept, though",
+      "url": "https://x.com/ShanuMathew93/status/2091465679765381527",
+      "published_at": "2026-08-23T10:00:50+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "This place sounds so intense man lol Concept of internal price of compute and groups within an enterprise bidding for capacity is an interesting concept, though",
+      "author": "Shanu Mathew",
+      "symbols": [],
+      "engagement": {
+        "likes": 121,
+        "reposts": 2,
+        "replies": 7,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "ShanuMathew93",
+        "transport": "twscrape",
+        "investor_type": "public_markets_pm",
+        "coverage": "AI datacenters, power, infrastructure",
+        "evidence_note": "Use for AI infrastructure constraints rather than pure software analysis.",
+        "engagement_score": 132
+      }
+    },
+    {
+      "id": "x:7f346ba78e2f97419a45",
+      "source_type": "x",
+      "source_name": "@ShanuMathew93",
+      "title": "Lowkey DJT was early on the everything is computer (and energy) call",
+      "url": "https://x.com/ShanuMathew93/status/2091464286598050067",
+      "published_at": "2026-08-23T09:55:18+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "Lowkey DJT was early on the everything is computer (and energy) call",
+      "author": "Shanu Mathew",
+      "symbols": [],
+      "engagement": {
+        "likes": 33,
+        "reposts": 2,
+        "replies": 2,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "ShanuMathew93",
+        "transport": "twscrape",
+        "investor_type": "public_markets_pm",
+        "coverage": "AI datacenters, power, infrastructure",
+        "evidence_note": "Use for AI infrastructure constraints rather than pure software analysis.",
+        "engagement_score": 39
+      }
+    },
+    {
+      "id": "x:c5ee8fa8f87630add5b5",
+      "source_type": "x",
+      "source_name": "@ShanuMathew93",
+      "title": "The gap between AI power users and normies is huge and growing. Have a hard time seeing this gap close as people who get increasingly capable with agents are building systems that ",
+      "url": "https://x.com/ShanuMathew93/status/2091445394295103622",
+      "published_at": "2026-08-23T08:40:13+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "The gap between AI power users and normies is huge and growing. Have a hard time seeing this gap close as people who get increasingly capable with agents are building systems that compound and iterate positively over time. This goes for consumers AND enterprises! \"There is a huge divergence in usage between the median and the power users, and some recent data from OAI suggests that the divergence is getting even bigger... >Across all industries, there’s an ~8-fold gap in token output between the typical and top-decile enterprise, where the latter has increased output by more than 17x since April 2025. >Within select industries, the gap is even wider, rising to almost 12-fold in Information (i.e. tech), where the top decile of firms is outputting 32.5x(!) as many tokens as they were a little over a year ago.",
+      "author": "Shanu Mathew",
+      "symbols": [],
+      "engagement": {
+        "likes": 180,
+        "reposts": 29,
+        "replies": 10,
+        "quotes": 3
+      },
+      "metadata": {
+        "handle": "ShanuMathew93",
+        "transport": "twscrape",
+        "investor_type": "public_markets_pm",
+        "coverage": "AI datacenters, power, infrastructure",
+        "evidence_note": "Use for AI infrastructure constraints rather than pure software analysis.",
+        "engagement_score": 248
+      }
+    },
+    {
+      "id": "x:7ae3b7a38016da5441a6",
+      "source_type": "x",
+      "source_name": "@ShanuMathew93",
+      "title": "\"In addition to the hundreds and thousands of new hard hat jobs that are being created, data centers pay a lot better than comparable employers\" https://t.co/aF7TVhsghN",
+      "url": "https://x.com/ShanuMathew93/status/2091444385208537440",
+      "published_at": "2026-08-23T08:36:13+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "\"In addition to the hundreds and thousands of new hard hat jobs that are being created, data centers pay a lot better than comparable employers\" https://t.co/aF7TVhsghN",
+      "author": "Shanu Mathew",
+      "symbols": [],
+      "engagement": {
+        "likes": 22,
+        "reposts": 1,
+        "replies": 2,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "ShanuMathew93",
+        "transport": "twscrape",
+        "investor_type": "public_markets_pm",
+        "coverage": "AI datacenters, power, infrastructure",
+        "evidence_note": "Use for AI infrastructure constraints rather than pure software analysis.",
+        "engagement_score": 26,
+        "external_articles": [
+          {
+            "original_url": "https://t.co/aF7TVhsghN",
+            "url": "https://x.com/ShanuMathew93/status/2091444385208537440",
+            "title": "Shanu Mathew (@ShanuMathew93) on X",
+            "body": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "x:0d48f20c16cc2780e373",
+      "source_type": "x",
+      "source_name": "@ShanuMathew93",
+      "title": "Seriously. Are architecture firms all over this? Modern, aesthetic, sustainable designs to help people imagine these favorable vs most people picture massive warehouses that are lo",
+      "url": "https://x.com/ShanuMathew93/status/2091426657915515226",
+      "published_at": "2026-08-23T07:25:46+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "Seriously. Are architecture firms all over this? Modern, aesthetic, sustainable designs to help people imagine these favorable vs most people picture massive warehouses that are loud and raid all your local resources",
+      "author": "Shanu Mathew",
+      "symbols": [],
+      "engagement": {
+        "likes": 19,
+        "reposts": 2,
+        "replies": 4,
+        "quotes": 1
+      },
+      "metadata": {
+        "handle": "ShanuMathew93",
+        "transport": "twscrape",
+        "investor_type": "public_markets_pm",
+        "coverage": "AI datacenters, power, infrastructure",
+        "evidence_note": "Use for AI infrastructure constraints rather than pure software analysis.",
+        "engagement_score": 27
+      }
+    },
+    {
+      "id": "x:3637017f3a6a6c53b920",
+      "source_type": "x",
+      "source_name": "@ShanuMathew93",
+      "title": "Completely ignores data sovereignty You also want ultra low latency for mission critical things",
+      "url": "https://x.com/ShanuMathew93/status/2091426298107166840",
+      "published_at": "2026-08-23T07:24:20+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "Completely ignores data sovereignty You also want ultra low latency for mission critical things",
+      "author": "Shanu Mathew",
+      "symbols": [],
+      "engagement": {
+        "likes": 18,
+        "reposts": 1,
+        "replies": 3,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "ShanuMathew93",
+        "transport": "twscrape",
+        "investor_type": "public_markets_pm",
+        "coverage": "AI datacenters, power, infrastructure",
+        "evidence_note": "Use for AI infrastructure constraints rather than pure software analysis.",
+        "engagement_score": 23
+      }
+    },
+    {
+      "id": "x:625493e3c690caef75d4",
+      "source_type": "x",
+      "source_name": "@ShanuMathew93",
+      "title": "Is this basically an acqui-hire to boost the Nemotron efforts?",
+      "url": "https://x.com/ShanuMathew93/status/2091366861350871095",
+      "published_at": "2026-08-23T03:28:10+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "Is this basically an acqui-hire to boost the Nemotron efforts?",
+      "author": "Shanu Mathew",
+      "symbols": [],
+      "engagement": {
+        "likes": 41,
+        "reposts": 3,
+        "replies": 2,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "ShanuMathew93",
+        "transport": "twscrape",
+        "investor_type": "public_markets_pm",
+        "coverage": "AI datacenters, power, infrastructure",
+        "evidence_note": "Use for AI infrastructure constraints rather than pure software analysis.",
+        "engagement_score": 49
+      }
+    },
+    {
+      "id": "x:ebcde6a1d530d10afeae",
+      "source_type": "x",
+      "source_name": "@ShanuMathew93",
+      "title": "Between the upgrade to Verra Rubin, price hikes in accelerators, memory, labor, eg. That $50bn per GW figure is increasingly moving to $60bn+",
+      "url": "https://x.com/ShanuMathew93/status/2091357430412202145",
+      "published_at": "2026-08-23T02:50:41+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "Between the upgrade to Verra Rubin, price hikes in accelerators, memory, labor, eg. That $50bn per GW figure is increasingly moving to $60bn+",
+      "author": "Shanu Mathew",
+      "symbols": [],
+      "engagement": {
+        "likes": 62,
+        "reposts": 10,
+        "replies": 6,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "ShanuMathew93",
+        "transport": "twscrape",
+        "investor_type": "public_markets_pm",
+        "coverage": "AI datacenters, power, infrastructure",
+        "evidence_note": "Use for AI infrastructure constraints rather than pure software analysis.",
+        "engagement_score": 88
+      }
+    },
+    {
+      "id": "reddit:2c78ceccd1347ec81358",
       "source_type": "reddit",
       "source_name": "r/artificial",
       "title": "Can AI Reach the Logos?",
@@ -757,7 +1242,237 @@
       "symbols": [],
       "engagement": {},
       "metadata": {
-        "transport": "rss"
+        "transport": "rss",
+        "listing": "hot",
+        "feed_rank": 6
+      }
+    },
+    {
+      "id": "reddit:a1be700953a1a63246be",
+      "source_type": "reddit",
+      "source_name": "r/wallstreetbets",
+      "title": "NVIDIA customers notified about AI-related price hikes above 15%, Bloomberg News reports",
+      "url": "https://www.reddit.com/r/wallstreetbets/comments/1vvrh14/nvidia_customers_notified_about_airelated_price/",
+      "published_at": "2026-08-22T23:39:53+00:00",
+      "collected_at": "2026-08-24T08:24:14.746928+00:00",
+      "body": "News released over weekend. Interestingly right before their upcoming earnings on Wednesday. Guess it might shrek cock next week. submitted by /u/wafflepiezz [link] [comments]",
+      "author": "/u/wafflepiezz",
+      "symbols": [
+        "NVDA"
+      ],
+      "engagement": {},
+      "metadata": {
+        "transport": "rss",
+        "listing": "hot",
+        "feed_rank": 10
+      }
+    },
+    {
+      "id": "reddit:bf176d9d4673c193aea3",
+      "source_type": "reddit",
+      "source_name": "r/wallstreetbets",
+      "title": "$90k 1 week CBRS options",
+      "url": "https://www.reddit.com/r/wallstreetbets/comments/1vvpq3l/90k_1_week_cbrs_options/",
+      "published_at": "2026-08-22T22:21:40+00:00",
+      "collected_at": "2026-08-24T08:24:14.746928+00:00",
+      "body": "CBRS goes up, CBRS goes down, CBRS goes back up, CBRS goes back down.... CBRS goes back up. $90k in CBRS options expiring this week. Down 30% from my buy on Friday, and waiting to see $250/share this week to walk with $500k. $260/share gets me 1 mil. Wish me luck. submitted by /u/jfauv94 [link] [comments]",
+      "author": "/u/jfauv94",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "transport": "rss",
+        "listing": "hot",
+        "feed_rank": 11
+      }
+    },
+    {
+      "id": "reddit:4c3691c247c6d2e031a0",
+      "source_type": "reddit",
+      "source_name": "r/wallstreetbets",
+      "title": "What's with the price-dependent periods of reduced volatility?",
+      "url": "https://www.reddit.com/r/wallstreetbets/comments/1vvohaa/whats_with_the_pricedependent_periods_of_reduced/",
+      "published_at": "2026-08-22T21:27:57+00:00",
+      "collected_at": "2026-08-24T08:24:14.746928+00:00",
+      "body": "I was reading a reddit post where the author shared this analysis. The author posed a question about selling calls, and - to my surprise - nobody talked about the periodic repetition shown in the column. I've been thinking on it, and I can't think of a good reason why there are these nearly-periodic contractions of volatility at price points. (magenta curves on the drawing) They exist at the same levels which we find the greatest price movements (green squares on the drawing) but I can't determine if there's a connection between those. Looking to anyone who may have some insight -- why are there volatility contractions dependent upon the price of SPY? submitted by /u/StitchAndChill [link] [comments]",
+      "author": "/u/StitchAndChill",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "transport": "rss",
+        "listing": "hot",
+        "feed_rank": 12
+      }
+    },
+    {
+      "id": "reddit:8ab99c52def45a5f78b8",
+      "source_type": "reddit",
+      "source_name": "r/wallstreetbets",
+      "title": "Warren Buffett in the retirement home watching Berkshire Hathaway gamble the $400B cash pile he spent the last 3 years building",
+      "url": "https://www.reddit.com/r/wallstreetbets/comments/1vvnfpl/warren_buffett_in_the_retirement_home_watching/",
+      "published_at": "2026-08-22T20:44:44+00:00",
+      "collected_at": "2026-08-24T08:24:14.746928+00:00",
+      "body": "submitted by /u/Kervandos [link] [comments]",
+      "author": "/u/Kervandos",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "transport": "rss",
+        "listing": "hot",
+        "feed_rank": 7
+      }
+    },
+    {
+      "id": "x:b4fb1b2301a4a21492d8",
+      "source_type": "x",
+      "source_name": "@eric_seufert",
+      "title": "Apple’s new EU App Store rules abandon per-install fees https://t.co/PJIl61BIXQ",
+      "url": "https://x.com/eric_seufert/status/2091202714931748864",
+      "published_at": "2026-08-22T16:35:54+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "Apple’s new EU App Store rules abandon per-install fees https://t.co/PJIl61BIXQ",
+      "author": "Eric Seufert",
+      "symbols": [],
+      "engagement": {
+        "likes": 3,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "eric_seufert",
+        "transport": "twscrape",
+        "investor_type": "operator_analyst",
+        "coverage": "META, GOOGL, APP, TTD, Apple, digital advertising",
+        "evidence_note": "Replies are intentionally included because they often contain industry corrections and debate.",
+        "engagement_score": 3,
+        "external_articles": [
+          {
+            "original_url": "https://t.co/PJIl61BIXQ",
+            "url": "https://mobiledevmemo.com/apples-new-eu-app-store-rules-abandon-per-install-fees/",
+            "title": "Apple's new EU App Store rules abandon per-install fees | Mobile Dev Memo by Eric Seufert",
+            "body": "Yesterday, Apple announced a new fee structure for apps distributed in the EU, which will go into effect on October 1. Per Reuters, the new terms \"will resolve disagreements with the EU and the European Commission.\" Apple has published new documentation outlining the fee architecture, as well as a press release providing a broad-strokes outline. […]\n\nThis content is only available to subscribers . If you are already a subscriber, please log in to view this content. If you are not a subscriber, subscriptions start at just $8.99 per month."
+          }
+        ]
+      }
+    },
+    {
+      "id": "x:d49e26e72f55331877e2",
+      "source_type": "x",
+      "source_name": "@modestproposal1",
+      "title": "https://t.co/rtMnSeYDDe",
+      "url": "https://x.com/modestproposal1/status/2091196308816113800",
+      "published_at": "2026-08-22T16:10:27+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "https://t.co/rtMnSeYDDe",
+      "author": "Modest Proposal",
+      "symbols": [],
+      "engagement": {
+        "likes": 14,
+        "reposts": 1,
+        "replies": 0,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "modestproposal1",
+        "transport": "twscrape",
+        "investor_type": "anonymous_market_commentator",
+        "coverage": "large internet, software expectations, crowding, earnings expectation gaps",
+        "evidence_note": "Discovery signal for market debate only; anonymous identity means it cannot be final factual evidence.",
+        "engagement_score": 16,
+        "external_articles": [
+          {
+            "original_url": "https://t.co/rtMnSeYDDe",
+            "url": "https://x.com/modestproposal1/status/2091196308816113800",
+            "title": "modest proposal (@modestproposal1) on X",
+            "body": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "x:9da4e5c3786d47fbc35b",
+      "source_type": "x",
+      "source_name": "@eric_seufert",
+      "title": "I enjoyed this blog post from Airbnb's revenue forecasting team about the trade-offs inherent in the various options a team faces when deciding how to react to increasing forecast ",
+      "url": "https://x.com/eric_seufert/status/2091176318494720318",
+      "published_at": "2026-08-22T14:51:01+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "I enjoyed this blog post from Airbnb's revenue forecasting team about the trade-offs inherent in the various options a team faces when deciding how to react to increasing forecast error: do nothing (\"hold\"), refit, or respecify. Refitting here means re-estimating the same model on newer data, whereas respecification means changing the model specification itself. Increasing forecast error engenders a difficult position because it involves assumptions that often can't be tested absent more data / time. One example the blog post provides is a spike in booking activity from a large but one-off event in a city. Given the nature of the event, doing nothing seems the right choice, but it can be politically charged and delicate when significant amounts of money are involved. Refitting the model sounds more proactive and decisive than waiting for more data, even if the latter is more disciplined. This issue arises often in marketing spend forecasting, where a single creative can cause dramatic swings in spend and cohort performance. These swings often revert to historical levels, but that notion can be less than reassuring to a frenzied CFO who either wants to double spend or cut it in half in response. I've done a number of projects integrating Theseus into revenue forecasting systems, and this kind of sensitivity can be hard to convey convincingly. A formal treatment accompanies the blog post. Both linked below.",
+      "author": "Eric Seufert",
+      "symbols": [],
+      "engagement": {
+        "likes": 13,
+        "reposts": 2,
+        "replies": 2,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "eric_seufert",
+        "transport": "twscrape",
+        "investor_type": "operator_analyst",
+        "coverage": "META, GOOGL, APP, TTD, Apple, digital advertising",
+        "evidence_note": "Replies are intentionally included because they often contain industry corrections and debate.",
+        "engagement_score": 19
+      }
+    },
+    {
+      "id": "substack:702037fa616d23c1f545",
+      "source_type": "substack",
+      "source_name": "MBI Deep Dives",
+      "title": "The Non-linear Economics of Grocery Delivery Basket",
+      "url": "https://mbideepdives.substack.com/p/the-non-linear-economics-of-grocery",
+      "published_at": "2026-08-22T14:45:53+00:00",
+      "collected_at": "2026-08-24T07:51:28.254593+00:00",
+      "body": "A couple of days ago, I discussed about Instacart’s unit economics and mentioned “there is non-linearity in grocery economics in terms of basket size which is why owning half the basket size of Instacart certainly does not lead to half the profits.” Today’s post is about quantifying such non-linearity and I will show behind the paywall the massive disparity in grocery delivery economics between Instacart and DoorDash. Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on 65+ companies. The daily is just how I think out loud between the Deep Dives! Subscribe now Read more",
+      "author": "MBI Deep Dives",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mbideepdives.substack.com/about",
+        "publication_platform": "substack"
+      }
+    },
+    {
+      "id": "substack:5d8b85eaa7f40165224e",
+      "source_type": "substack",
+      "source_name": "How They Make Money / App Economy Insights",
+      "title": "📊 PRO: This Week in Visuals",
+      "url": "https://www.appeconomyinsights.com/p/pro-this-week-in-visuals-6d5",
+      "published_at": "2026-08-22T14:02:05+00:00",
+      "collected_at": "2026-08-24T07:51:27.128443+00:00",
+      "body": "Welcome to the Saturday PRO edition of How They Make Money . Over 300,000 subscribers turn to us for business and investment insights. In case you missed it: ☁️ Neocloud Economics 💰 Wall Street’s Top Stocks in Q2 Subscribe now Premium members get: 📊 Monthly reports : 200+ companies visualized. 📩 Tuesday articles : Exclusive deep dives and insights. 📚 Access to our archive : Hundreds of business breakdowns. PRO members get everything PLUS : 📩 Saturday PRO reports : Timely insights on the latest earnings. Today at a glance: 🛒 Walmart : Digital Outruns Stores ⚙️ Analog Devices : Grid-to-Chip Breakout 🎮 NetEase : Evergreen Games Deliver 🎯 Target : Traffic Holds Up ⛷️ Amer Sports : Wilson Joins In 💳 Klarna : GMV Reset 1. 🛒 Walmart: Digital Outruns Stores Walmart Q2 FY27 revenue rose 6% Y/Y to $187.9 billion ($1.1 billion beat), with adjusted EPS of $0.81 ($0.07 beat). Walmart US comps slowed to 2.6% , the weakest growth in more than six years and below the 3.7% consensus, sending shares sharply lower. Transactions still grew 1.5%. The headline slowdown is somewhat misleading. New federal drug-pricing rules created a roughly 125 bps drag on US comps. Excluding Health & Wellness, comps grew 3.4%. Walmart also used some of its tariff refunds to cut prices on more than 11,000 items. The company continues gaining share, particularly in grocery and among higher-income households. Meanwhile, the businesses increasingly driving Walmart’s economics remain much stronger than store sales: Global e-commerce grew 23%. Advertising surged 38%. Membership fee revenue increased 17%. Walmart US e-commerce has now grown above 20% for 10 consecutive quarters, with profitability improving as stores increasingly function as fulfillment hubs rather than simply physical retail locations. Fuel remains a challenge, with FY27 incremental fuel costs now expected above $2 billion . Walmart is also expected to continue reinvesting tariff refunds into lower prices, contributing to Q3 adjusted EPS guidance of $0.62–$0.64, which is below consensus. Despite that reinvestment, Walmart raised FY27 sales growth guidance to 4%–5% (from 3.5%–4.5%) and adjusted operating income growth to 7%–8.5% (from 6%–8%). Bottom Line: Slower US comp reflects pharmacy pricing rather than lost share. The more important shift continues underneath, with e-commerce, advertising, membership, and marketplace growing far faster than traditional stores. Walmart increasingly looks less like a retailer with digital businesses attached and more like an omnichannel platform funded by retail. 2. ⚙️ Analog Devices: Grid-to-Chip Breakout Read more",
+      "author": "App Economy Insights",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.appeconomyinsights.com/about",
+        "publication_platform": "substack"
+      }
+    },
+    {
+      "id": "x:501b58fdf29e9f27d62b",
+      "source_type": "x",
+      "source_name": "@eric_seufert",
+      "title": "@aripap Fantastic film. I went through a “paranoid thriller” phase earlier this summer and watched that and The Parallax View for the first time. I also re-watched Network and All ",
+      "url": "https://x.com/eric_seufert/status/2091140546517450915",
+      "published_at": "2026-08-22T12:28:52+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "@aripap Fantastic film. I went through a “paranoid thriller” phase earlier this summer and watched that and The Parallax View for the first time. I also re-watched Network and All the Presidents Men. I’d recommend all of those if you haven’t seen them.",
+      "author": "Eric Seufert",
+      "symbols": [],
+      "engagement": {
+        "likes": 15,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "eric_seufert",
+        "transport": "twscrape",
+        "investor_type": "operator_analyst",
+        "coverage": "META, GOOGL, APP, TTD, Apple, digital advertising",
+        "evidence_note": "Replies are intentionally included because they often contain industry corrections and debate.",
+        "engagement_score": 17
       }
     },
     {
@@ -773,7 +1488,8 @@
       "symbols": [],
       "engagement": {},
       "metadata": {
-        "publication_url": "https://www.latent.space"
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack"
       }
     },
     {
@@ -789,7 +1505,8 @@
       "symbols": [],
       "engagement": {},
       "metadata": {
-        "publication_url": "https://www.latent.space"
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack"
       }
     },
     {
@@ -805,7 +1522,679 @@
       "symbols": [],
       "engagement": {},
       "metadata": {
-        "publication_url": "https://www.latent.space"
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack"
+      }
+    },
+    {
+      "id": "x:c0a99d1530bee36f54a2",
+      "source_type": "x",
+      "source_name": "@ByrneHobart",
+      "title": "“Ready for movie night?” 7yo: “I want to watch Project Hail Mary ad nauseam.” “Ad nauseam?” “I don’t know what it means.”",
+      "url": "https://x.com/ByrneHobart/status/2090938584354226298",
+      "published_at": "2026-08-21T23:06:20+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "“Ready for movie night?” 7yo: “I want to watch Project Hail Mary ad nauseam.” “Ad nauseam?” “I don’t know what it means.”",
+      "author": "Byrne Hobart",
+      "symbols": [],
+      "engagement": {
+        "likes": 2768,
+        "reposts": 10,
+        "replies": 8,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "ByrneHobart",
+        "transport": "twscrape",
+        "investor_type": "investor_writer",
+        "coverage": "company financial analysis, capital structure, M&A, options, cycles",
+        "evidence_note": "Useful for commercial-model and capital-allocation reasoning.",
+        "engagement_score": 2796
+      }
+    },
+    {
+      "id": "price:bb23c9a3c0845e1c4052",
+      "source_type": "price",
+      "source_name": "Alpha Vantage",
+      "title": "US close top losers",
+      "url": "https://www.alphavantage.co/documentation/#top-gainers-losers",
+      "published_at": "2026-08-21T20:15:58+00:00",
+      "collected_at": "2026-08-24T08:14:02.273240+00:00",
+      "body": "MI: close 3.02; change -58.2296%; volume 515507\nGTERW: close 0.0306; change -49.0%; volume 67\nSCAGW: close 0.0105; change -47.7612%; volume 16007\nSUGP: close 1.6; change -42.3423%; volume 39510187\nRCKTW: close 0.001; change -41.1765%; volume 66885\nOABIW: close 0.17; change -38.0918%; volume 12784\nGDC: close 1.56; change -37.3494%; volume 10667329\nCDTG: close 1.18; change -35.5191%; volume 2980684\nJSPRW: close 0.008; change -34.4262%; volume 16369\nSCLXW: close 0.1051; change -34.3125%; volume 262\nAESPW: close 0.046; change -34.1917%; volume 68\nJZ: close 2.2; change -33.7349%; volume 997020\nDAICW: close 0.002; change -33.3333%; volume 132283\nLGCL: close 0.057; change -31.3253%; volume 94303367\nEDBLW: close 0.034; change -30.6122%; volume 634\nHDRNW: close 0.115; change -30.303%; volume 129634\nBNCWZ: close 0.0424; change -29.2154%; volume 114\nPFSA: close 5.46; change -27.8732%; volume 616841\nCOCHW: close 0.0357; change -27.439%; volume 8681\nHOOZ: close 8.73; change -27.371%; volume 1262900",
+      "author": "",
+      "symbols": [
+        "MI",
+        "GTERW",
+        "SCAGW",
+        "SUGP",
+        "RCKTW",
+        "OABIW",
+        "GDC",
+        "CDTG",
+        "JSPRW",
+        "SCLXW",
+        "AESPW",
+        "JZ",
+        "DAICW",
+        "LGCL",
+        "EDBLW",
+        "HDRNW",
+        "BNCWZ",
+        "PFSA",
+        "COCHW",
+        "HOOZ"
+      ],
+      "engagement": {},
+      "metadata": {
+        "market_mover_type": "losers",
+        "market_session": "regular_close_end_of_day",
+        "last_updated": "2026-08-21 16:15:58 US/Eastern",
+        "records": [
+          {
+            "ticker": "MI",
+            "price": "3.02",
+            "change_amount": "-4.21",
+            "change_percentage": "-58.2296%",
+            "volume": "515507"
+          },
+          {
+            "ticker": "GTERW",
+            "price": "0.0306",
+            "change_amount": "-0.0294",
+            "change_percentage": "-49.0%",
+            "volume": "67"
+          },
+          {
+            "ticker": "SCAGW",
+            "price": "0.0105",
+            "change_amount": "-0.0096",
+            "change_percentage": "-47.7612%",
+            "volume": "16007"
+          },
+          {
+            "ticker": "SUGP",
+            "price": "1.6",
+            "change_amount": "-1.175",
+            "change_percentage": "-42.3423%",
+            "volume": "39510187"
+          },
+          {
+            "ticker": "RCKTW",
+            "price": "0.001",
+            "change_amount": "-0.0007",
+            "change_percentage": "-41.1765%",
+            "volume": "66885"
+          },
+          {
+            "ticker": "OABIW",
+            "price": "0.17",
+            "change_amount": "-0.1046",
+            "change_percentage": "-38.0918%",
+            "volume": "12784"
+          },
+          {
+            "ticker": "GDC",
+            "price": "1.56",
+            "change_amount": "-0.93",
+            "change_percentage": "-37.3494%",
+            "volume": "10667329"
+          },
+          {
+            "ticker": "CDTG",
+            "price": "1.18",
+            "change_amount": "-0.65",
+            "change_percentage": "-35.5191%",
+            "volume": "2980684"
+          },
+          {
+            "ticker": "JSPRW",
+            "price": "0.008",
+            "change_amount": "-0.0042",
+            "change_percentage": "-34.4262%",
+            "volume": "16369"
+          },
+          {
+            "ticker": "SCLXW",
+            "price": "0.1051",
+            "change_amount": "-0.0549",
+            "change_percentage": "-34.3125%",
+            "volume": "262"
+          },
+          {
+            "ticker": "AESPW",
+            "price": "0.046",
+            "change_amount": "-0.0239",
+            "change_percentage": "-34.1917%",
+            "volume": "68"
+          },
+          {
+            "ticker": "JZ",
+            "price": "2.2",
+            "change_amount": "-1.12",
+            "change_percentage": "-33.7349%",
+            "volume": "997020"
+          },
+          {
+            "ticker": "DAICW",
+            "price": "0.002",
+            "change_amount": "-0.001",
+            "change_percentage": "-33.3333%",
+            "volume": "132283"
+          },
+          {
+            "ticker": "LGCL",
+            "price": "0.057",
+            "change_amount": "-0.026",
+            "change_percentage": "-31.3253%",
+            "volume": "94303367"
+          },
+          {
+            "ticker": "EDBLW",
+            "price": "0.034",
+            "change_amount": "-0.015",
+            "change_percentage": "-30.6122%",
+            "volume": "634"
+          },
+          {
+            "ticker": "HDRNW",
+            "price": "0.115",
+            "change_amount": "-0.05",
+            "change_percentage": "-30.303%",
+            "volume": "129634"
+          },
+          {
+            "ticker": "BNCWZ",
+            "price": "0.0424",
+            "change_amount": "-0.0175",
+            "change_percentage": "-29.2154%",
+            "volume": "114"
+          },
+          {
+            "ticker": "PFSA",
+            "price": "5.46",
+            "change_amount": "-2.11",
+            "change_percentage": "-27.8732%",
+            "volume": "616841"
+          },
+          {
+            "ticker": "COCHW",
+            "price": "0.0357",
+            "change_amount": "-0.0135",
+            "change_percentage": "-27.439%",
+            "volume": "8681"
+          },
+          {
+            "ticker": "HOOZ",
+            "price": "8.73",
+            "change_amount": "-3.29",
+            "change_percentage": "-27.371%",
+            "volume": "1262900"
+          }
+        ]
+      }
+    },
+    {
+      "id": "price:9adcc8a2d5f4563609a1",
+      "source_type": "price",
+      "source_name": "Alpha Vantage",
+      "title": "US close top gainers",
+      "url": "https://www.alphavantage.co/documentation/#top-gainers-losers",
+      "published_at": "2026-08-21T20:15:58+00:00",
+      "collected_at": "2026-08-24T08:14:02.273240+00:00",
+      "body": "RFAIU: close 51.4; change 389.5238%; volume 2617\nRFAI: close 58.0; change 341.0646%; volume 2973251\nHOWL: close 0.8735; change 102.5742%; volume 292148955\nUSDEW: close 1.4; change 94.9589%; volume 1944532\nUSDE: close 7.41; change 85.25%; volume 91187550\nTMCWW: close 0.0185; change 77.8846%; volume 760976\nRFAIR: close 0.1895; change 72.2727%; volume 1605172\nFTRA+: close 1.33; change 68.3544%; volume 202\nARQQW: close 0.0085; change 60.3774%; volume 815141\nKNRX: close 0.5157; change 56.2727%; volume 134974596\nSDOT: close 13.18; change 56.1611%; volume 18863170\nCRMU: close 2.38; change 46.9136%; volume 794242\nAIAI: close 6.62; change 46.1369%; volume 12850397\nCRMX: close 5.54; change 45.7895%; volume 532181\nGSHRW: close 0.33; change 43.4159%; volume 23\nPDYNW: close 0.0129; change 43.3333%; volume 1263662\nEXYN: close 2.21; change 39.8734%; volume 15854101\nLSTA: close 1.55; change 37.1681%; volume 6957584\nGGROW: close 0.0056; change 36.5854%; volume 53543\nAMCI: close 6.5; change 32.6531%; volume 212017",
+      "author": "",
+      "symbols": [
+        "RFAIU",
+        "RFAI",
+        "HOWL",
+        "USDEW",
+        "USDE",
+        "TMCWW",
+        "RFAIR",
+        "FTRA+",
+        "ARQQW",
+        "KNRX",
+        "SDOT",
+        "CRMU",
+        "AIAI",
+        "CRMX",
+        "GSHRW",
+        "PDYNW",
+        "EXYN",
+        "LSTA",
+        "GGROW",
+        "AMCI"
+      ],
+      "engagement": {},
+      "metadata": {
+        "market_mover_type": "gainers",
+        "market_session": "regular_close_end_of_day",
+        "last_updated": "2026-08-21 16:15:58 US/Eastern",
+        "records": [
+          {
+            "ticker": "RFAIU",
+            "price": "51.4",
+            "change_amount": "40.9",
+            "change_percentage": "389.5238%",
+            "volume": "2617"
+          },
+          {
+            "ticker": "RFAI",
+            "price": "58.0",
+            "change_amount": "44.85",
+            "change_percentage": "341.0646%",
+            "volume": "2973251"
+          },
+          {
+            "ticker": "HOWL",
+            "price": "0.8735",
+            "change_amount": "0.4423",
+            "change_percentage": "102.5742%",
+            "volume": "292148955"
+          },
+          {
+            "ticker": "USDEW",
+            "price": "1.4",
+            "change_amount": "0.6819",
+            "change_percentage": "94.9589%",
+            "volume": "1944532"
+          },
+          {
+            "ticker": "USDE",
+            "price": "7.41",
+            "change_amount": "3.41",
+            "change_percentage": "85.25%",
+            "volume": "91187550"
+          },
+          {
+            "ticker": "TMCWW",
+            "price": "0.0185",
+            "change_amount": "0.0081",
+            "change_percentage": "77.8846%",
+            "volume": "760976"
+          },
+          {
+            "ticker": "RFAIR",
+            "price": "0.1895",
+            "change_amount": "0.0795",
+            "change_percentage": "72.2727%",
+            "volume": "1605172"
+          },
+          {
+            "ticker": "FTRA+",
+            "price": "1.33",
+            "change_amount": "0.54",
+            "change_percentage": "68.3544%",
+            "volume": "202"
+          },
+          {
+            "ticker": "ARQQW",
+            "price": "0.0085",
+            "change_amount": "0.0032",
+            "change_percentage": "60.3774%",
+            "volume": "815141"
+          },
+          {
+            "ticker": "KNRX",
+            "price": "0.5157",
+            "change_amount": "0.1857",
+            "change_percentage": "56.2727%",
+            "volume": "134974596"
+          },
+          {
+            "ticker": "SDOT",
+            "price": "13.18",
+            "change_amount": "4.74",
+            "change_percentage": "56.1611%",
+            "volume": "18863170"
+          },
+          {
+            "ticker": "CRMU",
+            "price": "2.38",
+            "change_amount": "0.76",
+            "change_percentage": "46.9136%",
+            "volume": "794242"
+          },
+          {
+            "ticker": "AIAI",
+            "price": "6.62",
+            "change_amount": "2.09",
+            "change_percentage": "46.1369%",
+            "volume": "12850397"
+          },
+          {
+            "ticker": "CRMX",
+            "price": "5.54",
+            "change_amount": "1.74",
+            "change_percentage": "45.7895%",
+            "volume": "532181"
+          },
+          {
+            "ticker": "GSHRW",
+            "price": "0.33",
+            "change_amount": "0.0999",
+            "change_percentage": "43.4159%",
+            "volume": "23"
+          },
+          {
+            "ticker": "PDYNW",
+            "price": "0.0129",
+            "change_amount": "0.0039",
+            "change_percentage": "43.3333%",
+            "volume": "1263662"
+          },
+          {
+            "ticker": "EXYN",
+            "price": "2.21",
+            "change_amount": "0.63",
+            "change_percentage": "39.8734%",
+            "volume": "15854101"
+          },
+          {
+            "ticker": "LSTA",
+            "price": "1.55",
+            "change_amount": "0.42",
+            "change_percentage": "37.1681%",
+            "volume": "6957584"
+          },
+          {
+            "ticker": "GGROW",
+            "price": "0.0056",
+            "change_amount": "0.0015",
+            "change_percentage": "36.5854%",
+            "volume": "53543"
+          },
+          {
+            "ticker": "AMCI",
+            "price": "6.5",
+            "change_amount": "1.6",
+            "change_percentage": "32.6531%",
+            "volume": "212017"
+          }
+        ]
+      }
+    },
+    {
+      "id": "x:aa4ae18104ff4f464905",
+      "source_type": "x",
+      "source_name": "@DanielTNiles",
+      "title": "Great info by @SaraEisen. I was wondering why the stock action in many names was akin to the time before Situational Awareness was forced to sell its public positions to Citadel wi",
+      "url": "https://x.com/DanielTNiles/status/2090864753715372450",
+      "published_at": "2026-08-21T18:12:58+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "Great info by @SaraEisen. I was wondering why the stock action in many names was akin to the time before Situational Awareness was forced to sell its public positions to Citadel with AI beneficiaries getting hit while the ones in the cross hairs rallied. As a reminder, the Morgan Stanley TMT (Tech Media and Telecom) Momentum Index had a decline of 54% from 6/22-7/29. On 7/30, following the acquisition of the public portfolio of Situational Awareness by Citadel, the TMT index rebounded a record 19%. The rally continued with a total gain of 35% from 7/29 through 8/17 for TMT. But since Monday 8/17, this index has fallen 19% as of intra-day Friday 8/21. This letter by Ken Griffin now explains why it felt like there was some other large fund unwinding the same positions that SA had because in fact it was the SA positions. With more than 80% of the unwind finished in ~3 weeks, it would imply this should be mostly over by next week…At which point I can go back to worrying about 1) the median 10% drawdown typically seen on the S&P from peak to trough during 7/30 -11/9 in mid-term years since 1990 and 2) related to this, the US Treasury trying to bring down long-term yields and the bond market saying it will not work with yields across the curve now roughly flat to 6 bps above the levels on Tuesday prior to these actions.",
+      "author": "Dan Niles",
+      "symbols": [],
+      "engagement": {
+        "likes": 184,
+        "reposts": 17,
+        "replies": 30,
+        "quotes": 3
+      },
+      "metadata": {
+        "handle": "DanielTNiles",
+        "transport": "twscrape",
+        "investor_type": "long_short_pm",
+        "coverage": "technology, Mag7, software disruption risk",
+        "evidence_note": "Deliberate skeptical counterweight; distinguish thesis from verified company evidence.",
+        "engagement_score": 248
+      }
+    },
+    {
+      "id": "x:dda656609408e47cc1df",
+      "source_type": "x",
+      "source_name": "@DanielTNiles",
+      "title": "Great info by @SaraEisen. I was wondering why the stock action in many names was akin to the time before Situational Awareness was forced to sell its public positions to Citadel wi",
+      "url": "https://x.com/DanielTNiles/status/2090864659553189942",
+      "published_at": "2026-08-21T18:12:35+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "Great info by @SaraEisen. I was wondering why the stock action in many names was akin to the time before Situational Awareness was forced to sell its public positions to Citadel with AI beneficiaries getting hit while the ones in the cross hairs rallied. As a reminder, the Morgan Stanley TMT (Tech Media and Telecom) Momentum Index had a decline of 54% from 6/22-7/29. On 7/30, following the acquisition of the public portfolio of Situational Awareness by Citadel, the TMT index rebounded a record 19%. The rally continued with a total gain of 35% from 7/29 through 8/17 for TMT. But since Monday 8/17, this index has fallen 19% as of intra-day Friday 8/21. This letter by Ken Griffin now explains why it felt like there was some other large fund unwinding the same positions that SA had because in fact it was the SA positions. With more than 80% of the unwind finished in ~3 weeks, it would imply this should be mostly over by next week…At which point I can go back to worrying about 1) the median 10% drawdown typically seen on the S&P from peak to trough during 7/30 -11/9 in mid-term years since 1990 and 2) related to this, the US Treasury trying to bring down long-term yields and the bond market saying it will not work with yields across the curve now roughly flat to 6 bps above the levels on Tuesday prior to these actions.",
+      "author": "Dan Niles",
+      "symbols": [],
+      "engagement": {
+        "likes": 358,
+        "reposts": 38,
+        "replies": 24,
+        "quotes": 6
+      },
+      "metadata": {
+        "handle": "DanielTNiles",
+        "transport": "twscrape",
+        "investor_type": "long_short_pm",
+        "coverage": "technology, Mag7, software disruption risk",
+        "evidence_note": "Deliberate skeptical counterweight; distinguish thesis from verified company evidence.",
+        "engagement_score": 458
+      }
+    },
+    {
+      "id": "x:85c335714aa9222efdab",
+      "source_type": "x",
+      "source_name": "@eric_seufert",
+      "title": "Meta launches a business agent for ad campaigns https://t.co/FovwgfxrOM",
+      "url": "https://x.com/eric_seufert/status/2090839431339299000",
+      "published_at": "2026-08-21T16:32:21+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "Meta launches a business agent for ad campaigns https://t.co/FovwgfxrOM",
+      "author": "Eric Seufert",
+      "symbols": [],
+      "engagement": {
+        "likes": 51,
+        "reposts": 6,
+        "replies": 0,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "eric_seufert",
+        "transport": "twscrape",
+        "investor_type": "operator_analyst",
+        "coverage": "META, GOOGL, APP, TTD, Apple, digital advertising",
+        "evidence_note": "Replies are intentionally included because they often contain industry corrections and debate.",
+        "engagement_score": 63,
+        "external_articles": [
+          {
+            "original_url": "https://t.co/FovwgfxrOM",
+            "url": "https://mobiledevmemo.com/meta-launches-a-business-agent-for-ad-campaigns/",
+            "title": "Meta launches a business agent for ad campaigns | Mobile Dev Memo by Eric Seufert",
+            "body": "Meta announced yesterday that it has introduced new functionality to Meta AI -- which can now be accessed via a dedicated Mac app in beta -- to let advertisers directly interface with their ad accounts. From the blog post: Across meta.ai, the Meta AI mobile app, and the new Meta AI desktop app, you can now […]\n\nThis content is only available to subscribers . If you are already a subscriber, please log in to view this content. If you are not a subscriber, subscriptions start at just $8.99 per month."
+          }
+        ]
+      }
+    },
+    {
+      "id": "substack:de2e8f34020b49ab24f3",
+      "source_type": "substack",
+      "source_name": "Aspiring for Intelligence",
+      "title": "Execution Is The Moat",
+      "url": "https://aspiringforintelligence.substack.com/p/execution-is-the-moat",
+      "published_at": "2026-08-21T16:06:21+00:00",
+      "collected_at": "2026-08-24T07:51:30.401936+00:00",
+      "body": "Our friend Nikunj Kothari at FPV Ventures incicively pointed out that VCs love to talk about certain categories in AI “have no moat”. In our view, he nails it. In the world of AI, where the underlying tech and models change so quickly, the ONLY moat for startups is execution. In fact, the areas that venture investors and the general market dismissed as having no moat or could be built and commoditized quickly are also the ones enjoying the most significant revenue growth. Thanks for reading Aspiring for Intelligence! Subscribe for free to receive new posts and support our work. Coding Agents ($10B+ ARR) - “Github is going to win” Back in 2023, Microsoft / GitHub Copilot was slated to be THE winner in AI coding . GitHub was the central place where millions of developers were pushing code and lived in. Through Microsoft’s partnership with OpenAI, they were using early versions of GPT to power Copilot and AI pair programming. But that lead didn’t last long. Repeated outages, executive turnover, and an inability to continue innovating led to GitHub falling from the AI coding leaderboard. In April, even Mitchell Hashimoto (founder of Hashicorp and among the first ~1000 users of GitHub) announced he was leaving the platform due to the diminished performance. Meanwhile, a new crop of coding agents built AI-natively from the ground up began to emerge. Cursor (founded as Anysphere in 2022), Cognition (founded in 2023), and Claude Code (launched in 2025) all shot out of a cannon, winning users over with best-in-class performance, faster throughput, and a beautiful developer experience. In just a few years, Cursor navigated a $60B sale to SpaceX, Cognition is rumored to be fundraising at a $40B valuation, and Claude Code is generating ~$3B ARR for Anthropic. Platform-led Copilots like GitHub have steadily lost share to independent IDEs per New Market Inference ($5B+ ARR) - “It’s a commodity” The standard line from as recently as 2026 was that selling inference was a “commodity” and a “race to the bottom”. Why? Because these companies didn’t own GPUs or compute themselves, but instead rented capacity and resold the compute to end customers. Training was expected to be the most interesting and important market, while inference would be swallowed by the hyperscalers. One VC blog post from 2024 pegged the TAM for “generative AI abstraction” as <$1B. Fast forward to mid 2026, and inference providers are one of the largest revenue drivers in the AI market today: Fireworks = $1B+ ARR Together.ai = $1B+ ARR Baseten = $800M+ ARR Modal = $300M+ ARR So what happened? We massively underestimated i) how large the TAM is for accessing intelligence; ii) the growth and use of open-source; and iii) building a well functioning, low-latency, high throughput inference engine is a lucrative business! More usage of models = more demand for inference Data & Evals ($1B+ ARR) - “It’s just low-margin data labeling” Early on, data labeling and evals were easy to dismiss as commodity, low-margin businesses : armies of contractors performing repetitive tasks, little proprietary technology, low switching costs, and constant pressure on price. The assumption was that labeling would either be automated away by better models or become an interchangeable service where the cheapest provider won. Instead, as models have become more capable, the work has become more sophisticated. Frontier labs increasingly need expert-generated training data, complex coding and reasoning tasks, human feedback, and rigorous evals that can distinguish between already-capable models. What looked like outsourced labor has evolved into a critical part of the AI development loop—and the ability to reliably source expertise, maintain quality at scale, and rapidly adapt to what model builders need has turned “commodity” work into a large and strategically important market. Now, you have multiple companies winning in the data and evals space: Mercor = $2B+ ARR Surge = $1B+ ARR Handshake = $1B+ ARR And there are many others ( Micro1 , Turing , Outlier ) plus a host of RL companies ( Preference Model , Trajectory ) in an adjacent category, not far behind! Exponential in expert hour / quarter per Benchmark’s Ev Randle Just Go Build One lesson from the AI era is that it’s never been easier to start and scale a company, though its never been harder to win a category. The traditional “moats” that VCs like to talk about (technical, regulatory, distribution) are collapsing, and increasingly the only moat is execution: can you build an amazing product that customers love? AI coding startups were thought to be too small to matter vs. GitHub. Inference clouds were expected to be a commodity. And data & eval companies were dismissed as low-margin labeling businesses. Now, several of those companies have grown to tens of billions in valuation and generating billions of revenue. So the answer? Don’t listen to what VCs say, and just go build! Thanks for reading Aspiring for Intelligence! Subscribe for free to receive new posts and support our work.",
+      "author": "Vivek Ramaswami",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://aspiringforintelligence.substack.com/about",
+        "publication_platform": "substack"
+      }
+    },
+    {
+      "id": "substack:c0e44dea005ceeaa67e7",
+      "source_type": "substack",
+      "source_name": "MBI Deep Dives",
+      "title": "Walmart’s Evolution",
+      "url": "https://mbideepdives.substack.com/p/walmarts-evolution",
+      "published_at": "2026-08-21T15:25:24+00:00",
+      "collected_at": "2026-08-24T07:51:28.254593+00:00",
+      "body": "After posting 4%+ same store sales growth in the US for eight consecutive quarters, Walmart’s comp numbers last quarter surprised investors a bit as it came to be only 2.6% in Q2 FY27. During the call, management flagged their health & wellness (H&W) segment as the primary culprit for the poor comp. One of the key reasons for the underperformance in H&W segment is MFP. What exactly is MFP? MFP is the “Maximum Fair Price” that comes out of the Medicare drug price negotiation program created by the Inflation Reduction Act in 2022. For the first time, CMS was authorized to directly negotiate prices with manufacturers for a selected list of high-spend drugs covered by Medicare. The first cohort of drugs had prices announced in August 2024 that took effect January 1, 2026, which is why Walmart's fiscal 2027 (Feb 2026–Jan 2027) is “the first year of Maximum Fair Price regulation.” The negotiated prices were cut 40–80% below list depending on the drug. Moreover, the list expands annually : a second round of 15 drugs takes effect January 2027. When the government administratively cuts the price of the highest-dollar drugs that Medicare seniors fill, revenue per script drops even as script volumes keep growing. That's why management insisted the impact is top-line only. The economics of dispensing i.e. the spread and fees Walmart earns per script aren't damaged proportionally to the revenue decline, and generic conversion can actually improve margin rate. Meanwhile, the strategic value of the pharmacy is the traffic and attachment. Walmart management shared that the H&W customer spends ~3x the average Walmart customer, and it doubles again when those customers sign up for pharmacy delivery. So you get the odd optical situation of SSS drag on reported Walmart US comps while the profit contribution of the category is fine and prescription volumes keep growing with share gains. Walmart had quantified the MFP headwind early this year, but never the GLP-1 tailwind or the ex-health-&-wellness comp view. The 100bps MFP headwind first appeared on the Q4 FY26 call in February 2026 during Q&A, and by the Q1 FY27 call in May it had graduated to management’s prepared remarks. Yesterday’s call made these headwinds more clear than it was before: the MFP headwind estimate was raised to 125bps for both Q2 and the full year, the GLP-1 tailwind was quantified retroactively for the first time (~100bps in each of FY25 and FY26, fading to roughly half that in FY27), and then explicitly showed core comps ex-H&W running a steady 3–4% for the last two and half years. Source: Walmart Earnings presentation Look, I don’t have a problem with these adjustments especially given the impact seems to be largely confined to topline without commensurate impact on bottom line. But the asymmetry of the disclosure should be really annoying for the shareholders. Where was this comp view ex H&W segment when GLP-1 was a tailwind? Management seems very willing to have their cake and eat it too. To be quite frank, I’m also quite careful about any explanation coming out of Walmart’s CFO John Rainey who doesn’t really have the best reputation in my mind. For context, before becoming Walmart’s CFO in 2022, he used to be CFO at PayPal. He had this “bright” idea of sharing a medium term outlook for PayPal that in retrospect appears to be borderline absurd. As you can see below, during the 2021 PayPal Investor Day, Rainey outlined monthly active of 750 million, revenue of $50+ Billion, and FCF of $10+ Billion in 2025. After providing such rosy outlook for PayPal, Rainey moved to Walmart. What did PayPal actually do in 2025? Their monthly active was 439 million, revenue was $33.2 Billion, and FCF was $5.6 Billion. You can argue that Rainey shouldn’t be held responsible since he wasn’t really there to execute on his plan, but given how far the company fell short on his outlook, I am not willing to be so charitable in this case. Source: PayPal Investor Day 2021 Anyways, while the US comp was a negative surprise for the investors, yesterday’s call also really made it clear the extent of Walmart’s evolution from merely brick-and-mortar presence to increasingly perhaps the only truly omnichannel retailer in the US which I will discuss behind the paywall. Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on 65+ companies. The daily is just how I think out loud between the Deep Dives! Subscribe now Read more",
+      "author": "MBI Deep Dives",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mbideepdives.substack.com/about",
+        "publication_platform": "substack"
+      }
+    },
+    {
+      "id": "x:6b100d52c3d514fbc519",
+      "source_type": "x",
+      "source_name": "@GavinSBaker",
+      "title": "Interesting disclosure from Ken Griffin via @CNBC that they have shed 80% of the SALP portfolio. Super high confidence that this was $45b levered more than 4 to 1 so at least $180b",
+      "url": "https://x.com/GavinSBaker/status/2090817261476983199",
+      "published_at": "2026-08-21T15:04:15+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "Interesting disclosure from Ken Griffin via @CNBC that they have shed 80% of the SALP portfolio. Super high confidence that this was $45b levered more than 4 to 1 so at least $180b gross. Unwinding that $180b would absolutely have had an impact. Have felt it in the market.",
+      "author": "Gavin Baker",
+      "symbols": [],
+      "engagement": {
+        "likes": 2806,
+        "reposts": 145,
+        "replies": 164,
+        "quotes": 51
+      },
+      "metadata": {
+        "handle": "GavinSBaker",
+        "transport": "twscrape",
+        "investor_type": "buy_side_cio",
+        "coverage": "AI compute, NVDA, TSLA, cloud infrastructure, technology capex",
+        "evidence_note": "Long-term technology investor; may discuss own holdings and has a structural growth bias.",
+        "engagement_score": 3260
+      }
+    },
+    {
+      "id": "substack:c54c7efc92aa81e1e14b",
+      "source_type": "substack",
+      "source_name": "TSOH Investment Research",
+      "title": "TSOH Weekly Roundup (08/21/2026)",
+      "url": "https://thescienceofhitting.com/p/tsoh-weekly-roundup-08212026",
+      "published_at": "2026-08-21T15:01:52+00:00",
+      "collected_at": "2026-08-24T07:51:29.063548+00:00",
+      "body": "Welcome to another edition of TSOH Weekly Roundup . Each update features a Chart of the Week, along with a brief discussion on three news items relevant to companies in the TSOH investable universe. Chart Of The Week (from “ Roblox: Accepting Uncertainty ”) Subscribe now Three Notable Items “Walmart Reports Q2 2027 Quarterly Results” Walmart reported relatively soft quarterly results, most notably their weakest U.S. same store sales growth in more than six years; that was despite >500 basis points of e-commerce comp contribution, with expedited deliveries (in <3 hours) accounting for nearly 40% of store-fulfilled orders. I’ll have more to say on this in the coming weeks when Dollar General and Dollar Tree report. CEO John Furner: “Our price gaps to conventional U.S. grocers are strong, and they continue to widen. The share gains we see from this channel have persisted, alongside the drug and dollar formats... Fast delivery in the U.S. grew 48% in Q2. Speed matters, and we have a significant competitive advantage. Our physical footprint, fulfillment infrastructure, and local delivery capabilities allow us to move closer to customers while maintaining an attractive cost structure. We’ve now expanded under 30-minute delivery into 38 U.S. markets... Ecommerce sales now represent more than 23% of our sales mix in Walmart U.S., which is double the level from five years ago.” “How a pesky Jordan copycat dribbled around Nike in China” A story in the FT about Qiaodan, a relatively small Chinese sportswear company whose name translates to “Jordan” (as in Michael Jordan). In addition to the company’s interesting history, the story speaks more broadly to the competitive threat that Nike and its peers face from China’s domestic sports brands (something I’ve been talking about at TSOH for many years ). “Since its founding 26 years ago, Qiaodan has spent a significant chunk of that time embroiled in a legal dispute with Michael Jordan, who appears to have inspired its branding. However, in 2020, Qiaodan was ultimately found only to have infringed an element of Jordan’s prior name rights. The sportswear company — which has expanded into running trainers and yoga gear — is now a fully fledged nationwide retailer, with about 6,000 stores, most of them under franchise arrangements. In a store in the lower-tier city of Yueyang, its Air Jordan-style high-top trainers sell for Rmb339 (~$50).” “AI Music Startup Suno Bets Anyone Can Be a Rock Star” A Bloomberg profile about Suno, the company who’s mission is to build “ The AI Music App ”. My interest here is less about Suno specifically, and more about the growing importance of UGC and AI-generated content across various forms of entertainment (video, music, gaming, etc.). I suspect the changes that we’ve seen in recent years are just the tip of the iceberg. “Paying users can train Suno on their voices, so their creations can sound like they’re singing them. More than 100 million people have used the product since 2023, and over 2 million people shell out as much as $30 a month for it. Co-founder Mikey Shulman says Suno will do for music what Instagram did for photography… This led to huge increases in downloads, making Suno the most popular music app in Apple’s store for a few weeks, surpassing Spotify.” TSOH Updates Here’s the updated TSOH research list for the past six months: Monday’s research report will be an update on Portillo’s (PTLO) . Have a great weekend! NOTE - This is not investment advice. Do your own due diligence. I make no representation, warranty, or undertaking, express or implied, as to the accuracy, reliability, completeness, or reasonableness of the information presented in this report. Assumptions, opinions, and estimates expressed in this report constitute my judgment as of the date thereof and are subject to change without notice. Projections are based on a number of assumptions, and there is no guarantee that they will be achieved. TSOH Investment Research is not acting as your advisor or in any fiduciary capacity.",
+      "author": "TSOH Investment Research",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://thescienceofhitting.com/about",
+        "publication_platform": "substack"
+      }
+    },
+    {
+      "id": "x:2421bc3e761a1a78325c",
+      "source_type": "x",
+      "source_name": "@jaminball",
+      "title": "https://t.co/nP5LGM0uPd",
+      "url": "https://x.com/jaminball/status/2090807221680763091",
+      "published_at": "2026-08-21T14:24:21+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "https://t.co/nP5LGM0uPd",
+      "author": "Jamin Ball",
+      "symbols": [],
+      "engagement": {
+        "likes": 18,
+        "reposts": 1,
+        "replies": 1,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "jaminball",
+        "transport": "twscrape",
+        "investor_type": "buy_side_partner",
+        "coverage": "enterprise software, SaaS valuation, AI applications",
+        "evidence_note": "Read alongside Clouded Judgement; useful for software demand and valuation framing.",
+        "engagement_score": 21
+      }
+    },
+    {
+      "id": "x:bca37a37c60f12d3b1bb",
+      "source_type": "x",
+      "source_name": "@modestproposal1",
+      "title": "I told Codex to create a subagent as an adversarial critic for a project and it named \"him\" Pascal. I can't decide if it's throwing shade at Claude or telling me I should bet the m",
+      "url": "https://x.com/modestproposal1/status/2090803351004807233",
+      "published_at": "2026-08-21T14:08:58+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "I told Codex to create a subagent as an adversarial critic for a project and it named \"him\" Pascal. I can't decide if it's throwing shade at Claude or telling me I should bet the machine god is real but either way I crack up every time the CoT says \"Pascal is now reviewing...\"",
+      "author": "Modest Proposal",
+      "symbols": [],
+      "engagement": {
+        "likes": 16,
+        "reposts": 0,
+        "replies": 5,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "modestproposal1",
+        "transport": "twscrape",
+        "investor_type": "anonymous_market_commentator",
+        "coverage": "large internet, software expectations, crowding, earnings expectation gaps",
+        "evidence_note": "Discovery signal for market debate only; anonymous identity means it cannot be final factual evidence.",
+        "engagement_score": 21
+      }
+    },
+    {
+      "id": "substack:3452ada3723b68473fba",
+      "source_type": "substack",
+      "source_name": "Clouded Judgement",
+      "title": "Clouded Judgement 8.21.26 - What Could Go Right?",
+      "url": "https://cloudedjudgement.substack.com/p/clouded-judgement-82126-what-could",
+      "published_at": "2026-08-21T13:18:52+00:00",
+      "collected_at": "2026-08-24T07:51:25.700983+00:00",
+      "body": "Every week I’ll provide updates on the latest trends in cloud software companies. Follow along to stay up to date! Subscribe now What Could Go Right? Whenever I’m thinking about making a private investment there’s (broadly) a couple main questions I ask myself: What could go right If things go right how big can it get What could go wrong The reality is the first two are kind of the same question, and the third question is completely irrelevant (in my opinion). I bring this up because so often the conversation around venture stage company investing is about the risks. Execution risk. Market risk. Competitive risk. Hiring risk. etc. What if the market isn’t big enough? What if they can’t execute on this vision? The deck is massively stacked against startups. The reality is only a miniscule fraction ever actually turn into big companies! And all the reasons to be hesitant are right! In a vacuum, the reasons to not invest in a startup almost always overwhelm the reasons to invest. And given the failure rate, the “bears” are usually right! However - venture is a power law business. It’s a statement that’s so incredibly simple, and so incredibly viewed as “obvious,” yet at the same time it feels like most folk don’t actually invest or build a portfolio with this simple truth in mind (and I find myself drifting from it from time to time!). If it goes right, how big could it get? That’s really the question to ask right now. The reason question three doesn’t really matter (in my opinion) is because of asymmetry. Being wrong comes with a 1x your money loss max downside. Being right comes with uncapped upside. An interesting sidenote here - a very large institutional LP shared some data on the distribution of outcomes in funds for top quartiles and bottom quartiles. Interestingly both the top quartile and bottom quartile funds had the same percentage of investments that returned <1x in a fund. 50%. I call this out to say - the percentage of deals you loose money on has no impact on top quartile vs bottom quartile funds. The question of “how big could it get” also comes with extra weight currently. For the last ~15 years, the theoretical TAM ceiling on any software company was some flavor of software budgets. With many of the AI companies today, the TAM ceiling is no longer software budgets (but headcount / consulting budgets). Again, this is nothing revolutionary. But I’m constantly reminded of examples of this. And this concept of TAM ceilings rising with new technology leaps is nothing new. It’s one of the reasons the top decile outcomes keep growing and growing in size. When I got into venture, a $1b public company was considered an amazing outcome. Not anymore…BUT - oftentimes investing at the time it was hard to think of the top outcomes being much more than that, given this was the “ceiling” at the time (not an actual ceiling, but the general range of the top bucket of outcomes). Imagine passing on Snowflake in 2017 because “Teradata market cap is only $4b.” In moments of large tech disruption, the size of the prize grows rapidly! It’s what can make investing today (and assuming today’s exit valuations will be tomorrow’s exit valuations) tricky. I’m certain the top decile outcomes in 2036 will be meaningfully higher than what they are today - but really investing with this frame of mind is hard. This isn’t to say every company will be a great company and it’s easy to invest right now. Quite the opposite. There’s more companies than ever getting started today (which makes being a VC extra fun). But the unfortunate truth remains, most won’t work out. The only thing that matters is finding the founders who can do the impossible! If things go right, how big could it get? Quarterly Reports Summary Top 10 EV / NTM Revenue Multiples Top 10 Weekly Share Price Movement Update on Multiples SaaS businesses are generally valued on a multiple of their revenue - in most cases the projected revenue for the next 12 months. Revenue multiples are a shorthand valuation framework. Given most software companies are not profitable, or not generating meaningful FCF, it’s the only metric to compare the entire industry against. Even a DCF is riddled with long term assumptions. The promise of SaaS is that growth in the early years leads to profits in the mature years. Multiples shown below are calculated by taking the Enterprise Value (market cap + debt - cash) / NTM revenue. Overall Stats: Overall Median: 4.3x Top 5 Median: 30.5x 10Y: 4.7% Bucketed by Growth. In the buckets below I consider high growth >22% projected NTM growth, mid growth 15%-22% and low growth <15%. I had to adjusted the cut off for “high growth.” If 22% feels a bit arbitrary, it’s because it is…I just picked a cutoff where there were ~10 companies that fit into the high growth bucket so the sample size was more statistically significant High Growth Median: 17.2x Mid Growth Median: 6.8x Low Growth Median: 3.8x EV / NTM Rev / NTM Growth The below chart shows the EV / NTM revenue multiple divided by NTM consensus growth expectations. So a company trading at 20x NTM revenue that is projected to grow 100% would be trading at 0.2x. The goal of this graph is to show how relatively cheap / expensive each stock is relative to its growth expectations. EV / NTM FCF The line chart shows the median of all companies with a FCF multiple >0x and <100x. I created this subset to show companies where FCF is a relevant valuation metric. Companies with negative NTM FCF are not listed on the chart Scatter Plot of EV / NTM Rev Multiple vs NTM Rev Growth How correlated is growth to valuation multiple? Operating Metrics Median NTM growth rate: 13% Median LTM growth rate: 16% Median Gross Margin: 76% Median Operating Margin 2% Median FCF Margin: 21% Median Net Retention: 110% Median CAC Payback: 44 months Median S&M % Revenue: 34% Median R&D % Revenue: 23% Median G&A % Revenue: 13% Comps Output Rule of 40 shows rev growth + FCF margin (both LTM and NTM for growth + margins). FCF calculated as Cash Flow from Operations - Capital Expenditures GM Adjusted Payback is calculated as: (Previous Q S&M) / (Net New ARR in Q x Gross Margin) x 12. It shows the number of months it takes for a SaaS business to pay back its fully burdened CAC on a gross profit basis. Most public companies don’t report net new ARR, so I’m taking an implied ARR metric (quarterly subscription revenue x 4). Net new ARR is simply the ARR of the current quarter, minus the ARR of the previous quarter. Companies that do not disclose subscription rev have been left out of the analysis and are listed as NA. Sources used in this post include Bloomberg, Pitchbook and company filings The information presented in this newsletter is the opinion of the author and does not necessarily reflect the view of any other person or entity, including Altimeter Capital Management, LP (”Altimeter”). The information provided is believed to be from reliable sources but no liability is accepted for any inaccuracies. This is for information purposes and should not be construed as an investment recommendation. Past performance is no guarantee of future performance. Altimeter is an investment adviser registered with the U.S. Securities and Exchange Commission. Registration does not imply a certain level of skill or training. Altimeter and its clients trade in public securities and have made and/or may make investments in or investment decisions relating to the companies referenced herein. The views expressed herein are those of the author and not of Altimeter or its clients, which reserve the right to make investment decisions or engage in trading activity that would be (or could be construed as) consistent and/or inconsistent with the views expressed herein. This post and the information presented are intended for informational purposes only. The views expressed herein are the author’s alone and do not constitute an offer to sell, or a recommendation to purchase, or a solicitation of an offer to buy, any security, nor a recommendation for any investment product or service. While certain information contained herein has been obtained from sources believed to be reliable, neither the author nor any of his employers or their affiliates have independently verified this information, and its accuracy and completeness cannot be guaranteed. Accordingly, no representation or warranty, express or implied, is made as to, and no reliance should be placed on, the fairness, accuracy, timeliness or completeness of this information. The author and all employers and their affiliated persons assume no liability for this information and no obligation to update the information or analysis contained herein in the future. Subscribe now Share Clouded Judgement Leave a comment",
+      "author": "Jamin Ball",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://cloudedjudgement.substack.com/about",
+        "publication_platform": "substack"
+      }
+    },
+    {
+      "id": "substack:c2d31417de54b117feef",
+      "source_type": "substack",
+      "source_name": "How They Make Money / App Economy Insights",
+      "title": "☁️ Alibaba: The AI Payback",
+      "url": "https://www.appeconomyinsights.com/p/alibaba-the-ai-payback",
+      "published_at": "2026-08-21T12:00:57+00:00",
+      "collected_at": "2026-08-24T07:51:27.128443+00:00",
+      "body": "Welcome to the Free edition of How They Make Money . Over 300,000 subscribers turn to us for business and investment insights. In case you missed it: 🚀 SpaceX: Growth Meets the Bill 🔎 Google: The $99 Billion Asterisk 💻 Microsoft: The Open-Weight Hedge 📱 PRO: Apple, Meta, Visa, Qualcomm, and more Subscribe now Alibaba’s AI bet is starting to show up in the numbers Revenue rose 9% Y/Y to $39.6 billion, while Cloud accelerated to 45% growth , its fastest pace in more than five years. AI-related product revenue grew triple digits for the 12th consecutive quarter, and Cloud adjusted EBITA more than doubled as margins expanded. The trade-off remains expensive (a familiar theme across Big Tech this earnings season). Alibaba spent almost $10 billion on CapEx during the quarter, up 75% Y/Y, while free cash flow was a $6.6 billion outflow . Adjusted EBITA also fell by 30% as the company continued to invest in AI infrastructure, models, and applications. This quarter offered the clearest glimpse of the potential return on these AI investments, and management put a three-year payback timeline on its compute buildout. Revenue breakdown : 🛒 China E-commerce: $16.3 billion, down 8%. 🛵 Quick Commerce: $7.9 billion, up 45%. 🌍 International Commerce: $6.1 billion, up 1%. ☁️ AI Cloud & Compute: $7.1 billion, up 45%. 🤖 AI Apps & Others: $4.9 billion, up 3%. Alibaba overhauled its reporting segments this quarter. Quick Commerce now stands apart from legacy China e-commerce, while Alibaba Cloud absorbed the T-Head chip division. The 8% Y/Y decline in China E-commerce reflected weaker marketplace activity and Alibaba’s continued pullback from some direct-sales businesses. Overall revenue rose 9% Y/Y, but it came with another step down in profitability. Operating margin fell to 6% from 14% a year ago, while adjusted EBITA declined 30% to $4.0 billion as Alibaba kept investing across AI and commerce. Source: Fiscal.ai Alibaba is getting faster growth from the businesses it is funding most aggressively, but the cost of building them remains visible across margins and cash flow. The company is maintaining its 380 billion yuan (~$56 billion) three-year AI investment plan. ☁️ The AI payback Alibaba Cloud delivered its strongest growth in more than five years, with revenue rising 45% Y/Y to $7.1 billion. AI-related products now account for roughly 35% of external Cloud revenue, up from 30% last quarter. The acceleration is finally driving operating leverage. Cloud adjusted EBITA jumped 133% Y/Y to $830 million, expanding segment margins to roughly 12%, a notable milestone given how aggressively capacity is scaling. Management says demand for AI compute still exceeds supply, which explains much of the current spending cycle. This quarter’s $10 billion in CapEx was primarily allocated to adding cloud infrastructure. AI-related revenue was already running at roughly $7.3 billion annually in the June quarter, with management expecting it to approach a $10 billion run rate this quarter. The key question is how quickly those infrastructure investments can recoup their costs. Alibaba estimates that AI compute assets can currently reach breakeven in roughly three years , comfortably within their expected useful life. Management believes the payback period could eventually fall toward 2.5 years as utilization rises, Cloud margins improve, and more workloads shift toward Alibaba’s own chips. That framework helps explain why Alibaba is comfortable sacrificing free cash flow today. If Cloud can sustain 40%+ growth while gradually improving margins, the current CapEx ramp can support a much larger recurring revenue base rather than becoming a permanent drag on returns. 🧠 Alibaba wants to own the stack Alibaba’s advantage is that it does not have to monetize AI through one product. It owns increasingly large pieces of the stack: Silicon: T-Head (in-house Zhenwu chips). Compute: Alibaba Cloud. Foundation models: Qwen (open-weight ecosystem). Applications: QwenWork, enterprise agents, and consumer assistants. Owning more of that stack should help the economics over time. T-Head’s Zhenwu chips already serve more than 650 external customers across 20+ industries via Alibaba Cloud. As more workloads move onto Alibaba-designed silicon, the company can reduce its reliance on expensive third-party accelerators and potentially capture more of the margin generated by AI demand. Qwen provides another distribution advantage. The model family has surpassed 3 billion downloads , with more than 300,000 derivative models built on top of it. Alibaba can make the models broadly available while monetizing the resulting usage through inference, storage, and other Cloud services. Its Model-as-a-Service business has already surpassed 16 billion yuan (~$2.4 billion) in ARR . The play is much bigger than selling chatbot subscriptions. Alibaba distributes Qwen to capture developers, converts that open-source adoption into sticky Cloud compute, and deploys custom silicon to protect gross margins. That creates a flywheel across the stack. 🤖 But AI apps are expensive Alibaba now breaks out AI Labs & Applications (part of AI Apps and Other in our visual above), giving investors a cleaner view of what model training and front-end apps cost while Cloud scales. The segment includes Alibaba’s model labs, the consumer Qwen business, and products such as QwenWork. AI Labs and Applications Revenue reached $0.5 billion , up 16% Y/Y. Adjusted EBITA loss widened to roughly $2.0 billion , more than four times the year-ago level. The losses reflect heavy spending on model training, product development, and user acquisition. Alibaba is still competing aggressively for consumer and enterprise adoption, even as much of the underlying technology remains free or inexpensive to access. Management expects losses to narrow as training becomes more efficient and commercialization expands. For now, though, the economics are very different across the stack. Cloud is already showing operating leverage, while AI applications remain firmly in investment mode. 🛵 Quick Commerce becomes the second curve Quick Commerce revenue surged 45% Y/Y to $7.9 billion , making it larger than Cloud this quarter. The business now includes Taobao Instant Commerce, Freshippo, and Tmall Supermarket’s on-demand operations. On-demand delivery gives Alibaba a powerful frequency engine. Food delivery drives more frequent usage, while 30-minute delivery for groceries and everyday essentials expands order volume well beyond traditional multi-day marketplace shopping. The economics are also improving: Taobao Instant Commerce improved unit economics Q/Q while maintaining market share. Higher average order values and a better mix of non-food orders helped margins. Alibaba expects non-food volume to surpass food within the next fiscal year. Quick Commerce is targeting overall profitability by FY29 . Management believes Quick Commerce could eventually represent around 30% of platform GMV . If that happens, the current spending would have done more than defend Alibaba against Meituan and JD.com. It would have added a much higher-frequency layer to an e-commerce business whose traditional China revenue is already mature. Bottom Line Alibaba’s AI spending is still crushing free cash flow, but this quarter offered tangible evidence that the investment is creating economic value. Management’s roughly three-year payback estimate on AI compute assets is the most revealing metric. AI Labs remains deeply loss-making, and Quick Commerce still requires substantial investment. Still, if Cloud sustains 40%+ growth with expanding margins, today’s massive CapEx could look like smart capital allocation. It is broadly the same playbook we are seeing from the US hyperscalers. Next up: Saturday’s PRO edition, with Walmart , Target , Klarna , and more. That’s it for today! Stay healthy and invest on! How They Make Money Premium readers unlock hundreds of visuals every earnings season Want to sponsor this newsletter? Get in touch here . Disclosure: I own AMZN, BABA, GOOG, META, MSFT, and SHOP in App Economy Portfolio . I share my ratings (BUY, SELL, or HOLD) with App Economy Portfolio members. Author's Note (Bertrand here 👋🏼): The views and opinions expressed in this newsletter are solely my own and should not be considered financial advice or any other organization's views.",
+      "author": "App Economy Insights",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.appeconomyinsights.com/about",
+        "publication_platform": "substack"
+      }
+    },
+    {
+      "id": "x:7a36d75db3de391be085",
+      "source_type": "x",
+      "source_name": "@munster_gene",
+      "title": "Here’s my $NVDA preview (they report next Wednesday). The three most important topics: 1) The pace that the growth driver is shifting away from hyperscalers. 2) Impact of SpaceX ma",
+      "url": "https://x.com/munster_gene/status/2090770895786947070",
+      "published_at": "2026-08-21T12:00:00+00:00",
+      "collected_at": "2026-08-24T07:58:44.746403+00:00",
+      "body": "Here’s my $NVDA preview (they report next Wednesday). The three most important topics: 1) The pace that the growth driver is shifting away from hyperscalers. 2) Impact of SpaceX massive jump in AI spend on next year's overall revenue. 3) Will the component environment push gross margins below the Street exiting CY26? https://t.co/NmsHIio2sF",
+      "author": "Gene Munster",
+      "symbols": [],
+      "engagement": {
+        "likes": 182,
+        "reposts": 7,
+        "replies": 13,
+        "quotes": 1
+      },
+      "metadata": {
+        "handle": "munster_gene",
+        "transport": "twscrape",
+        "investor_type": "buy_side_cofounder",
+        "coverage": "AI infrastructure, megacap technology, software sector",
+        "evidence_note": "Useful contrast to structural AI bulls; may shift tactically with the cycle.",
+        "engagement_score": 209,
+        "external_articles": [
+          {
+            "original_url": "https://t.co/NmsHIio2sF",
+            "url": "https://genemunster.com/nvidia-preview-the-growth-baton-shifts-away-from-the-hyperscalers/",
+            "title": "Nvidia Preview: The Growth Baton Shifts Away from the Hyperscalers | GeneMunster.com",
+            "body": "The July print is a near non-event outside of how much they beat consensus revenue by. Nvidia guided to $91B, and the Street is looking for $92B (up 97% y/y), and Data Center is expected to be $85B, up 107% y/y and up from $75B in April. Over the last 3 quarters, Nvidia’s guidance has strengthened and if history repeats itself, they’ll guide October revenue up by around 3%.\n\nThe bigger upside lever is the cumulative Blackwell and Rubin number. Nvidia raised that target from $500B through 2026 (October 2025) to $1T through 2027 (June 2026). That does not include the standalone Vera CPU, where the company already sees nearly $20B of revenue this year against a $200B market. Folding Vera into the $1T framework would be the biggest source of upside that comes from the earnings call.\n\nLast quarter, Nvidia split its Data Center segment into Hyperscale—the large public clouds and biggest consumer internet companies—and ACIE (AI Clouds, Industrial, & Enterprise), which includes AI clouds like CoreWeave, plus governments, enterprises, and industrial customers. Nvidia also restated nine quarters of history.\n\nThe growth driver within Data Center has shifted to non-hyperscalers. Over the past twelve months, Hyperscale revenue grew 107%, while ACIE grew 46%. Hyperscale’s share of Data Center went from 46% to 55%. In July, the growth script is expected to flip, with hyperscalers growing at 77% and ACIE growing at 146%.\n\nWe need to see this trend continuing to give investors confidence that growth higher than the Street is on the table for CY28. The thinking is that the hyperscalers are getting tapped out, and we need to see the rest of the world (ACIE) stepping up.\n\nAll of that said, it’s premature to rule out that hyperscalers can carry the Nvidia growth story in CY28. The biggest X factor is, pun intended, SpaceX. SpaceX is on pace to become the fifth hyperscaler horseman in the Nvidia conversation.\n\nIn terms of Nvidia’s hyperscaler customers, there are the four horsemen: Amazon, Google, Meta, and Microsoft. These four represent roughly 80% of Nvidia’s data center revenue. The other 20% comes from the next three largest customers—Oracle, OpenAI, and SpaceX (xAI)—and the rest of the pie. I believe SpaceX is becoming the fifth horseman in this conversation, becoming more important than Oracle after announcing they’re becoming Nvidia-exclusive on their first public earnings call earlier this month. SpaceX is estimated to spend $75B more in capex in CY27 over CY26, which would add 29% to the incremental hyperscaler dollars in CY27 over CY26. In other words, SpaceX is a meaningful part of Nvidia’s hyperscaler conversation.\n\nAnother way to look at it: SpaceX, I estimate, accounted for about 4% of revenue in July and has the potential to become a 10% customer by the end of CY27. That means that SpaceX alone can drive hyperscaler growth in CY27 to above 68%, compared to the Street, which is currently at 38%.\n\nNvidia is running at peak margins, with gross margin at 75.1% in January and 75.0% in April. CFO Kress guided July to 75% and told investors the full year would still be around 75%. The Street is expecting 74.8% in October and 74.7% in January.\n\nTwo forces suggest there is slight downside to those numbers. First, memory prices have moved sharply higher, and Nvidia has responded by trimming memory configurations on Vera racks. When a company redesigns a product to use less of an input, the input is expensive. Second, Rubin ships for the first time in October and ramps through January, and early yields on a new architecture are never the best yields Nvidia will get.\n\nA dip to 73% or 74% on the Rubin ramp should be in the back of investors’ minds and therefore represents limited downside risk to the stock going into the print.\n\nIt’s worth noting that the Street does not expect any China revenue in the July quarter or going forward. Revenue from China ended in the April 2025 quarter. That said, China is such a massive opportunity, about a quarter of global GPU spending, that the topic of when Nvidia can get back in there is almost guaranteed to come up on the call.\n\nOn Thursday, Aug. 20, The Information reported that Nvidia is planning to start small-batch shipments of an AI chip specifically designed for China by the end of the year. A spokesperson for Nvidia commented on the report saying that it was not correct. My thinking is where there is smoke, there is likely fire. I believe Nvidia is trying to find a way forward to restart China revenue and, over the next couple of quarters, may well find a way to do just that. The only problem is that the rollercoaster China/Nvidia news cycle over the past 15 months leaves investors unlikely to have confidence that they can count on revenue from the region long term."
+          }
+        ]
       }
     },
     {
@@ -821,7 +2210,8 @@
       "symbols": [],
       "engagement": {},
       "metadata": {
-        "publication_url": "https://www.latent.space"
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack"
       }
     },
     {
@@ -1069,7 +2459,59 @@
       "symbols": [],
       "engagement": {},
       "metadata": {
-        "publication_url": "https://www.latent.space"
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack"
+      }
+    },
+    {
+      "id": "substack:61a059b55fd0dd908c95",
+      "source_type": "substack",
+      "source_name": "MBI Deep Dives",
+      "title": "Instacart’s Unit Economics, and Implications for DoorDash",
+      "url": "https://mbideepdives.substack.com/p/instacarts-unit-economics-and-implications",
+      "published_at": "2026-08-20T15:44:55+00:00",
+      "collected_at": "2026-08-24T07:51:28.254593+00:00",
+      "body": "While covering DoorDash’s 2Q’26 a couple of weeks ago, I showed the company’s LTM unit economics on a per order basis. I re-created this per order economics for Instacart. I will discuss the unit economics of Instacart as well as some implications for DoorDash behind the paywall. Source: Company Filings, MBI Deep Dives, Daloopa Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on 65+ companies. The daily is just how I think out loud between the Deep Dives! Subscribe now Read more",
+      "author": "MBI Deep Dives",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mbideepdives.substack.com/about",
+        "publication_platform": "substack"
+      }
+    },
+    {
+      "id": "substack:83231a7fed7938cc7956",
+      "source_type": "substack",
+      "source_name": "TSOH Investment Research",
+      "title": "Portfolio Change - 08/20/2026",
+      "url": "https://thescienceofhitting.com/p/portfolio-change-08202026",
+      "published_at": "2026-08-20T13:01:25+00:00",
+      "collected_at": "2026-08-24T07:51:29.063548+00:00",
+      "body": "Note: Review all prior portfolio changes on the TSOH website I’ve decided to make a portfolio change, which will be completed during today’s market session. This was the allocation as of yesterday’s close: Read more",
+      "author": "TSOH Investment Research",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://thescienceofhitting.com/about",
+        "publication_platform": "substack"
+      }
+    },
+    {
+      "id": "substack:db074a44bcaddd03d140",
+      "source_type": "substack",
+      "source_name": "TSOH Investment Research",
+      "title": "Roblox: Accepting Uncertainty",
+      "url": "https://thescienceofhitting.com/p/roblox-accepting-uncertainty",
+      "published_at": "2026-08-20T10:30:27+00:00",
+      "collected_at": "2026-08-24T07:51:29.063548+00:00",
+      "body": "Review all prior RBLX research and portfolio changes on the TSOH website From “ Disruption In The Other Direction ” (February 2026): “Despite outperforming any reasonable expectations from five years ago on DAU growth, bookings growth, etc., Roblox generated >$4 billion of FY22 – FY25 cumulative net losses. I think Roblox would benefit from a clearer long-term financial road map, i.e. an update to the framework outlined at the 2023 Investor Day. Not only would it help investors to bridge the divide between today’s impressive platform KPIs and long-term profitability, which would likely dampen its stock price volatility, but it would also set some guardrails for management to ensure priorities remain appropriately balanced. (Note that Netflix started providing a margin framework for streaming in 2013 .)” In Q4 FY19, Roblox had ~19 million global DAUs, with total TTM engagement on the platform of ~13.7 billion hours. What happened at Roblox over the ensuing six years (through YE FY25) was nothing short of phenomenal. First, the company was a major beneficiary of the pandemic, with DAUs and platform hours more than tripling over the next three years (FY20 – FY22), to ~59 million and ~49.3 billion, respectively. What happened in the subsequent three years (FY23 – FY25) was even more impressive: another leg of huge growth after digesting that much enlarged base of users and hours. By YE FY25, Roblox had ~144 million DAUs with ~123.9 billion hours of TTM engagement. The following graphic, from Matt Ball’s “ The State of Video Gaming in 2026 ”, contextualizes this expansion within the broader gaming industry. To put this data into words, Roblox took substantial engagement share (hours played) in gaming over the past 5-10 years, such that its engagement is greater than Fortnite, PlayStation, and Steam combined . The latest move higher for global DAUs has made the pandemic-fueled growth of 2020 look rather pedestrian. As you can see below, Roblox added ~59 million net DAU’s in 2025 (TTM Q4 FY25), which is nearly 4x greater than the ~18 million net DAU’s that the platform added throughout 2020. While the company is embarking on a period of tougher results, which I’ll discuss in more detail below, I think the above data lends support to the following comment from CEO Dave Baszucki : “We believe that we are navigating a period of normalization following a year of massive growth.” In the near term, the financial KPI that best captures this normalization is YoY bookings. The company’s Q2 FY26 results disappointed, and now they expect a mid-teens YoY decline in bookings in Q3 FY26; as depicted below, this is pressure on bookings growth that they haven’t experienced before. The stock, which traded above $140 per share in September 2025, closed on Wednesday at ~$39 per share - their second ~75%+ stock price decline in five years as a public company . As I’ve noted at various times since the April 2022 Roblox initiation , I think management’s inability and / or unwillingness to adopt a clearer set of long-term financial objectives for investors has invited outsized stock price volatility… which is something management should not be indifferent to given heavy reliance of SBC to compensate employees. Read more",
+      "author": "TSOH Investment Research",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://thescienceofhitting.com/about",
+        "publication_platform": "substack"
       }
     },
     {
@@ -1085,7 +2527,25 @@
       "symbols": [],
       "engagement": {},
       "metadata": {
-        "publication_url": "https://www.latent.space"
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack"
+      }
+    },
+    {
+      "id": "substack:196bc4108fad53977f1a",
+      "source_type": "substack",
+      "source_name": "MBI Deep Dives",
+      "title": "Airbnb Model Update (2026)",
+      "url": "https://mbideepdives.substack.com/p/airbnb-model-update-2026",
+      "published_at": "2026-08-19T15:57:36+00:00",
+      "collected_at": "2026-08-24T07:51:28.254593+00:00",
+      "body": "The last time I shared my updated Airbnb model was October 2025 . As the stock has gone up ~50% since then, investors need to re-underwrite the assumptions today. As promised last week, I am going to share my updated model and lay out what you need to believe to get to a reasonable IRR from current price behind the paywall. Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on 65+ companies. The daily is just how I think out loud between the Deep Dives! Subscribe now Read more",
+      "author": "MBI Deep Dives",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mbideepdives.substack.com/about",
+        "publication_platform": "substack"
       }
     },
     {
@@ -1101,7 +2561,8 @@
       "symbols": [],
       "engagement": {},
       "metadata": {
-        "publication_url": "https://www.latent.space"
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack"
       }
     },
     {
@@ -1117,7 +2578,42 @@
       "symbols": [],
       "engagement": {},
       "metadata": {
-        "publication_url": "https://www.latent.space"
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack"
+      }
+    },
+    {
+      "id": "substack:0b2a37582cd5941353e4",
+      "source_type": "substack",
+      "source_name": "MBI Deep Dives",
+      "title": "Rethinking the Data Moat",
+      "url": "https://mbideepdives.substack.com/p/rethinking-the-data-moat",
+      "published_at": "2026-08-18T16:38:41+00:00",
+      "collected_at": "2026-08-24T07:51:28.254593+00:00",
+      "body": "I want to highlight a couple of pieces which I found to be quite intriguing. The first is Dwarkesh Patel’s conversation with Ryan Greenblatt, chief scientist at Redwood Research. Admittedly, while the conversation about whether automating AI research triggers recursive self-improvement was thought provoking, it was also quite spooky at times. The second piece that I would like to highlight is a talk by Shuchao Bi, titled “Advancing the Frontier of Silicon Intelligence: Past, Open Problems, and the Future”. Bi co-founded YouTube Shorts at Google, ran multimodal post-training at OpenAI, and now works at Meta Superintelligence Labs. While Greenblatt’s conversation with Dwarkesh was published last week, Bi gave the presentation more than a year ago. Since I happened to stumble onto both of these during the weekend, I could notice a healthy dose of similarity in Greenblatt’s and Bi’s arguments. Last month, I wrote about the salience of data in the context of AI and Alphabet bidding for bankruptcy auction for Spirit Airline’s data certainly corroborates to that. However, both Greenblatt and Bi made me re-think my position a bit on this topic. Greenblatt had an interesting thought experiment: if you could hold compute or data constant, how much the model would still improve? That delta of improvement could be labeled as “algorithmic progress” and he made the case that it is a very important driver of AI progress over the last few years (emphasis mine): “ GPT-3 was released in 2020, so it was trained about six and a half, seven years ago. It’s worth noting that GPT-3 is maybe a little too far in the past, but let’s go with this for a second. If we were to train a model with GPT-3-level compute today, how good would that model be? My understanding, based on how algorithmic progress works, is that we’d be able to train a model that’s as good as the best model we had perhaps around three years ago. So I think that right now we’d be able to train a version of GPT-3 that’s probably somewhat better than GPT-4, a moderate amount better than GPT-4. I think that’s about right. That roughly lines up with how algorithmic progress has worked.” Bi didn’t quite say “algorithmic progress”, but pointed out that the raw data is “unlikely to be the best data distribution”. He suggested that the incremental improvement in scaling law may come from changing the data distributions or to say it differently, “by equalizing intelligence per token”. My read is that they are essentially alluding to the same argument but using different words to explain their intuitions. Source: Shuchao Bi’s talk Later in the conversation, Greenblatt expanded why he is not a big believer of the role of “human expert data” in model improvements, rather the process improvement around data itself is the larger driver. From the podcast (emphasis mine): “I think the vast majority of pre-training data improvements are from science on better understanding what data sets are good and schleppy labor on figuring out how to filter down. So my view is that improvements of the form of, like, OpenWebText to FineWeb , that improvement is better described as an algorithmic improvement of the sort that you can study with some GPUs , and you don’t need human expert data to do that. Now, there’s a different effect which we could talk about, which is that maybe the internet in 2026 is more of a fertile ground for training data than the internet in 2018. There’s also been an effect where there are just more humans posting on the internet, so there’s more data to harvest. My sense is that that effect is going to be quite a bit smaller than the effect of humans knowing better how to curate the data, having better scrapes, knowing how to process those scrapes better — this sort of thing.” Greenblatt’s arguments certainly gave me a pause because my prior was a bit different and likely much closer to Dwarkesh who also appears to think human expert data played a critical role in the model’s recent trajectory. Bi probably agrees with Greenblatt since he decomposed where human knowledge comes from: a loop of proposing tasks, learning existing knowledge, thinking, getting feedback from the environment, and distilling the findings back into knowledge and wondered aloud in his talk which steps AI can accelerate. His answer is basically nearly all of them, including proposing the tasks in the first place. Greenblatt essentially makes the same claim retrospectively: RL environments improved over the last two years mostly because labs learned what to build and used enormous amounts of AI labor to build it. Source: Shuchao Bi’s talk Source: Shuchao Bi’s talk Another interesting observation by Greenblatt was that machine learning (ML) is a “shallow” domain compared to math and given that even in math we are transitioning “ from an era of proof scarcity to an era of proof abundance ”, automating much of ML may prove to be lot more amenable. From Greenblatt: I think ML is a very shallow domain relative to math. In math, there was much more of a thing where you find some true deep abstraction, and if you really understand that thing, which is hard to understand, then you get somewhere. Whereas I feel like the things that are the equivalent of that in ML are really dumb bullshit. Like with scaling laws, come on guys, we can explain scaling laws really quickly. I think the deepest and most important concepts in math, for example, don’t have the property that you can really understand the underlying thing and why it matters in a very short period of time. My sense is that some domains are structurally different in terms of how they operate and how much they depend on deep abstractions. Physics and math are much more on the side of being very far on the deep, hard-to-come-up-with-ideas side, whereas I think ML and most other domains are much more amenable to hill climbing . That’s my sense of how this will go in the future. Even in cases where there has been some breakthrough in AI, oftentimes in retrospect it looks like a big bottleneck to making that breakthrough happen was getting all of the micro details and mungy intuition right. An example of this is training AIs to be good at reasoning and chain of thought , doing RL on chain of thought. It looks like you probably could have done RL and chain of thought on GPT-3 and gotten kind of interesting results on math if you had really scaled it up and done a good job. Bi also made the point that learning from environment interaction is efficient wherever a perfect simulator exists (coding, math etc.) and fundamentally blocked where simulation is impossible or the sim-to-real gap is simply too large ( for example biology, and experimental physics). Given that context, automating AI research doesn’t seem nearly as outlandish. Source: Shuchao Bi’s talk Gavin Baker in a recent reply to an Anthropic researcher mentioned, “I do think the computational efficiency of humans (I’m impressed that your brain runs on only 15-20 watts tbh) means that humans will be economically useful for the foreseeable future *even* in a fast takeoff, AGI maximalist scenario.” Indeed, the efficiency of humans was also highlighted by Bi during his presentation (see a bunch of related slides below). Source: Shuchao Bi’s talk Source: Shuchao Bi’s talk Source: Shuchao Bi’s talk However, the amazing efficiency of homo sapiens is also a stark reminder that nature has already shipped a general intelligence that runs on less power than a dim lightbulb. Today’s models need a building full of GPUs and most of the written internet to often do less. Does that indicate something “special” about us or is it a measure of how inefficient our current approach still is? Bi’s bet is that the biggest waste sits in how models learn. If someone fixes that, the cost of a given level of intelligence can fall by orders of magnitude. Of course, I am not in a position to know or predict whether this is at all fixable or even if it is, when that may happen. A peer recently praised me to help him improve his understanding of the AI landscape through my work at MBI Deep Dives. I jokingly mentioned to him I’m glad that you feel that way, but ironically the more I study AI landscape, the more certain I become that I need to hold every opinion related to AI very loosely. Such a frame of mind doesn’t inspire a lot of confidence in my own mind that I can see too far ahead. Investors are trying to price AI landscape based on near-term trajectory of respective companies, but given how fast things can alter in the AI landscape, it is hard not to feel that betting for or against this trade carries a monumental risk either way. Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on 65+ companies. The daily is just how I think out loud between the Deep Dives! Subscribe now Current Portfolio: Please note that these are NOT my recommendation to buy/sell these securities, but just disclosure from my end so that you can assess potential biases that I may have because of my own personal portfolio holdings. Always consider my write-up my personal investing journal and never forget my objectives, risk tolerance, and constraints may have no resemblance to yours. My current portfolio is disclosed below: Read more",
+      "author": "MBI Deep Dives",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mbideepdives.substack.com/about",
+        "publication_platform": "substack"
+      }
+    },
+    {
+      "id": "substack:eb6c6ec2e66c7f4aa312",
+      "source_type": "substack",
+      "source_name": "How They Make Money / App Economy Insights",
+      "title": "💰 Wall Street's Top Stocks in Q2",
+      "url": "https://www.appeconomyinsights.com/p/wall-streets-top-stocks-in-q2-70e",
+      "published_at": "2026-08-18T12:05:03+00:00",
+      "collected_at": "2026-08-24T07:51:27.128443+00:00",
+      "body": "Welcome to the Premium edition of How They Make Money . Over 300,000 subscribers turn to us for business and investment insights. In case you missed it: 💡 WTF is an ETF? ☁️ Neocloud Economics 💵 Free Cash Flow Explained 🚀 SpaceX: Growth Meets the Bill Subscribe now It’s 13F season again! Every quarter, funds managing over $100 million must disclose their portfolios, offering a rare glimpse into the minds of elite investors. The latest 13F filings capture portfolios as of June 30. In Q2, the AI trade broadened beyond NVIDIA . The biggest funds kept their core exposure to hyperscalers and leading chipmakers, but new money increasingly moved toward the rest of the AI supply chain. Taiwan Semiconductor, memory, storage, semiconductor equipment, and newer infrastructure names like Cerebras and Nebius featured prominently among top buys. The theme also continued to spread into the physical economy. Power, industrials, materials, and infrastructure companies continued to attract capital as investors sought ways to participate in the massive data center buildout beyond GPUs. Beyond AI, some of the quarter’s most interesting bets came from places few investors would expect. Against that backdrop, super investors had to choose between doubling down on AI infrastructure, revisiting beaten-down growth stocks, or sticking with durable compounders. Let’s see where the smart money leaned. Today at a glance: Hedge funds’ strategies Top buys and top holdings in Q2 Fund picks that were not on your bingo card Implications for individual investors Before we dive into 13Fs, a quick reminder: blindly copying hedge fund trades is a terrible strategy. Investing is like shooting 3-pointers. Even Steph Curry, the greatest shooter ever, misses more than half the time. There are no guaranteed outcomes, even for the pros. Your behavior matters more than your portfolio. As Peter Lynch said, “Know what you own and why you own it.” Conviction is what helps you hold through volatility. And conviction comes from doing your own work, not borrowing someone else’s. As Ian Cassel puts it: “You can borrow someone else’s stock ideas but you can’t borrow their conviction. […] Do the work so you know when to sell. Do the work so you can hold. Do the work so you can stand alone.” Some limitations of 13F filings: Omit short positions and cash reserves. Offer a partial view , leaving out smaller funds. Exclude non-US equities , bonds, and commodities. Can be dated , given their submission 45 days after the quarter. With all this said, let’s see what top funds were buying and holding in Q2. 1. Hedge funds’ strategies Hedge funds are financial powerhouses known for flexible, aggressive strategies designed to beat the market. Here’s what typically shapes their moves: Market conditions : Long in bull markets, defensive in bear markets. Sector trends : Shifts in regulation or consumer behavior steer capital. Fundamentals : Strong earnings, free cash flow, and leadership matter. Macro factors : Rates, inflation, and geopolitics influence positioning. Quant models : Some lean on proprietary algorithms to find an edge. Risk management : Diversification, hedging, and position sizing. Investor sentiment : Fear and greed create mispriced opportunities. Still, it doesn’t always work out. The Global X Guru ETF (GURU), designed to track top hedge fund holdings, has underperformed the S&P 500 since its inception in 2012. And that comparison still leaves out the classic hedge fund fee drag. Source: Fiscal.ai And those fees matter. The classic “2 and 20” model (2% of assets + 20% of gains) can significantly reduce returns. It's no wonder that many individual investors are opting for simpler, lower-cost strategies. 2. Top holdings and top buys in Q2 Our partners at Fiscal.ai gather the data on Super Investors and visualize their portfolio for you. Pick your favorite investors and see how their holdings have evolved. Source: Fiscal.ai In early 2020, just before the COVID market turmoil, I curated a list of 20 top-performing hedge funds using TipRanks data. The selection focused on alpha relative to the S&P 500, and I also included a few funds frequently featured in my social feeds and podcast rotation. It’s not perfect, but it remains a solid directional filter. Top 5 holdings end of June 2026: The 10 stocks below represent nearly half of the top holdings listed: 🤖 AI infrastructure: TSM, NVDA, ASML, AMAT, MU. ☁️ Mega-cap platforms: AMZN, GOOG, META. 🚀 New IPOs: SPCX, CBRS. Amazon and Taiwan Semiconductor are now tied as the most widely held stocks, appearing among the top five holdings of 9 of the 20 funds. Alphabet follows with eight, while NVIDIA appears in five. Microsoft, once a fixture on this list, appeared only once at the end of June after falling more than 20% YTD. Apple and Tesla were entirely absent from the top-five holdings. The holdings themselves don’t change dramatically from quarter to quarter, so let’s turn to the more actionable insights with the new movements in Q2. Top 5 buys in Q2 Read more",
+      "author": "App Economy Insights",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.appeconomyinsights.com/about",
+        "publication_platform": "substack"
       }
     },
     {
@@ -1133,7 +2629,25 @@
       "symbols": [],
       "engagement": {},
       "metadata": {
-        "publication_url": "https://www.latent.space"
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack"
+      }
+    },
+    {
+      "id": "substack:ec31dda70eecd112e024",
+      "source_type": "substack",
+      "source_name": "MBI Deep Dives",
+      "title": "Why DoorDash’s Autonomous Strategy Beats Uber’s Hodgepodge",
+      "url": "https://mbideepdives.substack.com/p/why-doordashs-autonomous-strategy",
+      "published_at": "2026-08-17T16:14:54+00:00",
+      "collected_at": "2026-08-24T07:51:28.254593+00:00",
+      "body": "Uber’s decision to divest its stake in Serve, the autonomous delivery robot company that was spun out of Uber in 2021, was more interesting than it may appear at first glance. When I looked into it, I came to realize that Serve is actually a publicly listed company now. It was founded inside Postmates as a division back in 2017 but Postmates itself was acquired by Uber in 2020. While Uber was a very close partner (and shareholder) of Serve from the very beginning of Serve’s independent existence, that started to unravel in 2026. While going through Serve’s earnings call, some historical contexts as well as DoorDash’s approach to autonomous delivery, I came away thinking that Uber is taking a somewhat risky approach long-term which I will expand behind the paywall. Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on 65+ companies. The daily is just how I think out loud between the Deep Dives! Subscribe now Read more",
+      "author": "MBI Deep Dives",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mbideepdives.substack.com/about",
+        "publication_platform": "substack"
       }
     },
     {
@@ -1149,7 +2663,25 @@
       "symbols": [],
       "engagement": {},
       "metadata": {
-        "publication_url": "https://www.interconnects.ai"
+        "publication_url": "https://www.interconnects.ai",
+        "publication_platform": "substack"
+      }
+    },
+    {
+      "id": "substack:da063728ab4f6cfb9c1a",
+      "source_type": "substack",
+      "source_name": "TSOH Investment Research",
+      "title": "The Airbnb Blueprint",
+      "url": "https://thescienceofhitting.com/p/the-airbnb-blueprint",
+      "published_at": "2026-08-17T10:32:06+00:00",
+      "collected_at": "2026-08-24T07:51:29.063548+00:00",
+      "body": "Review all prior ABNB research and portfolio changes on the TSOH website From “ Airbnb: Room To Breathe ” (May 2026): “I think that Mr. Market will be more patient as long as solid growth and profitability is sustained in the core business, giving management room to breathe and to lay a solid foundation in those newer businesses (as CEO Brian Chesky says, to go from one to ten to many). A reacceleration in GBV growth is an encouraging sign of the sizable opportunities that lie ahead. I think the risk/reward on Airbnb stock remains attractive at current levels [at the time, ABNB traded at ~$130 per share].” The solid growth that was required to appease Mr. Market has materialized: Airbnb reported strong 1H FY26 results, and with their Q3 FY26 guidance implying ~17% YoY TTM GBV growth in the coming quarter – a meaningful acceleration from the ~10% YoY growth that was reported in 1H FY25. The Q2 results reflected broad-based geographic strength, most notably the acceleration to mid-teens YoY growth in North America, helped by the World Cup. Management didn’t directly quantify its impact, only saying it resulted in “ millions of guest arrivals ”, which compares to a total of ~148 million nights & experiences booked during Q2 FY26. As you can see below, North America revenues were up ~16% YoY, or roughly ten points higher than the average over the preceding two years. Given that the U.S. accounted for ~40% of Airbnb’s FY25 revenues , a ten point lift in the region would imply a roughly four point benefit to consolidated revenue growth, all else equal. If so, that would also suggest a tough comp for the business as we get to Q2 FY27. For what it’s worth, someone in my network told me Airbnb disclosed on the follow-up call that the World Cup contributed less than one point to YoY room nights growth. I don’t know if that’s accurate or not; what I do know is that management shouldn’t be sharing such information behind closed doors. I’ve reached out to IR on this, and will let you know as I gather more information. Read more",
+      "author": "TSOH Investment Research",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://thescienceofhitting.com/about",
+        "publication_platform": "substack"
       }
     }
   ]

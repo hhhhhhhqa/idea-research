@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 
-from ai_signal.pipelines.substack import parse_substack_feed
+from idea_research.pipelines.substack import parse_substack_feed
 
 
 FEED = """<?xml version="1.0"?>
@@ -23,3 +23,14 @@ def test_parse_substack_feed_normalizes_item():
     assert items[0].source_type == "substack"
     assert items[0].body == "Tokens are getting cheaper."
     assert items[0].url.endswith("/p/inference")
+
+
+def test_parse_generic_rss_feed_keeps_its_own_source_type():
+    items = parse_substack_feed(
+        FEED,
+        {"name": "Software Stack Investing", "url": "https://example.com", "source_type": "rss"},
+        now=datetime(2026, 8, 24, tzinfo=timezone.utc),
+        lookback_hours=48,
+    )
+    assert items[0].source_type == "rss"
+    assert items[0].id.startswith("rss:")

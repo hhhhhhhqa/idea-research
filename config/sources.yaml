@@ -11,31 +11,195 @@ substack:
     - name: One Useful Thing
       url: https://www.oneusefulthing.org
       feed_url: https://www.oneusefulthing.org/feed
+    - name: Clouded Judgement
+      url: https://cloudedjudgement.substack.com/about
+      feed_url: https://cloudedjudgement.substack.com/feed
+    - name: How They Make Money / App Economy Insights
+      url: https://www.appeconomyinsights.com/about
+      feed_url: https://www.appeconomyinsights.com/feed
+    - name: MBI Deep Dives
+      url: https://mbideepdives.substack.com/about
+      feed_url: https://mbideepdives.substack.com/feed
+    - name: TSOH Investment Research
+      url: https://thescienceofhitting.com/about
+      feed_url: https://thescienceofhitting.com/feed
+    - name: Aspiring for Intelligence
+      url: https://aspiringforintelligence.substack.com/about
+      feed_url: https://aspiringforintelligence.substack.com/feed
+    - name: Software Stack Investing
+      url: https://softwarestackinvesting.com/author/
+      feed_url: https://softwarestackinvesting.com/feed/
+      source_type: rss
+      platform: wordpress
 
 reddit:
-  lookback_hours: 72
-  max_items_per_subreddit: 25
-  anonymous_request_delay_seconds: 2.0
+  lookback_hours: 36
+  max_items_per_subreddit: 75
+  anonymous_request_delay_seconds: 12.0
   subreddits:
-    - name: MachineLearning
-    - name: LocalLLaMA
-    - name: artificial
+    - name: wallstreetbets
+      listing: hot
+      limit: 75
+      lookback_hours: 36
+
+  # Bare uppercase words are accepted only from this allowlist. Unknown cashtags such
+  # as $XYZ are still captured, which keeps discovery open without turning every
+  # acronym in a post into a stock ticker.
+  known_tickers:
+    - NVDA
+    - MSFT
+    - GOOGL
+    - META
+    - AMZN
+    - ORCL
+    - TSM
+    - ASML
+    - TSLA
+    - AAPL
+    - AMD
+    - AVGO
+    - PLTR
+    - GME
+    - AMC
+    - RDDT
+    - HOOD
+    - COIN
+    - MSTR
+    - SOFI
+    - SMCI
+    - CRWV
+    - NBIS
+    - IREN
+    - OPEN
+    - NFLX
+    - SHOP
+    - SNOW
+    - CRM
+    - DDOG
+    - NET
+    - CRWD
+    - RBRK
+  ticker_aliases:
+    NVDA: [NVIDIA]
+    MSFT: [Microsoft]
+    GOOGL: [Google, Alphabet]
+    META: [Meta Platforms, Facebook]
+    AMZN: [Amazon, AWS]
+    ORCL: [Oracle]
+    TSM: [TSMC]
+    ASML: [ASML]
+    TSLA: [Tesla]
+    AAPL: [Apple]
+    AMD: [Advanced Micro Devices]
+    AVGO: [Broadcom]
+    PLTR: [Palantir]
+    GME: [GameStop]
+    AMC: [AMC Entertainment]
+    # Do not alias the word "Reddit" to RDDT: it appears in feed boilerplate and
+    # would create false mentions. Explicit RDDT or $RDDT still works.
+    HOOD: [Robinhood]
+    COIN: [Coinbase]
+    MSTR: [MicroStrategy]
+    SOFI: [SoFi]
+    SMCI: [Super Micro]
+    CRWV: [CoreWeave]
+    NBIS: [Nebius]
+    NFLX: [Netflix]
+    SHOP: [Shopify]
+    SNOW: [Snowflake]
+    CRM: [Salesforce]
+    NOW: [ServiceNow]
+    DDOG: [Datadog]
+    NET: [Cloudflare]
+    CRWD: [CrowdStrike]
+    RBRK: [Rubrik]
 
 x:
   lookback_hours: 72
   max_items_per_account: 10
   include_replies: false
-  # Add accounts later. Official API example:
-  # accounts:
-  #   - handle: karpathy
-  #     name: Andrej Karpathy
-  # Or use a feed from an RSS service you control:
-  #   - handle: karpathy
-  #     rss_url: https://your-rss-service.example/karpathy.xml
-  accounts: []
+  linked_articles:
+    enabled: true
+    max_links_per_post: 2
+    max_articles_per_run: 30
+    max_body_chars: 12000
+    max_download_bytes: 1000000
+  # Optional floor on likes + 2*reposts + replies for a tweet to be kept.
+  # min_engagement: 10
+  # `include_replies` can be overridden for an individual account.
+  accounts:
+    # Buy-side / institutional viewpoints
+    - handle: GavinSBaker
+      name: Gavin Baker
+      investor_type: buy_side_cio
+      coverage: AI compute, NVDA, TSLA, cloud infrastructure, technology capex
+      evidence_note: Long-term technology investor; may discuss own holdings and has a structural growth bias.
+    - handle: jaminball
+      name: Jamin Ball
+      investor_type: buy_side_partner
+      coverage: enterprise software, SaaS valuation, AI applications
+      evidence_note: Read alongside Clouded Judgement; useful for software demand and valuation framing.
+    - handle: altcap
+      name: Brad Gerstner
+      investor_type: buy_side_founder
+      coverage: META, UBER, NVDA, AI capex, large internet platforms
+      evidence_note: Portfolio-manager perspective; can be talking the book.
+    - handle: ShanuMathew93
+      name: Shanu Mathew
+      investor_type: public_markets_pm
+      coverage: AI datacenters, power, infrastructure
+      evidence_note: Use for AI infrastructure constraints rather than pure software analysis.
+
+    # Company, product, and business-model analysis
+    - handle: StackInvesting
+      name: Peter Offringa
+      investor_type: software_investor
+      coverage: software product competition, earnings, portfolio logic
+    - handle: hhhypergrowth
+      name: Muji
+      investor_type: software_operator_investor
+      coverage: NET, DDOG, SNOW, CRWD, ZS, RDDT
+      evidence_note: Product and earnings commentary; some long-form work is paid.
+    - handle: eric_seufert
+      name: Eric Seufert
+      investor_type: operator_analyst
+      coverage: META, GOOGL, APP, TTD, Apple, digital advertising
+      include_replies: true
+      evidence_note: Replies are intentionally included because they often contain industry corrections and debate.
+    - handle: modestproposal1
+      name: Modest Proposal
+      investor_type: anonymous_market_commentator
+      coverage: large internet, software expectations, crowding, earnings expectation gaps
+      evidence_note: Discovery signal for market debate only; anonymous identity means it cannot be final factual evidence.
+    - handle: munster_gene
+      name: Gene Munster
+      investor_type: buy_side_cofounder
+      coverage: AI infrastructure, megacap technology, software sector
+      evidence_note: Useful contrast to structural AI bulls; may shift tactically with the cycle.
+    - handle: DanielTNiles
+      name: Dan Niles
+      investor_type: long_short_pm
+      coverage: technology, Mag7, software disruption risk
+      evidence_note: Deliberate skeptical counterweight; distinguish thesis from verified company evidence.
+    - handle: ByrneHobart
+      name: Byrne Hobart
+      investor_type: investor_writer
+      coverage: company financial analysis, capital structure, M&A, options, cycles
+      evidence_note: Useful for commercial-model and capital-allocation reasoning.
+    - handle: StockJabber
+      name: Edwin Dorsey
+      investor_type: short_researcher
+      coverage: governance, misconduct, short research, corporate red flags
+      evidence_note: Treat allegations as leads until supported by primary documents or company disclosures.
 
 prices:
   history_period: 1y
+  market_movers:
+    enabled: true
+    api_key_env: ALPHAVANTAGE_API_KEY
+    # Alpha Vantage's default response is the end-of-day US-market list. Do not
+    # opt into its realtime or delayed entitlements: this feed is for closes.
+    endpoint: https://www.alphavantage.co/query
   tickers:
     - ticker: NVDA
       name: NVIDIA
