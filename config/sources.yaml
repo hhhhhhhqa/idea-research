@@ -1,0 +1,57 @@
+substack:
+  lookback_hours: 168
+  max_items_per_publication: 12
+  publications:
+    - name: Latent Space
+      url: https://www.latent.space
+      feed_url: https://www.latent.space/feed
+    - name: Interconnects
+      url: https://www.interconnects.ai
+      feed_url: https://www.interconnects.ai/feed
+    - name: One Useful Thing
+      url: https://www.oneusefulthing.org
+      feed_url: https://www.oneusefulthing.org/feed
+
+reddit:
+  lookback_hours: 72
+  max_items_per_subreddit: 25
+  anonymous_request_delay_seconds: 2.0
+  subreddits:
+    - name: MachineLearning
+    - name: LocalLLaMA
+    - name: artificial
+
+x:
+  lookback_hours: 72
+  max_items_per_account: 10
+  include_replies: false
+  # Add accounts later. Official API example:
+  # accounts:
+  #   - handle: karpathy
+  #     name: Andrej Karpathy
+  # Or use a feed from an RSS service you control:
+  #   - handle: karpathy
+  #     rss_url: https://your-rss-service.example/karpathy.xml
+  accounts: []
+
+prices:
+  history_period: 1y
+  tickers:
+    - ticker: NVDA
+      name: NVIDIA
+    - ticker: MSFT
+      name: Microsoft
+    - ticker: GOOGL
+      name: Alphabet
+    - ticker: META
+      name: Meta Platforms
+    - ticker: AMZN
+      name: Amazon
+    - ticker: ORCL
+      name: Oracle
+    - ticker: TSM
+      name: TSMC ADR
+    - ticker: ASML
+      name: ASML ADR
+    - ticker: 2513.HK
+      name: Zhipu AI

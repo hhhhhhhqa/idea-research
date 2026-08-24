@@ -1,0 +1,105 @@
+name: AI 二级市场 idea generation
+language: zh-CN
+detail: standard
+report_focus: >-
+  寻找未来 1–12 周可能改变上市公司盈利预期、估值叙事或资金关注度的 AI 产业信号；
+  优先识别市场尚未充分定价的变化，不把热度本身当作投资结论。
+
+enabled_sources:
+  - substack
+  - reddit
+  - x
+  - price
+
+lookback_hours:
+  daily: 36
+  weekly: 192
+
+max_items:
+  daily: 30
+  weekly: 80
+
+# 留空表示不过滤；填入后，非价格内容至少命中一个词才进入上下文。
+include_keywords: []
+exclude_keywords:
+  - giveaway
+  - meme
+
+themes:
+  模型能力与成本:
+    - benchmark
+    - inference
+    - training
+    - token
+    - quantization
+    - 推理
+    - 训练
+    - 量化
+  AI 基础设施:
+    - gpu
+    - datacenter
+    - data center
+    - capex
+    - hbm
+    - networking
+    - 数据中心
+    - 算力
+  Agent 与软件:
+    - agent
+    - coding
+    - copilot
+    - workflow
+    - seat
+    - developer
+    - 智能体
+  开源生态:
+    - open source
+    - open-source
+    - llama
+    - hugging face
+    - 开源
+  商业化与需求:
+    - revenue
+    - pricing
+    - customer
+    - enterprise
+    - adoption
+    - monetization
+    - 商业化
+    - 客户
+
+watchlist:
+  - ticker: NVDA
+    name: NVIDIA
+    aliases: [英伟达, CUDA, Blackwell, GB200, GB300]
+  - ticker: MSFT
+    name: Microsoft
+    aliases: [微软, Azure, Copilot]
+  - ticker: GOOGL
+    name: Alphabet
+    aliases: [Google, 谷歌, Gemini, DeepMind, TPU]
+  - ticker: META
+    name: Meta Platforms
+    aliases: [Meta, Llama]
+  - ticker: AMZN
+    name: Amazon
+    aliases: [AWS, Bedrock, Trainium, Inferentia]
+  - ticker: ORCL
+    name: Oracle
+    aliases: [OCI, Oracle Cloud]
+  - ticker: TSM
+    name: TSMC
+    aliases: [台积电, CoWoS]
+  - ticker: ASML
+    name: ASML
+    aliases: [EUV, 阿斯麦]
+  - ticker: 2513.HK
+    name: Zhipu AI
+    aliases: [智谱, GLM]
+
+ranking:
+  source_weights:
+    substack: 2.0
+    reddit: 1.0
+    x: 1.5
+    price: 1.0
