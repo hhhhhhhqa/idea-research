@@ -3,7 +3,7 @@
 If the user has no existing profile preference, ask the following questions in order. Keep each question short. Defaults are listed so the Agent can proceed when the user says “默认”.
 
 1. **Introduction.** Explain that Idea Research reads newsletters, buy-side and company-analysis voices on X, WSB discussion and U.S. close data. It shows who said what; it does not issue trade recommendations.
-2. **Frequency and timezone.** Ask daily or weekly, then desired delivery time and IANA timezone. Default: daily at `07:30`, `Asia/Hong_Kong`. For weekly, also ask the day.
+2. **Frequency and timezone.** Ask for a daily delivery time and IANA timezone. Default: daily at `07:30`, `Asia/Hong_Kong`.
 3. **Language.** Ask Chinese, English or bilingual. Default: Chinese.
 4. **Detail.** Ask highlights, standard or full. Default: standard.
 5. **Research scope.** Ask which of AI infrastructure, Internet platforms, SaaS, cybersecurity, advertising, or named tickers deserve extra attention. Keep the default broad AI / Internet / software scope if the user has no preference.

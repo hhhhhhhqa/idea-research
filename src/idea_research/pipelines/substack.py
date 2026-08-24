@@ -23,7 +23,7 @@ def parse_substack_feed(
     *,
     now: datetime | None = None,
     lookback_hours: int = 168,
-    max_items: int = 20,
+    max_items: int | None = None,
 ) -> list[SignalItem]:
     now = now or datetime.now(timezone.utc)
     collected_at = now.isoformat()
@@ -57,7 +57,7 @@ def parse_substack_feed(
                 },
             )
         )
-        if len(items) >= max_items:
+        if max_items is not None and len(items) >= max_items:
             break
     return items
 
@@ -77,12 +77,13 @@ def collect_substack(config: dict[str, Any], client: httpx.Client | None = None)
             try:
                 response = client.get(_feed_url(publication))
                 response.raise_for_status()
+                configured_max = publication.get("max_items", config.get("max_items_per_publication"))
                 result.items.extend(
                     parse_substack_feed(
                         response.text,
                         publication,
                         lookback_hours=int(config.get("lookback_hours", 168)),
-                        max_items=int(publication.get("max_items", config.get("max_items_per_publication", 20))),
+                        max_items=int(configured_max) if configured_max is not None else None,
                     )
                 )
             except Exception as exc:  # one publication must not erase the others

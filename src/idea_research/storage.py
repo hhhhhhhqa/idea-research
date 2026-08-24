@@ -3,7 +3,6 @@ from __future__ import annotations
 import json
 import os
 import tempfile
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -58,24 +57,17 @@ def build_feed(
     }
 
 
-def save_feed(data_dir: str | Path, feed: dict[str, Any]) -> tuple[Path, Path]:
+def save_feed(data_dir: str | Path, feed: dict[str, Any]) -> Path:
+    """Atomically replace the single centrally published current feed.
+
+    The repository intentionally has no daily archive.  Historical retention,
+    if wanted, belongs outside this publishing workflow.
+    """
     root = Path(data_dir)
     latest = root / "feeds" / "latest.json"
-    generated = datetime.fromisoformat(feed["generated_at"])
-    if generated.tzinfo is None:
-        generated = generated.replace(tzinfo=timezone.utc)
-    snapshot = root / "snapshots" / f"{generated.date().isoformat()}.json"
     _atomic_json(latest, feed)
-    _atomic_json(snapshot, feed)
-    return latest, snapshot
+    return latest
 
 
 def read_json(path: str | Path) -> dict[str, Any]:
     return json.loads(Path(path).read_text(encoding="utf-8"))
-
-
-def load_snapshots(data_dir: str | Path) -> list[dict[str, Any]]:
-    root = Path(data_dir) / "snapshots"
-    if not root.exists():
-        return []
-    return [read_json(path) for path in sorted(root.glob("*.json"))]

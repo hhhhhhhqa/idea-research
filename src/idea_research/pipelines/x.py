@@ -142,8 +142,10 @@ def enrich_linked_articles(items: list[SignalItem], client: httpx.Client, config
     settings = config.get("linked_articles") or {}
     if not settings.get("enabled", False):
         return 0, 0
-    max_links_per_post = max(1, int(settings.get("max_links_per_post", 2)))
-    max_articles_per_run = max(1, int(settings.get("max_articles_per_run", 30)))
+    configured_links_per_post = settings.get("max_links_per_post")
+    configured_articles_per_run = settings.get("max_articles_per_run")
+    max_links_per_post = max(1, int(configured_links_per_post)) if configured_links_per_post is not None else None
+    max_articles_per_run = max(1, int(configured_articles_per_run)) if configured_articles_per_run is not None else None
     max_body_chars = max(500, int(settings.get("max_body_chars", 12000)))
     max_download_bytes = max(100_000, int(settings.get("max_download_bytes", 1_000_000)))
     cache: dict[str, dict[str, str] | None] = {}
@@ -154,9 +156,9 @@ def enrich_linked_articles(items: list[SignalItem], client: httpx.Client, config
     for item in items:
         candidates = [url for url in extract_link_urls(item.body) if urlparse(url).hostname not in X_HOSTS]
         articles: list[dict[str, str]] = []
-        for url in candidates[:max_links_per_post]:
+        for url in candidates if max_links_per_post is None else candidates[:max_links_per_post]:
             if url not in cache:
-                if attempted >= max_articles_per_run:
+                if max_articles_per_run is not None and attempted >= max_articles_per_run:
                     skipped += 1
                     continue
                 attempted += 1
@@ -335,7 +337,8 @@ def _collect_twitter_via_twscrape(
     if not cookies:
         return [], ["TWITTER_COOKIES not set"], []
     lookback = int(config.get("lookback_hours", 72))
-    max_per_user = max(5, min(100, int(config.get("max_items_per_account", 10))))
+    configured_max = config.get("max_items_per_account")
+    max_per_user = max(1, min(100, int(configured_max))) if configured_max is not None else None
     default_min_engagement = int(config.get("min_engagement", 0))
     default_include_replies = bool(config.get("include_replies", False))
     db_path = str(project_root() / "data" / "twitter_accounts.db")
@@ -359,7 +362,7 @@ def _collect_twitter_via_twscrape(
             account_include_replies = bool(raw_account.get("include_replies", default_include_replies))
             try:
                 tweets = await gather(
-                    api.search(f"from:{handle}", limit=max_per_user * 3, kv={"product": "Latest"})
+                    api.search(f"from:{handle}", limit=(max_per_user or 100) * 3, kv={"product": "Latest"})
                 )
             except Exception as exc:
                 errors.append(f"@{handle}: {exc}")
@@ -387,7 +390,8 @@ def _collect_twitter_via_twscrape(
                 key=lambda it: sum(float(value) for value in it.engagement.values()),
                 reverse=True,
             )
-            kept = kept[:max_per_user]
+            if max_per_user is not None:
+                kept = kept[:max_per_user]
             items.extend(kept)
             notes.append(f"@{handle}: {len(kept)} tweet(s) via twscrape")
         return items, errors, notes
@@ -405,7 +409,8 @@ def collect_x(config: dict[str, Any], client: httpx.Client | None = None) -> Pip
     normalized = [{"handle": raw} if isinstance(raw, str) else raw for raw in accounts]
     now = datetime.now(timezone.utc)
     lookback = int(config.get("lookback_hours", 72))
-    max_results = max(5, min(100, int(config.get("max_items_per_account", 10))))
+    configured_max = config.get("max_items_per_account")
+    max_results = max(1, min(100, int(configured_max))) if configured_max is not None else 100
     cookies = os.environ.get("TWITTER_COOKIES", "")
     token = os.environ.get("X_BEARER_TOKEN", "")
 
@@ -425,7 +430,8 @@ def collect_x(config: dict[str, Any], client: httpx.Client | None = None) -> Pip
             try:
                 response = client.get(str(account["rss_url"]))
                 response.raise_for_status()
-                result.items.extend(parse_x_rss(response.text, account, now=now, lookback_hours=lookback)[:max_results])
+                rss_items = parse_x_rss(response.text, account, now=now, lookback_hours=lookback)
+                result.items.extend(rss_items if configured_max is None else rss_items[:max_results])
             except Exception as exc:
                 result.errors.append(f"@{handle} RSS: {exc}")
 

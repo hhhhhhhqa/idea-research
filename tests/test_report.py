@@ -106,3 +106,40 @@ def test_report_keeps_alpha_vantage_movers_out_of_watchlist_prices(tmp_path):
     context = prepare_report_context(tmp_path, {}, "daily", now=now)
     assert context["market_context"] == []
     assert context["market_movers"]["latest"]["top_gainers"][0]["ticker"] == "NET"
+
+
+def test_report_keeps_every_item_in_current_feed_for_subscriber_relevance_check(tmp_path):
+    now = datetime(2026, 8, 24, 21, tzinfo=timezone.utc)
+    old_item = SignalItem(
+        id="substack:old",
+        source_type="substack",
+        source_name="Old",
+        title="old item",
+        url="https://example.com/old",
+        published_at=now.isoformat(),
+        collected_at=now.isoformat(),
+    )
+    current_item = SignalItem(
+        id="substack:current",
+        source_type="substack",
+        source_name="Current",
+        title="unrelated-to-keywords item",
+        url="https://example.com/current",
+        published_at=(now - timedelta(days=30)).isoformat(),
+        collected_at=now.isoformat(),
+    )
+    save_feed(tmp_path, build_feed([PipelineResult(pipeline="substack", items=[old_item])]))
+    save_feed(tmp_path, build_feed([PipelineResult(pipeline="substack", items=[current_item])]))
+
+    context = prepare_report_context(
+        tmp_path,
+        {
+            "enabled_sources": ["x"],
+            "include_keywords": ["must-not-match"],
+            "exclude_keywords": ["unrelated"],
+        },
+        "daily",
+        now=now,
+    )
+
+    assert [item["id"] for item in context["items"]] == ["substack:current"]

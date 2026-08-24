@@ -1,6 +1,6 @@
 # Content Delivery — Digest Run
 
-Use this workflow when the user asks for a daily/weekly report or a persistent Agent invokes the skill on schedule.
+Use this workflow when the user asks for a daily report or a persistent Agent invokes the skill on schedule.
 
 ## 1. Determine the role
 
@@ -17,7 +17,7 @@ For a subscriber, run:
 
 ```bash
 git pull --ff-only
-idea-research prepare --period <daily|weekly> --profile <profile path>
+idea-research prepare --period daily --profile <profile path>
 ```
 
 For the central maintainer, run:
@@ -27,15 +27,15 @@ idea-research doctor
 idea-research collect
 ```
 
-Then review pipeline health and commit/push only the intended published artifacts: `data/feeds/`, `data/snapshots/`, and the completed `data/stock_universe/stock_pool.json` when it changed. Do not commit `.env` or the FMP checkpoint. A central maintainer may then run `prepare` locally to inspect the published result.
+Then review pipeline health and commit/push the one intended published content artifact, `data/feeds/latest.json`, plus the completed `data/stock_universe/stock_pool.json` when it changed. Each collection atomically replaces `latest.json`; no historical snapshot is stored. Do not commit `.env`, locally generated report contexts, or the FMP checkpoint. A central maintainer may then run `prepare` locally to inspect the published result.
 
 ```bash
-git add data/feeds data/snapshots data/stock_universe/stock_pool.json
+git add data/feeds/latest.json data/stock_universe/stock_pool.json
 git commit -m "Update research feeds"
 git push origin main
 ```
 
-`prepare` prints a small manifest containing the context JSON path and the rendered Agent prompt path. Read both. The JSON is the only source of content for the digest. If the user asks for a report without refresh, run only `prepare` and state the available data timestamp when it is stale.
+`prepare` prints a small manifest containing the context JSON path and the rendered Agent prompt path. Read both. The context contains every captured item in the current feed; the subscriber Agent decides relevance and outputs all relevant items without a cap. If the user asks for a report without refresh, run only `prepare` and state the available feed timestamp when it is stale.
 
 `stock_select.py` maintains the wider software / Internet candidate universe; run it only when the user asks to build or refresh that pool, not as an implicit part of every daily digest. It resumes safely after FMP's daily free quota.
 

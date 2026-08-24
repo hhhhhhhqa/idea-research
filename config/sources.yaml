@@ -1,6 +1,5 @@
 substack:
   lookback_hours: 168
-  max_items_per_publication: 12
   publications:
     - name: Latent Space
       url: https://www.latent.space
@@ -34,12 +33,12 @@ substack:
 
 reddit:
   lookback_hours: 36
-  max_items_per_subreddit: 75
+  max_items_per_subreddit: 100
   anonymous_request_delay_seconds: 12.0
   subreddits:
     - name: wallstreetbets
       listing: hot
-      limit: 75
+      limit: 100
       lookback_hours: 36
 
   # Bare uppercase words are accepted only from this allowlist. Unknown cashtags such
@@ -116,12 +115,9 @@ reddit:
 
 x:
   lookback_hours: 72
-  max_items_per_account: 10
   include_replies: false
   linked_articles:
     enabled: true
-    max_links_per_post: 2
-    max_articles_per_run: 30
     max_body_chars: 12000
     max_download_bytes: 1000000
   # Optional floor on likes + 2*reposts + replies for a tweet to be kept.

@@ -10,7 +10,7 @@
 2. 按 [`references/auto-install-zero-command-line.md`](references/auto-install-zero-command-line.md) 准备运行环境。用户不需要自己输入命令。
 3. 拉取仓库内最新已发布 feed。订阅者没有 `.env` 是正常状态，不能向他们索要 X/Reddit/FMP/行情凭证。
 4. 按 [`references/first-run-onboarding.md`](references/first-run-onboarding.md) 收集频率、时区、语言、详细程度、研究范围与投递方式。
-5. 按 [`references/content-delivery-digest-run.md`](references/content-delivery-digest-run.md) 准备 context，并**立即生成第一份报告**。
+5. 按 [`references/content-delivery-digest-run.md`](references/content-delivery-digest-run.md) 准备当天 context，并**立即生成第一份报告**。中央 feed 包含当天抓到的全部材料；由订阅者 Agent 判断相关性，并全量展示相关项目，不设置条数上限。
 
 ## 例外：你已在维护者工作副本中
 

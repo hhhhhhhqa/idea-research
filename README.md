@@ -2,7 +2,7 @@
 
 追踪 AI、互联网与软件二级市场的一线观点——真正写研究、管理资金、做产品的人说了什么，而不是二手转述。
 
-这是一个给 AI Agent 用户使用的 research skill。中央维护者抓取 Newsletter、X、WallStreetBets 和美股收盘数据，并把标准化 JSON feed 提交到仓库；每位同事的 Agent 只读取已发布 feed，按各自偏好生成日报或周报。
+这是一个给 AI Agent 用户使用的 research skill。中央维护者每天抓取 Newsletter、X、WallStreetBets 和美股收盘数据，并将当天**全部抓到的原始材料**覆盖写入一份标准化 JSON feed；每位同事的 Agent 只读取当天 feed，按各自投研范围判断相关性并生成日报。
 
 **股票池与信息源是原料，最终判断留在用户自己的 Agent。**
 
@@ -19,7 +19,7 @@
 
 ## 你会得到什么
 
-由你的 Agent 读取本地 JSON 后生成一份可继续追问的研究日报：
+由你的 Agent 读取当天本地 JSON 后生成一份可继续追问的研究日报。中央端不替用户做 idea 筛选：同事的 Agent 会逐项判断是否与自己的 AI、互联网、软件 / SaaS idea generation 相关，相关的当天全量展示、不设条数上限：
 
 - `N1`、`N2`：软件、互联网和 AI 投资 Newsletter / 研究文章说了什么
 - `X1`、`X2`：有机构投资或个股研究背景的 X 账号当天表达的观点；转发外链正文会一并保存
@@ -72,7 +72,7 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 
 | 设置 | 可选内容 | 对话示例 |
 |---|---|---|
-| 频率 | 日报 / 周报 | “每周一给我周报” |
+| 频率 | 日报 | “每天早上给我日报” |
 | 语言 | 中文 / English / 双语 | “改成中文” |
 | 详细程度 | 精华 / 标准 / 完整 | “日报短一点” |
 | 关注范围 | AI 基础设施、软件、互联网、SaaS、指定 ticker | “多看安全软件，少看芯片” |
@@ -97,17 +97,17 @@ flowchart LR
   A["Newsletter / X / WSB / 收盘数据"] --> B["中央维护者本地采集"]
   B --> C["提交公开/团队 JSON feed"]
   C --> D["同事的 AI Agent + 个人 profile"]
-  D --> E["可追问的日报 / 周报"]
+  D --> E["可追问的日报"]
   E --> F["当前聊天或个人投递渠道"]
 ```
 
-本项目刻意不使用 GitHub Actions。中央维护者可在自己的机器按需或用本地定时任务采集，再提交 `data/feeds/`、`data/snapshots/` 与已完成的股票池；同事的 Agent 只需拉取最新提交并生成报告。非持久化 Agent 只能生成当前这份报告，不能承诺自动推送。
+本项目刻意不使用 GitHub Actions。中央维护者可在自己的机器按需或用本地定时任务采集，再提交每天覆盖更新的 `data/feeds/latest.json` 与已完成的股票池；同事的 Agent 只需拉取最新提交并生成报告。仓库不保存日报历史快照；非持久化 Agent 只能生成当前这份报告，不能承诺自动推送。
 
 中央维护者一次发布的最小流程是：
 
 ```bash
 idea-research collect
-git add data/feeds data/snapshots data/stock_universe/stock_pool.json
+git add data/feeds/latest.json data/stock_universe/stock_pool.json
 git commit -m "Update research feeds"
 git push origin main
 ```
@@ -119,11 +119,10 @@ git push origin main
 ```text
 config/                       信息源与用户 profile
 data/feeds/                   最新统一 feed
-data/snapshots/               按日快照，供周报聚合
 data/stock_universe/          本地股票池与 FMP checkpoint
 prompts/                      Agent 输出格式与来源处理指令
 references/                   安装、onboarding、日报运行说明
-reports/contexts/             Agent 可直接读取的输入包
+reports/contexts/             本地临时 Agent 输入包（不提交）
 src/idea_research/pipelines/  四条采集链路
 SKILL.md                      Agent 使用入口
 ```

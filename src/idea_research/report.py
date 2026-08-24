@@ -2,19 +2,11 @@ from __future__ import annotations
 
 import json
 import re
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 from .models import SignalItem, utc_now
-from .storage import load_snapshots
-
-
-def _parse_time(value: str) -> datetime:
-    parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
-    if parsed.tzinfo is None:
-        parsed = parsed.replace(tzinfo=timezone.utc)
-    return parsed.astimezone(timezone.utc)
 
 
 def _text(item: SignalItem) -> str:
@@ -181,16 +173,9 @@ def prepare_report_context(
     *,
     now: datetime | None = None,
 ) -> dict[str, Any]:
-    if period not in {"daily", "weekly"}:
-        raise ValueError("period must be daily or weekly")
+    if period != "daily":
+        raise ValueError("only the current daily feed is supported; no historical feed archive is retained")
     now = now or datetime.now(timezone.utc)
-    lookback_hours = int(
-        profile.get("lookback_hours", {}).get(period, 36 if period == "daily" else 24 * 8)
-    )
-    cutoff = now - timedelta(hours=lookback_hours)
-    enabled_sources = set(profile.get("enabled_sources") or ["substack", "rss", "reddit", "x", "price"])
-    include_keywords = [str(value) for value in profile.get("include_keywords") or []]
-    exclude_keywords = [str(value) for value in profile.get("exclude_keywords") or []]
     reddit_discussions_config = profile.get("reddit_discussions") or profile.get("reddit_heat") or {}
     reddit_discussions_enabled = bool(reddit_discussions_config.get("enabled", True))
     heat_subreddit = str(reddit_discussions_config.get("subreddit", "wallstreetbets")).removeprefix("r/").casefold()
@@ -198,40 +183,18 @@ def prepare_report_context(
 
     items_by_id: dict[str, SignalItem] = {}
     pipeline_health: dict[str, dict[str, Any]] = {}
-    snapshots = load_snapshots(data_dir)
     latest_path = Path(data_dir) / "feeds" / "latest.json"
-    if not snapshots and latest_path.exists():
-        snapshots = [json.loads(latest_path.read_text(encoding="utf-8"))]
-    for snapshot in snapshots:
-        try:
-            if _parse_time(snapshot["generated_at"]) < cutoff - timedelta(days=2):
-                continue
-        except (KeyError, ValueError):
-            pass
-        for status in snapshot.get("pipelines") or []:
-            pipeline_health[str(status.get("pipeline"))] = status
-        for raw in snapshot.get("items") or []:
-            item = SignalItem.from_dict(raw)
-            if item.source_type not in enabled_sources:
-                continue
-            is_heat_item = (
-                reddit_discussions_enabled
-                and item.source_type == "reddit"
-                and item.source_name.casefold() == heat_source_name
-            )
-            if item.source_type != "price":
-                try:
-                    if _parse_time(item.published_at or item.collected_at) < cutoff:
-                        continue
-                except ValueError:
-                    continue
-            text = _text(item)
-            if include_keywords and not any(_keyword_hit(text, keyword) for keyword in include_keywords):
-                if item.source_type != "price" and not is_heat_item:
-                    continue
-            if not is_heat_item and any(_keyword_hit(text, keyword) for keyword in exclude_keywords):
-                continue
-            items_by_id[item.id] = item
+    if not latest_path.exists():
+        raise FileNotFoundError(f"current feed not found: {latest_path}")
+    feed = json.loads(latest_path.read_text(encoding="utf-8"))
+    for status in feed.get("pipelines") or []:
+        pipeline_health[str(status.get("pipeline"))] = status
+    # The central publisher uploads every item it captured. Relevance is a
+    # subscriber-Agent decision, so do not apply profile keywords, source
+    # toggles, publication-time cutoffs, or any other content suppression here.
+    for raw in feed.get("items") or []:
+        item = SignalItem.from_dict(raw)
+        items_by_id[item.id] = item
 
     annotated = [annotate_item(item, profile) for item in items_by_id.values()]
     content = [item for item in annotated if item["source_type"] != "price"]
@@ -241,6 +204,9 @@ def prepare_report_context(
     reddit_discussions = (
         build_reddit_discussions(content, reddit_discussions_config) if reddit_discussions_enabled else {}
     )
+    wsb_posts = [item for item in content if item["source_name"].casefold() == heat_source_name]
+    for index, item in enumerate(sorted(wsb_posts, key=lambda value: value["published_at"], reverse=True), start=1):
+        item["display_id"] = f"WSB{index}"
     if reddit_discussions_enabled and bool(reddit_discussions_config.get("rollup_only", True)):
         content = [item for item in content if item["source_name"].casefold() != heat_source_name]
     # The feed is a chronological reading queue. No source or engagement score is calculated.
@@ -255,7 +221,11 @@ def prepare_report_context(
         "schema_version": "1.0",
         "prepared_at": utc_now(),
         "period": period,
-        "window": {"start": cutoff.isoformat(), "end": now.isoformat()},
+        "window": {
+            "feed_generated_at": feed.get("generated_at", ""),
+            "prepared_at": now.isoformat(),
+            "scope": "every item in the current centrally published daily feed",
+        },
         "profile": {
             "name": profile.get("name", "default"),
             "language": profile.get("language", "zh-CN"),
@@ -272,6 +242,7 @@ def prepare_report_context(
                 "Do not invent missing price, engagement, publication-time, or company-exposure data.",
                 "Do not score, rank, or promote sources into investment recommendations.",
                 "WSB mention counts and Hot positions are observed discussion data, not fundamental confirmation.",
+                "The context retains every item captured in the current feed. The subscriber Agent, not the publisher, decides which items are relevant to the user's idea generation.",
             ],
         },
         "stats": {
@@ -285,6 +256,7 @@ def prepare_report_context(
         "market_context": market_context,
         "market_movers": market_movers,
         "reddit_discussions": reddit_discussions,
+        "wsb_posts": wsb_posts,
     }
 
 

@@ -56,8 +56,8 @@ def _collect(args: argparse.Namespace) -> int:
             for status in previous_feed.get("pipelines", [])
             if status.get("pipeline") not in current_statuses
         )
-    latest_path, snapshot_path = save_feed(args.data_dir, feed)
-    print(json.dumps({"latest": str(latest_path), "snapshot": str(snapshot_path), "counts": feed["counts"]}, ensure_ascii=False))
+    latest_path = save_feed(args.data_dir, feed)
+    print(json.dumps({"latest": str(latest_path), "counts": feed["counts"]}, ensure_ascii=False))
     failed = any(result.status == "error" for result in results)
     return 1 if args.strict and failed else 0
 
@@ -198,8 +198,8 @@ def build_parser() -> argparse.ArgumentParser:
     collect.add_argument("--strict", action="store_true", help="Exit non-zero when a configured pipeline fails")
     collect.set_defaults(func=_collect)
 
-    prepare = sub.add_parser("prepare", help="Build a prompt-ready daily or weekly context package")
-    prepare.add_argument("--period", choices=("daily", "weekly"), required=True)
+    prepare = sub.add_parser("prepare", help="Build a prompt-ready context package for the current daily feed")
+    prepare.add_argument("--period", choices=("daily",), default="daily")
     prepare.add_argument("--profile", default=str(root / "config" / "profiles" / "default.yaml"))
     prepare.add_argument("--data-dir", default=str(root / "data"))
     prepare.add_argument("--reports-dir", default=str(root / "reports"))
