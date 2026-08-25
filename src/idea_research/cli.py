@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from .config import load_dotenv, load_yaml, project_root
+from .delivery import default_seen_path, mark_delivered
 from .models import SignalItem
 from .pipelines import collect_prices, collect_reddit, collect_substack, collect_x
 from .report import prepare_report_context, save_report_context
@@ -68,10 +69,46 @@ def _collect(args: argparse.Namespace) -> int:
 
 def _prepare(args: argparse.Namespace) -> int:
     profile = load_yaml(args.profile)
-    context = prepare_report_context(args.data_dir, profile, args.period)
+    context = prepare_report_context(
+        args.data_dir,
+        profile,
+        args.period,
+        include_seen=args.include_seen,
+        seen_path=args.seen_path,
+    )
     prompt_template = Path(args.prompt or project_root() / "prompts" / f"{args.period}.md")
     context_path, prompt_path = save_report_context(context, args.reports_dir, prompt_template)
-    print(json.dumps({"context": str(context_path), "agent_prompt": str(prompt_path), "stats": context["stats"]}, ensure_ascii=False))
+    print(
+        json.dumps(
+            {
+                "context": str(context_path),
+                "agent_prompt": str(prompt_path),
+                "delivery_mark": context.get("delivery_mark_path"),
+                "stats": context["stats"],
+            },
+            ensure_ascii=False,
+        )
+    )
+    return 0
+
+
+def _mark_delivered(args: argparse.Namespace) -> int:
+    shown = [value for value in (args.shown or "").replace(";", ",").split(",") if value.strip()]
+    if not args.all_items and not shown:
+        print("Provide --shown N1,N2,X1 or --all after a successful digest delivery.", file=sys.stderr)
+        return 2
+    try:
+        result = mark_delivered(
+            args.file,
+            shown,
+            all_items=args.all_items,
+            seen_path=args.seen_path,
+            dry_run=args.dry_run,
+        )
+    except ValueError as exc:
+        print(str(exc), file=sys.stderr)
+        return 1
+    print(json.dumps(result, ensure_ascii=False))
     return 0
 
 
@@ -217,7 +254,21 @@ def build_parser() -> argparse.ArgumentParser:
     prepare.add_argument("--data-dir", default=str(root / "data"))
     prepare.add_argument("--reports-dir", default=str(root / "reports"))
     prepare.add_argument("--prompt")
+    prepare.add_argument("--include-seen", action="store_true", help="Include Newsletter/X items already marked as shown")
+    prepare.add_argument("--seen-path", default=str(default_seen_path()))
     prepare.set_defaults(func=_prepare)
+
+    delivered = sub.add_parser("mark-delivered", help="Mark the Newsletter/X IDs actually shown after successful delivery")
+    delivered.add_argument(
+        "--file",
+        default=str(root / "reports" / "contexts" / "delivery-mark.json"),
+        help="delivery-mark.json emitted by prepare",
+    )
+    delivered.add_argument("--shown", help="Comma-separated IDs, e.g. N1,N3,X1-X4")
+    delivered.add_argument("--all", dest="all_items", action="store_true", help="Mark every pending Newsletter/X item")
+    delivered.add_argument("--seen-path", default=str(default_seen_path()))
+    delivered.add_argument("--dry-run", action="store_true")
+    delivered.set_defaults(func=_mark_delivered)
 
     doctor = sub.add_parser("doctor", help="Show configuration and credential readiness without collecting")
     doctor.add_argument("--sources", default=str(root / "config" / "sources.yaml"))

@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from .delivery import build_delivery_mark, load_seen, tracked_kind
 from .models import SignalItem, utc_now
 
 
@@ -189,17 +190,34 @@ def build_market_movers(price_items: list[dict[str, Any]]) -> dict[str, Any]:
     return {"latest": days[0] if days else None, "days": days}
 
 
-def add_display_ids(items: list[dict[str, Any]], source: str) -> None:
+def add_display_ids(items: list[dict[str, Any]], source: str, *, start_index: int = 0) -> int:
     """Give rendered digest items short, stable-in-context follow-up handles."""
 
     prefixes = {"substack": "N", "rss": "N", "x": "X", "reddit": "R"}
     prefix = prefixes.get(source, "S")
-    index = 0
+    index = start_index
     for item in items:
         if item.get("source_type") != source:
             continue
         index += 1
         item["display_id"] = f"{prefix}{index}"
+    return index
+
+
+def _filter_unseen(
+    items: list[dict[str, Any]],
+    seen: dict[str, Any],
+) -> tuple[list[dict[str, Any]], int]:
+    """Filter only Newsletter/RSS/X; WSB and prices are always retained."""
+    result: list[dict[str, Any]] = []
+    filtered = 0
+    for item in items:
+        kind = tracked_kind(str(item.get("source_type") or ""))
+        if kind and str(item.get("id") or "") in (seen.get(kind) or {}):
+            filtered += 1
+            continue
+        result.append(item)
+    return result, filtered
 
 
 def prepare_report_context(
@@ -208,6 +226,8 @@ def prepare_report_context(
     period: str,
     *,
     now: datetime | None = None,
+    include_seen: bool = False,
+    seen_path: str | Path | None = None,
 ) -> dict[str, Any]:
     if period != "daily":
         raise ValueError("only the current daily feed is supported; no historical feed archive is retained")
@@ -235,15 +255,15 @@ def prepare_report_context(
 
     stock_reference = _load_stock_reference(data_dir)
     annotated = [annotate_item(item, profile, stock_reference) for item in items_by_id.values()]
-    content = [item for item in annotated if item["source_type"] != "price"]
+    all_content = [item for item in annotated if item["source_type"] != "price"]
     prices = [item for item in annotated if item["source_type"] == "price"]
     market_movers = build_market_movers(prices)
     reddit_discussions = (
-        build_reddit_discussions(content, reddit_discussions_config) if reddit_discussions_enabled else {}
+        build_reddit_discussions(all_content, reddit_discussions_config) if reddit_discussions_enabled else {}
     )
     wsb_posts = [
         item
-        for item in content
+        for item in all_content
         if item["source_name"].casefold() == heat_source_name
         and (item.get("metadata") or {}).get("listing") == "hot"
         and 1 <= int((item.get("metadata") or {}).get("feed_rank") or 0) <= heat_max_hot_posts
@@ -251,21 +271,28 @@ def prepare_report_context(
     wsb_posts.sort(key=lambda value: int((value.get("metadata") or {}).get("feed_rank") or 0))
     for item in wsb_posts:
         item["display_id"] = f"R{int((item.get('metadata') or {}).get('feed_rank') or 0)}"
+    seen = load_seen(seen_path, now=now) if not include_seen else {"newsletters": {}, "x": {}}
+    content, filtered_items = _filter_unseen(all_content, seen)
     if reddit_discussions_enabled and bool(reddit_discussions_config.get("rollup_only", True)):
         content = [item for item in content if item["source_name"].casefold() != heat_source_name]
     # The feed is a chronological reading queue. No source or engagement score is calculated.
     content.sort(key=lambda item: item["published_at"], reverse=True)
-    for source in ("substack", "rss", "x", "reddit"):
+    newsletter_index = 0
+    for source in ("substack", "rss"):
+        newsletter_index = add_display_ids(content, source, start_index=newsletter_index)
+    for source in ("x", "reddit"):
         add_display_ids(content, source)
+    prepared_at = utc_now()
+    delivery_mark = build_delivery_mark(content, prepared_at=prepared_at)
 
     return {
         "schema_version": "1.0",
-        "prepared_at": utc_now(),
+        "prepared_at": prepared_at,
         "period": period,
         "window": {
             "feed_generated_at": feed.get("generated_at", ""),
             "prepared_at": now.isoformat(),
-            "scope": "every item in the current centrally published daily feed",
+            "scope": "unseen Newsletter/RSS/X items plus every current WSB and price section",
         },
         "profile": {
             "name": profile.get("name", "default"),
@@ -283,12 +310,15 @@ def prepare_report_context(
                 "Do not invent missing price, engagement, publication-time, or company-exposure data.",
                 "Do not score, rank, or promote sources into investment recommendations.",
                 "WSB mention counts and Hot positions are observed discussion data, not fundamental confirmation.",
-                "The context retains every item captured in the current feed. The subscriber Agent, not the publisher, decides which items are relevant to the user's idea generation.",
+                "By default, the context includes only Newsletter/RSS/X items not previously marked as successfully shown by this subscriber; use --include-seen to regenerate a full context.",
+                "WSB Hot posts and close movers are current daily observations and are always included; they are never written to seen state.",
+                "Seen state is written only by an explicit post-delivery mark command, never while preparing a report.",
                 "Newsletter and X items in the main digest must map to a specific listed company supported by the source text; stock_mentions is only a matching hint, not proof.",
             ],
         },
         "stats": {
             "content_items": len(content),
+            "filtered_seen_items": filtered_items,
             "market_mover_days": len(market_movers["days"]),
             "wsb_posts": reddit_discussions.get("post_count", 0),
             "wsb_symbols": len(reddit_discussions.get("top_tickers", [])),
@@ -297,6 +327,14 @@ def prepare_report_context(
         "market_movers": market_movers,
         "reddit_discussions": reddit_discussions,
         "wsb_posts": wsb_posts,
+        "dedup": {
+            "enabled": not include_seen,
+            "tracked_sources": ["substack", "rss", "x"],
+            "seen_path": str(Path(seen_path) if seen_path else Path.home() / ".idea-research" / "seen.json"),
+            "retention_days": 14,
+            "filtered_items": filtered_items,
+        },
+        "delivery_mark": delivery_mark,
     }
 
 
@@ -308,8 +346,11 @@ def save_report_context(
     root = Path(reports_dir)
     context_path = root / "contexts" / f"{context['period']}.json"
     prompt_path = root / "contexts" / f"{context['period']}-agent-prompt.md"
+    mark_path = root / "contexts" / "delivery-mark.json"
     context_path.parent.mkdir(parents=True, exist_ok=True)
+    context["delivery_mark_path"] = str(mark_path.resolve())
     context_path.write_text(json.dumps(context, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    mark_path.write_text(json.dumps(context.get("delivery_mark") or {}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     template = Path(prompt_template).read_text(encoding="utf-8")
     prompt = template.replace("{{CONTEXT_PATH}}", str(context_path.resolve()))
     prompt_path.write_text(prompt.rstrip() + "\n", encoding="utf-8")

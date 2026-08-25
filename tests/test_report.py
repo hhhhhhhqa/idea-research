@@ -1,6 +1,8 @@
+import json
 from datetime import datetime, timedelta, timezone
 
 from idea_research.models import PipelineResult, SignalItem
+from idea_research.delivery import mark_delivered
 from idea_research.report import prepare_report_context
 from idea_research.storage import build_feed, save_feed
 
@@ -166,3 +168,95 @@ def test_report_keeps_every_item_in_current_feed_for_subscriber_relevance_check(
     )
 
     assert [item["id"] for item in context["items"]] == ["substack:current"]
+
+
+def test_report_deduplicates_only_newsletters_and_x_after_delivery(tmp_path):
+    now = datetime(2026, 8, 24, 21, tzinfo=timezone.utc)
+    newsletter = SignalItem(
+        id="substack:one",
+        source_type="substack",
+        source_name="Research",
+        title="NVDA software demand",
+        url="https://example.com/n1",
+        published_at=now.isoformat(),
+        collected_at=now.isoformat(),
+        symbols=["NVDA"],
+    )
+    rss = SignalItem(
+        id="rss:two",
+        source_type="rss",
+        source_name="Research RSS",
+        title="MSFT cloud growth",
+        url="https://example.com/n2",
+        published_at=(now - timedelta(minutes=1)).isoformat(),
+        collected_at=now.isoformat(),
+        symbols=["MSFT"],
+    )
+    x_post = SignalItem(
+        id="x:three",
+        source_type="x",
+        source_name="@researcher",
+        title="AI capex",
+        url="https://x.com/researcher/status/3",
+        published_at=(now - timedelta(minutes=2)).isoformat(),
+        collected_at=now.isoformat(),
+        symbols=["AMD"],
+    )
+    reddit = SignalItem(
+        id="reddit:four",
+        source_type="reddit",
+        source_name="r/wallstreetbets",
+        title="NVDA options",
+        url="https://reddit.com/four",
+        published_at=now.isoformat(),
+        collected_at=now.isoformat(),
+        symbols=["NVDA"],
+        metadata={"listing": "hot", "feed_rank": 1, "transport": "rss"},
+    )
+    price = SignalItem(
+        id="price:yfinance:gainers",
+        source_type="price",
+        source_name="Yahoo Finance",
+        title="movers",
+        url="https://finance.yahoo.com/markets/stocks/gainers/",
+        published_at=now.isoformat(),
+        collected_at=now.isoformat(),
+        metadata={"market_mover_type": "gainers", "records": [{"ticker": "NVDA"}]},
+    )
+    save_feed(tmp_path, build_feed([PipelineResult(pipeline="mixed", items=[newsletter, rss, x_post, reddit, price])]))
+    first = prepare_report_context(tmp_path, {}, "daily", now=now, seen_path=tmp_path / "seen.json")
+    assert {item["id"] for item in first["items"]} == {"substack:one", "rss:two", "x:three"}
+    assert first["delivery_mark"]["counts"] == {"newsletters": 2, "x": 1}
+    assert [item["display_id"] for item in first["items"] if item["source_type"] in {"substack", "rss"}] == ["N1", "N2"]
+    # The mark file is normally emitted by save_report_context; create the same
+    # file here to keep this unit test focused on state behavior.
+    (tmp_path / "delivery-mark.json").write_text(
+        json.dumps(first["delivery_mark"]), encoding="utf-8"
+    )
+    mark_delivered(tmp_path / "delivery-mark.json", ["N1", "X1"], seen_path=tmp_path / "seen.json", now=now)
+    second = prepare_report_context(tmp_path, {}, "daily", now=now, seen_path=tmp_path / "seen.json")
+    assert {item["id"] for item in second["items"]} == {"rss:two"}
+    assert second["stats"]["wsb_posts"] == 1
+    assert second["market_movers"]["latest"] is not None
+
+
+def test_include_seen_regenerates_newsletter_and_x_context(tmp_path):
+    now = datetime(2026, 8, 24, 21, tzinfo=timezone.utc)
+    item = SignalItem(
+        id="x:seen",
+        source_type="x",
+        source_name="@researcher",
+        title="NVDA",
+        url="https://x.com/researcher/status/seen",
+        published_at=now.isoformat(),
+        collected_at=now.isoformat(),
+        symbols=["NVDA"],
+    )
+    save_feed(tmp_path, build_feed([PipelineResult(pipeline="x", items=[item])]))
+    seen_path = tmp_path / "seen.json"
+    first = prepare_report_context(tmp_path, {}, "daily", now=now, seen_path=seen_path)
+    (tmp_path / "delivery-mark.json").write_text(json.dumps(first["delivery_mark"]), encoding="utf-8")
+    mark_delivered(tmp_path / "delivery-mark.json", ["X1"], seen_path=seen_path, now=now)
+    assert prepare_report_context(tmp_path, {}, "daily", now=now, seen_path=seen_path)["items"] == []
+    restored = prepare_report_context(tmp_path, {}, "daily", now=now, seen_path=seen_path, include_seen=True)
+    assert [item["id"] for item in restored["items"]] == ["x:seen"]
