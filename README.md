@@ -77,6 +77,51 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | 关注范围 | AI 基础设施、软件、互联网、SaaS、指定 ticker | “多看安全软件，少看芯片” |
 | 来源 | Newsletter、X、WSB、价格异动 | “把 X 的回复也保留” |
 
+## 信息源
+
+### Newsletter / 研究文章（9 个来源）
+
+| 信息源 | 为什么选 |
+|---|---|
+| [Latent Space](https://www.latent.space/) | AI 工程、模型和开发者生态的一线访谈与研究，适合跟踪技术变化如何进入产品和公司。 |
+| [Interconnects](https://www.interconnects.ai/) | 关注模型能力、训练方法和 AI 研究进展，帮助判断技术叙事背后的实际变化。 |
+| [One Useful Thing](https://www.oneusefulthing.org/) | 从实际工作和组织应用出发讨论 AI，适合观察 AI 软件的落地场景与生产力影响。 |
+| [Clouded Judgement](https://cloudedjudgement.substack.com/about) | 系统跟踪 Cloud / SaaS 公司的收入增速、估值、自由现金流和 Rule of 40，直接对应软件板块交易的预期。 |
+| [How They Make Money / App Economy Insights](https://www.appeconomyinsights.com/about) | 用财务图表拆解互联网、软件、游戏、广告平台和大型科技公司的收入结构与季度变化。 |
+| [MBI Deep Dives](https://mbideepdives.substack.com/about) | 以单家公司为单位做深度研究，包含财务模型、敏感性分析和股价隐含预期，方法接近买方研究。 |
+| [TSOH Investment Research](https://thescienceofhitting.com/about) | 关注大型科技平台的竞争优势、资本配置、长期复利能力和估值，适合补充长期基本面视角。 |
+| [Aspiring for Intelligence](https://aspiringforintelligence.substack.com/about) | 专门追踪 Intelligent Applications、AI Agent、开发工具和垂直软件，适合观察 AI 应用层对传统 SaaS 的冲击。 |
+| [Software Stack Investing](https://softwarestackinvesting.com/author/) | 从产品能力、开发者心智、竞争格局、市场需求和估值分析软件个股，补充纯财务指标之外的产品视角。 |
+
+### X（12 个账号）
+
+| 信息源 | 为什么选 |
+|---|---|
+| [Gavin Baker](https://x.com/GavinSBaker) | 买方 CIO 视角，长期讨论 AI 算力、云基础设施、科技资本开支和大型科技股。 |
+| [Jamin Ball](https://x.com/jaminball) | 聚焦企业软件、SaaS 估值和 AI 应用，适合与 Clouded Judgement 交叉阅读。 |
+| [Brad Gerstner](https://x.com/altcap) | 从组合管理角度讨论大型互联网平台、AI 资本开支和科技股预期差。 |
+| [Shanu Mathew](https://x.com/ShanuMathew93) | 关注 AI 数据中心、电力和基础设施约束，补充纯软件研究容易忽略的供给侧视角。 |
+| [Peter Offringa](https://x.com/StackInvesting) | 研究软件产品竞争力、财报和持仓逻辑，强调产品与商业模式。 |
+| [Muji](https://x.com/hhhypergrowth) | 覆盖 NET、DDOG、SNOW、CRWD、ZS、RDDT 等软件公司，侧重产品和财报评论。 |
+| [Eric Seufert](https://x.com/eric_seufert) | 关注 META、GOOGL、APP、TTD、Apple 和数字广告，回复区也常有行业纠错与讨论。 |
+| [Modest Proposal](https://x.com/modestproposal1) | 用于发现大型互联网和软件公司的市场预期、拥挤交易与财报争议；匿名身份不作为最终证据。 |
+| [Gene Munster](https://x.com/munster_gene) | 覆盖 AI 基础设施、大型科技和软件板块，适合观察长期乐观与周期性谨慎之间的变化。 |
+| [Dan Niles](https://x.com/DanielTNiles) | 做多空科技研究，提供对 Mag7、软件和 AI 颠覆风险的怀疑派观点。 |
+| [Byrne Hobart](https://x.com/ByrneHobart) | 将公司财务、资本结构、并购、期权和周期结合起来分析商业模式。 |
+| [Edwin Dorsey](https://x.com/StockJabber) | 关注治理、企业不当行为和做空线索，用于补充公司红旗排查；具体指控需要一手材料验证。 |
+
+### Reddit（1 个社区）
+
+| 信息源 | 为什么选 |
+|---|---|
+| [r/wallstreetbets](https://www.reddit.com/r/wallstreetbets/) | 每天抓取公开 Hot 榜前五，观察散户当天集中讨论的股票和主题；它只代表零售注意力，不是基本面证据或投资建议。帖子中的图片会随当前 feed 保存。 |
+
+### 美股收盘数据（1 个数据源）
+
+| 信息源 | 为什么选 |
+|---|---|
+| [Yahoo Finance](https://finance.yahoo.com/)（yfinance） | 对 FMP 行业筛选后的 SaaS / 软件 / 互联网股票池抓取常规交易时段收盘价，比较当天与前一交易日，输出涨幅前十和跌幅前十；只保留最近三个交易日。 |
+
 ## 股票池
 
 中央维护者运行 `stock_select.py`，用 Yahoo Finance 建立在 NYSE / Nasdaq 交易、市值至少 `$500m` 的 Technology / Communication Services 候选池；随后逐只调用 FMP `profile` 补全 `fmp_sector`、`fmp_industry` 和 `granular_sector`。它本地断点续跑、定期复查候选池新增/删除，不按公司注册国家排除美股 ADR。
