@@ -89,6 +89,12 @@ python stock_select.py --recheck-hours 24
 
 中央发布 `data/stock_universe/stock_pool.json` 供订阅者读取；本地 FMP checkpoint 不必提交。FMP 免费额度用尽时脚本会安全停止；下次运行会跳过已完成 ticker。
 
+脚本会同时根据 FMP `fmp_industry` 生成 `data/stock_universe/saas_pool.json`。当前严格纳入 `Software - Application`、`Software - Infrastructure` 和 `Internet Content & Information`；待补 profile 的股票不会误入该池。只想从已有股票池重建分类池时运行：
+
+```bash
+python stock_select.py --derive-saas-only
+```
+
 ## 工作原理
 
 ```mermaid
@@ -118,7 +124,7 @@ git push origin main
 ```text
 config/                       信息源与用户 profile
 data/feeds/                   最新统一 feed
-data/stock_universe/          本地股票池与 FMP checkpoint
+data/stock_universe/          股票池、SaaS/软件/互联网池与 FMP checkpoint
 prompts/                      Agent 输出格式与来源处理指令
 references/                   安装、onboarding、日报运行说明
 reports/contexts/             本地临时 Agent 输入包（不提交）

@@ -34,6 +34,11 @@ from idea_research.config import load_dotenv
 DEFAULT_SECTORS = ("Technology", "Communication Services")
 US_MAJOR_EXCHANGES = ("NMS", "NYQ")  # Nasdaq Global Select + NYSE in Yahoo's screener codes.
 FMP_PROFILE_URL = "https://financialmodelingprep.com/stable/profile"
+SAAS_INDUSTRY_CATEGORIES = {
+    "Software - Application": "SaaS / Application Software",
+    "Software - Infrastructure": "AI / Infrastructure Software",
+    "Internet Content & Information": "Internet",
+}
 
 
 def make_query(sector: str, min_market_cap: int) -> yf.EquityQuery:
@@ -300,6 +305,66 @@ def previous_symbols(output_path: Path) -> set[str]:
     }
 
 
+def build_saas_pool(stock_pool: dict[str, Any]) -> dict[str, Any]:
+    """Derive the researchable SaaS / software / Internet pool from FMP industry."""
+
+    stocks = stock_pool.get("stocks") if isinstance(stock_pool, dict) else []
+    eligible: list[dict[str, Any]] = []
+    excluded_pending = 0
+    excluded_other = 0
+    for raw in stocks if isinstance(stocks, list) else []:
+        if not isinstance(raw, dict):
+            continue
+        industry = raw.get("fmp_industry")
+        category = SAAS_INDUSTRY_CATEGORIES.get(industry)
+        if raw.get("fmp_profile_status") != "ok":
+            excluded_pending += 1
+            continue
+        if category is None:
+            excluded_other += 1
+            continue
+        item = dict(raw)
+        item["saas_category"] = category
+        eligible.append(item)
+
+    eligible.sort(key=lambda item: float(item.get("market_cap") or 0), reverse=True)
+    industry_counts = {
+        industry: sum(1 for item in eligible if item.get("fmp_industry") == industry)
+        for industry in SAAS_INDUSTRY_CATEGORIES
+    }
+    return {
+        "schema_version": "1.0",
+        "updated_at": utc_now().isoformat(),
+        "source": {
+            "stock_pool": "data/stock_universe/stock_pool.json",
+            "stock_pool_updated_at": stock_pool.get("updated_at"),
+            "classification": "FMP fmp_industry exact match",
+        },
+        "selection": {
+            "minimum_market_cap_usd": (stock_pool.get("selection") or {}).get("minimum_market_cap_usd"),
+            "included_fmp_industries": SAAS_INDUSTRY_CATEGORIES,
+            "excluded_pending_profiles": True,
+            "note": "FMP industry identifies the company category; AI relevance still requires Agent or analyst review.",
+        },
+        "summary": {
+            "eligible_stocks": len(eligible),
+            "excluded_pending_profiles": excluded_pending,
+            "excluded_other_industries": excluded_other,
+            "industry_counts": industry_counts,
+        },
+        "stocks": eligible,
+    }
+
+
+def write_saas_pool(stock_pool_path: Path, saas_output: Path) -> dict[str, Any]:
+    stock_pool = read_json(stock_pool_path, {})
+    if not isinstance(stock_pool, dict) or not isinstance(stock_pool.get("stocks"), list):
+        raise RuntimeError(f"Unexpected stock-pool structure in {stock_pool_path}")
+    document = build_saas_pool(stock_pool)
+    write_json(saas_output, document)
+    return document
+
+
 def run_once(args: argparse.Namespace) -> int:
     before = previous_symbols(args.output)
     rows = build_candidates(args)
@@ -333,6 +398,8 @@ def run_once(args: argparse.Namespace) -> int:
         "stocks": rows,
     }
     write_json(args.output, document)
+    saas_document = build_saas_pool(document)
+    write_json(args.saas_output, saas_document)
 
     print(f"\n{len(rows)} preliminary candidates (market cap >= ${args.min_market_cap:,.0f})")
     print(f"Added: {len(added)} | Removed: {len(removed)} | FMP complete: {len(rows) - pending}/{len(rows)}")
@@ -344,6 +411,7 @@ def run_once(args: argparse.Namespace) -> int:
             f"{granular:<40.40} {item['company_name']}"
         )
     print(f"\nSaved stock-pool state to {args.output}")
+    print(f"Saved SaaS / software / Internet pool to {args.saas_output} ({saas_document['summary']['eligible_stocks']} stocks)")
     if pending:
         print(f"FMP cache: {args.fmp_cache} ({pending} ticker(s) pending; rerun later to resume)")
     return 0
@@ -369,6 +437,12 @@ def parse_args() -> argparse.Namespace:
         help="Per-ticker FMP cache and resume checkpoint.",
     )
     parser.add_argument(
+        "--saas-output",
+        type=Path,
+        default=Path("data/stock_universe/saas_pool.json"),
+        help="Derived SaaS / software / Internet pool generated from FMP industry.",
+    )
+    parser.add_argument(
         "--fmp-max-requests",
         type=int,
         default=225,
@@ -381,6 +455,11 @@ def parse_args() -> argparse.Namespace:
         help="Refresh a cached FMP profile after this many days.",
     )
     parser.add_argument("--skip-fmp", action="store_true", help="Only refresh the Yahoo candidate set.")
+    parser.add_argument(
+        "--derive-saas-only",
+        action="store_true",
+        help="Derive --saas-output from the existing --output without querying Yahoo or FMP.",
+    )
     parser.add_argument(
         "--recheck-hours",
         type=float,
@@ -403,6 +482,11 @@ def main() -> int:
         or (args.recheck_hours is not None and args.recheck_hours <= 0)
     ):
         raise SystemExit("Numeric arguments must be non-negative; page size and max pages must be positive.")
+
+    if args.derive_saas_only:
+        document = write_saas_pool(args.output, args.saas_output)
+        print(f"Derived {document['summary']['eligible_stocks']} stocks into {args.saas_output}")
+        return 0
 
     while True:
         run_once(args)

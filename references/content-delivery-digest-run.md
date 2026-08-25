@@ -37,7 +37,7 @@ git push origin main
 
 `prepare` prints a small manifest containing the context JSON path and the rendered Agent prompt path. Read both. The context contains every captured item in the current feed; the subscriber Agent decides relevance and outputs all relevant items without a cap. If the user asks for a report without refresh, run only `prepare` and state the available feed timestamp when it is stale.
 
-`stock_select.py` maintains the wider software / Internet candidate universe; run it only when the user asks to build or refresh that pool, not as an implicit part of every daily digest. It resumes safely after FMP's daily free quota.
+`stock_select.py` maintains the wider software / Internet candidate universe and derives `data/stock_universe/saas_pool.json` from exact FMP `fmp_industry` matches; run it only when the user asks to build or refresh those pools, not as an implicit part of every daily digest. It resumes safely after FMP's daily free quota. Use `python stock_select.py --derive-saas-only` to rebuild the derived pool without any network request.
 
 ## 3. Check content and pipeline health
 
