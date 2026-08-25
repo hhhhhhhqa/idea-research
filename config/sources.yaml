@@ -38,8 +38,10 @@ reddit:
   subreddits:
     - name: wallstreetbets
       listing: hot
-      limit: 100
-      lookback_hours: 36
+      # Capture the current Hot leaderboard itself, rather than only posts
+      # published within a time window. This preserves positions #1, #2, #3.
+      limit: 3
+      lookback_hours:
 
   # Bare uppercase words are accepted only from this allowlist. Unknown cashtags such
   # as $XYZ are still captured, which keeps discovery open without turning every
@@ -189,29 +191,9 @@ x:
       evidence_note: Treat allegations as leads until supported by primary documents or company disclosures.
 
 prices:
-  history_period: 1y
   market_movers:
     enabled: true
     api_key_env: ALPHAVANTAGE_API_KEY
     # Alpha Vantage's default response is the end-of-day US-market list. Do not
     # opt into its realtime or delayed entitlements: this feed is for closes.
     endpoint: https://www.alphavantage.co/query
-  tickers:
-    - ticker: NVDA
-      name: NVIDIA
-    - ticker: MSFT
-      name: Microsoft
-    - ticker: GOOGL
-      name: Alphabet
-    - ticker: META
-      name: Meta Platforms
-    - ticker: AMZN
-      name: Amazon
-    - ticker: ORCL
-      name: Oracle
-    - ticker: TSM
-      name: TSMC ADR
-    - ticker: ASML
-      name: ASML ADR
-    - ticker: 2513.HK
-      name: Zhipu AI

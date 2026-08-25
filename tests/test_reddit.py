@@ -103,6 +103,23 @@ def test_wsb_rss_extracts_tickers_and_records_hot_rank():
     assert items[0].metadata["feed_rank"] == 1
 
 
+def test_hot_listing_can_keep_current_leaderboard_even_when_posts_are_older():
+    xml = """<feed xmlns="http://www.w3.org/2005/Atom"><entry>
+    <id>t3_hot</id><title>Still Hot</title>
+    <link href="https://www.reddit.com/r/wallstreetbets/comments/hot/test/" />
+    <updated>2026-08-01T01:00:00Z</updated><author><name>u/tester</name></author>
+    </entry></feed>"""
+    items = parse_reddit_rss(
+        xml,
+        "wallstreetbets",
+        now=datetime(2026, 8, 24, 2, tzinfo=timezone.utc),
+        listing="hot",
+        lookback_hours=None,
+    )
+    assert len(items) == 1
+    assert items[0].metadata["feed_rank"] == 1
+
+
 def test_symbol_extraction_does_not_treat_every_acronym_as_ticker():
     assert extract_reddit_symbols("CEO sees AI demand at $PLTR", ["PLTR"]) == ["PLTR"]
 

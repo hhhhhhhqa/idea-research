@@ -23,7 +23,7 @@ Read only the references needed for the current task:
 
 - Installing or setting up: `references/auto-install-zero-command-line.md`, then `references/first-run-onboarding.md`.
 - Generating a daily digest, or publishing central feeds: `references/content-delivery-digest-run.md`.
-- Changing sources, language, detail, sectors or watchlists: read `config/profiles/default.yaml` and edit/create the requested profile without changing the central source list unless the user asks to change sources.
+- Changing sources, language, detail or sectors: read `config/profiles/default.yaml` and edit/create the requested profile without changing the central source list unless the user asks to change sources.
 
 ## Source-material boundary
 
@@ -33,6 +33,6 @@ For a digest, use only the current feed (or its unfiltered prepared context) and
 
 ## User experience contract
 
-Render the digest with visible IDs: newsletters `N1`, X posts `X1`, WSB tickers/posts `W1`/`R1`, watchlist prices `P1`, and close movers `G1`/`L1`. End by telling the user they may ask to expand any ID. If they ask to expand an ID, locate that exact `display_id` in the latest context or stock-pool JSON and answer only from its stored source material.
+Render the digest with visible IDs: newsletters `N1`, X posts `X1`, WSB tickers/posts `W1`/`R1`, and close movers `G1`/`L1`. WSB is always the current Hot top three, whose rankings must be shown as #1, #2 and #3. End by telling the user they may ask to expand any ID. If they ask to expand an ID, locate that exact `display_id` in the latest context or stock-pool JSON and answer only from its stored source material.
 
 Never add signal scores, source weights, trade instructions, or unsupported facts. The central feed deliberately contains every captured item: decide relevance to the user's idea-generation scope yourself, then output every relevant item with no quantity cap. WSB is a record of retail discussion; it is not fundamental evidence.

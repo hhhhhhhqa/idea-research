@@ -68,7 +68,7 @@ def parse_reddit_json(
     subreddit: str,
     *,
     now: datetime | None = None,
-    lookback_hours: int = 72,
+    lookback_hours: int | None = 72,
     listing: str = "new",
     known_tickers: list[str] | None = None,
     ticker_aliases: dict[str, list[str]] | None = None,
@@ -80,7 +80,7 @@ def parse_reddit_json(
     for feed_rank, child in enumerate(children, start=1):
         post = child.get("data", {})
         created = datetime.fromtimestamp(float(post.get("created_utc") or now.timestamp()), tz=timezone.utc).isoformat()
-        if not within_lookback(created, lookback_hours, now):
+        if lookback_hours is not None and not within_lookback(created, lookback_hours, now):
             continue
         permalink = str(post.get("permalink") or "")
         url = f"https://www.reddit.com{permalink}" if permalink.startswith("/") else permalink
@@ -126,7 +126,7 @@ def parse_reddit_rss(
     subreddit: str | None,
     *,
     now: datetime | None = None,
-    lookback_hours: int = 72,
+    lookback_hours: int | None = 72,
     listing: str = "new",
     known_tickers: list[str] | None = None,
     ticker_aliases: dict[str, list[str]] | None = None,
@@ -137,7 +137,7 @@ def parse_reddit_rss(
     items: list[SignalItem] = []
     for feed_rank, entry in enumerate(parsed.entries, start=1):
         published = iso_datetime(entry.get("published") or entry.get("updated"), collected_at)
-        if not within_lookback(published, lookback_hours, now):
+        if lookback_hours is not None and not within_lookback(published, lookback_hours, now):
             continue
         link = str(entry.get("link") or "")
         matched = re.search(r"/r/([^/]+)/", link, re.IGNORECASE)
@@ -179,10 +179,12 @@ def _anonymous_combined_rss(
         params={"limit": total_limit},
     )
     response.raise_for_status()
+    configured_lookbacks = [entry.get("lookback_hours", config.get("lookback_hours", 72)) for entry in subreddits]
+    lookbacks = [int(value) for value in configured_lookbacks if value is not None]
     parsed = parse_reddit_rss(
         response.text,
         None,
-        lookback_hours=max(int(entry.get("lookback_hours", config.get("lookback_hours", 72))) for entry in subreddits),
+        lookback_hours=max(lookbacks) if lookbacks else None,
         listing=listing,
         known_tickers=config.get("known_tickers") or [],
         ticker_aliases=config.get("ticker_aliases") or {},
@@ -303,7 +305,8 @@ def collect_reddit(config: dict[str, Any], client: httpx.Client | None = None) -
         for index, entry in enumerate(normalized):
             name = str(entry["name"]).removeprefix("r/")
             limit = int(entry.get("limit", config.get("max_items_per_subreddit", 25)))
-            lookback = int(entry.get("lookback_hours", config.get("lookback_hours", 72)))
+            configured_lookback = entry.get("lookback_hours", config.get("lookback_hours", 72))
+            lookback = int(configured_lookback) if configured_lookback is not None else None
             listing = str(entry.get("listing", "new")).lower()
             if listing not in {"new", "hot", "top"}:
                 result.errors.append(f"r/{name}: unsupported listing={listing}")

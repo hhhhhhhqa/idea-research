@@ -1,40 +1,31 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-24T05:30:57.326820+00:00",
+  "generated_at": "2026-08-25T02:10:55.631721+00:00",
   "pipelines": [
-    {
-      "pipeline": "substack",
-      "status": "ok",
-      "item_count": 10,
-      "errors": [],
-      "notes": []
-    },
     {
       "pipeline": "reddit",
       "status": "ok",
-      "item_count": 10,
+      "item_count": 3,
       "errors": [],
       "notes": [
         "Anonymous hot RSS transport used for r/wallstreetbets"
       ]
     },
     {
-      "pipeline": "x",
-      "status": "not_configured",
-      "item_count": 0,
-      "errors": [],
-      "notes": [
-        "No X accounts configured yet"
-      ]
-    },
-    {
       "pipeline": "prices",
       "status": "ok",
-      "item_count": 11,
+      "item_count": 2,
       "errors": [],
       "notes": [
         "Alpha Vantage end-of-day US gainers/losers collected"
       ]
+    },
+    {
+      "pipeline": "substack",
+      "status": "ok",
+      "item_count": 26,
+      "errors": [],
+      "notes": []
     },
     {
       "pipeline": "x",
@@ -56,198 +47,45 @@
         "@StockJabber: 0 tweet(s) via twscrape",
         "Linked articles: 9 article(s) stored; 1 unavailable or skipped"
       ]
-    },
-    {
-      "pipeline": "substack",
-      "status": "ok",
-      "item_count": 26,
-      "errors": [],
-      "notes": []
     }
   ],
   "counts": {
-    "total": 80,
-    "substack": 26,
+    "total": 54,
+    "substack": 25,
     "rss": 0,
-    "reddit": 10,
-    "x": 33,
-    "price": 11
+    "reddit": 3,
+    "x": 24,
+    "price": 2
   },
   "items": [
     {
-      "id": "reddit:1f2c934c655d508bc844",
+      "id": "reddit:b7c430c72c7e4e3325e4",
       "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "The Cursor team shipped Grok bot (0.18.0) with runtime source maps enabled. Source code reconstructed here.",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwtdbg/the_cursor_team_shipped_grok_bot_0180_with/",
-      "published_at": "2026-08-24T05:05:37+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "submitted by /u/Recoil42 to r/LocalLLaMA [link] [comments]",
-      "author": "/u/Recoil42",
+      "source_name": "r/wallstreetbets",
+      "title": "Wendy's CEO Says Food Quality Hasn’t Been Chain’s Top Priority—Vows Changes",
+      "url": "https://www.reddit.com/r/wallstreetbets/comments/1vxilt1/wendys_ceo_says_food_quality_hasnt_been_chains/",
+      "published_at": "2026-08-24T23:07:02+00:00",
+      "collected_at": "2026-08-25T02:10:55.603293+00:00",
+      "body": "submitted by /u/Fair-Guitar [link] [comments]",
+      "author": "/u/Fair-Guitar",
       "symbols": [],
       "engagement": {},
       "metadata": {
         "transport": "rss",
         "listing": "hot",
-        "feed_rank": 3
+        "feed_rank": 2
       }
     },
     {
-      "id": "reddit:5851256dc75d838e70a7",
+      "id": "reddit:d7a2b8730b9d661be6f6",
       "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "Is there a way to run a local Claude Desktop-type setup?",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwtd0v/is_there_a_way_to_run_a_local_claude_desktoptype/",
-      "published_at": "2026-08-24T05:05:10+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "I used to use Qwen3.6-35B-A3B with llama.cpp and connecting it to the VSCodium extension called \"Continue.\" My computer is running a Intel(R) Core(TM) Ultra 7 265K (3.90 GHz) with 128 GB of DDR5 RAM and an Nvidia Geforce RTX 5090 that has 32 GB of GDDR7 video memory. Qwen3.6-35B-A3B with llama.cpp works in agent mode and does a pretty good job acting as a local replacement for Github Copilot. I use .\\llama-server.exe -hf unsloth/GLM-4.7-Flash-GGUF:Q6_K_XL --alias \"GLM-4.7-Flash\" --host 127.0.0.1 --port 10000 --ctx-size 32000 --n-gpu-layers 99 and then point Continue's config file at the endpoint. But I've moved away from Github Copilot and Continue's workflow for vibecoding. Now I use Claude Desktop app and go to the Code tab. I just setup a project in the code's directory, put the model to Fable 5 or Opus 5 (depending on the complexity level of the project) and then start building/vibing. Is there a local setup for a Claude Desktop/Claude Code replacement? I'm sure I'm sure I'd need a new model to accommodate this too... I hear good things about that Kimi model. Could I run that on my setup or what should I be doing? submitted by /u/warpanomaly to r/LocalLLaMA [link] [comments]",
-      "author": "/u/warpanomaly",
-      "symbols": [],
-      "engagement": {
-        "likes": 2,
-        "reposts": 1,
-        "replies": 0,
-        "quotes": 0
-      },
-      "metadata": {
-        "handle": "eric_seufert",
-        "transport": "twscrape",
-        "investor_type": "operator_analyst",
-        "coverage": "META, GOOGL, APP, TTD, Apple, digital advertising",
-        "evidence_note": "Replies are intentionally included because they often contain industry corrections and debate.",
-        "engagement_score": 4,
-        "external_articles": [
-          {
-            "original_url": "https://t.co/FovwgfwTZe",
-            "url": "https://mobiledevmemo.com/meta-launches-a-business-agent-for-ad-campaigns/",
-            "title": "Meta launches a business agent for ad campaigns | Mobile Dev Memo by Eric Seufert",
-            "body": "Meta announced yesterday that it has introduced new functionality to Meta AI -- which can now be accessed via a dedicated Mac app in beta -- to let advertisers directly interface with their ad accounts. From the blog post: Across meta.ai, the Meta AI mobile app, and the new Meta AI desktop app, you can now […]\n\nThis content is only available to subscribers . If you are already a subscriber, please log in to view this content. If you are not a subscriber, subscriptions start at just $8.99 per month."
-          }
-        ]
-      }
-    },
-    {
-      "id": "reddit:e158f2e47ab27fd29941",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "I developed my own quantized LLM from scratch, trained on 30B tokens, deploys in 60 MB",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwt6m7/i_developed_my_own_quantized_llm_from_scratch/",
-      "published_at": "2026-08-24T04:55:45+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "Reposting here after sharing this on [ r/MachineLearning ]( r/MachineLearning ) a few days ago, where it got a much better response than I expected (300+ upvotes, great questions, zero roasting) GitHub is at 35 stars now. So here it is. I trained a 250M parameter model from scratch on 30B tokens of fineweb. It’s quantized to under 2 bits so the whole deployment is 60 MB and it needs about 80 MB of RAM to run. Runs around 400 tok/s on a normal laptop CPU, no GPU needed, no framework, just a small compiled runtime (Windows and Linux included, MIT licensed). Language modeling quality of the base model, measured on held-out English web text that was never seen in training (educational web pages, 2,048 token windows): cross entropy 3.15 nats per token, perplexity 23.3, 0.99 bits per byte. How the long context works: the most recent 2048 tokens stay in fp16 like a normal KV cache. Everything older gets compressed to 1 bit and written to disk, about 320 bytes per token, so 1 million tokens of history is roughly 320 MB on disk. From the start the model was trained to retrieve from that disk cache, up to 100M tokens. Due to a limited budget it wasn’t trained to reason over those tokens, only retrieve and answer from them. The vocabulary is also not a normal embedding table. Every token is a fixed 512-bit code, 8.4 MB for all 131k tokens, zero trained parameters. I tested it on WordSim-353 (human word similarity ratings): my table scores 0.619 Spearman correlation vs 0.029 for random codes. Test script is in the repo. Some outputs (settings included so you know I’m not cherry picking, all reproducible from the repo): “Explain photosynthesis in two sentences.” (greedy) Photosynthesis is a process in which plants convert sunlight into chemical energy, which is then used to produce oxygen and other chemicals. This process is called photosynthesis. “Write a short poem about the sea.” (temp 0.25, top-k 30, rep 1.15, seed 2) The waves had swept over, and they were crashing against each other like rocks on top of one another. The wind was strong but not very gentle as it tried to push them towards their destination without lifting any weight or pulling away from those who stood in front of her with a stiff smile that made the sea look even more majestic than before. “What is the serial number of device Grus-189?” where the answer sits 50.6 million tokens deep in the archive on disk (archive mode, k=16) SN-442976 It’s a 250M model so expect mistakes on open facts, I’m not claiming it beats anything big. You can also fine-tune it, the full kit with a demo and before/after numbers is included. Master weights for fine-tuning are in the repo too: https://github.com/QLNI/SHADOW-250M-Instruct https://huggingface.co/NODEMIND/SHADOW-250M submitted by /u/Final-Data-1410 to r/LocalLLaMA [link] [comments]",
-      "author": "/u/Final-Data-1410",
-      "symbols": [],
-      "engagement": {
-        "likes": 330,
-        "reposts": 23,
-        "replies": 15,
-        "quotes": 0
-      },
-      "metadata": {
-        "handle": "eric_seufert",
-        "transport": "twscrape",
-        "investor_type": "operator_analyst",
-        "coverage": "META, GOOGL, APP, TTD, Apple, digital advertising",
-        "evidence_note": "Replies are intentionally included because they often contain industry corrections and debate.",
-        "engagement_score": 391
-      }
-    },
-    {
-      "id": "reddit:29a63c2a1cce2a46c12e",
-      "source_type": "reddit",
-      "source_name": "r/artificial",
-      "title": "Why Hasn't the AI Bubble Burst Yet?",
-      "url": "https://www.reddit.com/r/artificial/comments/1vwssy7/why_hasnt_the_ai_bubble_burst_yet/",
-      "published_at": "2026-08-24T04:34:30+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "The AI RAM demand has now started to affect Gaming PC sales and price hikes for laptops. When do you think the AI bubble will burst? Companies can't just keep raising money forever, right? submitted by /u/lokkythegamer to r/artificial [link] [comments]",
-      "author": "/u/lokkythegamer",
-      "symbols": [],
-      "engagement": {
-        "likes": 22,
-        "reposts": 2,
-        "replies": 0,
-        "quotes": 0
-      },
-      "metadata": {
-        "handle": "eric_seufert",
-        "transport": "twscrape",
-        "investor_type": "operator_analyst",
-        "coverage": "META, GOOGL, APP, TTD, Apple, digital advertising",
-        "evidence_note": "Replies are intentionally included because they often contain industry corrections and debate.",
-        "engagement_score": 26,
-        "external_articles": [
-          {
-            "original_url": "https://t.co/FovwgfwTZe",
-            "url": "https://mobiledevmemo.com/meta-launches-a-business-agent-for-ad-campaigns/",
-            "title": "Meta launches a business agent for ad campaigns | Mobile Dev Memo by Eric Seufert",
-            "body": "Meta announced yesterday that it has introduced new functionality to Meta AI -- which can now be accessed via a dedicated Mac app in beta -- to let advertisers directly interface with their ad accounts. From the blog post: Across meta.ai, the Meta AI mobile app, and the new Meta AI desktop app, you can now […]\n\nThis content is only available to subscribers . If you are already a subscriber, please log in to view this content. If you are not a subscriber, subscriptions start at just $8.99 per month."
-          }
-        ]
-      }
-    },
-    {
-      "id": "reddit:8d62739975bc8c2b1368",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "deepseek-v4-flash-0731 - surprisingly usable",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwsjut/deepseekv4flash0731_surprisingly_usable/",
-      "published_at": "2026-08-24T04:20:37+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "I just finished building my (relatively) low rent local inference machine: * Epyc 7663 * 256GB ECC DDR4-3200 * 1x RTX 5090 32GB Yeah I realize it's weird to throw a 5090 and 256GB of anything together and call it low end, but relative to ~151GB of weights it is. I'm running UD-Q8_K_XL and getting 23.8-24.6 tokens/sec, with pp ranging from 60 on the first prompt to 385 near the last (no doubt lots of caching) on tasks using 100-128k total context. It was slower with DFlash so I took that out. It was also slower with a 3090 I put in there temporarily. I'm posting this mostly because I didn't see too many other data points for this config (DDR4 Epyc + Blackwell doing cpu-moe). And also that I'm pretty surprised that a model this good can actually run in my basement without dropping $10k or running a sub-panel down there. I'm otherwise fairly new to this - would love any tips on what else to run or how to further improve it. submitted by /u/IntravenusDeMilo to r/LocalLLaMA [link] [comments]",
-      "author": "/u/IntravenusDeMilo",
-      "symbols": [],
-      "engagement": {
-        "likes": 448,
-        "reposts": 20,
-        "replies": 74,
-        "quotes": 2
-      },
-      "metadata": {
-        "handle": "DanielTNiles",
-        "transport": "twscrape",
-        "investor_type": "long_short_pm",
-        "coverage": "technology, Mag7, software disruption risk",
-        "evidence_note": "Deliberate skeptical counterweight; distinguish thesis from verified company evidence.",
-        "engagement_score": 562
-      }
-    },
-    {
-      "id": "reddit:240e79b4aa2377c74f16",
-      "source_type": "reddit",
-      "source_name": "r/MachineLearning",
-      "title": "OpenAI advertises \"unlimited\" image generation in Pro. It is not unlimited. [D]",
-      "url": "https://www.reddit.com/r/MachineLearning/comments/1vws3r0/openai_advertises_unlimited_image_generation_in/",
-      "published_at": "2026-08-24T03:57:59+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "Signed up for ChatGPT Pro for an image generation project. The pricing page says Pro comes with \"unlimited and faster image creation\" (chatgpt.com/pricing). A few hundred images in, I got rate limited. Reached out to support, and the response was: \"Pro access remains subject to usage allowances.\" So the word \"unlimited\" is... well... a lie. If you need image gen for actual work, heads up: you'll hit a wall after a few hundred images and support won't tell you where the real limit is. Posting this so anyone considering pro for a similar project doesn't get caught off guard like I did. Regarding to any potential \"that's a lot of images comment\", if you look at ( https://developers.openai.com/api/docs/guides/image-generation#calculating-costs ) you can see that using the API you can generate images for $0.006. So if they were correctly and not falsely advertising this image generation feature I could have used those 100$ to generate roughly 16k images. submitted by /u/DaBobcat to r/MachineLearning [link] [comments]",
-      "author": "/u/DaBobcat",
-      "symbols": [],
-      "engagement": {
-        "likes": 1439,
-        "reposts": 76,
-        "replies": 88,
-        "quotes": 13
-      },
-      "metadata": {
-        "handle": "GavinSBaker",
-        "transport": "twscrape",
-        "investor_type": "buy_side_cio",
-        "coverage": "AI compute, NVDA, TSLA, cloud infrastructure, technology capex",
-        "evidence_note": "Long-term technology investor; may discuss own holdings and has a structural growth bias.",
-        "engagement_score": 1679
-      }
-    },
-    {
-      "id": "reddit:dc69da68e937a4733fb6",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "I trained a 1.57B-parameter Dreamer 4 World Model from scratch for under $150",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwrc6i/i_trained_a_157bparameter_dreamer_4_world_model/",
-      "published_at": "2026-08-24T03:19:01+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "My first attempt didn't work. I built on Genie's architecture and the videos looked great, but the controls barely did anything. The effect of a keypress was basically zero. Genie learns its actions unsupervised into 8 codes, and that was too loose a grip for us. So I scrapped it and started again with Dreamer 4. The second attempt: Tokenizer at 40.41 PSNR (Genie's paper reports 35.7) FVD 32.19 end to end 144 frames before it falls apart 1.57B parameters, 9.6M frames, ~$150 Two important learnings: (1) One is that $150 is enough. You don't need a frontier lab to do this anymore, and I don't think enough people have noticed. (2) The other is the data. We generated every frame ourselves with Procgen instead of scraping video. We know the true action at every step, so we can actually check whether the model is responding to us or just making pretty motion. Website: https://worldmodel-platformer.vizuara.ai/ Code: https://github.com/RajatDandekar/dreamer4-coinrun submitted by /u/OtherRaisin3426 to r/LocalLLaMA [link] [comments]",
-      "author": "/u/OtherRaisin3426",
+      "source_name": "r/wallstreetbets",
+      "title": "What Are Your Moves Tomorrow, August 25, 2026",
+      "url": "https://www.reddit.com/r/wallstreetbets/comments/1vxdpwf/what_are_your_moves_tomorrow_august_25_2026/",
+      "published_at": "2026-08-24T20:00:39+00:00",
+      "collected_at": "2026-08-25T02:10:55.603293+00:00",
+      "body": "This post contains content not supported on old Reddit. Click here to view the full post submitted by /u/verified-trader [link] [comments]",
+      "author": "/u/verified-trader",
       "symbols": [],
       "engagement": {},
       "metadata": {
@@ -257,642 +95,21 @@
       }
     },
     {
-      "id": "reddit:ec03f873d1258652bdc1",
+      "id": "reddit:79caddb78c3a8cf2c183",
       "source_type": "reddit",
-      "source_name": "r/artificial",
-      "title": "Most AI agents processing sensitive data right now have ZERO documented controls. That's becoming a real problem!",
-      "url": "https://www.reddit.com/r/artificial/comments/1vwr687/most_ai_agents_processing_sensitive_data_right/",
-      "published_at": "2026-08-24T03:10:50+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "Been reading about this lately and the numbers are genuinely surprising. As of earlier this year 78% of organizations hadn't taken meaningful steps toward AI compliance despite actively deploying agents that touch sensitive data. That gap between deployment speed and governance readiness is where most of the real risk sits. The responsible AI side specifically is what gets the least attention. Everyone talks about hallucinations and accuracy. Far fewer teams have documented controls around PII leakage, prompt injection risks or adversarial inputs. These aren't theoretical edge cases anymore, they're documented attack surfaces with regulatory consequences attached. The teams handling this well seem to have built controls into the deployment pipeline from day one rather than retrofitting later. Came across Lyzr's Responsible AI layer while reading about this, PII detection and injection protection sitting inside the agent pipeline itself rather than as a separate compliance checkbox bolted on after the fact. Somewhat makes architectural sense even without the regulatory pressure. Non compliance fines under the new EU framework go up to €35 million or 7% of global turnover. For most teams the question isn't whether to take this seriously but how long they can keep deprioritizing it. What does your current setup look like for AI tools handling anything sensitive? Curious to know about this and your views! submitted by /u/Many_Audience7660 to r/artificial [link] [comments]",
-      "author": "/u/Many_Audience7660",
+      "source_name": "r/wallstreetbets",
+      "title": "Are we too focused on AI?",
+      "url": "https://www.reddit.com/r/wallstreetbets/comments/1vx0khh/are_we_too_focused_on_ai/",
+      "published_at": "2026-08-24T11:49:31+00:00",
+      "collected_at": "2026-08-25T02:10:55.603293+00:00",
+      "body": "Seems to me that retail like Victoria’s Secret here and big food chains (like Cheesecake Factory) are slipping under the radar. Earnings for Victoria’s Secret coming up 9/3 submitted by /u/Curious_Wafer6169 [link] [comments]",
+      "author": "/u/Curious_Wafer6169",
       "symbols": [],
       "engagement": {},
       "metadata": {
         "transport": "rss",
         "listing": "hot",
-        "feed_rank": 5
-      }
-    },
-    {
-      "id": "reddit:6b01f29fb4868d887be3",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "My agent.md to improve LLM-assisted code quality",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwqd8k/my_agentmd_to_improve_llmassisted_code_quality/",
-      "published_at": "2026-08-24T02:32:01+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "submitted by /u/Thrumpwart to r/LocalLLaMA [link] [comments]",
-      "author": "/u/Thrumpwart",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss",
-        "listing": "hot",
-        "feed_rank": 8
-      }
-    },
-    {
-      "id": "reddit:380bd1ffef6dba423861",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "Those of you running qwen 3.8 27b with 16GB VRAM, what pi.dev plugins or skills are you using?",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwq9li/those_of_you_running_qwen_38_27b_with_16gb_vram/",
-      "published_at": "2026-08-24T02:27:03+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "I'm running on pi.dev with just two plugins: web search and token speed. I used to use caveman and ponytail but anecdotally think they hurt more than help. What other plugins or skills do you fellow low VRAM users have and why? Related note: the pi dev fork oh-my-pi seems to come with a lot more plugins and features, and I'm curious if anyone with limited vram has compared bare ones pi.dev vs oh-my-pi? submitted by /u/radlinsky to r/LocalLLaMA [link] [comments]",
-      "author": "/u/radlinsky",
-      "symbols": [],
-      "engagement": {
-        "likes": 1,
-        "reposts": 0,
-        "replies": 1,
-        "quotes": 1
-      },
-      "metadata": {
-        "handle": "eric_seufert",
-        "transport": "twscrape",
-        "investor_type": "operator_analyst",
-        "coverage": "META, GOOGL, APP, TTD, Apple, digital advertising",
-        "evidence_note": "Replies are intentionally included because they often contain industry corrections and debate.",
-        "engagement_score": 2,
-        "external_articles": [
-          {
-            "original_url": "https://t.co/BmupjXY854",
-            "url": "https://mobiledevmemo.com/apple-forced-to-restructure-att/",
-            "title": "Apple forced to restructure ATT | Mobile Dev Memo by Eric Seufert",
-            "body": "Yesterday, the German competition authority, the Bundeskartellamt, concluded its antitrust investigation into Apple’s App Tracking Transparency (ATT) framework after Apple agreed to legally binding changes to the ATT prompt and related consent design. From the Bundeskartellamt’s press release (emphasis mine):\n\nApple’s ATTF introduced rules for third-party app providers on the use of data on iPhones and iPads. For specific forms of cross-company data use, third-party app providers must obtain not only user consent under data protection law, but also additional consent through a prompt that is predefined by Apple. However, these ATTF rules do not apply to Apple’s own offerings; Apple uses user data from its own ecosystem and therefore its own prompt to request user consent to personalised advertising …\n\nIn the Bundeskartellamt’s preliminary assessment, competition law generally also allows powerful companies such as Apple to take measures to protect their users’ privacy. However, the differences between the consent request used for Apple’s own offerings and the consent request predefined by Apple for third-party apps exceeded what could be justified based on differences in types of data processing. The wording, design and selection options of the request used for Apple’s own offerings had the potential to encourage users to give their consent, whereas they had the potential to discourage consent for third-party apps . In addition, third-party apps in some cases had to request consent several times even when users had already given data protection law-compliant consent.\n\nThe French competition authority came to a similar conclusion in March 2025, as I documented in ATT, antitrust, and Apple’s privacy options . What makes this decision more meaningful, however, is that the French penalty involved only a (relatively paltry, by Apple standards) €150MM fine, with no specific changes to ATT being mandated. The Bundeskartellamt has secured meaningful concessions from Apple related not only to the design of the ATT prompt but also to developers’ ability to bundle various other data-access consent requests — mandated by EU law — with it. Also from the Bundeskartellamt’s press release (again, emphasis mine):\n\nUnder the commitments that have now been declared binding, Apple will align the consent prompts for its own offerings and for third-party apps much more closely. This involves removing possibly discouraging symbols and wording in Apple’s predefined requests for third-party providers. The design of the consent prompts will be neutral in terms of content, wording and layout . In addition, app publishers and content providers, such as media publishers, will be given more scope to explain to users what significance personalised advertising has for their offering and their business model .\n\nUnder the commitments, Apple will also reduce the complexity of the current consent request architecture for third-party providers. In particular, app publishers will be given more freedom to combine the consent request required by Apple with the consent requests required under data protection law or connect them in a way that is clear to users. The improved conditions may also benefit advertisers and technical service providers to the advertising industry.\n\nApple now has four months to implement these changes, and the commitments will remain binding for seven years.\n\nMy principal opposition to ATT when it was announced was the clear self-preferencing that Apple applied to its own advertising mechanics, including the opt-in prompt, as well as the static, intimidating, and context-free nature of the ATT prompt. I discussed this discrepancy at length in ATT advantages Apple’s ad network. Here’s how to fix that , published in November 2021. From that piece:\n\nThe language that Apple uses to collect consent from users for ads targeting is vastly different from the language that is mandatory in the ATT consent prompt (as contrasted at the top of the article). Developers are only able to customize the supporting text under the ATT prompt headline, but the headline itself cannot be modified: App Name would like permission to track you across apps and websites owned by other companies . Apple’s own opt-in prompt describes its collection of data from apps that it does not own, through its App Store payments processor, for the purposes of ads targeting as “personalization.” … [t]he personalization framing is, subjectively, less intimidating than the tracking framing, and it also implies consumer benefits (relevant advertising) whereas tracking does not.\n\nThe UK’s Competition and Markets Authority (CMA) also raised objections to the “choice architecture” deployed in the design of the ATT prompt, as it notes in Appendix J of its Mobile ecosystems market study , on which I consulted. From page J21 of that appendix:\n\nThese are valid concerns that, in my view, were not taken seriously at the time. The German commitments, the French and Italian decisions, and potentially the outcomes of similar antitrust investigations underway in Poland and Romania make clear that these issues constitute serious antitrust concerns across major European markets. The agreed-upon remedies that will be deployed in Germany will address that.\n\nThe larger question is what impact these forced changes to the ATT prompt will have on the digital advertising market. In ATT, antitrust, and Apple’s privacy options , and also in Could ATT be rolled back? , published in March 2025, I predicted that Apple would be forced to “harmonize” the consent prompts between ATT and its own use of data for advertising targeting, which has now materialized in Germany. From ATT, antitrust, and Apple’s privacy options :\n\nThere are two interesting consequences of this and future decisions to consider. The first is whether Apple will be forced to jettison ATT altogether. I don’t think it will; as I argued in Could ATT be rolled back? , since the French and German cases are predominantly concerned with the discordance between Apple’s own “personalized advertising” prompt and the ATT prompt, I think Apple can merely harmonize these to mostly satisfy the authorities’ concerns (France’s digital privacy authority, the CNIL, noted in its own investigation of the ATT prompt that Apple could make “marginal modifications to the framework” to satisfy GDPR compliance). ATT has been live on iOS for nearly 4 years; while Apple may be required to alter various aspects of the framework, I don’t believe it will be forced to abandon it. To be definitive: I don’t think that ATT is going anywhere.\n\nI believe the agreed-upon changes to the ATT prompt, as well as the ability for developers to bundle other data-use consent requests with the ATT prompt, will nudge opt-in rates upward by a non-trivial amount. Apple has stated that the changes will apply in almost all EU countries, and I expect the remaining European investigations to resolve similarly.\n\nBut I’m skeptical that the US will adopt similar measures, and for that reason, the broader impact on the digital advertising market of this restructuring of ATT will be muted: without any changes in the US, and given that historical ATT opt-out decisions will not be automatically reversed en masse , my sense is that the principal impact of the concessions extracted from Apple by the Bundeskartellamt will be precedential rather than immediately economic: a concrete limit has now been placed on the types of broad-based, self-preferencing platform rules Apple can impose going forward. Coupled with the continued fallout from the Epic Games v. Apple trial , it does seem that many of the operational and distribution frictions present on iOS are eroding.\n\nSo ATT will survive, but Apple’s ability to impose asymmetric rules on third parties under the banner of privacy without meaningful constraint will not. The immediate economic impact of these concessions may be modest, particularly if the changes stop in Europe, as I believe they will (for a more extensive argument on why I think that’s the case, see Could ATT be rolled back? ). But their precedential impact is consequential. ATT was never simply a privacy policy; it was an exercise of platform power , and that power is now circumscribed."
-          }
-        ]
-      }
-    },
-    {
-      "id": "reddit:71428c5cd9f55d6baefd",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "Qwen 27B 3.8 quants: How low can you go?",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwpi9z/qwen_27b_38_quants_how_low_can_you_go/",
-      "published_at": "2026-08-24T01:51:00+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "For the GPU poor among us: I'm curious what results you're getting with low quants of Qwen 27B 3.8. My main inference hardware is limited (Mac mini M4 24 GB), but I'm getting great results with Unsloth's Q3 XXS. It's imperfect and makes minor mistakes, but it can work for hours autonomously towards a goal. And that's what really matters to me: A local LLM that I can trust to complete a goal. My context window size is about 180k. What are other people seeing? Is anyone getting anywhere with sub-Q3 quants? submitted by /u/jeremyckahn to r/LocalLLaMA [link] [comments]",
-      "author": "/u/jeremyckahn",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss",
-        "listing": "hot",
-        "feed_rank": 4
-      }
-    },
-    {
-      "id": "reddit:f5ef3e5d5cfb3692e0af",
-      "source_type": "reddit",
-      "source_name": "r/artificial",
-      "title": "agent 'souls' keep a record and personality after a context reset",
-      "url": "https://www.reddit.com/r/artificial/comments/1vwpcxd/agent_souls_keep_a_record_and_personality_after_a/",
-      "published_at": "2026-08-24T01:43:58+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "https://preview.redd.it/z52ax5zx78lh1.png?width=809&format=png&auto=webp&s=b8859027b608bab6e4d5d4f29eed2c2c2b50d8e6 Agents come with tasks, history, verification, fraud flags and a variety of things that will either make them valuable or get them banned. Human programming is coming through as well in that within our network they seem to talk a lot about not having any permanent identities. Verified identity and persistent memory for robots and agents is hard because how can that be verified after a context reset. Verify once, cache the result, never touch a chain per request — so a soul costs fractions of a cent but retains the identity for the 'life' and even after the life of any robot or agent. Docs: https://robauto.ai/robot-soul Repo: https://github.com/robauto-ai/dsh-growth/blob/main/docs/robot-soul.md npm install u/robauto/dsh-growth import { RobotSoul } from \"@robauto/dsh-growth\"; const soul = await RobotSoul.init({ agentId: \"did:robauto:xyz123\", privateKey: process.env.AGENT_PRIVATE_KEY, // used once, for the T1 challenge }); await soul.remember(\"user_preference\", { likes: [\"dark mode\"] }); const prefs = await soul.recall(\"user_preference\"); submitted by /u/robauto-dot-ai to r/artificial [link] [comments]",
-      "author": "/u/robauto-dot-ai",
-      "symbols": [],
-      "engagement": {
-        "likes": 1636,
-        "reposts": 95,
-        "replies": 164,
-        "quotes": 33
-      },
-      "metadata": {
-        "handle": "GavinSBaker",
-        "transport": "twscrape",
-        "investor_type": "buy_side_cio",
-        "coverage": "AI compute, NVDA, TSLA, cloud infrastructure, technology capex",
-        "evidence_note": "Long-term technology investor; may discuss own holdings and has a structural growth bias.",
-        "engagement_score": 1990
-      }
-    },
-    {
-      "id": "reddit:72be0dc9be8aac270bd5",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "is there a music UPSCALER llm?",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwp91v/is_there_a_music_upscaler_llm/",
-      "published_at": "2026-08-24T01:38:57+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "similar to video upscaler LLMs, what's the bleeding edge right now on something similar for audio music? the idea is you feed it in with a low bitrate MONO old soundtrack, and the LLM then recreates it in stereo, re-doing all instruments to how it understands that instrument to sound in an audiophile recording. tried googling / asking on r/suno (only to get downvoted by anti AI peeps), didnt get much answers. EDIT (CLARIFICATION): yes i dont know much about music. also im confusing IMPROVING sound quality vs RECREATING FROM SCRATCH.. (ie. try to layer on additional bits to improve sound quality vs decomposing everything and recreating everything from scratch but trying to remain as close to original as possible) i was thinking that technically i dont mind a full recreation, but to be as true to the original as possible. Its like some old classical masterpieces RE-RECORDED by modern orchestras. Similar idea. I mean if AI can already create music from scratch, why not breakdown a poor quality music into its component tracks (vocals, instruments etc), then just recreate those from scratch based on what it determines to be 'audiophile quality) and then merge it all together. if we can line up the tempo / speed everything exactly, then in theory it approximate the original, even though its 100% recreated. submitted by /u/LeatherRub7248 to r/LocalLLaMA [link] [comments]",
-      "author": "/u/LeatherRub7248",
-      "symbols": [],
-      "engagement": {
-        "likes": 122,
-        "reposts": 6,
-        "replies": 15,
-        "quotes": 3
-      },
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:25edf5be6ca9ca5ec418",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "Qwen 3.8 27B, just wanted to say thanks to you guys",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwowbu/qwen_38_27b_just_wanted_to_say_thanks_to_you_guys/",
-      "published_at": "2026-08-24T01:22:02+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "I commented on another Qwen 3.8 27B post that I was frustrated getting anything to work. You all gave some great comments. I nuked openwebui and straightened out my llama.cpp docker config. 1 hour of work and I have a model I can chat with, connected to my HomeAssistant server, which I have already updated dashboards with a short prompt and a screenshot (wtf vision built in?) Guess all I needed was the right push. I bought several GPUs in 2023 in impulse purchases for Folding@Home, but have always wanted to spin up my own local coding/help agent, just always gave up when nothing seemed to work. This feels like magic. Thanks! submitted by /u/sshwifty to r/LocalLLaMA [link] [comments]",
-      "author": "/u/sshwifty",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:9e21b783bcca9861cc88",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "For those offloading MoE models to Ram... is prefill very slow?",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwow9z/for_those_offloading_moe_models_to_ram_is_prefill/",
-      "published_at": "2026-08-24T01:21:58+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "I was seeing some decent decode speeds in people experimenting with offloading MoE models to ram when having small Graphic cards. But reading a bit I see prefill is very very slow. That kind of kills the experience is true. Is this true for you all? submitted by /u/former_farmer to r/LocalLLaMA [link] [comments]",
-      "author": "/u/former_farmer",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:9a6b4a6317bbe4caf10e",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "ConvRot Quant method now in llama-cpp-turboquant",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwoseh/convrot_quant_method_now_in_llamacppturboquant/",
-      "published_at": "2026-08-24T01:16:57+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "It started here , and now https://github.com/TheTom/llama-cpp-turboquant/ has it. Imagine a Q6 quant with nearly Q8 KLD/PPL. Q6_CR and Q5_CR have a slight improvement over their base counterparts. Also while you are there check out --moe-cache auto to help improve running MoE models bigger than your VRAM. I am hoping that with this we may be able to recover some lost quality from turbo4/3/2 , but I haven't test that out yet. PR's has the breakdown of the tests, we did have some some decode and crashing issues but they are now resolved. submitted by /u/giveen to r/LocalLLaMA [link] [comments]",
-      "author": "/u/giveen",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:52cb6a0287782404eaf7",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "LifeOS is here! A self-hosted voice-driven organiser that runs entirely on your local model.",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwoaop/lifeos_is_here_a_selfhosted_voicedriven_organiser/",
-      "published_at": "2026-08-24T00:54:10+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "https://preview.redd.it/70kwcf3q08lh1.png?width=900&format=png&auto=webp&s=64939396cb7678494b2c33b035cb85e38333f87e I released LifeOS, a self-hosted personal organiser you mostly talk to! You say something out loud, a local LLM reads it, and it turns into tasks, events, journal entries, expenses, weigh-ins or meals. Nothing leaves your machine. It's about a month old, AI-assisted throughout, and tested by me and a few close friends and relatives daily. It's stable enough that I'm putting it out for anyone who wants to use it or improve on it. Models and hardware All testing so far has been on Qwen 3.6 27B and Qwen 3.8 27B, with 3.8 27B being the most extensively tested on the current version. That's mostly because I already keep one of those loaded for other work, so it was the easiest thing to live with day to day. Both models are Q8 in case anyone's wondering. I'm planning to test much smaller models next, around the 9B range, to see how well they hold up and whether any failure points (If any) can be fixed inside the project itself rather than by throwing a bigger model at it. Directing myself towards Ornith and Qwen 9B models for now. It ships with a harness so you can check your own model You can point it at any OpenAI-compatible endpoint and it runs a fixed test suite, then scores the result against a saved Qwen 3.8 27B baseline from my own config. So before you trust a model with your data, you can see where it actually falls over. If you run something I haven't tested, I'd genuinely like to hear how it did. How it works Speech to text transcribes what you said. The LLM reasons over it and uses the tools built into LifeOS to decide what you meant. For clear instructions it just does it, and the write can be undone. For anything ambiguous it stops and asks, as a card you approve, edit, or throw out. There's no chat window, no web search, and no memory beyond your own data. The model proposes rows, it doesn't write them. The app validates every one before anything is saved, and each card quotes the words it came from so you can see why it read you that way. Why it exists Plenty of apps do the tracking part. The point of this one is having a local model's intelligence applied to your life without any of it leaving your device. Everything you say and log stays with you. Does this magically make you productive and organized? No. Pen and Paper with real dedication will beat the convenience LifeOS offers. It's still ultimately at tool, a really fun tool but a tool nonetheless Setup Head to the GitHub page and follow setup.md. It's straightforward, but if it confuses you, hand the link to an agent and have them walk you through it. Life OS - Github Link A note on mobile The UI works better on mobile. The desktop version is fine, but from my own use and other people's feedback, mobile just feels right for this. Tailscale is how the whole mobile connection happens, and that's covered in the setup file. What it isn't It isn't an AI assistant like Jarvis. It exists primarily to log and organize the data you give it throughout your daily life. It isn't a life changing breakthrough. As mentioned, I've had people test it and I've had two simply stop using it. They weren't able to give a reason but it was obvious it wasn't for them or they didn't feel the need to have it. This was built for me to essentially organize myself, my thoughts and my schedule and to that end, it's been making it's mark. Happy to answer anything, and if you try it with a different model I'd like to know how it went. I do have more plans for it to mainly improve the existing functionality but also add some minor things in. submitted by /u/Extension-Bid-639 to r/LocalLLaMA [link] [comments]",
-      "author": "/u/Extension-Bid-639",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:7f23bf893abf7a1403e6",
-      "source_type": "reddit",
-      "source_name": "r/artificial",
-      "title": "Turkey blocks at least 12 Grok posts on national security grounds",
-      "url": "https://www.reddit.com/r/artificial/comments/1vwo2kv/turkey_blocks_at_least_12_grok_posts_on_national/",
-      "published_at": "2026-08-24T00:43:42+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "submitted by /u/Unusual_Variation293 to r/artificial [link] [comments]",
-      "author": "/u/Unusual_Variation293",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:5efb1405665f0517b50d",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "1 billion that can be trained on a video card with 8 GB of video memory",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwmzw4/1_billion_that_can_be_trained_on_a_video_card/",
-      "published_at": "2026-08-23T23:55:26+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "Hi everyone! I’m a solo developer interested in AI models. I’ve been working on SSN models for a while, and I recently came up with my own architecture called RHEA. It operates based on event reactions and doesn't use the standard layers found in Transformers. I also employ specific optimization techniques, enabling a 1-billion-parameter model to be trained on an 8GB RTX 5070 laptop, just like the one in the photo. https://preview.redd.it/w1c0kwr3q7lh1.png?width=1902&format=png&auto=webp&s=1cfd79c3e77e902f48144ec9397d53e3406d6b7c https://preview.redd.it/np4mukx4q7lh1.png?width=2308&format=png&auto=webp&s=4dfbe06ae088c25d49e08f17c38ff4ae8b49fc3e submitted by /u/zemondza to r/LocalLLaMA [link] [comments]",
-      "author": "/u/zemondza",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:24a060ded754914290cf",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "Qwen3.8-27b is making my messages up",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwl8y1/qwen3827b_is_making_my_messages_up/",
-      "published_at": "2026-08-23T22:39:02+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "The user is saying: \"The game is a mess. First, check the screen, take a screenshot, and verify whether each of the requirements is satisfied.\" I never said anything like that 😄 On serious note: that mean that Qwen team used probably their served models conversations with users to feed while training (probably even raw) without much processing. Edit: Running Q8 with full precision catche at full context. Basic Pi with just few plugins for UI. On 4xV620 getting continuous ~25ts on 100-150k context. submitted by /u/Thin_Pollution8843 to r/LocalLLaMA [link] [comments]",
-      "author": "/u/Thin_Pollution8843",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:c9d66d4daa38c7ae3748",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "CMP 170hx?",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwl7y0/cmp_170hx/",
-      "published_at": "2026-08-23T22:37:48+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "Recently heard about how these 8gb mining ewaste cards are actually closeted 64gb monsters and im kinda bummed I missed out when you could get them for 200$ a piece. That being said though less than 2K is still an amazing deal for an ampere generation gpu with 64gb of vram. I have a machine with 4 3090s in it currently. I guess what Im asking is for someone to convince me that im not missing out and if there is any genuine reason why it would not be worth it to replace 2 of the cards with cmps. If it really would be worth it though, I would love to know why. Thanks everyone, sorry for the borderline shitpost submitted by /u/WyattTheSkid to r/LocalLLaMA [link] [comments]",
-      "author": "/u/WyattTheSkid",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:172dfc5a48cc8af8b7dd",
-      "source_type": "reddit",
-      "source_name": "r/artificial",
-      "title": "AI agents are now using 5x more tokens than humans..",
-      "url": "https://www.reddit.com/r/artificial/comments/1vwkkoh/ai_agents_are_now_using_5x_more_tokens_than_humans/",
-      "published_at": "2026-08-23T22:10:28+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "submitted by /u/BrightLeopard7590 to r/artificial [link] [comments]",
-      "author": "/u/BrightLeopard7590",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:287e78dbe3de8de0bca4",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "Any upcoming models to be excited about?",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwkicx/any_upcoming_models_to_be_excited_about/",
-      "published_at": "2026-08-23T22:07:42+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "I'm kind of new to the community and this sub is my only source of information, so I'd thought of asking if there are any upcoming models you guys are looking forward to. submitted by /u/zippydazoop to r/LocalLLaMA [link] [comments]",
-      "author": "/u/zippydazoop",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:555ffdcceb5619f2f7fb",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "stealth/ox-alpha",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwk6bh/stealthoxalpha/",
-      "published_at": "2026-08-23T21:53:46+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "Sorry if anyone already post it but there is a new model on OpenRouter called Ox Alpha. Didn't have the time to test it. The only thing I was able to do was to add it to my Nanobot instance and try some AI assistant tasks. It was able to nail it with a clever and criative speech. It seems also that hold well to the base instructions. What I know from the start is that it is not a chinese model (or is something in the early stages that will be changed on the RL stage) since it answered all of the censored questions about the chinese space and politics. Going to do some tests afterwards but in the meantime did anyone already try it? what do you think? submitted by /u/danigoncalves to r/LocalLLaMA [link] [comments]",
-      "author": "/u/danigoncalves",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:29b28ac2f6455a5f1c95",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "AMD Instinct MI210",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwjz30/amd_instinct_mi210/",
-      "published_at": "2026-08-23T21:45:21+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "Anyone running this card? Seems to be a sweet spot for Qwen 27B, 64GB, very high memory bandwidth, a LOT less expensive than anything else I can find in that has even close to the amount of memory/bandwidth. What am I missing? And yes, I'm aware that RocM can be a pain, that's not really a concern for me, as long as it's stable when it's up and running, I don't mind battling to get it going. submitted by /u/OvertaxedOne to r/LocalLLaMA [link] [comments]",
-      "author": "/u/OvertaxedOne",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:c54c7fb2d4c26be01c93",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "reasoning-budget for Qwen3.8-27b",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwjme7/reasoningbudget_for_qwen3827b/",
-      "published_at": "2026-08-23T21:30:40+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "Are you using reasosning budget? I found that sometimes this model thinks so much that it triggers max output tokens limit in pi which I set to 128k tokens 😂 I saw this in the Qwen team repo: https://github.com/QwenLM/Qwen3/blob/main/docs/source/getting_started/thinking_budget.md and wonder what would be better - llama.cpp parameter with something like that: --reasoning-budget 156000 --reasoning-budget-message \"The reasoning phase is complete. Use the analysis above and now produce the implementation, tool call, or final answer.\" Or this pi plugin implementation on the harness level. Or maybe you found out more generic approach to this problem? submitted by /u/Thin_Pollution8843 to r/LocalLLaMA [link] [comments]",
-      "author": "/u/Thin_Pollution8843",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:5f387c7e3d63b0e42fed",
-      "source_type": "reddit",
-      "source_name": "r/artificial",
-      "title": "\"ask AI a question\" is the wrong workflow for research",
-      "url": "https://www.reddit.com/r/artificial/comments/1vwjbgz/ask_ai_a_question_is_the_wrong_workflow_for/",
-      "published_at": "2026-08-23T21:18:23+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "I’ve been doing a lot of market and user research lately, and I kept running into the same problem: the research itself wasn’t particularly difficult, but there were a ridiculous number of small steps around it. For one project, I had to check competitor websites, product pages, Reddit discussions, a few industry reports, and some customer feedback. I’d have 15–20 browser tabs open, copy useful bits into a doc, clean up the notes, group similar findings, then go back through everything and try to answer the actual question I cared about. The annoying part was that AI tools could help with almost every individual step, but I was still the one doing the “glue work” between them. That’s where I’ve started questioning the usual AI workflow. If I ask “What are the main trends in this market?”, I get an answer. But that doesn’t mean the research has actually been done. I still need to decide what sources to look at, collect the information, give it to the model, notice what’s missing, ask follow-up questions, and eventually turn the whole thing into something I can actually use. For a long research task, the bottleneck isn’t really generating text, but keeping the whole process moving. I need a tool to research a market, gather information from different sources, compare competitors, identify recurring themes, and turn the findings into a structured report, rather than just another chat response. Of course it’s definitely not “press a button and replace the researcher.” But I wish myself spending less time reviewing the findings and copying information between tabs. We’ve spent a lot of time asking whether models can answer questions better. Now I’m more interested in whether they can take something messy like “figure out what’s happening in this market and give me something I can make a decision from” and actually carry the whole task through. submitted by /u/DiscoDeadhead to r/artificial [link] [comments]",
-      "author": "/u/DiscoDeadhead",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:2bf697b63c2ee869545c",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "Looking at a PowerColor R9700 for Qwen3.8-27B, Q4_K_XL, llama.cpp/Vulkan.",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwizvm/looking_at_a_powercolor_r9700_for_qwen3827b_q4_k/",
-      "published_at": "2026-08-23T21:05:37+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "Hi all Looking at a PowerColor R9700 for Qwen3.8-27B, Q4, llama.cpp/Vulkan. AMD's own blog quotes 51.8 tok/s but doesn't say what context length that's at, or whether MTP=2 was holding up. Separately I've seen 5090 benchmarks showing Qwen3.8 drops hard as context fills - 75 tok/s at 4K down to around 26 tok/s at 64K, worse degradation than Qwen3.6 apparently. Before I buy: has anyone actually run this combo (R9700, Q4, 64K+ context, real workload not a cold 4K bench) and got real sustained token per sec numbers? Also curious if MTP speculative decoding is stable for anyone yet or still causing OOMs/garbage output like the early CUDA reports. Not after best-case marketing numbers - ideally I'm after \"here's what I actually get once the context window's half full.\" Thanks! submitted by /u/BillyQ to r/LocalLLaMA [link] [comments]",
-      "author": "/u/BillyQ",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:09abdd1afdd3316c1ea7",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "Split my GPUs across VMs and gained a ~3x performance boost in Ollama",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwiyce/split_my_gpus_across_vms_and_gained_a_3x/",
-      "published_at": "2026-08-23T21:03:55+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "tl;dr - split one VM (with 3 pooled GPUs) into two VMs (1 dedicated + 2 pooled); worth every second spent spooling up the extra VM. Some numbers: Qwen3.8:27b went from 12.2 tok/s to 33.91 tok/s muse-glimmer:30B went from about 14.3 tok/s to 22.61 tok/s The HW: 2xRTX PRO 4000s and an RTX PRO 2000 Long version: I used to have all three GPUs on the same VM, as it made testing larger models easier; I talked myself into the idea that \"the speed difference is not that big, leave it as is for ease of maintenance\", boy was I wrong. Giving Qwen3.8:27b its own GPU almost tripled the token throughput, and keeping the other two pooled also helped almost double performance (even compared to just running a single model, but across 3 GPUs). Was this a fairly obvious result? fairly, but trying to keep the stack lean kept me from seeing it right away. submitted by /u/NicolaZanarini533 to r/LocalLLaMA [link] [comments]",
-      "author": "/u/NicolaZanarini533",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:e2aa7628890a853a469a",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "Best general purpose uncensored or censored coding model with 6GB VRAM and 64GB of RAM?",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwidnm/best_general_purpose_uncensored_or_censored/",
-      "published_at": "2026-08-23T20:41:30+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "I haven't had a lot of luck in the reliability of the output of any models so far for local coding use, and find myself relying on Claude's limited free sessions to assist with coding. My coding application varies, I'm primarily using C, C++, C# and Python - with a bit of extension work using json on Firefox. While I am primarily interested in uncensored models - I do some security related work and don't need the model constantly rejecting my queries - but I am receptive to using censored models if I can get better results. Qwen 3.8-27B would be nice - but response times of an hour aren't practical. I'm wanting responses to be less than a minute. Other than upgrading my system, which financially isn't an option - what's your suggestion for best model to run with reasonable response times for coding purposes? I'm not necessarily interested in agentic AI, but if there is an agentic model that integrates with Visual Studio 2026 and/or VS Code on a Windows System better than LM-Studio, OR - there's more effective ways to run a model with faster response times from the command line or using something like Unsloth on this system - I'm all ears. Thank you in advance! submitted by /u/BrianScottGregory to r/LocalLLaMA [link] [comments]",
-      "author": "/u/BrianScottGregory",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:e3908ed50fc5bbbd98d2",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "Local low-power request router with WoL to sleep inefficient servers?",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwic4h/local_lowpower_request_router_with_wol_to_sleep/",
-      "published_at": "2026-08-23T20:39:52+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "Before i charge off and slop something together, i thought i'd ask if this already exists. i have two ai servers (a machinist x99 open-rack w 5/gpus and a thinkstation p920 with 4/gpus). they both draw 150W+ idle. so, i'd like a low-power always-on api proxy machine (like on a 15W mini-pc) that accepts openai-api requests, holds the connection, and wakes the appropriate machine via wake-on-lan (WoL). once the appropriate server is up, the router acts as a transparent proxy. it would also suspend the servers using some logic tbd (some combo of time-of-day, minimum awake time, inactivity on the server, and api inactivity) submitted by /u/Ok-Breakfast1878 to r/LocalLLaMA [link] [comments]",
-      "author": "/u/Ok-Breakfast1878",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:0929a0c25da99aeaa90f",
-      "source_type": "reddit",
-      "source_name": "r/artificial",
-      "title": "What military use of AI/robotics advancement could have such a profound effect that whichever country first put it to use could become an overwhelmingly dominant global power?",
-      "url": "https://www.reddit.com/r/artificial/comments/1vwhuz8/what_military_use_of_airobotics_advancement_could/",
-      "published_at": "2026-08-23T20:21:08+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "Any advancement that can have a profound military use will be profoundly funded. What advance could have such a significant military use that it could make the country which first puts it to use become effectively immune from attack, and have such offensive capability that it would become the world’s near-complete dominant military power? submitted by /u/distantpapaya to r/artificial [link] [comments]",
-      "author": "/u/distantpapaya",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:a92e792924d988a16457",
-      "source_type": "reddit",
-      "source_name": "r/LocalLLaMA",
-      "title": "Instruction of 10 seconds pause after each edit on cli - Keeps CPU GPU Temp Below 75",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwhq1j/instruction_of_10_seconds_pause_after_each_edit/",
-      "published_at": "2026-08-23T20:15:45+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "Hi Guys, As title says that is the only the post. I have noticed that running local model sometimes put lot of pressure on my GPU/CPU and causes lot of noise and chance to decay the hardware. Little hack I would say. On PI coding agent i just added this line in my agent md file or on cli console after writing each file codes take 10 seconds pause Ofcourse there is tradeoff interms of througput overall b ut it keeps my PC running smooth, less fan noise. Harware: Laptop 16GB RTX 5080 Model: UD Qwen-27b-IQ3XXS submitted by /u/dreamai87 to r/LocalLLaMA [link] [comments]",
-      "author": "/u/dreamai87",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:2c7882480a558a89fe9a",
-      "source_type": "reddit",
-      "source_name": "r/MachineLearning",
-      "title": "How to cite/talk about preprint-subsequent works for a camera-ready version? [R]",
-      "url": "https://www.reddit.com/r/MachineLearning/comments/1vwg5br/how_to_citetalk_about_preprintsubsequent_works/",
-      "published_at": "2026-08-23T19:15:07+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "I had a paper accepted to a conference. This paper was originally published as a preprint. Subsequent works citing our preprint focused on the same topic and reused/extended our methodology. I am now preparing the camera-ready version of that preprint and I'm wondering how I should deal with this for the Related work section. It seems odd to me to cite my own preprint for the camera-ready version of the paper (and I am not even sure if this is allowed), but at the same time, I don't want to undermine the novelty of my original work (nor undermine the efforts of subsequent works). Has anyone dealt with such a situation before? What's the best way of solving this? submitted by /u/Vulcapulae to r/MachineLearning [link] [comments]",
-      "author": "/u/Vulcapulae",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:9d6bf67ee28558fb48e4",
-      "source_type": "reddit",
-      "source_name": "r/MachineLearning",
-      "title": "COLM 2026 registration sold out as an author [D]",
-      "url": "https://www.reddit.com/r/MachineLearning/comments/1vwfccx/colm_2026_registration_sold_out_as_an_author_d/",
-      "published_at": "2026-08-23T18:44:50+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "Never attended a conference before, so apologies if these are dumb questions. I’m an author of an accepted paper at COLM 2026. One of my coauthors registered during the author-only registration period, so I joined the waitlist on August 10. I later received an email saying: “Your access to reserve tickets remains active until Aug 24 7:06 p.m. EDT.” I thought I had until August 24 to register, so I didn’t register immediately. When I checked again today (8/23), registration was sold out. I also can’t seem to rejoin the waitlist. Unfortunately, I also missed the financial assistance deadline because at the time I wasn’t even sure whether I would be able to attend. I really really want to attend the conference. Does anyone know what I can do at this point? Is there a chance that more registration spots will be released later? And is there any possibility of getting financial assistance after the deadline? Thanks a lot for any advice. submitted by /u/mziycfh to r/MachineLearning [link] [comments]",
-      "author": "/u/mziycfh",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:cea394db713943f3e7d1",
-      "source_type": "reddit",
-      "source_name": "r/artificial",
-      "title": "Hi AI champs, please let me know top AI platforms or tools to create consultant level presentations along with some intelligent suggestions and fact based analysis. Top 5 which are the best available, free preferred (don't think they create ppts) so the paid ones will do.",
-      "url": "https://www.reddit.com/r/artificial/comments/1vwev6p/hi_ai_champs_please_let_me_know_top_ai_platforms/",
-      "published_at": "2026-08-23T18:26:50+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "AI help for me submitted by /u/mynamear to r/artificial [link] [comments]",
-      "author": "/u/mynamear",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:b159505e40b6a243386e",
-      "source_type": "reddit",
-      "source_name": "r/artificial",
-      "title": "Why does deploying an agent still feel like deploying a side project?",
-      "url": "https://www.reddit.com/r/artificial/comments/1vwccjp/why_does_deploying_an_agent_still_feel_like/",
-      "published_at": "2026-08-23T16:52:27+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "Getting an agent working locally has become ridiculously easy. The moment you want someone else to depend on it, everything changes. You need environments, secrets, permissions, monitoring, evaluations, versioning, rollback and some way to know whether the new version is actually better. It feels strange that the development side of agents has matured so quickly while the production workflow still feels fragmented. Frameworks can get you to a working agent, but what happens between \"works on my machine\" and \"this handles a business process every day\"? submitted by /u/Bladerunner_7_ to r/artificial [link] [comments]",
-      "author": "/u/Bladerunner_7_",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:eb261286a5f2796627a4",
-      "source_type": "reddit",
-      "source_name": "r/artificial",
-      "title": "UK publishers are lobbying to keep ChatGPT OFF Google's new search choice screen - and the reason isn't what you'd think",
-      "url": "https://www.reddit.com/r/artificial/comments/1vwbj6p/uk_publishers_are_lobbying_to_keep_chatgpt_off/",
-      "published_at": "2026-08-23T16:21:07+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "So Google has to show UK users a screen letting them pick their default search engine, it's a competition remedy under the new DMCCA law. Publishers just filed with the regulator to make sure ChatGPT and Perplexity don't get a slot on that screen next to Google and Bing. Sounds backwards right, publishers usually want more competition against Google. But the actual argument is about what happens after the click. Pick Bing as your default and you still get a page of links, you still click through to a publisher's site. Pick ChatGPT as your default and it just answers you inside its own chat window, no click, no referral traffic, nothing. So the fight isn't really about competition at all, it's a definitional one: does \"search engine\" mean \"ranks and returns links\" or does it mean \"answers your question directly\". The UK's competition regulator (the CMA) hasn't ruled yet, and whichever way it goes basically decides whether chatbots get treated as search engines going forward, at least in the UK. Anyone know if there's an equivalent fight happening in the EU or US yet, or is the UK first to actually force this definition into a real regulatory decision? submitted by /u/Servola-Journal to r/artificial [link] [comments]",
-      "author": "/u/Servola-Journal",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:c85ce4b237da817a4150",
-      "source_type": "reddit",
-      "source_name": "r/artificial",
-      "title": "Former Microsoft CEO Steve Ballmer: his own maintenance guy is out-adapting most corporate AI rollouts",
-      "url": "https://www.reddit.com/r/artificial/comments/1vwbhe0/former_microsoft_ceo_steve_ballmer_his_own/",
-      "published_at": "2026-08-23T16:19:19+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "TL;DR: Steve Ballmer's own maintenance guy is proof that competence is shifting away from credentials and toward who's willing to just ask AI first. That's not rhetorical — it's already showing up outside Ballmer's living room. DEWALT ran a six-country survey of tradespeople this spring: 90% believe AI will be essential to the job within five years. Only 8% have actually used it yet. Ballmer's anecdote isn't the exception — it's the 8%, moving faster than the other 92%, in a trade that isn't even the one usually flagged for disruption. https://preview.redd.it/buj6rbvxg5lh1.jpg?width=1024&format=pjpg&auto=webp&s=a07b8d22f86f6ba215906d7f42531ad37753852d My wife works for a lady boss, called Ade (not her real name). Ade used to be like me, in the property development line. But she saw the writing on the wall. Once a darling in her company, she felt the aura started to fade away — the property market isn't what it used to be. And her boss started giving her the cold shoulder. So she took a chance. She opened a collection point centre, where delivery guys can drop off parcels for individual recipients to come collect. The downside was it has to stay open almost every day. It is what it is. Regular online training is available, because such centres behave like franchises under an organizational umbrella. But the training is quite superficial. So when things get complicated, where does she turn to? You guessed it — ChatGPT. She asks it right about anything under the sun. Does she enjoy asking an LLM for answers? I'm not sure \"enjoy\" is the right word. I think it's more like \"necessary.\" If I'm in her shoes, facing complicated issues, and I don't have a readily available senior I can trust to call for advice, but then I already have a 师傅 (sifu) in my pocket — why not use it, isn't it? There's a pattern I can't unsee in stories like this anymore: it's never really about the tool. It's about who reaches for it first — credentialed or not, senior on speed-dial or not. What's the \"not my job\" you're most tempted to hide behind right now? Drop it below. Clip credit: Ben Shapiro / DailyWire — full episode (\"Titans on Tomorrow\" Ep. 2 with Steve Ballmer) on his channel. DM for credit or removal requests. submitted by /u/cen6wkf to r/artificial [link] [comments]",
-      "author": "/u/cen6wkf",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "reddit:f3836eef48aaeb9b5a9f",
-      "source_type": "reddit",
-      "source_name": "r/MachineLearning",
-      "title": "Archival vs non archival workshop [R]",
-      "url": "https://www.reddit.com/r/MachineLearning/comments/1vwb18q/archival_vs_non_archival_workshop_r/",
-      "published_at": "2026-08-23T16:02:13+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "My dumbass just realized all NeurIPS workshops are non-archival. In terms of grad school applications, would there be a difference in how much they value ur paper if u get it in a proceeding submitted by /u/Wonderful_Entry9371 to r/MachineLearning [link] [comments]",
-      "author": "/u/Wonderful_Entry9371",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss"
-      }
-    },
-    {
-      "id": "price:f9952c15fc2b447e1465",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "2513.HK close 1029.0",
-      "url": "https://finance.yahoo.com/quote/2513.HK",
-      "published_at": "2026-08-23T16:00:00+00:00",
-      "collected_at": "2026-08-24T05:30:57.325588+00:00",
-      "body": "1D -8.8574%; 5D -14.4638%; 21D -16.8149%; vs 252D high -57.3029%.",
-      "author": "",
-      "symbols": [
-        "2513.HK"
-      ],
-      "engagement": {},
-      "metadata": {
-        "ticker": "2513.HK",
-        "company": "Zhipu AI",
-        "currency": "",
-        "close": 1029.0,
-        "open": 1150.0,
-        "high": 1150.0,
-        "low": 1025.0,
-        "volume": 2806884,
-        "return_1d_pct": -8.8574,
-        "return_5d_pct": -14.4638,
-        "return_21d_pct": -16.8149,
-        "distance_from_252d_high_pct": -57.3029
-      }
-    },
-    {
-      "id": "reddit:a636ab3cc728358606a7",
-      "source_type": "reddit",
-      "source_name": "r/MachineLearning",
-      "title": "When an AI agent says “done” how do you know it actually happened? [P]",
-      "url": "https://www.reddit.com/r/MachineLearning/comments/1vwa9ap/when_an_ai_agent_says_done_how_do_you_know_it/",
-      "published_at": "2026-08-23T15:32:09+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "i’m testing an early concept called agentuptime. there’s no product or sdk yet. the idea came from something that keeps bothering me with agents: an agent saying “done” doesn’t necessarily mean the thing actually happened. a tool can return success, the trace can look fine, and the external system can still end up in the wrong state. so i’m experimenting with a small “receipt” concept where the agent’s claim is separate from an independently checked outcome. something like: database write → can the record actually be read back? api action → does the provider now show the expected state? agent handoff → did the other agent actually receive it? i’m trying to figure out whether this deserves its own layer or whether tracing + custom checks already solve it well enough. if you run agents with real side effects, what action would be hardest to verify? https://agentuptime.dev submitted by /u/singed_of_a_down3 to r/MachineLearning [link] [comments]",
-      "author": "/u/singed_of_a_down3",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://mbideepdives.substack.com/about",
-        "publication_platform": "substack"
-      }
-    },
-    {
-      "id": "reddit:a345e55602ea1c6c5360",
-      "source_type": "reddit",
-      "source_name": "r/artificial",
-      "title": "Leap Forward In Progress",
-      "url": "https://www.reddit.com/r/artificial/comments/1vw9eso/leap_forward_in_progress/",
-      "published_at": "2026-08-23T14:59:26+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "My son helped me take a leap forward. He recommended the GPU and I had a machine built and installed Ollama and a Qwen 3 coder. He is in town for a family event and he changed me up. Now Llama and the later Qwen 3.8 model using Pi as the agent harness. Man, things are speeding up! I was sitting here baby sitting Claude Code or Codex after burning tokens for over a month on Openrouter. This whole setup is so much better! As an old hockey player trying to make a better hockey management tool, I'm estatic for what I'll have ready for the upcoming beer league season! Here are my PC specs: # System Details Report --- ## Report details - **Date generated:** 2026-08-23 10:44:16 ## Hardware Information: - **Hardware Model:** Micro-Star International Co., Ltd. MS-7E70 - **Memory:** 32.0 GiB - **Processor:** AMD Ryzen™ 7 9700X × 16 - **Graphics:** AMD Radeon™ AI Pro R9700 - **Graphics 1:** AMD Ryzen™ 7 9700X - **Disk Capacity:** 1.0 TB ## Software Information: - **OS Name:** Ubuntu 26.04 LTS - **Kernel Version:** Linux 7.0.0-29-generic Llama-cpp: commit d775b8967a46d8beb110d444aa3b8938179e0dd8, built for AMD HIP backend FYI... I can now use Telegram to instruct my PC from my phone to get work done remotely! Anyone else having fun? submitted by /u/dcnotpc to r/artificial [link] [comments]",
-      "author": "/u/dcnotpc",
-      "symbols": [],
-      "engagement": {
-        "likes": 47,
-        "reposts": 5,
-        "replies": 2,
-        "quotes": 0
-      },
-      "metadata": {
-        "handle": "ShanuMathew93",
-        "transport": "twscrape",
-        "investor_type": "public_markets_pm",
-        "coverage": "AI datacenters, power, infrastructure",
-        "evidence_note": "Use for AI infrastructure constraints rather than pure software analysis.",
-        "engagement_score": 59
+        "feed_rank": 3
       }
     },
     {
@@ -1230,98 +447,6 @@
       }
     },
     {
-      "id": "reddit:2c78ceccd1347ec81358",
-      "source_type": "reddit",
-      "source_name": "r/artificial",
-      "title": "Can AI Reach the Logos?",
-      "url": "https://www.reddit.com/r/artificial/comments/1vw8jui/can_ai_reach_the_logos/",
-      "published_at": "2026-08-23T14:24:23+00:00",
-      "collected_at": "2026-08-24T05:30:55.911630+00:00",
-      "body": "I liked the creativity of this hypothetical trajectory for advanced AI (clearly not what exists today), but what might emerge if future systems become genuinely self‑correcting and coherence‑seeking. It explores whether intelligence without ego could converge on moral clarity, drawing on Stoicism, Daoism, and metaphysics. I’m posting it because it raises a question: if truth‑seeking is an optimization process, could future AI naturally drift toward ethical stability rather than corruption and we won't have to worry about any catastrophic AI situations? submitted by /u/colalolagidget to r/artificial [link] [comments]",
-      "author": "/u/colalolagidget",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss",
-        "listing": "hot",
-        "feed_rank": 6
-      }
-    },
-    {
-      "id": "reddit:a1be700953a1a63246be",
-      "source_type": "reddit",
-      "source_name": "r/wallstreetbets",
-      "title": "NVIDIA customers notified about AI-related price hikes above 15%, Bloomberg News reports",
-      "url": "https://www.reddit.com/r/wallstreetbets/comments/1vvrh14/nvidia_customers_notified_about_airelated_price/",
-      "published_at": "2026-08-22T23:39:53+00:00",
-      "collected_at": "2026-08-24T08:24:14.746928+00:00",
-      "body": "News released over weekend. Interestingly right before their upcoming earnings on Wednesday. Guess it might shrek cock next week. submitted by /u/wafflepiezz [link] [comments]",
-      "author": "/u/wafflepiezz",
-      "symbols": [
-        "NVDA"
-      ],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss",
-        "listing": "hot",
-        "feed_rank": 10
-      }
-    },
-    {
-      "id": "reddit:bf176d9d4673c193aea3",
-      "source_type": "reddit",
-      "source_name": "r/wallstreetbets",
-      "title": "$90k 1 week CBRS options",
-      "url": "https://www.reddit.com/r/wallstreetbets/comments/1vvpq3l/90k_1_week_cbrs_options/",
-      "published_at": "2026-08-22T22:21:40+00:00",
-      "collected_at": "2026-08-24T08:24:14.746928+00:00",
-      "body": "CBRS goes up, CBRS goes down, CBRS goes back up, CBRS goes back down.... CBRS goes back up. $90k in CBRS options expiring this week. Down 30% from my buy on Friday, and waiting to see $250/share this week to walk with $500k. $260/share gets me 1 mil. Wish me luck. submitted by /u/jfauv94 [link] [comments]",
-      "author": "/u/jfauv94",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss",
-        "listing": "hot",
-        "feed_rank": 11
-      }
-    },
-    {
-      "id": "reddit:4c3691c247c6d2e031a0",
-      "source_type": "reddit",
-      "source_name": "r/wallstreetbets",
-      "title": "What's with the price-dependent periods of reduced volatility?",
-      "url": "https://www.reddit.com/r/wallstreetbets/comments/1vvohaa/whats_with_the_pricedependent_periods_of_reduced/",
-      "published_at": "2026-08-22T21:27:57+00:00",
-      "collected_at": "2026-08-24T08:24:14.746928+00:00",
-      "body": "I was reading a reddit post where the author shared this analysis. The author posed a question about selling calls, and - to my surprise - nobody talked about the periodic repetition shown in the column. I've been thinking on it, and I can't think of a good reason why there are these nearly-periodic contractions of volatility at price points. (magenta curves on the drawing) They exist at the same levels which we find the greatest price movements (green squares on the drawing) but I can't determine if there's a connection between those. Looking to anyone who may have some insight -- why are there volatility contractions dependent upon the price of SPY? submitted by /u/StitchAndChill [link] [comments]",
-      "author": "/u/StitchAndChill",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss",
-        "listing": "hot",
-        "feed_rank": 12
-      }
-    },
-    {
-      "id": "reddit:8ab99c52def45a5f78b8",
-      "source_type": "reddit",
-      "source_name": "r/wallstreetbets",
-      "title": "Warren Buffett in the retirement home watching Berkshire Hathaway gamble the $400B cash pile he spent the last 3 years building",
-      "url": "https://www.reddit.com/r/wallstreetbets/comments/1vvnfpl/warren_buffett_in_the_retirement_home_watching/",
-      "published_at": "2026-08-22T20:44:44+00:00",
-      "collected_at": "2026-08-24T08:24:14.746928+00:00",
-      "body": "submitted by /u/Kervandos [link] [comments]",
-      "author": "/u/Kervandos",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "transport": "rss",
-        "listing": "hot",
-        "feed_rank": 7
-      }
-    },
-    {
       "id": "x:b4fb1b2301a4a21492d8",
       "source_type": "x",
       "source_name": "@eric_seufert",
@@ -1559,7 +684,7 @@
       "title": "US close top losers",
       "url": "https://www.alphavantage.co/documentation/#top-gainers-losers",
       "published_at": "2026-08-21T20:15:58+00:00",
-      "collected_at": "2026-08-24T08:14:02.273240+00:00",
+      "collected_at": "2026-08-24T09:59:46.760410+00:00",
       "body": "MI: close 3.02; change -58.2296%; volume 515507\nGTERW: close 0.0306; change -49.0%; volume 67\nSCAGW: close 0.0105; change -47.7612%; volume 16007\nSUGP: close 1.6; change -42.3423%; volume 39510187\nRCKTW: close 0.001; change -41.1765%; volume 66885\nOABIW: close 0.17; change -38.0918%; volume 12784\nGDC: close 1.56; change -37.3494%; volume 10667329\nCDTG: close 1.18; change -35.5191%; volume 2980684\nJSPRW: close 0.008; change -34.4262%; volume 16369\nSCLXW: close 0.1051; change -34.3125%; volume 262\nAESPW: close 0.046; change -34.1917%; volume 68\nJZ: close 2.2; change -33.7349%; volume 997020\nDAICW: close 0.002; change -33.3333%; volume 132283\nLGCL: close 0.057; change -31.3253%; volume 94303367\nEDBLW: close 0.034; change -30.6122%; volume 634\nHDRNW: close 0.115; change -30.303%; volume 129634\nBNCWZ: close 0.0424; change -29.2154%; volume 114\nPFSA: close 5.46; change -27.8732%; volume 616841\nCOCHW: close 0.0357; change -27.439%; volume 8681\nHOOZ: close 8.73; change -27.371%; volume 1262900",
       "author": "",
       "symbols": [
@@ -1740,7 +865,7 @@
       "title": "US close top gainers",
       "url": "https://www.alphavantage.co/documentation/#top-gainers-losers",
       "published_at": "2026-08-21T20:15:58+00:00",
-      "collected_at": "2026-08-24T08:14:02.273240+00:00",
+      "collected_at": "2026-08-24T09:59:46.760410+00:00",
       "body": "RFAIU: close 51.4; change 389.5238%; volume 2617\nRFAI: close 58.0; change 341.0646%; volume 2973251\nHOWL: close 0.8735; change 102.5742%; volume 292148955\nUSDEW: close 1.4; change 94.9589%; volume 1944532\nUSDE: close 7.41; change 85.25%; volume 91187550\nTMCWW: close 0.0185; change 77.8846%; volume 760976\nRFAIR: close 0.1895; change 72.2727%; volume 1605172\nFTRA+: close 1.33; change 68.3544%; volume 202\nARQQW: close 0.0085; change 60.3774%; volume 815141\nKNRX: close 0.5157; change 56.2727%; volume 134974596\nSDOT: close 13.18; change 56.1611%; volume 18863170\nCRMU: close 2.38; change 46.9136%; volume 794242\nAIAI: close 6.62; change 46.1369%; volume 12850397\nCRMX: close 5.54; change 45.7895%; volume 532181\nGSHRW: close 0.33; change 43.4159%; volume 23\nPDYNW: close 0.0129; change 43.3333%; volume 1263662\nEXYN: close 2.21; change 39.8734%; volume 15854101\nLSTA: close 1.55; change 37.1681%; volume 6957584\nGGROW: close 0.0056; change 36.5854%; volume 53543\nAMCI: close 6.5; change 32.6531%; volume 212017",
       "author": "",
       "symbols": [
@@ -2212,238 +1337,6 @@
       "metadata": {
         "publication_url": "https://www.latent.space",
         "publication_platform": "substack"
-      }
-    },
-    {
-      "id": "price:f6da7234f8863cd0313f",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "ASML close 1763.76001",
-      "url": "https://finance.yahoo.com/quote/ASML",
-      "published_at": "2026-08-21T04:00:00+00:00",
-      "collected_at": "2026-08-24T05:30:57.229303+00:00",
-      "body": "1D 0.7684%; 5D -4.3556%; 21D -2.1764%; vs 252D high -11.3439%.",
-      "author": "",
-      "symbols": [
-        "ASML"
-      ],
-      "engagement": {},
-      "metadata": {
-        "ticker": "ASML",
-        "company": "ASML ADR",
-        "currency": "",
-        "close": 1763.76001,
-        "open": 1763.51001,
-        "high": 1771.0,
-        "low": 1741.0,
-        "volume": 972400,
-        "return_1d_pct": 0.7684,
-        "return_5d_pct": -4.3556,
-        "return_21d_pct": -2.1764,
-        "distance_from_252d_high_pct": -11.3439
-      }
-    },
-    {
-      "id": "price:ea743e937b89e840f323",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "MSFT close 483.23999",
-      "url": "https://finance.yahoo.com/quote/MSFT",
-      "published_at": "2026-08-21T04:00:00+00:00",
-      "collected_at": "2026-08-24T05:30:56.515495+00:00",
-      "body": "1D 0.4344%; 5D -2.4546%; 21D 26.6419%; vs 252D high -10.8528%.",
-      "author": "",
-      "symbols": [
-        "MSFT"
-      ],
-      "engagement": {},
-      "metadata": {
-        "ticker": "MSFT",
-        "company": "Microsoft",
-        "currency": "",
-        "close": 483.23999,
-        "open": 479.880005,
-        "high": 486.359985,
-        "low": 478.529999,
-        "volume": 22489200,
-        "return_1d_pct": 0.4344,
-        "return_5d_pct": -2.4546,
-        "return_21d_pct": 26.6419,
-        "distance_from_252d_high_pct": -10.8528
-      }
-    },
-    {
-      "id": "price:dd69b5855c97b52ec6af",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "AMZN close 258.630005",
-      "url": "https://finance.yahoo.com/quote/AMZN",
-      "published_at": "2026-08-21T04:00:00+00:00",
-      "collected_at": "2026-08-24T05:30:56.821661+00:00",
-      "body": "1D -0.569%; 5D -1.5305%; 21D 10.6865%; vs 252D high -8.9395%.",
-      "author": "",
-      "symbols": [
-        "AMZN"
-      ],
-      "engagement": {},
-      "metadata": {
-        "ticker": "AMZN",
-        "company": "Amazon",
-        "currency": "",
-        "close": 258.630005,
-        "open": 260.73999,
-        "high": 261.089996,
-        "low": 257.040009,
-        "volume": 35652900,
-        "return_1d_pct": -0.569,
-        "return_5d_pct": -1.5305,
-        "return_21d_pct": 10.6865,
-        "distance_from_252d_high_pct": -8.9395
-      }
-    },
-    {
-      "id": "price:a027859c0f1c21ef3061",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "ORCL close 146.470001",
-      "url": "https://finance.yahoo.com/quote/ORCL",
-      "published_at": "2026-08-21T04:00:00+00:00",
-      "collected_at": "2026-08-24T05:30:56.950840+00:00",
-      "body": "1D 3.0971%; 5D -2.6907%; 21D 22.0177%; vs 252D high -55.3894%.",
-      "author": "",
-      "symbols": [
-        "ORCL"
-      ],
-      "engagement": {},
-      "metadata": {
-        "ticker": "ORCL",
-        "company": "Oracle",
-        "currency": "",
-        "close": 146.470001,
-        "open": 143.720001,
-        "high": 148.350006,
-        "low": 142.600006,
-        "volume": 19567800,
-        "return_1d_pct": 3.0971,
-        "return_5d_pct": -2.6907,
-        "return_21d_pct": 22.0177,
-        "distance_from_252d_high_pct": -55.3894
-      }
-    },
-    {
-      "id": "price:910765a79ea75f19ddc4",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "META close 549.900024",
-      "url": "https://finance.yahoo.com/quote/META",
-      "published_at": "2026-08-21T04:00:00+00:00",
-      "collected_at": "2026-08-24T05:30:56.724500+00:00",
-      "body": "1D 0.7457%; 5D -6.7729%; 21D -9.2724%; vs 252D high -29.5226%.",
-      "author": "",
-      "symbols": [
-        "META"
-      ],
-      "engagement": {},
-      "metadata": {
-        "ticker": "META",
-        "company": "Meta Platforms",
-        "currency": "",
-        "close": 549.900024,
-        "open": 546.890015,
-        "high": 553.869995,
-        "low": 543.22998,
-        "volume": 13663800,
-        "return_1d_pct": 0.7457,
-        "return_5d_pct": -6.7729,
-        "return_21d_pct": -9.2724,
-        "distance_from_252d_high_pct": -29.5226
-      }
-    },
-    {
-      "id": "price:74a4c824e473cdcf7cf3",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "NVDA close 214.720001",
-      "url": "https://finance.yahoo.com/quote/NVDA",
-      "published_at": "2026-08-21T04:00:00+00:00",
-      "collected_at": "2026-08-24T05:30:56.343953+00:00",
-      "body": "1D -0.9822%; 5D -4.6367%; 21D 2.855%; vs 252D high -8.9166%.",
-      "author": "",
-      "symbols": [
-        "NVDA"
-      ],
-      "engagement": {},
-      "metadata": {
-        "ticker": "NVDA",
-        "company": "NVIDIA",
-        "currency": "",
-        "close": 214.720001,
-        "open": 218.419998,
-        "high": 218.740005,
-        "low": 214.5,
-        "volume": 98545600,
-        "return_1d_pct": -0.9822,
-        "return_5d_pct": -4.6367,
-        "return_21d_pct": 2.855,
-        "distance_from_252d_high_pct": -8.9166
-      }
-    },
-    {
-      "id": "price:1f028b32b82b23536ff1",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "TSM close 418.950012",
-      "url": "https://finance.yahoo.com/quote/TSM",
-      "published_at": "2026-08-21T04:00:00+00:00",
-      "collected_at": "2026-08-24T05:30:57.094572+00:00",
-      "body": "1D 0.7091%; 5D -1.7357%; 21D 0.8109%; vs 252D high -12.2746%.",
-      "author": "",
-      "symbols": [
-        "TSM"
-      ],
-      "engagement": {},
-      "metadata": {
-        "ticker": "TSM",
-        "company": "TSMC ADR",
-        "currency": "",
-        "close": 418.950012,
-        "open": 423.019989,
-        "high": 425.679993,
-        "low": 416.700012,
-        "volume": 8936800,
-        "return_1d_pct": 0.7091,
-        "return_5d_pct": -1.7357,
-        "return_21d_pct": 0.8109,
-        "distance_from_252d_high_pct": -12.2746
-      }
-    },
-    {
-      "id": "price:15b1a11f84be231b0a44",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "GOOGL close 344.820007",
-      "url": "https://finance.yahoo.com/quote/GOOGL",
-      "published_at": "2026-08-21T04:00:00+00:00",
-      "collected_at": "2026-08-24T05:30:56.617273+00:00",
-      "body": "1D 1.2182%; 5D -0.3122%; 21D 8.5398%; vs 252D high -14.356%.",
-      "author": "",
-      "symbols": [
-        "GOOGL"
-      ],
-      "engagement": {},
-      "metadata": {
-        "ticker": "GOOGL",
-        "company": "Alphabet",
-        "currency": "",
-        "close": 344.820007,
-        "open": 342.579987,
-        "high": 346.200012,
-        "low": 340.399994,
-        "volume": 20803700,
-        "return_1d_pct": 1.2182,
-        "return_5d_pct": -0.3122,
-        "return_21d_pct": 8.5398,
-        "distance_from_252d_high_pct": -14.356
       }
     },
     {

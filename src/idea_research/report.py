@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import json
-import re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -9,34 +8,10 @@ from typing import Any
 from .models import SignalItem, utc_now
 
 
-def _text(item: SignalItem) -> str:
-    return f"{item.title}\n{item.body}\n{item.author}\n{item.source_name}".lower()
-
-
-def _keyword_hit(text: str, keyword: str) -> bool:
-    keyword = keyword.lower().strip()
-    if not keyword:
-        return False
-    if re.fullmatch(r"[a-z0-9_.+-]+", keyword):
-        return re.search(rf"(?<![a-z0-9]){re.escape(keyword)}(?![a-z0-9])", text) is not None
-    return keyword in text
-
-
-def annotate_item(item: SignalItem, profile: dict[str, Any]) -> dict[str, Any]:
-    """Attach explicit watchlist mentions without judging the importance of a post."""
-    text = _text(item)
-    symbols = list(item.symbols)
-    for entry in profile.get("watchlist") or []:
-        if isinstance(entry, str):
-            ticker, aliases = entry.upper(), [entry]
-        else:
-            ticker = str(entry["ticker"]).upper()
-            aliases = [ticker, str(entry.get("name") or ""), *(entry.get("aliases") or [])]
-        if ticker not in symbols and any(_keyword_hit(text, str(alias)) for alias in aliases if alias):
-            symbols.append(ticker)
-
+def annotate_item(item: SignalItem, _profile: dict[str, Any]) -> dict[str, Any]:
+    """Keep source-declared symbols without applying user-side symbol enrichment."""
     value = item.to_dict()
-    value["matched_symbols"] = symbols
+    value["matched_symbols"] = list(item.symbols)
     return value
 
 
@@ -46,7 +21,13 @@ def build_reddit_discussions(items: list[dict[str, Any]], config: dict[str, Any]
     max_symbols = int(config.get("max_symbols", 10))
     max_hot_posts = int(config.get("max_hot_posts", 3))
     min_mentions = int(config.get("min_mentions", 1))
-    posts = [item for item in items if str(item.get("source_name", "")).casefold() == source_name]
+    posts = [
+        item
+        for item in items
+        if str(item.get("source_name", "")).casefold() == source_name
+        and (item.get("metadata") or {}).get("listing") == "hot"
+        and 1 <= int((item.get("metadata") or {}).get("feed_rank") or 0) <= 3
+    ]
     aggregates: dict[str, dict[str, Any]] = {}
     ranked_posts: list[dict[str, Any]] = []
     engagement_available = False
@@ -112,7 +93,7 @@ def build_reddit_discussions(items: list[dict[str, Any]], config: dict[str, Any]
         "engagement_available": engagement_available,
         "interpretation": "A factual list of retail discussion mentions, not fundamental evidence or an investment recommendation.",
         "methodology": (
-            "Top tickers are ordered by the number of posts mentioning them in the in-window public Hot feed, "
+            "Top tickers are ordered by the number of posts mentioning them in the current public Hot top-three, "
             "then by their best Hot-feed position. Top posts follow the Hot-feed order. No proprietary score is calculated; "
             "RSS-only runs do not contain Reddit engagement counts."
         ),
@@ -122,7 +103,7 @@ def build_reddit_discussions(items: list[dict[str, Any]], config: dict[str, Any]
 
 
 def build_market_movers(price_items: list[dict[str, Any]]) -> dict[str, Any]:
-    """Expose raw Alpha Vantage end-of-day movers separately from watchlist prices."""
+    """Expose raw Alpha Vantage end-of-day movers."""
     groups: dict[str, dict[str, Any]] = {}
     for item in price_items:
         metadata = item.get("metadata") or {}
@@ -200,22 +181,25 @@ def prepare_report_context(
     content = [item for item in annotated if item["source_type"] != "price"]
     prices = [item for item in annotated if item["source_type"] == "price"]
     market_movers = build_market_movers(prices)
-    market_context = [item for item in prices if not (item.get("metadata") or {}).get("market_mover_type")]
     reddit_discussions = (
         build_reddit_discussions(content, reddit_discussions_config) if reddit_discussions_enabled else {}
     )
-    wsb_posts = [item for item in content if item["source_name"].casefold() == heat_source_name]
-    for index, item in enumerate(sorted(wsb_posts, key=lambda value: value["published_at"], reverse=True), start=1):
-        item["display_id"] = f"WSB{index}"
+    wsb_posts = [
+        item
+        for item in content
+        if item["source_name"].casefold() == heat_source_name
+        and (item.get("metadata") or {}).get("listing") == "hot"
+        and 1 <= int((item.get("metadata") or {}).get("feed_rank") or 0) <= 3
+    ]
+    wsb_posts.sort(key=lambda value: int((value.get("metadata") or {}).get("feed_rank") or 0))
+    for item in wsb_posts:
+        item["display_id"] = f"R{int((item.get('metadata') or {}).get('feed_rank') or 0)}"
     if reddit_discussions_enabled and bool(reddit_discussions_config.get("rollup_only", True)):
         content = [item for item in content if item["source_name"].casefold() != heat_source_name]
     # The feed is a chronological reading queue. No source or engagement score is calculated.
     content.sort(key=lambda item: item["published_at"], reverse=True)
-    market_context.sort(key=lambda item: item["published_at"], reverse=True)
     for source in ("substack", "rss", "x", "reddit"):
         add_display_ids(content, source)
-    for index, item in enumerate(market_context, start=1):
-        item["display_id"] = f"P{index}"
 
     return {
         "schema_version": "1.0",
@@ -247,13 +231,11 @@ def prepare_report_context(
         },
         "stats": {
             "content_items": len(content),
-            "price_observations": len(market_context),
             "market_mover_days": len(market_movers["days"]),
             "wsb_posts": reddit_discussions.get("post_count", 0),
             "wsb_symbols": len(reddit_discussions.get("top_tickers", [])),
         },
         "items": content,
-        "market_context": market_context,
         "market_movers": market_movers,
         "reddit_discussions": reddit_discussions,
         "wsb_posts": wsb_posts,

@@ -51,11 +51,15 @@ def _collect(args: argparse.Namespace) -> int:
     feed = build_feed(results, preserved)
     if previous_feed:
         current_statuses = {result.pipeline for result in results}
-        feed["pipelines"].extend(
-            status
-            for status in previous_feed.get("pipelines", [])
-            if status.get("pipeline") not in current_statuses
-        )
+        # A partial refresh retains status for the untouched pipelines, but an
+        # older feed may contain duplicate statuses from earlier partial runs.
+        # Keep only its newest status for each untouched pipeline.
+        preserved_statuses: dict[str, dict[str, Any]] = {}
+        for status in previous_feed.get("pipelines", []):
+            name = str(status.get("pipeline") or "")
+            if name and name not in current_statuses:
+                preserved_statuses[name] = status
+        feed["pipelines"].extend(preserved_statuses.values())
     latest_path = save_feed(args.data_dir, feed)
     print(json.dumps({"latest": str(latest_path), "counts": feed["counts"]}, ensure_ascii=False))
     failed = any(result.status == "error" for result in results)
