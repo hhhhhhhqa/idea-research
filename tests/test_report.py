@@ -29,6 +29,36 @@ def test_report_keeps_source_declared_symbols_without_user_symbol_enrichment(tmp
     assert "signal_score" not in context["items"][0]
 
 
+def test_report_adds_stock_mentions_from_published_pool(tmp_path):
+    now = datetime(2026, 8, 24, 8, tzinfo=timezone.utc)
+    stock_dir = tmp_path / "stock_universe"
+    stock_dir.mkdir()
+    (stock_dir / "stock_pool.json").write_text(
+        '{"stocks": [{"symbol": "MSFT", "company_name": "Microsoft Corporation"}]}\n',
+        encoding="utf-8",
+    )
+    item = SignalItem(
+        id="x:1",
+        source_type="x",
+        source_name="@researcher",
+        title="Microsoft expands Copilot contracts",
+        url="https://x.com/researcher/status/1",
+        published_at=now.isoformat(),
+        collected_at=now.isoformat(),
+        body="Microsoft disclosed stronger enterprise demand.",
+    )
+    feed = build_feed([PipelineResult(pipeline="x", items=[item])])
+    feed["generated_at"] = now.isoformat()
+    save_feed(tmp_path, feed)
+
+    context = prepare_report_context(tmp_path, {}, "daily", now=now)
+
+    assert context["items"][0]["stock_mentions"] == [
+        {"ticker": "MSFT", "company_name": "Microsoft Corporation", "match_type": "company_name"}
+    ]
+    assert context["items"][0]["matched_symbols"] == ["MSFT"]
+
+
 def test_report_rolls_up_wsb_posts_into_ticker_heat(tmp_path):
     now = datetime(2026, 8, 24, 8, tzinfo=timezone.utc)
 

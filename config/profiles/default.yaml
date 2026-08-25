@@ -2,8 +2,9 @@ name: AI 二级市场 idea generation
 language: zh-CN
 detail: standard
 report_focus: >-
-  由阅读 feed 的 Agent 判断与 AI、互联网、软件二级市场 idea generation 的相关性；
-  对相关材料当天全量展示，不对来源或观点打分，也不把热度本身当作投资结论。
+  由阅读 feed 的 Agent 判断与 AI、互联网、软件二级市场 idea generation 的相关性，
+  Newsletter / X 必须进一步对应到具体上市公司；对符合条件的材料当天全量展示，
+  不对来源或观点打分，也不把热度本身当作投资结论。
 
 reddit_discussions:
   enabled: true

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -8,10 +9,62 @@ from typing import Any
 from .models import SignalItem, utc_now
 
 
-def annotate_item(item: SignalItem, _profile: dict[str, Any]) -> dict[str, Any]:
+_LEGAL_SUFFIXES = re.compile(r"\s+(?:inc\.?|corp\.?|corporation|ltd\.?|limited|plc|holdings?)$", re.IGNORECASE)
+
+
+def _load_stock_reference(data_dir: str | Path) -> list[dict[str, Any]]:
+    path = Path(data_dir) / "stock_universe" / "stock_pool.json"
+    if not path.exists():
+        return []
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        return [entry for entry in payload.get("stocks", []) if isinstance(entry, dict)]
+    except (OSError, json.JSONDecodeError, TypeError):
+        return []
+
+
+def _stock_mentions(item: SignalItem, stock_reference: list[dict[str, Any]]) -> list[dict[str, str]]:
+    """Find explicit ticker/company-name mentions as Agent hints, not conclusions."""
+    external = item.metadata.get("external_articles") or []
+    external_text = "\n".join(str(article.get("body") or "") for article in external if isinstance(article, dict))
+    text = f"{item.title}\n{item.body}\n{external_text}"
+    lower_text = text.casefold()
+    upper_text = text.upper()
+    mentions: list[dict[str, str]] = []
+    seen: set[str] = set()
+    for entry in stock_reference:
+        ticker = str(entry.get("symbol") or "").upper()
+        company = str(entry.get("company_name") or "")
+        if not ticker or not company:
+            continue
+        match_type = ""
+        if re.search(rf"(?<![A-Z0-9])\${re.escape(ticker)}(?![A-Z0-9])", upper_text):
+            match_type = "ticker"
+        # Bare three-letter words (APP, NET, YOU, PAY, ...) are too ambiguous;
+        # require the conventional $ prefix for them. Longer all-caps tokens
+        # are useful hints, but the Agent still verifies them against the text.
+        elif len(ticker) >= 4 and re.search(rf"(?<![A-Z0-9]){re.escape(ticker)}(?![A-Z0-9])", upper_text):
+            match_type = "ticker"
+        else:
+            aliases = [company, _LEGAL_SUFFIXES.sub("", company)]
+            if any(len(alias.strip()) >= 4 and alias.casefold() in lower_text for alias in aliases):
+                match_type = "company_name"
+        if match_type and ticker not in seen:
+            mentions.append({"ticker": ticker, "company_name": company, "match_type": match_type})
+            seen.add(ticker)
+    return mentions
+
+
+def annotate_item(
+    item: SignalItem,
+    _profile: dict[str, Any],
+    stock_reference: list[dict[str, Any]] | None = None,
+) -> dict[str, Any]:
     """Keep source-declared symbols without applying user-side symbol enrichment."""
     value = item.to_dict()
-    value["matched_symbols"] = list(item.symbols)
+    mentions = _stock_mentions(item, stock_reference or [])
+    value["stock_mentions"] = mentions
+    value["matched_symbols"] = list(dict.fromkeys([*item.symbols, *(entry["ticker"] for entry in mentions)]))
     return value
 
 
@@ -177,7 +230,8 @@ def prepare_report_context(
         item = SignalItem.from_dict(raw)
         items_by_id[item.id] = item
 
-    annotated = [annotate_item(item, profile) for item in items_by_id.values()]
+    stock_reference = _load_stock_reference(data_dir)
+    annotated = [annotate_item(item, profile, stock_reference) for item in items_by_id.values()]
     content = [item for item in annotated if item["source_type"] != "price"]
     prices = [item for item in annotated if item["source_type"] == "price"]
     market_movers = build_market_movers(prices)
@@ -227,6 +281,7 @@ def prepare_report_context(
                 "Do not score, rank, or promote sources into investment recommendations.",
                 "WSB mention counts and Hot positions are observed discussion data, not fundamental confirmation.",
                 "The context retains every item captured in the current feed. The subscriber Agent, not the publisher, decides which items are relevant to the user's idea generation.",
+                "Newsletter and X items in the main digest must map to a specific listed company supported by the source text; stock_mentions is only a matching hint, not proof.",
             ],
         },
         "stats": {
