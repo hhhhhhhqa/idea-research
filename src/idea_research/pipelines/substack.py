@@ -54,6 +54,7 @@ def parse_substack_feed(
                 metadata={
                     "publication_url": publication.get("url", ""),
                     "publication_platform": publication.get("platform", "substack"),
+                    "section": str(publication.get("section") or "transaction_ideas"),
                 },
             )
         )
@@ -74,6 +75,8 @@ def collect_substack(config: dict[str, Any], client: httpx.Client | None = None)
     try:
         for raw in publications:
             publication = {"url": raw} if isinstance(raw, str) else raw
+            if config.get("section") and "section" not in publication:
+                publication = {**publication, "section": config["section"]}
             try:
                 response = client.get(_feed_url(publication))
                 response.raise_for_status()

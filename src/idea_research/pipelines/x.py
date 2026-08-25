@@ -32,6 +32,7 @@ def _account_metadata(account: dict[str, Any], transport: str) -> dict[str, Any]
     return {
         "handle": handle,
         "transport": transport,
+        "section": str(account.get("section") or "transaction_ideas"),
         **{field: account[field] for field in ACCOUNT_CONTEXT_FIELDS if account.get(field)},
     }
 

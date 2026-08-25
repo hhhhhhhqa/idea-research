@@ -171,6 +171,7 @@ def parse_reddit_json(
                     "upvote_ratio": float(post.get("upvote_ratio") or 0),
                 },
                 metadata={
+                    "section": "transaction_ideas",
                     "external_url": post.get("url_overridden_by_dest") or post.get("url") or "",
                     "flair": post.get("link_flair_text") or "",
                     "is_self": bool(post.get("is_self")),
@@ -226,6 +227,7 @@ def parse_reddit_rss(
                     ticker_aliases=ticker_aliases,
                 ),
                 metadata={
+                    "section": "transaction_ideas",
                     "transport": "rss",
                     "listing": listing,
                     "feed_rank": feed_rank,

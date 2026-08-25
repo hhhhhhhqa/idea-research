@@ -45,7 +45,7 @@ Read `pipeline_health`, `stats`, `market_movers` and `reddit_discussions` in the
 
 ## 4. Render the digest
 
-`prompts/daily.md` is the canonical output contract and is copied into the generated Agent prompt. Follow it exactly. It treats this as an investment-idea digest: only source-grounded, directionally explicit company ideas enter the正文; general industry news, neutral observations and isolated price moves are omitted. Use the visible `display_id` values from the JSON: `N*` for newsletters, `X*` for X, `W*` / `R*` for WSB, and `G*` / `L*` for close movers. Preserve original links and source times.
+`prompts/daily.md` is the canonical output contract and is copied into the generated Agent prompt. Follow it exactly. The digest has two sections: first, **交易 Idea**, where Newsletter/RSS, X, WSB and close movers require a very clear company-specific direction; second, **产业变化**, where only significant AI industry changes from the configured researcher accounts and publications are retained. For transaction ideas, include as many reasons as the source provides, including none; do not invent reasons or add balancing risks. Use the visible `display_id` values from the JSON: `N*` / `X*` for transaction ideas, `I*` for industry changes, `W*` / `R*` for WSB, and `G*` / `L*` for close movers. Preserve original links and source times.
 
 For every `N*` and `X*`, require an explicit `对应股票` line with ticker and company name. Use `stock_mentions` as a matching hint, then verify it against the source text. If the source discusses only a sector or technology without a defensible company mapping, leave it out of the main digest and mention the omission only in data gaps. Do not infer a ticker merely from the author's coverage list.
 

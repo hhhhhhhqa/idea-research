@@ -52,6 +52,7 @@ def test_parse_x_official_api_payload():
     )
     assert items[0].url == "https://x.com/builder/status/123"
     assert items[0].engagement["reposts"] == 3
+    assert items[0].metadata["section"] == "transaction_ideas"
     assert items[0].metadata["transport"] == "official_api"
 
 

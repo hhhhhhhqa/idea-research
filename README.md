@@ -19,7 +19,7 @@
 
 ## 你会得到什么
 
-由你的 Agent 读取公开 GitHub feed 生成一份可继续追问的投资 idea 日报。中央端不替用户做 idea 筛选：同事的 Agent 会逐项判断是否与自己的 AI、互联网、软件 / SaaS idea generation 相关，并且只保留有明确公司对象、明确 Long/Short 或偏多/偏空方向、且能由原文支持 2–4 个关键理由的材料；符合条件的当天全量展示、不设条数上限：
+由你的 Agent 读取公开 GitHub feed 生成一份可继续追问的投资 idea 日报。日报分成两章：第一章「交易 Idea」包含 Newsletter / 研究文章、X、WSB 和美股收盘异动，只有明确公司对象和鲜明 Long/Short 或偏多/偏空观点才进入；第二章「产业变化」暂时预留给之后接入的 AI 研究人员来源。交易 Idea 的原文理由有多少写多少，没有理由也不补，不为了平衡观点额外寻找风险：
 
 - `N1`、`N2`：与具体上市公司相关的软件、互联网和 AI 投资 Newsletter / 研究文章说了什么；每项带 ticker
 - `X1`、`X2`：与具体上市公司相关的 X 账号观点；每项带 ticker，转发外链正文会一并保存
@@ -79,13 +79,10 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 
 ## 信息源
 
-### Newsletter / 研究文章（14 个来源）
+### Newsletter / 研究文章（交易 Idea，11 个来源）
 
 | 信息源 | 为什么选 |
 |---|---|
-| [Latent Space](https://www.latent.space/) | AI 工程、模型和开发者生态的一线访谈与研究，适合跟踪技术变化如何进入产品和公司。 |
-| [Interconnects](https://www.interconnects.ai/) | 关注模型能力、训练方法和 AI 研究进展，帮助判断技术叙事背后的实际变化。 |
-| [One Useful Thing](https://www.oneusefulthing.org/) | 从实际工作和组织应用出发讨论 AI，适合观察 AI 软件的落地场景与生产力影响。 |
 | [Clouded Judgement](https://cloudedjudgement.substack.com/about) | 系统跟踪 Cloud / SaaS 公司的收入增速、估值、自由现金流和 Rule of 40，直接对应软件板块交易的预期。 |
 | [How They Make Money / App Economy Insights](https://www.appeconomyinsights.com/about) | 用财务图表拆解互联网、软件、游戏、广告平台和大型科技公司的收入结构与季度变化。 |
 | [MBI Deep Dives](https://mbideepdives.substack.com/about) | 以单家公司为单位做深度研究，包含财务模型、敏感性分析和股价隐含预期，方法接近买方研究。 |
@@ -98,7 +95,7 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | [Mobile Dev Memo](https://mobiledevmemo.com/) | 研究移动应用、数字广告、用户增长和数字经济，适合观察互联网平台与应用商业化。 |
 | [Yet Another Value Blog](https://www.yetanothervalueblog.com/) | 以现代价值投资视角研究特殊情形、市场错价和公司治理，补充成长股研究之外的反向线索。 |
 
-### X（13 个账号）
+### X（14 个账号）
 
 | 信息源 | 为什么选 |
 |---|---|
@@ -115,6 +112,25 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | [Byrne Hobart](https://x.com/ByrneHobart) | 将公司财务、资本结构、并购、期权和周期结合起来分析商业模式。 |
 | [Edwin Dorsey](https://x.com/StockJabber) | 关注治理、企业不当行为和做空线索，用于补充公司红旗排查；具体指控需要一手材料验证。 |
 | [Tech Fundies](https://x.com/TechFundies) | 关注软件和科技股投资，提供质量型与颠覆型技术公司的研究线索。 |
+| [Alea Bitor Reddit](https://x.com/aleabitoreddit) | 作为交易 Idea 来源，只保留其明确指向具体公司的鲜明观点；理由不足不自行补充。 |
+
+### 产业变化 Newsletter / 研究文章（3 个来源）
+
+| 信息源 | 为什么选 |
+|---|---|
+| [Latent Space](https://www.latent.space/) | AI 工程、模型和开发者生态的一线访谈与研究，观察重大技术变化如何进入产品和公司。 |
+| [Interconnects](https://www.interconnects.ai/) | 关注模型能力、训练方法和 AI 研究进展，只保留足以改变产业判断的变化。 |
+| [One Useful Thing](https://www.oneusefulthing.org/) | 从实际工作和组织应用观察 AI 落地，筛选具有产业边际意义的生产力变化。 |
+
+### 产业变化 X（27 个账号）
+
+这些账号只进入「产业变化」章节，不与交易 Idea 混排；只保留重大模型、工具、基础设施、开源和产业路径变化。
+
+| 类别 | 账号 |
+|---|---|
+| AI 研究 / 生态观察 | [@karpathy](https://x.com/karpathy)、[@swyx](https://x.com/swyx)、[@dylan522p](https://x.com/dylan522p)、[@insane_analyst](https://x.com/insane_analyst)、[@simonw](https://x.com/simonw)、[@levie](https://x.com/levie)、[@RyanPGreenblatt](https://x.com/RyanPGreenblatt)、[@mweinbach](https://x.com/mweinbach)、[@naval](https://x.com/naval)、[@leopoldasch](https://x.com/leopoldasch)、[@jimkxa](https://x.com/jimkxa) |
+| 决策者 / 基础设施 | [@sama](https://x.com/sama)、[@DarioAmodei](https://x.com/DarioAmodei)、[@demishassabis](https://x.com/demishassabis)、[@jietang](https://x.com/jietang)、[@nvidia](https://x.com/nvidia) |
+| AI 建造者 | [@AmandaAskell](https://x.com/AmandaAskell)、[@bcherny](https://x.com/bcherny)、[@catwu](https://x.com/catwu)、[@alexalbert_](https://x.com/alexalbert_)、[@rauchg](https://x.com/rauchg)、[@amasad](https://x.com/amasad)、[@joshwoodward](https://x.com/joshwoodward)、[@paulgauthier](https://x.com/paulgauthier)、[@ivanfioravanti](https://x.com/ivanfioravanti)、[@deanwball](https://x.com/deanwball)、[@kuncheng](https://x.com/kuncheng) |
 
 ### Reddit（1 个社区）
 

@@ -11,8 +11,8 @@ from typing import Any, Iterable
 
 SEEN_RETENTION_DAYS = 3
 DEFAULT_SEEN_PATH = Path.home() / ".idea-research" / "seen.json"
-_LABEL_RE = re.compile(r"^(?P<prefix>N|X)(?P<number>[1-9][0-9]*)$", re.IGNORECASE)
-_RANGE_RE = re.compile(r"^(?P<prefix>N|X)(?P<start>[1-9][0-9]*)-(?:(?:N|X))?(?P<end>[1-9][0-9]*)$", re.IGNORECASE)
+_LABEL_RE = re.compile(r"^(?P<prefix>N|X|I)(?P<number>[1-9][0-9]*)$", re.IGNORECASE)
+_RANGE_RE = re.compile(r"^(?P<prefix>N|X|I)(?P<start>[1-9][0-9]*)-(?:(?:N|X|I))?(?P<end>[1-9][0-9]*)$", re.IGNORECASE)
 
 
 def default_seen_path() -> Path:
@@ -117,7 +117,7 @@ def build_delivery_mark(items: Iterable[dict[str, Any]], *, prepared_at: str) ->
         "retention_days": SEEN_RETENTION_DAYS,
         "labels": labels,
         "counts": counts,
-        "instructions": "Mark only Newsletter/X labels actually shown after successful delivery; WSB and price IDs are not tracked.",
+        "instructions": "Mark only Newsletter/X/industry labels actually shown after successful delivery; WSB and price IDs are not tracked.",
     }
 
 

@@ -260,3 +260,36 @@ def test_include_seen_regenerates_newsletter_and_x_context(tmp_path):
     assert prepare_report_context(tmp_path, {}, "daily", now=now, seen_path=seen_path)["items"] == []
     restored = prepare_report_context(tmp_path, {}, "daily", now=now, seen_path=seen_path, include_seen=True)
     assert [item["id"] for item in restored["items"]] == ["x:seen"]
+
+
+def test_report_separates_industry_change_ids_from_transaction_ideas(tmp_path):
+    now = datetime(2026, 8, 24, 21, tzinfo=timezone.utc)
+    industry_newsletter = SignalItem(
+        id="substack:industry",
+        source_type="substack",
+        source_name="Latent Space",
+        title="A material model capability shift",
+        url="https://example.com/industry",
+        published_at=now.isoformat(),
+        collected_at=now.isoformat(),
+        body="A model capability changed materially.",
+        metadata={"section": "industry_changes"},
+    )
+    industry_x = SignalItem(
+        id="x:industry",
+        source_type="x",
+        source_name="@karpathy",
+        title="A new open-source tool changes workflows",
+        url="https://x.com/karpathy/status/industry",
+        published_at=(now - timedelta(minutes=1)).isoformat(),
+        collected_at=now.isoformat(),
+        body="This changes how developers use models.",
+        metadata={"section": "industry_changes"},
+    )
+    save_feed(tmp_path, build_feed([PipelineResult(pipeline="mixed", items=[industry_newsletter, industry_x])]))
+
+    context = prepare_report_context(tmp_path, {}, "daily", now=now, seen_path=tmp_path / "seen.json")
+
+    assert [item["display_id"] for item in context["items"]] == ["I1", "I2"]
+    assert all(item["research_section"] == "industry_changes" for item in context["items"])
+    assert set(context["delivery_mark"]["labels"]) == {"I1", "I2"}

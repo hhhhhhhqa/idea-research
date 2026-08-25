@@ -67,6 +67,7 @@ def test_parse_reddit_json_keeps_engagement_and_canonical_url():
     assert len(items) == 1
     assert items[0].engagement["score"] == 42
     assert items[0].url.startswith("https://www.reddit.com/r/LocalLLaMA")
+    assert items[0].metadata["section"] == "transaction_ideas"
 
 
 def test_parse_reddit_json_extracts_preview_image_urls():

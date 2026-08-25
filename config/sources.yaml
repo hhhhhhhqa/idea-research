@@ -1,15 +1,19 @@
 substack:
+  section: transaction_ideas
   lookback_hours: 168
   publications:
     - name: Latent Space
       url: https://www.latent.space
       feed_url: https://www.latent.space/feed
+      section: industry_changes
     - name: Interconnects
       url: https://www.interconnects.ai
       feed_url: https://www.interconnects.ai/feed
+      section: industry_changes
     - name: One Useful Thing
       url: https://www.oneusefulthing.org
       feed_url: https://www.oneusefulthing.org/feed
+      section: industry_changes
     - name: Clouded Judgement
       url: https://cloudedjudgement.substack.com/about
       feed_url: https://cloudedjudgement.substack.com/feed
@@ -49,6 +53,7 @@ substack:
       feed_url: https://www.yetanothervalueblog.com/feed
 
 reddit:
+  section: transaction_ideas
   lookback_hours: 36
   max_items_per_subreddit: 100
   anonymous_request_delay_seconds: 12.0
@@ -138,6 +143,7 @@ reddit:
     RBRK: [Rubrik]
 
 x:
+  section: transaction_ideas
   lookback_hours: 72
   include_replies: false
   linked_articles:
@@ -216,8 +222,157 @@ x:
       investor_type: technology_investor
       coverage: software, technology investing, quality and disruptive tech stocks
       evidence_note: Use for technology and software research leads; verify company-specific claims against the source text.
+      section: transaction_ideas
+    - handle: aleabitoreddit
+      name: Alea Bitor Reddit
+      investor_type: technology_investor
+      coverage: public-equity technology and software ideas
+      evidence_note: Prioritize only posts with a clear company-specific direction; weakly supported reasons are still retained when the view is explicit.
+      section: transaction_ideas
+
+    # AI industry-change observers: these are not transaction-idea sources.
+    - handle: karpathy
+      name: Andrej Karpathy
+      investor_type: ai_researcher_builder
+      coverage: AI models, training, inference, developer tools
+      section: industry_changes
+    - handle: swyx
+      name: swyx
+      investor_type: ai_ecosystem_observer
+      coverage: AI engineering, developer ecosystem, model platforms
+      section: industry_changes
+    - handle: dylan522p
+      name: Dylan Patel / SemiAnalysis
+      investor_type: ai_infrastructure_researcher
+      coverage: semiconductors, AI datacenters, compute supply chain
+      section: industry_changes
+    - handle: insane_analyst
+      name: Irrational Analysis
+      investor_type: semiconductor_investor
+      coverage: semiconductors and AI infrastructure investing
+      section: industry_changes
+    - handle: simonw
+      name: Simon Willison
+      investor_type: open_source_builder
+      coverage: LLM tools, open source and developer workflows
+      section: industry_changes
+    - handle: levie
+      name: Aaron Levie
+      investor_type: technology_executive
+      coverage: enterprise software, AI adoption and work transformation
+      section: industry_changes
+    - handle: RyanPGreenblatt
+      name: Ryan Greenblatt
+      investor_type: ai_safety_researcher
+      coverage: AI capabilities, evaluations and AI safety
+      section: industry_changes
+    - handle: mweinbach
+      name: Max Weinbach
+      investor_type: technology_analyst
+      coverage: AI products, devices and consumer technology
+      section: industry_changes
+    - handle: naval
+      name: Naval Ravikant
+      investor_type: technology_investor
+      coverage: technology, AI, startups and capital formation
+      section: industry_changes
+    - handle: leopoldasch
+      name: Leopold Aschenbrenner
+      investor_type: ai_researcher
+      coverage: AI scaling, capabilities and strategic implications
+      section: industry_changes
+    - handle: jimkxa
+      name: Jim Keller
+      investor_type: semiconductor_engineer
+      coverage: processors, systems and AI compute architecture
+      section: industry_changes
+
+    # AI decision-makers and company-level infrastructure signals.
+    - handle: sama
+      name: Sam Altman
+      investor_type: ai_company_decision_maker
+      coverage: AI models, products and company strategy
+      section: industry_changes
+    - handle: DarioAmodei
+      name: Dario Amodei
+      investor_type: ai_company_decision_maker
+      coverage: frontier models, AI safety and deployment
+      section: industry_changes
+    - handle: demishassabis
+      name: Demis Hassabis
+      investor_type: ai_company_decision_maker
+      coverage: Google DeepMind research and AI systems
+      section: industry_changes
+    - handle: jietang
+      name: Jietang / Z.ai
+      investor_type: ai_company_decision_maker
+      coverage: open models, AI research and China AI ecosystem
+      section: industry_changes
+    - handle: nvidia
+      name: NVIDIA
+      investor_type: ai_infrastructure_company
+      coverage: AI chips, datacenters and infrastructure roadmap
+      section: industry_changes
+
+    # AI builders and product operators.
+    - handle: AmandaAskell
+      name: Amanda Askell
+      investor_type: ai_researcher_builder
+      coverage: model behavior, alignment and AI systems
+      section: industry_changes
+    - handle: bcherny
+      name: Boris Cherny
+      investor_type: ai_product_builder
+      coverage: Claude Code and AI developer tools
+      section: industry_changes
+    - handle: catwu
+      name: Cat Wu
+      investor_type: ai_product_builder
+      coverage: AI products and applied model systems
+      section: industry_changes
+    - handle: alexalbert_
+      name: Alex Albert
+      investor_type: ai_product_builder
+      coverage: Claude and AI product development
+      section: industry_changes
+    - handle: rauchg
+      name: Guillermo Rauch
+      investor_type: developer_platform_builder
+      coverage: Vercel, web development and AI applications
+      section: industry_changes
+    - handle: amasad
+      name: Amjad Masad
+      investor_type: developer_platform_builder
+      coverage: Replit and AI coding products
+      section: industry_changes
+    - handle: joshwoodward
+      name: Josh Woodward
+      investor_type: ai_product_builder
+      coverage: Google Labs and AI product experiments
+      section: industry_changes
+    - handle: paulgauthier
+      name: Paul Gauthier
+      investor_type: open_source_builder
+      coverage: Aider and AI coding workflows
+      section: industry_changes
+    - handle: ivanfioravanti
+      name: Ivan Fioravanti
+      investor_type: open_source_builder
+      coverage: Apple MLX and open-source machine learning
+      section: industry_changes
+    - handle: deanwball
+      name: Dean W. Ball
+      investor_type: ai_strategy_researcher
+      coverage: AI strategy, technology and long-range scenarios
+      section: industry_changes
+    - handle: kuncheng
+      name: Kun Cheng
+      investor_type: ai_builder
+      coverage: AI products and model applications
+      section: industry_changes
 
 prices:
+  section: transaction_ideas
   # The price universe is the derived FMP-industry SaaS/software/Internet pool.
   saas_pool_path: data/stock_universe/saas_pool.json
   rolling_prices_path: data/prices/rolling_prices.json

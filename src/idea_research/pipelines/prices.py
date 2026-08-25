@@ -227,6 +227,7 @@ def _mover_item(
         body="\n".join(lines),
         symbols=[record["ticker"] for record in records],
         metadata={
+            "section": "transaction_ideas",
             "market_mover_type": kind,
             "market_session": "regular_close_end_of_day",
             "price_date": price_date,

@@ -23,6 +23,7 @@ def test_parse_substack_feed_normalizes_item():
     assert items[0].source_type == "substack"
     assert items[0].body == "Tokens are getting cheaper."
     assert items[0].url.endswith("/p/inference")
+    assert items[0].metadata["section"] == "transaction_ideas"
 
 
 def test_parse_generic_rss_feed_keeps_its_own_source_type():
