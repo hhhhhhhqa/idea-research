@@ -30,6 +30,23 @@ substack:
       feed_url: https://softwarestackinvesting.com/feed/
       source_type: rss
       platform: wordpress
+    - name: Liberty's Highlights
+      url: https://www.libertyrpf.com/
+      feed_url: https://www.libertyrpf.com/feed
+    - name: Chips Ahoy Capital
+      url: https://chipsahoycapital.substack.com/
+      feed_url: https://chipsahoycapital.substack.com/feed
+    - name: Meritech Software Pulse
+      url: https://meritech.substack.com/
+      feed_url: https://meritech.substack.com/feed
+    - name: Mobile Dev Memo
+      url: https://mobiledevmemo.com/
+      feed_url: https://mobiledevmemo.com/mdm.rss
+      source_type: rss
+      platform: wordpress
+    - name: Yet Another Value Blog
+      url: https://www.yetanothervalueblog.com/
+      feed_url: https://www.yetanothervalueblog.com/feed
 
 reddit:
   lookback_hours: 36
@@ -194,6 +211,11 @@ x:
       investor_type: short_researcher
       coverage: governance, misconduct, short research, corporate red flags
       evidence_note: Treat allegations as leads until supported by primary documents or company disclosures.
+    - handle: TechFundies
+      name: Tech Fundies
+      investor_type: technology_investor
+      coverage: software, technology investing, quality and disruptive tech stocks
+      evidence_note: Use for technology and software research leads; verify company-specific claims against the source text.
 
 prices:
   # The price universe is the derived FMP-industry SaaS/software/Internet pool.

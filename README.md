@@ -79,7 +79,7 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 
 ## 信息源
 
-### Newsletter / 研究文章（9 个来源）
+### Newsletter / 研究文章（14 个来源）
 
 | 信息源 | 为什么选 |
 |---|---|
@@ -92,8 +92,13 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | [TSOH Investment Research](https://thescienceofhitting.com/about) | 关注大型科技平台的竞争优势、资本配置、长期复利能力和估值，适合补充长期基本面视角。 |
 | [Aspiring for Intelligence](https://aspiringforintelligence.substack.com/about) | 专门追踪 Intelligent Applications、AI Agent、开发工具和垂直软件，适合观察 AI 应用层对传统 SaaS 的冲击。 |
 | [Software Stack Investing](https://softwarestackinvesting.com/author/) | 从产品能力、开发者心智、竞争格局、市场需求和估值分析软件个股，补充纯财务指标之外的产品视角。 |
+| [Liberty's Highlights](https://www.libertyrpf.com/) | 跨商业、科技、科学和文化寻找值得研究的线索，适合发现半导体、技术和投资主题中的长尾信息。 |
+| [Chips Ahoy Capital](https://chipsahoycapital.substack.com/) | 关注软件投资、半导体和 AI 应用基础设施，强调产品扩张、数据库与软件商业模式。 |
+| [Meritech Software Pulse](https://meritech.substack.com/) | 持续跟踪上市软件行业的估值、经营指标、利润率和 SaaS 板块变化，是软件横向比较的重要来源。 |
+| [Mobile Dev Memo](https://mobiledevmemo.com/) | 研究移动应用、数字广告、用户增长和数字经济，适合观察互联网平台与应用商业化。 |
+| [Yet Another Value Blog](https://www.yetanothervalueblog.com/) | 以现代价值投资视角研究特殊情形、市场错价和公司治理，补充成长股研究之外的反向线索。 |
 
-### X（12 个账号）
+### X（13 个账号）
 
 | 信息源 | 为什么选 |
 |---|---|
@@ -109,6 +114,7 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | [Dan Niles](https://x.com/DanielTNiles) | 做多空科技研究，提供对 Mag7、软件和 AI 颠覆风险的怀疑派观点。 |
 | [Byrne Hobart](https://x.com/ByrneHobart) | 将公司财务、资本结构、并购、期权和周期结合起来分析商业模式。 |
 | [Edwin Dorsey](https://x.com/StockJabber) | 关注治理、企业不当行为和做空线索，用于补充公司红旗排查；具体指控需要一手材料验证。 |
+| [Tech Fundies](https://x.com/TechFundies) | 关注软件和科技股投资，提供质量型与颠覆型技术公司的研究线索。 |
 
 ### Reddit（1 个社区）
 
