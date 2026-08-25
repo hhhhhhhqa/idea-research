@@ -1,7 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-25T02:38:43.151888+00:00",
+  "generated_at": "2026-08-25T03:11:46.014711+00:00",
   "pipelines": [
+    {
+      "pipeline": "reddit",
+      "status": "ok",
+      "item_count": 5,
+      "errors": [],
+      "notes": [
+        "Anonymous hot RSS transport used for r/wallstreetbets",
+        "Downloaded 3 Reddit image(s) into the current feed media directory"
+      ]
+    },
     {
       "pipeline": "prices",
       "status": "ok",
@@ -9,15 +19,6 @@
       "errors": [],
       "notes": [
         "Yahoo Finance EOD closes collected for 183 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /Users/1huang/Desktop/willing capital/idea-research/data/prices/rolling_prices.json"
-      ]
-    },
-    {
-      "pipeline": "reddit",
-      "status": "ok",
-      "item_count": 3,
-      "errors": [],
-      "notes": [
-        "Anonymous hot RSS transport used for r/wallstreetbets"
       ]
     },
     {
@@ -50,10 +51,10 @@
     }
   ],
   "counts": {
-    "total": 54,
+    "total": 56,
     "substack": 25,
     "rss": 0,
-    "reddit": 3,
+    "reddit": 5,
     "x": 24,
     "price": 2
   },
@@ -65,7 +66,7 @@
       "title": "Wendy's CEO Says Food Quality Hasn’t Been Chain’s Top Priority—Vows Changes",
       "url": "https://www.reddit.com/r/wallstreetbets/comments/1vxilt1/wendys_ceo_says_food_quality_hasnt_been_chains/",
       "published_at": "2026-08-24T23:07:02+00:00",
-      "collected_at": "2026-08-25T02:10:55.603293+00:00",
+      "collected_at": "2026-08-25T03:11:44.517832+00:00",
       "body": "submitted by /u/Fair-Guitar [link] [comments]",
       "author": "/u/Fair-Guitar",
       "symbols": [],
@@ -73,7 +74,77 @@
       "metadata": {
         "transport": "rss",
         "listing": "hot",
-        "feed_rank": 2
+        "feed_rank": 2,
+        "image_urls": [
+          "https://external-preview.redd.it/BPvNLxN6RF59fA2x7y8ioCk4aIyyfMWACDevg8dkPxk.jpeg?width=640&crop=smart&auto=webp&s=4517bfd3274fe8d5da816fd3dc04bfe74f21cf26"
+        ],
+        "images": [
+          {
+            "url": "https://external-preview.redd.it/BPvNLxN6RF59fA2x7y8ioCk4aIyyfMWACDevg8dkPxk.jpeg?width=640&crop=smart&auto=webp&s=4517bfd3274fe8d5da816fd3dc04bfe74f21cf26",
+            "path": "data/media/reddit/reddit-image-reddit-b7c430c72c7e4e3325e4-1.jpeg",
+            "mime_type": "image/jpeg",
+            "bytes": 42599
+          }
+        ]
+      }
+    },
+    {
+      "id": "reddit:a830e82b0a825dddf57d",
+      "source_type": "reddit",
+      "source_name": "r/wallstreetbets",
+      "title": "The AI Trade is Dead, OpenAI and Anthropic undershot the moon, pressure private equity",
+      "url": "https://www.reddit.com/r/wallstreetbets/comments/1vxfisg/the_ai_trade_is_dead_openai_and_anthropic/",
+      "published_at": "2026-08-24T21:06:14+00:00",
+      "collected_at": "2026-08-25T03:11:44.517832+00:00",
+      "body": "Normally big money can stay irrational longer than you can stay solvent. This time it's flipped. For those who don't work in the tech industry, the hype for cutting edge models is already completely dead. We got a taste of what it was capable of with Fable, but it turns out it's mostly just good at making stuff that already exists like Minecraft and Tinder clones. It was kinda neat for the 2 weeks it was freely available on plans, but ultimately none of these businesses are willing to pay ludicris token prices just to use a slightly better model. Companies have already switched back to subscription models, they'd be stupid not to, it's free compute. Even if they were to remove subscriptions entirely, it wouldn't help as people can just switch to open source models instead. It's a no win situation for Anthropic and OpenAI. This means that the only AI sector that was going for mass compute, LLMs, will definitely not be able to ever pay back all that compute they spent. That's 2.5 trillion down the drain. This is where you come in 🏳‍🌈🐻's. Private equity, Softbank, Amazon, Microsoft, CISCO, and NVDA have to hold this massive bag of debt they spent on these worthless models and they want you to buy it from them. Expect the market to trade sideways or slightly down until this crashes, they are trying to slowly offload shares without crashing the market. Their goal is to hold out until the Anthropic IPO so they can short their own shares to cover (this let's them get around the 180 day rule). They want to offload their shares on you at a 2 trillion evaluation and then rug pull your 401k. Pay attention to their strategy, it's so obvious. They use low volume to pump up pre-market so they can start green and sell into the open. They then trade the stocks back and forth slowly raising the price over the course of the day (creating bull traps) and then selling small chunks into that small momentum. They are also moving out of Semi stocks and into other general S&P strength to prop up the market and prevent a crash. That's why we are net 0 in everything but the AI trade. Positions: Sold my remaining 401k at open (I had been selling in chunks the past month) Late 2027 SNDK, NVDA, PLTR, TQQQ, and ORCL puts. Other good options are NBIS, MU, and CRWV One last thought...name just one company that has become more profitable with LLMs. There are none. submitted by /u/sfw_supdood [link] [comments]",
+      "author": "/u/sfw_supdood",
+      "symbols": [
+        "NVDA",
+        "PLTR",
+        "ORCL",
+        "NBIS",
+        "CRWV",
+        "MSFT",
+        "AMZN"
+      ],
+      "engagement": {},
+      "metadata": {
+        "transport": "rss",
+        "listing": "hot",
+        "feed_rank": 5,
+        "image_urls": [],
+        "images": []
+      }
+    },
+    {
+      "id": "reddit:17de72098836f29571e7",
+      "source_type": "reddit",
+      "source_name": "r/wallstreetbets",
+      "title": "When the bears' YOLO pays off",
+      "url": "https://www.reddit.com/r/wallstreetbets/comments/1vxfiqw/when_the_bears_yolo_pays_off/",
+      "published_at": "2026-08-24T21:06:11+00:00",
+      "collected_at": "2026-08-25T03:11:44.517832+00:00",
+      "body": "An entire generation of bulls has been wiped out today... and the $SPY has only fallen 0.29%. You know how this works, full port calls tomorrow . submitted by /u/I_killed_the_kraken [link] [comments]",
+      "author": "/u/I_killed_the_kraken",
+      "symbols": [
+        "SPY"
+      ],
+      "engagement": {},
+      "metadata": {
+        "transport": "rss",
+        "listing": "hot",
+        "feed_rank": 3,
+        "image_urls": [
+          "https://preview.redd.it/tviwoq5yzdlh1.jpeg?width=640&crop=smart&auto=webp&s=878561d783a1165c682fa6daca7eb63e0c36d763"
+        ],
+        "images": [
+          {
+            "url": "https://preview.redd.it/tviwoq5yzdlh1.jpeg?width=640&crop=smart&auto=webp&s=878561d783a1165c682fa6daca7eb63e0c36d763",
+            "path": "data/media/reddit/reddit-image-reddit-17de72098836f29571e7-1.jpeg",
+            "mime_type": "image/jpeg",
+            "bytes": 62928
+          }
+        ]
       }
     },
     {
@@ -83,7 +154,7 @@
       "title": "What Are Your Moves Tomorrow, August 25, 2026",
       "url": "https://www.reddit.com/r/wallstreetbets/comments/1vxdpwf/what_are_your_moves_tomorrow_august_25_2026/",
       "published_at": "2026-08-24T20:00:39+00:00",
-      "collected_at": "2026-08-25T02:10:55.603293+00:00",
+      "collected_at": "2026-08-25T03:11:44.517832+00:00",
       "body": "This post contains content not supported on old Reddit. Click here to view the full post submitted by /u/verified-trader [link] [comments]",
       "author": "/u/verified-trader",
       "symbols": [],
@@ -91,7 +162,9 @@
       "metadata": {
         "transport": "rss",
         "listing": "hot",
-        "feed_rank": 1
+        "feed_rank": 1,
+        "image_urls": [],
+        "images": []
       }
     },
     {
@@ -349,7 +422,7 @@
       "title": "Are we too focused on AI?",
       "url": "https://www.reddit.com/r/wallstreetbets/comments/1vx0khh/are_we_too_focused_on_ai/",
       "published_at": "2026-08-24T11:49:31+00:00",
-      "collected_at": "2026-08-25T02:10:55.603293+00:00",
+      "collected_at": "2026-08-25T03:11:44.517832+00:00",
       "body": "Seems to me that retail like Victoria’s Secret here and big food chains (like Cheesecake Factory) are slipping under the radar. Earnings for Victoria’s Secret coming up 9/3 submitted by /u/Curious_Wafer6169 [link] [comments]",
       "author": "/u/Curious_Wafer6169",
       "symbols": [],
@@ -357,7 +430,18 @@
       "metadata": {
         "transport": "rss",
         "listing": "hot",
-        "feed_rank": 3
+        "feed_rank": 4,
+        "image_urls": [
+          "https://preview.redd.it/w90itsyt9blh1.jpeg?width=640&crop=smart&auto=webp&s=0b91f337e381a2bd7ecf8a908834d8d16cbf7b40"
+        ],
+        "images": [
+          {
+            "url": "https://preview.redd.it/w90itsyt9blh1.jpeg?width=640&crop=smart&auto=webp&s=0b91f337e381a2bd7ecf8a908834d8d16cbf7b40",
+            "path": "data/media/reddit/reddit-image-reddit-79caddb78c3a8cf2c183-1.jpeg",
+            "mime_type": "image/jpeg",
+            "bytes": 34928
+          }
+        ]
       }
     },
     {

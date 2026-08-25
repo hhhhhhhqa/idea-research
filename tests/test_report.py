@@ -80,7 +80,9 @@ def test_report_rolls_up_wsb_posts_into_ticker_heat(tmp_path):
         wsb_item("reddit:1", "NVDA earnings", ["NVDA"], 1, 100, 40),
         wsb_item("reddit:2", "NVDA options", ["NVDA"], 2, 20, 8),
         wsb_item("reddit:3", "Tesla delivery", ["TSLA"], 3, 60, 20),
-        wsb_item("reddit:4", "Old rank", ["OLD"], 4, 1, 1),
+        wsb_item("reddit:4", "AMD discussion", ["AMD"], 4, 5, 2),
+        wsb_item("reddit:5", "Microsoft discussion", ["MSFT"], 5, 4, 1),
+        wsb_item("reddit:6", "Old rank", ["OLD"], 6, 1, 1),
     ]
     feed = build_feed([PipelineResult(pipeline="reddit", items=posts)])
     feed["generated_at"] = now.isoformat()
@@ -97,10 +99,10 @@ def test_report_rolls_up_wsb_posts_into_ticker_heat(tmp_path):
     assert context["reddit_discussions"]["top_tickers"][0]["ticker"] == "NVDA"
     assert context["reddit_discussions"]["top_tickers"][0]["mention_count"] == 2
     assert context["reddit_discussions"]["top_hot_posts"][0]["tickers"] == ["NVDA"]
-    assert [post["hot_rank"] for post in context["reddit_discussions"]["top_hot_posts"]] == [1, 2, 3]
-    assert [post["display_id"] for post in context["wsb_posts"]] == ["R1", "R2", "R3"]
+    assert [post["hot_rank"] for post in context["reddit_discussions"]["top_hot_posts"]] == [1, 2, 3, 4, 5]
+    assert [post["display_id"] for post in context["wsb_posts"]] == ["R1", "R2", "R3", "R4", "R5"]
     assert "heat_score" not in context["reddit_discussions"]["top_tickers"][0]
-    assert context["stats"]["wsb_posts"] == 3
+    assert context["stats"]["wsb_posts"] == 5
     assert context["items"] == []
 
 

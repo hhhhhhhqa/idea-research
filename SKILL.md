@@ -33,6 +33,6 @@ For a digest, use only the current feed (or its unfiltered prepared context) and
 
 ## User experience contract
 
-Render the digest with visible IDs: newsletters `N1`, X posts `X1`, WSB tickers/posts `W1`/`R1`, and close movers `G1`/`L1`. WSB is always the current Hot top three, whose rankings must be shown as #1, #2 and #3. End by telling the user they may ask to expand any ID. If they ask to expand an ID, locate that exact `display_id` in the latest context or stock-pool JSON and answer only from its stored source material.
+Render the digest with visible IDs: newsletters `N1`, X posts `X1`, WSB tickers/posts `W1`/`R1`, and close movers `G1`/`L1`. WSB is always the current Hot top five, whose rankings must be shown as #1 through #5 when available. If a post has saved `metadata.images`, show those local paths as part of the source material. End by telling the user they may ask to expand any ID. If they ask to expand an ID, locate that exact `display_id` in the latest context or stock-pool JSON and answer only from its stored source material.
 
 Never add signal scores, source weights, trade instructions, or unsupported facts. The central feed deliberately contains every captured item: decide relevance to the user's idea-generation scope yourself, then output every relevant item with no quantity cap. For Newsletter and X, a relevant item must also map to one or more specific listed companies; show the ticker and company name, and omit sector-only commentary from the main digest. WSB is a record of retail discussion; it is not fundamental evidence.

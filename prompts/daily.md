@@ -43,7 +43,7 @@
 
 ### WSB 今日讨论
 
-读取 `reddit_discussions` 和 `wsb_posts`。`wsb_posts` 是中央端在采集时刻抓到的 WallStreetBets 公开 Hot 榜前三名，且只能有 Hot #1、#2、#3 三篇。必须按这个固定顺序逐篇输出 `R1`、`R2`、`R3`，显示 Hot 名次、标题、链接和识别到的 ticker；没有 ticker 时明确写“未识别到股票”。再列 `top_tickers`：用 `W*` 显示在这三篇中被提及的 ticker、提及帖子数、提及占比、最佳 Hot 名次和代表性原帖链接。不得把旧帖、时间窗口过滤后的排名、或 Hot #4 以后的帖子混入。
+读取 `reddit_discussions` 和 `wsb_posts`。`wsb_posts` 是中央端在采集时刻抓到的 WallStreetBets 公开 Hot 榜前五名，且只能有 Hot #1、#2、#3、#4、#5 五篇（如果当天源只返回更少，就逐篇输出实际存在的记录）。必须按这个固定顺序逐篇输出 `R1`–`R5`，显示 Hot 名次、标题、链接、识别到的 ticker，以及已保存图片的本地路径；没有 ticker 时明确写“未识别到股票”，没有图片时不要补造。再列 `top_tickers`：用 `W*` 显示在这五篇中被提及的 ticker、提及帖子数、提及占比、最佳 Hot 名次和代表性原帖链接。不得把旧帖、时间窗口过滤后的排名、或 Hot #6 以后的帖子混入。
 
 如果 `engagement_available` 为 false，说明这是公开 RSS Hot 榜位置，没有点赞/评论数据。WSB 只代表散户注意力，不能作为公司基本面、催化剂或交易建议的证据。
 

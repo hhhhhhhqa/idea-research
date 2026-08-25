@@ -72,14 +72,14 @@ def build_reddit_discussions(items: list[dict[str, Any]], config: dict[str, Any]
     subreddit = str(config.get("subreddit", "wallstreetbets")).removeprefix("r/").casefold()
     source_name = f"r/{subreddit}"
     max_symbols = int(config.get("max_symbols", 10))
-    max_hot_posts = int(config.get("max_hot_posts", 3))
+    max_hot_posts = int(config.get("max_hot_posts", 5))
     min_mentions = int(config.get("min_mentions", 1))
     posts = [
         item
         for item in items
         if str(item.get("source_name", "")).casefold() == source_name
         and (item.get("metadata") or {}).get("listing") == "hot"
-        and 1 <= int((item.get("metadata") or {}).get("feed_rank") or 0) <= 3
+        and 1 <= int((item.get("metadata") or {}).get("feed_rank") or 0) <= max_hot_posts
     ]
     aggregates: dict[str, dict[str, Any]] = {}
     ranked_posts: list[dict[str, Any]] = []
@@ -100,6 +100,7 @@ def build_reddit_discussions(items: list[dict[str, Any]], config: dict[str, Any]
                 "hot_rank": rank,
                 "tickers": symbols,
                 "engagement": engagement,
+                "images": metadata.get("images") or [],
             }
         )
         for symbol in symbols:
@@ -121,6 +122,7 @@ def build_reddit_discussions(items: list[dict[str, Any]], config: dict[str, Any]
                     "published_at": item.get("published_at", ""),
                     "hot_rank": rank,
                     "engagement": engagement,
+                    "images": metadata.get("images") or [],
                 }
             )
 
@@ -146,7 +148,7 @@ def build_reddit_discussions(items: list[dict[str, Any]], config: dict[str, Any]
         "engagement_available": engagement_available,
         "interpretation": "A factual list of retail discussion mentions, not fundamental evidence or an investment recommendation.",
         "methodology": (
-            "Top tickers are ordered by the number of posts mentioning them in the current public Hot top-three, "
+            "Top tickers are ordered by the number of posts mentioning them in the current public Hot top-five, "
             "then by their best Hot-feed position. Top posts follow the Hot-feed order. No proprietary score is calculated; "
             "RSS-only runs do not contain Reddit engagement counts."
         ),
@@ -214,6 +216,7 @@ def prepare_report_context(
     reddit_discussions_enabled = bool(reddit_discussions_config.get("enabled", True))
     heat_subreddit = str(reddit_discussions_config.get("subreddit", "wallstreetbets")).removeprefix("r/").casefold()
     heat_source_name = f"r/{heat_subreddit}"
+    heat_max_hot_posts = max(1, int(reddit_discussions_config.get("max_hot_posts", 5)))
 
     items_by_id: dict[str, SignalItem] = {}
     pipeline_health: dict[str, dict[str, Any]] = {}
@@ -243,7 +246,7 @@ def prepare_report_context(
         for item in content
         if item["source_name"].casefold() == heat_source_name
         and (item.get("metadata") or {}).get("listing") == "hot"
-        and 1 <= int((item.get("metadata") or {}).get("feed_rank") or 0) <= 3
+        and 1 <= int((item.get("metadata") or {}).get("feed_rank") or 0) <= heat_max_hot_posts
     ]
     wsb_posts.sort(key=lambda value: int((value.get("metadata") or {}).get("feed_rank") or 0))
     for item in wsb_posts:

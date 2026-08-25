@@ -35,12 +35,17 @@ reddit:
   lookback_hours: 36
   max_items_per_subreddit: 100
   anonymous_request_delay_seconds: 12.0
+  # Keep the current public Hot leaderboard and save image attachments with the feed.
+  download_images: true
+  media_dir: data/media/reddit
+  max_images_per_post: 4
+  max_image_bytes: 5000000
   subreddits:
     - name: wallstreetbets
       listing: hot
       # Capture the current Hot leaderboard itself, rather than only posts
-      # published within a time window. This preserves positions #1, #2, #3.
-      limit: 3
+      # published within a time window. This preserves positions #1 through #5.
+      limit: 5
       lookback_hours:
 
   # Bare uppercase words are accepted only from this allowlist. Unknown cashtags such

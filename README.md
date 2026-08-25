@@ -23,7 +23,7 @@
 
 - `N1`、`N2`：与具体上市公司相关的软件、互联网和 AI 投资 Newsletter / 研究文章说了什么；每项带 ticker
 - `X1`、`X2`：与具体上市公司相关的 X 账号观点；每项带 ticker，转发外链正文会一并保存
-- `W1`、`R1`：WallStreetBets 当前 Hot 榜前 3 篇帖子及其中被讨论的股票，只反映散户注意力，不当作基本面证据
+- `W1`、`R1`：WallStreetBets 当前 Hot 榜前 5 篇帖子及其中被讨论的股票；帖子图片会随 feed 保存，只反映散户注意力，不当作基本面证据
 - `G1` / `L1`：`saas_pool.json` 中股票的美股收盘涨幅前十 / 跌幅前十；比较当天与前一交易日收盘价
 
 每条内容都保留来源时间和原始链接。看完后可以直接说“展开 N2”、“X1 为什么重要？”、“W1 讨论的是哪篇帖子？”或“详细看看 L3”。
@@ -112,7 +112,7 @@ flowchart LR
 
 ```bash
 idea-research collect
-git add data/feeds/latest.json data/stock_universe/stock_pool.json data/stock_universe/saas_pool.json data/prices/rolling_prices.json
+git add data/feeds/latest.json data/media/reddit data/stock_universe/stock_pool.json data/stock_universe/saas_pool.json data/prices/rolling_prices.json
 git commit -m "Update research feeds"
 git push origin main
 ```
@@ -124,6 +124,7 @@ git push origin main
 ```text
 config/                       信息源与用户 profile
 data/feeds/                   最新统一 feed
+data/media/reddit/            当前 WSB 帖子的已下载图片附件
 data/stock_universe/          股票池、SaaS/软件/互联网池与 FMP checkpoint
 data/prices/                  最近三交易日的本地收盘价滚动状态
 prompts/                      Agent 输出格式与来源处理指令

@@ -2,6 +2,7 @@ from datetime import datetime, timezone
 
 from idea_research.pipelines.reddit import (
     _acquire_token,
+    _download_reddit_images,
     _oauth_token,
     _refresh_token,
     extract_reddit_symbols,
@@ -66,6 +67,73 @@ def test_parse_reddit_json_keeps_engagement_and_canonical_url():
     assert len(items) == 1
     assert items[0].engagement["score"] == 42
     assert items[0].url.startswith("https://www.reddit.com/r/LocalLLaMA")
+
+
+def test_parse_reddit_json_extracts_preview_image_urls():
+    payload = {
+        "data": {
+            "children": [
+                {
+                    "data": {
+                        "name": "t3_image",
+                        "title": "Image post",
+                        "created_utc": 1787486400,
+                        "permalink": "/r/wallstreetbets/comments/image/post/",
+                        "preview": {"images": [{"source": {"url": "https://i.redd.it/chart.png?width=1"}}]},
+                    }
+                }
+            ]
+        }
+    }
+    items = parse_reddit_json(
+        payload,
+        "wallstreetbets",
+        now=datetime.fromtimestamp(1787486400, tz=timezone.utc),
+        listing="hot",
+        lookback_hours=None,
+    )
+    assert items[0].metadata["image_urls"] == ["https://i.redd.it/chart.png?width=1"]
+
+
+class _FakeImageResponse:
+    headers = {"content-type": "image/png"}
+
+    def __init__(self, content=b"png"):
+        self.content = content
+
+    def raise_for_status(self):
+        return None
+
+
+class _FakeImageClient:
+    def get(self, url):
+        return _FakeImageResponse()
+
+
+def test_download_reddit_images_writes_local_attachment(tmp_path):
+    from idea_research.models import SignalItem
+
+    item = SignalItem(
+        id="reddit:abc",
+        source_type="reddit",
+        source_name="r/wallstreetbets",
+        title="Chart",
+        url="https://www.reddit.com/r/wallstreetbets/comments/abc/chart/",
+        published_at="2026-08-24T00:00:00+00:00",
+        collected_at="2026-08-24T00:00:00+00:00",
+        metadata={"image_urls": ["https://i.redd.it/chart.png"]},
+    )
+    errors, _ = _download_reddit_images(
+        [item],
+        _FakeImageClient(),
+        {"media_dir": str(tmp_path), "max_images_per_post": 4},
+    )
+    assert errors == []
+    assert item.metadata["images"][0]["mime_type"] == "image/png"
+    from pathlib import Path
+
+    assert Path(item.metadata["images"][0]["path"]).exists()
+    assert list(tmp_path.glob("reddit-image-*"))
 
 
 def test_combined_rss_infers_subreddit_from_link():

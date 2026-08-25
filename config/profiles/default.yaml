@@ -10,9 +10,9 @@ reddit_discussions:
   enabled: true
   subreddit: wallstreetbets
   max_symbols: 3
-  max_hot_posts: 3
+  max_hot_posts: 5
   min_mentions: 1
-  # WSB gets a separate Hot-feed rollup, while the complete captured post set
+  # WSB gets a separate Hot top-five rollup, while the complete captured post set
   # remains available to the subscriber Agent in `wsb_posts`.
   rollup_only: true
 
