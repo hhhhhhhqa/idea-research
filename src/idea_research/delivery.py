@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Any, Iterable
 
 
-SEEN_RETENTION_DAYS = 14
+SEEN_RETENTION_DAYS = 3
 DEFAULT_SEEN_PATH = Path.home() / ".idea-research" / "seen.json"
 _LABEL_RE = re.compile(r"^(?P<prefix>N|X)(?P<number>[1-9][0-9]*)$", re.IGNORECASE)
 _RANGE_RE = re.compile(r"^(?P<prefix>N|X)(?P<start>[1-9][0-9]*)-(?:(?:N|X))?(?P<end>[1-9][0-9]*)$", re.IGNORECASE)

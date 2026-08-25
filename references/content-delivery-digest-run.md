@@ -61,7 +61,7 @@ idea-research mark-delivered \
   --shown N1,N3,X1-X4
 ```
 
-Do not mark items omitted as irrelevant or a failed/partial delivery. `W*`, `R*`, `G*` and `L*` are never tracked. Use `--all` only when every pending Newsletter/X item was shown. The local state is stored at `~/.idea-research/seen.json` and is retained for 14 days; it is not committed to the repository. Add `--include-seen` to `prepare` when a full regeneration is explicitly needed.
+Do not mark items omitted as irrelevant or a failed/partial delivery. `W*`, `R*`, `G*` and `L*` are never tracked. Use `--all` only when every pending Newsletter/X item was shown. The local state is stored at `~/.idea-research/seen.json` and is retained for at most 3 days; it is not committed to the repository. Add `--include-seen` to `prepare` when a full regeneration is explicitly needed.
 
 ## 6. Deliver and follow up
 

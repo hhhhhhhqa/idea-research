@@ -331,7 +331,7 @@ def prepare_report_context(
             "enabled": not include_seen,
             "tracked_sources": ["substack", "rss", "x"],
             "seen_path": str(Path(seen_path) if seen_path else Path.home() / ".idea-research" / "seen.json"),
-            "retention_days": 14,
+            "retention_days": 3,
             "filtered_items": filtered_items,
         },
         "delivery_mark": delivery_mark,

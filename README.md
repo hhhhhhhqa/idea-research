@@ -168,7 +168,7 @@ git commit -m "Update research feeds"
 git push origin main
 ```
 
-`data/stock_universe/fmp_profile_cache.json`、`.env` 和 X 会话数据库不会被提交。订阅者只需 `git pull --ff-only` 后运行 `idea-research prepare --period daily`。默认只会给出这个 Agent 尚未成功展示过的 Newsletter/RSS 和 X；WSB Hot 前五与收盘涨跌幅每天都会刷新。日报成功展示后，按实际输出的编号执行 `idea-research mark-delivered --file reports/contexts/delivery-mark.json --shown N1,X2`，状态保存在本机 `~/.idea-research/seen.json`，不会提交到 Git。需要重看全部 Newsletter/X 时使用 `idea-research prepare --period daily --include-seen`。
+`data/stock_universe/fmp_profile_cache.json`、`.env` 和 X 会话数据库不会被提交。订阅者只需 `git pull --ff-only` 后运行 `idea-research prepare --period daily`。默认只会给出这个 Agent 尚未成功展示过的 Newsletter/RSS 和 X；WSB Hot 前五与收盘涨跌幅每天都会刷新。日报成功展示后，按实际输出的编号执行 `idea-research mark-delivered --file reports/contexts/delivery-mark.json --shown N1,X2`，状态保存在本机 `~/.idea-research/seen.json`，最多保留 3 天，不会提交到 Git。需要重看全部 Newsletter/X 时使用 `idea-research prepare --period daily --include-seen`。
 
 ## 目录
 
