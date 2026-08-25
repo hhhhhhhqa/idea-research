@@ -156,7 +156,7 @@ def build_reddit_discussions(items: list[dict[str, Any]], config: dict[str, Any]
 
 
 def build_market_movers(price_items: list[dict[str, Any]]) -> dict[str, Any]:
-    """Expose raw Alpha Vantage end-of-day movers."""
+    """Expose Yahoo Finance close movers from the derived SaaS pool."""
     groups: dict[str, dict[str, Any]] = {}
     for item in price_items:
         metadata = item.get("metadata") or {}
@@ -170,7 +170,7 @@ def build_market_movers(price_items: list[dict[str, Any]]) -> dict[str, Any]:
                 "last_updated": last_updated,
                 "published_at": item.get("published_at", ""),
                 "market_session": metadata.get("market_session", "regular_close_end_of_day"),
-                "source": item.get("source_name", "Alpha Vantage"),
+                "source": item.get("source_name", "Yahoo Finance"),
                 "source_url": item.get("url", ""),
                 "top_gainers": [],
                 "top_losers": [],

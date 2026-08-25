@@ -191,9 +191,10 @@ x:
       evidence_note: Treat allegations as leads until supported by primary documents or company disclosures.
 
 prices:
-  market_movers:
-    enabled: true
-    api_key_env: ALPHAVANTAGE_API_KEY
-    # Alpha Vantage's default response is the end-of-day US-market list. Do not
-    # opt into its realtime or delayed entitlements: this feed is for closes.
-    endpoint: https://www.alphavantage.co/query
+  # The price universe is the derived FMP-industry SaaS/software/Internet pool.
+  saas_pool_path: data/stock_universe/saas_pool.json
+  rolling_prices_path: data/prices/rolling_prices.json
+  retention_trading_days: 3
+  history_days: 5
+  download_chunk_size: 50
+  top_n: 10

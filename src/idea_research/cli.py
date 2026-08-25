@@ -77,11 +77,24 @@ def _prepare(args: argparse.Namespace) -> int:
 
 def _doctor(args: argparse.Namespace) -> int:
     sources = load_yaml(args.sources)
+    price_pool_value = str(sources.get("prices", {}).get("saas_pool_path", "data/stock_universe/saas_pool.json"))
+    price_pool_path = Path(price_pool_value)
+    if not price_pool_path.is_absolute():
+        price_pool_path = project_root() / price_pool_path
+    price_pool: dict[str, Any] = {}
+    if price_pool_path.exists():
+        try:
+            price_pool = json.loads(price_pool_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            price_pool = {}
+    price_pool_stocks = price_pool.get("stocks") if isinstance(price_pool, dict) else []
     checks: dict[str, Any] = {
         "substack_publications": len(sources.get("substack", {}).get("publications") or []),
         "reddit_subreddits": len(sources.get("reddit", {}).get("subreddits") or []),
         "x_accounts": len(sources.get("x", {}).get("accounts") or []),
-        "price_tickers": len(sources.get("prices", {}).get("tickers") or []),
+        "saas_price_pool": str(price_pool_path),
+        "saas_price_pool_ready": bool(price_pool_stocks),
+        "saas_price_pool_stocks": len(price_pool_stocks) if isinstance(price_pool_stocks, list) else 0,
         "reddit_oauth": bool(os.environ.get("REDDIT_CLIENT_ID") and os.environ.get("REDDIT_CLIENT_SECRET")),
         "reddit_personal_oauth": bool(
             os.environ.get("REDDIT_REFRESH_TOKEN")
@@ -91,13 +104,9 @@ def _doctor(args: argparse.Namespace) -> int:
         "x_official_api": bool(os.environ.get("X_BEARER_TOKEN")),
         "x_twscrape_cookies": bool(os.environ.get("TWITTER_COOKIES")),
         "x_rss_accounts": sum(1 for value in sources.get("x", {}).get("accounts") or [] if isinstance(value, dict) and value.get("rss_url")),
-        "alpha_vantage_market_movers": bool(
-            sources.get("prices", {}).get("market_movers", {}).get("enabled")
-            and os.environ.get(str(sources.get("prices", {}).get("market_movers", {}).get("api_key_env", "ALPHAVANTAGE_API_KEY")))
-        ),
     }
     checks["ready_without_more_credentials"] = bool(
-        checks["substack_publications"] and checks["reddit_subreddits"] and checks["price_tickers"]
+        checks["substack_publications"] and checks["reddit_subreddits"] and checks["saas_price_pool_ready"]
     )
     print(json.dumps(checks, ensure_ascii=False, indent=2))
     return 0

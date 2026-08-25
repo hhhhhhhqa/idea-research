@@ -104,21 +104,21 @@ def test_report_rolls_up_wsb_posts_into_ticker_heat(tmp_path):
     assert context["items"] == []
 
 
-def test_report_exposes_alpha_vantage_movers_without_individual_price_records(tmp_path):
+def test_report_exposes_yfinance_movers_without_individual_price_records(tmp_path):
     now = datetime(2026, 8, 24, 21, tzinfo=timezone.utc)
     mover = SignalItem(
-        id="price:alpha:gainers",
+        id="price:yfinance:gainers",
         source_type="price",
-        source_name="Alpha Vantage",
-        title="US close top gainers",
-        url="https://example.com/movers",
+        source_name="Yahoo Finance",
+        title="SaaS / software / Internet 涨幅前十 2026-08-25",
+        url="https://finance.yahoo.com/markets/stocks/gainers/",
         published_at=now.isoformat(),
         collected_at=now.isoformat(),
         metadata={
             "market_mover_type": "gainers",
             "market_session": "regular_close_end_of_day",
-            "last_updated": "2026-08-24 16:15:00 US/Eastern",
-            "records": [{"ticker": "NET", "price": "120", "change_percentage": "9%"}],
+            "price_date": "2026-08-25",
+            "records": [{"ticker": "NET", "close": 120, "change_percentage": 9.0}],
         },
     )
     feed = build_feed([PipelineResult(pipeline="prices", items=[mover])])

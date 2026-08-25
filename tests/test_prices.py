@@ -1,19 +1,36 @@
-from datetime import datetime, timezone
-
-from idea_research.pipelines.prices import alpha_vantage_mover_items
+from idea_research.pipelines.prices import calculate_daily_movers, merge_rolling_prices
 
 
-def test_alpha_vantage_movers_keep_raw_close_lists():
-    payload = {
-        "last_updated": "2026-08-24 16:15:00 US/Eastern",
-        "top_gainers": [
-            {"ticker": "NET", "price": "120.00", "change_amount": "10.00", "change_percentage": "9.09%", "volume": "100"}
-        ],
-        "top_losers": [
-            {"ticker": "SNOW", "price": "150.00", "change_amount": "-12.00", "change_percentage": "-7.41%", "volume": "200"}
-        ],
+def test_rolling_prices_keep_only_three_trading_days_and_pool_symbols():
+    existing = {
+        "prices": {
+            "2026-08-20": {"AAA": 10},
+            "2026-08-21": {"AAA": 11, "OLD": 99},
+        }
     }
-    items = alpha_vantage_mover_items(payload, now=datetime(2026, 8, 25, tzinfo=timezone.utc))
-    assert [item.metadata["market_mover_type"] for item in items] == ["gainers", "losers"]
-    assert items[0].metadata["records"][0]["ticker"] == "NET"
-    assert items[1].published_at == "2026-08-24T20:15:00+00:00"
+    rolling = merge_rolling_prices(
+        existing,
+        {
+            "2026-08-24": {"AAA": 12, "BBB": 20},
+            "2026-08-25": {"AAA": 10, "BBB": 22},
+        },
+        allowed_tickers={"AAA", "BBB"},
+        retention_days=3,
+    )
+    assert rolling["dates"] == ["2026-08-21", "2026-08-24", "2026-08-25"]
+    assert "OLD" not in rolling["prices"]["2026-08-21"]
+
+
+def test_daily_movers_compare_latest_close_with_previous_close():
+    rolling = {
+        "prices": {
+            "2026-08-24": {"AAA": 100, "BBB": 200, "CCC": 50},
+            "2026-08-25": {"AAA": 110, "BBB": 180, "CCC": 50},
+        }
+    }
+    price_date, gainers, losers = calculate_daily_movers(rolling, top_n=10)
+    assert price_date == "2026-08-25"
+    assert gainers[0]["ticker"] == "AAA"
+    assert gainers[0]["change_percentage"] == 10.0
+    assert losers[0]["ticker"] == "BBB"
+    assert losers[0]["change_percentage"] == -10.0

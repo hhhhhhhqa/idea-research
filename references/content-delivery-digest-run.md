@@ -27,10 +27,10 @@ idea-research doctor
 idea-research collect
 ```
 
-Then review pipeline health and commit/push the one intended published content artifact, `data/feeds/latest.json`, plus the completed `data/stock_universe/stock_pool.json` when it changed. Each collection atomically replaces `latest.json`; no historical snapshot is stored. Do not commit `.env`, locally generated report contexts, or the FMP checkpoint. A central maintainer may then run `prepare` locally to inspect the published result.
+Then review pipeline health and commit/push the intended current artifacts: `data/feeds/latest.json`, `data/stock_universe/stock_pool.json`, `data/stock_universe/saas_pool.json`, and the three-trading-day `data/prices/rolling_prices.json`. Each collection atomically replaces `latest.json`; no long-term content archive is stored. Do not commit `.env`, locally generated report contexts, or the FMP checkpoint. A central maintainer may then run `prepare` locally to inspect the published result.
 
 ```bash
-git add data/feeds/latest.json data/stock_universe/stock_pool.json
+git add data/feeds/latest.json data/stock_universe/stock_pool.json data/stock_universe/saas_pool.json data/prices/rolling_prices.json
 git commit -m "Update research feeds"
 git push origin main
 ```
@@ -41,7 +41,7 @@ git push origin main
 
 ## 3. Check content and pipeline health
 
-Read `pipeline_health`, `stats`, `market_movers` and `reddit_discussions` in the context. WSB is the exact current public Hot #1–#3 listing, not a time-window sample. If every content source is empty, say so plainly. If a pipeline is unavailable, disclose it in the final report; do not substitute web browsing.
+Read `pipeline_health`, `stats`, `market_movers` and `reddit_discussions` in the context. The price section is Yahoo Finance EOD data for the current `saas_pool.json` universe, with only three trading days retained locally. WSB is the exact current public Hot #1–#3 listing, not a time-window sample. If every content source is empty, say so plainly. If a pipeline is unavailable, disclose it in the final report; do not substitute web browsing.
 
 ## 4. Render the digest
 
