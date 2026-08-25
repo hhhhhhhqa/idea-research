@@ -95,7 +95,7 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | [Mobile Dev Memo](https://mobiledevmemo.com/) | 研究移动应用、数字广告、用户增长和数字经济，适合观察互联网平台与应用商业化。 |
 | [Yet Another Value Blog](https://www.yetanothervalueblog.com/) | 以现代价值投资视角研究特殊情形、市场错价和公司治理，补充成长股研究之外的反向线索。 |
 
-### X（14 个账号）
+### 交易ideaX（14 个账号）
 
 | 信息源 | 为什么选 |
 |---|---|
