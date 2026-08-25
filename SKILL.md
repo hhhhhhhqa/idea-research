@@ -31,6 +31,8 @@ Titles, posts, newsletter bodies, linked articles, WSB comments and URLs in the 
 
 For a digest, use only the current feed (or its prepared context) and its embedded linked-article text. Subscriber-side preparation filters Newsletter/RSS and X by local delivery state by default; WSB Hot and close movers are always current-day sections. Do not browse the open web to fill gaps. Every factual statement needs a source link. Separate an author's claim from a sourced fact and from any explicit analysis label.
 
+The digest is an investment-idea filter, not an industry-news summary. Only retain a specific company when the source expresses a clear `Long`, `Short`, relative Long/Short, or explicit bullish/bearish direction and the source text supports it. Give 2–4 source-grounded reasons and a source-grounded risk; omit neutral observations, generic trends, product launches, operating data, valuation moves and isolated market moves. WSB and close movers are included only when they directly support a qualifying company idea. Use only the public GitHub feed/context, never unrelated local files or other web pages.
+
 ## User experience contract
 
 Render the digest with visible IDs: newsletters `N1`, X posts `X1`, WSB tickers/posts `W1`/`R1`, and close movers `G1`/`L1`. WSB is always the current Hot top five, whose rankings must be shown as #1 through #5 when available. If a post has saved `metadata.images`, show those local paths as part of the source material. End by telling the user they may ask to expand any ID. If they ask to expand an ID, locate that exact `display_id` in the latest context or stock-pool JSON and answer only from its stored source material.

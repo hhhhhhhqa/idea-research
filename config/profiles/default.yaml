@@ -3,7 +3,8 @@ language: zh-CN
 detail: standard
 report_focus: >-
   由阅读 feed 的 Agent 判断与 AI、互联网、软件二级市场 idea generation 的相关性，
-  Newsletter / X 必须进一步对应到具体上市公司；对符合条件的材料当天全量展示，
+  Newsletter / X 必须进一步对应到具体上市公司并有明确 Long/Short 或偏多/偏空方向；
+  只有原文支持的 2-4 个关键理由和风险才进入日报，对符合条件的材料当天全量展示，
   不对来源或观点打分，也不把热度本身当作投资结论。
 
 reddit_discussions:
