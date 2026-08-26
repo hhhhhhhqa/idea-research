@@ -36,7 +36,7 @@
 - Newsletter / RSS：`N1`、`N2`（每项必须写对应股票）
 - X：`X1`、`X2`（每项必须写对应股票）
 - 产业变化：`I1`、`I2`（不强行对应股票）
-- WSB ticker：`W1`；WSB Hot 帖子：`R1`
+- WSB DD 帖子：`R1`
 - 涨幅榜 / 跌幅榜：`G1` / `L1`
 
 不要重新编号，也不要给没有 `display_id` 的内容编造编号。结尾告诉用户可以说“展开 N2”、“解释 X1”、“查看 R1”或“详细看看 L3”。
@@ -55,9 +55,9 @@
 
 ### WSB 今日讨论
 
-读取 `reddit_discussions` 和 `wsb_posts`。只输出明确讨论某一家公司且表达方向性观点的 WSB 帖子；没有 ticker、没有公司观点、只有 meme 或情绪的帖子省略。若有观点，写出方向和帖子原文支持该方向的内容（有多少写多少，没有就不补）。保留 `R*`、`W*`、Hot 名次、标题、链接和实际可用的图片信息，不把散户注意力当作基本面证据或交易建议。没有符合条件的 WSB idea 时不要用热度榜凑数量。
+读取 `reddit_discussions` 和 `wsb_posts`。`wsb_posts` 是中央端在采集时刻抓到的 WallStreetBets `DD` flair、`sort=top`、`t=day` 的前十篇，且只能有 DD #1–#10。必须按固定顺序逐篇识别 `R1`–`R10`，显示 DD 名次、标题、链接和该帖识别到的 ticker；没有 ticker 时明确写“未识别到股票”。只输出明确讨论某一家公司且表达方向性观点的 WSB 帖子；没有公司观点、只有 meme 或情绪的帖子省略。若有观点，写出方向和帖子原文支持该方向的内容（有多少写多少，没有就不补）。保留实际可用的图片信息，不把散户注意力当作基本面证据或交易建议。没有符合条件的 WSB idea 时不要用热度榜凑数量。
 
-如果 `engagement_available` 为 false，说明这是公开 RSS Hot 榜位置，没有点赞/评论数据。WSB 只代表散户注意力，不能作为公司基本面、催化剂或交易建议的证据。
+如果 `engagement_available` 为 false，说明这是公开 RSS 的 DD 每日 Top 排名，没有点赞/评论数据。WSB 只代表散户注意力，不能作为公司基本面、催化剂或交易建议的证据。
 
 ### 美股收盘异动
 
@@ -93,6 +93,6 @@
 
 `idea-research mark-delivered --file <context.delivery_mark_path> --shown N1,N3,X1-X4,I1`
 
-其中 `<context.delivery_mark_path>` 使用 context 中的真实路径；不要标记被你判定为不相关、没有输出或发送失败的项目。WSB 的 `W*` / `R*` 和价格异动的 `G*` / `L*` 不参与去重。若确实完整展示了所有 Newsletter/X/产业变化候选，可使用 `--all`。
+其中 `<context.delivery_mark_path>` 使用 context 中的真实路径；不要标记被你判定为不相关、没有输出或发送失败的项目。WSB 的 `R*` 和价格异动的 `G*` / `L*` 不参与去重。若确实完整展示了所有 Newsletter/X/产业变化候选，可使用 `--all`。
 
 结尾先给出数据异常 / 缺口，再加：`Generated through Idea Research: https://github.com/hhhhhhhqa/idea-research`
