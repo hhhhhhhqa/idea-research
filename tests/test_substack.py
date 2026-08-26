@@ -1,4 +1,5 @@
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 from idea_research.pipelines.substack import parse_substack_feed
 
@@ -35,3 +36,25 @@ def test_parse_generic_rss_feed_keeps_its_own_source_type():
     )
     assert items[0].source_type == "rss"
     assert items[0].id.startswith("rss:")
+
+
+def test_parse_substack_feed_same_calendar_day_uses_configured_timezone():
+    feed = FEED.replace("Sun, 23 Aug 2026 12:00:00 GMT", "Mon, 24 Aug 2026 15:30:00 GMT")
+    now = datetime(2026, 8, 24, 16, tzinfo=timezone.utc)
+    assert parse_substack_feed(
+        feed,
+        {"name": "Test Letter", "url": "https://example.com"},
+        now=now,
+        same_day=True,
+        day_timezone=ZoneInfo("Asia/Hong_Kong"),
+    ) == []
+
+    feed = FEED.replace("Sun, 23 Aug 2026 12:00:00 GMT", "Mon, 24 Aug 2026 16:30:00 GMT")
+    items = parse_substack_feed(
+        feed,
+        {"name": "Test Letter", "url": "https://example.com"},
+        now=now,
+        same_day=True,
+        day_timezone=ZoneInfo("Asia/Hong_Kong"),
+    )
+    assert len(items) == 1

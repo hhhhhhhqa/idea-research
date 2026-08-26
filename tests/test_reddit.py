@@ -8,6 +8,7 @@ from idea_research.pipelines.reddit import (
     extract_reddit_symbols,
     parse_reddit_json,
     parse_reddit_rss,
+    _reddit_listing_request,
 )
 
 
@@ -96,6 +97,58 @@ def test_parse_reddit_json_extracts_preview_image_urls():
     assert items[0].metadata["image_urls"] == ["https://i.redd.it/chart.png?width=1"]
 
 
+def test_parse_reddit_json_filters_to_requested_dd_flair():
+    created = 1787486400
+    payload = {
+        "data": {
+            "children": [
+                {"data": {
+                    "name": "t3_dd",
+                    "title": "$NVDA DD thesis",
+                    "link_flair_text": "DD",
+                    "created_utc": created,
+                    "permalink": "/r/wallstreetbets/comments/dd/thesis/",
+                }},
+                {"data": {
+                    "name": "t3_meme",
+                    "title": "$GME meme",
+                    "link_flair_text": "Meme",
+                    "created_utc": created,
+                    "permalink": "/r/wallstreetbets/comments/meme/post/",
+                }},
+            ]
+        }
+    }
+    items = parse_reddit_json(
+        payload,
+        "wallstreetbets",
+        now=datetime.fromtimestamp(created, tz=timezone.utc),
+        listing="dd",
+        flair="DD",
+        lookback_hours=None,
+    )
+    assert len(items) == 1
+    assert items[0].metadata["flair"] == "DD"
+    assert items[0].metadata["listing"] == "dd"
+
+
+def test_dd_listing_uses_daily_top_flair_search():
+    endpoint, params, flair = _reddit_listing_request(
+        {"listing": "dd", "flair": "DD", "sort": "top", "time_filter": "day"},
+        10,
+    )
+    assert endpoint == "search"
+    assert flair == "DD"
+    assert params == {
+        "q": "flair:DD",
+        "restrict_sr": "1",
+        "sort": "top",
+        "t": "day",
+        "limit": 10,
+        "raw_json": 1,
+    }
+
+
 class _FakeImageResponse:
     headers = {"content-type": "image/png"}
 
@@ -152,7 +205,7 @@ def test_combined_rss_infers_subreddit_from_link():
     assert items[0].source_name == "r/artificial"
 
 
-def test_wsb_rss_extracts_tickers_and_records_hot_rank():
+def test_wsb_rss_extracts_tickers_and_records_dd_rank():
     xml = """<feed xmlns="http://www.w3.org/2005/Atom"><entry>
     <id>t3_wsb</id><title>$NVDA and Tesla rally while CEO speaks</title>
     <link href="https://www.reddit.com/r/wallstreetbets/comments/wsb/test/" />

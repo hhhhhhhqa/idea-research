@@ -4,6 +4,7 @@ import argparse
 import json
 import os
 import sys
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
@@ -32,39 +33,84 @@ SOURCE_TYPES = {
 def _collect(args: argparse.Namespace) -> int:
     sources = load_yaml(args.sources)
     selected = args.pipeline or list(PIPELINES)
-    results = []
-    for name in selected:
-        result = PIPELINES[name](sources.get(name, {}))
-        results.append(result)
-        print(json.dumps(result.to_dict(), ensure_ascii=False), file=sys.stderr)
 
-    preserved: list[SignalItem] = []
-    latest = Path(args.data_dir) / "feeds" / "latest.json"
-    previous_feed: dict[str, Any] = {}
-    if latest.exists() and set(selected) != set(PIPELINES):
-        previous_feed = read_json(latest)
-        replaced_types = set().union(*(SOURCE_TYPES[name] for name in selected))
-        preserved = [
-            SignalItem.from_dict(item)
-            for item in previous_feed.get("items", [])
-            if item.get("source_type") not in replaced_types
-        ]
-    feed = build_feed(results, preserved)
-    if previous_feed:
-        current_statuses = {result.pipeline for result in results}
-        # A partial refresh retains status for the untouched pipelines, but an
-        # older feed may contain duplicate statuses from earlier partial runs.
-        # Keep only its newest status for each untouched pipeline.
-        preserved_statuses: dict[str, dict[str, Any]] = {}
-        for status in previous_feed.get("pipelines", []):
-            name = str(status.get("pipeline") or "")
-            if name and name not in current_statuses:
-                preserved_statuses[name] = status
-        feed["pipelines"].extend(preserved_statuses.values())
-    latest_path = save_feed(args.data_dir, feed)
-    print(json.dumps({"latest": str(latest_path), "counts": feed["counts"]}, ensure_ascii=False))
+    def run_phase(names: list[str]) -> list[Any]:
+        phase_results = []
+        for name in names:
+            result = PIPELINES[name](sources.get(name, {}))
+            phase_results.append(result)
+            print(json.dumps(result.to_dict(), ensure_ascii=False), file=sys.stderr)
+        return phase_results
+
+    def save_phase(names: list[str], phase_results: list[Any]) -> Path:
+        latest = Path(args.data_dir) / "feeds" / "latest.json"
+        previous_feed: dict[str, Any] = read_json(latest) if latest.exists() else {}
+        preserved: list[SignalItem] = []
+        retention_days_by_type: dict[str, int] = {}
+        for name in names:
+            configured_days = sources.get(name, {}).get("retention_days", 0)
+            try:
+                retention_days = max(0, int(configured_days))
+            except (TypeError, ValueError):
+                retention_days = 0
+            for source_type in SOURCE_TYPES[name]:
+                retention_days_by_type[source_type] = retention_days
+        if previous_feed:
+            replaced_types = set().union(*(SOURCE_TYPES[name] for name in names))
+            now = datetime.now(timezone.utc)
+            preserved = [
+                SignalItem.from_dict(item)
+                for item in previous_feed.get("items", [])
+                if item.get("source_type") not in replaced_types
+                or (
+                    retention_days_by_type.get(str(item.get("source_type") or ""), 0) > 0
+                    and _item_within_retention(
+                        item,
+                        now,
+                        retention_days_by_type[str(item.get("source_type") or "")],
+                    )
+                )
+            ]
+        feed = build_feed(phase_results, preserved)
+        if previous_feed:
+            current_statuses = {result.pipeline for result in phase_results}
+            # A partial refresh retains status for the untouched pipelines, but an
+            # older feed may contain duplicate statuses from earlier partial runs.
+            # Keep only its newest status for each untouched pipeline.
+            preserved_statuses: dict[str, dict[str, Any]] = {}
+            for status in previous_feed.get("pipelines", []):
+                name = str(status.get("pipeline") or "")
+                if name and name not in current_statuses:
+                    preserved_statuses[name] = status
+            feed["pipelines"].extend(preserved_statuses.values())
+        return save_feed(args.data_dir, feed)
+
+    # X may deliberately wait for a twscrape SearchTimeline reset. Publish the
+    # non-X sources first so their feed is usable while X is sleeping.
+    if "x" in selected and len(selected) > 1:
+        non_x = [name for name in selected if name != "x"]
+        first_results = run_phase(non_x)
+        save_phase(non_x, first_results)
+        x_results = run_phase(["x"])
+        results = first_results + x_results
+        latest_path = save_phase(["x"], x_results)
+    else:
+        results = run_phase(selected)
+        latest_path = save_phase(selected, results)
+    final_feed = read_json(latest_path)
+    print(json.dumps({"latest": str(latest_path), "counts": final_feed["counts"]}, ensure_ascii=False))
     failed = any(result.status == "error" for result in results)
     return 1 if args.strict and failed else 0
+
+
+def _item_within_retention(item: dict[str, Any], now: datetime, retention_days: int) -> bool:
+    try:
+        published = datetime.fromisoformat(str(item.get("published_at") or "").replace("Z", "+00:00"))
+    except (TypeError, ValueError):
+        return False
+    if published.tzinfo is None:
+        published = published.replace(tzinfo=timezone.utc)
+    return published.astimezone(timezone.utc) >= now - timedelta(days=retention_days)
 
 
 def _prepare(args: argparse.Namespace) -> int:

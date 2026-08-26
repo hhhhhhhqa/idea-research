@@ -131,6 +131,7 @@ def parse_reddit_json(
     now: datetime | None = None,
     lookback_hours: int | None = 72,
     listing: str = "new",
+    flair: str | None = None,
     known_tickers: list[str] | None = None,
     ticker_aliases: dict[str, list[str]] | None = None,
 ) -> list[SignalItem]:
@@ -140,6 +141,9 @@ def parse_reddit_json(
     children = payload.get("data", {}).get("children", [])
     for feed_rank, child in enumerate(children, start=1):
         post = child.get("data", {})
+        actual_flair = str(post.get("link_flair_text") or "").strip()
+        if flair and actual_flair and actual_flair.casefold() != flair.casefold():
+            continue
         created = datetime.fromtimestamp(float(post.get("created_utc") or now.timestamp()), tz=timezone.utc).isoformat()
         if lookback_hours is not None and not within_lookback(created, lookback_hours, now):
             continue
@@ -178,6 +182,7 @@ def parse_reddit_json(
                     "transport": "oauth_json",
                     "listing": listing,
                     "feed_rank": feed_rank,
+                    "requested_flair": flair or "",
                     "image_urls": image_urls,
                 },
             )
@@ -192,6 +197,9 @@ def parse_reddit_rss(
     now: datetime | None = None,
     lookback_hours: int | None = 72,
     listing: str = "new",
+    flair: str | None = None,
+    sort: str | None = None,
+    time_filter: str | None = None,
     known_tickers: list[str] | None = None,
     ticker_aliases: dict[str, list[str]] | None = None,
 ) -> list[SignalItem]:
@@ -200,6 +208,16 @@ def parse_reddit_rss(
     parsed = feedparser.parse(xml)
     items: list[SignalItem] = []
     for feed_rank, entry in enumerate(parsed.entries, start=1):
+        entry_flair = ""
+        tags = entry.get("tags") or []
+        for tag in tags:
+            if isinstance(tag, dict):
+                term = str(tag.get("term") or "").strip()
+                if term:
+                    entry_flair = term
+                    break
+        if flair and entry_flair and entry_flair.casefold() != flair.casefold():
+            continue
         published = iso_datetime(entry.get("published") or entry.get("updated"), collected_at)
         if lookback_hours is not None and not within_lookback(published, lookback_hours, now):
             continue
@@ -230,6 +248,10 @@ def parse_reddit_rss(
                     "section": "transaction_ideas",
                     "transport": "rss",
                     "listing": listing,
+                    "flair": entry_flair or (flair or ""),
+                    "requested_flair": flair or "",
+                    "sort": sort or "",
+                    "time_filter": time_filter or "",
                     "feed_rank": feed_rank,
                     "image_urls": image_urls,
                 },
@@ -276,6 +298,26 @@ def _anonymous_combined_rss(
         counts[name] += 1
         kept.append(item)
     return kept
+
+
+def _reddit_listing_request(entry: dict[str, Any], limit: int) -> tuple[str, dict[str, Any], str | None]:
+    """Return endpoint, query params and requested flair for a configured listing."""
+    listing = str(entry.get("listing", "new")).lower()
+    flair = str(entry.get("flair") or "").strip() or None
+    if listing != "dd":
+        return listing, {"limit": limit, "raw_json": 1}, flair
+    # Reddit has no /dd listing.  DD is a subreddit search constrained to the
+    # DD flair, sorted by Reddit's daily top ranking.
+    query_flair = flair or "DD"
+    params = {
+        "q": f"flair:{query_flair}",
+        "restrict_sr": "1",
+        "sort": str(entry.get("sort") or "top"),
+        "t": str(entry.get("time_filter") or "day"),
+        "limit": limit,
+        "raw_json": 1,
+    }
+    return "search", params, query_flair
 
 
 def _oauth_token(client: httpx.Client) -> str:
@@ -428,10 +470,16 @@ def collect_reddit(config: dict[str, Any], client: httpx.Client | None = None) -
         normalized = [{"name": raw} if isinstance(raw, str) else raw for raw in subreddits]
         if not token:
             grouped: dict[str, list[dict[str, Any]]] = {}
+            per_entry_entries: list[dict[str, Any]] = []
             for entry in normalized:
                 listing = str(entry.get("listing", "new")).lower()
+                # DD is a flair-filtered search, not a subreddit listing; the
+                # combined multi-subreddit RSS endpoint cannot express it.
+                if listing == "dd":
+                    per_entry_entries.append(entry)
+                    continue
                 grouped.setdefault(listing, []).append(entry)
-            failed_entries: list[dict[str, Any]] = []
+            failed_entries: list[dict[str, Any]] = list(per_entry_entries)
             for index, (listing, entries) in enumerate(grouped.items()):
                 if index:
                     time.sleep(float(config.get("anonymous_request_delay_seconds", 2.0)))
@@ -452,16 +500,21 @@ def collect_reddit(config: dict[str, Any], client: httpx.Client | None = None) -
             configured_lookback = entry.get("lookback_hours", config.get("lookback_hours", 72))
             lookback = int(configured_lookback) if configured_lookback is not None else None
             listing = str(entry.get("listing", "new")).lower()
-            if listing not in {"new", "hot", "top"}:
+            if listing not in {"new", "hot", "top", "dd"}:
                 result.errors.append(f"r/{name}: unsupported listing={listing}")
                 continue
+            endpoint_listing, request_params, requested_flair = _reddit_listing_request(entry, limit)
+            # A DD search is already constrained to Reddit's daily top window;
+            # an additional publication lookback would incorrectly discard
+            # posts that remain in that ranking.
+            effective_lookback = None if listing == "dd" else lookback
             if index and not token:
                 time.sleep(float(config.get("anonymous_request_delay_seconds", 2.0)))
             try:
                 if token:
                     response = client.get(
-                        f"https://oauth.reddit.com/r/{name}/{listing}.json",
-                        params={"limit": limit, "raw_json": 1},
+                        f"https://oauth.reddit.com/r/{name}/{endpoint_listing}.json",
+                        params=request_params,
                         headers={"Authorization": f"Bearer {token}"},
                     )
                     response.raise_for_status()
@@ -469,21 +522,30 @@ def collect_reddit(config: dict[str, Any], client: httpx.Client | None = None) -
                         parse_reddit_json(
                             response.json(),
                             name,
-                            lookback_hours=lookback,
+                            lookback_hours=effective_lookback,
                             listing=listing,
+                            flair=requested_flair,
                             known_tickers=config.get("known_tickers") or [],
                             ticker_aliases=config.get("ticker_aliases") or {},
                         )[:limit]
                     )
                 else:
-                    response = client.get(f"https://www.reddit.com/r/{name}/{listing}.rss", params={"limit": limit})
+                    rss_params = dict(request_params)
+                    rss_params.pop("raw_json", None)
+                    response = client.get(
+                        f"https://www.reddit.com/r/{name}/{endpoint_listing}.rss",
+                        params=rss_params,
+                    )
                     response.raise_for_status()
                     result.items.extend(
                         parse_reddit_rss(
                             response.text,
                             name,
-                            lookback_hours=lookback,
+                            lookback_hours=effective_lookback,
                             listing=listing,
+                            flair=requested_flair,
+                            sort=str(entry.get("sort") or "") or None,
+                            time_filter=str(entry.get("time_filter") or "") or None,
                             known_tickers=config.get("known_tickers") or [],
                             ticker_aliases=config.get("ticker_aliases") or {},
                         )[:limit]
@@ -496,16 +558,17 @@ def collect_reddit(config: dict[str, Any], client: httpx.Client | None = None) -
                 try:
                     # Some networks block RSS while leaving the public listing available.
                     response = client.get(
-                        f"https://www.reddit.com/r/{name}/{listing}.json",
-                        params={"limit": limit, "raw_json": 1},
+                        f"https://www.reddit.com/r/{name}/{endpoint_listing}.json",
+                        params=request_params,
                     )
                     response.raise_for_status()
                     result.items.extend(
                         parse_reddit_json(
                             response.json(),
                             name,
-                            lookback_hours=lookback,
+                            lookback_hours=effective_lookback,
                             listing=listing,
+                            flair=requested_flair,
                             known_tickers=config.get("known_tickers") or [],
                             ticker_aliases=config.get("ticker_aliases") or {},
                         )[:limit]

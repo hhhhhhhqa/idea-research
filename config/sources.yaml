@@ -1,6 +1,11 @@
 substack:
   section: transaction_ideas
-  lookback_hours: 168
+  # Newsletter/RSS is collected by the user's calendar day. Delivery state
+  # remains subscriber-local for three days (see idea_research/delivery.py).
+  same_day: true
+  timezone: Asia/Hong_Kong
+  lookback_hours: 24
+  retention_days: 3
   publications:
     - name: Latent Space
       url: https://www.latent.space
@@ -54,20 +59,23 @@ substack:
 
 reddit:
   section: transaction_ideas
-  lookback_hours: 36
+  lookback_hours: 24
   max_items_per_subreddit: 100
   anonymous_request_delay_seconds: 12.0
-  # Keep the current public Hot leaderboard and save image attachments with the feed.
+  # Keep WallStreetBets DD (Due Diligence) daily Top posts and save image attachments.
   download_images: true
   media_dir: data/media/reddit
   max_images_per_post: 4
   max_image_bytes: 5000000
   subreddits:
     - name: wallstreetbets
-      listing: hot
-      # Capture the current Hot leaderboard itself, rather than only posts
-      # published within a time window. This preserves positions #1 through #5.
-      limit: 5
+      listing: dd
+      flair: DD
+      sort: top
+      time_filter: day
+      # Reddit's daily Top search is ranked by the subreddit, not by our
+      # collector. Keep exactly the first ten returned positions.
+      limit: 10
       lookback_hours:
 
   # Bare uppercase words are accepted only from this allowlist. Unknown cashtags such
@@ -144,7 +152,15 @@ reddit:
 
 x:
   section: transaction_ideas
-  lookback_hours: 72
+  # X is a same-calendar-day source in the user's timezone, not a rolling 72h feed.
+  same_day: true
+  timezone: Asia/Hong_Kong
+  lookback_hours: 24
+  retention_days: 3
+  # One twscrape session may be rate-limited by SearchTimeline. Keep waiting for
+  # the server reset, then resume the next account; transaction ideas are ordered first.
+  cooldown_poll_seconds: 5
+  search_limit_per_account: 300
   include_replies: false
   linked_articles:
     enabled: true

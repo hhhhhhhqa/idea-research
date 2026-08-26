@@ -8,6 +8,7 @@ import socket
 from datetime import datetime, timedelta, timezone
 from typing import Any
 from urllib.parse import urljoin, urlparse
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 import feedparser
 import httpx
@@ -24,6 +25,77 @@ TWSCRAPE_ACCOUNT = "feed_bot"
 ACCOUNT_CONTEXT_FIELDS = ("investor_type", "coverage", "evidence_note")
 URL_PATTERN = re.compile(r"https?://[^\s<>\"']+", re.IGNORECASE)
 X_HOSTS = {"x.com", "www.x.com", "twitter.com", "www.twitter.com", "mobile.twitter.com"}
+DEFAULT_X_TIMEZONE = "Asia/Hong_Kong"
+TWITTER_COOKIE_FILE = "credentials/x_twitter_cookies.txt"
+
+
+def _load_twitter_cookie_values() -> list[str]:
+    """Load one or more X cookie strings from env vars or the ignored local file."""
+    env_values: list[tuple[int, str]] = []
+    for key, value in os.environ.items():
+        match = re.fullmatch(r"TWITTER_COOKIES(?:_(\d+))?", key)
+        if match and value.strip():
+            env_values.append((int(match.group(1) or 1), value.strip()))
+    if env_values:
+        return [value for _, value in sorted(env_values)]
+    path = project_root() / TWITTER_COOKIE_FILE
+    try:
+        lines = [
+            line.strip()
+            for line in path.read_text(encoding="utf-8").splitlines()
+            if line.strip() and not line.lstrip().startswith("#")
+        ]
+    except FileNotFoundError:
+        return []
+    return lines
+
+
+def _load_twitter_cookies() -> str:
+    """Backward-compatible helper returning the first configured cookie string."""
+    values = _load_twitter_cookie_values()
+    return values[0] if values else ""
+
+
+def _zone(value: str | None) -> ZoneInfo | timezone:
+    """Resolve the collection timezone without making a bad config fatal."""
+    name = str(value or DEFAULT_X_TIMEZONE)
+    try:
+        return ZoneInfo(name)
+    except ZoneInfoNotFoundError:
+        return timezone.utc
+
+
+def _parsed_datetime(value: Any) -> datetime | None:
+    if value is None or value == "":
+        return None
+    if isinstance(value, datetime):
+        parsed = value
+    else:
+        try:
+            parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        except ValueError:
+            return None
+    return parsed.replace(tzinfo=timezone.utc) if parsed.tzinfo is None else parsed
+
+
+def _same_collection_day(timestamp: str, now: datetime, day_timezone: ZoneInfo | timezone) -> bool:
+    """Return whether a timestamp falls on today's calendar day in the configured timezone."""
+    parsed = _parsed_datetime(timestamp)
+    if parsed is None:
+        return True
+    return parsed.astimezone(day_timezone).date() == now.astimezone(day_timezone).date()
+
+
+def _before_collection_day(value: Any, now: datetime, day_timezone: ZoneInfo | timezone) -> bool:
+    parsed = _parsed_datetime(value)
+    if parsed is None:
+        return False
+    return parsed.astimezone(day_timezone).date() < now.astimezone(day_timezone).date()
+
+
+def _day_start(now: datetime, day_timezone: ZoneInfo | timezone) -> datetime:
+    local_now = now.astimezone(day_timezone)
+    return datetime.combine(local_now.date(), datetime.min.time(), tzinfo=day_timezone).astimezone(timezone.utc)
 
 
 def _account_metadata(account: dict[str, Any], transport: str) -> dict[str, Any]:
@@ -181,12 +253,21 @@ def enrich_linked_articles(items: list[SignalItem], client: httpx.Client, config
     return stored, skipped
 
 
-def parse_x_tweets(payload: dict[str, Any], account: dict[str, Any], *, now: datetime | None = None) -> list[SignalItem]:
+def parse_x_tweets(
+    payload: dict[str, Any],
+    account: dict[str, Any],
+    *,
+    now: datetime | None = None,
+    same_day: bool = False,
+    day_timezone: ZoneInfo | timezone = timezone.utc,
+) -> list[SignalItem]:
     now = now or datetime.now(timezone.utc)
     collected_at = now.isoformat()
     handle = str(account["handle"]).lstrip("@")
     items: list[SignalItem] = []
     for tweet in payload.get("data") or []:
+        if same_day and not _same_collection_day(str(tweet.get("created_at") or ""), now, day_timezone):
+            continue
         tweet_id = str(tweet["id"])
         metrics = tweet.get("public_metrics") or {}
         items.append(
@@ -212,7 +293,15 @@ def parse_x_tweets(payload: dict[str, Any], account: dict[str, Any], *, now: dat
     return items
 
 
-def parse_x_rss(xml: str, account: dict[str, Any], *, now: datetime | None = None, lookback_hours: int = 72) -> list[SignalItem]:
+def parse_x_rss(
+    xml: str,
+    account: dict[str, Any],
+    *,
+    now: datetime | None = None,
+    lookback_hours: int = 72,
+    same_day: bool = False,
+    day_timezone: ZoneInfo | timezone = timezone.utc,
+) -> list[SignalItem]:
     now = now or datetime.now(timezone.utc)
     collected_at = now.isoformat()
     handle = str(account["handle"]).lstrip("@")
@@ -220,7 +309,9 @@ def parse_x_rss(xml: str, account: dict[str, Any], *, now: datetime | None = Non
     items: list[SignalItem] = []
     for entry in parsed.entries:
         published = iso_datetime(entry.get("published") or entry.get("updated"), collected_at)
-        if not within_lookback(published, lookback_hours, now):
+        if same_day and not _same_collection_day(published, now, day_timezone):
+            continue
+        if not same_day and not within_lookback(published, lookback_hours, now):
             continue
         link = str(entry.get("link") or "")
         body = clean_html(entry.get("summary") or entry.get("description") or entry.get("title"))
@@ -285,6 +376,8 @@ def parse_twscrape_tweet(
     *,
     now: datetime | None = None,
     lookback_hours: int = 72,
+    same_day: bool = False,
+    day_timezone: ZoneInfo | timezone = timezone.utc,
 ) -> SignalItem | None:
     """Map a twscrape Tweet (or duck-typed equivalent) to a SignalItem.
 
@@ -296,7 +389,9 @@ def parse_twscrape_tweet(
     collected_at = now.isoformat()
     handle = str(account["handle"]).lstrip("@")
     published = iso_datetime(getattr(tweet, "date", None), collected_at)
-    if not within_lookback(published, lookback_hours, now):
+    if same_day and not _same_collection_day(published, now, day_timezone):
+        return None
+    if not same_day and not within_lookback(published, lookback_hours, now):
         return None
     tweet_id = str(getattr(tweet, "id", "") or "")
     body = clean_html(str(getattr(tweet, "rawContent", "") or ""))[:12000]
@@ -334,10 +429,13 @@ def _collect_twitter_via_twscrape(
     and a valid, non-expired cookie string. twscrape is async, so this helper
     drives one short-lived event loop and returns plain results.
     """
-    cookies = os.environ.get("TWITTER_COOKIES", "")
-    if not cookies:
+    cookie_values = _load_twitter_cookie_values()
+    if not cookie_values:
         return [], ["TWITTER_COOKIES not set"], []
     lookback = int(config.get("lookback_hours", 72))
+    same_day = bool(config.get("same_day", False))
+    day_timezone = _zone(config.get("timezone"))
+    search_limit = max(10, min(1000, int(config.get("search_limit_per_account", 300))))
     configured_max = config.get("max_items_per_account")
     max_per_user = max(1, min(100, int(configured_max))) if configured_max is not None else None
     default_min_engagement = int(config.get("min_engagement", 0))
@@ -346,31 +444,73 @@ def _collect_twitter_via_twscrape(
 
     async def _run() -> tuple[list[SignalItem], list[str], list[str]]:
         # Lazy import keeps this module importable when twscrape is not installed.
-        from twscrape import API, gather
+        from contextlib import aclosing
 
-        api = API(db_path)
-        account = await api.pool.get_account(TWSCRAPE_ACCOUNT)
-        if account is None:
-            await api.pool.add_account_cookies(TWSCRAPE_ACCOUNT, cookies)
-            await api.pool.set_active(TWSCRAPE_ACCOUNT, True)
+        from twscrape import API
+
+        # twscrape's default wait_timeout=None intentionally waits for a
+        # SearchTimeline bucket to reset instead of abandoning lower-priority
+        # accounts. This wait is confined to the X collector; the CLI publishes
+        # the other pipeline results before entering this phase.
+        api = API(
+            db_path,
+            wait_timeout=None,
+            wait_interval=max(1.0, float(config.get("cooldown_poll_seconds", 5.0))),
+        )
+        # The upstream pool defaults to username ordering, which would reuse
+        # feed_bot whenever it unlocks successfully. Least-recently-used order
+        # makes multiple local cookie slots take turns even before a cooldown.
+        api.pool._order_by = "last_used ASC, username"
+        cookie_accounts: list[str] = []
+        for index, cookies in enumerate(cookie_values, start=1):
+            account_name = TWSCRAPE_ACCOUNT if index == 1 else f"{TWSCRAPE_ACCOUNT}_{index}"
+            await api.pool.add_account_cookies(account_name, cookies)
+            cookie_accounts.append(account_name)
+        # Do not keep removed local cookie slots active in the persistent pool.
+        for account in await api.pool.get_all():
+            if account.username.startswith(TWSCRAPE_ACCOUNT) and account.username not in cookie_accounts:
+                await api.pool.set_active(account.username, False)
 
         items: list[SignalItem] = []
         errors: list[str] = []
         notes: list[str] = []
         seen_ids: set[str] = set()
-        for raw_account in accounts:
+        ordered_accounts = sorted(
+            enumerate(accounts),
+            key=lambda pair: (
+                0 if str(pair[1].get("section") or config.get("section") or "transaction_ideas") == "transaction_ideas" else 1,
+                pair[0],
+            ),
+        )
+        notes.append("X account priority: transaction_ideas before industry_changes")
+        notes.append(f"X cooldown waiting enabled across {len(cookie_accounts)} cookie account(s)")
+        for _, raw_account in ordered_accounts:
             handle = str(raw_account["handle"]).lstrip("@")
             account_include_replies = bool(raw_account.get("include_replies", default_include_replies))
             try:
-                tweets = await gather(
-                    api.search(f"from:{handle}", limit=(max_per_user or 100) * 3, kv={"product": "Latest"})
-                )
+                tweets = []
+                # Latest search is newest-first. Stop as soon as the first
+                # prior-day post is encountered, avoiding needless pagination.
+                async with aclosing(
+                    api.search(f"from:{handle}", limit=search_limit, kv={"product": "Latest"})
+                ) as stream:
+                    async for tweet in stream:
+                        tweets.append(tweet)
+                        if same_day and _before_collection_day(getattr(tweet, "date", None), now, day_timezone):
+                            break
             except Exception as exc:
                 errors.append(f"@{handle}: {exc}")
                 continue
             kept: list[SignalItem] = []
             for tweet in tweets:
-                item = parse_twscrape_tweet(tweet, raw_account, now=now, lookback_hours=lookback)
+                item = parse_twscrape_tweet(
+                    tweet,
+                    raw_account,
+                    now=now,
+                    lookback_hours=lookback,
+                    same_day=same_day,
+                    day_timezone=day_timezone,
+                )
                 if item is None:
                     continue
                 if str(getattr(tweet, "rawContent", "") or "").startswith("RT @"):
@@ -410,18 +550,28 @@ def collect_x(config: dict[str, Any], client: httpx.Client | None = None) -> Pip
     normalized = [{"handle": raw} if isinstance(raw, str) else raw for raw in accounts]
     now = datetime.now(timezone.utc)
     lookback = int(config.get("lookback_hours", 72))
+    same_day = bool(config.get("same_day", False))
+    day_timezone = _zone(config.get("timezone"))
     configured_max = config.get("max_items_per_account")
     max_results = max(1, min(100, int(configured_max))) if configured_max is not None else 100
-    cookies = os.environ.get("TWITTER_COOKIES", "")
+    cookie_values = _load_twitter_cookie_values()
     token = os.environ.get("X_BEARER_TOKEN", "")
 
     # Per account the preferred transport is: rss_url → TWITTER_COOKIES
     # (twscrape) → X_BEARER_TOKEN (official API). Accounts with none of these
     # are reported as needing credentials rather than silently dropped.
+    ordered = sorted(
+        enumerate(normalized),
+        key=lambda pair: (
+            0 if str(pair[1].get("section") or config.get("section") or "transaction_ideas") == "transaction_ideas" else 1,
+            pair[0],
+        ),
+    )
+    normalized = [account for _, account in ordered]
     rss_accounts = [a for a in normalized if a.get("rss_url")]
-    cookie_accounts = [a for a in normalized if not a.get("rss_url") and cookies]
-    oauth_accounts = [a for a in normalized if not a.get("rss_url") and not cookies and token]
-    missing_accounts = [a for a in normalized if not a.get("rss_url") and not cookies and not token]
+    cookie_accounts = [a for a in normalized if not a.get("rss_url") and cookie_values]
+    oauth_accounts = [a for a in normalized if not a.get("rss_url") and not cookie_values and token]
+    missing_accounts = [a for a in normalized if not a.get("rss_url") and not cookie_values and not token]
 
     owns_client = client is None
     client = client or httpx.Client(timeout=30, follow_redirects=True, headers={"User-Agent": "idea-research/0.1"})
@@ -431,7 +581,14 @@ def collect_x(config: dict[str, Any], client: httpx.Client | None = None) -> Pip
             try:
                 response = client.get(str(account["rss_url"]))
                 response.raise_for_status()
-                rss_items = parse_x_rss(response.text, account, now=now, lookback_hours=lookback)
+                rss_items = parse_x_rss(
+                    response.text,
+                    account,
+                    now=now,
+                    lookback_hours=lookback,
+                    same_day=same_day,
+                    day_timezone=day_timezone,
+                )
                 result.items.extend(rss_items if configured_max is None else rss_items[:max_results])
             except Exception as exc:
                 result.errors.append(f"@{handle} RSS: {exc}")
@@ -453,7 +610,9 @@ def collect_x(config: dict[str, Any], client: httpx.Client | None = None) -> Pip
                 )
                 user_response.raise_for_status()
                 user = user_response.json()["data"]
-                start_time = (now - timedelta(hours=lookback)).isoformat().replace("+00:00", "Z")
+                start_time = (
+                    _day_start(now, day_timezone) if same_day else now - timedelta(hours=lookback)
+                ).isoformat().replace("+00:00", "Z")
                 tweet_response = client.get(
                     f"{API_BASE}/users/{user['id']}/tweets",
                     params={
@@ -468,7 +627,15 @@ def collect_x(config: dict[str, Any], client: httpx.Client | None = None) -> Pip
                 )
                 tweet_response.raise_for_status()
                 account = {**account, "name": account.get("name") or user.get("name") or handle}
-                result.items.extend(parse_x_tweets(tweet_response.json(), account, now=now))
+                result.items.extend(
+                    parse_x_tweets(
+                        tweet_response.json(),
+                        account,
+                        now=now,
+                        same_day=same_day,
+                        day_timezone=day_timezone,
+                    )
+                )
             except Exception as exc:
                 result.errors.append(f"@{handle}: {exc}")
         stored, skipped = enrich_linked_articles(result.items, client, config)

@@ -77,17 +77,21 @@ def annotate_item(
 def build_reddit_discussions(items: list[dict[str, Any]], config: dict[str, Any]) -> dict[str, Any]:
     subreddit = str(config.get("subreddit", "wallstreetbets")).removeprefix("r/").casefold()
     source_name = f"r/{subreddit}"
-    max_symbols = int(config.get("max_symbols", 10))
-    max_hot_posts = int(config.get("max_hot_posts", 5))
-    min_mentions = int(config.get("min_mentions", 1))
+    listing = str(config.get("listing", "dd")).casefold()
+    requested_flair = str(config.get("flair", "DD")).strip()
+    max_dd_posts = int(config.get("max_dd_posts", config.get("max_hot_posts", 10)))
     posts = [
         item
         for item in items
         if str(item.get("source_name", "")).casefold() == source_name
-        and (item.get("metadata") or {}).get("listing") == "hot"
-        and 1 <= int((item.get("metadata") or {}).get("feed_rank") or 0) <= max_hot_posts
+        and (item.get("metadata") or {}).get("listing") == listing
+        and (
+            not requested_flair
+            or not (item.get("metadata") or {}).get("flair")
+            or str((item.get("metadata") or {}).get("flair")).casefold() == requested_flair.casefold()
+        )
+        and 1 <= int((item.get("metadata") or {}).get("feed_rank") or 0) <= max_dd_posts
     ]
-    aggregates: dict[str, dict[str, Any]] = {}
     ranked_posts: list[dict[str, Any]] = []
     engagement_available = False
 
@@ -103,63 +107,26 @@ def build_reddit_discussions(items: list[dict[str, Any]], config: dict[str, Any]
                 "title": item.get("title", ""),
                 "url": item.get("url", ""),
                 "published_at": item.get("published_at", ""),
-                "hot_rank": rank,
+                "dd_rank": rank,
                 "tickers": symbols,
                 "engagement": engagement,
                 "images": metadata.get("images") or [],
             }
         )
-        for symbol in symbols:
-            value = aggregates.setdefault(
-                symbol,
-                {
-                    "ticker": symbol,
-                    "mention_count": 0,
-                    "best_hot_rank": rank,
-                    "top_posts": [],
-                },
-            )
-            value["mention_count"] += 1
-            value["best_hot_rank"] = min(value["best_hot_rank"], rank)
-            value["top_posts"].append(
-                {
-                    "title": item.get("title", ""),
-                    "url": item.get("url", ""),
-                    "published_at": item.get("published_at", ""),
-                    "hot_rank": rank,
-                    "engagement": engagement,
-                    "images": metadata.get("images") or [],
-                }
-            )
-
-    symbols = [value for value in aggregates.values() if value["mention_count"] >= min_mentions]
-    for value in symbols:
-        value["mention_share_pct"] = round(100 * value["mention_count"] / len(posts), 1) if posts else 0.0
-        value["top_posts"].sort(key=lambda post: post["hot_rank"])
-        value["top_posts"] = value["top_posts"][:3]
-    symbols.sort(
-        key=lambda value: (-value["mention_count"], value["best_hot_rank"], value["ticker"]),
-    )
-    ranked_posts.sort(key=lambda post: post["hot_rank"])
-    top_tickers = symbols[:max_symbols]
-    top_hot_posts = ranked_posts[:max_hot_posts]
-    for index, value in enumerate(top_tickers, start=1):
-        value["display_id"] = f"W{index}"
-    for index, value in enumerate(top_hot_posts, start=1):
+    ranked_posts.sort(key=lambda post: post["dd_rank"])
+    top_dd_posts = ranked_posts[:max_dd_posts]
+    for index, value in enumerate(top_dd_posts, start=1):
         value["display_id"] = f"R{index}"
     return {
         "subreddit": source_name,
         "post_count": len(posts),
-        "posts_with_tickers": sum(1 for item in posts if item.get("matched_symbols") or item.get("symbols")),
         "engagement_available": engagement_available,
         "interpretation": "A factual list of retail discussion mentions, not fundamental evidence or an investment recommendation.",
         "methodology": (
-            "Top tickers are ordered by the number of posts mentioning them in the current public Hot top-five, "
-            "then by their best Hot-feed position. Top posts follow the Hot-feed order. No proprietary score is calculated; "
-            "RSS-only runs do not contain Reddit engagement counts."
+            "Posts follow Reddit's WallStreetBets DD flair daily Top order. The collector does not aggregate tickers "
+            "or calculate a proprietary score; RSS-only runs expose the public ranking but do not contain Reddit engagement counts."
         ),
-        "top_tickers": top_tickers,
-        "top_hot_posts": top_hot_posts,
+        "top_dd_posts": top_dd_posts,
     }
 
 
@@ -248,7 +215,12 @@ def prepare_report_context(
     reddit_discussions_enabled = bool(reddit_discussions_config.get("enabled", True))
     heat_subreddit = str(reddit_discussions_config.get("subreddit", "wallstreetbets")).removeprefix("r/").casefold()
     heat_source_name = f"r/{heat_subreddit}"
-    heat_max_hot_posts = max(1, int(reddit_discussions_config.get("max_hot_posts", 5)))
+    heat_listing = str(reddit_discussions_config.get("listing", "dd")).casefold()
+    heat_flair = str(reddit_discussions_config.get("flair", "DD")).strip()
+    heat_max_dd_posts = max(
+        1,
+        int(reddit_discussions_config.get("max_dd_posts", reddit_discussions_config.get("max_hot_posts", 10))),
+    )
 
     items_by_id: dict[str, SignalItem] = {}
     pipeline_health: dict[str, dict[str, Any]] = {}
@@ -277,8 +249,13 @@ def prepare_report_context(
         item
         for item in all_content
         if item["source_name"].casefold() == heat_source_name
-        and (item.get("metadata") or {}).get("listing") == "hot"
-        and 1 <= int((item.get("metadata") or {}).get("feed_rank") or 0) <= heat_max_hot_posts
+        and (item.get("metadata") or {}).get("listing") == heat_listing
+        and (
+            not heat_flair
+            or not (item.get("metadata") or {}).get("flair")
+            or str((item.get("metadata") or {}).get("flair")).casefold() == heat_flair.casefold()
+        )
+        and 1 <= int((item.get("metadata") or {}).get("feed_rank") or 0) <= heat_max_dd_posts
     ]
     wsb_posts.sort(key=lambda value: int((value.get("metadata") or {}).get("feed_rank") or 0))
     for item in wsb_posts:
@@ -347,9 +324,9 @@ def prepare_report_context(
                 "Retain a source URL for every factual claim.",
                 "Do not invent missing price, engagement, publication-time, or company-exposure data.",
                 "Do not score, rank, or promote sources into investment recommendations.",
-                "WSB mention counts and Hot positions are observed discussion data, not fundamental confirmation.",
+                "WSB mention counts and DD positions are observed discussion data, not fundamental confirmation.",
                 "By default, the context includes only Newsletter/RSS/X items not previously marked as successfully shown by this subscriber; use --include-seen to regenerate a full context.",
-                "WSB Hot posts and close movers are current daily observations and are always included; they are never written to seen state.",
+                "WSB DD daily Top posts and close movers are current observations and are always included; they are never written to seen state.",
                 "Seen state is written only by an explicit post-delivery mark command, never while preparing a report.",
                 "Newsletter and X items in the main digest must map to a specific listed company supported by the source text; stock_mentions is only a matching hint, not proof.",
                 "Newsletter/RSS, X, WSB and close movers belong to transaction_ideas and require a clear company-specific direction before rendering.",
@@ -361,7 +338,6 @@ def prepare_report_context(
             "filtered_seen_items": filtered_items,
             "market_mover_days": len(market_movers["days"]),
             "wsb_posts": reddit_discussions.get("post_count", 0),
-            "wsb_symbols": len(reddit_discussions.get("top_tickers", [])),
         },
         "items": content,
         "market_movers": market_movers,

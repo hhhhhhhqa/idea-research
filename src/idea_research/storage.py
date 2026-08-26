@@ -58,10 +58,11 @@ def build_feed(
 
 
 def save_feed(data_dir: str | Path, feed: dict[str, Any]) -> Path:
-    """Atomically replace the single centrally published current feed.
+    """Atomically replace the single centrally published rolling feed.
 
-    The repository intentionally has no daily archive.  Historical retention,
-    if wanted, belongs outside this publishing workflow.
+    The repository intentionally has no daily archive.  Pipelines that need a
+    short retry window (currently Newsletter/X) retain their configured recent
+    items in ``latest.json``; longer historical retention belongs elsewhere.
     """
     root = Path(data_dir)
     latest = root / "feeds" / "latest.json"

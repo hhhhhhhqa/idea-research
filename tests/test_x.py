@@ -1,5 +1,6 @@
 from datetime import datetime, timezone
 from types import SimpleNamespace
+from zoneinfo import ZoneInfo
 
 from idea_research.models import SignalItem
 from idea_research.pipelines.x import (
@@ -96,6 +97,16 @@ def test_parse_twscrape_tweet_outside_lookback():
     assert item is None
 
 
+def test_parse_twscrape_tweet_same_calendar_day_uses_configured_timezone():
+    # 16:00 UTC is midnight in Hong Kong; the previous 15:30 UTC post belongs
+    # to the prior Hong Kong calendar day and must not enter today's feed.
+    now = datetime(2026, 8, 24, 16, tzinfo=timezone.utc)
+    old = _tweet(date=datetime(2026, 8, 24, 15, 30, tzinfo=timezone.utc))
+    current = _tweet(date=datetime(2026, 8, 24, 16, 5, tzinfo=timezone.utc))
+    assert parse_twscrape_tweet(old, {"handle": "builder"}, now=now, same_day=True, day_timezone=ZoneInfo("Asia/Hong_Kong")) is None
+    assert parse_twscrape_tweet(current, {"handle": "builder"}, now=now, same_day=True, day_timezone=ZoneInfo("Asia/Hong_Kong")) is not None
+
+
 def test_twscrape_engagement_score_weights_reposts():
     # likes + 2*reposts + replies = 10 + 6 + 2
     assert _tweet_engagement_score(_tweet()) == 18
@@ -112,6 +123,31 @@ def test_collect_x_not_configured(monkeypatch):
     monkeypatch.delenv("X_BEARER_TOKEN", raising=False)
     result = collect_x({"accounts": []})
     assert result.status == "not_configured"
+
+
+def test_load_twitter_cookies_falls_back_to_local_ignored_file(tmp_path, monkeypatch):
+    import idea_research.pipelines.x as xmod
+
+    monkeypatch.delenv("TWITTER_COOKIES", raising=False)
+    (tmp_path / "credentials").mkdir()
+    (tmp_path / "credentials" / "x_twitter_cookies.txt").write_text(
+        "# comment\nauth_token=abc; ct0=def\n", encoding="utf-8"
+    )
+    monkeypatch.setattr(xmod, "project_root", lambda: tmp_path)
+    assert xmod._load_twitter_cookies() == "auth_token=abc; ct0=def"
+
+
+def test_load_twitter_cookie_values_supports_numbered_env_accounts(monkeypatch):
+    import idea_research.pipelines.x as xmod
+
+    for key in ("TWITTER_COOKIES", "TWITTER_COOKIES_2", "TWITTER_COOKIES_3"):
+        monkeypatch.delenv(key, raising=False)
+    monkeypatch.setenv("TWITTER_COOKIES", "auth_token=one; ct0=one")
+    monkeypatch.setenv("TWITTER_COOKIES_2", "auth_token=two; ct0=two")
+    assert xmod._load_twitter_cookie_values() == [
+        "auth_token=one; ct0=one",
+        "auth_token=two; ct0=two",
+    ]
 
 
 def test_collect_x_needs_credentials(monkeypatch):
@@ -146,6 +182,30 @@ def test_collect_x_routes_cookie_accounts(monkeypatch):
     assert result.status == "ok"
     assert result.items == [fake]
     assert called["accounts"] == [{"handle": "karpathy", "name": "Andrej Karpathy"}]
+
+
+def test_collect_x_orders_transaction_ideas_before_industry_changes(monkeypatch):
+    import idea_research.pipelines.x as xmod
+
+    monkeypatch.setenv("TWITTER_COOKIES", "auth_token=a; ct0=b")
+    monkeypatch.delenv("X_BEARER_TOKEN", raising=False)
+    called: dict = {}
+
+    def fake_collect(config, accounts, now):
+        called["accounts"] = accounts
+        return [], [], []
+
+    monkeypatch.setattr(xmod, "_collect_twitter_via_twscrape", fake_collect)
+    result = collect_x(
+        {
+            "accounts": [
+                {"handle": "researcher", "section": "industry_changes"},
+                {"handle": "investor", "section": "transaction_ideas"},
+            ]
+        }
+    )
+    assert result.status == "ok"
+    assert [account["handle"] for account in called["accounts"]] == ["investor", "researcher"]
 
 
 def test_link_extraction_and_html_article_text():

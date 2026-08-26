@@ -27,7 +27,7 @@ idea-research doctor
 idea-research collect
 ```
 
-Then review pipeline health and commit/push the intended current artifacts: `data/feeds/latest.json`, the current Reddit image attachments under `data/media/reddit/`, `data/stock_universe/stock_pool.json`, `data/stock_universe/saas_pool.json`, and the three-trading-day `data/prices/rolling_prices.json`. Each collection atomically replaces `latest.json`; no long-term content archive is stored, and stale generated Reddit images are pruned. Do not commit `.env`, locally generated report contexts, or the FMP checkpoint. A central maintainer may then run `prepare` locally to inspect the published result.
+Then review pipeline health and commit/push the intended current artifacts: `data/feeds/latest.json`, the current Reddit image attachments under `data/media/reddit/`, `data/stock_universe/stock_pool.json`, `data/stock_universe/saas_pool.json`, and the three-trading-day `data/prices/rolling_prices.json`. Newsletter/X collectors fetch the current user-timezone day, while `latest.json` retains their configured three-day retry window so a subscriber can catch up after a missed delivery. Each collection atomically replaces `latest.json`; no long-term content archive is stored, and stale generated Reddit images are pruned. Do not commit `.env`, locally generated report contexts, or the FMP checkpoint. A central maintainer may then run `prepare` locally to inspect the published result.
 
 ```bash
 git add data/feeds/latest.json data/media/reddit data/stock_universe/stock_pool.json data/stock_universe/saas_pool.json data/prices/rolling_prices.json
@@ -35,17 +35,17 @@ git commit -m "Update research feeds"
 git push origin main
 ```
 
-`prepare` prints a small manifest containing the context JSON path, the rendered Agent prompt path and a delivery-mark path. By default, the context includes only Newsletter/RSS and X items not yet marked as successfully shown by this subscriber; WSB Hot #1–#5 and the close movers are always included. The subscriber Agent decides relevance and outputs all relevant Newsletter/X items without a cap. If the user asks for a report without refresh, run only `prepare` and state the available feed timestamp when it is stale.
+`prepare` prints a small manifest containing the context JSON path, the rendered Agent prompt path and a delivery-mark path. By default, the context includes only Newsletter/RSS and X items not yet marked as successfully shown by this subscriber; WSB DD daily Top #1–#10 and the close movers are always included. The subscriber Agent decides relevance and outputs all relevant Newsletter/X items without a cap. If the user asks for a report without refresh, run only `prepare` and state the available feed timestamp when it is stale.
 
 `stock_select.py` maintains the wider software / Internet candidate universe and derives `data/stock_universe/saas_pool.json` from exact FMP `fmp_industry` matches; run it only when the user asks to build or refresh those pools, not as an implicit part of every daily digest. It resumes safely after FMP's daily free quota. Use `python stock_select.py --derive-saas-only` to rebuild the derived pool without any network request.
 
 ## 3. Check content and pipeline health
 
-Read `pipeline_health`, `stats`, `market_movers` and `reddit_discussions` in the context. The price section is Yahoo Finance EOD data for the current `saas_pool.json` universe, with only three trading days retained locally. WSB is the exact current public Hot #1–#5 listing, not a time-window sample; when `images` are present, show the saved local image paths alongside the post. If every content source is empty, say so plainly. If a pipeline is unavailable, disclose it in the final report; do not substitute web browsing.
+Read `pipeline_health`, `stats`, `market_movers` and `reddit_discussions` in the context. The price section is Yahoo Finance EOD data for the current `saas_pool.json` universe, with only three trading days retained locally. WSB is the exact WallStreetBets DD flair daily Top #1–#10 listing; show each post's own ticker fields and do not build a separate ticker heat rollup. When `images` are present, show the saved local image paths alongside the post. If every content source is empty, say so plainly. If a pipeline is unavailable, disclose it in the final report; do not substitute web browsing.
 
 ## 4. Render the digest
 
-`prompts/daily.md` is the canonical output contract and is copied into the generated Agent prompt. Follow it exactly. The digest has two sections: first, **交易 Idea**, where Newsletter/RSS, X, WSB and close movers require a very clear company-specific direction; second, **产业变化**, where only significant AI industry changes from the configured researcher accounts and publications are retained. For transaction ideas, include as many reasons as the source provides, including none; do not invent reasons or add balancing risks. Use the visible `display_id` values from the JSON: `N*` / `X*` for transaction ideas, `I*` for industry changes, `W*` / `R*` for WSB, and `G*` / `L*` for close movers. Preserve original links and source times.
+`prompts/daily.md` is the canonical output contract and is copied into the generated Agent prompt. Follow it exactly. The digest has two sections: first, **交易 Idea**, where Newsletter/RSS, X, WSB and close movers require a very clear company-specific direction; second, **产业变化**, where only significant AI industry changes from the configured researcher accounts and publications are retained. For transaction ideas, include as many reasons as the source provides, including none; do not invent reasons or add balancing risks. Use the visible `display_id` values from the JSON: `N*` / `X*` for transaction ideas, `I*` for industry changes, `R*` for WSB, and `G*` / `L*` for close movers. Preserve original links and source times.
 
 For every `N*` and `X*`, require an explicit `对应股票` line with ticker and company name. Use `stock_mentions` as a matching hint, then verify it against the source text. If the source discusses only a sector or technology without a defensible company mapping, leave it out of the main digest and mention the omission only in data gaps. Do not infer a ticker merely from the author's coverage list.
 
@@ -63,7 +63,7 @@ idea-research mark-delivered \
   --shown N1,N3,X1-X4
 ```
 
-Do not mark items omitted as irrelevant or a failed/partial delivery. `W*`, `R*`, `G*` and `L*` are never tracked. Use `--all` only when every pending Newsletter/X item was shown. The local state is stored at `~/.idea-research/seen.json` and is retained for at most 3 days; it is not committed to the repository. Add `--include-seen` to `prepare` when a full regeneration is explicitly needed.
+Do not mark items omitted as irrelevant or a failed/partial delivery. `R*`, `G*` and `L*` are never tracked. Use `--all` only when every pending Newsletter/X item was shown. The local state is stored at `~/.idea-research/seen.json` and is retained for at most 3 days; it is not committed to the repository. Add `--include-seen` to `prepare` when a full regeneration is explicitly needed.
 
 ## 6. Deliver and follow up
 

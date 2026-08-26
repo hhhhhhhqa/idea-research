@@ -75,7 +75,7 @@ def test_report_rolls_up_wsb_posts_into_ticker_heat(tmp_path):
             collected_at=now.isoformat(),
             symbols=symbols,
             engagement={"score": score, "comments": comments},
-            metadata={"listing": "hot", "feed_rank": rank, "transport": "oauth_json"},
+            metadata={"listing": "dd", "flair": "DD", "feed_rank": rank, "transport": "oauth_json"},
         )
 
     posts = [
@@ -84,7 +84,7 @@ def test_report_rolls_up_wsb_posts_into_ticker_heat(tmp_path):
         wsb_item("reddit:3", "Tesla delivery", ["TSLA"], 3, 60, 20),
         wsb_item("reddit:4", "AMD discussion", ["AMD"], 4, 5, 2),
         wsb_item("reddit:5", "Microsoft discussion", ["MSFT"], 5, 4, 1),
-        wsb_item("reddit:6", "Old rank", ["OLD"], 6, 1, 1),
+        wsb_item("reddit:6", "Outside DD top ten", ["OLD"], 11, 1, 1),
     ]
     feed = build_feed([PipelineResult(pipeline="reddit", items=posts)])
     feed["generated_at"] = now.isoformat()
@@ -93,17 +93,13 @@ def test_report_rolls_up_wsb_posts_into_ticker_heat(tmp_path):
             "reddit_discussions": {
             "enabled": True,
             "subreddit": "wallstreetbets",
-            "max_symbols": 10,
             "rollup_only": True,
         }
     }
     context = prepare_report_context(tmp_path, profile, "daily", now=now)
-    assert context["reddit_discussions"]["top_tickers"][0]["ticker"] == "NVDA"
-    assert context["reddit_discussions"]["top_tickers"][0]["mention_count"] == 2
-    assert context["reddit_discussions"]["top_hot_posts"][0]["tickers"] == ["NVDA"]
-    assert [post["hot_rank"] for post in context["reddit_discussions"]["top_hot_posts"]] == [1, 2, 3, 4, 5]
+    assert context["reddit_discussions"]["top_dd_posts"][0]["tickers"] == ["NVDA"]
+    assert [post["dd_rank"] for post in context["reddit_discussions"]["top_dd_posts"]] == [1, 2, 3, 4, 5]
     assert [post["display_id"] for post in context["wsb_posts"]] == ["R1", "R2", "R3", "R4", "R5"]
-    assert "heat_score" not in context["reddit_discussions"]["top_tickers"][0]
     assert context["stats"]["wsb_posts"] == 5
     assert context["items"] == []
 
@@ -211,7 +207,7 @@ def test_report_deduplicates_only_newsletters_and_x_after_delivery(tmp_path):
         published_at=now.isoformat(),
         collected_at=now.isoformat(),
         symbols=["NVDA"],
-        metadata={"listing": "hot", "feed_rank": 1, "transport": "rss"},
+        metadata={"listing": "dd", "flair": "DD", "feed_rank": 1, "transport": "rss"},
     )
     price = SignalItem(
         id="price:yfinance:gainers",

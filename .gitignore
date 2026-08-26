@@ -1,6 +1,7 @@
 .DS_Store
 .env
 .venv/
+credentials/x_twitter_cookies.txt
 __pycache__/
 *.py[cod]
 .pytest_cache/

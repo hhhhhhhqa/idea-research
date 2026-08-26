@@ -10,11 +10,13 @@ report_focus: >-
 reddit_discussions:
   enabled: true
   subreddit: wallstreetbets
-  max_symbols: 3
-  max_hot_posts: 5
-  min_mentions: 1
-  # WSB gets a separate Hot top-five rollup, while the complete captured post set
-  # remains available to the subscriber Agent in `wsb_posts`.
+  listing: dd
+  flair: DD
+  sort: top
+  time_filter: day
+  max_dd_posts: 10
+  # WSB gets a separate DD daily top-ten rollup, while the complete captured
+  # post set remains available to the subscriber Agent in `wsb_posts`.
   rollup_only: true
 
 # 这些主题只用于 Agent 的组织和用户偏好，不会从中央 feed 或 context 删除条目。

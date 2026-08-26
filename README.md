@@ -19,11 +19,11 @@
 
 ## 你会得到什么
 
-由你的 Agent 读取公开 GitHub feed 生成一份可继续追问的投资 idea 日报。日报分成两章：第一章「交易 Idea」包含 Newsletter / 研究文章、X、WSB 和美股收盘异动，只有明确公司对象和鲜明 Long/Short 或偏多/偏空观点才进入；第二章「产业变化」暂时预留给之后接入的 AI 研究人员来源。交易 Idea 的原文理由有多少写多少，没有理由也不补，不为了平衡观点额外寻找风险：
+由你的 Agent 读取公开 GitHub feed 生成一份可继续追问的投资 idea 日报。日报分成两章：第一章「交易 Idea」包含 Newsletter / 研究文章、X、WSB 和美股收盘异动，只有明确公司对象和鲜明 Long/Short 或偏多/偏空观点才进入；第二章「产业变化」暂时预留给之后接入的 AI 研究人员来源。交易 Idea 的原文理由有多少写多少，没有理由也不补，不为了平衡观点额外寻找风险。X 和 Newsletter 只抓用户时区当天的内容，但中央 feed 会保留最近三天的 Newsletter/X 项，订阅者本地的去重状态也最多保留三天。X 优先抓取交易 Idea 账号；如果 `twscrape` 的 SearchTimeline 进入冷却，会等待重置后继续，等待期间非 X pipeline 的结果会先写入 feed：
 
 - `N1`、`N2`：与具体上市公司相关的软件、互联网和 AI 投资 Newsletter / 研究文章说了什么；每项带 ticker
 - `X1`、`X2`：与具体上市公司相关的 X 账号观点；每项带 ticker，转发外链正文会一并保存
-- `W1`、`R1`：WallStreetBets 当前 Hot 榜前 5 篇帖子及其中被讨论的股票；帖子图片会随 feed 保存，只反映散户注意力，不当作基本面证据
+- `R1`–`R10`：WallStreetBets `DD` flair 每日 Top 前 10 篇原帖及各帖识别到的股票；帖子图片会随 feed 保存，只反映散户注意力，不当作基本面证据
 - `G1` / `L1`：`saas_pool.json` 中股票的美股收盘涨幅前十 / 跌幅前十；比较当天与前一交易日收盘价
 
 每条内容都保留来源时间和原始链接。看完后可以直接说“展开 N2”、“X1 为什么重要？”、“W1 讨论的是哪篇帖子？”或“详细看看 L3”。
@@ -137,7 +137,7 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 
 | 信息源 | 为什么选 |
 |---|---|
-| [r/wallstreetbets](https://www.reddit.com/r/wallstreetbets/) | 每天抓取公开 Hot 榜前五，观察散户当天集中讨论的股票和主题；它只代表零售注意力，不是基本面证据或投资建议。帖子中的图片会随当前 feed 保存。 |
+| [r/wallstreetbets](https://www.reddit.com/r/wallstreetbets/) | 每天抓取公开 `DD` flair 的 Top 前十，观察散户当天带有尽调/交易观点的股票和主题；它只代表零售注意力，不是基本面证据或投资建议。帖子中的图片会随当前 feed 保存。 |
 
 ### 美股收盘数据（1 个数据源）
 
@@ -185,7 +185,7 @@ git commit -m "Update research feeds"
 git push origin main
 ```
 
-`data/stock_universe/fmp_profile_cache.json`、`.env` 和 X 会话数据库不会被提交。订阅者只需 `git pull --ff-only` 后运行 `idea-research prepare --period daily`。默认只会给出这个 Agent 尚未成功展示过的 Newsletter/RSS 和 X；WSB Hot 前五与收盘涨跌幅每天都会刷新。日报成功展示后，按实际输出的编号执行 `idea-research mark-delivered --file reports/contexts/delivery-mark.json --shown N1,X2`，状态保存在本机 `~/.idea-research/seen.json`，最多保留 3 天，不会提交到 Git。需要重看全部 Newsletter/X 时使用 `idea-research prepare --period daily --include-seen`。
+`data/stock_universe/fmp_profile_cache.json`、`.env` 和 X 会话数据库不会被提交。订阅者只需 `git pull --ff-only` 后运行 `idea-research prepare --period daily`。默认只会给出这个 Agent 尚未成功展示过的 Newsletter/RSS 和 X；WSB DD 每日 Top 前十与收盘涨跌幅每天都会刷新。日报成功展示后，按实际输出的编号执行 `idea-research mark-delivered --file reports/contexts/delivery-mark.json --shown N1,X2`，状态保存在本机 `~/.idea-research/seen.json`，最多保留 3 天，不会提交到 Git。需要重看全部 Newsletter/X 时使用 `idea-research prepare --period daily --include-seen`。
 
 ## 目录
 

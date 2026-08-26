@@ -3,6 +3,7 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from typing import Any
 from urllib.parse import urljoin
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 import feedparser
 import httpx
@@ -17,6 +18,16 @@ def _feed_url(publication: dict[str, Any]) -> str:
     return urljoin(str(publication["url"]).rstrip("/") + "/", "feed")
 
 
+def _same_collection_day(timestamp: str, now: datetime, day_timezone: ZoneInfo | timezone) -> bool:
+    try:
+        parsed = datetime.fromisoformat(timestamp.replace("Z", "+00:00"))
+    except (AttributeError, TypeError, ValueError):
+        return True
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(day_timezone).date() == now.astimezone(day_timezone).date()
+
+
 def parse_substack_feed(
     xml: str,
     publication: dict[str, Any],
@@ -24,6 +35,8 @@ def parse_substack_feed(
     now: datetime | None = None,
     lookback_hours: int = 168,
     max_items: int | None = None,
+    same_day: bool = False,
+    day_timezone: ZoneInfo | timezone = timezone.utc,
 ) -> list[SignalItem]:
     now = now or datetime.now(timezone.utc)
     collected_at = now.isoformat()
@@ -33,7 +46,9 @@ def parse_substack_feed(
     for entry in parsed.entries:
         link = str(entry.get("link") or "")
         published = iso_datetime(entry.get("published") or entry.get("updated"), collected_at)
-        if not within_lookback(published, lookback_hours, now):
+        if same_day and not _same_collection_day(published, now, day_timezone):
+            continue
+        if not same_day and not within_lookback(published, lookback_hours, now):
             continue
         content = ""
         if entry.get("content"):
@@ -71,6 +86,12 @@ def collect_substack(config: dict[str, Any], client: httpx.Client | None = None)
         result.notes.append("No Substack publications configured")
         return result
     owns_client = client is None
+    same_day = bool(config.get("same_day", False))
+    timezone_name = str(config.get("timezone") or "Asia/Hong_Kong")
+    try:
+        day_timezone: ZoneInfo | timezone = ZoneInfo(timezone_name)
+    except ZoneInfoNotFoundError:
+        day_timezone = timezone.utc
     client = client or httpx.Client(timeout=30, follow_redirects=True, headers={"User-Agent": "idea-research/0.1"})
     try:
         for raw in publications:
@@ -87,6 +108,8 @@ def collect_substack(config: dict[str, Any], client: httpx.Client | None = None)
                         publication,
                         lookback_hours=int(config.get("lookback_hours", 168)),
                         max_items=int(configured_max) if configured_max is not None else None,
+                        same_day=same_day,
+                        day_timezone=day_timezone,
                     )
                 )
             except Exception as exc:  # one publication must not erase the others
