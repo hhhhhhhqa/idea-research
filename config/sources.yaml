@@ -74,8 +74,8 @@ reddit:
       sort: top
       time_filter: day
       # Reddit's daily Top search is ranked by the subreddit, not by our
-      # collector. Keep exactly the first ten returned positions.
-      limit: 10
+      # collector. Capture up to the first twenty returned positions.
+      limit: 20
       lookback_hours:
 
   # Bare uppercase words are accepted only from this allowlist. Unknown cashtags such
