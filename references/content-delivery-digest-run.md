@@ -55,6 +55,8 @@ If a user manually invokes the task outside its configured schedule and has aske
 
 Transaction views may be single-stock, sector or relative-value views. A sector view is allowed only when the source identifies a specific beneficiary category or mechanism and names a small set of supported tickers; omit broad, unscoped sector commentary. Use Markdown bullets in the body of every transaction idea and every industry-change item. Keep each transaction Idea to the author's one or two most important judgments and keep Facts concise.
 
+If the WSB feed returns fewer than ten posts, process only the posts present and state the actual count in one sentence at the start of the WSB subsection; never imply that missing posts were screened out or pad the list.
+
 ## 5. Mark only what was delivered
 
 `prepare` does not modify the subscriber's seen state. After successfully showing the digest, mark only the Newsletter/RSS and X IDs that actually appeared in the output:

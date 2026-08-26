@@ -77,6 +77,8 @@ WSB 也可以形成明确的板块或相对价值观点，不要求每篇都只�
 
 如果 `engagement_available` 为 false，说明这是公开 RSS 的 DD 每日 Top 排名，没有点赞/评论数据。WSB 只代表散户注意力，不能作为公司基本面、催化剂或交易建议的证据。
 
+如果 `reddit_discussions.post_count` 少于 10，只处理 feed 实际返回的帖子，并在 WSB 小节开头用一句话说明“本次 feed 抓到 X 篇 DD”；不要把实际数量不足的 feed 表述成完整前十，也不要人为补足。
+
 ### 美股收盘异动
 
 只要 `market_movers.latest` 有数据，就必须在第一章末尾展示「最新 SaaS / 软件股票异动」，分别列出已有的 `G*` / `L*` 编号、ticker、收盘价、前收盘价、涨跌幅、价格日期和 Yahoo Finance 链接；不添加价格免责声明。
