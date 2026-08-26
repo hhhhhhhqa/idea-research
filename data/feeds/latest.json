@@ -1,7 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-26T06:33:50.581444+00:00",
+  "generated_at": "2026-08-26T06:38:23.055207+00:00",
   "pipelines": [
+    {
+      "pipeline": "reddit",
+      "status": "ok",
+      "item_count": 2,
+      "errors": [],
+      "notes": [
+        "r/wallstreetbets: anonymous dd RSS transport used",
+        "Downloaded 2 Reddit image(s) into the current feed media directory"
+      ]
+    },
     {
       "pipeline": "x",
       "status": "ok",
@@ -90,15 +100,6 @@
       "notes": []
     },
     {
-      "pipeline": "reddit",
-      "status": "ok",
-      "item_count": 0,
-      "errors": [],
-      "notes": [
-        "r/wallstreetbets: anonymous dd RSS transport used"
-      ]
-    },
-    {
       "pipeline": "prices",
       "status": "ok",
       "item_count": 2,
@@ -110,10 +111,10 @@
     }
   ],
   "counts": {
-    "total": 65,
+    "total": 67,
     "substack": 6,
     "rss": 2,
-    "reddit": 0,
+    "reddit": 2,
     "x": 55,
     "price": 2
   },
@@ -458,6 +459,42 @@
         "investor_type": "ai_company_decision_maker",
         "coverage": "Perplexity, AI search and reasoning",
         "engagement_score": 523
+      }
+    },
+    {
+      "id": "reddit:ce821db3c43704c6698e",
+      "source_type": "reddit",
+      "source_name": "r/wallstreetbets",
+      "title": "$ABCL My Easy 2x Took the Long Hard Road but Eventually Got There. Now I Think $15 Is Next - DD",
+      "url": "https://www.reddit.com/r/wallstreetbets/comments/1vyiums/abcl_my_easy_2x_took_the_long_hard_road_but/",
+      "published_at": "2026-08-26T01:25:42+00:00",
+      "collected_at": "2026-08-26T06:38:21.121900+00:00",
+      "body": "Three years ago I posted this DD calling AbCellera an “easy 2x.” Original DD: https://www.reddit.com/r/wallstreetbets/comments/14mcdzo/abcellera_abcl_the_aipowered_drug_discovery_gem/ Turns out “easy” was doing a lot of work in that sentence. ABCL proceeded to take the long, painful route. The stock got crushed, biotech stayed out of favor, and for a long time the market gave basically zero credit to the platform. I held through it. Current Holdings as of 8/25/26 And unlike the first time I posted about it, ABCL now has something much more important than an interesting technology platform: ABCL635 changed the story ABCL635 is AbCellera's internally developed antibody targeting NK3R for vasomotor symptoms associated with menopause. The Phase 2 results were strong. The drug produced an 83% reduction in moderate-to-severe hot flash frequency, compared with 33% for placebo, along with significant improvement in severity and sleep. Just as importantly, there were no serious adverse events or discontinuations during the four-week treatment period. The business around it is getting stronger too AbCellera isn't betting everything on one molecule. They now have a growing collection of partnered molecules in the clinic while continuing to sign major discovery deals. They've added collaborations with companies including Vertex and Jazz Pharmaceuticals, and the Jazz agreement potentially carries hundreds of millions of dollars in milestones per program plus royalties. That model is what originally attracted me to ABCL. They can generate revenue from partnerships while retaining upside in drugs discovered using their platform, and now they're building their own internal pipeline on top of it. Then institutions just gave them another $200M After the ABCL635 data, AbCellera priced an oversubscribed $200M offering at $9.75/share. Normally dilution is a bad thing but it absorbed it like a champ and ABCL is now trading around $12.50, roughly 28% above the offering price. They get another $200M to push its internal pipeline forward without needing to worry about near-term financing. Why I'm holding for $15 I'm not claiming ABCL is suddenly worth $30 tomorrow but it has a good shot. At $12.51 the market cap is already around $4B, so expectations are clearly much higher than they were when the stock was sitting at $3-$4. But I think $15 is reasonable I'm treating that as my next decision point. Today's move ABCL jumped another 17.8% today and closed around $12.51, basically at its 52-week high. The interesting part is that there wasn't some massive new ABCL announcement today. This looks more like the market continuing to reprice the company following the Phase 2 data, financing, partnerships and improved pipeline outlook. It didn't spike 20% at the open and collapse either. It opened around $11 and spent most of the session grinding higher. That's the type of price action I want to see while holding a breakout. Risks It's still biotech, proceed with caution setbacks are common. ABCL635 has encouraging Phase 2 data, not an FDA approval. Phase 3 can fail. Partner programs can disappear. Still holding. Next stop I'm watching: $15. submitted by /u/tke248 [link] [comments]",
+      "author": "/u/tke248",
+      "symbols": [
+        "ABCL"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "transport": "rss",
+        "listing": "dd",
+        "flair": "DD",
+        "requested_flair": "DD",
+        "sort": "top",
+        "time_filter": "day",
+        "feed_rank": 2,
+        "image_urls": [
+          "https://preview.redd.it/qvmt9y49gmlh1.png?width=140&height=140&crop=1:1,smart&auto=webp&s=e7963759d6e417c5fdaa4b6b6225409686f3cfe6"
+        ],
+        "images": [
+          {
+            "url": "https://preview.redd.it/qvmt9y49gmlh1.png?width=140&height=140&crop=1:1,smart&auto=webp&s=e7963759d6e417c5fdaa4b6b6225409686f3cfe6",
+            "path": "data/media/reddit/reddit-image-reddit-ce821db3c43704c6698e-1.png",
+            "mime_type": "image/png",
+            "bytes": 4569
+          }
+        ]
       }
     },
     {
@@ -1589,6 +1626,44 @@
         "investor_type": "open_source_ecosystem_builder",
         "coverage": "Hugging Face and the open AI ecosystem",
         "engagement_score": 283
+      }
+    },
+    {
+      "id": "reddit:7473f7415fd7c5d9d843",
+      "source_type": "reddit",
+      "source_name": "r/wallstreetbets",
+      "title": "$AUR DD: 5,000 shares at $6.04 - I’m betting Chris Urmson and Aurora Innovation win a winner-take-most market",
+      "url": "https://www.reddit.com/r/wallstreetbets/comments/1vy565r/aur_dd_5000_shares_at_604_im_betting_chris_urmson/",
+      "published_at": "2026-08-25T16:45:32+00:00",
+      "collected_at": "2026-08-26T06:38:21.121900+00:00",
+      "body": "Position: 5,000 shares at a $6.04 average , roughly $30,200 invested . My thesis is simple: Aurora has moved beyond autonomous-trucking demos. Its trucks are hauling real freight on public highways without a human driver, and I believe Chris Urmson is the right person to turn that technical lead into a massive commercial business. He was approached by Google to start Waymo, left to start Aurora Innovation in 2017, and it has had some hiccups but the time is ripe for this shit to finally succeed and take off to the moon (or, the grocery store or Costco or wherever tf else big trucks go) Why I’m bullish Aurora reported nearly 440,000 driverless miles through June 2026 , with 100% on-time performance and zero Aurora Driver-attributed collisions . The company is targeting: Approximately 200 commercial driverless trucks by year-end 2026 Roush reaching a 1,000-truck annualized production rate Customer-owned Driver as a Service fleets beginning in 2027 Volvo beginning driverless operations in Q1 2027 A potential 500-truck Hirschbach deployment The important transition is from Aurora owning trucks to customers owning the trucks and paying Aurora for the virtual driver. If that model scales, Aurora becomes a recurring per-mile software and hardware platform rather than another low-margin trucking company. Why I trust Chris Urmson Urmson helped lead Carnegie Mellon’s autonomous-vehicle program, helped create Google’s self-driving project, and served as CTO of the organization that became Waymo. He has spent more than two decades solving this exact problem. He did not discover autonomous vehicles during the SPAC boom. During Aurora’s investor town hall, he was asked about recent selling by major shareholders. His response was: “Relative to management’s long-term view of the company, I think it’s a mistake.” GIF: https://i.redd.it/cnjndheoyjlh1.gif Chris Urmson: “I think it’s a mistake.” The quote addressed shareholder selling broadly, not only Uber. Urmson explained that Uber is an operating company reallocating capital toward its own strategy, not a permanent holding company. Uber selling shares does not mean Aurora’s technology stopped working or customer demand disappeared. He also said: “We don’t necessarily expect this to be a winner-take-all market, but we do expect a winner-take-most.” That is exactly my thesis. Multiple autonomous-trucking companies may survive, but carriers will concentrate freight with the systems they trust most. Safety validation, OEM integration, maintenance, insurance, route infrastructure and fleet software create serious switching costs. Aurora is already commercially driverless while many competitors are still discussing future launches. FirstLight could be a real moat Aurora owns its proprietary FirstLight FMCW lidar , designed specifically for highway-speed autonomy. FirstLight can: Detect objects up to approximately one kilometer away Directly measure the velocity of objects using Doppler shift Reject interference from sunlight and other lidar systems Give a loaded Class 8 truck more time to identify hazards and respond safely This matters because an 80,000-pound truck traveling at highway speed needs a much longer sensing horizon than a low-speed robotaxi. Aurora also controls the sensor’s design, signal processing and photonics architecture. It is not buying the same off-the-shelf lidar available to every competitor. Aurora can optimize FirstLight alongside the Aurora Driver and reduce costs as production scales. Why this could get much bigger Aurora is building relationships across the trucking ecosystem: Volvo PACCAR Roush AUMOVIO NVIDIA Hirschbach McLane Werner FedEx Schneider Uber Freight Ryder Aurora does not need to manufacture every truck, finance every fleet or operate every terminal. Partners can handle truck manufacturing, maintenance and logistics while Aurora supplies the autonomous driver. If Aurora eventually powers tens of thousands of customer-owned trucks and earns recurring revenue across billions of freight miles, today’s revenue will look almost irrelevant. What I’m watching The thesis strengthens if Aurora: Reaches approximately 200 driverless trucks by year-end Converts the Hirschbach MOU into a binding agreement Launches Volvo-powered driverless operations in 2027 Signs additional Driver as a Service customers Maintains strong safety and on-time performance Demonstrates improving hardware costs and unit economics Risks Aurora still burns significant cash, generates limited revenue and may dilute shareholders. Scaling from a small fleet to hundreds or thousands of reliable trucks is difficult. A serious collision, regulatory setback or manufacturing delay could destroy the thesis. The stock is also not cheap based on current revenue. This investment only works if Aurora becomes a major autonomous-freight platform. I believe it will. Aurora has real driverless operations, proprietary technology, major partners, strong customer demand and the founder I trust most to commercialize autonomous trucking. Aurora has a legitimate chance to take most of this market. I truly believe it can, it should, and it will. Research links Aurora Retail Investor Town Hall Town hall transcript Chris Urmson discusses Aurora’s second-generation trucks Chris Urmson and Lex Fridman Inside Aurora’s FirstLight technology Aurora Q2 2026 results Upcoming Events: Analyst and Investor Day next month on September 23rd. For nerds who wanna read a fancy 39 61 66 page pdf, google drive link is below. Feel free to download/share. Comments are enabled. https://drive.google.com/file/d/1S2o4P6OiEoBFNFlAB1EZ01V_uikNOUtZ/view?usp=sharing submitted by /u/Due-Perspective-3197 [link] [comments]",
+      "author": "/u/Due-Perspective-3197",
+      "symbols": [
+        "AUR",
+        "NVDA",
+        "GOOGL"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "transport": "rss",
+        "listing": "dd",
+        "flair": "DD",
+        "requested_flair": "DD",
+        "sort": "top",
+        "time_filter": "day",
+        "feed_rank": 1,
+        "image_urls": [
+          "https://external-preview.redd.it/Pj3leoudVBS_RGe6mMJ3PQzIXFS9ZxcprVeLEv6GlJg.jpeg?width=140&height=105&auto=webp&s=a39ccc92d7bb15cdf830b760cf06728febd9908e"
+        ],
+        "images": [
+          {
+            "url": "https://external-preview.redd.it/Pj3leoudVBS_RGe6mMJ3PQzIXFS9ZxcprVeLEv6GlJg.jpeg?width=140&height=105&auto=webp&s=a39ccc92d7bb15cdf830b760cf06728febd9908e",
+            "path": "data/media/reddit/reddit-image-reddit-7473f7415fd7c5d9d843-1.jpeg",
+            "mime_type": "image/jpeg",
+            "bytes": 4694
+          }
+        ]
       }
     },
     {

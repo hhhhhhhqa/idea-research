@@ -210,12 +210,29 @@ def parse_reddit_rss(
     for feed_rank, entry in enumerate(parsed.entries, start=1):
         entry_flair = ""
         tags = entry.get("tags") or []
+        tag_terms: list[str] = []
         for tag in tags:
             if isinstance(tag, dict):
                 term = str(tag.get("term") or "").strip()
                 if term:
-                    entry_flair = term
-                    break
+                    tag_terms.append(term)
+        # Reddit RSS can expose both the subreddit name and the post flair as
+        # Atom categories. Prefer the requested flair wherever it appears;
+        # never treat the subreddit category itself as a mismatching flair.
+        if flair:
+            entry_flair = next(
+                (term for term in tag_terms if term.casefold() == flair.casefold()),
+                next(
+                    (
+                        term
+                        for term in tag_terms
+                        if term.casefold() != str(subreddit or "").removeprefix("r/").casefold()
+                    ),
+                    "",
+                ),
+            )
+        elif tag_terms:
+            entry_flair = tag_terms[0]
         if flair and entry_flair and entry_flair.casefold() != flair.casefold():
             continue
         published = iso_datetime(entry.get("published") or entry.get("updated"), collected_at)

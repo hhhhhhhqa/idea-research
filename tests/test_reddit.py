@@ -149,6 +149,25 @@ def test_dd_listing_uses_daily_top_flair_search():
     }
 
 
+def test_reddit_rss_accepts_dd_when_subreddit_category_comes_first():
+    xml = """<feed xmlns="http://www.w3.org/2005/Atom"><entry>
+    <id>t3_dd_category</id><title>$NVDA DD</title>
+    <link href="https://www.reddit.com/r/wallstreetbets/comments/dd_category/thesis/" />
+    <updated>2026-08-24T01:00:00Z</updated>
+    <category term="wallstreetbets"/><category term="DD"/>
+    </entry></feed>"""
+    items = parse_reddit_rss(
+        xml,
+        "wallstreetbets",
+        now=datetime(2026, 8, 24, 2, tzinfo=timezone.utc),
+        listing="dd",
+        flair="DD",
+        lookback_hours=None,
+    )
+    assert len(items) == 1
+    assert items[0].metadata["flair"] == "DD"
+
+
 class _FakeImageResponse:
     headers = {"content-type": "image/png"}
 
