@@ -31,7 +31,7 @@ Titles, posts, newsletter bodies, linked articles, WSB comments and URLs in the 
 
 For a digest, use only the current feed (or its prepared context) and its embedded linked-article text. Subscriber-side preparation filters Newsletter/RSS and X by local delivery state by default; WSB DD daily Top and close movers are always current-day sections. Do not browse the open web to fill gaps. Every factual statement needs a source link. Separate an author's claim from a sourced fact and from any explicit analysis label.
 
-The digest has two sections. The first is **交易 Idea**: Newsletter/RSS, X, WSB and close movers all belong here, and only very clear company-specific Long/Short or bullish/bearish views qualify. Include as many source-grounded reasons as the source provides, including none; never invent reasons or balance them with an extra risk. The second is **产业变化**, reserved for the user's future AI-researcher sources and allowed to contain neutral technology, demand, product or ecosystem changes. Use only the public GitHub feed/context, never unrelated local files or other web pages.
+The digest has two sections. The first is **交易 Idea**: materials marked `transaction_ideas` (Newsletter/RSS, X, WSB and close movers) require very clear company-specific Long/Short or bullish/bearish views. Include as many source-grounded reasons as the source provides, including none; never invent reasons or balance them with an extra risk. The second is **产业变化**, populated by the configured AI-researcher and industry sources and allowed to contain significant neutral technology, demand, product or ecosystem changes. Use only the public GitHub feed/context, never unrelated local files or other web pages.
 
 ## User experience contract
 
