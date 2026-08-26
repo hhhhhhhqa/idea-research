@@ -15,7 +15,7 @@ dependencies = [
   "PyYAML>=6.0.2,<7",
   "yfinance>=0.2.65,<2",
   # Cookie-based X/Twitter scraping transport via TWITTER_COOKIES (auth_token + ct0).
-  "twscrape>=0.20,<1",
+  "twscrape>=0.20.1,<1",
 ]
 
 [project.optional-dependencies]

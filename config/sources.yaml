@@ -287,6 +287,148 @@ x:
       coverage: processors, systems and AI compute architecture
       section: industry_changes
 
+    # Additional AI researchers, academics and frontier-model practitioners.
+    - handle: AndrewYNg
+      name: Andrew Ng
+      investor_type: ai_researcher_educator
+      coverage: machine learning, deep learning and AI education
+      section: industry_changes
+    - handle: hardmaru
+      name: David Ha
+      investor_type: ai_researcher
+      coverage: Sakana AI, generative models, evolution and agents
+      section: industry_changes
+    - handle: DrJimFan
+      name: Jim Fan
+      investor_type: ai_researcher
+      coverage: NVIDIA robotics and Physical AGI
+      section: industry_changes
+    - handle: ericjang11
+      name: Eric Jang
+      investor_type: ai_researcher
+      coverage: robotics and AI research
+      section: industry_changes
+    - handle: ZoubinGhahrama1
+      name: Zoubin Ghahramani
+      investor_type: ai_researcher
+      coverage: Google DeepMind and machine learning
+      section: industry_changes
+    - handle: suchenzang
+      name: Susan Zhang
+      investor_type: frontier_ai_researcher
+      coverage: frontier AI and OpenAI research
+      section: industry_changes
+    - handle: LiamFedus
+      name: Liam Fedus
+      investor_type: ai_researcher
+      coverage: OpenAI post-training and Periodic Labs
+      section: industry_changes
+    - handle: ID_AA_Carmack
+      name: John Carmack
+      investor_type: ai_researcher_builder
+      coverage: AGI and Keen Technologies
+      section: industry_changes
+    - handle: OfficialLoganK
+      name: Logan Kilpatrick
+      investor_type: ai_product_leader
+      coverage: Gemini and Google AI Studio
+      section: industry_changes
+    - handle: ibab
+      name: Igor Babuschkin
+      investor_type: ai_researcher_engineer
+      coverage: xAI research and engineering
+      section: industry_changes
+    - handle: TacoCohen
+      name: Taco Cohen
+      investor_type: ai_researcher
+      coverage: Meta FAIR, reinforcement learning and equivariance
+      section: industry_changes
+    - handle: jeffclune
+      name: Jeff Clune
+      investor_type: ai_researcher
+      coverage: AI-generated algorithms, deep RL and open-endedness
+      section: industry_changes
+    - handle: EthanJPerez
+      name: Ethan Perez
+      investor_type: ai_safety_researcher
+      coverage: Anthropic alignment
+      section: industry_changes
+    - handle: AlexGDimakis
+      name: Alex Dimakis
+      investor_type: ai_researcher
+      coverage: Berkeley machine learning and AI
+      section: industry_changes
+    - handle: sainingxie
+      name: Saining Xie
+      investor_type: ai_researcher
+      coverage: vision, NYU, DeepMind and FAIR
+      section: industry_changes
+    - handle: rasbt
+      name: Sebastian Raschka
+      investor_type: ai_researcher_educator
+      coverage: ML research engineering and LLM education
+      section: industry_changes
+    - handle: goodside
+      name: Riley Goodside
+      investor_type: ai_researcher
+      coverage: LLM behavior, prompting and evaluations
+      section: industry_changes
+    - handle: bobmcgrewai
+      name: Bob McGrew
+      investor_type: ai_researcher
+      coverage: frontier AI research and scaling
+      section: industry_changes
+    - handle: chipro
+      name: Chip Huyen
+      investor_type: ai_engineering_researcher
+      coverage: AI engineering and ML systems
+      section: industry_changes
+    - handle: ericzelikman
+      name: Eric Zelikman
+      investor_type: ai_researcher
+      coverage: Stanford, xAI and AI reasoning
+      section: industry_changes
+    - handle: jxmnop
+      name: Jack Morris
+      investor_type: ai_researcher
+      coverage: language models and information theory
+      section: industry_changes
+    - handle: DhruvBatra_
+      name: Dhruv Batra
+      investor_type: embodied_ai_researcher
+      coverage: embodied AI, Meta FAIR and Georgia Tech
+      section: industry_changes
+    - handle: docmilanfar
+      name: Peyman Milanfar
+      investor_type: ai_researcher
+      coverage: computational imaging and AI at Google
+      section: industry_changes
+    - handle: AlexTamkin
+      name: Alex Tamkin
+      investor_type: ai_researcher
+      coverage: Anthropic, ML society and evaluations
+      section: industry_changes
+    - handle: gstsdn
+      name: Augustus Odena
+      investor_type: ai_researcher
+      coverage: AI research, Adept and Google Brain
+      section: industry_changes
+    - handle: AravSrinivas
+      name: Aravind Srinivas
+      investor_type: ai_company_decision_maker
+      coverage: Perplexity, AI search and reasoning
+      section: industry_changes
+    - handle: EMostaque
+      name: Emad Mostaque
+      investor_type: generative_ai_builder
+      coverage: generative AI and Stability AI ecosystem
+      section: industry_changes
+    - handle: ClementDelangue
+      name: Clem Delangue
+      investor_type: open_source_ecosystem_builder
+      coverage: Hugging Face and the open AI ecosystem
+      section: industry_changes
+
     # AI decision-makers and company-level infrastructure signals.
     - handle: sama
       name: Sam Altman
