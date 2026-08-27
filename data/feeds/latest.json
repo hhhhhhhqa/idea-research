@@ -1,7 +1,26 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-27T05:49:37.312062+00:00",
+  "generated_at": "2026-08-27T06:16:09.447891+00:00",
   "pipelines": [
+    {
+      "pipeline": "x",
+      "status": "ok",
+      "item_count": 48,
+      "errors": [],
+      "notes": [
+        "X account priority: transaction_ideas before industry_changes",
+        "X cooldown waiting enabled across 2 cookie account(s)",
+        "@PhotonCap: 9 tweet(s) via twscrape",
+        "@damnang2: 0 tweet(s) via twscrape",
+        "@statementdog: 2 tweet(s) via twscrape",
+        "@outliercapx: 5 tweet(s) via twscrape",
+        "@ren_stocks: 7 tweet(s) via twscrape",
+        "@itsalasdairmann: 16 tweet(s) via twscrape",
+        "@moninvestor: 3 tweet(s) via twscrape",
+        "@FinnStockinger: 6 tweet(s) via twscrape",
+        "Linked articles: 1 article(s) stored; 6 unavailable or skipped"
+      ]
+    },
     {
       "pipeline": "reddit",
       "status": "error",
@@ -21,26 +40,6 @@
       "notes": []
     },
     {
-      "pipeline": "x",
-      "status": "ok",
-      "item_count": 5,
-      "errors": [],
-      "notes": [
-        "X account priority: transaction_ideas before industry_changes",
-        "X cooldown waiting enabled across 2 cookie account(s)",
-        "@buccocapital: 1 tweet(s) via twscrape",
-        "@Citrini7: 0 tweet(s) via twscrape",
-        "@CasinoCapital: 0 tweet(s) via twscrape",
-        "@Crussian17: 2 tweet(s) via twscrape",
-        "@KerrisdaleCap: 0 tweet(s) via twscrape",
-        "@leveredbetaboy2: 1 tweet(s) via twscrape",
-        "@TMTBreakout: 0 tweet(s) via twscrape",
-        "@techfund1: 0 tweet(s) via twscrape",
-        "@AndrewCurran_: 1 tweet(s) via twscrape",
-        "Linked articles: 0 article(s) stored; 3 unavailable or skipped"
-      ]
-    },
-    {
       "pipeline": "prices",
       "status": "ok",
       "item_count": 2,
@@ -51,14 +50,126 @@
     }
   ],
   "counts": {
-    "total": 128,
+    "total": 176,
     "substack": 11,
     "rss": 2,
     "reddit": 0,
-    "x": 113,
+    "x": 161,
     "price": 2
   },
   "items": [
+    {
+      "id": "x:40b791fd2fdbdff62b9a",
+      "source_type": "x",
+      "source_name": "@statementdog",
+      "title": "That bottleneck is already showing up at Kinsus (3189 TT). T-glass shortages leave 10–15% of potential monthly revenue unfilled. It has secured material for a 25% high-end ABF capa",
+      "url": "https://x.com/statementdog/status/2092858398111097099",
+      "published_at": "2026-08-27T06:15:00+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "That bottleneck is already showing up at Kinsus (3189 TT). T-glass shortages leave 10–15% of potential monthly revenue unfilled. It has secured material for a 25% high-end ABF capacity increase in 2027. Upstream, Fulltech says customers want low-CTE capacity doubled in 2H26.",
+      "author": "statementdog",
+      "symbols": [],
+      "engagement": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "statementdog",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "semiconductor_investor",
+        "coverage": "Korean and Taiwanese AI supply chain and component companies",
+        "engagement_score": 0
+      }
+    },
+    {
+      "id": "x:65b9412199886b1c0ab9",
+      "source_type": "x",
+      "source_name": "@PhotonCap",
+      "title": "Same. nobody denied that they are bullish on memory after $NVDA earning.",
+      "url": "https://x.com/PhotonCap/status/2092856820943774206",
+      "published_at": "2026-08-27T06:08:44+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "Same. nobody denied that they are bullish on memory after $NVDA earning.",
+      "author": "PhotonCap",
+      "symbols": [],
+      "engagement": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "PhotonCap",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "semiconductor_investor",
+        "coverage": "photonics, co-packaged optics, HBM, advanced packaging, POET, SIVE, IQE",
+        "engagement_score": 0
+      }
+    },
+    {
+      "id": "x:94599d0ce732a28b7139",
+      "source_type": "x",
+      "source_name": "@PhotonCap",
+      "title": "삼성·SK, HBM4 8단 출하 비중 늘린다…엔비디아 공급망 변화 예고 - 지디넷코리아 https://t.co/8ekXYmHLg2",
+      "url": "https://x.com/PhotonCap/status/2092845919167484316",
+      "published_at": "2026-08-27T05:25:24+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "삼성·SK, HBM4 8단 출하 비중 늘린다…엔비디아 공급망 변화 예고 - 지디넷코리아 https://t.co/8ekXYmHLg2",
+      "author": "PhotonCap",
+      "symbols": [],
+      "engagement": {
+        "likes": 3,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "PhotonCap",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "semiconductor_investor",
+        "coverage": "photonics, co-packaged optics, HBM, advanced packaging, POET, SIVE, IQE",
+        "engagement_score": 3,
+        "external_articles": [
+          {
+            "original_url": "https://t.co/8ekXYmHLg2",
+            "url": "https://zdnet.co.kr/view/?no=20260826094826#_enliple",
+            "title": "삼성·SK, HBM4 8단 출하 비중 늘린다…엔비디아 공급망 변화 예고",
+            "body": "반도체ㆍ디스플레이 입력 :2026/08/26 14:04    수정: 2026/08/26 17:06\n\n삼성전자와 SK하이닉스가 엔비디아향 6세대 고대역폭메모리(HBM4) 출하량에서 8단 비중을 확대할 것으로 파악됐다. 발열 및 공급망 안정성을 고려해, 다양한 HBM 메모리 옵션을 확보하려는 엔비디아의 수급 전략이 주된 영향을 미쳤다. 차세대 제품인 HBM4E도 8단이 주력 제품이 될 가능성이 높아진 상황이다.\n\n26일 업계에 따르면 삼성전자와 SK하이닉스는 올 하반기 엔비디아향 HBM4 8단 공급을 늘릴 계획이다.\n\n앞서 양사는 엔비디아의 차세대 AI 가속기인 '베라-루빈' 시리즈용으로 HBM4 12단 제품을 공급해 왔다. HBM은 여러 개의 D램을 수직으로 적층한 메모리로, 12단은 D램을 12개 쌓았다는 의미다. 해당 제품의 본격적인 양산 공급 시점은 삼성전자가 올 1분기, SK하이닉스가 2분기로 관측된다.\n\n그러나 최근 엔비디아 HBM 공급망 기조가 변화하고 있다. 삼성전자·SK하이닉스 양사 안팎의 이야기를 종합하면, 올 하반기 양사는 엔비디아향 HBM4 출하량에서 12단 대신 8단 공급 비중을 점차 확대할 계획이다.\n\n메모리 반도체 업계 관계자는 \"최근 엔비디아로부터 HBM4 주력 공급 제품을 12단에서 8단으로 변경해달라는 요청이 있었다\"며 \"이에 맞춰 올 하반기 공급 계획이 수정된 것으로 안다\"고 말했다.\n\n또 다른 관계자는 \"당초 HBM4 8단에 대한 수요가 일부 있었는데, 올 하반기 해당 제품용 수요가 늘어나 관련 소재·부품 쪽에도 발주 영향이 있었다\"며 \"정확한 비중은 아직 판단하기 이르나, 엔비디아향 HBM4에서 8단 비중이 늘어나는 추세는 뚜렷해질 것\"이라고 설명했다.\n\n업계는 이 같은 변화에는 복합적인 요인이 작용했을 것으로 보고 있다. 성능 면에서는 발열 문제가 대두됐다. HBM4의 경우 이전 세대 대비 데이터 전송통로인 입출력단자(I/O) 수가 2048개로 2배 늘면서, 개별 칩뿐만 아니라 서버 랙 시스템 전체의 발열이 크게 증가했다.\n\n공급망적인 측면도 영향을 미친 것으로 알려졌다. 현재 HBM은 글로벌 빅테크의 공격적인 AI 인프라 투자로 극심한 공급난에 빠져 있다. 반면 HBM4는 성능 및 집적도 향상으로 수율 향상에 불리하다. HBM의 코어 다이인 D램의 수율은 비교적 빠르게 끌어올릴 수 있으나, 이를 12단으로 적층하고 본딩 및 패키징 하는 과정에서 수율은 크게 저하된다.\n\n이에 엔비디아는 기존 HBM4 12단 외에도 8단 제품 수급량을 늘려, 향후 AI 가속기에 탑재되는 메모리 용량에 대한 여러 선택지를 확보하려는 것으로 풀이된다.\n\n반도체 업계 관계자는 \"엔비디아가 최신 AI 플랫폼을 설계하는 과정에서 발열 관리를 제일 중요하게 보고 있다\"며 \"개별 칩 스펙을 하향 조정한다기보다는, 최적의 조합을맞추는 과정이므로 시장 전체 수요에는 큰 변동이 없을 것\"이라고 강조했다.\n\nHBM4의 차기 버전인 HBM4E도 당초 12단에서 8단 출하가 유력해진 상황이다. HBM4E는 엔비디아의 차세대 AI 가속기 '루빈-울트라'에 탑재될 예정인 제품이다.\n\n메모리 반도체 업계 고위 관계자는 \"HBM4E 12단 및 16단 샘플 역시 논의는 되고 있으나, 고객사와의 논의 상황을 보면 당장 내년 공급될 HBM4E는 8단이 주력으로 공급될 가능성이 높다\"며 \"다만 당장은 루빈-울트라도 HBM4E를 쓰느냐, HBM4를 쓰느냐 등의 이슈가 있어 업계 전반의 불확실성이 높다\"고 말했다."
+          }
+        ]
+      }
+    },
+    {
+      "id": "x:e53e90773cce09a51dce",
+      "source_type": "x",
+      "source_name": "@PhotonCap",
+      "title": "$MRVL Marvell reports tomorrow. Before the numbers land I wanted to check the technology side. I work in optics, and Photonic Fabric has been a concept I liked from the start. Pull",
+      "url": "https://x.com/PhotonCap/status/2092842744914075688",
+      "published_at": "2026-08-27T05:12:48+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$MRVL Marvell reports tomorrow. Before the numbers land I wanted to check the technology side. I work in optics, and Photonic Fabric has been a concept I liked from the start. Pull memory out of the package and wire it with light. Marvell bought that company in February. And closed XConn in the same month, which builds PCIe and CXL switching silicon. So the electrical route and the optical route both went into one quarter. In June came a 100 terabit class switch, offered with a co-packaged optics option. Which made me want to see how far the optical side has actually come. Not from company material, but from what the engineers filed at a conference. So I read the ECTC 2025 and 2026 papers side by side. The ones that team put out four months after the deal closed. Does the picture from the day of purchase match where those papers stand today?",
+      "author": "PhotonCap",
+      "symbols": [],
+      "engagement": {
+        "likes": 17,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "PhotonCap",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "semiconductor_investor",
+        "coverage": "photonics, co-packaged optics, HBM, advanced packaging, POET, SIVE, IQE",
+        "engagement_score": 18
+      }
+    },
     {
       "id": "x:f9c23394751059af4059",
       "source_type": "x",
@@ -83,6 +194,214 @@
         "investor_type": "ai_ecosystem_observer",
         "coverage": "AI research, products and industry developments",
         "engagement_score": 76
+      }
+    },
+    {
+      "id": "x:72b27ef0ded8bac518f5",
+      "source_type": "x",
+      "source_name": "@PhotonCap",
+      "title": "https://t.co/8DbNqLBKnr",
+      "url": "https://x.com/PhotonCap/status/2092841422378704946",
+      "published_at": "2026-08-27T05:07:32+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "https://t.co/8DbNqLBKnr",
+      "author": "PhotonCap",
+      "symbols": [],
+      "engagement": {
+        "likes": 7,
+        "reposts": 1,
+        "replies": 1,
+        "quotes": 2
+      },
+      "metadata": {
+        "handle": "PhotonCap",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "semiconductor_investor",
+        "coverage": "photonics, co-packaged optics, HBM, advanced packaging, POET, SIVE, IQE",
+        "engagement_score": 10
+      }
+    },
+    {
+      "id": "x:780ed0d6928e568dd89b",
+      "source_type": "x",
+      "source_name": "@statementdog",
+      "title": "Google TPU shipment estimates for 2027 now range from 6.7 million to 8.8 million chips. At the high end, one Taiwan sell-side model translates that into more than 100,000 racks. We",
+      "url": "https://x.com/statementdog/status/2092836776981549398",
+      "published_at": "2026-08-27T04:49:05+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "Google TPU shipment estimates for 2027 now range from 6.7 million to 8.8 million chips. At the high end, one Taiwan sell-side model translates that into more than 100,000 racks. We hear the same uncertainty in our own supply-chain interviews. Nearly everyone expects volumes to surge. Almost no one can pin down a precise number. The two major rack assemblers today are Inventec (2356 TT) and Celestica $CLS. Supply-chain checks suggest Foxconn (2317 TT) and Compal (2324 TT) could join in 2027 because existing capacity may not be enough.",
+      "author": "statementdog",
+      "symbols": [],
+      "engagement": {
+        "likes": 5,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "statementdog",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "semiconductor_investor",
+        "coverage": "Korean and Taiwanese AI supply chain and component companies",
+        "engagement_score": 5
+      }
+    },
+    {
+      "id": "x:75fe32a369361288d205",
+      "source_type": "x",
+      "source_name": "@PhotonCap",
+      "title": "정말 동감합니다. 병목이 계속 돌고 도는데 결국은 자본... 인력(인재(人才))도 정말 큰 병목이라 생각합니다.",
+      "url": "https://x.com/PhotonCap/status/2092832754715254794",
+      "published_at": "2026-08-27T04:33:06+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "정말 동감합니다. 병목이 계속 돌고 도는데 결국은 자본... 인력(인재(人才))도 정말 큰 병목이라 생각합니다.",
+      "author": "PhotonCap",
+      "symbols": [],
+      "engagement": {
+        "likes": 14,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "PhotonCap",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "semiconductor_investor",
+        "coverage": "photonics, co-packaged optics, HBM, advanced packaging, POET, SIVE, IQE",
+        "engagement_score": 14
+      }
+    },
+    {
+      "id": "x:97c302844cc188080250",
+      "source_type": "x",
+      "source_name": "@PhotonCap",
+      "title": "Great comment on microLED. However, I would not say \"exclusively intra-package.\" The paper cites microLED links reaching tens of meters, including Avicena at that's a good point by",
+      "url": "https://x.com/PhotonCap/status/2092829685944406037",
+      "published_at": "2026-08-27T04:20:54+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "Great comment on microLED. However, I would not say \"exclusively intra-package.\" The paper cites microLED links reaching tens of meters, including Avicena at that's a good point by @katzspx That said, packing many optical channels into a small area can increase the risk of optical crosstalk and make alignment more challenging. So scaling channel density is not free, even if microLED avoids some of the power and SerDes overhead of conventional laser-based links.",
+      "author": "PhotonCap",
+      "symbols": [],
+      "engagement": {
+        "likes": 8,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "PhotonCap",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "semiconductor_investor",
+        "coverage": "photonics, co-packaged optics, HBM, advanced packaging, POET, SIVE, IQE",
+        "engagement_score": 10
+      }
+    },
+    {
+      "id": "x:c43b86a9059ec5c2851b",
+      "source_type": "x",
+      "source_name": "@ren_stocks",
+      "title": "$NVDA $NBIS $MU $SNDK $LITE $BE Going through the Nvidia call with more time… Good god, we are not really for how much higher everything is going… Even if it takes 3-6 months for t",
+      "url": "https://x.com/ren_stocks/status/2092829182786982251",
+      "published_at": "2026-08-27T04:18:54+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA $NBIS $MU $SNDK $LITE $BE Going through the Nvidia call with more time… Good god, we are not really for how much higher everything is going… Even if it takes 3-6 months for the market to realize it. Data Center revenue was $89.02B, up 117%, with Q3 guided to $108B assuming zero China compute. Nvidia revenue per megawatt: General purpose compute: ~$3-5M/MW Hopper: $18M/MW Grace Blackwell: $25M/MW Vera Rubin: $40M/MW Supply commitments have swelled to $279B, mostly memory for Vera Rubin. Do you have any idea how much memory, interconnect, advanced packaging, and every other layer of the buildout that implies? Agentic AI is just starting to get good, next year it will explode, so expect 100x more compute needed. Bullish AF ⚡ ⚡ ⚡",
+      "author": "ren_stocks",
+      "symbols": [],
+      "engagement": {
+        "likes": 122,
+        "reposts": 11,
+        "replies": 8,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "ren_stocks",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI buildout and small/mid-cap technology equities",
+        "engagement_score": 152
+      }
+    },
+    {
+      "id": "x:7d93a170e077630184e1",
+      "source_type": "x",
+      "source_name": "@PhotonCap",
+      "title": "$SKHY - SK Hynix questions PIM (Processing-In-Memory) approach for HBM due to thermal constraints - Packaging limits present additional challenge to HBM performance scaling - Samsu",
+      "url": "https://x.com/PhotonCap/status/2092828133645017239",
+      "published_at": "2026-08-27T04:14:44+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$SKHY - SK Hynix questions PIM (Processing-In-Memory) approach for HBM due to thermal constraints - Packaging limits present additional challenge to HBM performance scaling - Samsung and SK Hynix pursuing different technical strategies for HBM bottlenecks SK Hynix's skepticism toward PIM for HBM suggests thermal and packaging challenges may favor alternative architectures, potentially affecting AI accelerator roadmaps and competitive positioning in high-bandwidth memory markets.",
+      "author": "PhotonCap",
+      "symbols": [],
+      "engagement": {
+        "likes": 14,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "PhotonCap",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "semiconductor_investor",
+        "coverage": "photonics, co-packaged optics, HBM, advanced packaging, POET, SIVE, IQE",
+        "engagement_score": 15
+      }
+    },
+    {
+      "id": "x:f9f12cb8ff5fc001c57e",
+      "source_type": "x",
+      "source_name": "@PhotonCap",
+      "title": "\"그래서 앞으로 청진기는 매출이 아니라 회수에 가 있을 것이다. 총마진 74%가 버티는지, 늘어난 60일이 도로 줄어드는지, 그리고 Rubin이 정말 돈이 되는지…\" 기대됩니다!",
+      "url": "https://x.com/PhotonCap/status/2092827350945956195",
+      "published_at": "2026-08-27T04:11:37+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "\"그래서 앞으로 청진기는 매출이 아니라 회수에 가 있을 것이다. 총마진 74%가 버티는지, 늘어난 60일이 도로 줄어드는지, 그리고 Rubin이 정말 돈이 되는지…\" 기대됩니다!",
+      "author": "PhotonCap",
+      "symbols": [],
+      "engagement": {
+        "likes": 8,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "PhotonCap",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "semiconductor_investor",
+        "coverage": "photonics, co-packaged optics, HBM, advanced packaging, POET, SIVE, IQE",
+        "engagement_score": 8
+      }
+    },
+    {
+      "id": "x:f31a493cee4093c24335",
+      "source_type": "x",
+      "source_name": "@PhotonCap",
+      "title": "One more $MRVL deep dive before earnings tomorrow: Optical Multi-Chip Interconnect Bridge (OMIB). Coming soon. https://t.co/L1Ina8A5II",
+      "url": "https://x.com/PhotonCap/status/2092826822186823712",
+      "published_at": "2026-08-27T04:09:31+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "One more $MRVL deep dive before earnings tomorrow: Optical Multi-Chip Interconnect Bridge (OMIB). Coming soon. https://t.co/L1Ina8A5II",
+      "author": "PhotonCap",
+      "symbols": [],
+      "engagement": {
+        "likes": 8,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "PhotonCap",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "semiconductor_investor",
+        "coverage": "photonics, co-packaged optics, HBM, advanced packaging, POET, SIVE, IQE",
+        "engagement_score": 10
       }
     },
     {
@@ -206,6 +525,32 @@
         "coverage": "large internet, software expectations, crowding, earnings expectation gaps",
         "evidence_note": "Discovery signal for market debate only; anonymous identity means it cannot be final factual evidence.",
         "engagement_score": 37
+      }
+    },
+    {
+      "id": "x:37c98e29ce7da8a967b1",
+      "source_type": "x",
+      "source_name": "@ren_stocks",
+      "title": "$NVDA is buying Hugging Face for $12.9B. They’re playing chess while everyone else plays checkers. This is getting serious. https://t.co/SDArX8v5Bs",
+      "url": "https://x.com/ren_stocks/status/2092790362536378737",
+      "published_at": "2026-08-27T01:44:39+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA is buying Hugging Face for $12.9B. They’re playing chess while everyone else plays checkers. This is getting serious. https://t.co/SDArX8v5Bs",
+      "author": "ren_stocks",
+      "symbols": [],
+      "engagement": {
+        "likes": 79,
+        "reposts": 2,
+        "replies": 4,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "ren_stocks",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI buildout and small/mid-cap technology equities",
+        "engagement_score": 87
       }
     },
     {
@@ -757,6 +1102,58 @@
       }
     },
     {
+      "id": "x:448656cda566ce3541a2",
+      "source_type": "x",
+      "source_name": "@ren_stocks",
+      "title": "$MU $SKHY Michael Burry, you good?",
+      "url": "https://x.com/ren_stocks/status/2092746640192913539",
+      "published_at": "2026-08-26T22:50:55+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$MU $SKHY Michael Burry, you good?",
+      "author": "ren_stocks",
+      "symbols": [],
+      "engagement": {
+        "likes": 46,
+        "reposts": 1,
+        "replies": 3,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "ren_stocks",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI buildout and small/mid-cap technology equities",
+        "engagement_score": 51
+      }
+    },
+    {
+      "id": "x:3af7cd3884f1f91b461d",
+      "source_type": "x",
+      "source_name": "@ren_stocks",
+      "title": "$NBIS What are we thinking? Do we fade or do we go higher?",
+      "url": "https://x.com/ren_stocks/status/2092744337595457891",
+      "published_at": "2026-08-26T22:41:46+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NBIS What are we thinking? Do we fade or do we go higher?",
+      "author": "ren_stocks",
+      "symbols": [],
+      "engagement": {
+        "likes": 53,
+        "reposts": 1,
+        "replies": 7,
+        "quotes": 1
+      },
+      "metadata": {
+        "handle": "ren_stocks",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI buildout and small/mid-cap technology equities",
+        "engagement_score": 62
+      }
+    },
+    {
       "id": "x:de318ca667404a6b4a91",
       "source_type": "x",
       "source_name": "@jukan05",
@@ -783,6 +1180,59 @@
       }
     },
     {
+      "id": "x:f851a9fe362c19e4c560",
+      "source_type": "x",
+      "source_name": "@outliercapx",
+      "title": "$NVDA just gave us the full recap of the AI cycle (bullets below) Not a beat. A reset. Thanks @JensenHuang The print: • $96.2B rev (+106% YoY) • Data Center $89B (+117%) • Q3 guide",
+      "url": "https://x.com/outliercapx/status/2092739110318277011",
+      "published_at": "2026-08-26T22:20:59+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA just gave us the full recap of the AI cycle (bullets below) Not a beat. A reset. Thanks @JensenHuang The print: • $96.2B rev (+106% YoY) • Data Center $89B (+117%) • Q3 guide $108B The cycle: • FY28 growth: +70% • Would be +100% without supply constraints • Bottleneck lasts through FY28 The stack: • $ / GW: $18B → $25B → $40B (Vera Rubin) • Hyperscaler capex: $800B (’26) → $1.3T (’27) • Cloud backlog > $2T • Memory pricing already above expectations — still rising • Neoclouds: 3GW → 8GW this year • Agents need 15–100x more compute than a human Street was at ~40% for FY28. $NVDA just printed 70% with a supply ceiling. I said this was obvious. The cycle isn’t fading. It’s rationed. Position the stack now. That’s how generational wealth gets built. I’ll map it. — Outlier Capital",
+      "author": "outliercapx",
+      "symbols": [],
+      "engagement": {
+        "likes": 6,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "outliercapx",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "optical components and AI infrastructure second-order beneficiaries",
+        "evidence_note": "May disclose positions in discussed stocks; preserve the stated thesis and distinguish it from verified facts.",
+        "engagement_score": 6
+      }
+    },
+    {
+      "id": "x:e58188c73f0cf3316ffb",
+      "source_type": "x",
+      "source_name": "@ren_stocks",
+      "title": "$NVDA $NBIS $LITE $SNDK $SKHY $BE The Discord is finally LIVE, and it's already full of the best people on this timeline. Thank you to everyone who was patient while I set this thi",
+      "url": "https://x.com/ren_stocks/status/2092738683934003516",
+      "published_at": "2026-08-26T22:19:18+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA $NBIS $LITE $SNDK $SKHY $BE The Discord is finally LIVE, and it's already full of the best people on this timeline. Thank you to everyone who was patient while I set this thing up and put up with being my beta testers. Everything's running properly now. Inside: real-time buy/sell alerts, portfolio updates, the NBIS challenge, the 50k swing challenge, and channels for every layer of the buildout. Substack subscription gets you in; you can find it in my X profile. Today all of my swings but one are green $NBIS $MRVL $NVTS $AXTI $AEHR 😎 Who's ready to join us?",
+      "author": "ren_stocks",
+      "symbols": [],
+      "engagement": {
+        "likes": 40,
+        "reposts": 1,
+        "replies": 6,
+        "quotes": 1
+      },
+      "metadata": {
+        "handle": "ren_stocks",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI buildout and small/mid-cap technology equities",
+        "engagement_score": 48
+      }
+    },
+    {
       "id": "x:5cdb1a596d4b28ed86b7",
       "source_type": "x",
       "source_name": "@leveredbetaboy2",
@@ -806,6 +1256,32 @@
         "investor_type": "technology_investor",
         "coverage": "technology and software equity trade ideas",
         "engagement_score": 4
+      }
+    },
+    {
+      "id": "x:48d4492979132abc3467",
+      "source_type": "x",
+      "source_name": "@itsalasdairmann",
+      "title": "After this call, it does seem like $NVDA is a $300 stock trading at $200 It is only up 15% YTD, while $QQQ is up 16% YTD",
+      "url": "https://x.com/itsalasdairmann/status/2092738289220673957",
+      "published_at": "2026-08-26T22:17:44+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "After this call, it does seem like $NVDA is a $300 stock trading at $200 It is only up 15% YTD, while $QQQ is up 16% YTD",
+      "author": "Alasdair Mann",
+      "symbols": [],
+      "engagement": {
+        "likes": 35,
+        "reposts": 1,
+        "replies": 2,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "itsalasdairmann",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI power, data centers and second-order equipment beneficiaries",
+        "engagement_score": 39
       }
     },
     {
@@ -889,6 +1365,32 @@
       }
     },
     {
+      "id": "x:ab34bfbd25776a1a1f16",
+      "source_type": "x",
+      "source_name": "@FinnStockinger",
+      "title": "The more interesting part of the $AMZN x $NVDA deal may be NVLink Fusion + NVHBM, not the 2M GPUs. AWS’s next-gen Trainium4 will support NVLink Fusion, allowing Amazon’s custom chi",
+      "url": "https://x.com/FinnStockinger/status/2092733156822581707",
+      "published_at": "2026-08-26T21:57:20+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "The more interesting part of the $AMZN x $NVDA deal may be NVLink Fusion + NVHBM, not the 2M GPUs. AWS’s next-gen Trainium4 will support NVLink Fusion, allowing Amazon’s custom chips and NVIDIA GPUs to work within a common rack-scale architecture. At the same time, NVHBM moves the memory controller into the HBM base die, delivering: → up to 30% higher memory bandwidth → 15% lower HBM power consumption → up to 25% more XPU die area vs. HBM4E NVIDIA is effectively extending its rack-scale architecture beyond its own GPUs into the infrastructure built around hyperscalers’ custom silicon.",
+      "author": "Finn Stockinger",
+      "symbols": [],
+      "engagement": {
+        "likes": 13,
+        "reposts": 2,
+        "replies": 2,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "FinnStockinger",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI infrastructure bottlenecks and component suppliers",
+        "engagement_score": 19
+      }
+    },
+    {
       "id": "x:c25e7026f327c3cb5eb4",
       "source_type": "x",
       "source_name": "@sama",
@@ -912,6 +1414,32 @@
         "investor_type": "ai_company_decision_maker",
         "coverage": "AI models, products and company strategy",
         "engagement_score": 8625
+      }
+    },
+    {
+      "id": "x:ade355d5efa93e97bbd8",
+      "source_type": "x",
+      "source_name": "@itsalasdairmann",
+      "title": "$NVDA Jensen on what the most acute supply constraints are: \"last year whoever I go on dinner with, their stock price doubles the next day\" 😂😂",
+      "url": "https://x.com/itsalasdairmann/status/2092732900932522305",
+      "published_at": "2026-08-26T21:56:19+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA Jensen on what the most acute supply constraints are: \"last year whoever I go on dinner with, their stock price doubles the next day\" 😂😂",
+      "author": "Alasdair Mann",
+      "symbols": [],
+      "engagement": {
+        "likes": 15,
+        "reposts": 1,
+        "replies": 2,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "itsalasdairmann",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI power, data centers and second-order equipment beneficiaries",
+        "engagement_score": 19
       }
     },
     {
@@ -941,6 +1469,58 @@
       }
     },
     {
+      "id": "x:a0f698202d321769e06a",
+      "source_type": "x",
+      "source_name": "@itsalasdairmann",
+      "title": "$NVDA Jensen on agentic AI usage: \"in this last month agents crossed humans in AI prompting/usage\"",
+      "url": "https://x.com/itsalasdairmann/status/2092732171517935749",
+      "published_at": "2026-08-26T21:53:25+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA Jensen on agentic AI usage: \"in this last month agents crossed humans in AI prompting/usage\"",
+      "author": "Alasdair Mann",
+      "symbols": [],
+      "engagement": {
+        "likes": 7,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "itsalasdairmann",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI power, data centers and second-order equipment beneficiaries",
+        "engagement_score": 7
+      }
+    },
+    {
+      "id": "x:5520cbd2d998a20bc444",
+      "source_type": "x",
+      "source_name": "@itsalasdairmann",
+      "title": "$NVDA Jensen on open source and sovereign AI: \"every country, company, startup needs to build their proprietary AI\" \"open models reaching frontier levels has enabled them to do tha",
+      "url": "https://x.com/itsalasdairmann/status/2092731498512466380",
+      "published_at": "2026-08-26T21:50:44+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA Jensen on open source and sovereign AI: \"every country, company, startup needs to build their proprietary AI\" \"open models reaching frontier levels has enabled them to do that\" giga bullish $NBIS",
+      "author": "Alasdair Mann",
+      "symbols": [],
+      "engagement": {
+        "likes": 41,
+        "reposts": 3,
+        "replies": 0,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "itsalasdairmann",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI power, data centers and second-order equipment beneficiaries",
+        "engagement_score": 47
+      }
+    },
+    {
       "id": "x:43e499b0a91081bb9835",
       "source_type": "x",
       "source_name": "@ShanuMathew93",
@@ -965,6 +1545,58 @@
         "coverage": "AI datacenters, power, infrastructure",
         "evidence_note": "Use for AI infrastructure constraints rather than pure software analysis.",
         "engagement_score": 79
+      }
+    },
+    {
+      "id": "x:64fdc14d25ffda8a796b",
+      "source_type": "x",
+      "source_name": "@itsalasdairmann",
+      "title": "$NVDA Jensen Q&A on frontier lab investments: \"the only regret I have is that I didn't invest more and sooner\"",
+      "url": "https://x.com/itsalasdairmann/status/2092730175423435226",
+      "published_at": "2026-08-26T21:45:29+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA Jensen Q&A on frontier lab investments: \"the only regret I have is that I didn't invest more and sooner\"",
+      "author": "Alasdair Mann",
+      "symbols": [],
+      "engagement": {
+        "likes": 19,
+        "reposts": 1,
+        "replies": 2,
+        "quotes": 1
+      },
+      "metadata": {
+        "handle": "itsalasdairmann",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI power, data centers and second-order equipment beneficiaries",
+        "engagement_score": 23
+      }
+    },
+    {
+      "id": "x:065f7602cf999a6970a0",
+      "source_type": "x",
+      "source_name": "@itsalasdairmann",
+      "title": "$NVDA Jensen Q&A on growth: \"The unconstrained (revenue growth) number (for FY2028) would be a lot higher (than 70%).\" \"Most people just see hyperscalers, that is just half the pic",
+      "url": "https://x.com/itsalasdairmann/status/2092728883259072838",
+      "published_at": "2026-08-26T21:40:21+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA Jensen Q&A on growth: \"The unconstrained (revenue growth) number (for FY2028) would be a lot higher (than 70%).\" \"Most people just see hyperscalers, that is just half the picture\" \"Compute is very profitable today\"",
+      "author": "Alasdair Mann",
+      "symbols": [],
+      "engagement": {
+        "likes": 13,
+        "reposts": 2,
+        "replies": 0,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "itsalasdairmann",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI power, data centers and second-order equipment beneficiaries",
+        "engagement_score": 17
       }
     },
     {
@@ -1047,6 +1679,32 @@
       }
     },
     {
+      "id": "x:06c139be1e485bf68a1e",
+      "source_type": "x",
+      "source_name": "@itsalasdairmann",
+      "title": "$NVDA Jensen: \"each GW of technology in the hopper time frame... to now vera rubin... increased from $30B / GW to $60B / GW\"",
+      "url": "https://x.com/itsalasdairmann/status/2092727894439260418",
+      "published_at": "2026-08-26T21:36:25+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA Jensen: \"each GW of technology in the hopper time frame... to now vera rubin... increased from $30B / GW to $60B / GW\"",
+      "author": "Alasdair Mann",
+      "symbols": [],
+      "engagement": {
+        "likes": 14,
+        "reposts": 1,
+        "replies": 1,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "itsalasdairmann",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI power, data centers and second-order equipment beneficiaries",
+        "engagement_score": 17
+      }
+    },
+    {
       "id": "x:3fefcdb47212d6a2ac91",
       "source_type": "x",
       "source_name": "@suchenzang",
@@ -1070,6 +1728,214 @@
         "investor_type": "frontier_ai_researcher",
         "coverage": "frontier AI and OpenAI research",
         "engagement_score": 113
+      }
+    },
+    {
+      "id": "x:5c8eac88a07c66826bbc",
+      "source_type": "x",
+      "source_name": "@itsalasdairmann",
+      "title": "$NVDA Jensen Q&A on growth: \"we have a lot greater visibility upstream and downstream\" \"it is the case we never guided a year in advance\" \"our supply allows us to constantly delive",
+      "url": "https://x.com/itsalasdairmann/status/2092726859553513907",
+      "published_at": "2026-08-26T21:32:18+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA Jensen Q&A on growth: \"we have a lot greater visibility upstream and downstream\" \"it is the case we never guided a year in advance\" \"our supply allows us to constantly deliver +70% (growth)\"",
+      "author": "Alasdair Mann",
+      "symbols": [],
+      "engagement": {
+        "likes": 11,
+        "reposts": 1,
+        "replies": 0,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "itsalasdairmann",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI power, data centers and second-order equipment beneficiaries",
+        "engagement_score": 13
+      }
+    },
+    {
+      "id": "x:28e60361d68f00fd72ad",
+      "source_type": "x",
+      "source_name": "@moninvestor",
+      "title": "For neoclouds like $IREN and $NBIS, I think Jensen’s “compute is revenue” comment explains the opportunity better than anything else. Their customers are using compute to create re",
+      "url": "https://x.com/moninvestor/status/2092726708847939859",
+      "published_at": "2026-08-26T21:31:43+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "For neoclouds like $IREN and $NBIS, I think Jensen’s “compute is revenue” comment explains the opportunity better than anything else. Their customers are using compute to create revenue, which makes getting more GPUs online economically valuable. NVIDIA is now expecting another 70% year of growth and still believes supply will be the constraint. Put all of this together and NVIDIA is basically giving us the read-through for the entire AI infrastructure chain. More compute is generating more revenue, demand is accelerating, memory is being secured years in advance and NVIDIA still cannot supply everything it expects customers to want. That is an incredible environment for memory and neoclouds.",
+      "author": "moninvestor",
+      "symbols": [],
+      "engagement": {
+        "likes": 312,
+        "reposts": 13,
+        "replies": 11,
+        "quotes": 2
+      },
+      "metadata": {
+        "handle": "moninvestor",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "IREN, NBIS, AI infrastructure and energy",
+        "engagement_score": 349
+      }
+    },
+    {
+      "id": "x:3b278328fd8bae973690",
+      "source_type": "x",
+      "source_name": "@itsalasdairmann",
+      "title": "$NVDA Jensen Q&A: \"The amount of compute necessary for an agent versus a human is 50-100x\" 🤯",
+      "url": "https://x.com/itsalasdairmann/status/2092726341921841458",
+      "published_at": "2026-08-26T21:30:15+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA Jensen Q&A: \"The amount of compute necessary for an agent versus a human is 50-100x\" 🤯",
+      "author": "Alasdair Mann",
+      "symbols": [],
+      "engagement": {
+        "likes": 84,
+        "reposts": 3,
+        "replies": 4,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "itsalasdairmann",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI power, data centers and second-order equipment beneficiaries",
+        "engagement_score": 94
+      }
+    },
+    {
+      "id": "x:4726dbd3ac0a34c3971b",
+      "source_type": "x",
+      "source_name": "@itsalasdairmann",
+      "title": "$NVDA on supply constraints 🤯 \"We expect (compute) supply to be a bottleneck until the end of FY2028\"",
+      "url": "https://x.com/itsalasdairmann/status/2092725552671330317",
+      "published_at": "2026-08-26T21:27:07+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA on supply constraints 🤯 \"We expect (compute) supply to be a bottleneck until the end of FY2028\"",
+      "author": "Alasdair Mann",
+      "symbols": [],
+      "engagement": {
+        "likes": 15,
+        "reposts": 1,
+        "replies": 0,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "itsalasdairmann",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI power, data centers and second-order equipment beneficiaries",
+        "engagement_score": 17
+      }
+    },
+    {
+      "id": "x:ba1789604a08deca350b",
+      "source_type": "x",
+      "source_name": "@itsalasdairmann",
+      "title": "$NVDA on hyperscalers: \"We expect growth from hyperscalers to reaccelerate in Q4\"",
+      "url": "https://x.com/itsalasdairmann/status/2092725340703690764",
+      "published_at": "2026-08-26T21:26:16+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA on hyperscalers: \"We expect growth from hyperscalers to reaccelerate in Q4\"",
+      "author": "Alasdair Mann",
+      "symbols": [],
+      "engagement": {
+        "likes": 3,
+        "reposts": 1,
+        "replies": 0,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "itsalasdairmann",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI power, data centers and second-order equipment beneficiaries",
+        "engagement_score": 5
+      }
+    },
+    {
+      "id": "x:c5e0f1c6ba21a9a0f89c",
+      "source_type": "x",
+      "source_name": "@ren_stocks",
+      "title": "$NVDA $SNDK $NBIS $LITE For those who rotated out of semis into software, financials, etc, and are now rushing back. Welcome back; we never left 😎",
+      "url": "https://x.com/ren_stocks/status/2092724027936698540",
+      "published_at": "2026-08-26T21:21:03+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA $SNDK $NBIS $LITE For those who rotated out of semis into software, financials, etc, and are now rushing back. Welcome back; we never left 😎",
+      "author": "ren_stocks",
+      "symbols": [],
+      "engagement": {
+        "likes": 135,
+        "reposts": 2,
+        "replies": 10,
+        "quotes": 1
+      },
+      "metadata": {
+        "handle": "ren_stocks",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI buildout and small/mid-cap technology equities",
+        "engagement_score": 149
+      }
+    },
+    {
+      "id": "x:4e449f10cb5e7718d854",
+      "source_type": "x",
+      "source_name": "@itsalasdairmann",
+      "title": "$NVDA on frontier labs: \"frontier labs are growing faster than what their balance sheet can support\" \"their growth is not limited by demand, their growth is limited by compute\"",
+      "url": "https://x.com/itsalasdairmann/status/2092723652467044673",
+      "published_at": "2026-08-26T21:19:34+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA on frontier labs: \"frontier labs are growing faster than what their balance sheet can support\" \"their growth is not limited by demand, their growth is limited by compute\"",
+      "author": "Alasdair Mann",
+      "symbols": [],
+      "engagement": {
+        "likes": 15,
+        "reposts": 1,
+        "replies": 1,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "itsalasdairmann",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI power, data centers and second-order equipment beneficiaries",
+        "engagement_score": 18
+      }
+    },
+    {
+      "id": "x:0250f9eb3d240b4f0791",
+      "source_type": "x",
+      "source_name": "@itsalasdairmann",
+      "title": "$NVDA on new revenue-sharing structure for neoclouds like $SHAZ: \"In this model we get paid twice, once on the hardware sale and then again on the rental revenue\" \"Overtime this ca",
+      "url": "https://x.com/itsalasdairmann/status/2092723359209734643",
+      "published_at": "2026-08-26T21:18:24+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA on new revenue-sharing structure for neoclouds like $SHAZ: \"In this model we get paid twice, once on the hardware sale and then again on the rental revenue\" \"Overtime this can expand our market and drive recurring revenue\" \"Driving billions in revenue over the long term\"",
+      "author": "Alasdair Mann",
+      "symbols": [],
+      "engagement": {
+        "likes": 14,
+        "reposts": 1,
+        "replies": 2,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "itsalasdairmann",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI power, data centers and second-order equipment beneficiaries",
+        "engagement_score": 18
       }
     },
     {
@@ -1100,6 +1966,32 @@
       }
     },
     {
+      "id": "x:884adc6590ea839e1e86",
+      "source_type": "x",
+      "source_name": "@FinnStockinger",
+      "title": "Supply-constrained outlook means the \"memory cycle\" is not over at 2028. https://t.co/aYZ5tJHShm",
+      "url": "https://x.com/FinnStockinger/status/2092721042221314391",
+      "published_at": "2026-08-26T21:09:11+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "Supply-constrained outlook means the \"memory cycle\" is not over at 2028. https://t.co/aYZ5tJHShm",
+      "author": "Finn Stockinger",
+      "symbols": [],
+      "engagement": {
+        "likes": 7,
+        "reposts": 1,
+        "replies": 2,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "FinnStockinger",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI infrastructure bottlenecks and component suppliers",
+        "engagement_score": 11
+      }
+    },
+    {
       "id": "x:81e1b2ac7dfdf87cca77",
       "source_type": "x",
       "source_name": "@sainingxie",
@@ -1123,6 +2015,32 @@
         "investor_type": "ai_researcher",
         "coverage": "vision, NYU, DeepMind and FAIR",
         "engagement_score": 84
+      }
+    },
+    {
+      "id": "x:1b7d8318ea39e4c1a2b5",
+      "source_type": "x",
+      "source_name": "@itsalasdairmann",
+      "title": "$NVDA: expecting installed Neocloud capacity of 8 GW in 2026, up from 3 GW in 2025 $NBIS $CRWV $IREN",
+      "url": "https://x.com/itsalasdairmann/status/2092720629229449400",
+      "published_at": "2026-08-26T21:07:33+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA: expecting installed Neocloud capacity of 8 GW in 2026, up from 3 GW in 2025 $NBIS $CRWV $IREN",
+      "author": "Alasdair Mann",
+      "symbols": [],
+      "engagement": {
+        "likes": 21,
+        "reposts": 2,
+        "replies": 0,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "itsalasdairmann",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI power, data centers and second-order equipment beneficiaries",
+        "engagement_score": 25
       }
     },
     {
@@ -1287,6 +2205,32 @@
       }
     },
     {
+      "id": "x:642fdcd2aba4474082df",
+      "source_type": "x",
+      "source_name": "@FinnStockinger",
+      "title": "Another massive quarter for the AI Clouds, Industrial, & Enterprise segment $NVDA ! QoQ Growth: Up to $40,313M in Q2 FY27 from $32,196M in Q1 FY27 (+25.2%) Vs Q4 FY26: Up +100.5% i",
+      "url": "https://x.com/FinnStockinger/status/2092715804534120900",
+      "published_at": "2026-08-26T20:48:23+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "Another massive quarter for the AI Clouds, Industrial, & Enterprise segment $NVDA ! QoQ Growth: Up to $40,313M in Q2 FY27 from $32,196M in Q1 FY27 (+25.2%) Vs Q4 FY26: Up +100.5% in just two quarters (from $20,101M to $40,313M) This clearly shows where the real surge in GPU demand is coming from - enterprise and AI clouds are devouring the bulk of the new Blackwell chips right now! There is not only hyperscalers!",
+      "author": "Finn Stockinger",
+      "symbols": [],
+      "engagement": {
+        "likes": 8,
+        "reposts": 0,
+        "replies": 3,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "FinnStockinger",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI infrastructure bottlenecks and component suppliers",
+        "engagement_score": 11
+      }
+    },
+    {
       "id": "x:fe0ba5ad588caafc6016",
       "source_type": "x",
       "source_name": "@munster_gene",
@@ -1314,6 +2258,33 @@
       }
     },
     {
+      "id": "x:ed97ed88a09480b43498",
+      "source_type": "x",
+      "source_name": "@outliercapx",
+      "title": "$NVDA just told the market the quiet part out loud: $MU $SNDK $SKHY are the ones getting the check. Those should be flying. Commitments went from $119 B → $279 B. Almost all of it ",
+      "url": "https://x.com/outliercapx/status/2092714771019612473",
+      "published_at": "2026-08-26T20:44:16+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA just told the market the quiet part out loud: $MU $SNDK $SKHY are the ones getting the check. Those should be flying. Commitments went from $119 B → $279 B. Almost all of it memory. They’re panic-buying HBM. This is the signal for AI infra. Positioning now is critical. — Outlier Capital",
+      "author": "outliercapx",
+      "symbols": [],
+      "engagement": {
+        "likes": 7,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 1
+      },
+      "metadata": {
+        "handle": "outliercapx",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "optical components and AI infrastructure second-order beneficiaries",
+        "evidence_note": "May disclose positions in discussed stocks; preserve the stated thesis and distinguish it from verified facts.",
+        "engagement_score": 8
+      }
+    },
+    {
       "id": "x:2748ddfb55c0bb781866",
       "source_type": "x",
       "source_name": "@sama",
@@ -1337,6 +2308,58 @@
         "investor_type": "ai_company_decision_maker",
         "coverage": "AI models, products and company strategy",
         "engagement_score": 3013
+      }
+    },
+    {
+      "id": "x:648b6f42cbd503e15da6",
+      "source_type": "x",
+      "source_name": "@moninvestor",
+      "title": "The five things that will make you a successful investor: 1. The patience to do nothing when there is nothing to do. 2. The conviction to hold when everyone else is panicking. 3. T",
+      "url": "https://x.com/moninvestor/status/2092711026454040586",
+      "published_at": "2026-08-26T20:29:24+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "The five things that will make you a successful investor: 1. The patience to do nothing when there is nothing to do. 2. The conviction to hold when everyone else is panicking. 3. The discipline to admit when you are wrong. 4. The ability to think independently instead of following the crowd. 5. The temperament to survive long enough for compounding to do the work.",
+      "author": "moninvestor",
+      "symbols": [],
+      "engagement": {
+        "likes": 115,
+        "reposts": 9,
+        "replies": 3,
+        "quotes": 1
+      },
+      "metadata": {
+        "handle": "moninvestor",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "IREN, NBIS, AI infrastructure and energy",
+        "engagement_score": 136
+      }
+    },
+    {
+      "id": "x:8d8106e5f34d80467e4b",
+      "source_type": "x",
+      "source_name": "@itsalasdairmann",
+      "title": "Seems $NVDA is dumping because commitments went up from $119B to $279B Street hates commitments/capex But AI infra investors would argue this is because NVDA has better visibility ",
+      "url": "https://x.com/itsalasdairmann/status/2092710929414983988",
+      "published_at": "2026-08-26T20:29:00+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "Seems $NVDA is dumping because commitments went up from $119B to $279B Street hates commitments/capex But AI infra investors would argue this is because NVDA has better visibility into future demand",
+      "author": "Alasdair Mann",
+      "symbols": [],
+      "engagement": {
+        "likes": 27,
+        "reposts": 1,
+        "replies": 1,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "itsalasdairmann",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI power, data centers and second-order equipment beneficiaries",
+        "engagement_score": 30
       }
     },
     {
@@ -1367,6 +2390,33 @@
       }
     },
     {
+      "id": "x:1cd514a3b1f064006ec9",
+      "source_type": "x",
+      "source_name": "@outliercapx",
+      "title": "They said the AI trade was over. $NVDA just printed: • $96.2B revenue (+106% YoY). • $89B Data Center (+117%). • $108B Q3 guidance. Vera Rubin full production. Jensen just said it ",
+      "url": "https://x.com/outliercapx/status/2092710115908501753",
+      "published_at": "2026-08-26T20:25:46+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "They said the AI trade was over. $NVDA just printed: • $96.2B revenue (+106% YoY). • $89B Data Center (+117%). • $108B Q3 guidance. Vera Rubin full production. Jensen just said it clearly: “AI has reached its inflection point… Now, compute is revenue.” “The AI infrastructure buildout is at full steam.” This is still early. — Outlier Capital",
+      "author": "outliercapx",
+      "symbols": [],
+      "engagement": {
+        "likes": 15,
+        "reposts": 2,
+        "replies": 0,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "outliercapx",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "optical components and AI infrastructure second-order beneficiaries",
+        "evidence_note": "May disclose positions in discussed stocks; preserve the stated thesis and distinguish it from verified facts.",
+        "engagement_score": 19
+      }
+    },
+    {
       "id": "x:83895405a358bacf882c",
       "source_type": "x",
       "source_name": "@insane_analyst",
@@ -1390,6 +2440,84 @@
         "investor_type": "semiconductor_investor",
         "coverage": "semiconductors and AI infrastructure investing",
         "engagement_score": 144
+      }
+    },
+    {
+      "id": "x:c7ef34257b00bee7bd78",
+      "source_type": "x",
+      "source_name": "@ren_stocks",
+      "title": "$NVDA double beat ✅✅ We are going up baby ⚡️ https://t.co/qrAI4CcpJ9",
+      "url": "https://x.com/ren_stocks/status/2092709791298707826",
+      "published_at": "2026-08-26T20:24:29+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA double beat ✅✅ We are going up baby ⚡️ https://t.co/qrAI4CcpJ9",
+      "author": "ren_stocks",
+      "symbols": [],
+      "engagement": {
+        "likes": 98,
+        "reposts": 0,
+        "replies": 7,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "ren_stocks",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI buildout and small/mid-cap technology equities",
+        "engagement_score": 105
+      }
+    },
+    {
+      "id": "x:db633af00af2b75637cf",
+      "source_type": "x",
+      "source_name": "@FinnStockinger",
+      "title": "Good luck guys! @vikramskr & @austinsemis doing great job! Definitely worth to follow them and @semidoped 👊",
+      "url": "https://x.com/FinnStockinger/status/2092709750999826448",
+      "published_at": "2026-08-26T20:24:19+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "Good luck guys! @vikramskr & @austinsemis doing great job! Definitely worth to follow them and @semidoped 👊",
+      "author": "Finn Stockinger",
+      "symbols": [],
+      "engagement": {
+        "likes": 5,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "FinnStockinger",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI infrastructure bottlenecks and component suppliers",
+        "engagement_score": 5
+      }
+    },
+    {
+      "id": "x:e0e051d84a0a179ad74e",
+      "source_type": "x",
+      "source_name": "@itsalasdairmann",
+      "title": "This implies $16.30m / MW for Vera Rubin Doesn't seem very high compared to the prices $NBIS $CRWV and $IREN are already getting for current gen chips?",
+      "url": "https://x.com/itsalasdairmann/status/2092708589282759166",
+      "published_at": "2026-08-26T20:19:42+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "This implies $16.30m / MW for Vera Rubin Doesn't seem very high compared to the prices $NBIS $CRWV and $IREN are already getting for current gen chips?",
+      "author": "Alasdair Mann",
+      "symbols": [],
+      "engagement": {
+        "likes": 16,
+        "reposts": 1,
+        "replies": 1,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "itsalasdairmann",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI power, data centers and second-order equipment beneficiaries",
+        "engagement_score": 19
       }
     },
     {
@@ -1695,6 +2823,32 @@
       }
     },
     {
+      "id": "x:62042e24e7684af1cd2f",
+      "source_type": "x",
+      "source_name": "@FinnStockinger",
+      "title": "$NVDA will take care of you https://t.co/iD8NDYMStr",
+      "url": "https://x.com/FinnStockinger/status/2092698794567618716",
+      "published_at": "2026-08-26T19:40:47+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$NVDA will take care of you https://t.co/iD8NDYMStr",
+      "author": "Finn Stockinger",
+      "symbols": [],
+      "engagement": {
+        "likes": 13,
+        "reposts": 0,
+        "replies": 10,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "FinnStockinger",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI infrastructure bottlenecks and component suppliers",
+        "engagement_score": 23
+      }
+    },
+    {
       "id": "x:d9484d8b527f20e90449",
       "source_type": "x",
       "source_name": "@Crussian17",
@@ -1744,6 +2898,33 @@
         "investor_type": "ai_company_decision_maker",
         "coverage": "Perplexity, AI search and reasoning",
         "engagement_score": 163
+      }
+    },
+    {
+      "id": "x:ebf80da727ad376ccc7b",
+      "source_type": "x",
+      "source_name": "@outliercapx",
+      "title": "BULLISH $LITE $AAOI $SIVE $IQE Demand for AI CW lasers is already being locked through 2030. Taiwan’s Landmark just signed a 4-year LTA (2027–2030) with a US customer for data-cent",
+      "url": "https://x.com/outliercapx/status/2092689380183818519",
+      "published_at": "2026-08-26T19:03:23+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "BULLISH $LITE $AAOI $SIVE $IQE Demand for AI CW lasers is already being locked through 2030. Taiwan’s Landmark just signed a 4-year LTA (2027–2030) with a US customer for data-center CW lasers. This is not a 2027 peak story. This is multi-year supply security in a structural bottleneck. CW lasers (especially higher-power InP) sit at the heart of silicon photonics + CPO. When second-tier suppliers start locking capacity years out, it tells you the majors are already fully booked. Bullish for the entire stack: • $LITE (incumbents sold out) • $AAOI (own lasers + US capacity premium) • $SIVE (high-power CW / arrays pure play) • $IQE (InP epi foundation) The optical layer is booking the decade. The shortage is real. The duration is longer than most think. — Outlier Capital PS: I am long all the stocks mentioned here. Not advice. Many thanks @pequityresearch for the information!",
+      "author": "outliercapx",
+      "symbols": [],
+      "engagement": {
+        "likes": 91,
+        "reposts": 13,
+        "replies": 2,
+        "quotes": 1
+      },
+      "metadata": {
+        "handle": "outliercapx",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "optical components and AI infrastructure second-order beneficiaries",
+        "evidence_note": "May disclose positions in discussed stocks; preserve the stated thesis and distinguish it from verified facts.",
+        "engagement_score": 119
       }
     },
     {
@@ -1877,6 +3058,32 @@
         "investor_type": "ai_company_decision_maker",
         "coverage": "Perplexity, AI search and reasoning",
         "engagement_score": 249
+      }
+    },
+    {
+      "id": "x:ece2d9b36aa45382437a",
+      "source_type": "x",
+      "source_name": "@FinnStockinger",
+      "title": "$GRRR I’ve been telling you about this company for a while. A $432M market cap stock that keeps raising guidance quarter after quarter and is expected to deliver at least $200M in ",
+      "url": "https://x.com/FinnStockinger/status/2092673292083613940",
+      "published_at": "2026-08-26T17:59:27+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "$GRRR I’ve been telling you about this company for a while. A $432M market cap stock that keeps raising guidance quarter after quarter and is expected to deliver at least $200M in revenue in 2026. The next leg of the ramp is targeting $400M–$500M in revenue. A rerating of the stock is only a matter of time.",
+      "author": "Finn Stockinger",
+      "symbols": [],
+      "engagement": {
+        "likes": 22,
+        "reposts": 0,
+        "replies": 3,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "FinnStockinger",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "AI infrastructure bottlenecks and component suppliers",
+        "engagement_score": 25
       }
     },
     {
@@ -2161,6 +3368,32 @@
       }
     },
     {
+      "id": "x:e2fc1de161b1e470764d",
+      "source_type": "x",
+      "source_name": "@moninvestor",
+      "title": "I think $IREN earnings are going to be taken poorly by the market, and I wouldn’t be surprised to see the stock drop into the low $30s. Unless IREN comes out with some major new de",
+      "url": "https://x.com/moninvestor/status/2092648459178324045",
+      "published_at": "2026-08-26T16:20:46+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "I think $IREN earnings are going to be taken poorly by the market, and I wouldn’t be surprised to see the stock drop into the low $30s. Unless IREN comes out with some major new deals or a big surprise, I can’t see the stock moving much higher on Thursday. At the same time, I think this could be the last opportunity to buy IREN at those levels.",
+      "author": "moninvestor",
+      "symbols": [],
+      "engagement": {
+        "likes": 431,
+        "reposts": 7,
+        "replies": 60,
+        "quotes": 1
+      },
+      "metadata": {
+        "handle": "moninvestor",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "IREN, NBIS, AI infrastructure and energy",
+        "engagement_score": 505
+      }
+    },
+    {
       "id": "x:8a614d6cc7abb5db6bf4",
       "source_type": "x",
       "source_name": "@ivanfioravanti",
@@ -2202,6 +3435,33 @@
         "publication_url": "https://www.latent.space",
         "publication_platform": "substack",
         "section": "industry_changes"
+      }
+    },
+    {
+      "id": "x:f235bac8a2983817e3e8",
+      "source_type": "x",
+      "source_name": "@outliercapx",
+      "title": "I put my money where my mouth is. Opened a starter ~5.0% long in $AAOI at $110. Four days ago I wrote I was not long. That was honest. This is the follow-through. This is not a com",
+      "url": "https://x.com/outliercapx/status/2092646030948880730",
+      "published_at": "2026-08-26T16:11:07+00:00",
+      "collected_at": "2026-08-27T06:15:32.860982+00:00",
+      "body": "I put my money where my mouth is. Opened a starter ~5.0% long in $AAOI at $110. Four days ago I wrote I was not long. That was honest. This is the follow-through. This is not a company raising capital because the business is broken. Demand for 800G and 1.6T is still running ahead of capacity through mid-2027. They are funding the Texas expansion so they can actually capture the AI optics cycle instead of watching it go to someone else. $500 M+ cash already on the balance sheet. The CapEx to get from ~200k to 650k+ units/month is real. Prefer dilution at these levels, with a clear path to $1.1 B+ this year, than starving the growth. The market is pricing a serial diluter. I am pricing a scarce U.S. factory that turns constrained lasers into 800G and 1.6T modules. Short-term pain. Correct capital allocation for the multi-year opportunity. Of course nobody likes ATMs. Especially when they keep coming. I like owning the bottleneck more. — Outlier Capital",
+      "author": "outliercapx",
+      "symbols": [],
+      "engagement": {
+        "likes": 36,
+        "reposts": 0,
+        "replies": 4,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "outliercapx",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "optical components and AI infrastructure second-order beneficiaries",
+        "evidence_note": "May disclose positions in discussed stocks; preserve the stated thesis and distinguish it from verified facts.",
+        "engagement_score": 40
       }
     },
     {

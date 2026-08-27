@@ -364,6 +364,47 @@ x:
       investor_type: technology_investor
       coverage: technology and software equity trade ideas
       section: transaction_ideas
+    - handle: PhotonCap
+      name: PhotonCap
+      investor_type: semiconductor_investor
+      coverage: photonics, co-packaged optics, HBM, advanced packaging, POET, SIVE, IQE
+      section: transaction_ideas
+    - handle: damnang2
+      name: damnang2
+      investor_type: semiconductor_engineer_investor
+      coverage: memory, HBM, networking and ASIC supply chains
+      section: transaction_ideas
+    - handle: statementdog
+      name: statementdog
+      investor_type: semiconductor_investor
+      coverage: Korean and Taiwanese AI supply chain and component companies
+      section: transaction_ideas
+    - handle: outliercapx
+      name: outliercapx
+      investor_type: technology_investor
+      coverage: optical components and AI infrastructure second-order beneficiaries
+      evidence_note: May disclose positions in discussed stocks; preserve the stated thesis and distinguish it from verified facts.
+      section: transaction_ideas
+    - handle: ren_stocks
+      name: ren_stocks
+      investor_type: technology_investor
+      coverage: AI buildout and small/mid-cap technology equities
+      section: transaction_ideas
+    - handle: itsalasdairmann
+      name: Alasdair Mann
+      investor_type: technology_investor
+      coverage: AI power, data centers and second-order equipment beneficiaries
+      section: transaction_ideas
+    - handle: moninvestor
+      name: moninvestor
+      investor_type: technology_investor
+      coverage: IREN, NBIS, AI infrastructure and energy
+      section: transaction_ideas
+    - handle: FinnStockinger
+      name: Finn Stockinger
+      investor_type: technology_investor
+      coverage: AI infrastructure bottlenecks and component suppliers
+      section: transaction_ideas
 
     # AI industry-change observers: these are not transaction-idea sources.
     - handle: AndrewCurran_

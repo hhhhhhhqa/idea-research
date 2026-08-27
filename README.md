@@ -97,7 +97,7 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | [Outspoken Geek](https://outspokengeek.substack.com/) | 追踪科技、AI 与互联网公司的交易观点，作为个股研究和市场预期变化的补充来源。 |
 | [New Moon Cap](https://newmooncap.substack.com/) | 提供科技与成长股的公司研究和交易观点，补充个股基本面与估值线索。 |
 
-### 交易ideaX（33 个账号）
+### 交易ideaX（41 个账号）
 
 | 信息源 | 为什么选 |
 |---|---|
@@ -134,6 +134,14 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | [leveredbetaboy2](https://x.com/leveredbetaboy2) | 提供科技与软件股票的具体交易观点。 |
 | [TMT Breakout](https://x.com/TMTBreakout) | 聚焦科技、媒体与电信公司的交易线索和个股观点。 |
 | [techfund1](https://x.com/techfund1) | 提供科技与软件个股的交易观点和研究线索。 |
+| [PhotonCap](https://x.com/PhotonCap) | 聚焦光子学、CPO、HBM 和先进封装，寻找 AI 基础设施中的二阶受益公司。 |
+| [damnang2](https://x.com/damnang2) | 从工程和供需角度分析 Memory、HBM、网络和 ASIC，纠正过度简化的市场叙事。 |
+| [statementdog](https://x.com/statementdog) | 挖掘韩国、台湾 AI 供应链和小众零部件公司的个股机会。 |
+| [outliercapx](https://x.com/outliercapx) | 从光通信和产能瓶颈推导 AI 基础设施二阶标的；若披露持仓需区分作者观点与事实。 |
+| [ren_stocks](https://x.com/ren_stocks) | 围绕 AI buildout 寻找非巨头的中小盘科技股和完整 thesis。 |
+| [Alasdair Mann](https://x.com/itsalasdairmann) | 从电力、数据中心约束推导 AI 基建中的二阶设备股。 |
+| [moninvestor](https://x.com/moninvestor) | 讨论 IREN、NBIS 等 AI 基础设施与能源公司的融资、稀释和资产价值。 |
+| [Finn Stockinger](https://x.com/FinnStockinger) | 研究 MLCC 等 AI 基础设施瓶颈及其对应的零部件供应商。 |
 
 ### 产业变化 Newsletter / 研究文章（3 个来源）
 
