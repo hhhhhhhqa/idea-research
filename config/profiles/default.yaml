@@ -20,8 +20,8 @@ reddit_discussions:
       listing: thesis
       flairs: [Thesis, Short Thesis]
       max_posts: 10
-  # WSB gets a separate DD daily top-ten rollup, while the complete captured
-  # post set remains available to the subscriber Agent in `wsb_posts`.
+  # WSB and SecurityAnalysis get separate Reddit rollups; every qualifying
+  # post remains available to the subscriber Agent in the prepared context.
   rollup_only: true
 
 # 这些主题只用于 Agent 的组织和用户偏好，不会从中央 feed 或 context 删除条目。
