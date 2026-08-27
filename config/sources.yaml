@@ -60,6 +60,10 @@ substack:
       url: https://outspokengeek.substack.com/
       feed_url: https://outspokengeek.substack.com/feed
       section: transaction_ideas
+    - name: New Moon Cap
+      url: https://newmooncap.substack.com/
+      feed_url: https://newmooncap.substack.com/feed
+      section: transaction_ideas
 
 reddit:
   section: transaction_ideas
@@ -345,8 +349,28 @@ x:
       coverage: technology equities and short research
       evidence_note: Treat claims as source material and distinguish the author's thesis from verified facts.
       section: transaction_ideas
+    - handle: leveredbetaboy2
+      name: leveredbetaboy2
+      investor_type: technology_investor
+      coverage: technology and software equity trade ideas
+      section: transaction_ideas
+    - handle: TMTBreakout
+      name: TMT Breakout
+      investor_type: technology_investor
+      coverage: technology, media and telecom equity trade ideas
+      section: transaction_ideas
+    - handle: techfund1
+      name: techfund1
+      investor_type: technology_investor
+      coverage: technology and software equity trade ideas
+      section: transaction_ideas
 
     # AI industry-change observers: these are not transaction-idea sources.
+    - handle: AndrewCurran_
+      name: Andrew Curran
+      investor_type: ai_ecosystem_observer
+      coverage: AI research, products and industry developments
+      section: industry_changes
     - handle: karpathy
       name: Andrej Karpathy
       investor_type: ai_researcher_builder

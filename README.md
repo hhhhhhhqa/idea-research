@@ -79,7 +79,7 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 
 ## 信息源
 
-### Newsletter / 研究文章（交易 Idea，12 个来源）
+### Newsletter / 研究文章（交易 Idea，13 个来源）
 
 | 信息源 | 为什么选 |
 |---|---|
@@ -95,8 +95,9 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | [Mobile Dev Memo](https://mobiledevmemo.com/) | 研究移动应用、数字广告、用户增长和数字经济，适合观察互联网平台与应用商业化。 |
 | [Yet Another Value Blog](https://www.yetanothervalueblog.com/) | 以现代价值投资视角研究特殊情形、市场错价和公司治理，补充成长股研究之外的反向线索。 |
 | [Outspoken Geek](https://outspokengeek.substack.com/) | 追踪科技、AI 与互联网公司的交易观点，作为个股研究和市场预期变化的补充来源。 |
+| [New Moon Cap](https://newmooncap.substack.com/) | 提供科技与成长股的公司研究和交易观点，补充个股基本面与估值线索。 |
 
-### 交易ideaX（30 个账号）
+### 交易ideaX（33 个账号）
 
 | 信息源 | 为什么选 |
 |---|---|
@@ -130,6 +131,9 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | [CasinoCapital](https://x.com/CasinoCapital) | 聚焦科技股，常给出具体多空判断。 |
 | [Crussian](https://x.com/Crussian17) | 高频更新科技个股交易思路，适合发现新的公司观点。 |
 | [Kerrisdale Capital](https://x.com/KerrisdaleCap) | 做空研究与科技股交易观点，补充明确的反向交易线索。 |
+| [leveredbetaboy2](https://x.com/leveredbetaboy2) | 提供科技与软件股票的具体交易观点。 |
+| [TMT Breakout](https://x.com/TMTBreakout) | 聚焦科技、媒体与电信公司的交易线索和个股观点。 |
+| [techfund1](https://x.com/techfund1) | 提供科技与软件个股的交易观点和研究线索。 |
 
 ### 产业变化 Newsletter / 研究文章（3 个来源）
 
@@ -139,16 +143,16 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | [Interconnects](https://www.interconnects.ai/) | 关注模型能力、训练方法和 AI 研究进展，只保留足以改变产业判断的变化。 |
 | [One Useful Thing](https://www.oneusefulthing.org/) | 从实际工作和组织应用观察 AI 落地，筛选具有产业边际意义的生产力变化。 |
 
-### 产业变化 X（55 个账号）
+### 产业变化 X（56 个账号）
 
 这些账号只进入「产业变化」章节，不与交易 Idea 混排；只保留重大模型、工具、基础设施、开源和产业路径变化。
 
 | 类别 | 账号 |
 |---|---|
-| AI 研究 / 生态观察 | [@karpathy](https://x.com/karpathy)、[@swyx](https://x.com/swyx)、[@dylan522p](https://x.com/dylan522p)、[@insane_analyst](https://x.com/insane_analyst)、[@simonw](https://x.com/simonw)、[@levie](https://x.com/levie)、[@RyanPGreenblatt](https://x.com/RyanPGreenblatt)、[@mweinbach](https://x.com/mweinbach)、[@naval](https://x.com/naval)、[@leopoldasch](https://x.com/leopoldasch)、[@jimkxa](https://x.com/jimkxa) |
+| AI 研究 / 生态观察 | [@karpathy](https://x.com/karpathy)、[@swyx](https://x.com/swyx)、[@dylan522p](https://x.com/dylan522p)、[@insane_analyst](https://x.com/insane_analyst)、[@simonw](https://x.com/simonw)、[@levie](https://x.com/levie)、[@RyanPGreenblatt](https://x.com/RyanPGreenblatt)、[@mweinbach](https://x.com/mweinbach)、[@naval](https://x.com/naval)、[@leopoldasch](https://x.com/leopoldasch)、[@jimkxa](https://x.com/jimkxa)、[@AndrewCurran_](https://x.com/AndrewCurran_) |
 | 决策者 / 基础设施 | [@sama](https://x.com/sama)、[@DarioAmodei](https://x.com/DarioAmodei)、[@demishassabis](https://x.com/demishassabis)、[@jietang](https://x.com/jietang)、[@nvidia](https://x.com/nvidia) |
 | AI 建造者 | [@AmandaAskell](https://x.com/AmandaAskell)、[@bcherny](https://x.com/bcherny)、[@catwu](https://x.com/catwu)、[@alexalbert_](https://x.com/alexalbert_)、[@rauchg](https://x.com/rauchg)、[@amasad](https://x.com/amasad)、[@joshwoodward](https://x.com/joshwoodward)、[@paulgauthier](https://x.com/paulgauthier)、[@ivanfioravanti](https://x.com/ivanfioravanti)、[@deanwball](https://x.com/deanwball)、[@kuncheng](https://x.com/kuncheng) |
-| 研究与学术扩展 | [@AndrewYNg](https://x.com/AndrewYNg)、[@hardmaru](https://x.com/hardmaru)、[@DrJimFan](https://x.com/DrJimFan)、[@ericjang11](https://x.com/ericjang11)、[@ZoubinGhahrama1](https://x.com/ZoubinGhahrama1)、[@suchenzang](https://x.com/suchenzang)、[@LiamFedus](https://x.com/LiamFedus)、[@ID_AA_Carmack](https://x.com/ID_AA_Carmack)、[@OfficialLoganK](https://x.com/OfficialLoganK)、[@ibab](https://x.com/ibab)、[@TacoCohen](https://x.com/TacoCohen)、[@jeffclune](https://x.com/jeffclune)、[@EthanJPerez](https://x.com/EthanJPerez)、[@AlexGDimakis](https://x.com/AlexGDimakis)、[@sainingxie](https://x.com/sainingxie)、[@rasbt](https://x.com/rasbt)、[@goodside](https://x.com/goodside)、[@bobmcgrewai](https://x.com/bobmcgrewai)、[@chipro](https://x.com/chipro)、[@ericzelikman](https://x.com/ericzelikman)、[@jxmnop](https://x.com/jxmnop)、[@DhruvBatra_](https://x.com/DhruvBatra_)、[@docmilanfar](https://x.com/docmilanfar)、[@AlexTamkin](https://x.com/AlexTamkin)、[@gstsdn](https://x.com/gstsdn)、[@AravSrinivas](https://x.com/AravSrinivas)、[@EMostaque](https://x.com/EMostaque)、[@ClementDelangue](https://x.com/ClementDelangue) |
+| 研究与学术扩展 | [@AndrewYNg](https://x.com/AndrewYNg)、[@AndrewCurran_](https://x.com/AndrewCurran_)、[@hardmaru](https://x.com/hardmaru)、[@DrJimFan](https://x.com/DrJimFan)、[@ericjang11](https://x.com/ericjang11)、[@ZoubinGhahrama1](https://x.com/ZoubinGhahrama1)、[@suchenzang](https://x.com/suchenzang)、[@LiamFedus](https://x.com/LiamFedus)、[@ID_AA_Carmack](https://x.com/ID_AA_Carmack)、[@OfficialLoganK](https://x.com/OfficialLoganK)、[@ibab](https://x.com/ibab)、[@TacoCohen](https://x.com/TacoCohen)、[@jeffclune](https://x.com/jeffclune)、[@EthanJPerez](https://x.com/EthanJPerez)、[@AlexGDimakis](https://x.com/AlexGDimakis)、[@sainingxie](https://x.com/sainingxie)、[@rasbt](https://x.com/rasbt)、[@goodside](https://x.com/goodside)、[@bobmcgrewai](https://x.com/bobmcgrewai)、[@chipro](https://x.com/chipro)、[@ericzelikman](https://x.com/ericzelikman)、[@jxmnop](https://x.com/jxmnop)、[@DhruvBatra_](https://x.com/DhruvBatra_)、[@docmilanfar](https://x.com/docmilanfar)、[@AlexTamkin](https://x.com/AlexTamkin)、[@gstsdn](https://x.com/gstsdn)、[@AravSrinivas](https://x.com/AravSrinivas)、[@EMostaque](https://x.com/EMostaque)、[@ClementDelangue](https://x.com/ClementDelangue) |
 
 ### Reddit（2 个社区）
 
