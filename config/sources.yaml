@@ -409,6 +409,91 @@ x:
       investor_type: technology_investor
       coverage: AI infrastructure bottlenecks and component suppliers
       section: transaction_ideas
+    - handle: FredaDuan
+      name: Freda Duan
+      investor_type: technology_investor
+      coverage: public-equity technology and software ideas
+      section: transaction_ideas
+    - handle: oguzerkan
+      name: oguzerkan
+      investor_type: technology_investor
+      coverage: technology and software equity trade ideas
+      section: transaction_ideas
+    - handle: TheValueist
+      name: TheValueist
+      investor_type: value_investor
+      coverage: public-equity company theses and valuation
+      section: transaction_ideas
+    - handle: ParadisLabs
+      name: ParadisLabs
+      investor_type: technology_investor
+      coverage: technology, software and internet equity ideas
+      section: transaction_ideas
+    - handle: crux_capital_
+      name: Gaetano / Crux Capital
+      investor_type: technology_investor
+      coverage: technology and software equity trade ideas
+      section: transaction_ideas
+    - handle: jasonschips
+      name: jasonschips
+      investor_type: semiconductor_investor
+      coverage: semiconductors, AI infrastructure and supply chain equities
+      section: transaction_ideas
+    - handle: pennycheck
+      name: pennycheck
+      investor_type: technology_investor
+      coverage: technology and small-cap equity ideas
+      section: transaction_ideas
+    - handle: Midnight_Captl
+      name: Midnight Capital
+      investor_type: technology_investor
+      coverage: technology and software equity trade ideas
+      section: transaction_ideas
+    - handle: TMTMoats
+      name: TMT Moats
+      investor_type: technology_investor
+      coverage: technology, media, telecom and software moats
+      section: transaction_ideas
+    - handle: phithetasigma
+      name: phithetasigma
+      investor_type: technology_investor
+      coverage: technology and software equity trade ideas
+      section: transaction_ideas
+    - handle: HyperTechInvest
+      name: HyperTechInvest
+      investor_type: technology_investor
+      coverage: technology and AI equity ideas
+      section: transaction_ideas
+    - handle: CKCapitalxx
+      name: CKCapitalxx
+      investor_type: technology_investor
+      coverage: technology and software equity trade ideas
+      section: transaction_ideas
+    - handle: KawzInvests
+      name: KawzInvests
+      investor_type: technology_investor
+      coverage: technology and internet equity ideas
+      section: transaction_ideas
+    - handle: sssjeffpu
+      name: sssjeffpu
+      investor_type: technology_investor
+      coverage: technology and software equity trade ideas
+      section: transaction_ideas
+    - handle: Vaelis_X
+      name: Vaelis_X
+      investor_type: technology_investor
+      coverage: technology and software equity trade ideas
+      section: transaction_ideas
+    - handle: illyquid
+      name: illyquid
+      investor_type: technology_investor
+      coverage: technology and internet equity ideas
+      section: transaction_ideas
+    - handle: uncovered_alpha
+      name: uncovered_alpha
+      investor_type: technology_investor
+      coverage: public-equity technology and software ideas
+      section: transaction_ideas
 
     # AI industry-change observers: these are not transaction-idea sources.
     - handle: AndrewCurran_

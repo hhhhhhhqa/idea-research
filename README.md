@@ -98,7 +98,7 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | [New Moon Cap](https://newmooncap.substack.com/) | 提供科技与成长股的公司研究和交易观点，补充个股基本面与估值线索。 |
 | [Outlier Cap](https://outliercapx.substack.com/) | 从光通信、AI 基础设施和产能瓶颈推导二阶受益公司的交易观点；披露持仓时区分作者观点与已验证事实。 |
 
-### 交易ideaX（41 个账号）
+### 交易ideaX（58 个账号）
 
 | 信息源 | 为什么选 |
 |---|---|
@@ -143,6 +143,23 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | [Alasdair Mann](https://x.com/itsalasdairmann) | 从电力、数据中心约束推导 AI 基建中的二阶设备股。 |
 | [moninvestor](https://x.com/moninvestor) | 讨论 IREN、NBIS 等 AI 基础设施与能源公司的融资、稀释和资产价值。 |
 | [Finn Stockinger](https://x.com/FinnStockinger) | 研究 MLCC 等 AI 基础设施瓶颈及其对应的零部件供应商。 |
+| [Freda Duan](https://x.com/FredaDuan) | 提供公开市场科技与软件公司的交易观点。 |
+| [oguzerkan](https://x.com/oguzerkan) | 提供科技和软件股票的个股交易线索。 |
+| [TheValueist](https://x.com/TheValueist) | 以价值投资视角研究公司、估值和市场错价。 |
+| [ParadisLabs](https://x.com/ParadisLabs) | 关注科技、软件和互联网公司的交易机会。 |
+| [Gaetano / Crux Capital](https://x.com/crux_capital_) | 提供科技与软件公司的个股交易观点。 |
+| [jasonschips](https://x.com/jasonschips) | 聚焦半导体、AI 基础设施和供应链股票。 |
+| [pennycheck](https://x.com/pennycheck) | 关注科技与中小盘股票的交易线索。 |
+| [Midnight Capital](https://x.com/Midnight_Captl) | 提供科技与软件股票的交易观点。 |
+| [TMT Moats](https://x.com/TMTMoats) | 研究科技、媒体、电信和软件公司的竞争壁垒。 |
+| [phithetasigma](https://x.com/phithetasigma) | 提供科技和软件股票的交易观点。 |
+| [HyperTechInvest](https://x.com/HyperTechInvest) | 关注科技、AI 与成长股投资机会。 |
+| [CKCapitalxx](https://x.com/CKCapitalxx) | 提供科技和软件公司的个股交易线索。 |
+| [KawzInvests](https://x.com/KawzInvests) | 关注科技与互联网公司的交易观点。 |
+| [sssjeffpu](https://x.com/sssjeffpu) | 提供科技和软件股票的交易线索。 |
+| [Vaelis_X](https://x.com/Vaelis_X) | 提供科技和软件公司的交易观点。 |
+| [illyquid](https://x.com/illyquid) | 关注科技与互联网股票的交易机会。 |
+| [uncovered_alpha](https://x.com/uncovered_alpha) | 寻找科技与软件公司的公开市场交易观点。 |
 
 ### 产业变化 Newsletter / 研究文章（3 个来源）
 
