@@ -64,6 +64,10 @@ substack:
       url: https://newmooncap.substack.com/
       feed_url: https://newmooncap.substack.com/feed
       section: transaction_ideas
+    - name: Outlier Cap
+      url: https://outliercapx.substack.com/
+      feed_url: https://outliercapx.substack.com/feed
+      section: transaction_ideas
 
 reddit:
   section: transaction_ideas

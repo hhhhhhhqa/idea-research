@@ -79,7 +79,7 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 
 ## 信息源
 
-### Newsletter / 研究文章（交易 Idea，13 个来源）
+### Newsletter / 研究文章（交易 Idea，14 个来源）
 
 | 信息源 | 为什么选 |
 |---|---|
@@ -96,6 +96,7 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | [Yet Another Value Blog](https://www.yetanothervalueblog.com/) | 以现代价值投资视角研究特殊情形、市场错价和公司治理，补充成长股研究之外的反向线索。 |
 | [Outspoken Geek](https://outspokengeek.substack.com/) | 追踪科技、AI 与互联网公司的交易观点，作为个股研究和市场预期变化的补充来源。 |
 | [New Moon Cap](https://newmooncap.substack.com/) | 提供科技与成长股的公司研究和交易观点，补充个股基本面与估值线索。 |
+| [Outlier Cap](https://outliercapx.substack.com/) | 从光通信、AI 基础设施和产能瓶颈推导二阶受益公司的交易观点；披露持仓时区分作者观点与已验证事实。 |
 
 ### 交易ideaX（41 个账号）
 
