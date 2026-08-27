@@ -81,6 +81,16 @@ reddit:
       # collector. Capture up to the first twenty returned positions.
       limit: 20
       lookback_hours:
+    - name: SecurityAnalysis
+      listing: thesis
+      flairs:
+        - Thesis
+        - Short Thesis
+      sort: top
+      time_filter: day
+      # Combined daily Top ranking across the Thesis and Short Thesis flairs.
+      limit: 10
+      lookback_hours:
 
   # Bare uppercase words are accepted only from this allowlist. Unknown cashtags such
   # as $XYZ are still captured, which keeps discovery open without turning every
@@ -305,6 +315,35 @@ x:
       name: eastweb3eth
       investor_type: technology_investor
       coverage: public-equity technology and software ideas
+      section: transaction_ideas
+
+    - handle: buccocapital
+      name: BuccoCapital Bloke
+      investor_type: technology_investor
+      coverage: software and technology equities
+      evidence_note: High-frequency account; retain posts with explicit company direction.
+      section: transaction_ideas
+    - handle: Citrini7
+      name: Citrini
+      investor_type: technology_investor
+      coverage: thematic technology and internet equities
+      evidence_note: Early thematic ideas with named beneficiaries; preserve the author's stated direction.
+      section: transaction_ideas
+    - handle: CasinoCapital
+      name: CasinoCapital
+      investor_type: technology_investor
+      coverage: technology equities and long-short views
+      section: transaction_ideas
+    - handle: Crussian17
+      name: Crussian
+      investor_type: technology_investor
+      coverage: technology company trading ideas
+      section: transaction_ideas
+    - handle: KerrisdaleCap
+      name: Kerrisdale Capital
+      investor_type: short_researcher
+      coverage: technology equities and short research
+      evidence_note: Treat claims as source material and distinguish the author's thesis from verified facts.
       section: transaction_ideas
 
     # AI industry-change observers: these are not transaction-idea sources.

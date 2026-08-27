@@ -117,6 +117,59 @@ def build_reddit_discussions(items: list[dict[str, Any]], config: dict[str, Any]
     top_dd_posts = ranked_posts[:max_dd_posts]
     for index, value in enumerate(top_dd_posts, start=1):
         value["display_id"] = f"R{index}"
+    additional_discussions: list[dict[str, Any]] = []
+    for extra in config.get("additional_subreddits") or []:
+        if not isinstance(extra, dict):
+            continue
+        extra_subreddit = str(extra.get("subreddit", "")).removeprefix("r/").casefold()
+        if not extra_subreddit:
+            continue
+        extra_source = f"r/{extra_subreddit}"
+        extra_listing = str(extra.get("listing", "thesis")).casefold()
+        extra_flairs = {str(value).casefold() for value in (extra.get("flairs") or []) if str(value).strip()}
+        extra_limit = max(1, int(extra.get("max_posts", 10)))
+        extra_items = [
+            item
+            for item in items
+            if str(item.get("source_name", "")).casefold() == extra_source
+            and (item.get("metadata") or {}).get("listing") == extra_listing
+            and (
+                not extra_flairs
+                or not (item.get("metadata") or {}).get("flair")
+                or str((item.get("metadata") or {}).get("flair")).casefold() in extra_flairs
+            )
+            and 1 <= int((item.get("metadata") or {}).get("feed_rank") or 0) <= extra_limit
+        ]
+        extra_posts: list[dict[str, Any]] = []
+        extra_engagement = False
+        for item in sorted(extra_items, key=lambda value: int((value.get("metadata") or {}).get("feed_rank") or 0)):
+            metadata = item.get("metadata") or {}
+            if metadata.get("transport") != "rss":
+                extra_engagement = True
+            extra_posts.append(
+                {
+                    "title": item.get("title", ""),
+                    "url": item.get("url", ""),
+                    "published_at": item.get("published_at", ""),
+                    "thesis_rank": int(metadata.get("feed_rank") or 100),
+                    "flair": metadata.get("flair", ""),
+                    "tickers": list(dict.fromkeys(str(value).upper() for value in item.get("matched_symbols") or item.get("symbols") or [])),
+                    "engagement": item.get("engagement") or {},
+                    "images": metadata.get("images") or [],
+                }
+            )
+        for index, post in enumerate(extra_posts, start=1):
+            post["display_id"] = f"SA{index}"
+        additional_discussions.append(
+            {
+                "subreddit": extra_source,
+                "listing": extra_listing,
+                "flairs": sorted(extra_flairs),
+                "post_count": len(extra_posts),
+                "engagement_available": extra_engagement,
+                "posts": extra_posts,
+            }
+        )
     return {
         "subreddit": source_name,
         "post_count": len(posts),
@@ -127,6 +180,7 @@ def build_reddit_discussions(items: list[dict[str, Any]], config: dict[str, Any]
             "or calculate a proprietary score; RSS-only runs expose the public ranking but do not contain Reddit engagement counts."
         ),
         "top_dd_posts": top_dd_posts,
+        "additional_discussions": additional_discussions,
     }
 
 
@@ -260,10 +314,41 @@ def prepare_report_context(
     wsb_posts.sort(key=lambda value: int((value.get("metadata") or {}).get("feed_rank") or 0))
     for item in wsb_posts:
         item["display_id"] = f"R{int((item.get('metadata') or {}).get('feed_rank') or 0)}"
+    security_analysis_posts: list[dict[str, Any]] = []
+    for extra in reddit_discussions_config.get("additional_subreddits") or []:
+        if not isinstance(extra, dict):
+            continue
+        extra_subreddit = str(extra.get("subreddit", "")).removeprefix("r/").casefold()
+        extra_listing = str(extra.get("listing", "thesis")).casefold()
+        extra_flairs = {str(value).casefold() for value in (extra.get("flairs") or []) if str(value).strip()}
+        extra_limit = max(1, int(extra.get("max_posts", 10)))
+        matches = [
+            item
+            for item in all_content
+            if item["source_name"].casefold() == f"r/{extra_subreddit}"
+            and (item.get("metadata") or {}).get("listing") == extra_listing
+            and (
+                not extra_flairs
+                or not (item.get("metadata") or {}).get("flair")
+                or str((item.get("metadata") or {}).get("flair")).casefold() in extra_flairs
+            )
+            and 1 <= int((item.get("metadata") or {}).get("feed_rank") or 0) <= extra_limit
+        ]
+        matches.sort(key=lambda value: int((value.get("metadata") or {}).get("feed_rank") or 0))
+        for index, item in enumerate(matches, start=1):
+            value = dict(item)
+            value["display_id"] = f"SA{index}"
+            security_analysis_posts.append(value)
     seen = load_seen(seen_path, now=now) if not include_seen else {"newsletters": {}, "x": {}}
     content, filtered_items = _filter_unseen(all_content, seen)
     if reddit_discussions_enabled and bool(reddit_discussions_config.get("rollup_only", True)):
-        content = [item for item in content if item["source_name"].casefold() != heat_source_name]
+        rollup_sources = {heat_source_name}
+        rollup_sources.update(
+            f"r/{str(extra.get('subreddit', '')).removeprefix('r/').casefold()}"
+            for extra in reddit_discussions_config.get("additional_subreddits") or []
+            if isinstance(extra, dict) and extra.get("subreddit")
+        )
+        content = [item for item in content if item["source_name"].casefold() not in rollup_sources]
     # The feed is a chronological reading queue. No source or engagement score is calculated.
     content.sort(key=lambda item: item["published_at"], reverse=True)
     newsletter_index = 0
@@ -338,11 +423,13 @@ def prepare_report_context(
             "filtered_seen_items": filtered_items,
             "market_mover_days": len(market_movers["days"]),
             "wsb_posts": reddit_discussions.get("post_count", 0),
+            "security_analysis_posts": len(security_analysis_posts),
         },
         "items": content,
         "market_movers": market_movers,
         "reddit_discussions": reddit_discussions,
         "wsb_posts": wsb_posts,
+        "security_analysis_posts": security_analysis_posts,
         "dedup": {
             "enabled": not include_seen,
             "tracked_sources": ["substack", "rss", "x"],

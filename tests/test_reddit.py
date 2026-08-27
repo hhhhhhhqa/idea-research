@@ -138,15 +138,27 @@ def test_dd_listing_uses_daily_top_flair_search():
         10,
     )
     assert endpoint == "search"
-    assert flair == "DD"
+    assert flair == ["DD"]
     assert params == {
-        "q": "flair:DD",
+        "q": 'flair:"DD"',
         "restrict_sr": "1",
         "sort": "top",
         "t": "day",
         "limit": 10,
         "raw_json": 1,
     }
+
+
+def test_thesis_listing_queries_both_securityanalysis_flairs():
+    endpoint, params, flairs = _reddit_listing_request(
+        {"listing": "thesis", "flairs": ["Thesis", "Short Thesis"], "sort": "top", "time_filter": "day"},
+        10,
+    )
+    assert endpoint == "search"
+    assert flairs == ["Thesis", "Short Thesis"]
+    assert params["q"] == 'flair:"Thesis" OR flair:"Short Thesis"'
+    assert params["sort"] == "top"
+    assert params["t"] == "day"
 
 
 def test_reddit_rss_accepts_dd_when_subreddit_category_comes_first():

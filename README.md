@@ -96,7 +96,7 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | [Yet Another Value Blog](https://www.yetanothervalueblog.com/) | 以现代价值投资视角研究特殊情形、市场错价和公司治理，补充成长股研究之外的反向线索。 |
 | [Outspoken Geek](https://outspokengeek.substack.com/) | 追踪科技、AI 与互联网公司的交易观点，作为个股研究和市场预期变化的补充来源。 |
 
-### 交易ideaX（25 个账号）
+### 交易ideaX（30 个账号）
 
 | 信息源 | 为什么选 |
 |---|---|
@@ -125,6 +125,11 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | [qinbafrank](https://x.com/qinbafrank) | 提供公开市场个股研究与交易观点。 |
 | [JinYu762](https://x.com/JinYu762) | 提供科技与互联网公司的个股交易线索。 |
 | [eastweb3eth](https://x.com/eastweb3eth) | 提供科技、互联网与数字资产相关上市公司的交易线索。 |
+| [BuccoCapital Bloke](https://x.com/buccocapital) | 高频发布软件与科技股观点，个股交易想法密度高。 |
+| [Citrini](https://x.com/Citrini7) | 擅长在新主题早期点名具体受益股票，提供主题驱动的交易线索。 |
+| [CasinoCapital](https://x.com/CasinoCapital) | 聚焦科技股，常给出具体多空判断。 |
+| [Crussian](https://x.com/Crussian17) | 高频更新科技个股交易思路，适合发现新的公司观点。 |
+| [Kerrisdale Capital](https://x.com/KerrisdaleCap) | 做空研究与科技股交易观点，补充明确的反向交易线索。 |
 
 ### 产业变化 Newsletter / 研究文章（3 个来源）
 
@@ -145,11 +150,12 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | AI 建造者 | [@AmandaAskell](https://x.com/AmandaAskell)、[@bcherny](https://x.com/bcherny)、[@catwu](https://x.com/catwu)、[@alexalbert_](https://x.com/alexalbert_)、[@rauchg](https://x.com/rauchg)、[@amasad](https://x.com/amasad)、[@joshwoodward](https://x.com/joshwoodward)、[@paulgauthier](https://x.com/paulgauthier)、[@ivanfioravanti](https://x.com/ivanfioravanti)、[@deanwball](https://x.com/deanwball)、[@kuncheng](https://x.com/kuncheng) |
 | 研究与学术扩展 | [@AndrewYNg](https://x.com/AndrewYNg)、[@hardmaru](https://x.com/hardmaru)、[@DrJimFan](https://x.com/DrJimFan)、[@ericjang11](https://x.com/ericjang11)、[@ZoubinGhahrama1](https://x.com/ZoubinGhahrama1)、[@suchenzang](https://x.com/suchenzang)、[@LiamFedus](https://x.com/LiamFedus)、[@ID_AA_Carmack](https://x.com/ID_AA_Carmack)、[@OfficialLoganK](https://x.com/OfficialLoganK)、[@ibab](https://x.com/ibab)、[@TacoCohen](https://x.com/TacoCohen)、[@jeffclune](https://x.com/jeffclune)、[@EthanJPerez](https://x.com/EthanJPerez)、[@AlexGDimakis](https://x.com/AlexGDimakis)、[@sainingxie](https://x.com/sainingxie)、[@rasbt](https://x.com/rasbt)、[@goodside](https://x.com/goodside)、[@bobmcgrewai](https://x.com/bobmcgrewai)、[@chipro](https://x.com/chipro)、[@ericzelikman](https://x.com/ericzelikman)、[@jxmnop](https://x.com/jxmnop)、[@DhruvBatra_](https://x.com/DhruvBatra_)、[@docmilanfar](https://x.com/docmilanfar)、[@AlexTamkin](https://x.com/AlexTamkin)、[@gstsdn](https://x.com/gstsdn)、[@AravSrinivas](https://x.com/AravSrinivas)、[@EMostaque](https://x.com/EMostaque)、[@ClementDelangue](https://x.com/ClementDelangue) |
 
-### Reddit（1 个社区）
+### Reddit（2 个社区）
 
 | 信息源 | 为什么选 |
 |---|---|
 | [r/wallstreetbets](https://www.reddit.com/r/wallstreetbets/) | 每天抓取公开 `DD` flair 的 Top 前十，观察散户当天带有尽调/交易观点的股票和主题；它只代表零售注意力，不是基本面证据或投资建议。帖子中的图片会随当前 feed 保存。 |
+| [r/SecurityAnalysis](https://www.reddit.com/r/SecurityAnalysis/) | 每天抓取 `Thesis` 和 `Short Thesis` flair 合并后的 Top 十篇，获取更完整的多空公司研究与投资逻辑。 |
 
 ### 美股收盘数据（1 个数据源）
 

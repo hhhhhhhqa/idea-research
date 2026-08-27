@@ -43,6 +43,8 @@
 - X：`X1`、`X2`（每项必须写对应股票）
 - 产业变化：`I1`、`I2`（不强行对应股票）
 - WSB DD 帖子：`R1`
+- SecurityAnalysis Thesis / Short Thesis：`SA1`–`SA10`
+- SecurityAnalysis Thesis / Short Thesis：`SA1`–`SA10`
 - 涨幅榜 / 跌幅榜：`G1` / `L1`
 
 不要重新编号，也不要给没有 `display_id` 的内容编造编号。结尾告诉用户可以说“展开 N2”、“解释 X1”、“查看 R1”或“详细看看 L3”。
@@ -78,6 +80,14 @@ WSB 也可以形成明确的板块或相对价值观点，不要求每篇都只�
 如果 `engagement_available` 为 false，说明这是公开 RSS 的 DD 每日 Top 排名，没有点赞/评论数据。WSB 只代表散户注意力，不能作为公司基本面、催化剂或交易建议的证据。
 
 如果 `reddit_discussions.post_count` 少于 10，只处理 feed 实际返回的帖子，并在 WSB 小节开头用一句话说明“本次 feed 抓到 X 篇 DD”；不要把实际数量不足的 feed 表述成完整前十，也不要人为补足。
+
+### SecurityAnalysis 今日讨论
+
+读取 `security_analysis_posts`。这些是中央端从 `r/SecurityAnalysis` 的 `Thesis` 和 `Short Thesis` flair、`sort=top`、`t=day` 查询中抓到的最多十篇帖子。按 `SA1`–`SA10` 的顺序处理，只输出明确讨论具体公司或清晰板块机制、并表达方向性观点的帖子；显示 flair、排名、标题、链接、ticker 和原文关键理由。没有 ticker、没有公司观点或只是泛泛讨论的帖子省略。公开 RSS 没有点赞/评论数据时，只把排名当作社区注意力，不当作基本面证据或交易建议。
+
+### SecurityAnalysis 今日讨论
+
+读取 `security_analysis_posts`。这些是中央端从 `r/SecurityAnalysis` 的 `Thesis` 和 `Short Thesis` flair、`sort=top`、`t=day` 查询中抓到的最多十篇帖子。按 `SA1`–`SA10` 的顺序处理，只输出明确讨论具体公司或清晰板块机制、并表达方向性观点的帖子；显示 flair、排名、标题、链接、ticker 和原文关键理由。没有 ticker、没有公司观点或只是泛泛讨论的帖子省略。公开 RSS 没有点赞/评论数据时，只把排名当作社区注意力，不当作基本面证据或交易建议。
 
 ### 美股收盘异动
 

@@ -132,6 +132,7 @@ def parse_reddit_json(
     lookback_hours: int | None = 72,
     listing: str = "new",
     flair: str | None = None,
+    flairs: list[str] | None = None,
     known_tickers: list[str] | None = None,
     ticker_aliases: dict[str, list[str]] | None = None,
 ) -> list[SignalItem]:
@@ -142,7 +143,12 @@ def parse_reddit_json(
     for feed_rank, child in enumerate(children, start=1):
         post = child.get("data", {})
         actual_flair = str(post.get("link_flair_text") or "").strip()
-        if flair and actual_flair and actual_flair.casefold() != flair.casefold():
+        requested_flairs = [str(value).strip() for value in (flairs or []) if str(value).strip()]
+        if flair and flair.strip():
+            requested_flairs.append(flair.strip())
+        if requested_flairs and actual_flair and not any(
+            actual_flair.casefold() == value.casefold() for value in requested_flairs
+        ):
             continue
         created = datetime.fromtimestamp(float(post.get("created_utc") or now.timestamp()), tz=timezone.utc).isoformat()
         if lookback_hours is not None and not within_lookback(created, lookback_hours, now):
@@ -183,6 +189,7 @@ def parse_reddit_json(
                     "listing": listing,
                     "feed_rank": feed_rank,
                     "requested_flair": flair or "",
+                    "requested_flairs": requested_flairs,
                     "image_urls": image_urls,
                 },
             )
@@ -198,6 +205,7 @@ def parse_reddit_rss(
     lookback_hours: int | None = 72,
     listing: str = "new",
     flair: str | None = None,
+    flairs: list[str] | None = None,
     sort: str | None = None,
     time_filter: str | None = None,
     known_tickers: list[str] | None = None,
@@ -219,9 +227,16 @@ def parse_reddit_rss(
         # Reddit RSS can expose both the subreddit name and the post flair as
         # Atom categories. Prefer the requested flair wherever it appears;
         # never treat the subreddit category itself as a mismatching flair.
-        if flair:
+        requested_flairs = [str(value).strip() for value in (flairs or []) if str(value).strip()]
+        if flair and flair.strip():
+            requested_flairs.append(flair.strip())
+        if requested_flairs:
             entry_flair = next(
-                (term for term in tag_terms if term.casefold() == flair.casefold()),
+                (
+                    term
+                    for term in tag_terms
+                    if any(term.casefold() == value.casefold() for value in requested_flairs)
+                ),
                 next(
                     (
                         term
@@ -233,7 +248,9 @@ def parse_reddit_rss(
             )
         elif tag_terms:
             entry_flair = tag_terms[0]
-        if flair and entry_flair and entry_flair.casefold() != flair.casefold():
+        if requested_flairs and entry_flair and not any(
+            entry_flair.casefold() == value.casefold() for value in requested_flairs
+        ):
             continue
         published = iso_datetime(entry.get("published") or entry.get("updated"), collected_at)
         if lookback_hours is not None and not within_lookback(published, lookback_hours, now):
@@ -267,6 +284,7 @@ def parse_reddit_rss(
                     "listing": listing,
                     "flair": entry_flair or (flair or ""),
                     "requested_flair": flair or "",
+                    "requested_flairs": requested_flairs,
                     "sort": sort or "",
                     "time_filter": time_filter or "",
                     "feed_rank": feed_rank,
@@ -317,24 +335,32 @@ def _anonymous_combined_rss(
     return kept
 
 
-def _reddit_listing_request(entry: dict[str, Any], limit: int) -> tuple[str, dict[str, Any], str | None]:
+def _reddit_listing_request(
+    entry: dict[str, Any], limit: int
+) -> tuple[str, dict[str, Any], list[str]]:
     """Return endpoint, query params and requested flair for a configured listing."""
     listing = str(entry.get("listing", "new")).lower()
-    flair = str(entry.get("flair") or "").strip() or None
-    if listing != "dd":
-        return listing, {"limit": limit, "raw_json": 1}, flair
+    configured_flairs = [str(value).strip() for value in (entry.get("flairs") or []) if str(value).strip()]
+    flair = str(entry.get("flair") or "").strip()
+    if flair and flair not in configured_flairs:
+        configured_flairs.append(flair)
+    if listing not in {"dd", "thesis"}:
+        return listing, {"limit": limit, "raw_json": 1}, configured_flairs
     # Reddit has no /dd listing.  DD is a subreddit search constrained to the
     # DD flair, sorted by Reddit's daily top ranking.
-    query_flair = flair or "DD"
+    query_flairs = configured_flairs or (["DD"] if listing == "dd" else ["Thesis", "Short Thesis"])
+    query = " OR ".join(
+        f'flair:"{value.replace(chr(34), "")}"' for value in query_flairs
+    )
     params = {
-        "q": f"flair:{query_flair}",
+        "q": query,
         "restrict_sr": "1",
         "sort": str(entry.get("sort") or "top"),
         "t": str(entry.get("time_filter") or "day"),
         "limit": limit,
         "raw_json": 1,
     }
-    return "search", params, query_flair
+    return "search", params, query_flairs
 
 
 def _oauth_token(client: httpx.Client) -> str:
@@ -520,11 +546,11 @@ def collect_reddit(config: dict[str, Any], client: httpx.Client | None = None) -
             if listing not in {"new", "hot", "top", "dd"}:
                 result.errors.append(f"r/{name}: unsupported listing={listing}")
                 continue
-            endpoint_listing, request_params, requested_flair = _reddit_listing_request(entry, limit)
+            endpoint_listing, request_params, requested_flairs = _reddit_listing_request(entry, limit)
             # A DD search is already constrained to Reddit's daily top window;
             # an additional publication lookback would incorrectly discard
             # posts that remain in that ranking.
-            effective_lookback = None if listing == "dd" else lookback
+            effective_lookback = None if listing in {"dd", "thesis"} else lookback
             if index and not token:
                 time.sleep(float(config.get("anonymous_request_delay_seconds", 2.0)))
             try:
@@ -541,7 +567,7 @@ def collect_reddit(config: dict[str, Any], client: httpx.Client | None = None) -
                             name,
                             lookback_hours=effective_lookback,
                             listing=listing,
-                            flair=requested_flair,
+                            flairs=requested_flairs,
                             known_tickers=config.get("known_tickers") or [],
                             ticker_aliases=config.get("ticker_aliases") or {},
                         )[:limit]
@@ -560,7 +586,7 @@ def collect_reddit(config: dict[str, Any], client: httpx.Client | None = None) -
                             name,
                             lookback_hours=effective_lookback,
                             listing=listing,
-                            flair=requested_flair,
+                            flairs=requested_flairs,
                             sort=str(entry.get("sort") or "") or None,
                             time_filter=str(entry.get("time_filter") or "") or None,
                             known_tickers=config.get("known_tickers") or [],
@@ -585,7 +611,7 @@ def collect_reddit(config: dict[str, Any], client: httpx.Client | None = None) -
                             name,
                             lookback_hours=effective_lookback,
                             listing=listing,
-                            flair=requested_flair,
+                            flairs=requested_flairs,
                             known_tickers=config.get("known_tickers") or [],
                             ticker_aliases=config.get("ticker_aliases") or {},
                         )[:limit]

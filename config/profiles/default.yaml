@@ -15,6 +15,11 @@ reddit_discussions:
   sort: top
   time_filter: day
   max_dd_posts: 10
+  additional_subreddits:
+    - subreddit: SecurityAnalysis
+      listing: thesis
+      flairs: [Thesis, Short Thesis]
+      max_posts: 10
   # WSB gets a separate DD daily top-ten rollup, while the complete captured
   # post set remains available to the subscriber Agent in `wsb_posts`.
   rollup_only: true

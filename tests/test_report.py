@@ -104,6 +104,42 @@ def test_report_rolls_up_wsb_posts_into_ticker_heat(tmp_path):
     assert context["items"] == []
 
 
+def test_report_exposes_securityanalysis_thesis_posts_separately(tmp_path):
+    now = datetime(2026, 8, 24, 8, tzinfo=timezone.utc)
+    thesis = SignalItem(
+        id="reddit:sa:1",
+        source_type="reddit",
+        source_name="r/SecurityAnalysis",
+        title="Long thesis on MSFT",
+        url="https://reddit.com/r/SecurityAnalysis/comments/sa1/thesis",
+        published_at=now.isoformat(),
+        collected_at=now.isoformat(),
+        body="Microsoft cloud thesis",
+        symbols=["MSFT"],
+        metadata={"listing": "thesis", "flair": "Thesis", "feed_rank": 1, "transport": "rss"},
+    )
+    feed = build_feed([PipelineResult(pipeline="reddit", items=[thesis])])
+    feed["generated_at"] = now.isoformat()
+    save_feed(tmp_path, feed)
+    profile = {
+        "reddit_discussions": {
+            "enabled": True,
+            "subreddit": "wallstreetbets",
+            "listing": "dd",
+            "flair": "DD",
+            "max_dd_posts": 10,
+            "additional_subreddits": [
+                {"subreddit": "SecurityAnalysis", "listing": "thesis", "flairs": ["Thesis", "Short Thesis"], "max_posts": 10}
+            ],
+            "rollup_only": True,
+        }
+    }
+    context = prepare_report_context(tmp_path, profile, "daily", now=now)
+    assert context["security_analysis_posts"][0]["display_id"] == "SA1"
+    assert context["security_analysis_posts"][0]["matched_symbols"] == ["MSFT"]
+    assert context["items"] == []
+
+
 def test_report_exposes_yfinance_movers_without_individual_price_records(tmp_path):
     now = datetime(2026, 8, 24, 21, tzinfo=timezone.utc)
     mover = SignalItem(
