@@ -1,7 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-27T06:16:09.447891+00:00",
+  "generated_at": "2026-08-27T06:20:46.237846+00:00",
   "pipelines": [
+    {
+      "pipeline": "reddit",
+      "status": "ok",
+      "item_count": 2,
+      "errors": [],
+      "notes": [
+        "r/SecurityAnalysis: anonymous thesis RSS transport used",
+        "Downloaded 0 Reddit image(s) into the current feed media directory"
+      ]
+    },
     {
       "pipeline": "x",
       "status": "ok",
@@ -22,17 +32,6 @@
       ]
     },
     {
-      "pipeline": "reddit",
-      "status": "error",
-      "item_count": 0,
-      "errors": [
-        "r/SecurityAnalysis: RSS=Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SecurityAnalysis/search.rss?q=flair%3A%22Thesis%22+OR+flair%3A%22Short+Thesis%22&restrict_sr=1&sort=top&t=day&limit=10'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429; JSON=Client error '403 Blocked' for url 'https://www.reddit.com/r/SecurityAnalysis/search.json?q=flair%3A%22Thesis%22+OR+flair%3A%22Short+Thesis%22&restrict_sr=1&sort=top&t=day&limit=10&raw_json=1'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
-      ],
-      "notes": [
-        "Combined thesis RSS unavailable; trying per-subreddit fallbacks: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/FanslyNewbies/comments/thesis/deleted_by_user/.rss?limit=10'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
-      ]
-    },
-    {
       "pipeline": "substack",
       "status": "ok",
       "item_count": 0,
@@ -50,10 +49,10 @@
     }
   ],
   "counts": {
-    "total": 176,
+    "total": 178,
     "substack": 11,
     "rss": 2,
-    "reddit": 0,
+    "reddit": 2,
     "x": 161,
     "price": 2
   },
@@ -909,6 +908,35 @@
         "investor_type": "frontier_ai_researcher",
         "coverage": "frontier AI and OpenAI research",
         "engagement_score": 157
+      }
+    },
+    {
+      "id": "reddit:41afd1273c03bd1db6e6",
+      "source_type": "reddit",
+      "source_name": "r/SecurityAnalysis",
+      "title": "True FCF yield and Y220 applied to consumer discretionary and staples names. DECK at 8.43% yield and 16.5% CAGR is the standout. Looking for pushback on the GTM thesis specifically - is AI really killing enterprise B2B data or is the market overpricing the doomsday scenario?",
+      "url": "https://www.reddit.com/r/SecurityAnalysis/comments/1vzdzq3/true_fcf_yield_and_y220_applied_to_consumer/",
+      "published_at": "2026-08-26T23:55:54+00:00",
+      "collected_at": "2026-08-27T06:20:46.188368+00:00",
+      "body": "The specific analytical question I'd most welcome pushback on from this community: ZoomInfo (GTM) trades at 23.96% true FCF yield with a 10.54% three-year revenue CAGR and a Y220 already at the 20% threshold. The market is pricing it as a dying business. The bear thesis is that AI scrapers replicate what ZoomInfo provides. I work in data at a large enterprise and our team still genuinely needs GTM for enterprise sales operations in ways that AI scrapers haven't replaced. Is that just selection bias from one enterprise's experience, or is the doomsday pricing genuinely overdone? The DECK observation is less controversial: 8.43% true FCF yield, 16.53% revenue CAGR, Y220 of 6.3 years, 8% annual share retirement. The consumer data is consistent with the financial data - Hokas are growing market share in daily training while Nike is shrinking. The question is whether the fashion cycle risk is underpriced in a shoe company growing this fast. Full piece with sector tables: https://cavemanscreener.substack.com/p/invest-in-what-you-know-part-ii-stuff submitted by /u/JoeInOR [link] [comments]",
+      "author": "/u/JoeInOR",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "transport": "rss",
+        "listing": "thesis",
+        "flair": "",
+        "requested_flair": "",
+        "requested_flairs": [
+          "Thesis",
+          "Short Thesis"
+        ],
+        "sort": "top",
+        "time_filter": "day",
+        "feed_rank": 1,
+        "image_urls": [],
+        "images": []
       }
     },
     {
@@ -3480,6 +3508,37 @@
         "publication_url": "https://mbideepdives.substack.com/about",
         "publication_platform": "substack",
         "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "reddit:9794ad21350941a658e4",
+      "source_type": "reddit",
+      "source_name": "r/SecurityAnalysis",
+      "title": "I own GEV because the turbine is already sold",
+      "url": "https://www.reddit.com/r/SecurityAnalysis/comments/1vywh86/i_own_gev_because_the_turbine_is_already_sold/",
+      "published_at": "2026-08-26T13:02:05+00:00",
+      "collected_at": "2026-08-27T06:20:46.188368+00:00",
+      "body": "I own GEV. Not because it's an AI-power stock. Because they already sold the turbines. Last quarter the slot book went from 100 GW to 116. They signed 20 GW, converted 10, actually shipped 3. Same customers are buying the transformers from them too. Once that machine is sitting in the plant you're not ripping it out for someone else. People keep lumping this with Constellation, Vistra, and Talen. Those are 20-year power contracts. Different thing. Talen is one Amazon plant. I'm not in that. Wind is ugly. Lost $657 million in the first half. They only guided about $400 million of losses for the whole year. If the slots stall at 116 and Wind stays like this, I was early. https://www.investmoat.com/research/ge-vernova-and-the-ai-electricity-basket submitted by /u/wkgui [link] [comments]",
+      "author": "/u/wkgui",
+      "symbols": [
+        "AMZN"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "transport": "rss",
+        "listing": "thesis",
+        "flair": "",
+        "requested_flair": "",
+        "requested_flairs": [
+          "Thesis",
+          "Short Thesis"
+        ],
+        "sort": "top",
+        "time_filter": "day",
+        "feed_rank": 2,
+        "image_urls": [],
+        "images": []
       }
     },
     {
