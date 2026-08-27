@@ -543,7 +543,7 @@ def collect_reddit(config: dict[str, Any], client: httpx.Client | None = None) -
             configured_lookback = entry.get("lookback_hours", config.get("lookback_hours", 72))
             lookback = int(configured_lookback) if configured_lookback is not None else None
             listing = str(entry.get("listing", "new")).lower()
-            if listing not in {"new", "hot", "top", "dd"}:
+            if listing not in {"new", "hot", "top", "dd", "thesis"}:
                 result.errors.append(f"r/{name}: unsupported listing={listing}")
                 continue
             endpoint_listing, request_params, requested_flairs = _reddit_listing_request(entry, limit)

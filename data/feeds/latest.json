@@ -1,114 +1,43 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-27T03:28:12.095929+00:00",
+  "generated_at": "2026-08-27T05:49:37.312062+00:00",
   "pipelines": [
     {
-      "pipeline": "x",
-      "status": "ok",
-      "item_count": 63,
-      "errors": [],
+      "pipeline": "reddit",
+      "status": "error",
+      "item_count": 0,
+      "errors": [
+        "r/SecurityAnalysis: RSS=Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SecurityAnalysis/search.rss?q=flair%3A%22Thesis%22+OR+flair%3A%22Short+Thesis%22&restrict_sr=1&sort=top&t=day&limit=10'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429; JSON=Client error '403 Blocked' for url 'https://www.reddit.com/r/SecurityAnalysis/search.json?q=flair%3A%22Thesis%22+OR+flair%3A%22Short+Thesis%22&restrict_sr=1&sort=top&t=day&limit=10&raw_json=1'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+      ],
       "notes": [
-        "X account priority: transaction_ideas before industry_changes",
-        "X cooldown waiting enabled across 2 cookie account(s)",
-        "@GavinSBaker: 1 tweet(s) via twscrape",
-        "@jaminball: 0 tweet(s) via twscrape",
-        "@altcap: 0 tweet(s) via twscrape",
-        "@ShanuMathew93: 5 tweet(s) via twscrape",
-        "@StackInvesting: 0 tweet(s) via twscrape",
-        "@hhhypergrowth: 0 tweet(s) via twscrape",
-        "@eric_seufert: 1 tweet(s) via twscrape",
-        "@modestproposal1: 2 tweet(s) via twscrape",
-        "@munster_gene: 4 tweet(s) via twscrape",
-        "@DanielTNiles: 0 tweet(s) via twscrape",
-        "@ByrneHobart: 2 tweet(s) via twscrape",
-        "@StockJabber: 0 tweet(s) via twscrape",
-        "@TechFundies: 0 tweet(s) via twscrape",
-        "@aleabitoreddit: 5 tweet(s) via twscrape",
-        "@CathieDWood: 0 tweet(s) via twscrape",
-        "@DeepSailCapital: 0 tweet(s) via twscrape",
-        "@SerenityRSH: 0 tweet(s) via twscrape",
-        "@DaBao_: 0 tweet(s) via twscrape",
-        "@KrishnaRSGuha: 0 tweet(s) via twscrape",
-        "@evergreencap3: 0 tweet(s) via twscrape",
-        "@jukan05: 9 tweet(s) via twscrape",
-        "@xiaomustock: 0 tweet(s) via twscrape",
-        "@qinbafrank: 1 tweet(s) via twscrape",
-        "@JinYu762: 0 tweet(s) via twscrape",
-        "@eastweb3eth: 1 tweet(s) via twscrape",
-        "@karpathy: 0 tweet(s) via twscrape",
-        "@swyx: 0 tweet(s) via twscrape",
-        "@dylan522p: 0 tweet(s) via twscrape",
-        "@insane_analyst: 4 tweet(s) via twscrape",
-        "@simonw: 0 tweet(s) via twscrape",
-        "@levie: 1 tweet(s) via twscrape",
-        "@RyanPGreenblatt: 0 tweet(s) via twscrape",
-        "@mweinbach: 3 tweet(s) via twscrape",
-        "@naval: 1 tweet(s) via twscrape",
-        "@leopoldasch: 0 tweet(s) via twscrape",
-        "@jimkxa: 0 tweet(s) via twscrape",
-        "@AndrewYNg: 0 tweet(s) via twscrape",
-        "@hardmaru: 0 tweet(s) via twscrape",
-        "@DrJimFan: 0 tweet(s) via twscrape",
-        "@ericjang11: 0 tweet(s) via twscrape",
-        "@ZoubinGhahrama1: 2 tweet(s) via twscrape",
-        "@suchenzang: 4 tweet(s) via twscrape",
-        "@LiamFedus: 2 tweet(s) via twscrape",
-        "@ID_AA_Carmack: 0 tweet(s) via twscrape",
-        "@OfficialLoganK: 1 tweet(s) via twscrape",
-        "@ibab: 0 tweet(s) via twscrape",
-        "@TacoCohen: 0 tweet(s) via twscrape",
-        "@jeffclune: 2 tweet(s) via twscrape",
-        "@EthanJPerez: 0 tweet(s) via twscrape",
-        "@AlexGDimakis: 0 tweet(s) via twscrape",
-        "@sainingxie: 1 tweet(s) via twscrape",
-        "@rasbt: 0 tweet(s) via twscrape",
-        "@goodside: 0 tweet(s) via twscrape",
-        "@bobmcgrewai: 0 tweet(s) via twscrape",
-        "@chipro: 0 tweet(s) via twscrape",
-        "@ericzelikman: 0 tweet(s) via twscrape",
-        "@jxmnop: 0 tweet(s) via twscrape",
-        "@DhruvBatra_: 1 tweet(s) via twscrape",
-        "@docmilanfar: 2 tweet(s) via twscrape",
-        "@AlexTamkin: 0 tweet(s) via twscrape",
-        "@gstsdn: 0 tweet(s) via twscrape",
-        "@AravSrinivas: 2 tweet(s) via twscrape",
-        "@EMostaque: 0 tweet(s) via twscrape",
-        "@ClementDelangue: 0 tweet(s) via twscrape",
-        "@sama: 2 tweet(s) via twscrape",
-        "@DarioAmodei: 0 tweet(s) via twscrape",
-        "@demishassabis: 0 tweet(s) via twscrape",
-        "@jietang: 0 tweet(s) via twscrape",
-        "@nvidia: 0 tweet(s) via twscrape",
-        "@AmandaAskell: 0 tweet(s) via twscrape",
-        "@bcherny: 0 tweet(s) via twscrape",
-        "@catwu: 0 tweet(s) via twscrape",
-        "@alexalbert_: 0 tweet(s) via twscrape",
-        "@rauchg: 0 tweet(s) via twscrape",
-        "@amasad: 1 tweet(s) via twscrape",
-        "@joshwoodward: 0 tweet(s) via twscrape",
-        "@paulgauthier: 0 tweet(s) via twscrape",
-        "@ivanfioravanti: 3 tweet(s) via twscrape",
-        "@deanwball: 0 tweet(s) via twscrape",
-        "@kuncheng: 0 tweet(s) via twscrape",
-        "Linked articles: 2 article(s) stored; 21 unavailable or skipped"
+        "Combined thesis RSS unavailable; trying per-subreddit fallbacks: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/FanslyNewbies/comments/thesis/deleted_by_user/.rss?limit=10'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
       ]
     },
     {
       "pipeline": "substack",
-      "status": "partial",
-      "item_count": 6,
-      "errors": [
-        "Meritech Software Pulse: 503 Service Unavailable"
-      ],
-      "notes": []
-    },
-    {
-      "pipeline": "reddit",
       "status": "ok",
       "item_count": 0,
       "errors": [],
+      "notes": []
+    },
+    {
+      "pipeline": "x",
+      "status": "ok",
+      "item_count": 5,
+      "errors": [],
       "notes": [
-        "r/wallstreetbets: anonymous dd RSS transport used"
+        "X account priority: transaction_ideas before industry_changes",
+        "X cooldown waiting enabled across 2 cookie account(s)",
+        "@buccocapital: 1 tweet(s) via twscrape",
+        "@Citrini7: 0 tweet(s) via twscrape",
+        "@CasinoCapital: 0 tweet(s) via twscrape",
+        "@Crussian17: 2 tweet(s) via twscrape",
+        "@KerrisdaleCap: 0 tweet(s) via twscrape",
+        "@leveredbetaboy2: 1 tweet(s) via twscrape",
+        "@TMTBreakout: 0 tweet(s) via twscrape",
+        "@techfund1: 0 tweet(s) via twscrape",
+        "@AndrewCurran_: 1 tweet(s) via twscrape",
+        "Linked articles: 0 article(s) stored; 3 unavailable or skipped"
       ]
     },
     {
@@ -122,14 +51,40 @@
     }
   ],
   "counts": {
-    "total": 123,
+    "total": 128,
     "substack": 11,
     "rss": 2,
     "reddit": 0,
-    "x": 108,
+    "x": 113,
     "price": 2
   },
   "items": [
+    {
+      "id": "x:f9c23394751059af4059",
+      "source_type": "x",
+      "source_name": "@AndrewCurran_",
+      "title": "Zoom invested roughly $51 million in Anthropic in May 2023 as part of a partnership to use Claude. The value of that stake is now $3.13 billion. https://t.co/Rg4dNjGoju",
+      "url": "https://x.com/AndrewCurran_/status/2092842467263684796",
+      "published_at": "2026-08-27T05:11:41+00:00",
+      "collected_at": "2026-08-27T05:48:37.313320+00:00",
+      "body": "Zoom invested roughly $51 million in Anthropic in May 2023 as part of a partnership to use Claude. The value of that stake is now $3.13 billion. https://t.co/Rg4dNjGoju",
+      "author": "Andrew Curran",
+      "symbols": [],
+      "engagement": {
+        "likes": 74,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 1
+      },
+      "metadata": {
+        "handle": "AndrewCurran_",
+        "transport": "twscrape",
+        "section": "industry_changes",
+        "investor_type": "ai_ecosystem_observer",
+        "coverage": "AI research, products and industry developments",
+        "engagement_score": 76
+      }
+    },
     {
       "id": "x:add20f187dd618094101",
       "source_type": "x",
@@ -828,6 +783,32 @@
       }
     },
     {
+      "id": "x:5cdb1a596d4b28ed86b7",
+      "source_type": "x",
+      "source_name": "@leveredbetaboy2",
+      "title": "Can’t wait for these POS to IPO https://t.co/unLccxijdx",
+      "url": "https://x.com/leveredbetaboy2/status/2092738627373588712",
+      "published_at": "2026-08-26T22:19:04+00:00",
+      "collected_at": "2026-08-27T05:48:37.313320+00:00",
+      "body": "Can’t wait for these POS to IPO https://t.co/unLccxijdx",
+      "author": "leveredbetaboy2",
+      "symbols": [],
+      "engagement": {
+        "likes": 3,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "leveredbetaboy2",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "technology and software equity trade ideas",
+        "engagement_score": 4
+      }
+    },
+    {
       "id": "x:c4a4645db61f9d63c565",
       "source_type": "x",
       "source_name": "@ByrneHobart",
@@ -1412,6 +1393,32 @@
       }
     },
     {
+      "id": "x:7ef194eedd3f64a36e69",
+      "source_type": "x",
+      "source_name": "@Crussian17",
+      "title": "Absolute circus with Benioff and Dario interviewed by Cramer on cnbc",
+      "url": "https://x.com/Crussian17/status/2092708001664917703",
+      "published_at": "2026-08-26T20:17:22+00:00",
+      "collected_at": "2026-08-27T05:48:37.313320+00:00",
+      "body": "Absolute circus with Benioff and Dario interviewed by Cramer on cnbc",
+      "author": "Crussian",
+      "symbols": [],
+      "engagement": {
+        "likes": 19,
+        "reposts": 1,
+        "replies": 2,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "Crussian17",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "technology company trading ideas",
+        "engagement_score": 23
+      }
+    },
+    {
       "id": "price:fe30a0612e04d46600d5",
       "source_type": "price",
       "source_name": "Yahoo Finance",
@@ -1685,6 +1692,32 @@
         "investor_type": "technology_executive",
         "coverage": "enterprise software, AI adoption and work transformation",
         "engagement_score": 211
+      }
+    },
+    {
+      "id": "x:d9484d8b527f20e90449",
+      "source_type": "x",
+      "source_name": "@Crussian17",
+      "title": "Top of funnel and engagement worries for $meta? Otherwise this rally today on settlement of the case is quite disappointing",
+      "url": "https://x.com/Crussian17/status/2092696912814284875",
+      "published_at": "2026-08-26T19:33:19+00:00",
+      "collected_at": "2026-08-27T05:48:37.313320+00:00",
+      "body": "Top of funnel and engagement worries for $meta? Otherwise this rally today on settlement of the case is quite disappointing",
+      "author": "Crussian",
+      "symbols": [],
+      "engagement": {
+        "likes": 10,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0
+      },
+      "metadata": {
+        "handle": "Crussian17",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "technology company trading ideas",
+        "engagement_score": 12
       }
     },
     {
@@ -2054,6 +2087,33 @@
         "coverage": "AI datacenters, power, infrastructure",
         "evidence_note": "Use for AI infrastructure constraints rather than pure software analysis.",
         "engagement_score": 10
+      }
+    },
+    {
+      "id": "x:e9a9d86925a92a86c894",
+      "source_type": "x",
+      "source_name": "@buccocapital",
+      "title": "https://t.co/brQE8cHaOf",
+      "url": "https://x.com/buccocapital/status/2092651830094262731",
+      "published_at": "2026-08-26T16:34:10+00:00",
+      "collected_at": "2026-08-27T05:48:37.313320+00:00",
+      "body": "https://t.co/brQE8cHaOf",
+      "author": "BuccoCapital Bloke",
+      "symbols": [],
+      "engagement": {
+        "likes": 557,
+        "reposts": 33,
+        "replies": 6,
+        "quotes": 1
+      },
+      "metadata": {
+        "handle": "buccocapital",
+        "transport": "twscrape",
+        "section": "transaction_ideas",
+        "investor_type": "technology_investor",
+        "coverage": "software and technology equities",
+        "evidence_note": "High-frequency account; retain posts with explicit company direction.",
+        "engagement_score": 629
       }
     },
     {
