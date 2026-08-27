@@ -346,8 +346,8 @@ def _reddit_listing_request(
         configured_flairs.append(flair)
     if listing not in {"dd", "thesis"}:
         return listing, {"limit": limit, "raw_json": 1}, configured_flairs
-    # Reddit has no /dd listing.  DD is a subreddit search constrained to the
-    # DD flair, sorted by Reddit's daily top ranking.
+    # Reddit has no /dd or /thesis listing. These are subreddit searches
+    # constrained to one or more flairs, sorted by Reddit's daily top ranking.
     query_flairs = configured_flairs or (["DD"] if listing == "dd" else ["Thesis", "Short Thesis"])
     query = " OR ".join(
         f'flair:"{value.replace(chr(34), "")}"' for value in query_flairs
@@ -516,9 +516,9 @@ def collect_reddit(config: dict[str, Any], client: httpx.Client | None = None) -
             per_entry_entries: list[dict[str, Any]] = []
             for entry in normalized:
                 listing = str(entry.get("listing", "new")).lower()
-                # DD is a flair-filtered search, not a subreddit listing; the
-                # combined multi-subreddit RSS endpoint cannot express it.
-                if listing == "dd":
+                # DD and thesis are flair-filtered searches, not subreddit
+                # listings; the combined RSS endpoint cannot express either.
+                if listing in {"dd", "thesis"}:
                     per_entry_entries.append(entry)
                     continue
                 grouped.setdefault(listing, []).append(entry)
