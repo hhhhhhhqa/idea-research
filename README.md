@@ -19,7 +19,7 @@
 
 ## 你会得到什么
 
-由你的 Agent 读取公开 GitHub feed 生成一份可继续追问的投资 idea 日报。日报分成两章：第一章「交易 Idea」包含 Newsletter / 研究文章、X、WSB 和美股收盘异动，只有明确公司对象和鲜明 Long/Short 或偏多/偏空观点才进入；第二章「产业变化」暂时预留给之后接入的 AI 研究人员来源。交易 Idea 的原文理由有多少写多少，没有理由也不补，不为了平衡观点额外寻找风险。X 和 Newsletter 只抓用户时区当天的内容，但中央 feed 会保留最近三天的 Newsletter/X 项，订阅者本地的去重状态也最多保留三天。X 优先抓取交易 Idea 账号；如果 `twscrape` 的 SearchTimeline 进入冷却，会等待重置后继续，等待期间非 X pipeline 的结果会先写入 feed：
+由你的 Agent 读取公开 GitHub feed 生成一份可继续追问的投资 idea 日报。日报分成两章：第一章「交易 Idea」包含 Newsletter / 研究文章、X、WSB 和美股收盘异动，只有明确公司对象和鲜明 Long/Short 或偏多/偏空观点才进入；第二章「AI 产业变化」读取已配置的 AI 研究人员来源。交易 Idea 的原文理由有多少写多少，没有理由也不补，不为了平衡观点额外寻找风险。X 和 Newsletter 只抓用户时区当天的内容，但中央 feed 会保留最近三天的 Newsletter/X 项，订阅者本地的去重状态也最多保留三天。X 优先抓取交易 Idea 账号；如果 `twscrape` 的 SearchTimeline 进入冷却，会等待重置后继续，等待期间非 X pipeline 的结果会先写入 feed：
 
 - `N1`、`N2`：与具体上市公司相关的软件、互联网和 AI 投资 Newsletter / 研究文章说了什么；每项带 ticker
 - `X1`、`X2`：与具体上市公司相关的 X 账号观点；每项带 ticker，转发外链正文会一并保存
@@ -79,7 +79,7 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 
 ## 信息源
 
-### Newsletter / 研究文章（交易 Idea，11 个来源）
+### Newsletter / 研究文章（交易 Idea，12 个来源）
 
 | 信息源 | 为什么选 |
 |---|---|
@@ -94,8 +94,9 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | [Meritech Software Pulse](https://meritech.substack.com/) | 持续跟踪上市软件行业的估值、经营指标、利润率和 SaaS 板块变化，是软件横向比较的重要来源。 |
 | [Mobile Dev Memo](https://mobiledevmemo.com/) | 研究移动应用、数字广告、用户增长和数字经济，适合观察互联网平台与应用商业化。 |
 | [Yet Another Value Blog](https://www.yetanothervalueblog.com/) | 以现代价值投资视角研究特殊情形、市场错价和公司治理，补充成长股研究之外的反向线索。 |
+| [Outspoken Geek](https://outspokengeek.substack.com/) | 追踪科技、AI 与互联网公司的交易观点，作为个股研究和市场预期变化的补充来源。 |
 
-### 交易ideaX（14 个账号）
+### 交易ideaX（25 个账号）
 
 | 信息源 | 为什么选 |
 |---|---|
@@ -113,6 +114,17 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | [Edwin Dorsey](https://x.com/StockJabber) | 关注治理、企业不当行为和做空线索，用于补充公司红旗排查；具体指控需要一手材料验证。 |
 | [Tech Fundies](https://x.com/TechFundies) | 关注软件和科技股投资，提供质量型与颠覆型技术公司的研究线索。 |
 | [Alea Bitor Reddit](https://x.com/aleabitoreddit) | 作为交易 Idea 来源，只保留其明确指向具体公司的鲜明观点；理由不足不自行补充。 |
+| [Cathie D. Wood](https://x.com/CathieDWood) | 关注颠覆式创新、AI 与科技股，提供长期科技投资组合视角。 |
+| [Deep Sail Capital](https://x.com/DeepSailCapital) | 提供科技和软件个股的交易线索，重点保留明确公司方向。 |
+| [SerenityRSH](https://x.com/SerenityRSH) | 提供公开市场科技与软件个股观点，重点保留鲜明交易判断。 |
+| [DaBao_](https://x.com/DaBao_) | 提供科技、互联网与软件股票的交易观点和研究线索。 |
+| [Krishna R. S. Guha](https://x.com/KrishnaRSGuha) | 提供科技与互联网公司的个股研究和交易观点。 |
+| [Evergreen Capital](https://x.com/evergreencap3) | 提供科技股和成长股的公开市场交易线索。 |
+| [jukan05](https://x.com/jukan05) | 提供科技、AI 与互联网公司的个股交易观点。 |
+| [xiaomustock](https://x.com/xiaomustock) | 提供股票研究和科技互联网方向的交易线索。 |
+| [qinbafrank](https://x.com/qinbafrank) | 提供公开市场个股研究与交易观点。 |
+| [JinYu762](https://x.com/JinYu762) | 提供科技与互联网公司的个股交易线索。 |
+| [eastweb3eth](https://x.com/eastweb3eth) | 提供科技、互联网与数字资产相关上市公司的交易线索。 |
 
 ### 产业变化 Newsletter / 研究文章（3 个来源）
 

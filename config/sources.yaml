@@ -56,6 +56,10 @@ substack:
     - name: Yet Another Value Blog
       url: https://www.yetanothervalueblog.com/
       feed_url: https://www.yetanothervalueblog.com/feed
+    - name: Outspoken Geek
+      url: https://outspokengeek.substack.com/
+      feed_url: https://outspokengeek.substack.com/feed
+      section: transaction_ideas
 
 reddit:
   section: transaction_ideas
@@ -244,6 +248,63 @@ x:
       investor_type: technology_investor
       coverage: public-equity technology and software ideas
       evidence_note: Prioritize only posts with a clear company-specific direction; weakly supported reasons are still retained when the view is explicit.
+      section: transaction_ideas
+
+    # Additional transaction-idea accounts
+    - handle: CathieDWood
+      name: Cathie D. Wood
+      investor_type: technology_investor
+      coverage: disruptive innovation, AI and technology equities
+      section: transaction_ideas
+    - handle: DeepSailCapital
+      name: Deep Sail Capital
+      investor_type: technology_investor
+      coverage: public-equity technology and software ideas
+      section: transaction_ideas
+    - handle: SerenityRSH
+      name: SerenityRSH
+      investor_type: technology_investor
+      coverage: public-equity technology and software ideas
+      section: transaction_ideas
+    - handle: DaBao_
+      name: DaBao_
+      investor_type: technology_investor
+      coverage: public-equity technology and software ideas
+      section: transaction_ideas
+    - handle: KrishnaRSGuha
+      name: Krishna R. S. Guha
+      investor_type: technology_investor
+      coverage: public-equity technology and software ideas
+      section: transaction_ideas
+    - handle: evergreencap3
+      name: Evergreen Capital
+      investor_type: technology_investor
+      coverage: public-equity technology and software ideas
+      section: transaction_ideas
+    - handle: jukan05
+      name: jukan05
+      investor_type: technology_investor
+      coverage: public-equity technology and software ideas
+      section: transaction_ideas
+    - handle: xiaomustock
+      name: xiaomustock
+      investor_type: technology_investor
+      coverage: public-equity technology and software ideas
+      section: transaction_ideas
+    - handle: qinbafrank
+      name: qinbafrank
+      investor_type: technology_investor
+      coverage: public-equity technology and software ideas
+      section: transaction_ideas
+    - handle: JinYu762
+      name: JinYu762
+      investor_type: technology_investor
+      coverage: public-equity technology and software ideas
+      section: transaction_ideas
+    - handle: eastweb3eth
+      name: eastweb3eth
+      investor_type: technology_investor
+      coverage: public-equity technology and software ideas
       section: transaction_ideas
 
     # AI industry-change observers: these are not transaction-idea sources.
