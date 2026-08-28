@@ -494,6 +494,66 @@ x:
       investor_type: technology_investor
       coverage: public-equity technology and software ideas
       section: transaction_ideas
+    - handle: RagingVentures
+      name: Raging Ventures
+      investor_type: technology_investor
+      coverage: public-equity technology and software ideas
+      section: transaction_ideas
+    - handle: DratchCap
+      name: Dratch Capital
+      investor_type: technology_investor
+      coverage: technology and software equity trade ideas
+      section: transaction_ideas
+    - handle: BeenThereCap
+      name: Been There Capital
+      investor_type: technology_investor
+      coverage: technology and software equity trade ideas
+      section: transaction_ideas
+    - handle: ParisAnalyst
+      name: Paris Analyst
+      investor_type: technology_investor
+      coverage: technology, internet and software equity ideas
+      section: transaction_ideas
+    - handle: dsmoak98
+      name: dsmoak98
+      investor_type: technology_investor
+      coverage: public-equity company theses and valuation
+      section: transaction_ideas
+    - handle: liamdaltonjr
+      name: liamdaltonjr
+      investor_type: technology_investor
+      coverage: technology and software equity trade ideas
+      section: transaction_ideas
+    - handle: UpslopeCapital
+      name: Upslope Capital
+      investor_type: technology_investor
+      coverage: technology and software equity trade ideas
+      section: transaction_ideas
+    - handle: glbeaty
+      name: glbeaty
+      investor_type: technology_investor
+      coverage: technology and internet equity ideas
+      section: transaction_ideas
+    - handle: AltaFoxCapital
+      name: Alta Fox Capital
+      investor_type: technology_investor
+      coverage: public-equity company research and activist ideas
+      section: transaction_ideas
+    - handle: ACapitalLP
+      name: A Capital LP
+      investor_type: technology_investor
+      coverage: technology and software equity trade ideas
+      section: transaction_ideas
+    - handle: CorneliaLake
+      name: Cornelia Lake
+      investor_type: technology_investor
+      coverage: public-equity technology and software ideas
+      section: transaction_ideas
+    - handle: OnodaCapital
+      name: Onoda Capital
+      investor_type: technology_investor
+      coverage: technology and software equity trade ideas
+      section: transaction_ideas
 
     # AI industry-change observers: these are not transaction-idea sources.
     - handle: AndrewCurran_

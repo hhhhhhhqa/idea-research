@@ -98,7 +98,7 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | [New Moon Cap](https://newmooncap.substack.com/) | 提供科技与成长股的公司研究和交易观点，补充个股基本面与估值线索。 |
 | [Outlier Cap](https://outliercapx.substack.com/) | 从光通信、AI 基础设施和产能瓶颈推导二阶受益公司的交易观点；披露持仓时区分作者观点与已验证事实。 |
 
-### 交易ideaX（58 个账号）
+### 交易ideaX（70 个账号）
 
 | 信息源 | 为什么选 |
 |---|---|
@@ -160,6 +160,18 @@ Agent 只能使用对应 context JSON 与其中保存的外链正文，不得把
 | [Vaelis_X](https://x.com/Vaelis_X) | 提供科技和软件公司的交易观点。 |
 | [illyquid](https://x.com/illyquid) | 关注科技与互联网股票的交易机会。 |
 | [uncovered_alpha](https://x.com/uncovered_alpha) | 寻找科技与软件公司的公开市场交易观点。 |
+| [Raging Ventures](https://x.com/RagingVentures) | 提供公开市场科技与软件公司的交易观点。 |
+| [Dratch Capital](https://x.com/DratchCap) | 提供科技和软件股票的个股交易线索。 |
+| [Been There Capital](https://x.com/BeenThereCap) | 提供科技与软件公司的交易观点。 |
+| [Paris Analyst](https://x.com/ParisAnalyst) | 关注科技、互联网和软件公司的交易机会。 |
+| [dsmoak98](https://x.com/dsmoak98) | 提供公司 thesis、估值和市场错价线索。 |
+| [liamdaltonjr](https://x.com/liamdaltonjr) | 提供科技和软件股票的交易观点。 |
+| [Upslope Capital](https://x.com/UpslopeCapital) | 提供科技与软件公司的个股交易线索。 |
+| [glbeaty](https://x.com/glbeaty) | 关注科技与互联网股票的交易机会。 |
+| [Alta Fox Capital](https://x.com/AltaFoxCapital) | 进行公开市场公司研究并寻找明确的激进投资线索。 |
+| [A Capital LP](https://x.com/ACapitalLP) | 提供科技和软件公司的交易观点。 |
+| [Cornelia Lake](https://x.com/CorneliaLake) | 提供公开市场科技与软件公司的交易线索。 |
+| [Onoda Capital](https://x.com/OnodaCapital) | 提供科技和软件股票的交易观点。 |
 
 ### 产业变化 Newsletter / 研究文章（3 个来源）
 
