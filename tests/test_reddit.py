@@ -9,6 +9,7 @@ from idea_research.pipelines.reddit import (
     parse_reddit_json,
     parse_reddit_rss,
     _reddit_listing_request,
+    _reddit_rss_url,
 )
 
 
@@ -159,6 +160,17 @@ def test_thesis_listing_queries_both_securityanalysis_flairs():
     assert params["q"] == 'flair:"Thesis" OR flair:"Short Thesis"'
     assert params["sort"] == "top"
     assert params["t"] == "day"
+
+
+def test_reddit_rss_url_uses_stable_flair_search_shape():
+    endpoint, params, _ = _reddit_listing_request(
+        {"listing": "thesis", "flairs": ["Thesis", "Short Thesis"], "sort": "top", "time_filter": "day"},
+        10,
+    )
+    assert _reddit_rss_url("SecurityAnalysis", endpoint, params) == (
+        "https://www.reddit.com/r/SecurityAnalysis/search.rss?"
+        "restrict_sr=1&sort=top&t=day&q=flair%3A%22Thesis%22%20OR%20flair%3A%22Short%20Thesis%22"
+    )
 
 
 def test_reddit_rss_accepts_dd_when_subreddit_category_comes_first():

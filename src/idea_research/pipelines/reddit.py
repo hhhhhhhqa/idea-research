@@ -9,7 +9,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
-from urllib.parse import urlparse
+from urllib.parse import quote, urlparse
 
 import feedparser
 import httpx
@@ -363,6 +363,48 @@ def _reddit_listing_request(
     return "search", params, query_flairs
 
 
+def _reddit_rss_url(subreddit: str, endpoint: str, params: dict[str, Any]) -> str:
+    """Build a stable public RSS URL for Reddit's flair search.
+
+    Reddit's anonymous RSS edge is sensitive to the URL shape: keeping the
+    search controls in a stable order and omitting ``limit`` avoids a common
+    429 response while Reddit still applies its default result cap. JSON/OAuth
+    callers continue to use the full parameter dictionary.
+    """
+    if endpoint != "search" or "q" not in params:
+        return f"https://www.reddit.com/r/{subreddit}/{endpoint}.rss"
+    query = quote(str(params.get("q") or ""), safe="")
+    restrict_sr = quote(str(params.get("restrict_sr") or "1"), safe="")
+    sort = quote(str(params.get("sort") or "top"), safe="")
+    time_filter = quote(str(params.get("t") or "day"), safe="")
+    return (
+        f"https://www.reddit.com/r/{subreddit}/search.rss"
+        f"?restrict_sr={restrict_sr}&sort={sort}&t={time_filter}&q={query}"
+    )
+
+
+def _get_reddit_rss(
+    client: httpx.Client,
+    url: str,
+    config: dict[str, Any],
+) -> httpx.Response:
+    """Fetch public RSS with a short 429 backoff before JSON fallback."""
+    retries = max(0, min(3, int(config.get("rss_retries", 2))))
+    delay = max(1.0, float(config.get("rss_retry_delay_seconds", 15.0)))
+    response = client.get(url)
+    for attempt in range(retries):
+        if response.status_code != 429:
+            break
+        retry_after = response.headers.get("retry-after")
+        try:
+            wait_seconds = max(delay, min(60.0, float(retry_after))) if retry_after else delay
+        except (TypeError, ValueError):
+            wait_seconds = delay
+        time.sleep(wait_seconds * (attempt + 1))
+        response = client.get(url)
+    return response
+
+
 def _oauth_token(client: httpx.Client) -> str:
     client_id = os.environ.get("REDDIT_CLIENT_ID", "")
     client_secret = os.environ.get("REDDIT_CLIENT_SECRET", "")
@@ -573,12 +615,22 @@ def collect_reddit(config: dict[str, Any], client: httpx.Client | None = None) -
                         )[:limit]
                     )
                 else:
-                    rss_params = dict(request_params)
-                    rss_params.pop("raw_json", None)
-                    response = client.get(
-                        f"https://www.reddit.com/r/{name}/{endpoint_listing}.rss",
-                        params=rss_params,
-                    )
+                    if endpoint_listing == "search":
+                        # Keep the public flair-search URL stable. Reddit's
+                        # anonymous edge is more permissive when ``limit``
+                        # and ``raw_json`` are omitted from RSS requests.
+                        response = _get_reddit_rss(
+                            client,
+                            _reddit_rss_url(name, endpoint_listing, request_params),
+                            config,
+                        )
+                    else:
+                        rss_params = dict(request_params)
+                        rss_params.pop("raw_json", None)
+                        response = client.get(
+                            f"https://www.reddit.com/r/{name}/{endpoint_listing}.rss",
+                            params=rss_params,
+                        )
                     response.raise_for_status()
                     result.items.extend(
                         parse_reddit_rss(

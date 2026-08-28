@@ -74,6 +74,8 @@ reddit:
   lookback_hours: 24
   max_items_per_subreddit: 100
   anonymous_request_delay_seconds: 12.0
+  rss_retries: 2
+  rss_retry_delay_seconds: 15.0
   # Keep WallStreetBets DD (Due Diligence) daily Top posts and save image attachments.
   download_images: true
   media_dir: data/media/reddit
