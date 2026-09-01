@@ -235,12 +235,17 @@ def enrich_linked_articles(items: list[SignalItem], client: httpx.Client, config
                     skipped += 1
                     continue
                 attempted += 1
-                cache[url] = fetch_linked_article(
-                    url,
-                    client,
-                    max_body_chars=max_body_chars,
-                    max_download_bytes=max_download_bytes,
-                )
+                try:
+                    cache[url] = fetch_linked_article(
+                        url,
+                        client,
+                        max_body_chars=max_body_chars,
+                        max_download_bytes=max_download_bytes,
+                    )
+                except Exception:
+                    # A linked article is enrichment only. Certificate or
+                    # network failures must not discard the source X post.
+                    cache[url] = None
                 if cache[url]:
                     stored += 1
             article = cache[url]
