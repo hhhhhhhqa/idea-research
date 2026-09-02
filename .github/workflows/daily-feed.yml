@@ -1,10 +1,6 @@
 name: Daily research feed
 
 on:
-  schedule:
-    # GitHub cron is UTC. 22:30 UTC is 06:30 the next day in Asia/Shanghai.
-    # The lead time lets the X phase finish near 07:00 after non-X publishes.
-    - cron: "30 22 * * *"
   workflow_dispatch:
     inputs:
       run_x:
@@ -84,7 +80,7 @@ jobs:
   x:
     name: Publish X feed
     needs: non-x
-    if: ${{ github.event_name == 'schedule' || inputs.run_x == true }}
+    if: ${{ inputs.run_x == true }}
     runs-on: ubuntu-latest
     timeout-minutes: 350
     env:
