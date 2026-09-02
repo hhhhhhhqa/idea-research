@@ -150,6 +150,16 @@ def test_load_twitter_cookie_values_supports_numbered_env_accounts(monkeypatch):
     ]
 
 
+def test_twscrape_wait_timeout_can_be_bounded_for_hosted_jobs(monkeypatch):
+    import idea_research.pipelines.x as xmod
+
+    monkeypatch.setenv("TWSCRAPE_WAIT_TIMEOUT_SECONDS", "300")
+    assert xmod._twscrape_wait_timeout({"cooldown_wait_timeout_seconds": 60}) == 300.0
+    monkeypatch.delenv("TWSCRAPE_WAIT_TIMEOUT_SECONDS")
+    assert xmod._twscrape_wait_timeout({"cooldown_wait_timeout_seconds": 60}) == 60.0
+    assert xmod._twscrape_wait_timeout({}) is None
+
+
 def test_collect_x_needs_credentials(monkeypatch):
     monkeypatch.delenv("TWITTER_COOKIES", raising=False)
     monkeypatch.delenv("X_BEARER_TOKEN", raising=False)

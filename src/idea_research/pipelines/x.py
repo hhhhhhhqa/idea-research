@@ -98,6 +98,16 @@ def _day_start(now: datetime, day_timezone: ZoneInfo | timezone) -> datetime:
     return datetime.combine(local_now.date(), datetime.min.time(), tzinfo=day_timezone).astimezone(timezone.utc)
 
 
+def _twscrape_wait_timeout(config: dict[str, Any]) -> float | None:
+    """Return a finite hosted-runner wait without changing local defaults."""
+    raw_value = os.environ.get("TWSCRAPE_WAIT_TIMEOUT_SECONDS")
+    if raw_value is None:
+        raw_value = config.get("cooldown_wait_timeout_seconds")
+    if raw_value in (None, ""):
+        return None
+    return max(0.0, float(raw_value))
+
+
 def _account_metadata(account: dict[str, Any], transport: str) -> dict[str, Any]:
     """Keep the configured research context attached to every collected post."""
     handle = str(account["handle"]).lstrip("@")
@@ -446,6 +456,7 @@ def _collect_twitter_via_twscrape(
     default_min_engagement = int(config.get("min_engagement", 0))
     default_include_replies = bool(config.get("include_replies", False))
     db_path = str(project_root() / "data" / "twitter_accounts.db")
+    wait_timeout = _twscrape_wait_timeout(config)
 
     async def _run() -> tuple[list[SignalItem], list[str], list[str]]:
         # Lazy import keeps this module importable when twscrape is not installed.
@@ -459,7 +470,7 @@ def _collect_twitter_via_twscrape(
         # the other pipeline results before entering this phase.
         api = API(
             db_path,
-            wait_timeout=None,
+            wait_timeout=wait_timeout,
             wait_interval=max(1.0, float(config.get("cooldown_poll_seconds", 5.0))),
         )
         # The upstream pool defaults to username ordering, which would reuse
@@ -489,6 +500,8 @@ def _collect_twitter_via_twscrape(
         )
         notes.append("X account priority: transaction_ideas before industry_changes")
         notes.append(f"X cooldown waiting enabled across {len(cookie_accounts)} cookie account(s)")
+        if wait_timeout is not None:
+            notes.append(f"X per-request cooldown wait capped at {wait_timeout:g} seconds")
         for _, raw_account in ordered_accounts:
             handle = str(raw_account["handle"]).lstrip("@")
             account_include_replies = bool(raw_account.get("include_replies", default_include_replies))

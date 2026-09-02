@@ -234,7 +234,7 @@ flowchart LR
   E --> F["当前聊天或个人投递渠道"]
 ```
 
-本项目刻意不使用 GitHub Actions。Mac 合盖睡眠后，本机 `cron`、`launchd` 或桌面 Agent 都不能可靠执行，因此需要把中央维护者副本放在一台持续联网的 Linux 主机上。仓库提供 [`systemd` 07:00 自动发布方案](references/always-on-scheduling.md)：每天按 `Asia/Shanghai` 时区运行，先采集并提交 Newsletter、Reddit 和美股收盘数据，再单独处理可能等待限流的 X。`Persistent=true` 会在主机短暂重启后补跑，仓库锁会阻止任务重叠。
+默认无人值守方案是 [GitHub Actions 07:00 自动发布](references/github-actions-scheduling.md)，不要求维护者的 Mac 开机。任务在北京时间 06:50 排队，先采集并提交 Newsletter、Reddit 和美股收盘数据，再单独处理可能等待限流的 X；两个 X Cookie 只保存在 GitHub Actions Secrets，不进入仓库。若以后有常驻 Linux 主机，也可以改用 [`systemd` 方案](references/always-on-scheduling.md)。
 
 07:00 的无人值守任务对 Newsletter/X 使用过去 24 小时滚动窗口，避免自然日过滤只抓到午夜后 7 小时；手动 `idea-research collect` 仍保持 `config/sources.yaml` 中的当天规则，两类内容在统一 feed 中仍最多保留三天。同事的 Agent 只需拉取最新提交并生成报告。仓库不保存日报历史快照；非持久化 Agent 只能生成当前这份报告，不能承诺自动推送。
 

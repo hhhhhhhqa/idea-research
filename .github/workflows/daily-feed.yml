@@ -1,0 +1,129 @@
+name: Daily research feed
+
+on:
+  schedule:
+    # GitHub cron is UTC. 22:50 UTC is 06:50 the next day in Asia/Shanghai.
+    # Starting before 07:00 avoids the higher queue load at the top of the hour.
+    - cron: "50 22 * * *"
+  workflow_dispatch:
+    inputs:
+      run_x:
+        description: "Run the slower X pipeline after publishing non-X sources"
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: idea-research-daily-feed
+  cancel-in-progress: false
+
+env:
+  TZ: Asia/Shanghai
+  PYTHONUNBUFFERED: "1"
+
+jobs:
+  non-x:
+    name: Publish Newsletter, Reddit, and close data
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Check out current main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install Idea Research
+        run: python -m pip install --disable-pip-version-check -e .
+
+      - name: Check source readiness
+        run: idea-research doctor
+
+      - name: Collect non-X sources
+        run: >-
+          idea-research collect --rolling-hours 24
+          --pipeline substack --pipeline reddit --pipeline prices
+
+      - name: Validate generated feed
+        run: python -m json.tool data/feeds/latest.json >/dev/null
+
+      - name: Commit and publish non-X feed
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          git config user.name "Idea Research Bot"
+          git config user.email "idea-research-bot@users.noreply.github.com"
+          paths=(
+            data/feeds/latest.json
+            data/media/reddit
+            data/prices/rolling_prices.json
+            data/stock_universe/stock_pool.json
+            data/stock_universe/saas_pool.json
+          )
+          for path in "${paths[@]}"; do
+            if [[ -e "${path}" ]] || git ls-files -- "${path}" | grep -q .; then
+              git add -A -- "${path}"
+            fi
+          done
+          if git diff --cached --quiet; then
+            echo "No non-X feed changes to publish."
+            exit 0
+          fi
+          git commit -m "Update non-X feeds for $(date +%F)"
+          git push origin HEAD:main
+
+  x:
+    name: Publish X feed
+    needs: non-x
+    if: ${{ github.event_name == 'schedule' || inputs.run_x == true }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      TWITTER_COOKIES: ${{ secrets.TWITTER_COOKIES }}
+      TWITTER_COOKIES_2: ${{ secrets.TWITTER_COOKIES_2 }}
+      # Avoid an unbounded twscrape wait on GitHub's six-hour hosted-job limit.
+      TWSCRAPE_WAIT_TIMEOUT_SECONDS: "300"
+    steps:
+      - name: Check out feed after non-X publish
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install Idea Research
+        run: python -m pip install --disable-pip-version-check -e .
+
+      - name: Collect X
+        run: idea-research collect --rolling-hours 24 --pipeline x
+
+      - name: Validate generated feed
+        run: python -m json.tool data/feeds/latest.json >/dev/null
+
+      - name: Commit and publish X feed
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          git config user.name "Idea Research Bot"
+          git config user.email "idea-research-bot@users.noreply.github.com"
+          git add -- data/feeds/latest.json
+          if git diff --cached --quiet; then
+            echo "No X feed changes to publish."
+            exit 0
+          fi
+          git commit -m "Update X feed for $(date +%F)"
+          git push origin HEAD:main

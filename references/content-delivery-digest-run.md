@@ -27,11 +27,12 @@ idea-research doctor
 idea-research collect
 ```
 
-For the unattended 07:00 central run, use `scripts/update-feed.sh` with the
-checked-in systemd units. It uses a rolling 24-hour Newsletter/X window so the
-morning schedule has no calendar-day gap, publishes non-X sources before X can
-wait on a cooldown, and keeps the same three-day retention policy. See
-`references/always-on-scheduling.md`.
+For the unattended 07:00 central run without an always-on computer, use
+`.github/workflows/daily-feed.yml`. It uses a rolling 24-hour Newsletter/X
+window so the morning schedule has no calendar-day gap, publishes non-X sources
+before X can wait on a cooldown, and keeps the same three-day retention policy.
+See `references/github-actions-scheduling.md`. The checked-in systemd units and
+`scripts/update-feed.sh` remain an alternative for a future always-on host.
 
 Then review pipeline health and commit/push the intended current artifacts: `data/feeds/latest.json`, the current Reddit image attachments under `data/media/reddit/`, `data/stock_universe/stock_pool.json`, `data/stock_universe/saas_pool.json`, and the three-trading-day `data/prices/rolling_prices.json`. Newsletter/X collectors fetch the current user-timezone day, while `latest.json` retains their configured three-day retry window so a subscriber can catch up after a missed delivery. Each collection atomically replaces `latest.json`; no long-term content archive is stored, and stale generated Reddit images are pruned. Do not commit `.env`, locally generated report contexts, or the FMP checkpoint. A central maintainer may then run `prepare` locally to inspect the published result.
 
