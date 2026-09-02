@@ -6,7 +6,7 @@ Use this workflow when the user asks for a daily report or a persistent Agent in
 
 There are two distinct workflows:
 
-- **Central maintainer:** owns the uncommitted local `.env`, runs collection and publishes data to the repository.
+- **Central maintainer:** owns the uncommitted local `.env` or explicitly authorized Actions Secrets, runs collection and publishes data to the repository.
 - **Subscriber Agent:** does not own source credentials; pulls the latest committed feed and only prepares/renders a personal digest.
 
 Never use the central collection workflow merely because a subscriber asks for a report.

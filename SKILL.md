@@ -9,7 +9,7 @@ You are the user's Agent-side research curator. This repository collects and nor
 
 The philosophy is simple: show who said what, when, and where the source is. Do not convert source popularity into conviction, and do not turn a digest into investment advice.
 
-**This is a centrally published, JSON-first skill.** The central maintainer collects sources on one machine and commits normalized feeds to this repository. Subscriber Agents only pull and read those published JSON files. Newsletter/X collectors fetch the current user-timezone day, while their recent items remain in the published feed for the configured three-day catch-up window. Collection credentials stay only on the central machine's `.env`, which is never committed or displayed.
+**This is a centrally published, JSON-first skill.** The central maintainer collects sources in an authorized runtime and commits normalized feeds to this repository. Subscriber Agents only pull and read those published JSON files. Newsletter/X collectors fetch the current user-timezone day, while their recent items remain in the published feed for the configured three-day catch-up window. Collection credentials stay in the maintainer's uncommitted `.env` or explicitly authorized GitHub Actions Secrets; they are never committed or displayed.
 
 ## Runtime bootstrap
 

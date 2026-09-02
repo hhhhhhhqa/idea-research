@@ -4,10 +4,11 @@ This is the default unattended central-maintainer runtime when no always-on
 computer is available. It uses a GitHub-hosted runner and does not require the
 maintainer's Mac to be awake.
 
-The workflow at `.github/workflows/daily-feed.yml` starts at 06:50
-Asia/Shanghai (`22:50 UTC`) so the non-X feed is normally published around
-07:00 without scheduling at GitHub's busiest top-of-hour boundary. Scheduled
-runs are not guaranteed to start at the exact second.
+The workflow at `.github/workflows/daily-feed.yml` starts at 06:30
+Asia/Shanghai (`22:30 UTC`). The non-X feed normally publishes within a few
+minutes, while the lead time gives the separately rate-limited X phase room to
+finish near 07:00. Scheduled runs are not guaranteed to start at the exact
+second.
 
 Each run has two ordered jobs:
 
