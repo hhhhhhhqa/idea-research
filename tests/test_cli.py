@@ -81,3 +81,38 @@ def test_collect_retains_only_recent_newsletter_items(tmp_path, monkeypatch):
     ids = {item["id"] for item in read_json(data_dir / "feeds" / "latest.json")["items"]}
     assert "substack:recent" in ids
     assert "substack:expired" not in ids
+
+
+def test_collect_rolling_window_overrides_only_newsletter_and_x(tmp_path, monkeypatch):
+    sources = tmp_path / "sources.yaml"
+    sources.write_text(
+        "substack:\n  same_day: true\n  lookback_hours: 12\n"
+        "reddit:\n  lookback_hours: 24\n"
+        "x:\n  same_day: true\n  lookback_hours: 12\n",
+        encoding="utf-8",
+    )
+    observed = {}
+
+    def capture(name):
+        def collector(config):
+            observed[name] = config
+            return PipelineResult(name)
+
+        return collector
+
+    for name in ("substack", "reddit", "x"):
+        monkeypatch.setitem(cli.PIPELINES, name, capture(name))
+    args = SimpleNamespace(
+        sources=str(sources),
+        pipeline=["substack", "reddit", "x"],
+        data_dir=str(tmp_path / "data"),
+        strict=False,
+        rolling_hours=24,
+    )
+
+    assert cli._collect(args) == 0
+    assert observed["substack"]["same_day"] is False
+    assert observed["substack"]["lookback_hours"] == 24
+    assert observed["x"]["same_day"] is False
+    assert observed["x"]["lookback_hours"] == 24
+    assert observed["reddit"]["lookback_hours"] == 24

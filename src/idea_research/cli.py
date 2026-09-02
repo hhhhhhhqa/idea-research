@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import json
 import os
 import sys
@@ -32,6 +33,20 @@ SOURCE_TYPES = {
 
 def _collect(args: argparse.Namespace) -> int:
     sources = load_yaml(args.sources)
+    rolling_hours = getattr(args, "rolling_hours", None)
+    if rolling_hours is not None:
+        if rolling_hours <= 0:
+            print("--rolling-hours must be greater than zero", file=sys.stderr)
+            return 2
+        # A morning scheduler needs a rolling window: calendar-day filtering at
+        # 07:00 would otherwise permanently miss everything published after the
+        # previous day's run. Keep the configured/manual behavior unchanged.
+        sources = copy.deepcopy(sources)
+        for pipeline_name in ("substack", "x"):
+            pipeline_config = sources.get(pipeline_name)
+            if isinstance(pipeline_config, dict):
+                pipeline_config["same_day"] = False
+                pipeline_config["lookback_hours"] = rolling_hours
     selected = args.pipeline or list(PIPELINES)
 
     def run_phase(names: list[str]) -> list[Any]:
@@ -291,6 +306,11 @@ def build_parser() -> argparse.ArgumentParser:
     collect.add_argument("--pipeline", action="append", choices=PIPELINES, help="May be repeated; default is all")
     collect.add_argument("--sources", default=str(root / "config" / "sources.yaml"))
     collect.add_argument("--data-dir", default=str(root / "data"))
+    collect.add_argument(
+        "--rolling-hours",
+        type=int,
+        help="Use a rolling Newsletter/X window (intended for unattended morning collection)",
+    )
     collect.add_argument("--strict", action="store_true", help="Exit non-zero when a configured pipeline fails")
     collect.set_defaults(func=_collect)
 

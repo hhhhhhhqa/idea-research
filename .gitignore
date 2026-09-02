@@ -5,6 +5,7 @@ credentials/x_twitter_cookies.txt
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.runtime/
 *.egg-info/
 data/feeds/*.tmp
 # Derived from the current feed on each subscriber machine; never publish it.

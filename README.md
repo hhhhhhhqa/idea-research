@@ -234,7 +234,9 @@ flowchart LR
   E --> F["当前聊天或个人投递渠道"]
 ```
 
-本项目刻意不使用 GitHub Actions。中央维护者可在自己的机器按需或用本地定时任务采集，再提交每天覆盖更新的 `data/feeds/latest.json` 与已完成的股票池；同事的 Agent 只需拉取最新提交并生成报告。仓库不保存日报历史快照；非持久化 Agent 只能生成当前这份报告，不能承诺自动推送。
+本项目刻意不使用 GitHub Actions。Mac 合盖睡眠后，本机 `cron`、`launchd` 或桌面 Agent 都不能可靠执行，因此需要把中央维护者副本放在一台持续联网的 Linux 主机上。仓库提供 [`systemd` 07:00 自动发布方案](references/always-on-scheduling.md)：每天按 `Asia/Shanghai` 时区运行，先采集并提交 Newsletter、Reddit 和美股收盘数据，再单独处理可能等待限流的 X。`Persistent=true` 会在主机短暂重启后补跑，仓库锁会阻止任务重叠。
+
+07:00 的无人值守任务对 Newsletter/X 使用过去 24 小时滚动窗口，避免自然日过滤只抓到午夜后 7 小时；手动 `idea-research collect` 仍保持 `config/sources.yaml` 中的当天规则，两类内容在统一 feed 中仍最多保留三天。同事的 Agent 只需拉取最新提交并生成报告。仓库不保存日报历史快照；非持久化 Agent 只能生成当前这份报告，不能承诺自动推送。
 
 中央维护者一次发布的最小流程是：
 

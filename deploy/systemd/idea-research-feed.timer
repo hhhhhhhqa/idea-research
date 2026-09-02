@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Idea Research every day at 07:00 Asia/Shanghai
+
+[Timer]
+OnCalendar=*-*-* 07:00:00 Asia/Shanghai
+Persistent=true
+AccuracySec=1min
+Unit=idea-research-feed.service
+
+[Install]
+WantedBy=timers.target
