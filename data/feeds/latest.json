@@ -1,7 +1,36 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-01T12:55:09.442500+00:00",
+  "generated_at": "2026-09-02T02:09:56.990780+00:00",
   "pipelines": [
+    {
+      "pipeline": "substack",
+      "status": "partial",
+      "item_count": 3,
+      "errors": [
+        "Software Stack Investing: The read operation timed out"
+      ],
+      "notes": []
+    },
+    {
+      "pipeline": "reddit",
+      "status": "ok",
+      "item_count": 1,
+      "errors": [],
+      "notes": [
+        "r/wallstreetbets: anonymous dd RSS transport used",
+        "r/SecurityAnalysis: anonymous thesis RSS transport used",
+        "Downloaded 0 Reddit image(s) into the current feed media directory"
+      ]
+    },
+    {
+      "pipeline": "prices",
+      "status": "ok",
+      "item_count": 2,
+      "errors": [],
+      "notes": [
+        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /Users/1huang/Desktop/willing capital/idea-research/data/prices/rolling_prices.json"
+      ]
+    },
     {
       "pipeline": "x",
       "status": "ok",
@@ -138,45 +167,352 @@
         "@kuncheng: 0 tweet(s) via twscrape",
         "Linked articles: 8 article(s) stored; 68 unavailable or skipped"
       ]
-    },
-    {
-      "pipeline": "substack",
-      "status": "ok",
-      "item_count": 4,
-      "errors": [],
-      "notes": []
-    },
-    {
-      "pipeline": "reddit",
-      "status": "ok",
-      "item_count": 2,
-      "errors": [],
-      "notes": [
-        "r/wallstreetbets: anonymous dd RSS transport used",
-        "r/SecurityAnalysis: anonymous thesis RSS transport used",
-        "Downloaded 1 Reddit image(s) into the current feed media directory"
-      ]
-    },
-    {
-      "pipeline": "prices",
-      "status": "ok",
-      "item_count": 2,
-      "errors": [],
-      "notes": [
-        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /Users/1huang/Desktop/willing capital/idea-research/data/prices/rolling_prices.json",
-        "Latest available Yahoo EOD date is 2026-08-31; run after the US close to collect 2026-09-01."
-      ]
     }
   ],
   "counts": {
-    "total": 183,
-    "substack": 3,
-    "rss": 1,
-    "reddit": 2,
+    "total": 185,
+    "substack": 5,
+    "rss": 2,
+    "reddit": 1,
     "x": 175,
     "price": 2
   },
   "items": [
+    {
+      "id": "rss:c1f9e24f83cb6a5973b1",
+      "source_type": "rss",
+      "source_name": "Mobile Dev Memo",
+      "title": "Unpacking the FTC’s case against Amazon",
+      "url": "https://mobiledevmemo.com/unpacking-the-ftcs-case-against-amazon/",
+      "published_at": "2026-09-01T21:23:16+00:00",
+      "collected_at": "2026-09-02T02:07:58.851621+00:00",
+      "body": "The FTC alleges Amazon overcharged advertisers $20 billion by manipulating auction mechanics. By implementing a \"soft-floor reserve\" instead of standard second-price auctions, Amazon reportedly raised costs while concealing the changes. The lawsuit highlights internal efforts to hide these surcharges, which allegedly reduced advertiser ROAS to capture higher profit margins.",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mobiledevmemo.com/",
+        "publication_platform": "wordpress",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "price:99ef11d4002208a92bc2",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 跌幅前十 2026-09-01",
+      "url": "https://finance.yahoo.com/markets/stocks/losers/",
+      "published_at": "2026-09-01T20:00:00+00:00",
+      "collected_at": "2026-09-02T02:09:56.982254+00:00",
+      "body": "1. EVCM close 8.07; previous 8.87; change -9.0192%\n2. FSLY close 20.77; previous 22.790001; change -8.8635%\n3. FROG close 91.779999; previous 100.07; change -8.2842%\n4. NTSK close 14.05; previous 15.31; change -8.2299%\n5. CDNS close 313.040009; previous 338.779999; change -7.5978%\n6. CXM close 7.6; previous 8.21; change -7.43%\n7. SABR close 2.01; previous 2.17; change -7.3733%\n8. TENB close 35.470001; previous 38.150002; change -7.0249%\n9. CRWD close 215.070007; previous 231.0; change -6.8961%\n10. S close 20.629999; previous 22.1; change -6.6516%",
+      "author": "",
+      "symbols": [
+        "EVCM",
+        "FSLY",
+        "FROG",
+        "NTSK",
+        "CDNS",
+        "CXM",
+        "SABR",
+        "TENB",
+        "CRWD",
+        "S"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "losers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-09-01",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/Users/1huang/Desktop/willing capital/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "EVCM",
+            "price_date": "2026-09-01",
+            "close": 8.07,
+            "previous_close": 8.87,
+            "change_amount": -0.8,
+            "change_percentage": -9.0192,
+            "url": "https://finance.yahoo.com/quote/EVCM"
+          },
+          {
+            "ticker": "FSLY",
+            "price_date": "2026-09-01",
+            "close": 20.77,
+            "previous_close": 22.790001,
+            "change_amount": -2.02,
+            "change_percentage": -8.8635,
+            "url": "https://finance.yahoo.com/quote/FSLY"
+          },
+          {
+            "ticker": "FROG",
+            "price_date": "2026-09-01",
+            "close": 91.779999,
+            "previous_close": 100.07,
+            "change_amount": -8.290001,
+            "change_percentage": -8.2842,
+            "url": "https://finance.yahoo.com/quote/FROG"
+          },
+          {
+            "ticker": "NTSK",
+            "price_date": "2026-09-01",
+            "close": 14.05,
+            "previous_close": 15.31,
+            "change_amount": -1.26,
+            "change_percentage": -8.2299,
+            "url": "https://finance.yahoo.com/quote/NTSK"
+          },
+          {
+            "ticker": "CDNS",
+            "price_date": "2026-09-01",
+            "close": 313.040009,
+            "previous_close": 338.779999,
+            "change_amount": -25.73999,
+            "change_percentage": -7.5978,
+            "url": "https://finance.yahoo.com/quote/CDNS"
+          },
+          {
+            "ticker": "CXM",
+            "price_date": "2026-09-01",
+            "close": 7.6,
+            "previous_close": 8.21,
+            "change_amount": -0.61,
+            "change_percentage": -7.43,
+            "url": "https://finance.yahoo.com/quote/CXM"
+          },
+          {
+            "ticker": "SABR",
+            "price_date": "2026-09-01",
+            "close": 2.01,
+            "previous_close": 2.17,
+            "change_amount": -0.16,
+            "change_percentage": -7.3733,
+            "url": "https://finance.yahoo.com/quote/SABR"
+          },
+          {
+            "ticker": "TENB",
+            "price_date": "2026-09-01",
+            "close": 35.470001,
+            "previous_close": 38.150002,
+            "change_amount": -2.68,
+            "change_percentage": -7.0249,
+            "url": "https://finance.yahoo.com/quote/TENB"
+          },
+          {
+            "ticker": "CRWD",
+            "price_date": "2026-09-01",
+            "close": 215.070007,
+            "previous_close": 231.0,
+            "change_amount": -15.929993,
+            "change_percentage": -6.8961,
+            "url": "https://finance.yahoo.com/quote/CRWD"
+          },
+          {
+            "ticker": "S",
+            "price_date": "2026-09-01",
+            "close": 20.629999,
+            "previous_close": 22.1,
+            "change_amount": -1.470001,
+            "change_percentage": -6.6516,
+            "url": "https://finance.yahoo.com/quote/S"
+          }
+        ]
+      }
+    },
+    {
+      "id": "price:7823259a8a2673f080ef",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 涨幅前十 2026-09-01",
+      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
+      "published_at": "2026-09-01T20:00:00+00:00",
+      "collected_at": "2026-09-02T02:09:56.982254+00:00",
+      "body": "1. DUOL close 158.770004; previous 148.360001; change 7.0167%\n2. BAND close 50.790001; previous 48.43; change 4.873%\n3. MTCH close 41.91; previous 40.650002; change 3.0996%\n4. GDDY close 100.550003; previous 97.879997; change 2.7278%\n5. NYAX close 53.380001; previous 52.060001; change 2.5355%\n6. ZETA close 31.559999; previous 30.969999; change 1.9051%\n7. RNG close 70.769997; previous 69.620003; change 1.6518%\n8. PICS close 10.74; previous 10.61; change 1.2253%\n9. TYL close 376.429993; previous 372.220001; change 1.131%\n10. BZ close 17.549999; previous 17.360001; change 1.0945%",
+      "author": "",
+      "symbols": [
+        "DUOL",
+        "BAND",
+        "MTCH",
+        "GDDY",
+        "NYAX",
+        "ZETA",
+        "RNG",
+        "PICS",
+        "TYL",
+        "BZ"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "gainers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-09-01",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/Users/1huang/Desktop/willing capital/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "DUOL",
+            "price_date": "2026-09-01",
+            "close": 158.770004,
+            "previous_close": 148.360001,
+            "change_amount": 10.410004,
+            "change_percentage": 7.0167,
+            "url": "https://finance.yahoo.com/quote/DUOL"
+          },
+          {
+            "ticker": "BAND",
+            "price_date": "2026-09-01",
+            "close": 50.790001,
+            "previous_close": 48.43,
+            "change_amount": 2.360001,
+            "change_percentage": 4.873,
+            "url": "https://finance.yahoo.com/quote/BAND"
+          },
+          {
+            "ticker": "MTCH",
+            "price_date": "2026-09-01",
+            "close": 41.91,
+            "previous_close": 40.650002,
+            "change_amount": 1.259998,
+            "change_percentage": 3.0996,
+            "url": "https://finance.yahoo.com/quote/MTCH"
+          },
+          {
+            "ticker": "GDDY",
+            "price_date": "2026-09-01",
+            "close": 100.550003,
+            "previous_close": 97.879997,
+            "change_amount": 2.670006,
+            "change_percentage": 2.7278,
+            "url": "https://finance.yahoo.com/quote/GDDY"
+          },
+          {
+            "ticker": "NYAX",
+            "price_date": "2026-09-01",
+            "close": 53.380001,
+            "previous_close": 52.060001,
+            "change_amount": 1.32,
+            "change_percentage": 2.5355,
+            "url": "https://finance.yahoo.com/quote/NYAX"
+          },
+          {
+            "ticker": "ZETA",
+            "price_date": "2026-09-01",
+            "close": 31.559999,
+            "previous_close": 30.969999,
+            "change_amount": 0.59,
+            "change_percentage": 1.9051,
+            "url": "https://finance.yahoo.com/quote/ZETA"
+          },
+          {
+            "ticker": "RNG",
+            "price_date": "2026-09-01",
+            "close": 70.769997,
+            "previous_close": 69.620003,
+            "change_amount": 1.149994,
+            "change_percentage": 1.6518,
+            "url": "https://finance.yahoo.com/quote/RNG"
+          },
+          {
+            "ticker": "PICS",
+            "price_date": "2026-09-01",
+            "close": 10.74,
+            "previous_close": 10.61,
+            "change_amount": 0.13,
+            "change_percentage": 1.2253,
+            "url": "https://finance.yahoo.com/quote/PICS"
+          },
+          {
+            "ticker": "TYL",
+            "price_date": "2026-09-01",
+            "close": 376.429993,
+            "previous_close": 372.220001,
+            "change_amount": 4.209991,
+            "change_percentage": 1.131,
+            "url": "https://finance.yahoo.com/quote/TYL"
+          },
+          {
+            "ticker": "BZ",
+            "price_date": "2026-09-01",
+            "close": 17.549999,
+            "previous_close": 17.360001,
+            "change_amount": 0.189999,
+            "change_percentage": 1.0945,
+            "url": "https://finance.yahoo.com/quote/BZ"
+          }
+        ]
+      }
+    },
+    {
+      "id": "substack:593cccee766b48b2b7b1",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "PRs NOT Welcome: How Top AI Open Source Projects Are Managing Thousands of Contributors",
+      "url": "https://www.latent.space/p/pr-not-welcome",
+      "published_at": "2026-09-01T16:17:15+00:00",
+      "collected_at": "2026-09-02T02:07:09.938329+00:00",
+      "body": "GitHub invented pull requests, and for 18 years they have been open by default. But now some of the top AI-native open source projects are shutting PRs off , because they’ve found a better way. These projects, which include Flue and tldraw, refuse to accept PRs from external contributors — in part because they’re usually AI-generated. Instead, the maintainers prefer to use their own agents to create and manage PRs. Also, many projects have begun using a “ software factory ” to manage community contributions. Typically this involves a ‘team’ of agents triaging a PR, reproducing the issue (if it’s a bug), implementing a fix or a new feature, reviewing it, and then handing it back to a human to merge it. Vercel’s software factory for AI SDK Vercel recently published a post entitled “ Building a software factory for AI SDK .” It describes how the open source AI SDK project, which gets over 20 million npm downloads per week, deployed agents to get control over its PR and issue backlog — which had reached “over 1,000 open issues and almost 800 pull requests” by late June. There are several types of agents in Vercel’s system, each of which focuses on a different task . For example, there’s an agent that reproduces a bug, another that applies a fix, and yet another that reviews the fix. Diagram from Vercel; comments by Latent Space One of the key reasons why Vercel set up this software factory is because it trusts its own agents to do the work , more so than agents run by community members. “If we have a very specific agent with a very specific prompt that we optimized — and we know that, over history, it was very successful in fixing a certain category of bugs — then we develop trust in that particular agent configuration,” Vercel engineer Lars Grammel explained in a YouTube video . “For open-source projects, it’s worth considering having your own agents and your own setup, and not necessarily trusting the community , because it can actually cut down your time to review,” he added. Example of software factory workflow in AI SDK project. Grammel also showed the deployment architecture for its system, noting that “there is a UI, there’s a web app, there’s an underlying API, there’s an execution space, and there are sandboxes.” It’s then synchronized with GitHub, which automatically triggers other actions. The UI Grammel mentioned was custom-made. Vercel’s software factory deployment architecture; diagram by Lars Grammel. Just four weeks after this software factory was implemented, Vercel claims the factory now “ authors between 25 and 35% of PRs we merge and closes 70-80% of issues .” Astro’s auto-triage system The Astro web framework , which has 62,000 stars on GitHub, has also adopted what creator Fred Schott calls “that software factory idea.” “For five years, we were in this place where issues came in faster than we could handle them ,” Schott told Latent Space. But now, with agents handling the triage work, they’ve reestablished control. “It’s totally shifted in the last six months,” he said. “We can now solve these issues with these automations — handling triage, reproduction, getting the user to actually verify the fix that the bot is suggesting before we even look at it. ” Example of an Astro factory bot in action The result was not just a large decrease in open issues, but a complete change in how the Astro team deals with incoming community requests. “I’ve never seen that in my entire decade-plus experience with open source,” Schott said. “Being able to essentially treat issues as a thing that every week, you prioritize — no matter what — versus a backlog that you’re constantly trimming.” Furthermore, the Astro “auto-triage” system directly led to Schott creating a brand new agent framework, called Flue . Flue doesn’t accept your PRs, but is open for discussion With Flue, Schott is trying an even more radical approach to PRs. Flue’s contributor guide states that “we’re going to try to reimagine things” — partly to prevent what it calls “Drive-by AI slop PRs.” Basically, Schott explained, every external pull request in the Flue project is automatically closed and converted into an issue or discussion. Bug reports and fix proposals get turned into issues, feature requests become discussions. Agents can do most PR tasks now, according to Flue’s contributor guide. “If you submit a PR, no hard feelings, we’re just going to go and represent it for you as issues and discussions. And from there, trying to figure out the right way to bring people on.” It’s kind of like treating incoming requests as leads , rather than as a piece of work a maintainer feels obliged to review. The contributor guide explains that it uses the team’s own expertise combined with “the best available SOTA [State-of-the-Art] LLMs that we have access to” in order to help them decide what to work on next. Once a decision is made in the issue or discussion, agents are then deployed for “research, design, implementation, and initial review.” If our agents write the code, your external PRs are worthless Like Flue, the “source available” React drawing tool tldraw (50,000 stars) automatically closes external PRs . Project creator Steve Ruiz announced this policy in January and five months later reiterated it , noting that it was “an opinionated decision made in response to changes in how we’re coding (more discussion, more agents), the social practices around public contribution, and the changing landscape around code security.” HashiCorp co-founder and Ghostty creator Mitchell Hashimoto, now a co-founder of Superlogical , takes it even further. He thinks “the future is that large open source projects will close contributions completely.” Ruiz responded , “It just makes less sense to have people contributing code if the issue is decently well-specified and the code can be written by agents.” But…what happens to the community? Traditionally in open source, pull requests have been reviewed by maintainers not only for the code, but to teach contributors and assess them as future maintainers. If projects like AI SDK and Astro are using their agents to do much of the code review and implementation, where does that leave community members who want to be more actively involved? Schott recognizes this as a risk. “It still leaves this open hole of, well, if you just keep narrowing the project, at a certain point, you and I go on vacation — what happens? It doesn’t really solve every problem.” However, the fact that both Flue and tldraw don’t accept PRs but do accept new issues and discussions perhaps points to a solution. Which is that by talking to each other more, community members better get to know — and trust — one another, which is both a way to learn from peers and potentially prove yourself worthy of being a maintainer . Example of a tldraw issue (above) being turned into a PR (below) As for the code, if it’s easier for maintainers to use AI themselves than to accept external code contributions, then as tldraw founder Steve Ruiz put it , “it’s better to limit community contribution to the places it still matters: reporting, discussion, perspective, and care.”",
+      "author": "Richard MacManus",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "substack:955abc722dcd826c152a",
+      "source_type": "substack",
+      "source_name": "MBI Deep Dives",
+      "title": "The Bid Shading Threat to Amazon Advertising",
+      "url": "https://mbideepdives.substack.com/p/the-bid-shading-threat-to-amazon",
+      "published_at": "2026-09-01T16:14:52+00:00",
+      "collected_at": "2026-09-02T02:07:17.600269+00:00",
+      "body": "Almost six years ago, NYT published a critical piece on Amazon’s business practices with 3P sellers. The reason I still remember that piece after all these years is that the article had an interesting background on how Amazon made its foray into advertising. From the piece: “For years, the question of whether Amazon should push ads on its site generated fierce debate among senior managers and executives inside the company, according to eight current and former Amazon employees. In memos and fiery meetings, they disagreed on what was best for a company that preached obsession with serving customers. One camp believed that ads would erode customer trust, because shoppers expected Amazon to show them popular products with strong reviews and a good price. The other camp saw ads as a cash machine Amazon could tap to drive down prices and fund new innovations for customers. …Workers eventually got word that Mr. Bezos had settled the debate, according to two senior employees. Mr. Bezos said that Amazon had two options: Sell ads, and use the cash for investments. Or shun ads, and get beaten by competitors.” Mr. Bezos took the right decision. Indeed, advertising has almost certainly been Amazon’s largest money printer over the last few years and the company would likely be worth lot less if Amazon had to generate attractive return in its retail operations without relying on advertising. Since 2019, Amazon’s advertising revenue became almost ~6x to reach ~$69 Billion in 2025. Just to put things in perspective, even AWS grew at ~24% CAGR during this period while advertising revenue grew at ~33% CAGR. Source: Company Filings, MBI Deep Dives, Daloopa Given the importance of advertising revenue for Amazon’s business ex AWS, yesterday’s FTC lawsuit against Amazon’s advertising practices deserve a closer look which I will cover behind the paywall. Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on 65+ companies. The daily is just how I think out loud between the Deep Dives! Subscribe now Read more",
+      "author": "MBI Deep Dives",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mbideepdives.substack.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "reddit:a06f98a14e054999ddb0",
+      "source_type": "reddit",
+      "source_name": "r/wallstreetbets",
+      "title": "TTWO: Everyone knows GTA 6 will sell. They’re missing the bigger upside story.",
+      "url": "https://www.reddit.com/r/wallstreetbets/comments/1w4byes/ttwo_everyone_knows_gta_6_will_sell_theyre/",
+      "published_at": "2026-09-01T13:25:59+00:00",
+      "collected_at": "2026-09-02T02:08:05.468168+00:00",
+      "body": "GTA Online is going to be a massive upside driver + call option on adult Roblox user generated content platform + CEO Strauss Zelnick likely to ride into the sunset with a sale post GTA release. 1) Starting with the obvious - GTA 6 will be the biggest entertainment launch in history, and I think the market still isn’t remotely pricing it in. TTWO’s CEO said in early August that GTA 6 preorders were “unprecedented and astonishing” and that “No one’s ever seen anything like this before at Take-Two or in the industry.” That’s not normal CEO fluff. That’s a giant signal. Then came the Netflix reveal + the recent “Cyberleeks” — and interest absolutely exploded. Preorders reportedly jumped 436% in a single day after the Netflix reveal⁠ THE OPENING WEEKEND COULD BE ABSURD My rough bull case: 30–50M copies × ~$98 ASP = $3–5B of revenue IN THE OPENING WEEKEND. Meanwhile, analysts are apparently modeling only ~$1.6B of incremental TTWO revenue for the entire December quarter. If GTA 6 comes anywhere close to the high end of that range, estimates are going to look hilariously stale. And yes, I know: “But GTA 6 sales are one-time.” That’s true. 2) GTA Online is the real monster and is UNDERMONETIZED AS FUCK GTA remains one of the most-played games in the world despite being 13 YEARS OLD. It’s consistently near the top of PlayStation engagement rankings, remains a major Steam title, and is one of the most-watched games across Twitch/YouTube. Yet GTA Online reportedly generates only around $400M/year in revenue. Compare that with category leaders like Fortnite, Call of Duty and EA-FC, which can generate ~$2B/year in player spending. GTA has arguably the strongest IP of the bunch. GTA 6 massively expands the addressable audience + resets the monetization clock. If GTA Online becomes a $1B+ annual business, the economics of TTWO change dramatically. 3) THEN THERE’S FIVEM This is the part I think the market is REALLY sleeping on. TTWO bought FiveM, the massive GTA role-playing/modding platform, in 2023. FiveM already has a huge community and regularly ranks among the top games/platforms on Steam by concurrent users — despite being largely under-monetized today. Think about what happens if Rockstar turns GTA 6 + FiveM into a legitimate user-generated-content ecosystem. GTA × Roblox economics. Could it fail? Absolutely. Could it become fucking enormous? Also absolutely. And IMO the stock gives you almost zero credit for this optionality. That’s a free call option. 4) EVENTUALLY, SOMEONE IS GOING TO BUY THIS THING Microsoft bought Activision Blizzard. EA was acquired by a Saudi/Kushner-led consortium in 2026. That leaves TTWO as one of the last truly scaled independent publishers with: GTA Red Dead Redemption NBA 2K A huge mobile portfolio Rockstar Zynga FiveM And arguably the most valuable entertainment IP in gaming. Then there’s Strauss Zelnick. 69 years old (nice). He owns ~1.4M TTWO shares directly/through ZMC Advisors. I have a hard time believing the guy wants to spend the next decade running a public video-game publisher after delivering the biggest GTA launch in history. A successful GTA 6 launch would be the perfect time to sell the company at peak strategic value. submitted by /u/wack-arnolds [link] [comments]",
+      "author": "/u/wack-arnolds",
+      "symbols": [
+        "MSFT",
+        "NFLX"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "transport": "rss",
+        "listing": "dd",
+        "flair": "",
+        "requested_flair": "",
+        "requested_flairs": [
+          "DD"
+        ],
+        "sort": "top",
+        "time_filter": "day",
+        "feed_rank": 1,
+        "image_urls": [],
+        "images": []
+      }
+    },
     {
       "id": "x:4d02d655b5ebc1971772",
       "source_type": "x",
@@ -3988,256 +4324,6 @@
       }
     },
     {
-      "id": "price:b2a3422a89135455f37b",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 跌幅前十 2026-08-31",
-      "url": "https://finance.yahoo.com/markets/stocks/losers/",
-      "published_at": "2026-08-31T20:00:00+00:00",
-      "collected_at": "2026-09-01T12:21:08.116702+00:00",
-      "body": "1. PINS close 21.709999; previous 23.190001; change -6.3821%\n2. FIG close 27.49; previous 28.82; change -4.6149%\n3. GOOG close 335.410004; previous 342.880005; change -2.1786%\n4. GOOGL close 339.350006; previous 346.589996; change -2.0889%\n5. GRAB close 3.54; previous 3.61; change -1.9391%\n6. ADEA close 25.23; previous 25.719999; change -1.9051%\n7. NBIS close 206.320007; previous 209.179993; change -1.3672%\n8. CORZ close 16.299999; previous 16.51; change -1.272%\n9. MSFT close 507.290009; previous 513.530029; change -1.2151%\n10. ORCL close 149.119995; previous 150.850006; change -1.1468%",
-      "author": "",
-      "symbols": [
-        "PINS",
-        "FIG",
-        "GOOG",
-        "GOOGL",
-        "GRAB",
-        "ADEA",
-        "NBIS",
-        "CORZ",
-        "MSFT",
-        "ORCL"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "losers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-08-31",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/Users/1huang/Desktop/willing capital/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "PINS",
-            "price_date": "2026-08-31",
-            "close": 21.709999,
-            "previous_close": 23.190001,
-            "change_amount": -1.480001,
-            "change_percentage": -6.3821,
-            "url": "https://finance.yahoo.com/quote/PINS"
-          },
-          {
-            "ticker": "FIG",
-            "price_date": "2026-08-31",
-            "close": 27.49,
-            "previous_close": 28.82,
-            "change_amount": -1.33,
-            "change_percentage": -4.6149,
-            "url": "https://finance.yahoo.com/quote/FIG"
-          },
-          {
-            "ticker": "GOOG",
-            "price_date": "2026-08-31",
-            "close": 335.410004,
-            "previous_close": 342.880005,
-            "change_amount": -7.470001,
-            "change_percentage": -2.1786,
-            "url": "https://finance.yahoo.com/quote/GOOG"
-          },
-          {
-            "ticker": "GOOGL",
-            "price_date": "2026-08-31",
-            "close": 339.350006,
-            "previous_close": 346.589996,
-            "change_amount": -7.23999,
-            "change_percentage": -2.0889,
-            "url": "https://finance.yahoo.com/quote/GOOGL"
-          },
-          {
-            "ticker": "GRAB",
-            "price_date": "2026-08-31",
-            "close": 3.54,
-            "previous_close": 3.61,
-            "change_amount": -0.07,
-            "change_percentage": -1.9391,
-            "url": "https://finance.yahoo.com/quote/GRAB"
-          },
-          {
-            "ticker": "ADEA",
-            "price_date": "2026-08-31",
-            "close": 25.23,
-            "previous_close": 25.719999,
-            "change_amount": -0.49,
-            "change_percentage": -1.9051,
-            "url": "https://finance.yahoo.com/quote/ADEA"
-          },
-          {
-            "ticker": "NBIS",
-            "price_date": "2026-08-31",
-            "close": 206.320007,
-            "previous_close": 209.179993,
-            "change_amount": -2.859985,
-            "change_percentage": -1.3672,
-            "url": "https://finance.yahoo.com/quote/NBIS"
-          },
-          {
-            "ticker": "CORZ",
-            "price_date": "2026-08-31",
-            "close": 16.299999,
-            "previous_close": 16.51,
-            "change_amount": -0.210001,
-            "change_percentage": -1.272,
-            "url": "https://finance.yahoo.com/quote/CORZ"
-          },
-          {
-            "ticker": "MSFT",
-            "price_date": "2026-08-31",
-            "close": 507.290009,
-            "previous_close": 513.530029,
-            "change_amount": -6.240021,
-            "change_percentage": -1.2151,
-            "url": "https://finance.yahoo.com/quote/MSFT"
-          },
-          {
-            "ticker": "ORCL",
-            "price_date": "2026-08-31",
-            "close": 149.119995,
-            "previous_close": 150.850006,
-            "change_amount": -1.730011,
-            "change_percentage": -1.1468,
-            "url": "https://finance.yahoo.com/quote/ORCL"
-          }
-        ]
-      }
-    },
-    {
-      "id": "price:445825710c5e226e83ca",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 涨幅前十 2026-08-31",
-      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
-      "published_at": "2026-08-31T20:00:00+00:00",
-      "collected_at": "2026-09-01T12:21:08.116702+00:00",
-      "body": "1. CRWD close 231.0; previous 218.399994; change 5.7692%\n2. MSTR close 132.940002; previous 127.309998; change 4.4223%\n3. PATH close 18.67; previous 18.15; change 2.865%\n4. S close 22.1; previous 21.540001; change 2.5998%\n5. NOW close 147.990005; previous 144.710007; change 2.2666%\n6. SNAP close 5.55; previous 5.43; change 2.21%\n7. TEAM close 194.169998; previous 190.414993; change 1.972%\n8. CRWV close 84.889999; previous 84.230003; change 0.7836%\n9. CRM close 257.540009; previous 256.0; change 0.6016%\n10. PLTR close 186.380005; previous 186.289993; change 0.0483%",
-      "author": "",
-      "symbols": [
-        "CRWD",
-        "MSTR",
-        "PATH",
-        "S",
-        "NOW",
-        "SNAP",
-        "TEAM",
-        "CRWV",
-        "CRM",
-        "PLTR"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "gainers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-08-31",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/Users/1huang/Desktop/willing capital/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "CRWD",
-            "price_date": "2026-08-31",
-            "close": 231.0,
-            "previous_close": 218.399994,
-            "change_amount": 12.600006,
-            "change_percentage": 5.7692,
-            "url": "https://finance.yahoo.com/quote/CRWD"
-          },
-          {
-            "ticker": "MSTR",
-            "price_date": "2026-08-31",
-            "close": 132.940002,
-            "previous_close": 127.309998,
-            "change_amount": 5.630005,
-            "change_percentage": 4.4223,
-            "url": "https://finance.yahoo.com/quote/MSTR"
-          },
-          {
-            "ticker": "PATH",
-            "price_date": "2026-08-31",
-            "close": 18.67,
-            "previous_close": 18.15,
-            "change_amount": 0.52,
-            "change_percentage": 2.865,
-            "url": "https://finance.yahoo.com/quote/PATH"
-          },
-          {
-            "ticker": "S",
-            "price_date": "2026-08-31",
-            "close": 22.1,
-            "previous_close": 21.540001,
-            "change_amount": 0.559999,
-            "change_percentage": 2.5998,
-            "url": "https://finance.yahoo.com/quote/S"
-          },
-          {
-            "ticker": "NOW",
-            "price_date": "2026-08-31",
-            "close": 147.990005,
-            "previous_close": 144.710007,
-            "change_amount": 3.279999,
-            "change_percentage": 2.2666,
-            "url": "https://finance.yahoo.com/quote/NOW"
-          },
-          {
-            "ticker": "SNAP",
-            "price_date": "2026-08-31",
-            "close": 5.55,
-            "previous_close": 5.43,
-            "change_amount": 0.12,
-            "change_percentage": 2.21,
-            "url": "https://finance.yahoo.com/quote/SNAP"
-          },
-          {
-            "ticker": "TEAM",
-            "price_date": "2026-08-31",
-            "close": 194.169998,
-            "previous_close": 190.414993,
-            "change_amount": 3.755005,
-            "change_percentage": 1.972,
-            "url": "https://finance.yahoo.com/quote/TEAM"
-          },
-          {
-            "ticker": "CRWV",
-            "price_date": "2026-08-31",
-            "close": 84.889999,
-            "previous_close": 84.230003,
-            "change_amount": 0.659996,
-            "change_percentage": 0.7836,
-            "url": "https://finance.yahoo.com/quote/CRWV"
-          },
-          {
-            "ticker": "CRM",
-            "price_date": "2026-08-31",
-            "close": 257.540009,
-            "previous_close": 256.0,
-            "change_amount": 1.540009,
-            "change_percentage": 0.6016,
-            "url": "https://finance.yahoo.com/quote/CRM"
-          },
-          {
-            "ticker": "PLTR",
-            "price_date": "2026-08-31",
-            "close": 186.380005,
-            "previous_close": 186.289993,
-            "change_amount": 0.090012,
-            "change_percentage": 0.0483,
-            "url": "https://finance.yahoo.com/quote/PLTR"
-          }
-        ]
-      }
-    },
-    {
       "id": "x:fd9923cbbb2eb6d3a781",
       "source_type": "x",
       "source_name": "@TechFundies",
@@ -4901,46 +4987,6 @@
       }
     },
     {
-      "id": "reddit:df8c97fbb4eaeb8816c9",
-      "source_type": "reddit",
-      "source_name": "r/wallstreetbets",
-      "title": "$500k on First Watch ($FWRG)",
-      "url": "https://www.reddit.com/r/wallstreetbets/comments/1w3jx5j/500k_on_first_watch_fwrg/",
-      "published_at": "2026-08-31T17:05:47+00:00",
-      "collected_at": "2026-09-01T12:19:43.977743+00:00",
-      "body": "https://preview.redd.it/a9hrdnahpqmh1.png?width=2446&format=png&auto=webp&s=3f7165c2c577634b81667690bc9b32d3b2c1eacc https://preview.redd.it/l4yk5pnipqmh1.png?width=2458&format=png&auto=webp&s=21bc1a25bc5bf05c659f811a7cb8147e5f336d5d tl;dr: -First Watch sells avocado toast and mimosas -Denny's doesn't -First Watch does more revenue in 8 hours than IHOP and Denny's do in 24, at triple the profit margin I’ve tricked myself into buying a restaurant stock, First Watch ($FWRG), and shorting IHOP and Cracker Barrel. It’s a popular breakfast chain, think IHOP/Denny’s except the food is Instagrammable: https://preview.redd.it/fmwkaccepqmh1.png?width=1766&format=png&auto=webp&s=ac8a0795eb86cd51be0a8e8ac8a50c2a2f627e3b It’s a high-quality business, profitable, customers love it. They’re at 650 restaurants now and plan to grow to 2,200 stores. It’s on sale: market cap is $760M, and they make about $75M a year which they reinvest into new stores, growing 10%+ a year. That’s a 10x multiple, very cheap for a healthy growing company. https://preview.redd.it/0xi4osgupqmh1.png?width=2042&format=png&auto=webp&s=d9b6e07d3ed40387247ebe378425561b541ee833 People Love First Watch First Watch is coming in at the #1 most loved full service restaurant brand on Yelp, and is coming in on some lists as #1 most loved employer . Anecdotally, everyone I know that has been there unanimously agrees it blows traditional breakfast places out of the water. Check out the interior: https://preview.redd.it/qhu8s3bxpqmh1.png?width=1390&format=png&auto=webp&s=8055dfa1d59d8a5d11ad93cc788586fe5a54cb34 Compare that to the dated feel of IHOP/Denny’s/Waffle House/Cracker Barrel: https://preview.redd.it/g65sddyypqmh1.png?width=1566&format=png&auto=webp&s=9857a07773a878ea3e40b7ec078e290aeac7e61d First Watch is leading a trend of stylish brunch restaurants that are going to outcompete IHOP, Denny’s, Cracker Barrel and Waffle House. The brunch sector is up 11.5% last year while traditional breakfast restaurants declined: https://preview.redd.it/p2cipsh0qqmh1.png?width=1508&format=png&auto=webp&s=0924c183d2f6e2b508ef4e5834ee3a3f4eb2969f Note this is what Cracker Barrel was trying to do. Traffic was down 7% in 2023 as customers flocked to modern concepts like First Watch. The new CEO countered by rebranding to industrial-farmhouse, copying First Watch’s exact aesthetic: https://preview.redd.it/3i2pdfc1qqmh1.png?width=932&format=png&auto=webp&s=96dcfac653b8b3a73b8ff7b130cdf1401af73dfb It was actually working, sales were up 5% in 2025. Then came the minimalist logo change where they got rid of both the cracker and the barrel, customers revolted, and they had to revert all the changes back. Cracker Barrel traffic is down 7% versus last year while the stock is up 80%. First Watch makes a ton of Money Growing up my parents owned 20 IHOPs at their peak before selling them a decade ago, anticipating the decline of sit-down restaurants in favor of fast casual. I can tell you from experience, the 24/7 diner chains were always a tough and complicated business with low profit margins, and operators today are struggling to survive after losing customers for a decade. First Watch restaurants make 10% more money in a third of the operating hours , with triple the profit margins : https://preview.redd.it/0eyjdxk3qqmh1.png?width=1022&format=png&auto=webp&s=46106fe29d682df7ef84639b8f62c1eb16074ade IHOP/Denny’s are essentially commodity restaurants, competing on price to make $3-4 profit per plate of eggs/bacon/toast. First Watch distinguishes itself through quality and style, and sells mimosas at $0.50 of ingredient cost for $9 each, and some people drink 2 or 3. This isn’t a fair competition. First Watch stores cost $1.8M to build, and the restaurants are exceeding $2.8M in revenue with an elite 35% annual return on investment and 18-20% profit margin. There’s still a long runway, it’s at 650 stores now vs 1600 Denny’s, 1800 IHOP and 2100 Waffle Houses. The NorthEast and West are still largely untouched. https://preview.redd.it/f5u51nj6qqmh1.png?width=1384&format=png&auto=webp&s=b52530c023adc7130d4584d359602126f55d898e Note that as the company scales it should also get more efficient. Look at corporate overhead as a % of revenue: First Watch is in growth mode, they are paying for store development teams, marketing teams, appropriate for a company with 1,000+ restaurants. Notice how all the growth concepts have higher overhead than the larger, mature companies. As First Watch grows this overhead should slowly decrease in size, which means profit will grow faster than revenue. https://preview.redd.it/cj3vqf09qqmh1.png?width=1998&format=png&auto=webp&s=9ffc983a24f21c87a4b78d86e4cda7314b99105e First Watch can reinvest its own profits at a high rate of return (35% annual by year 3), has a multi-decade growth runway, and has operating leverage, i.e. large and relatively fixed corporate costs. First Watch should also benefit from other economies of scale, including supply chain efficiencies and growing national brand awareness. Taken together this looks like a classic compounder setup, the kind of company that can grow 15% a year for 20 years. Brand Awareness is Growing Unaided brand awareness is up 50% on the year, and it shows on Google trends: https://preview.redd.it/6nnaux1aqqmh1.png?width=2048&format=png&auto=webp&s=774ad191e4a0e12db0d75231dca32f4e69d5aae3 What the Market Thinks Wall Street analysts agree this is undervalued, they put an average $21 price target on First Watch. A common way to measure the price of a company is EV/EBITDA, i.e. (Debt + Market Cap) / Profit. First Watch clearly sticks out as the cheapest growth stock: https://preview.redd.it/hqzpwu2bqqmh1.png?width=1568&format=png&auto=webp&s=e01418149e11cafc2f5b68f49bd1a92259e67bf1 So why is it trading cheap? Retail investors aren’t buying this because they don’t understand the accounting. Most bloggers are seeing this: https://preview.redd.it/1wdzsvjgqqmh1.png?width=1270&format=png&auto=webp&s=f9919c9b5115c33c5ba381f9d09e0cf7424513ca And this: https://preview.redd.it/j1z8gfmeqqmh1.png?width=1250&format=png&auto=webp&s=c9be6dc49955309eb978ecf0c2201bd45f0e6a91 And they say, man, great company too bad it’s trading at 47x pe with 1.1B debt, too risky for me. Both of these are wrong. Net income is distorted by building depreciation. It’s a real expense, buildings will eventually need refurbishing, but right now it greatly overstates the cash cost. Look at cash flow: https://preview.redd.it/hv0rohzhqqmh1.png?width=1268&format=png&auto=webp&s=ce9a12b3d97883ffd1784a8026031e2caa953b27 Which, yeah, free cash flow is also negative, but this is only because they have been building 50+ stores every year. If you look at Capital Expenditure it was $150M in the last 12 months. It’s not fair to add all of that back in, some of that is maintenance. We know they built 57 stores at 1.8M each last year, or $102M total, and once you add that back in you can see First Watch made roughly $80M last year . The debt also isn’t a problem. On all the stock screeners it shows $1.1B, but most of that is leases which have already been subtracted as an expense. Corporate debt is only $293M which is manageable and financed through 2029. Still, $80M < $102M, which means they borrowed $22M last year to grow faster, and $32M the year before. The interest they pay is tied to debt level and will increase as they grow faster. So it’s a good time to pump the brakes, in Q2 they announced they will slow their pace of expansion to 50 stores/year + 5 franchised in order to retain more profit. So we’re at an awkward spot where the growth slowdown has been pre-announced, it should be 10-12% annual going forward. Some growth funds that are mandated to have higher growth are being forced to sell. Value funds still need proof of multiple quarters of free cash flow before they buy in. I think it’s a great moment to buy a good company on sale while it’s being transferred between these investor bases. Also note First Watch is a former private equity company, Advent International acquired them from the original founder, doubled them in size, then ipo’d. They then dumped shares on a schedule for four straight years: https://preview.redd.it/0blx9tcjqqmh1.png?width=2048&format=png&auto=webp&s=7a688bee0c8b6336c84169fed1e719fcff116228 So between confusing accounting and five straight years of shares being dumped this stock has been a dog: The Bear Case Traffic and price data for First Watch vs casual dining sector: https://preview.redd.it/h1vq9qtkqqmh1.png?width=1596&format=png&auto=webp&s=913f716e910590897cb5a26025270f2887982139 The bears say First Watch has been increasing prices too fast. Note price has been increasing 1-2% faster than competitors for the past couple years. This is true, but remember these competitors are fighting on price for commodity bacon/eggs/toast, while First Watch has been upgrading to premium items (chimichurri steak and eggs was the special this Summer, during a beef shortage). Raising prices while taking traffic from competitors is the sign of a strong brand, not a weak one. On traffic, bears argue that new stores might be cannibalizing traffic from old stores. Management admits there’s a bit of this. When I visited a First Watch myself I noted they were building a new restaurant only a 4 minute drive from an existing one. So sure, there is some cannibalization, but this is just masking growing customer demand. Traffic has been flat for the last two years (still better than competitors), while new stores are taking traffic from existing ones. If they hadn’t built new stores, the mature stores would have shown growing traffic. There’s also competition from other brunch concepts, including Denny’s-backed Keke’s. While this may be a future problem, all of these companies are still small. First Watch has a strong opportunity to solidify itself as the go-to brand for the brunch concept before its competitors reach national size. https://preview.redd.it/5mpvrxtnqqmh1.png?width=1050&format=png&auto=webp&s=1d3119fd04b45f16fc5fbe2860e978c81cbae416 Anyways, while these are all real concerns, I’m not convinced there are real problems here. The market however is still debating these points, and wants to see clearer data. Management is telling us they’re confident in the numbers and they’re putting on an investor roadshow to convince the market. They are presenting twice in September and then an investor day on Nov. 12 where they will show the raw data on their growth plan including cannibalization, traffic, brand awareness, maintenance costs, etc. That should clear up some of the market’s concerns, and will let Wall Street build financial models and value the company. Model I went ahead and built a model ahead of time based on the data we already know. It’s got a lot going on but I think it’s fair, and all the assumptions are listed on the site. If we plug in the current operating numbers and assume a multiple of 16x we get a share price of $75 by 2031: https://preview.redd.it/vaymahtoqqmh1.png?width=1718&format=png&auto=webp&s=90b36709e9d7c265f0f3f0cfa06ebc6e2382c8be Try playing around with the model and testing different assumptions. I’m finding that even if traffic declines by 2% for five straight years while margins drop, and the multiple stays at 10x, build costs overrun and overhead barely drops, the stock should still grow 10% a year. That just goes to show how much bearishness is baked into the current stock price. I will update the model after investor day, Nov 12, and Wall Street will probably do the same and update their price targets the week after. If the numbers still look good the stock could easily go past $20 this year. Really though we don’t need the numbers to know this is a great business at a great price. First Watch is the modern concept, Cracker Barrel/IHOP/Denny’s/Waffle House are outdated. Cracker Barrel knows it, that’s why they tried to copy First Watch’s industrial-farmhouse style. Pro",
-      "author": "/u/gregw134",
-      "symbols": [
-        "FWRG",
-        "GOOGL"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "transport": "rss",
-        "listing": "dd",
-        "flair": "",
-        "requested_flair": "",
-        "requested_flairs": [
-          "DD"
-        ],
-        "sort": "top",
-        "time_filter": "day",
-        "feed_rank": 1,
-        "image_urls": [
-          "https://external-preview.redd.it/jNoLqevcmruS5upvkZxvyDqgGRBMg1yIh6iNIBZDmko.jpeg?width=140&height=88&auto=webp&s=93a16093202c533dd058f511b3c9f2943aefbbd8"
-        ],
-        "images": [
-          {
-            "url": "https://external-preview.redd.it/jNoLqevcmruS5upvkZxvyDqgGRBMg1yIh6iNIBZDmko.jpeg?width=140&height=88&auto=webp&s=93a16093202c533dd058f511b3c9f2943aefbbd8",
-            "path": "data/media/reddit/reddit-image-reddit-df8c97fbb4eaeb8816c9-1.jpeg",
-            "mime_type": "image/jpeg",
-            "bytes": 5950
-          }
-        ]
-      }
-    },
-    {
       "id": "x:9c007735f92cdb5f66eb",
       "source_type": "x",
       "source_name": "@ClementDelangue",
@@ -5172,35 +5218,6 @@
         "investor_type": "technology_investor",
         "coverage": "technology and AI equity ideas",
         "engagement_score": 37
-      }
-    },
-    {
-      "id": "reddit:731801d139eb0a868484",
-      "source_type": "reddit",
-      "source_name": "r/SecurityAnalysis",
-      "title": "Hypergrowth at a Value-Stock Price",
-      "url": "https://www.reddit.com/r/SecurityAnalysis/comments/1w3hvvd/hypergrowth_at_a_valuestock_price/",
-      "published_at": "2026-08-31T15:55:38+00:00",
-      "collected_at": "2026-09-01T12:20:13.361690+00:00",
-      "body": "Substack writeup on Sigenergy (free to read) submitted by /u/Aditi96 [link] [comments]",
-      "author": "/u/Aditi96",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "transport": "rss",
-        "listing": "thesis",
-        "flair": "",
-        "requested_flair": "",
-        "requested_flairs": [
-          "Thesis",
-          "Short Thesis"
-        ],
-        "sort": "top",
-        "time_filter": "day",
-        "feed_rank": 1,
-        "image_urls": [],
-        "images": []
       }
     }
   ]
