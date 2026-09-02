@@ -4,7 +4,12 @@ from zoneinfo import ZoneInfo
 import httpx
 import respx
 
-from idea_research.pipelines.substack import collect_substack, parse_substack_archive, parse_substack_feed
+from idea_research.pipelines.substack import (
+    collect_substack,
+    parse_reader_feed_index,
+    parse_substack_archive,
+    parse_substack_feed,
+)
 
 
 FEED = """<?xml version="1.0"?>
@@ -130,3 +135,14 @@ def test_collect_substack_falls_back_to_public_archive_api():
     assert result.status == "ok"
     assert [item.title for item in result.items] == ["Fallback post"]
     assert "archive API fallback used" in result.notes[0]
+
+
+def test_parse_reader_feed_index_keeps_original_url_and_date():
+    markdown = """Markdown Content:
+[https://example.substack.com/p/test](https://example.substack.com/p/test)
+
+Tue, 02 Sep 2026 01:02:03 GMT
+"""
+    assert parse_reader_feed_index(markdown) == [
+        ("https://example.substack.com/p/test", "2026-09-02T01:02:03+00:00")
+    ]

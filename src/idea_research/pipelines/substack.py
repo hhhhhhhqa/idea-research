@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
+import re
 from typing import Any
 from urllib.parse import urljoin, urlparse
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
@@ -10,6 +12,9 @@ import httpx
 
 from ..models import PipelineResult, SignalItem
 from .common import clean_html, iso_datetime, stable_id, within_lookback
+
+
+JINA_LINK_RE = re.compile(r"^\[(https?://[^\]]+)\]\((https?://[^)]+)\)\s*$")
 
 
 def _feed_url(publication: dict[str, Any]) -> str:
@@ -82,6 +87,82 @@ def parse_substack_archive(
                     "publication_platform": publication.get("platform", "substack"),
                     "section": str(publication.get("section") or "transaction_ideas"),
                     "transport": "substack_archive_api",
+                },
+            )
+        )
+        if max_items is not None and len(items) >= max_items:
+            break
+    return items
+
+
+def parse_reader_feed_index(markdown: str) -> list[tuple[str, str]]:
+    """Extract original post URLs and RSS dates from a reader-rendered feed."""
+    lines = markdown.splitlines()
+    entries: list[tuple[str, str]] = []
+    for index, raw_line in enumerate(lines):
+        match = JINA_LINK_RE.match(raw_line.strip())
+        if not match or match.group(1) != match.group(2) or "/p/" not in match.group(1):
+            continue
+        for following in lines[index + 1 : index + 4]:
+            value = following.strip()
+            if not value:
+                continue
+            try:
+                published = parsedate_to_datetime(value).astimezone(timezone.utc).isoformat()
+            except (TypeError, ValueError):
+                break
+            entries.append((match.group(1), published))
+            break
+    return entries
+
+
+def _reader_items(
+    client: httpx.Client,
+    publication: dict[str, Any],
+    *,
+    now: datetime,
+    lookback_hours: int,
+    max_items: int | None,
+    same_day: bool,
+    day_timezone: ZoneInfo | timezone,
+) -> list[SignalItem]:
+    feed_url = _feed_url(publication)
+    index_response = client.get(f"https://r.jina.ai/{feed_url}")
+    index_response.raise_for_status()
+    entries = parse_reader_feed_index(index_response.text)
+    if not entries:
+        raise ValueError("public reader returned no feed entries")
+    items: list[SignalItem] = []
+    collected_at = now.isoformat()
+    for link, published in entries:
+        if same_day and not _same_collection_day(published, now, day_timezone):
+            continue
+        if not same_day and not within_lookback(published, lookback_hours, now):
+            continue
+        article_response = client.get(f"https://r.jina.ai/{link}")
+        article_response.raise_for_status()
+        header, _, body = article_response.text.partition("Markdown Content:")
+        title = ""
+        for line in header.splitlines():
+            if line.startswith("Title:"):
+                title = line.removeprefix("Title:").strip()
+                break
+        items.append(
+            SignalItem(
+                id=stable_id(str(publication.get("source_type") or "substack"), link),
+                source_type=str(publication.get("source_type") or "substack"),
+                source_name=str(publication.get("name") or publication.get("url")),
+                title=title or link.rstrip("/").rsplit("/", 1)[-1],
+                url=link,
+                published_at=published,
+                collected_at=collected_at,
+                body=body.strip(),
+                author=str(publication.get("author") or ""),
+                metadata={
+                    "publication_url": publication.get("url", ""),
+                    "publication_platform": publication.get("platform", "substack"),
+                    "section": str(publication.get("section") or "transaction_ideas"),
+                    "transport": "public_reader_fallback",
                 },
             )
         )
@@ -188,20 +269,31 @@ def collect_substack(config: dict[str, Any], client: httpx.Client | None = None)
                 except Exception as rss_exc:
                     if str(publication.get("platform") or "substack") != "substack":
                         raise
-                    archive_limit = max(20, max_items or 0)
-                    archive_response = client.get(_archive_url(publication, archive_limit))
-                    archive_response.raise_for_status()
-                    items = parse_substack_archive(
-                        archive_response.json(),
-                        publication,
-                        lookback_hours=lookback_hours,
-                        max_items=max_items,
-                        same_day=same_day,
-                        day_timezone=day_timezone,
-                    )
-                    result.notes.append(
-                        f"{publication.get('name') or publication.get('url')}: archive API fallback used after RSS={rss_exc}"
-                    )
+                    try:
+                        archive_limit = max(20, max_items or 0)
+                        archive_response = client.get(_archive_url(publication, archive_limit))
+                        archive_response.raise_for_status()
+                        items = parse_substack_archive(
+                            archive_response.json(),
+                            publication,
+                            lookback_hours=lookback_hours,
+                            max_items=max_items,
+                            same_day=same_day,
+                            day_timezone=day_timezone,
+                        )
+                        transport = "archive API"
+                    except Exception:
+                        items = _reader_items(
+                            client,
+                            publication,
+                            now=datetime.now(timezone.utc),
+                            lookback_hours=lookback_hours,
+                            max_items=max_items,
+                            same_day=same_day,
+                            day_timezone=day_timezone,
+                        )
+                        transport = "public reader"
+                    result.notes.append(f"{publication.get('name') or publication.get('url')}: {transport} fallback used")
                 result.items.extend(items)
             except Exception as exc:  # one publication must not erase the others
                 result.errors.append(f"{publication.get('name') or publication.get('url')}: {exc}")

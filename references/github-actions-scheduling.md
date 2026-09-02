@@ -23,6 +23,12 @@ The workflow never commits `.env`, the twscrape database, FMP checkpoint, report
 contexts, or delivery state. Its built-in `GITHUB_TOKEN` has only repository
 contents write permission.
 
+Some Substack domains reject GitHub datacenter IPs. The collector first tries
+the original RSS and Substack archive API, then may use a public reader as a
+transport-only fallback. Only the public source URL is sent; credentials are
+never sent, and every item retains its original Substack link plus a transport
+marker in metadata.
+
 Required repository Actions Secrets:
 
 - `TWITTER_COOKIES`
