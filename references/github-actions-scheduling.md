@@ -1,14 +1,14 @@
-# GitHub Actions 07:00 feed publishing
+# cron-job.org 07:00 external trigger
 
 This is the default unattended central-maintainer runtime when no always-on
-computer is available. It uses a GitHub-hosted runner and does not require the
-maintainer's Mac to be awake.
+computer is available. cron-job.org owns the schedule and calls GitHub's
+`workflow_dispatch` API; the GitHub-hosted runner only executes the collection.
+The maintainer's Mac does not need to be awake.
 
-The workflow at `.github/workflows/daily-feed.yml` starts at 06:30
-Asia/Shanghai (`22:30 UTC`). The non-X feed normally publishes within a few
-minutes, while the lead time gives the separately rate-limited X phase room to
-finish near 07:00. Scheduled runs are not guaranteed to start at the exact
-second.
+The cron job runs every day at 07:00 in `Asia/Hong_Kong` (the same UTC offset as
+`Asia/Shanghai`). The workflow at `.github/workflows/daily-feed.yml` contains no
+GitHub `schedule`; it starts only through `workflow_dispatch` from cron-job.org
+or a manual invocation.
 
 Each run has two ordered jobs:
 
@@ -34,6 +34,21 @@ Required repository Actions Secrets:
 - `TWITTER_COOKIES`
 - `TWITTER_COOKIES_2`
 
+Create the cron-job.org job with:
+
+- URL: `https://api.github.com/repos/hhhhhhhqa/idea-research/actions/workflows/daily-feed.yml/dispatches`
+- Method: `POST`
+- Time zone: `Asia/Hong_Kong`
+- Schedule: every day at `07:00`
+- Body: `{"ref":"main","inputs":{"run_x":true}}`
+- Headers: `Accept: application/vnd.github+json`, `Content-Type: application/json`,
+  `Authorization: Bearer <FINE_GRAINED_PAT>`, and
+  `X-GitHub-Api-Version: 2026-03-10`
+
+Use a fine-grained GitHub token restricted to this repository with repository
+`Actions: Read and write`. Keep the token only in cron-job.org, never in this
+repository. A successful test returns HTTP 200 and creates a workflow run.
+
 Run it manually from GitHub's Actions page or with:
 
 ```bash
@@ -41,7 +56,7 @@ gh workflow run daily-feed.yml -f run_x=true
 gh run list --workflow daily-feed.yml --limit 5
 ```
 
-To validate only the fast/public phase, set `run_x=false`. The scheduled run
-always includes X. Cookie sessions expire periodically; replace the two Actions
+To validate only the fast/public phase, set `run_x=false`. The configured cron
+request includes X. Cookie sessions expire periodically; replace the two Actions
 Secrets from a currently logged-in browser when the X job reports that no
 cookie account is active.
