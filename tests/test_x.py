@@ -160,6 +160,14 @@ def test_twscrape_wait_timeout_can_be_bounded_for_hosted_jobs(monkeypatch):
     assert xmod._twscrape_wait_timeout({}) is None
 
 
+def test_rolling_x_collection_stops_before_lookback():
+    import idea_research.pipelines.x as xmod
+
+    now = datetime(2026, 9, 2, 12, tzinfo=timezone.utc)
+    assert xmod._before_lookback("2026-09-01T11:59:59+00:00", now, 24) is True
+    assert xmod._before_lookback("2026-09-01T12:00:00+00:00", now, 24) is False
+
+
 def test_collect_x_needs_credentials(monkeypatch):
     monkeypatch.delenv("TWITTER_COOKIES", raising=False)
     monkeypatch.delenv("X_BEARER_TOKEN", raising=False)

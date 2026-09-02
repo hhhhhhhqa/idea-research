@@ -93,6 +93,13 @@ def _before_collection_day(value: Any, now: datetime, day_timezone: ZoneInfo | t
     return parsed.astimezone(day_timezone).date() < now.astimezone(day_timezone).date()
 
 
+def _before_lookback(value: Any, now: datetime, lookback_hours: int) -> bool:
+    parsed = _parsed_datetime(value)
+    if parsed is None:
+        return False
+    return parsed.astimezone(timezone.utc) < now.astimezone(timezone.utc) - timedelta(hours=lookback_hours)
+
+
 def _day_start(now: datetime, day_timezone: ZoneInfo | timezone) -> datetime:
     local_now = now.astimezone(day_timezone)
     return datetime.combine(local_now.date(), datetime.min.time(), tzinfo=day_timezone).astimezone(timezone.utc)
@@ -514,7 +521,11 @@ def _collect_twitter_via_twscrape(
                 ) as stream:
                     async for tweet in stream:
                         tweets.append(tweet)
-                        if same_day and _before_collection_day(getattr(tweet, "date", None), now, day_timezone):
+                        tweet_date = getattr(tweet, "date", None)
+                        if same_day:
+                            if _before_collection_day(tweet_date, now, day_timezone):
+                                break
+                        elif _before_lookback(tweet_date, now, lookback):
                             break
             except Exception as exc:
                 errors.append(f"@{handle}: {exc}")

@@ -31,13 +31,13 @@ jobs:
     timeout-minutes: 60
     steps:
       - name: Check out current main branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: main
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
           cache: pip
@@ -94,13 +94,13 @@ jobs:
       TWSCRAPE_WAIT_TIMEOUT_SECONDS: "300"
     steps:
       - name: Check out feed after non-X publish
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: main
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
           cache: pip
