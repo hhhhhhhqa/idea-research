@@ -853,4 +853,6 @@ prices:
   retention_trading_days: 3
   history_days: 5
   download_chunk_size: 50
+  # Ignore a just-opened/partially published Yahoo date until most pool closes exist.
+  minimum_date_coverage_ratio: 0.8
   top_n: 10

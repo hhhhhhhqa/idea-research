@@ -1,7 +1,16 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-04T00:19:21.648706+00:00",
+  "generated_at": "2026-09-04T02:30:21.747166+00:00",
   "pipelines": [
+    {
+      "pipeline": "prices",
+      "status": "ok",
+      "item_count": 2,
+      "errors": [],
+      "notes": [
+        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /Users/1huang/Desktop/willing capital/idea-research/data/prices/rolling_prices.json"
+      ]
+    },
     {
       "pipeline": "x",
       "status": "ok",
@@ -166,15 +175,6 @@
       "notes": [
         "r/wallstreetbets: anonymous dd RSS transport used",
         "r/SecurityAnalysis: anonymous thesis RSS transport used"
-      ]
-    },
-    {
-      "pipeline": "prices",
-      "status": "ok",
-      "item_count": 2,
-      "errors": [],
-      "notes": [
-        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json"
       ]
     }
   ],
@@ -2123,11 +2123,20 @@
       "title": "SaaS / software / Internet 涨幅前十 2026-09-03",
       "url": "https://finance.yahoo.com/markets/stocks/gainers/",
       "published_at": "2026-09-03T20:00:00+00:00",
-      "collected_at": "2026-09-04T00:03:02.779200+00:00",
-      "body": "1. ADEA close 25.469999; previous 24.98; change 1.9616%",
+      "collected_at": "2026-09-04T02:30:21.717581+00:00",
+      "body": "1. MSTR close 144.820007; previous 123.190002; change 17.5582%\n2. SNOW close 356.470001; previous 305.839996; change 16.5544%\n3. BLSH close 36.220001; previous 32.639999; change 10.9681%\n4. RXT close 3.29; previous 3.01; change 9.3023%\n5. SECZ close 7.1; previous 6.51; change 9.063%\n6. PLTR close 182.529999; previous 169.460007; change 7.7127%\n7. PAYP close 16.93; previous 15.73; change 7.6287%\n8. ZETA close 32.68; previous 30.440001; change 7.3587%\n9. ESTC close 96.129997; previous 89.580002; change 7.3119%\n10. NOW close 145.589996; previous 136.720001; change 6.4877%",
       "author": "",
       "symbols": [
-        "ADEA"
+        "MSTR",
+        "SNOW",
+        "BLSH",
+        "RXT",
+        "SECZ",
+        "PLTR",
+        "PAYP",
+        "ZETA",
+        "ESTC",
+        "NOW"
       ],
       "engagement": {},
       "metadata": {
@@ -2137,16 +2146,97 @@
         "price_date": "2026-09-03",
         "comparison": "current close vs previous stored trading-day close",
         "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "rolling_prices_path": "/Users/1huang/Desktop/willing capital/idea-research/data/prices/rolling_prices.json",
         "records": [
           {
-            "ticker": "ADEA",
+            "ticker": "MSTR",
             "price_date": "2026-09-03",
-            "close": 25.469999,
-            "previous_close": 24.98,
-            "change_amount": 0.49,
-            "change_percentage": 1.9616,
-            "url": "https://finance.yahoo.com/quote/ADEA"
+            "close": 144.820007,
+            "previous_close": 123.190002,
+            "change_amount": 21.630005,
+            "change_percentage": 17.5582,
+            "url": "https://finance.yahoo.com/quote/MSTR"
+          },
+          {
+            "ticker": "SNOW",
+            "price_date": "2026-09-03",
+            "close": 356.470001,
+            "previous_close": 305.839996,
+            "change_amount": 50.630005,
+            "change_percentage": 16.5544,
+            "url": "https://finance.yahoo.com/quote/SNOW"
+          },
+          {
+            "ticker": "BLSH",
+            "price_date": "2026-09-03",
+            "close": 36.220001,
+            "previous_close": 32.639999,
+            "change_amount": 3.580002,
+            "change_percentage": 10.9681,
+            "url": "https://finance.yahoo.com/quote/BLSH"
+          },
+          {
+            "ticker": "RXT",
+            "price_date": "2026-09-03",
+            "close": 3.29,
+            "previous_close": 3.01,
+            "change_amount": 0.28,
+            "change_percentage": 9.3023,
+            "url": "https://finance.yahoo.com/quote/RXT"
+          },
+          {
+            "ticker": "SECZ",
+            "price_date": "2026-09-03",
+            "close": 7.1,
+            "previous_close": 6.51,
+            "change_amount": 0.59,
+            "change_percentage": 9.063,
+            "url": "https://finance.yahoo.com/quote/SECZ"
+          },
+          {
+            "ticker": "PLTR",
+            "price_date": "2026-09-03",
+            "close": 182.529999,
+            "previous_close": 169.460007,
+            "change_amount": 13.069992,
+            "change_percentage": 7.7127,
+            "url": "https://finance.yahoo.com/quote/PLTR"
+          },
+          {
+            "ticker": "PAYP",
+            "price_date": "2026-09-03",
+            "close": 16.93,
+            "previous_close": 15.73,
+            "change_amount": 1.200001,
+            "change_percentage": 7.6287,
+            "url": "https://finance.yahoo.com/quote/PAYP"
+          },
+          {
+            "ticker": "ZETA",
+            "price_date": "2026-09-03",
+            "close": 32.68,
+            "previous_close": 30.440001,
+            "change_amount": 2.24,
+            "change_percentage": 7.3587,
+            "url": "https://finance.yahoo.com/quote/ZETA"
+          },
+          {
+            "ticker": "ESTC",
+            "price_date": "2026-09-03",
+            "close": 96.129997,
+            "previous_close": 89.580002,
+            "change_amount": 6.549995,
+            "change_percentage": 7.3119,
+            "url": "https://finance.yahoo.com/quote/ESTC"
+          },
+          {
+            "ticker": "NOW",
+            "price_date": "2026-09-03",
+            "close": 145.589996,
+            "previous_close": 136.720001,
+            "change_amount": 8.869995,
+            "change_percentage": 6.4877,
+            "url": "https://finance.yahoo.com/quote/NOW"
           }
         ]
       }
@@ -2158,11 +2248,20 @@
       "title": "SaaS / software / Internet 跌幅前十 2026-09-03",
       "url": "https://finance.yahoo.com/markets/stocks/losers/",
       "published_at": "2026-09-03T20:00:00+00:00",
-      "collected_at": "2026-09-04T00:03:02.779200+00:00",
-      "body": "1. ADEA close 25.469999; previous 24.98; change 1.9616%",
+      "collected_at": "2026-09-04T02:30:21.717581+00:00",
+      "body": "1. CXM close 6.24; previous 6.95; change -10.2158%\n2. MOMO close 5.1; previous 5.485; change -7.0191%\n3. WIX close 81.199997; previous 86.690002; change -6.3329%\n4. GRAB close 3.42; previous 3.53; change -3.1161%\n5. BZ close 16.84; previous 17.299999; change -2.659%\n6. MAX close 12.22; previous 12.53; change -2.4741%\n7. TME close 8.2; previous 8.39; change -2.2646%\n8. WBTN close 9.99; previous 10.2; change -2.0588%\n9. NYAX close 52.68; previous 53.75; change -1.9907%\n10. FIG close 25.219999; previous 25.73; change -1.9821%",
       "author": "",
       "symbols": [
-        "ADEA"
+        "CXM",
+        "MOMO",
+        "WIX",
+        "GRAB",
+        "BZ",
+        "MAX",
+        "TME",
+        "WBTN",
+        "NYAX",
+        "FIG"
       ],
       "engagement": {},
       "metadata": {
@@ -2172,16 +2271,97 @@
         "price_date": "2026-09-03",
         "comparison": "current close vs previous stored trading-day close",
         "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "rolling_prices_path": "/Users/1huang/Desktop/willing capital/idea-research/data/prices/rolling_prices.json",
         "records": [
           {
-            "ticker": "ADEA",
+            "ticker": "CXM",
             "price_date": "2026-09-03",
-            "close": 25.469999,
-            "previous_close": 24.98,
-            "change_amount": 0.49,
-            "change_percentage": 1.9616,
-            "url": "https://finance.yahoo.com/quote/ADEA"
+            "close": 6.24,
+            "previous_close": 6.95,
+            "change_amount": -0.71,
+            "change_percentage": -10.2158,
+            "url": "https://finance.yahoo.com/quote/CXM"
+          },
+          {
+            "ticker": "MOMO",
+            "price_date": "2026-09-03",
+            "close": 5.1,
+            "previous_close": 5.485,
+            "change_amount": -0.385,
+            "change_percentage": -7.0191,
+            "url": "https://finance.yahoo.com/quote/MOMO"
+          },
+          {
+            "ticker": "WIX",
+            "price_date": "2026-09-03",
+            "close": 81.199997,
+            "previous_close": 86.690002,
+            "change_amount": -5.490005,
+            "change_percentage": -6.3329,
+            "url": "https://finance.yahoo.com/quote/WIX"
+          },
+          {
+            "ticker": "GRAB",
+            "price_date": "2026-09-03",
+            "close": 3.42,
+            "previous_close": 3.53,
+            "change_amount": -0.11,
+            "change_percentage": -3.1161,
+            "url": "https://finance.yahoo.com/quote/GRAB"
+          },
+          {
+            "ticker": "BZ",
+            "price_date": "2026-09-03",
+            "close": 16.84,
+            "previous_close": 17.299999,
+            "change_amount": -0.459999,
+            "change_percentage": -2.659,
+            "url": "https://finance.yahoo.com/quote/BZ"
+          },
+          {
+            "ticker": "MAX",
+            "price_date": "2026-09-03",
+            "close": 12.22,
+            "previous_close": 12.53,
+            "change_amount": -0.309999,
+            "change_percentage": -2.4741,
+            "url": "https://finance.yahoo.com/quote/MAX"
+          },
+          {
+            "ticker": "TME",
+            "price_date": "2026-09-03",
+            "close": 8.2,
+            "previous_close": 8.39,
+            "change_amount": -0.190001,
+            "change_percentage": -2.2646,
+            "url": "https://finance.yahoo.com/quote/TME"
+          },
+          {
+            "ticker": "WBTN",
+            "price_date": "2026-09-03",
+            "close": 9.99,
+            "previous_close": 10.2,
+            "change_amount": -0.21,
+            "change_percentage": -2.0588,
+            "url": "https://finance.yahoo.com/quote/WBTN"
+          },
+          {
+            "ticker": "NYAX",
+            "price_date": "2026-09-03",
+            "close": 52.68,
+            "previous_close": 53.75,
+            "change_amount": -1.07,
+            "change_percentage": -1.9907,
+            "url": "https://finance.yahoo.com/quote/NYAX"
+          },
+          {
+            "ticker": "FIG",
+            "price_date": "2026-09-03",
+            "close": 25.219999,
+            "previous_close": 25.73,
+            "change_amount": -0.51,
+            "change_percentage": -1.9821,
+            "url": "https://finance.yahoo.com/quote/FIG"
           }
         ]
       }

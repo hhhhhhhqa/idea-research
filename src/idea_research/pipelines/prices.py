@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import math
 import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
@@ -121,8 +122,9 @@ def merge_rolling_prices(
     *,
     allowed_tickers: set[str],
     retention_days: int = 3,
+    minimum_date_coverage_ratio: float = 0.0,
 ) -> dict[str, Any]:
-    """Merge new closes and retain only the latest N trading-date buckets."""
+    """Merge closes and retain the latest N sufficiently complete trading dates."""
     prices = existing.get("prices") if isinstance(existing, dict) else {}
     prices = dict(prices) if isinstance(prices, dict) else {}
     for date, values in observations.items():
@@ -142,6 +144,10 @@ def merge_rolling_prices(
         for date, values in prices.items()
         if isinstance(values, dict)
     }
+    coverage_ratio = min(1.0, max(0.0, float(minimum_date_coverage_ratio)))
+    if allowed_tickers and coverage_ratio:
+        minimum_count = max(1, math.ceil(len(allowed_tickers) * coverage_ratio))
+        prices = {date: values for date, values in prices.items() if len(values) >= minimum_count}
     dates = sorted(prices)[-max(1, retention_days) :]
     prices = {date: prices[date] for date in dates}
     return {
@@ -265,6 +271,9 @@ def collect_prices(config: dict[str, Any], client: Any | None = None) -> Pipelin
 
     history_days = max(3, int(config.get("history_days", 5)))
     retention_days = max(1, int(config.get("retention_trading_days", 3)))
+    minimum_date_coverage_ratio = min(
+        1.0, max(0.0, float(config.get("minimum_date_coverage_ratio", 0.8)))
+    )
     top_n = max(1, int(config.get("top_n", 10)))
     observations, errors = download_close_observations(
         tickers,
@@ -282,6 +291,7 @@ def collect_prices(config: dict[str, Any], client: Any | None = None) -> Pipelin
         observations,
         allowed_tickers=set(tickers),
         retention_days=retention_days,
+        minimum_date_coverage_ratio=minimum_date_coverage_ratio,
     )
     _atomic_json(rolling_path, rolling)
     price_date, gainers, losers = calculate_daily_movers(rolling, top_n=top_n)
@@ -308,6 +318,15 @@ def collect_prices(config: dict[str, Any], client: Any | None = None) -> Pipelin
         f"Yahoo Finance EOD closes collected for {len(tickers)} SaaS/software/Internet tickers; "
         f"rolling state keeps {len(rolling['dates'])} trading day(s) at {rolling_path}"
     )
+    latest_observed_date = max(observations)
+    latest_observed_count = len(observations[latest_observed_date])
+    if price_date and latest_observed_date > price_date:
+        result.status = "partial"
+        result.notes.append(
+            f"Ignored incomplete Yahoo EOD date {latest_observed_date}: "
+            f"{latest_observed_count}/{len(tickers)} ticker closes available; "
+            f"latest sufficiently complete date is {price_date}."
+        )
     today_et = datetime.now(NEW_YORK).date().isoformat()
     if price_date and price_date < today_et:
         result.notes.append(
