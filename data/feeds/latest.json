@@ -1,7 +1,44 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-03T00:19:42.041160+00:00",
+  "generated_at": "2026-09-04T00:03:02.790923+00:00",
   "pipelines": [
+    {
+      "pipeline": "substack",
+      "status": "partial",
+      "item_count": 4,
+      "errors": [
+        "Software Stack Investing: Server error '503 Service Unavailable' for url 'https://softwarestackinvesting.com/feed/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503"
+      ],
+      "notes": [
+        "Clouded Judgement: public reader fallback used",
+        "MBI Deep Dives: public reader fallback used",
+        "Aspiring for Intelligence: public reader fallback used",
+        "Chips Ahoy Capital: public reader fallback used",
+        "Meritech Software Pulse: public reader fallback used",
+        "Outspoken Geek: public reader fallback used",
+        "New Moon Cap: public reader fallback used",
+        "Outlier Cap: public reader fallback used"
+      ]
+    },
+    {
+      "pipeline": "reddit",
+      "status": "ok",
+      "item_count": 0,
+      "errors": [],
+      "notes": [
+        "r/wallstreetbets: anonymous dd RSS transport used",
+        "r/SecurityAnalysis: anonymous thesis RSS transport used"
+      ]
+    },
+    {
+      "pipeline": "prices",
+      "status": "ok",
+      "item_count": 2,
+      "errors": [],
+      "notes": [
+        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json"
+      ]
+    },
     {
       "pipeline": "x",
       "status": "ok",
@@ -139,54 +176,160 @@
         "@kuncheng: 0 tweet(s) via twscrape",
         "Linked articles: 15 article(s) stored; 82 unavailable or skipped"
       ]
-    },
-    {
-      "pipeline": "substack",
-      "status": "partial",
-      "item_count": 4,
-      "errors": [
-        "Software Stack Investing: The read operation timed out"
-      ],
-      "notes": [
-        "Clouded Judgement: public reader fallback used",
-        "MBI Deep Dives: public reader fallback used",
-        "Aspiring for Intelligence: public reader fallback used",
-        "Chips Ahoy Capital: public reader fallback used",
-        "Meritech Software Pulse: public reader fallback used",
-        "Outspoken Geek: public reader fallback used",
-        "New Moon Cap: public reader fallback used",
-        "Outlier Cap: public reader fallback used"
-      ]
-    },
-    {
-      "pipeline": "reddit",
-      "status": "ok",
-      "item_count": 0,
-      "errors": [],
-      "notes": [
-        "r/wallstreetbets: anonymous dd RSS transport used",
-        "r/SecurityAnalysis: anonymous thesis RSS transport used"
-      ]
-    },
-    {
-      "pipeline": "prices",
-      "status": "ok",
-      "item_count": 2,
-      "errors": [],
-      "notes": [
-        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json"
-      ]
     }
   ],
   "counts": {
-    "total": 616,
-    "substack": 9,
-    "rss": 3,
+    "total": 619,
+    "substack": 13,
+    "rss": 2,
     "reddit": 0,
     "x": 602,
     "price": 2
   },
   "items": [
+    {
+      "id": "substack:a69c2848b34f1245ec5c",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "GPT-6 Astra: an automated AI Engineer you can hire for <$6 an hour",
+      "url": "https://www.latent.space/p/astra",
+      "published_at": "2026-09-03T21:09:41+00:00",
+      "collected_at": "2026-09-04T00:00:42.271983+00:00",
+      "body": "GPT-6 Astra , the first Stargate and lightly looped supermodel from OpenAI, launched today , cleanly beating Fable 5.1 on many metrics including completely saturating the hardest versions of FrontierMath (97.6%) and ARC-AGI-3 (99.9%). Lots of demos will focus on typical talk tracks like the computer use to the Pokemon playing to Blender to the scientific and cybersafety benchmarks ( system card ). Greg says AGI is here , and Jakub says it is finally the Automated AI Research Intern he wanted. We aren’t qualified to talk about those, but we got early access and threw it at every practical, real-life task we could think of. After burning over 20B tokens of Astra , we can confirm the most surprising finding: GPT-6 Astra is one of a new class of models 1 that are fully capable AI Engineers in their own right . They now help you choose and train models , label data (both helping you label and then using your labels for active learning, like SAM ), keep pipelines saturated , instrument and read logs , deploy and debug entire systems in one shot, fan out and command and eval subagents (including agents running other models), and keep coherence over billions of tokens of a single agent thread. Raising Your Ambitions We’ve written before about the high-return activity of raising your aspirations for LLMs . Our experience has made us exponentially more ambitious than we have ever been . Over the past month, we went from prompting humans for a fun “ Kill My SaaS ” competition 2 , to building a dozen internal/personal tools , including 4 previously paid SaaS tools , fully redesigned my personal site , made an incomplete but functional replacement of GitHub + Vercel , trained game AI for a strategy board game with 10,000x more legal moves than Go , saved tens of thousands of dollars in personal finance cleanups, republished my old book with synced audiobook audio and printed physical editions, and even more ambitious projects we will launch soon. The $6 an hour number might sound surprising, but that’s exactly what we saw in our testing - 33 tokens per second at a max $50 per million token rate. Given that Astra is more token efficient than Sol and Fable ( independently confirmed by Artificial Analysis ), it often means that Astra is simultaneously also the best fast-and-smart model you can buy (assuming our preview latency holds for GA), outside of Spark 1.3 . our logs Managing fleets of subagents (individually tweaked, bounded concurrency) Now of course, if you just throw on Astra at Ultra you’re gonna burn through a lot more than $6 per hour…. because it is so dang good at parallelizing. Monitoring its own runs, starting and stopping waves This is basically what i’d pay a junior AI Engineer to do. and I spent about $100 over 2 days to do this. Making model benchmarks, handling money, making estimates, scaling up runs, getting human ratings Wild. example here We are out of time for this writeup, will complete this later, so if you are reading this on email, check back at the end of the day. However the overall conclusion you should have is that OpenAI have clearly trained a model that is capable of automating much of their own AI Engineering, and it is finally time that you learn to exploit Astra- and Fable-class models and be far, far more unreasonable . 1 We are running similar work on Grok, Fable and other similar frontier models but OpenAI was most generous with trial limits so this gets the writeup - but the agentic coding patterns discussed here will likely apply to all such late 2026 frontier models. 2 Many of you are waiting to hear results… sorry for the radio silence! we got… busy! We will announce winners and reimbursements and best attempts.",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "price:7c9a518ee547224e12a2",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 涨幅前十 2026-09-03",
+      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
+      "published_at": "2026-09-03T20:00:00+00:00",
+      "collected_at": "2026-09-04T00:03:02.779200+00:00",
+      "body": "1. ADEA close 25.469999; previous 24.98; change 1.9616%",
+      "author": "",
+      "symbols": [
+        "ADEA"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "gainers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-09-03",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "ADEA",
+            "price_date": "2026-09-03",
+            "close": 25.469999,
+            "previous_close": 24.98,
+            "change_amount": 0.49,
+            "change_percentage": 1.9616,
+            "url": "https://finance.yahoo.com/quote/ADEA"
+          }
+        ]
+      }
+    },
+    {
+      "id": "price:382f689eb5265daa8747",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 跌幅前十 2026-09-03",
+      "url": "https://finance.yahoo.com/markets/stocks/losers/",
+      "published_at": "2026-09-03T20:00:00+00:00",
+      "collected_at": "2026-09-04T00:03:02.779200+00:00",
+      "body": "1. ADEA close 25.469999; previous 24.98; change 1.9616%",
+      "author": "",
+      "symbols": [
+        "ADEA"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "losers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-09-03",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "ADEA",
+            "price_date": "2026-09-03",
+            "close": 25.469999,
+            "previous_close": 24.98,
+            "change_amount": 0.49,
+            "change_percentage": 1.9616,
+            "url": "https://finance.yahoo.com/quote/ADEA"
+          }
+        ]
+      }
+    },
+    {
+      "id": "substack:7c670147f883b565d0ca",
+      "source_type": "substack",
+      "source_name": "Outlier Cap",
+      "title": "I've Just Bought a Rare Window. It Won't Stay at This Price.",
+      "url": "https://outliercapx.substack.com/p/ive-just-bought-a-rare-window-it",
+      "published_at": "2026-09-03T12:45:50+00:00",
+      "collected_at": "2026-09-04T00:01:20.144023+00:00",
+      "body": "**Credo** is no longer a copper-cable specialist that got lucky with Amazon. It has become one of the few Nasdaq-listed ways to own the **system that keeps an AI cluster from falling over** — Active Electrical Cables, optical DSPs, silicon-photonics PICs, ZeroFlap modules, retimers, and a telemetry stack — at the exact moment hyperscalers discovered that bandwidth without uptime is just a more expensive way to idle GPUs.\n\n[![Image 1](https://substackcdn.com/image/fetch/$s_!SSTC!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd5d4cbe7-da42-49e7-948d-7bb425e42564_598x180.png)](https://substackcdn.com/image/fetch/$s_!SSTC!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd5d4cbe7-da42-49e7-948d-7bb425e42564_598x180.png)\n\nThis is not a cheap turnaround. The stock has already gone from the mid-$80s to $308.67 on June 22 and back to ~$165–169. At roughly $31 billion of market cap, a 10x would imply around $310 billion of equity value. That is an aggressive number. It only works if three things happen together: AECs keep taking share inside the rack as ports go to 1.6T, the optical portfolio prints the >$600 million fiscal-2027 number and then outgrows copper, and the market stops treating Credo as a single-customer cable vendor and starts treating it as **scarce AI interconnect reliability.**\n\n**I believe the asymmetry is real after this washout**. I do not believe it is free.\n\nMy view is constructive and high-conviction: $CRDO is one of the cleanest P&L in our interconnect sleeve — 68% non-GAAP gross margin, ~50% non-GAAP net margin, almost no debt, no ATM circus — and the one the tape just punished for the crime of being priced for perfection when GAAP gross margin blinked from 68.2% to **64.5%**.\n\nI initiated a core long at an average of **~$169**, sized at **~4.3%** of the Main 10x book.\n\nThe market spent two years viewing Credo as “the Amazon AEC name.” That framing is not wrong about fiscal 2025. It is incomplete about the company that reported last night.\n\n[![Image 2](https://substackcdn.com/image/fetch/$s_!mf9J!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F39168e52-e883-460d-89a7-4e9091812cec_1200x750.jpeg)](https://substackcdn.com/image/fetch/$s_!mf9J!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F39168e52-e883-460d-89a7-4e9091812cec_1200x750.jpeg)\n\n**AI data centers are now a reliability and power problem**, not just a laser-chip problem or a module-volume problem. Innolight and Eoptolink still ship more pluggables. Lumentum and Coherent still own more of the high-end laser layer. Broadcom still owns the switch ASIC. **What almost nobody else on the U.S. tape offers is this combination:** own the SerDes, own the DSP, own the cable, own the optical DSP, own a silicon-photonics PIC after DustPhotonics, ship a ZeroFlap module with telemetry that tells the cluster why a link is dying — and already have five hyperscalers on AECs.\n\nIn Q1 FY2027 (quarter ended August 1) the company delivered record revenue of **$479.0 million** (+10% QoQ, +115% YoY), non-GAAP gross margin of **68.0%**, non-GAAP operating margin of **48.2%**, and record non-GAAP net income of **$236.3 million** ($1.20 per share). It was the **seventh straight quarter** of triple-digit year-over-year growth. Management guided Q2 to **$525–$535 million** and raised the full-year growth call to **more than 85%**. Optical revenue is still guided above **$600 million**, with ZeroFlap optics, silicon-photonics PICs and optical DSPs each above **$100 million**.\n\nThe constraint, repeated until it should be tattooed on the 10-Q, is not demand. It is whether the second engine — optics — ramps fast enough that the multiple can survive the day AECs stop growing 100% a year.\n\nThis is not incremental. This is a platform story that the tape just marked as a cable story.\n\nThe print was a beat-and-raise. The stock closed **−22%**.\n\nWhat the market wanted, after a trip to $308, was acceleration _and_ mix _and_ a collapsing customer stack _and_ GAAP margins that never move. What it got was:\n\n*   Revenue above the high end of the $465–$475 million guide.\n\n*   Non-GAAP everything in line: 68% gross, ~50% net.\n\n*   Q2 guide of $525–$535 million, above the Street.\n\n*   FY2027 growth raised from “more than 80%” in June to **more than 85%**.\n\n*   GAAP gross margin down to **64.5%** from 68.2% last quarter.\n\n*   Non-GAAP opex up **16%** sequentially, to $95.2 million, as they fund optics, Dust integration and 1.6T.\n\n*   Four customers at **33% / 28% / 13% / 10%** — 84% of the quarter.\n\n*   Operating cash flow of $90 million, down sequentially on working capital. Inventory up to **$313 million**. Cash down to **$764 million** after paying for DustPhotonics.\n\n**None of that is a broken business**. All of that is a business that was priced as if nothing could ever be 64.5% GAAP, or 84% concentrated, or 16% more expensive to run for one quarter.\n\nFrom the June 22 high of **$308.67**, the stock is now **~46% lower**. From last night’s close of $206.63 to today’s $165 is the second half of the same sentence. I did not buy the $308 version. I bought the version the market marked after it decided a 115% growth quarter was not enough.\n\nThe window is the drop. The thesis is not the drop.\n\nFive layers of the AI interconnect stack actually matter. We already owned four of them. $CRDO is the one that sits _inside the rack_ and is now climbing _out of it_.\n\n**Layer 1 — the material.** Indium phosphide epitaxy. That is $IQE.\n\n**Layer 2 — the light source.** High-power lasers, SOAs, the chips CPO and external-laser architectures actually need. That is $SIVE, with $LITE as the scaled incumbent Nvidia chose to fund.\n\n**Layer 3 — who turns that scarcity into volume, under a U.S. flag.** 800G and 1.6T a hyperscaler can put on a purchase order. That is $AAOI.\n\n**Layer 4 — heat rejection.** Cold plate → CDU → facility loop. That is $MOD.\n\n**Layer 5 — the link that has to stay up.** Intra-rack and rack-to-rack copper that does not flap. Optical DSPs and PICs when the run gets longer. Telemetry that finds the dying link before the job dies. That is $CRDO.\n\nThe market watches Layer 5 when the AEC print is ripping. It watches “one-product risk” and GAAP footnotes when the stock is 40x forward. Both instincts are incomplete.\n\n**Reliability is the current engine.**\n\nA cluster with 100,000 GPUs does not fail because a laser was 3% less efficient. It fails because a link flapped and a training run that cost eight figures went to zero. Credo’s own language: ZeroFlap AECs deliver up to **1,000x** the reliability of commodity laser-based optics, at roughly half the power, for reaches out to about seven meters. That is not a slogan. That is why five hyperscalers are on the product and why AECs displaced a lot of short-reach optics inside the rack.\n\n**Optics is the second engine.**\n\nFiscal 2027 is the year management has been pointing at since June. Optical DSPs printed a record in Q1. First silicon-photonics PIC revenue landed after DustPhotonics closed on May 28. ZeroFlap optical transceivers are in production, with more customer ramps through the year at 800G and 1.6T. Combined optical revenue is guided above **$600 million** — from a standing start two years ago — with the acceleration weighted to the second half.\n\n**1.6T is no longer a 2028 slide.**\n\n1.6T AECs should begin contributing in the second half of fiscal 2027 and become more meaningful in fiscal 2028. 1.6T optical DSP revenue is targeted for later this fiscal year. Dust’s PIC roadmap already runs 800G → 1.6T → 3.2T, including NPO and CPO. The same SerDes brain that made 800G AECs the default inside the rack is being asked to do 200G per lane. If that transfer works, content per port goes up. If it does not, this stays an 800G copper story with a research lab attached.\n\n**U.S. system-level control is the wedge.**\n\nCredo does not need to beat Innolight on module volume. It needs to be the company a hyperscaler calls when the cluster will not come up in five days instead of five weeks, and when the alternative is a commodity cable that cannot tell you why the eye diagram just died. PILOT — their telemetry layer — is the unglamorous part of the moat. Hardware without diagnostics is a part. Hardware with diagnostics is an operating system for the link.\n\nThis is the whole thesis. Everything else is commentary.\n\nCredo now sells connectivity from millimeters to kilometers:\n\n[![Image 3](https://substackcdn.com/image/fetch/$s_!KV5v!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb126f679-fecf-4fa9-abf7-89a27941b03b_1586x968.png)](https://substackcdn.com/image/fetch/$s_!KV5v!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb126f679-fecf-4fa9-abf7-89a27941b03b_1586x968.png)\n\n**Two facts sit under that table.**\n\n1.   Near-term dollars are still **AEC**. Fleming has been clear since June: first-half fiscal 2027 is copper-led, mid-single-digit sequential, with the bigger step in the back half when optics inflect. Q1 at +10% sequential and Q2 at ~+$50 million is exactly that script — not a stall, a bridge.\n\n2.   The optical portfolio is three products, not one slide. DSPs can sell into other module makers. PICs can sell into other module makers. ZeroFlap optics is the Credo-branded system. That is why “>$600 million optics” can be true even if Credo never becomes Innolight.\n\nDustPhotonics is the physical expression of the second engine: **$750 million cash** plus **0.92 million** shares upfront, plus up to **3.21 million** contingent shares. Closed May 28. Cash went from $1.4 billion at FY2026 year-end to **$764 million** at Q1-end. That is not distress.\n\nIgnore street price targets. They were written when the stock was $250 and they will be rewritten now that it is $165. Consensus 12-month target around **$278** is a trailing indicator of last month’s tape, not a model.\n\n_(This content is exclusive to paid subscribers.)_\n\nNot the price. $CRDO’s price is a panic sensor. It just proved it.\n\n**Add if two or more print:**\n\n*   Q2 revenue at or above the $525–$535 million guide with non-GAAP GM still in the 67–69% band\n\n*   Optical commentary that makes $600 million look conservative, not heroic\n\n*   A second consecutive quarter where no single customer is above ~30%, or a sixth hyperscaler becomes visible\n\n*   1.6T AEC or 1.6T DSP language that moves from “later this year” to “shipping”\n\n*   Free cash flow re-accelerating after the Dust working-capital hangover\n\n**Trim if:**\n\n*   Weight drifts above **~7%** on a melt-up back through $250 without a matching optics print\n\n*   The stock re-rates to mid-40s forward earnings before FY2028 optics is proven\n\n*   Management starts talking about “capacity investments” that sound like an ATM\n\n**Kill / watchlist if:**\n\n*   Q2 prints the low end _and_ sequential growth falls to low single digits without an optics explanation\n\n*   FY2027 optical revenue is quietly walked toward $400 million\n\n*   A named hyperscaler cools on the call\n\n*   Non-GAAP gross margin breaks 65% and stays there as mix “improves”\n\n*   A credible 1.6T AEC competitor takes a publicly disclosed socket Credo was supposed to own\n\nThis is not a risk-free compounder. It is a high-quality compounder with a high multiple and a high beta.\n\n*   **Customer concentration.** Four logos were 84% of Q1. Two were 61%. One sneeze is a missed quarter. Diversification is the bull case _and_ the unfinished work.\n\n*   **AEC copycats.** Credo created the category. Categories get licensed. 1.6T is where share gets re-litigated.\n\n*   **Optics execution.** $600 million is a real number. Dust is a real integration.\n\n*   **CPO / NPO timing.** If co-packaged optics arrives faster than expected, short-reach copper and pluggables both lose sockets. Credo is building toward that world.\n\n*   **Margin mix.** Non-GAAP 68% is the identity. GAAP 64.5% is what the tape traded. If optics mix is lower-margin than AECs, the identity breaks.\n\n*   **Valuation.** After a trip to $308, this is no longer an undiscovered $40 stock. At ~12–13x FY2027 sales you need FY2028 to look like a platform. At ~27x FY2027 earnings you need the earnings.\n\n*   **Volatility.** Beta above 3. The stock can do −20% on a beat-and-raise. If that keeps you up, this is not your seat. It is not mine at a larger size either.\n\n*   **OmniConnect is a slide until it is not.** “Thousands of dollars per GPU” in FY2028 is the most important sentence on the call and the easiest one to forget if 2027 optics slips.\n\nThese are real. They are also the reason the opportunity still exists at ~$31 billion after a 46% drawdown from the high.\n\nA 10x from here requires execution **and** a re-rating from “Amazon’s cable vendor” to “the reliability layer of the AI cluster.”\n\nThe building blocks are visible:\n\n*   Seven straight quarters of triple-digit growth, and a guide that says the eighth will not be the end\n\n*   Five hyperscalers on AECs, not one\n\n*   Optics guided above $600 million in the first year it is supposed to matter\n\n*   A PIC company paid for in cash, already contributing revenue\n\n*   1.6T on both copper and glass, timed to the same port transition everyone else is building toward\n\n*   A 50% non-GAAP net margin that funds the roadmap without an ATM\n\n*   An interconnect sleeve that already owns the layers around this one\n\n*   A stock the market just marked **46% below the high** because GAAP gross margin was 64.5% for one quarter\n\nIf they only deliver the base case, this is still a compounding interconnect franchise with a **2–4x** path from $169 over a few years. That is enough for our portfolio.\n\nI am long $CRDO. Journal of a book aiming for 5x+ over five years.\n\n> **You should take a look at my portfolio** (pinned to my profile). The blueprint is public.\n\nBest wishes,\n\nThe Founder, Outlier Capital\n\n_Disclaimer: This memo is for informational analysis only and is not investment advice. It is a buy-side framework to stress-test the thesis around execution, financial quality, and dilution. All investing involves risk of loss. Do your own due diligence._",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://outliercapx.substack.com/",
+        "publication_platform": "substack",
+        "section": "transaction_ideas",
+        "transport": "public_reader_fallback"
+      }
+    },
+    {
+      "id": "substack:35821a60b3417911efdd",
+      "source_type": "substack",
+      "source_name": "TSOH Investment Research",
+      "title": "Selling Where They Ain’t",
+      "url": "https://thescienceofhitting.com/p/selling-where-they-aint",
+      "published_at": "2026-09-03T10:30:10+00:00",
+      "collected_at": "2026-09-04T00:00:47.460669+00:00",
+      "body": "Review all DG / WMT research and portfolio changes on the TSOH website From “ Walmart: Full Steam Ahead ” (November 2024): “From where we stand today, there’s no question Mr. Market has greatly changed his odds on these bets relative to three and a half years ago: at that time, the forward EPS multiples were ~23x and ~21x for Walmart and Dollar General, respectively. Today, I have those numbers at ~32x and ~12x , respectively. That is an understandable change directionally given what has taken place; what’s less clear to me is whether the magnitude of the swing is justified.” On an absolute and a relative basis, the latest quarter presented reason for celebration for Dollar General: the company’s +3.5% comp for Q2 FY26 , attributable to ~2% growth in traffic and ~1.5% growth in ticket, bested the result at Walmart’s U.S. business for the first time in more than five years. Read more",
+      "author": "TSOH Investment Research",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://thescienceofhitting.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:1d6b63efae6a0d6226fa",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "[AINews] Muse Spark 1.3 matches GPT-5.6-Sol, confirming Meta Superintelligence as the newest Frontier Lab, >90% discount for training",
+      "url": "https://www.latent.space/p/ainews-muse-spark-13-matches-gpt",
+      "published_at": "2026-09-03T04:38:33+00:00",
+      "collected_at": "2026-09-04T00:00:42.271983+00:00",
+      "body": "Launch season continues from yesterday , with Gemini 3.8 Flash as rumored today, but Muse Spark 1.3, promised in Zuck’s big comeback letter last month, definitely deserved the title story win today. Per AAII it is now the #3 model in the world (!?!) Just look at the confidence displayed finally putting up comparable numbers to the frontier models from OpenAI and Anthropic (Opus, not Fable)… and promising that it will be open weights as well(!!!): They have an interesting pricing model where it is 90%+ cheaper if you opt in to training: AI News for 8/22/2026-8/24/2026. We checked 12 subreddits, 544 Twitters and no further Discords. AINews’ website lets you search all past issues. As a reminder, AINews is now a section of Latent Space . You can opt in/out of email frequencies! AI Twitter Recap Agent Engineering Courses, Curricula, and Developer Practice Stanford is formalizing AI-native software engineering as a discipline : @mihail_eric announced a new edition of The Modern Software Developer centered on what he calls the “2026 metamorphosis” of software engineering. The notable signal is not just the course itself, but the curriculum reset: 85% of Fall 2025 material is being replaced with topics like agent skills, context engineering, MCP portals, agent-ready codebase design, agentic code review, security, parallel background agents, and software factories . The course also requires students to ship PRs into real OSS repos with support from partners including Browserbase, OpenHands, Semgrep, Milvus, Marimo, CrewAI, Warp, Vercel, Unsloth, and Anyscale, among others. A second Stanford course focuses on first-principles agent construction : @Diyi_Yang and @michaelryan207 announced CS329Z: Engineering AI Agents , explicitly framed around building agents “from scratch.” Alongside Mihail Eric’s course, this suggests a broader shift from “prompting” pedagogy to systems-oriented agent engineering : harnesses, evaluation, memory, tooling, orchestration, and production constraints rather than model usage alone. Practitioner discussion is converging on stateful intelligence allocation, not simple routing : In a panel prompt, @HarryStebbings highlighted @EnoReyes’s argument that getting the most out of models requires more than routing—agents need to understand task state, what just happened, and what comes next in order to allocate intelligence dynamically. That lines up with @jerryjliu0 ’s point that vendor-neutral startups can outperform frontier labs on narrow tasks by optimizing the harness end-to-end and selectively using both frontier and open-weight models. Model Architecture and Inference: Astra Rumors, Looped Transformers, and Real-Time Serving The “Astra is a looped transformer” rumor is probably less novel than headlines suggest : @rasbt unpacked reporting around OpenAI’s rumored Astra architecture and argued that the cited “recurrent depth” or “looped transformer” concept is a fairly modest architectural tweak rather than a breakthrough on its own. He points to Nanbeige 4.2-3B as an open-weight precedent: a 22-layer transformer stack reused twice , effectively behaving like a 44-layer model without doubling parameter storage. The tradeoff is straightforward: similar memory footprint, roughly ~2x compute , and only partial token-efficiency retention versus a standard stack. The more substantive historical reference is Mixture-of-recursions , where a learned router adaptively determines how many passes a token gets, allowing easy tokens to exit early and hard tokens to receive more compute. Hidden reasoning is not a necessary implication of recurrence : A second important clarification from @rasbt is that layer reuse does not inherently “obscure chain-of-thought” . It simply moves more computation into latent activations before token emission. If recurrent depth reduces visible reasoning traces, that’s because the model may need to emit fewer intermediate tokens, not because looped transformers intrinsically suppress textual CoT. Serving infra updates continue to target realtime multimodal workloads : @vikhyatk announced Photon 2.1 , adding text-to-speech models and NVIDIA B200 support to a realtime multimodal inference engine. Separately, Baseten announced hosted availability of GLM-5.3 Fast , emphasizing higher TPS and real-time deployment positioning via @baseten . Agent Harnesses, Skill Retrieval, and RL Post-Training Tooling ByteDance Seed’s HarnessDev reframes agent evaluation around the harness, not just task completion : @omarsar0 highlighted a new paper on HarnessDev , which asks models to start from a weak but runnable seed and build an execution harness, then improve it in a second stage using downstream feedback. Both stages are scored on capability and execution-token cost , making efficiency part of the objective. Across six creator LLMs, four domains, and 2,207 held-out downstream instances , generated harnesses still lag mature human-engineered systems on code, search, and research , but match or exceed them on writing and ML experimentation . The key nuance is that self-evolving harnesses help, but gains are unstable, model-dependent, and only partially transferable . Related ecosystem signal: exo and recursive self-improvement tooling : @omarsar0 also called out the exo harness as a useful entry point for understanding recursive self-improvement workflows, indicating a growing interest in frameworks where agents improve not just outputs but their own scaffolding. Skill retrieval may look good in aggregate while hurting the tasks that actually trigger it : @dair_ai summarized a paper proposing Retrieval-Invoked Actual-Use Effect , a matched-evaluation method that runs the same task twice , with and without skills enabled, and only counts tasks where retrieval actually fired. Across 17 LLMs on coding and math, the paper finds cases where retrieval improves overall scores while having a negative same-task effect on the subset of tasks where it was used. For teams maintaining skill libraries or tool directories, this is a practical warning against over-interpreting aggregate lift. RL post-training infra is becoming more productized : The SGLang team promoted an event with Baseten and NVIDIA Dynamo around Miles , an RL training framework that uses SGLang as the rollout inference engine for faster, more reliable RL post-training @sgl_project . @AravSrinivas separately described Miles as open-source RL-as-a-service , reinforcing the trend toward reusable post-training stacks rather than bespoke internal pipelines. Google Gemini 3.8 Flash Cyber and Production Friction Around Google Tooling Google introduced a specialized cybersecurity model with strong benchmark claims : @sundarpichai announced Gemini 3.8 Flash Cyber , positioned as Google’s most capable cybersecurity model while retaining Flash-level speed and pricing . Reported numbers include 86.2% on CyberGym , 47.2% on CWE-Bench for patching , and 70%+ success on an internal vulnerability-discovery benchmark across 20 programming languages . At the same time, developer sentiment points to harness and account-risk concerns : @theo argued that Google currently has weak developer ergonomics around harnesses, code apps, third-party integration, and especially aggressive bans tied to core Google accounts . @QuinnyPig sharpened that concern, noting the blast radius can extend beyond Gmail/Workspace to Google Cloud accounts associated with the same identity . Theo’s later complaints about slow, tool-call-heavy coding behavior on Gemini tasks ( 1 , 2 , 3 ) are anecdotal, but they underline the gap between benchmark performance and production developer UX . Meta Muse Spark 1.3 and the Video/Multimodal Release Cycle Meta launched Muse Spark 1.3 for agentic and coding workloads : @shengjia_zhao introduced Muse Spark 1.3 as the strongest model in the Spark line for agentic and coding tasks , with emphasis on longer-horizon work and more reliable compliance with complex instructions. Community reactions emphasized its price/performance envelope, including @alexandr_wang calling out what it can do “for a single dime,” while other users compared it favorably on speed and token efficiency versus competing “xhigh” offerings. Alibaba’s Wan 3.0 is posting strong third-party leaderboard results in video : @ArtificialAnlys reported that Wan 3.0 ranks #1 on Video Editing with Audio , #2 on Text-to-Video with Audio , and #5 on Image-to-Video with Audio on Artificial Analysis leaderboards. The release is positioned as an all-in-one generation and editing model that accepts text, images, video, audio, documents, and web pages as references, supports native audio , and generates up to 30 seconds at 1080p . Pricing in public preview starts at $0.05/s for 480p , rising to $0.20/s for 1080p . Reference-heavy multimodal UX is also improving : @imagine announced support for up to 14 references per video , spanning images, voices, and character references via @ -tagging in prompts, a small but practical interface improvement for multi-asset creative control. Open Models, Robotics, and Top Tweets Open model efforts continue to scale up : @percyliang shared that Marin 535B-A23B is 13% through training , with compute funded via the Jen-Hsun and Lori Huang Foundation and run on CoreWeave . The post is notable less for a benchmark than for the continued viability of large-scale open-model training backed by philanthropic compute support. Physical AI and open robotics platforms are inching forward : @maze_rapid announced the Palmimo DevKit , a tabletop AI robot platform with open-source software and swappable AI “brains,” designed so developers can control robot applications from a few lines of Python without deep robotics expertise. It’s early, but relevant as an example of agent frameworks extending into embodied systems . Top tweets (by engagement) : @mihail_eric : Stanford’s revamped AI-native software developer course with major curriculum turnover and OSS collaboration. @sundarpichai : Gemini 3.8 Flash Cyber launch with strong cybersecurity benchmark claims. @rasbt : Detailed architectural breakdown of looped transformers and why Astra rumors may be overstating novelty. @Diyi_Yang / @michaelryan207 : New Stanford course CS329Z: Engineering AI Agents . AI Reddit Recap /r/LocalLlama + /r/localLLM Recap 1. Muse Spark and Spark-X2.5 Open-Weight Models Muse Spark open weights coming soon (Activity: 902): The image is a screenshot of a Mark Zuckerberg/X post announcing Muse Spark 1.3 rollout, claiming major improvements in coding, agentic workflows, and long-context tasks, with Muse Spark open weights “coming soon.” The included benchmark table positions Muse Spark 1.3 above Muse Spark 1.2 and competitive with models labeled GPT 5.6 Sol and Opus 5 across agent, long-context, and coding evaluations, though the Reddit post’s author notes Spark may be too large for their hardware and says they are waiting for Llama 5 or an intermediate model between Glimmer and Spark. Commenters frame the results as evidence that multiple leading labs are converging technically, with one saying there is “no secret sauce” and that frontier gaps may only be a few months. Another commenter argues Muse Glimmer is underrated and claims it outperforms Qwen 3.8:27B on non-coding tasks. Commenters highlighted an unusually high reported long-context result: MRCR 512k–1m at 98.1% , with one user asking whether this implies Muse Spark has effectively solved “context rot” at million-token scale. If accurate, that benchmark would be the most technically notable claim in the thread because sustained retrieval/reasoning quality across 512k+ contexts is still a major weakness for many open and closed models. One user reported that Muse Glimmer is “pretty good” and subjectively superior to Qwen 3 8/27B for non-coding tasks, suggesting Muse’s smaller/previous model may already be competitive outside programming benchmarks. The comparison is anecdotal, but it points to task-dependent strengths rather than blanket leaderboard performance. Several commenters questioned the likely parameter count behind the displayed scores, with speculation that Muse Spark could be trillion-parameter scale if the benchmarks are accurate. That raised practical deployment concerns: it may not be locally runnable for hobbyists, but open weights could still be useful for organizations needing non-Chinese model options for policy/compliance reasons. New Model: Spark-X2.5-4B, Spark-X2.5-1.7B (Activity: 301): XHToken released Spark-X2.5 1.7B and 4B , apparently a custom architecture rather than a simple fine-tune, with model cards claiming native 1M token context, multilingual support, and training on roughly 20T tokens plus long-context/post-training stages. The architecture reportedly uses a mix of full attention and sliding-window attention to reduce long-context KV/compute cost, and the 4B benchmark claims are framed as competitive with much larger models such as Qwen-class ~ 9B models. Runtime support is not yet upstreamed in llama.cpp ; it depends on a pending llama.cpp PR #27868 or XHToken’s custom fork, with GGUFs available for 1.7B and 4B . Commenters were mainly impressed by the reported 20T -token pretraining scale and especially the claimed native 1M context at sub-5B parameter sizes. There was cautious interest in whether the benchmark claims—particularly 4B matching a ~ 9B model—hold up in independent testing. Commenters highlighted the reported 20T training-token scale for Spark-X2.5, which is unusually large for the 1.7B/4B parameter range and could explain the claim that the 4B variant matches a 9B model if benchmarks reproduce. The other standout spec was native 1M context at this model size, which readers viewed as more technically notable than raw benchmark parity. One tester reported early qualitative behavior using a “pi harness”: when asked “what model are you,” the model appeared to use tools to inspect/analyze the harness name before answering, suggesting agentic/tool-use tendencies but also “overthink[ing] a lot.” In a quick reasoning check, it failed the “car wash” test, and the tester planned further comparison against Qwen3.5 9B for daily-use quality. 2. Qwen3.8 Benchmarks and GGUF Speedups Qwen will be the king? (Activity: 732): The image shows an Arena AI Code Arena WebDev leaderboard where Qwen3.8-Max-0902 ranks #1 with a score of 1,691 , narrowly ahead of Claude Opus 5 Max at 1,688 and Kimi K3 Max at 1,674 . In context of the post, the result is being used to argue that Qwen’s extended reasoning/post-training scaling may be closing the gap with much larger frontier systems, potentially before a future Qwen 4 release or possible open-weight update. Commenters were notably optimistic about local/open-weight Qwen variants, with one claiming Q3.8-27B running locally outperformed their paid ChatGPT coding experience. Others questioned whether the top-performing Max model will become open-weight, while one commenter praised extended reasoning but noted the tradeoff: hours of latency for difficult tasks. A user reports strong local coding performance from Q3.8-27B used with PI , claiming it outperformed their prior paid ChatGPT 5.1 access for coding tasks. They emphasize practical task-following: when supplied with relevant context such as wiki pages in .txt files, the model generated working code with few fixes while running fully on a local PC and preserving data privacy. Several commenters focus on extended reasoning as a major differentiator: one says Qwen 3.8 Max is “100% correct” on their challenge set but can take hours to arrive at an answer. This frames the tradeoff as accuracy/reliability versus very high inference latency for reasoning-heavy workloads. There is skepticism about the presented benchmark graph, with one commenter saying the numbers look “very massaged” and another asking why Fable 5.1 is absent from the comparison. The concern is that model-ranking claims may depend heavily on benchmark selection, reporting methodology, or omitted competitors. MTP released for Qwen3.8-Flash-Next-GGUF (Activity: 671): ****Unsloth released MTP support/files for Qwen3.8-Flash-Next-GGUF , with test instructions tied to an Unsloth llama.cpp branch/PR ( unslothai/llama.cpp#144 ) and GGUF usage paths targeting local runtimes/OpenAI-compatible endpoints. A commenter points to a newly merged upstream llama.cpp optimization ( ggml-org/llama.cpp#28123 ) reporting MTP throughput improvements from 123 tok/s → 183 tok/s on code and 83 tok/s → 144 tok/s on prose, versus 108 tok/s without drafting; before the patch, prose MTP was reportedly slower than no draft at all. Comment discussion is mostly practical: users ask whether SSD offload is stable/“ironed out” and note that the MTP files may have already been available for a few days. A commenter cites a newly merged llama.cpp optimization PR ( ggml-org/llama.cpp#28123 ) showing major MTP throughput gains for Qwen3.8-Flash-Next-GGUF : baseline without draft was 108 tok/s , pre-change MTP was 123 tok/s on code but only 83 tok/s on prose, and post-change MTP improved to 183 tok/s code / 144 tok/s prose. The key technical point is that before the merge, MTP could be slower than normal decoding on prose workloads, but the patch appears to make drafting consistently beneficial. Several commenters are tracking unresolved runtime/support details in llama.cpp , including whether SSD offload is stable and what the -shared option changes versus non-shared mode for MTP files. Another user notes they believed the required llama.cpp feature support was still not fully merged, and reports low local performance of only about 9 tok/s , implying hardware/configuration sensitivity remains significant. Read more",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
     {
       "id": "x:b702ccf3ea0d7f9beba0",
       "source_type": "x",
@@ -1861,256 +2004,6 @@
         "investor_type": "technology_investor",
         "coverage": "technology and small-cap equity ideas",
         "engagement_score": 65
-      }
-    },
-    {
-      "id": "price:eeaf442af67e3f283525",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 跌幅前十 2026-09-02",
-      "url": "https://finance.yahoo.com/markets/stocks/losers/",
-      "published_at": "2026-09-02T20:00:00+00:00",
-      "collected_at": "2026-09-03T00:02:51.213638+00:00",
-      "body": "1. PANW close 332.800903; previous 362.089996; change -8.0889%\n2. TENB close 33.380001; previous 35.470001; change -5.8923%\n3. PLTR close 170.580399; previous 179.919998; change -5.191%\n4. DDOG close 213.149994; previous 223.839996; change -4.7757%\n5. FTNT close 154.145004; previous 161.850006; change -4.7606%\n6. CRWD close 205.029999; previous 215.070007; change -4.6683%\n7. NTSK close 13.41; previous 14.05; change -4.5552%\n8. DOCN close 104.290001; previous 108.919998; change -4.2508%\n9. BAND close 48.965; previous 50.790001; change -3.5932%\n10. IOT close 37.66; previous 39.060001; change -3.5842%",
-      "author": "",
-      "symbols": [
-        "PANW",
-        "TENB",
-        "PLTR",
-        "DDOG",
-        "FTNT",
-        "CRWD",
-        "NTSK",
-        "DOCN",
-        "BAND",
-        "IOT"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "losers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-09-02",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "PANW",
-            "price_date": "2026-09-02",
-            "close": 332.800903,
-            "previous_close": 362.089996,
-            "change_amount": -29.289093,
-            "change_percentage": -8.0889,
-            "url": "https://finance.yahoo.com/quote/PANW"
-          },
-          {
-            "ticker": "TENB",
-            "price_date": "2026-09-02",
-            "close": 33.380001,
-            "previous_close": 35.470001,
-            "change_amount": -2.09,
-            "change_percentage": -5.8923,
-            "url": "https://finance.yahoo.com/quote/TENB"
-          },
-          {
-            "ticker": "PLTR",
-            "price_date": "2026-09-02",
-            "close": 170.580399,
-            "previous_close": 179.919998,
-            "change_amount": -9.3396,
-            "change_percentage": -5.191,
-            "url": "https://finance.yahoo.com/quote/PLTR"
-          },
-          {
-            "ticker": "DDOG",
-            "price_date": "2026-09-02",
-            "close": 213.149994,
-            "previous_close": 223.839996,
-            "change_amount": -10.690002,
-            "change_percentage": -4.7757,
-            "url": "https://finance.yahoo.com/quote/DDOG"
-          },
-          {
-            "ticker": "FTNT",
-            "price_date": "2026-09-02",
-            "close": 154.145004,
-            "previous_close": 161.850006,
-            "change_amount": -7.705002,
-            "change_percentage": -4.7606,
-            "url": "https://finance.yahoo.com/quote/FTNT"
-          },
-          {
-            "ticker": "CRWD",
-            "price_date": "2026-09-02",
-            "close": 205.029999,
-            "previous_close": 215.070007,
-            "change_amount": -10.040009,
-            "change_percentage": -4.6683,
-            "url": "https://finance.yahoo.com/quote/CRWD"
-          },
-          {
-            "ticker": "NTSK",
-            "price_date": "2026-09-02",
-            "close": 13.41,
-            "previous_close": 14.05,
-            "change_amount": -0.64,
-            "change_percentage": -4.5552,
-            "url": "https://finance.yahoo.com/quote/NTSK"
-          },
-          {
-            "ticker": "DOCN",
-            "price_date": "2026-09-02",
-            "close": 104.290001,
-            "previous_close": 108.919998,
-            "change_amount": -4.629997,
-            "change_percentage": -4.2508,
-            "url": "https://finance.yahoo.com/quote/DOCN"
-          },
-          {
-            "ticker": "BAND",
-            "price_date": "2026-09-02",
-            "close": 48.965,
-            "previous_close": 50.790001,
-            "change_amount": -1.825001,
-            "change_percentage": -3.5932,
-            "url": "https://finance.yahoo.com/quote/BAND"
-          },
-          {
-            "ticker": "IOT",
-            "price_date": "2026-09-02",
-            "close": 37.66,
-            "previous_close": 39.060001,
-            "change_amount": -1.400002,
-            "change_percentage": -3.5842,
-            "url": "https://finance.yahoo.com/quote/IOT"
-          }
-        ]
-      }
-    },
-    {
-      "id": "price:a0f0c845c2c85649779a",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 涨幅前十 2026-09-02",
-      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
-      "published_at": "2026-09-02T20:00:00+00:00",
-      "collected_at": "2026-09-03T00:02:51.213638+00:00",
-      "body": "1. GTLB close 52.560501; previous 45.09; change 16.568%\n2. STNE close 10.3; previous 9.66; change 6.6253%\n3. RDDT close 153.610001; previous 144.639999; change 6.2016%\n4. FOUR close 43.48; previous 41.080002; change 5.8423%\n5. PICS close 11.305; previous 10.74; change 5.2607%\n6. RELY close 26.975; previous 25.709999; change 4.9203%\n7. GENI close 7.53; previous 7.18; change 4.8747%\n8. MNTN close 12.985; previous 12.39; change 4.8023%\n9. SRAD close 12.9; previous 12.31; change 4.7928%\n10. DLO close 15.502; previous 14.83; change 4.5314%",
-      "author": "",
-      "symbols": [
-        "GTLB",
-        "STNE",
-        "RDDT",
-        "FOUR",
-        "PICS",
-        "RELY",
-        "GENI",
-        "MNTN",
-        "SRAD",
-        "DLO"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "gainers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-09-02",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "GTLB",
-            "price_date": "2026-09-02",
-            "close": 52.560501,
-            "previous_close": 45.09,
-            "change_amount": 7.470501,
-            "change_percentage": 16.568,
-            "url": "https://finance.yahoo.com/quote/GTLB"
-          },
-          {
-            "ticker": "STNE",
-            "price_date": "2026-09-02",
-            "close": 10.3,
-            "previous_close": 9.66,
-            "change_amount": 0.64,
-            "change_percentage": 6.6253,
-            "url": "https://finance.yahoo.com/quote/STNE"
-          },
-          {
-            "ticker": "RDDT",
-            "price_date": "2026-09-02",
-            "close": 153.610001,
-            "previous_close": 144.639999,
-            "change_amount": 8.970001,
-            "change_percentage": 6.2016,
-            "url": "https://finance.yahoo.com/quote/RDDT"
-          },
-          {
-            "ticker": "FOUR",
-            "price_date": "2026-09-02",
-            "close": 43.48,
-            "previous_close": 41.080002,
-            "change_amount": 2.399998,
-            "change_percentage": 5.8423,
-            "url": "https://finance.yahoo.com/quote/FOUR"
-          },
-          {
-            "ticker": "PICS",
-            "price_date": "2026-09-02",
-            "close": 11.305,
-            "previous_close": 10.74,
-            "change_amount": 0.565001,
-            "change_percentage": 5.2607,
-            "url": "https://finance.yahoo.com/quote/PICS"
-          },
-          {
-            "ticker": "RELY",
-            "price_date": "2026-09-02",
-            "close": 26.975,
-            "previous_close": 25.709999,
-            "change_amount": 1.265001,
-            "change_percentage": 4.9203,
-            "url": "https://finance.yahoo.com/quote/RELY"
-          },
-          {
-            "ticker": "GENI",
-            "price_date": "2026-09-02",
-            "close": 7.53,
-            "previous_close": 7.18,
-            "change_amount": 0.35,
-            "change_percentage": 4.8747,
-            "url": "https://finance.yahoo.com/quote/GENI"
-          },
-          {
-            "ticker": "MNTN",
-            "price_date": "2026-09-02",
-            "close": 12.985,
-            "previous_close": 12.39,
-            "change_amount": 0.594999,
-            "change_percentage": 4.8023,
-            "url": "https://finance.yahoo.com/quote/MNTN"
-          },
-          {
-            "ticker": "SRAD",
-            "price_date": "2026-09-02",
-            "close": 12.9,
-            "previous_close": 12.31,
-            "change_amount": 0.589999,
-            "change_percentage": 4.7928,
-            "url": "https://finance.yahoo.com/quote/SRAD"
-          },
-          {
-            "ticker": "DLO",
-            "price_date": "2026-09-02",
-            "close": 15.502,
-            "previous_close": 14.83,
-            "change_amount": 0.672,
-            "change_percentage": 4.5314,
-            "url": "https://finance.yahoo.com/quote/DLO"
-          }
-        ]
       }
     },
     {
@@ -15936,24 +15829,6 @@
         "investor_type": "ai_strategy_researcher",
         "coverage": "AI strategy, technology and long-range scenarios",
         "engagement_score": 626
-      }
-    },
-    {
-      "id": "rss:b3182aba88c0f0ddeb9f",
-      "source_type": "rss",
-      "source_name": "Mobile Dev Memo",
-      "title": "RecSys, content concentration, and promoting the “middle tail”",
-      "url": "https://mobiledevmemo.com/recsys-content-concentration-and-promoting-the-middle-tail/",
-      "published_at": "2026-08-31T19:21:16+00:00",
-      "collected_at": "2026-09-01T12:19:36.450374+00:00",
-      "body": "Netflix research indicates that algorithmic improvements to recommendation systems decrease consumption concentration by shifting engagement from superstar titles toward middle-tail content. While long-tail discovery remains constrained by sparse interaction data, enhanced personalization increases the variety of titles users consume, highlighting the evolving capability of models to mitigate popularity bias.",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://mobiledevmemo.com/",
-        "publication_platform": "wordpress",
-        "section": "transaction_ideas"
       }
     },
     {
