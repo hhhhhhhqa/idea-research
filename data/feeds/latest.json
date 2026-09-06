@@ -1,7 +1,44 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-05T05:49:20.288238+00:00",
+  "generated_at": "2026-09-06T00:01:34.471393+00:00",
   "pipelines": [
+    {
+      "pipeline": "substack",
+      "status": "ok",
+      "item_count": 3,
+      "errors": [],
+      "notes": [
+        "Clouded Judgement: public reader fallback used",
+        "MBI Deep Dives: public reader fallback used",
+        "Aspiring for Intelligence: public reader fallback used",
+        "Chips Ahoy Capital: public reader fallback used",
+        "Meritech Software Pulse: public reader fallback used",
+        "Outspoken Geek: public reader fallback used",
+        "New Moon Cap: public reader fallback used",
+        "Outlier Cap: public reader fallback used"
+      ]
+    },
+    {
+      "pipeline": "reddit",
+      "status": "ok",
+      "item_count": 1,
+      "errors": [],
+      "notes": [
+        "r/wallstreetbets: anonymous dd RSS transport used",
+        "r/SecurityAnalysis: anonymous thesis RSS transport used",
+        "Downloaded 0 Reddit image(s) into the current feed media directory"
+      ]
+    },
+    {
+      "pipeline": "prices",
+      "status": "ok",
+      "item_count": 2,
+      "errors": [],
+      "notes": [
+        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "Latest available Yahoo EOD date is 2026-09-04; run after the US close to collect 2026-09-05."
+      ]
+    },
     {
       "pipeline": "x",
       "status": "ok",
@@ -139,56 +176,101 @@
         "@kuncheng: 0 tweet(s) via twscrape",
         "Linked articles: 8 article(s) stored; 64 unavailable or skipped"
       ]
-    },
-    {
-      "pipeline": "substack",
-      "status": "partial",
-      "item_count": 7,
-      "errors": [
-        "Software Stack Investing: The read operation timed out"
-      ],
-      "notes": [
-        "Clouded Judgement: public reader fallback used",
-        "MBI Deep Dives: public reader fallback used",
-        "Aspiring for Intelligence: public reader fallback used",
-        "Chips Ahoy Capital: public reader fallback used",
-        "Meritech Software Pulse: public reader fallback used",
-        "Outspoken Geek: public reader fallback used",
-        "New Moon Cap: public reader fallback used",
-        "Outlier Cap: public reader fallback used"
-      ]
-    },
-    {
-      "pipeline": "reddit",
-      "status": "ok",
-      "item_count": 1,
-      "errors": [],
-      "notes": [
-        "r/wallstreetbets: anonymous dd RSS transport used",
-        "r/SecurityAnalysis: anonymous thesis RSS transport used",
-        "Downloaded 0 Reddit image(s) into the current feed media directory"
-      ]
-    },
-    {
-      "pipeline": "prices",
-      "status": "ok",
-      "item_count": 2,
-      "errors": [],
-      "notes": [
-        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "Latest available Yahoo EOD date is 2026-09-03; run after the US close to collect 2026-09-04."
-      ]
     }
   ],
   "counts": {
-    "total": 648,
+    "total": 647,
     "substack": 13,
-    "rss": 2,
+    "rss": 1,
     "reddit": 1,
     "x": 630,
     "price": 2
   },
   "items": [
+    {
+      "id": "reddit:e09cb04a43327a12a7ee",
+      "source_type": "reddit",
+      "source_name": "r/SecurityAnalysis",
+      "title": "FICO's monopoly already left in 2025",
+      "url": "https://www.reddit.com/r/SecurityAnalysis/comments/1w85tgg/ficos_monopoly_already_left_in_2025/",
+      "published_at": "2026-09-05T16:48:19+00:00",
+      "collected_at": "2026-09-06T00:01:06.356260+00:00",
+      "body": "Thursday's tape priced a monopoly ending. Exclusivity already went in July 2025 when VantageScore got GSE approval. April cut the mortgage pull to $0.99 plus $65 a funded loan, so that lever's spent. What changed is a ~50-lender pilot becoming every lender. Permission isn't displacement. The test is still VantageScore as the primary pull on more than 10% of conforming files by FY2028. https://www.investmoat.com/research/fico-the-mandate-was-already-priced submitted by /u/wkgui [link] [comments]",
+      "author": "/u/wkgui",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "transport": "rss",
+        "listing": "thesis",
+        "flair": "",
+        "requested_flair": "",
+        "requested_flairs": [
+          "Thesis",
+          "Short Thesis"
+        ],
+        "sort": "top",
+        "time_filter": "day",
+        "feed_rank": 1,
+        "image_urls": [],
+        "images": []
+      }
+    },
+    {
+      "id": "substack:8a5d315f88fac511ee67",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "OpenClaw Power, MacBook Simplicity: Five Days With Grok Bot",
+      "url": "https://www.latent.space/p/grok-bot",
+      "published_at": "2026-09-05T15:01:02+00:00",
+      "collected_at": "2026-09-06T00:00:44.232357+00:00",
+      "body": "You open the plugin catalog in Grok Bot for the first time. You search for X, find the plugin, and click it. A login screen opens in your local browser. You sign in, and you’re connected. You don’t need to get into the code of the system. You don’t need to install an MCP server JSON or paste API credentials. You log in the way you do to any website or app, and Grok Bot is ready. I asked it to review my X posts and the things I’m interested in, then give me a daily brief of news and stories that are relevant to me. I also connected it to Freshdesk through my work account and set up a support bot that checks every fifteen minutes for newly opened support tickets. All it needed to replicate a real workflow, one that I spent my time and attention on, was for me to log in through the browser. That ease of setup is what’s really new here. Grok Bot turns agent configuration into a couple of clicks and a sign-in. Grok Bot feels like unboxing a new MacBook. You open it, turn it on, and have everything you need to get to work. Systems like OpenClaw feel like Linux : they give you more optionality and more freedom to customize the system around what you want to do, but that flexibility comes with more complexity and more setup overhead. OpenClaw 2.0, released this week , narrows that gap substantially. Its Quick Start can reuse an existing Claude Code or Codex login, and its browser app moves much of setup, plugin management and automation into a graphical or conversational interface. But the underlying distinction remains: OpenClaw gives you a user-owned Gateway that you choose how and where to run, while Grok Bot supplies and operates the computer as part of the product. Put another way, Grok Bot is a managed agent computer and OpenClaw is a user-owned agent platform. The Bot is the atomic unit But the Mac vs. Linux analogy only takes you so far. Grok Bot isn’t less programmable than OpenClaw, but it is programmable at a different level of abstraction. With OpenClaw, customization means getting closer to the code, configuration, tools, skills, plugins and infrastructure. In Grok Bot, the Bot itself becomes the atomic unit of the program . You give Bots specialized roles, connect them to different tools, and compose them into a larger system that Grok Bot calls a “group chat.” Programming has moved towards higher levels of abstraction since its advent. We moved from machine code and punch cards, to assembly, to what we consider today to be lower-level languages like C, and then to higher-level languages like Python. At each step in the evolution, programmers could express more of their intent while delegating more of the details. Grok Bot extends the trajectory of that evolution another step: the interface is English and the thing being programmed is no longer a function or service, but a “Bot”. The value of moving up to a higher level of abstraction is that it makes the power of programming computers accessible to people who may never write code, but who can clearly articulate what they want in relatively precise English. The required skill shifts away from syntax and implementation and toward specifying intent precisely. Yesterday I created a Claude Bot that installed and signed into the Claude Code CLI inside Grok Bot’s virtual computer. That made me wonder how far this model could go. I could connect Codex and other agent CLIs, then assemble them into a council of agentic engineers inside Grok Bot. OpenClaw can support similar configurations, and OpenClaw 2 now ships a native Codex runtime and supported routes for other coding-agent harnesses, so this is no longer something you have to wire by hand. The difference is in how the pieces are presented. Grok Bot presents agents as first-class, human-readable building blocks , while OpenClaw leaves more of the machinery exposed. This is my initial impression of the key differences of Grok Bot compared to other agent platforms. I used it with a Cursor Pro+ account for about the last five days. The Grok Bot harbor tour Personification is, for me, one of the key differentiators of Grok Bot and one of the things that make it such a delight to use. Each Bot can have its own name, role, identity and description. It’s a nice human garnish on the whole dish that is Grok Bot, but it’s also more than just garnish. It helps create cognitive distinctions within the system that make it easier to organize your work. My Agentic Engineer Bot is what this looks like in practice. Rather than tying it to a single model or tool, I gave it access to several agentic engineering systems and defined guidelines for routing to the right one for a given task. My routing rules point visual, design, and frontend work toward Claude Code, debugging and careful code reading toward Codex, and simpler tasks to the Grok Build CLI. When something related to coding comes up anywhere in my Grok Bot ecosystem, I don’t have to stop and decide which CLI to send it to. I delegate it to the Agentic Engineer, which selects a tool based on the job and the guidelines I’ve given it. The personified role gives me a mental model to work with. I think about who should lead the work, based on what skills I know they have, in the same way I do working with a team of humans. What feels human about Grok Bot is less its tone (it still sounds like an LLM) and more the continuity and simplicity of the interaction. When I use Claude Code or Codex, I still think about context-window management a lot: how much context is left, when the conversation needs compaction, and when I should start a new thread. Those concerns may still exist inside Grok Bot, but they’re not presented as part of the interface. I can focus at the level of the natural language conversation with the bot rather than managing the underlying machinery and limitations of LLMs. One of Grok Bot’s most useful connector features is support for multiple accounts from the same service . I connected both my personal and work Google Calendar accounts. As a busy person with a day job and two young kids, my day doesn’t sort neatly into work and personal calendar events. Grok Bot gives me a single view of the whole day instead of making me have to visit two different interfaces to see what I have planned. One qualification is worth stating plainly: every Bot I create shares the same computer, files, browser sessions and logins. Separate Bots are organizational boundaries, not security boundaries. Which points to another subtle UX decision about Grok Bot that I really like: the system is designed around the individual using it, rather than the individual needing to conform to the system. Everything in Grok Bot is designed to allow you to connect to your digital life in the tools and contexts where you already live, rather than having to relearn a whole new ecosystem. I’ve had a Gmail account for 20 years, maybe more, and the fact that Grok Bot can connect to that context in a couple of easy clicks makes it a delight. The virtual browser also expands Grok Bot beyond its plugin catalog. Freshdesk was not a native connector I installed. I opened it in the virtual browser, transferred my login from 1Password on my local machine, and authenticated there. Once that session existed, the support Bot could check Freshdesk every fifteen minutes and make sure I wasn’t missing new tickets. In effect, an ordinary website became an automatable browser workflow, and then a recurring one. It is worth noting that this is not an integration in the connector or API sense: xAI itself warns that browser workflows can run into changed interfaces, expired sessions and CAPTCHAs, and recommends using a connector where one exists. This is the sort of integration that would have taken weeks to build in the world before agents. Also, one of the great things about the virtual browser is that it’s running on a persistent computer in the cloud. Grok Bot’s always-on computer Giving an agent its own computer is not a new idea. I run OpenClaw on a desktop in my basement, so it also has a persistent machine. The difference is that I am responsible for keeping that machine alive. When the power goes out in my house, which it often does with summer thunderstorms, the desktop shuts down and OpenClaw stays offline until I am physically there to boot it again. OpenClaw can run in the cloud too, and OpenClaw 2.0 even offers a one-click managed deployment through Hostinger. But unless I choose a managed option like that, I am still responsible for selecting and operating the host, keeping it updated, and keeping it available. Grok Bot turns my home lab arrangement into a managed product. Its computer is hosted and maintained for me, so I don’t have to manage the hardware, power, remote access, or recovery. The advantage is not merely that the agent has a computer; my OpenClaw has a computer too. It’s that I don’t have to operate and maintain the computer it depends on. That managed persistence also shows up in how seamlessly I can move between my devices . I can interact with Grok Bot on my MacBook, pick the conversation back up on my iPhone, and find the same work waiting for me like I never left. I don’t have to establish a remote connection or reconstruct the Bot’s environment when I switch devices. A computer that never turns off has its downsides too. State accumulates, and sometimes you want a clean slate. Grok Bot gives you two levers for this. Update rebuilds the computer while preserving its durable state, and Reset returns it to its last synced durable state, which can mean losing any recent work that has not yet synced. But every benefit with regards to convenience also comes with a cost and tradeoffs. Tradeoffs: control versus cognitive load Whether Grok Bot’s abstractions and conveniences are helpful depends on the task. If I am doing deep implementation work — like building something new, reasoning through code, or examining the logic of a program — then removing the machinery from view does not necessarily help. Given that kind of use case, getting into the technical details is the work. Grok Bot shines more clearly in the work around software engineering : product management, design, selling a product, and communicating internally. In those cases, I care more about defining the outcome and delegating the work than watching every implementation decision, as long as I can clearly validate the results when the work is done. The same abstraction that can feel limiting during deep technical work becomes liberating when the underlying machinery is not the thing I need to focus on. The lack of a model picker is convenient until the task does not require frontier-level intelligence. Sometimes I would rather deliberately choose a smaller, faster model for simple work and reserve the strongest model for tasks that need deeper reasoning. I personally enjoy the idea of being efficient with resources, even when I’m not paying extra for it. Grok Bot makes routing decisions behind the scenes, so I can’t see or control them. The same design that removes one more configuration choice also removes a useful way to balance capability, speed, and usage. Grok Bot doesn’t give me that lever to pull. That lack of control extends beyond model selection. In tools like Claude Code or Codex, I can start a fresh thread, compact a conversation, manage how much context I carry forward, and make deliberate choices about how I use my allowance. Those levers create additional cognitive overhead, but they also give me ways to control context and usage. Grok Bot hides those decisions from me. The experience is simpler, but I have fewer ways to influence how quickly I consume my available capacity. There’s also the added risk of losing mental presence when working on a task, because there’s not as much required of me to get the job done. Also, personification clarifies task boundaries at one level while blurring them at another. Giving each Bot a job and a role helps me keep broad categories of work separate: support belongs to the Support Bot, while coding belongs to the Agentic Engineer. But within a single Bot, unrelated tasks continue through the same ongoing conversation. Over time, it can become harder to tell which assumptions, instructions, and context still belong to the task at hand. The Bot itself is a clear boundary; the individual tasks inside it are not. My Verdict It’s coming up on a week with Grok Bot at the time of this writing. I’m using it every day, but it’s not my main agent interface at work or outside of work. I have found it quite useful in the areas around the technical aspects of my work and personal projects. Things like administration, summarizing, searching for news, project management and task management. All the shallow work that can tend to get in the way of deeper technical work. If you’re an engineer, I think Grok Bot can be useful to you as a sort of “digital chief of staff” that doesn’t require any training or much set-up to be effective on the job. But I also doubt that Grok Bot will be authoring the majority of your pull requests any time soon.",
+      "author": "Dan McAteer",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "substack:afb864412d5ac3f639f8",
+      "source_type": "substack",
+      "source_name": "MBI Deep Dives",
+      "title": "Bypassing RevenueBench to Buy the Feedback Loop",
+      "url": "https://mbideepdives.substack.com/p/bypassing-revenuebench-to-buy-the",
+      "published_at": "2026-09-05T14:47:41+00:00",
+      "collected_at": "2026-09-06T00:00:46.318999+00:00",
+      "body": "We have seen an accelerating pace of model release cadence over the last few weeks. Frankly speaking, this may be a new normal for the rest of this year instead of being an anomaly. If you haven’t got there already, my guess is by the end of this year most of us will feel like the below [tweet](https://x.com/itsnoahd/status/2095789044894421195) when it comes to opining on any new model.\n\n[![Image 1](https://substackcdn.com/image/fetch/$s_!Zpf-!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdb7233ef-6d62-42d5-9673-f105ea563b42_706x387.png)](https://substackcdn.com/image/fetch/$s_!Zpf-!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdb7233ef-6d62-42d5-9673-f105ea563b42_706x387.png)\n\nIndeed, even the benchmarks are starting to act a little [strange](https://x.com/Hesamation/status/2096045009082388919) and perhaps finding it difficult to keep up with the model release cadence as frontier models start to saturate most benchmarks out there. I increasingly find myself leaning towards Elon Musk’s philosophy around benchmark: “[RevenueBench](https://x.com/elonmusk/status/2089739241114816671)”. You got to think that almost nothing is as reliable as people voting with their wallet and if a new model succeeds in changing wallet share noticeably, that is a much stronger indication of a model’s performance than anything else. Of course, the biggest challenge here is that revenue is a lagging indicator whereas benchmarks could be more of a leading indicator. So, there will still be massive demand for benchmarks or evals to gauge such leading indicator but as I said, differentiating the signal from the noise here will become more challenging over time.\n\nThe other challenge here is that there are companies such as Meta who is deliberately playing the catch up game to the frontier by avoiding the “RevenueBench” altogether. Given the importance of good coding data, Meta is effectively giving their latest models away for free if you allow them to train their future models on your data.\n\n[![Image 2](https://substackcdn.com/image/fetch/$s_!mYAV!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff96df913-51ad-4098-be70-8adb5cd14b00_1122x583.png)](https://substackcdn.com/image/fetch/$s_!mYAV!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff96df913-51ad-4098-be70-8adb5cd14b00_1122x583.png)\n\nSource: Meta\n\nBut are the developers willing to make that trade-off? OpenCode’s [data](https://opencode.ai/data#market-share) suggests that such strategy is working very well for Meta. Following Muse Spark 1.3 release, Meta’s tokens processed on OpenCode exceeded 5 trillion yesterday!\n\n[![Image 3](https://substackcdn.com/image/fetch/$s_!yKow!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F02edca89-593f-4f47-8f2f-5b7d1b53cc3f_1882x1000.png)](https://substackcdn.com/image/fetch/$s_!yKow!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F02edca89-593f-4f47-8f2f-5b7d1b53cc3f_1882x1000.png)\n\nSource: OpenCode\n\nIn fact, following Muse Spark 1.3 release, Meta’s token share on OpenCode went from 25% to 40% and is approaching half of all tokens on OpenCode today. Let me contextualize what 5 trillion tokens per day means. Back in June 2026 while proposing $80 Billion equity raise, Sundar Pichai [mentioned](https://blog.google/alphabet/investor-presentation-june-2026/) the following (emphasis mine):\n\n> “The Antigravity coding harness has accelerated how we build internally. Every few weeks, we’re doubling the number of tokens we’re processing across our developer tooling. **Recently, we reached more than three trillion tokens a day. This scale creates a powerful feedback loop to improve our current and future models**.”\n\nSo, only on OpenCode Meta is essentially processing almost **twice** that of what Google was processing for their coding harness couple of months ago. Of course, Google’s antigravity is processing more tokens today; so I am just pointing it to help you contextualize that Meta’s aggressive pricing strategy has helped them gain Google-shaped coding data and if Pichai is right that such data creates “a powerful feedback loop”, Meta is doing the right thing to bypass the “RevenueBench” for now.\n\n[![Image 4](https://substackcdn.com/image/fetch/$s_!TIem!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fde08f463-8151-4c08-8498-495afdcf1edc_2257x622.png)](https://substackcdn.com/image/fetch/$s_!TIem!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fde08f463-8151-4c08-8498-495afdcf1edc_2257x622.png)\n\nSource: Claude Fable 5.1, OpenCode\n\nMeta also has other strong incentives to ensure their model is on par with frontier models at coding. Recent media reports suggest that Meta is expected to spend [$10 Billion](https://www.nytimes.com/2026/08/27/technology/meta-anthropic-frenemies.html) on Anthropic’s models and I assume the amount could be even higher when we include OpenAI’s models. So, even if Meta’s models are barely monetized externally via paying customers, Meta can save a sizable amount internally just by not paying the margins for frontier models.\n\nMoreover, it can be increasingly difficult to compete against frontier model developers if they decide to keep their best model internally for first-party products while the models via API only get to use older and less capable models. Zuckerberg has been paranoid about this possibility for a while and if OpenAI’s Tibo’s [tweet](https://x.com/thsottiaux/status/2096101429832552872) yesterday is any indication, he was correct to entertain such possibility. This lopsided risk-reward for not owning the frontier model is perhaps only tangibly felt if you are the founder which may partly explain why the [founder-led](https://mbideepdives.substack.com/p/license-to-chase-the-ai-frontier?utm_source=publication-search) companies seem to feel this risk most acutely while the manager-led companies are mostly focused on selling compute.\n\n[![Image 5](https://substackcdn.com/image/fetch/$s_!OoqC!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5146a799-67e4-4d5b-a554-29faa9d44e35_697x295.png)](https://substackcdn.com/image/fetch/$s_!OoqC!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5146a799-67e4-4d5b-a554-29faa9d44e35_697x295.png)\n\nEven before reaching the frontier, Meta has been radically changing how it approaches its own product development. Their pace of release has clearly accelerated even for their Family of Apps (FOA) business as they have launched Forum (a standalone app for Facebook Groups), Facebook Creator Studio (for Facebook creators), and Seller (for Facebook Marketplace sellers) just in the last three months! In a recent [podcast](https://theskip.substack.com/p/what-the-past-year-taught-meta), [Jagjit Chawla](https://www.linkedin.com/in/jagjitchawla/), Meta’s VP behind Facebook’s Feed and Reels, explained why such standalone apps are helping their FOA ecosystem. Some key excerpts from the podcast:\n\n> “we have somewhat of a two-sided or maybe I can say three-sided marketplace, right? We acquire the world’s best content from creators. That’s number one. And creator could be like a group producer or I’m talking about the production side. Then we distribute that content to people who find that useful as consumers, and then we take consumer time and trade it for advertiser dollars and we take those dollars and flow that back into production. Now, the question is that if you have a 2 billion app, which is largely focused on the consumers, people who are going to consume all of this content, there is always going to be a set of power users who are on the other side, which are much smaller always. Producers always are going to be small in size compared to consumers. Will you ever be able to justify a new app for the producer segment?\n> \n> \n> And if they produce more and you can then take that content in terms of liquidity and distribute on both platforms, let’s say forum and Facebook app, by definition, you have more blood in the ecosystem, which in this case “content”. More blood means more oxygen is reaching many places. I’m using a poor body analogy.\n> \n> \n> But I think in my mind that assumption has now been validated that if you give producers a powerful surface that is unconstrained, they will produce more. The more they will produce, the more consumption So that’s why it’s not cannibalistic. And that was the first proof point we were looking for.\n> \n> \n> We got that proven with a bunch of work on forum. And then we basically said, why not Facebook sellers? Because they are also producers. There’s a bunch of features we could give them.\n> \n> \n> If you were to try to do that in a 2 billion daily user app like Facebook, it’ll get cluttered for a lot of existing users. So it kind of liberates both the teams and unconstrains the product to go do different things. And I think it’s additive to the ecosystem.\n> \n> \n> We already have this definition of what we call family of apps. Traditionally, the big apps are Facebook, Instagram, WhatsApp, and Messenger. And **now we have a bunch of these standalone constellation apps for each of the apps, which is actually helping the ecosystem overall**.\n> \n> \n> One of the big challenges with working in a big company setup like this is that there are different people who own different services. So most of the time, even speaking as an executive or even as an IC, a lot of the time goes into solving what I would, what in your vocabulary is inside the building problems, which is I need to go convince these set of five people before they will let me, allow me to ship something on the surface that they own because there is going to be the right conversation on trade-offs. There is going to be a conversation on opportunity costs and so on and so forth. **All of those constraints actually slow you down.** And that is one of the big challenges of big tech is because there is a lot to lose, so to speak, when you have 2 billion users, hundreds of billions of revenue, you can’t really be messing things up. That like 0.1% change is a meaningful change to the business and to our users. So in that sense, there was a lot of constraints in terms of what is the right lane. And there was a lot of process to make sure that you’re not going to break things inadvertently and not cause effects. So there was a lot of this emphasis on ecosystem thinking end to end.\n> \n> \n> There was a lot of careful judgment required to navigate that process. And as you can imagine, that is onerous because you need to be in the system for a while. You need to have tenure to understand the ecosystem. You need to have tenure to have the right relationships to be able to influence those set of people.\n> \n> \n> Now, if you contrast it to now, so if I am a groups PM, I used this example before. I have a small app called Forum, which has tens of millions of users. **I am unconstrained. I don’t need any approvals from service owners like the feed team. I have my own ranking team, and it’s a small pod of people who sit next to each other, and I can move much, much faster. And as and when we prove the right features to happen in forum, it’s a much easier sell, much lighter process to port them over to the main application**.”\n\nIndeed, Zuckerberg was perhaps too enamored by the ability of small teams to outcompete larger teams as a recent Reuters [report](https://www.reuters.com/investigations/mark-zuckerberg-had-bold-plan-replace-meta-staff-with-ai-heres-how-it-imploded-2026-08-26/?) suggests that he was actually thinking of a much larger lay-off than the [10%](https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html) Meta actually ended up doing in May. Gergely Orosz had a very critical [piece](https://blog.pragmaticengineer.com/the-pulse-meta-wanted-to-reduce-teams-by-60-because-of-ai/) on Meta’s approach to managing their employees, especially engineers and he estimated the actual lay-off Zuckerberg was perhaps thinking of is closer to ~30-40%. Orosz did make an attempt to understand where Zuckerberg might be coming from, especially in light of OpenAI and Anthropic potentially building a similar sized market cap companies with a fraction of Meta’s employee base, but he ultimately made the case that Meta might end up destroying too much goodwill as an employer to become an AI-native company.\n\nAs a shareholder, I actually do share Zuckerberg’s concern. It’s always going to be painful to adapt to the new world in the age of AI as a public company that is always under the scanner. I don’t discard Orosz’s concerns either; it’s hardly ever fun to work in a setting where you can’t quite trust if you’ll be around in a few months. But if having a larger company becomes a barrier to keep up with the productivity harnessed in smaller, AI-native companies, this is a choice that many public tech companies may face. That’s also going to be very politically fraught as few people expect companies to downsize when revenues and profits are soaring. Having said that, Chawla in the aforementioned podcast made the point that the restructuring led to fewer processes which resulted in higher productivity. From the conversation:\n\n> “I think now that it has been a few months, we are behind that and it's all publicly known in terms of what we did there in terms of team restructuring. But I do think it goes back to the point we were talking about earlier where fewer people means fewer processes. Fewer process means more time available to build. And the output is clear, right? We were able to launch three new apps in the last three months. There are a bunch of other apps in the work which are standalone. These are conversations we were not even willing to entertain, let's say, last half or let's say last year.”\n\nMoreover, for all the complaints around data labeling and criticism around MSL hiring spree last year, Meta’s model release cadence in the last couple of months is a vindication that Meta’s top management is perhaps treated too cynically by most observers. Zuckerberg has perhaps a longer time horizon than most of the shareholders and employees (which is a recurring source of tension among these stakeholders) and as the largest and controlling owner of the company, Zuckerberg will continue to optimize for the long-term and endure through the skepticism around his decisions in the short-term.\n\n_Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on **[65+](https://mbideepdives.substack.com/p/deep-dives)** companies. The daily is just how I think out loud between the Deep Dives!_\n\n**Current Portfolio:**\n\nPlease note that these are **NOT** my recommendation to buy/sell these securities, but just disclosure from my end so that you can assess potential biases that I may have because of my own personal portfolio holdings. Always consider my write-up my personal investing journal and never forget my objectives, risk tolerance, and constraints may have no resemblance to yours.\n\nMy current portfolio is disclosed below:",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mbideepdives.substack.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas",
+        "transport": "public_reader_fallback"
+      }
+    },
+    {
+      "id": "substack:3989d5750ca2e25c3678",
+      "source_type": "substack",
+      "source_name": "How They Make Money / App Economy Insights",
+      "title": "📊 PRO: This Week in Visuals",
+      "url": "https://www.appeconomyinsights.com/p/pro-this-week-in-visuals-cef",
+      "published_at": "2026-09-05T14:00:19+00:00",
+      "collected_at": "2026-09-06T00:00:46.087069+00:00",
+      "body": "Welcome to the Saturday PRO edition of How They Make Money . Over 300,000 subscribers turn to us for business and investment insights. In case you missed it: 📊 Earnings Visuals (8/2026) ❄️ Snowflake & Palo Alto Networks Subscribe now Premium members get: 📊 Monthly reports : 200+ companies visualized. 📩 Tuesday articles : Exclusive deep dives and insights. 📚 Access to our archive : Hundreds of business breakdowns. PRO members get everything PLUS : 📩 Saturday PRO reports : Timely insights on the latest earnings. Today at a glance: 📈 Broadcom : AI Target Jumps 💻 Dell : Margins Catch Up 📡 HPE : Juniper Starts Paying Off 🌱 MongoDB : Enterprise Advanced Roars Back ☁️ Zscaler : Usage Revenue Takes Off 🌐 Samsara : Large Deals Accelerate 🧘🏻 Lululemon : Leggings Lose Ground ✍️ DocuSign : IAM Hits 15% of ARR ⚡️ NIO : Margins Hold Up 🤖 UiPath : AI Reaches 18 of Top 20 Deals 🛠️ GitLab : Bookings Break Out 📝 Asana : AI Hits 25% of New ARR 1. 📈 Broadcom: AI Target Jumps Broadcom Q3 revenue (July quarter) surged 86% Y/Y to $29.6 billion ($160 million beat), with non-GAAP EPS of $3.32 ($0.08 beat). Semiconductor solutions as a whole grew 127% to $20.8 billion, driven by AI semiconductor revenue, which jumped 221% Y/Y and 54% Q/Q to $16.7 billion, exceeding the $16 billion outlook from last quarter. Infrastructure software also accelerated to 29% growth at $8.8 billion. The bigger news was the forward reset for next year. Broadcom now expects $115 billion of AI semiconductor revenue in FY27 , up from the $100 billion target that disappointed investors in Q2, followed by an extraordinary $230 billion in FY28 . Q4 AI revenue is expected to reach $21.7 billion, up 236% Y/Y, another acceleration. The customer mix includes the usual suspects. Anthropic is expected to become Broadcom’s largest custom XPU customer in FY27, with OpenAI potentially second, while Google remains a multi-tens-of-billions annual business. Meta is also ramping across multiple chip generations. Management says demand from its four largest AI customers continues to exceed what Broadcom can physically supply. That bottleneck is prompting more vertical integration. Broadcom is bringing substrate production online in Singapore in FY27 while scaling networking alongside custom compute, including its new 200 Tbps Tomahawk 7 Ethernet switch. Bottom Line: Q2 left investors wondering whether management was sandbagging with its $100 billion FY27 AI target. Now we know, with a $15 billion raise after just one quarter. The $230 billion FY28 outlook implies AI semiconductor revenue nearly quadrupling from FY26 in just two years. Now it’s all about how quickly Broadcom can secure enough capacity to satisfy that demand. 2. 💻 Dell: Margins Catch Up Read more",
+      "author": "App Economy Insights",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.appeconomyinsights.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
     {
       "id": "x:4fd4473f181ef92e38e7",
       "source_type": "x",
@@ -1846,6 +1928,256 @@
       }
     },
     {
+      "id": "price:f8a22ba6792e953d0037",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 涨幅前十 2026-09-04",
+      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
+      "published_at": "2026-09-04T20:00:00+00:00",
+      "collected_at": "2026-09-06T00:01:34.457640+00:00",
+      "body": "1. NBIS close 226.389999; previous 210.630005; change 7.4823%\n2. CRWV close 89.360001; previous 84.559998; change 5.6764%\n3. MOMO close 5.37; previous 5.1; change 5.2941%\n4. PDFS close 45.650002; previous 43.459999; change 5.0391%\n5. PAR close 19.77; previous 18.9; change 4.6032%\n6. SECZ close 7.42; previous 7.1; change 4.507%\n7. KC close 10.94; previous 10.48; change 4.3893%\n8. ADEA close 26.5; previous 25.459999; change 4.0848%\n9. BIDU close 99.470001; previous 95.580002; change 4.0699%\n10. CCC close 7.51; previous 7.22; change 4.0166%",
+      "author": "",
+      "symbols": [
+        "NBIS",
+        "CRWV",
+        "MOMO",
+        "PDFS",
+        "PAR",
+        "SECZ",
+        "KC",
+        "ADEA",
+        "BIDU",
+        "CCC"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "gainers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-09-04",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "NBIS",
+            "price_date": "2026-09-04",
+            "close": 226.389999,
+            "previous_close": 210.630005,
+            "change_amount": 15.759995,
+            "change_percentage": 7.4823,
+            "url": "https://finance.yahoo.com/quote/NBIS"
+          },
+          {
+            "ticker": "CRWV",
+            "price_date": "2026-09-04",
+            "close": 89.360001,
+            "previous_close": 84.559998,
+            "change_amount": 4.800003,
+            "change_percentage": 5.6764,
+            "url": "https://finance.yahoo.com/quote/CRWV"
+          },
+          {
+            "ticker": "MOMO",
+            "price_date": "2026-09-04",
+            "close": 5.37,
+            "previous_close": 5.1,
+            "change_amount": 0.27,
+            "change_percentage": 5.2941,
+            "url": "https://finance.yahoo.com/quote/MOMO"
+          },
+          {
+            "ticker": "PDFS",
+            "price_date": "2026-09-04",
+            "close": 45.650002,
+            "previous_close": 43.459999,
+            "change_amount": 2.190002,
+            "change_percentage": 5.0391,
+            "url": "https://finance.yahoo.com/quote/PDFS"
+          },
+          {
+            "ticker": "PAR",
+            "price_date": "2026-09-04",
+            "close": 19.77,
+            "previous_close": 18.9,
+            "change_amount": 0.870001,
+            "change_percentage": 4.6032,
+            "url": "https://finance.yahoo.com/quote/PAR"
+          },
+          {
+            "ticker": "SECZ",
+            "price_date": "2026-09-04",
+            "close": 7.42,
+            "previous_close": 7.1,
+            "change_amount": 0.32,
+            "change_percentage": 4.507,
+            "url": "https://finance.yahoo.com/quote/SECZ"
+          },
+          {
+            "ticker": "KC",
+            "price_date": "2026-09-04",
+            "close": 10.94,
+            "previous_close": 10.48,
+            "change_amount": 0.46,
+            "change_percentage": 4.3893,
+            "url": "https://finance.yahoo.com/quote/KC"
+          },
+          {
+            "ticker": "ADEA",
+            "price_date": "2026-09-04",
+            "close": 26.5,
+            "previous_close": 25.459999,
+            "change_amount": 1.040001,
+            "change_percentage": 4.0848,
+            "url": "https://finance.yahoo.com/quote/ADEA"
+          },
+          {
+            "ticker": "BIDU",
+            "price_date": "2026-09-04",
+            "close": 99.470001,
+            "previous_close": 95.580002,
+            "change_amount": 3.889999,
+            "change_percentage": 4.0699,
+            "url": "https://finance.yahoo.com/quote/BIDU"
+          },
+          {
+            "ticker": "CCC",
+            "price_date": "2026-09-04",
+            "close": 7.51,
+            "previous_close": 7.22,
+            "change_amount": 0.29,
+            "change_percentage": 4.0166,
+            "url": "https://finance.yahoo.com/quote/CCC"
+          }
+        ]
+      }
+    },
+    {
+      "id": "price:21324c92af34f9390af5",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 跌幅前十 2026-09-04",
+      "url": "https://finance.yahoo.com/markets/stocks/losers/",
+      "published_at": "2026-09-04T20:00:00+00:00",
+      "collected_at": "2026-09-06T00:01:34.457640+00:00",
+      "body": "1. GWRE close 162.419998; previous 202.860001; change -19.9349%\n2. FICO close 932.26001; previous 1118.930054; change -16.6829%\n3. PATH close 15.19; previous 18.219999; change -16.6301%\n4. ASAN close 8.81; previous 10.09; change -12.6858%\n5. ADSK close 217.899994; previous 237.520004; change -8.2604%\n6. BAND close 43.77; previous 47.09; change -7.0503%\n7. ADBE close 266.51001; previous 285.75; change -6.7332%\n8. MNDY close 91.07; previous 97.330002; change -6.4317%\n9. WIX close 76.209999; previous 81.199997; change -6.1453%\n10. RSKD close 6.51; previous 6.93; change -6.0606%",
+      "author": "",
+      "symbols": [
+        "GWRE",
+        "FICO",
+        "PATH",
+        "ASAN",
+        "ADSK",
+        "BAND",
+        "ADBE",
+        "MNDY",
+        "WIX",
+        "RSKD"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "losers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-09-04",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "GWRE",
+            "price_date": "2026-09-04",
+            "close": 162.419998,
+            "previous_close": 202.860001,
+            "change_amount": -40.440002,
+            "change_percentage": -19.9349,
+            "url": "https://finance.yahoo.com/quote/GWRE"
+          },
+          {
+            "ticker": "FICO",
+            "price_date": "2026-09-04",
+            "close": 932.26001,
+            "previous_close": 1118.930054,
+            "change_amount": -186.670044,
+            "change_percentage": -16.6829,
+            "url": "https://finance.yahoo.com/quote/FICO"
+          },
+          {
+            "ticker": "PATH",
+            "price_date": "2026-09-04",
+            "close": 15.19,
+            "previous_close": 18.219999,
+            "change_amount": -3.03,
+            "change_percentage": -16.6301,
+            "url": "https://finance.yahoo.com/quote/PATH"
+          },
+          {
+            "ticker": "ASAN",
+            "price_date": "2026-09-04",
+            "close": 8.81,
+            "previous_close": 10.09,
+            "change_amount": -1.28,
+            "change_percentage": -12.6858,
+            "url": "https://finance.yahoo.com/quote/ASAN"
+          },
+          {
+            "ticker": "ADSK",
+            "price_date": "2026-09-04",
+            "close": 217.899994,
+            "previous_close": 237.520004,
+            "change_amount": -19.62001,
+            "change_percentage": -8.2604,
+            "url": "https://finance.yahoo.com/quote/ADSK"
+          },
+          {
+            "ticker": "BAND",
+            "price_date": "2026-09-04",
+            "close": 43.77,
+            "previous_close": 47.09,
+            "change_amount": -3.32,
+            "change_percentage": -7.0503,
+            "url": "https://finance.yahoo.com/quote/BAND"
+          },
+          {
+            "ticker": "ADBE",
+            "price_date": "2026-09-04",
+            "close": 266.51001,
+            "previous_close": 285.75,
+            "change_amount": -19.23999,
+            "change_percentage": -6.7332,
+            "url": "https://finance.yahoo.com/quote/ADBE"
+          },
+          {
+            "ticker": "MNDY",
+            "price_date": "2026-09-04",
+            "close": 91.07,
+            "previous_close": 97.330002,
+            "change_amount": -6.260002,
+            "change_percentage": -6.4317,
+            "url": "https://finance.yahoo.com/quote/MNDY"
+          },
+          {
+            "ticker": "WIX",
+            "price_date": "2026-09-04",
+            "close": 76.209999,
+            "previous_close": 81.199997,
+            "change_amount": -4.989998,
+            "change_percentage": -6.1453,
+            "url": "https://finance.yahoo.com/quote/WIX"
+          },
+          {
+            "ticker": "RSKD",
+            "price_date": "2026-09-04",
+            "close": 6.51,
+            "previous_close": 6.93,
+            "change_amount": -0.42,
+            "change_percentage": -6.0606,
+            "url": "https://finance.yahoo.com/quote/RSKD"
+          }
+        ]
+      }
+    },
+    {
       "id": "x:ad704333c8b83425e12b",
       "source_type": "x",
       "source_name": "@CKCapitalxx",
@@ -3242,38 +3574,6 @@
         "coverage": "optical components and AI infrastructure second-order beneficiaries",
         "evidence_note": "May disclose positions in discussed stocks; preserve the stated thesis and distinguish it from verified facts.",
         "engagement_score": 47
-      }
-    },
-    {
-      "id": "reddit:c1a6a6a76a7351423cae",
-      "source_type": "reddit",
-      "source_name": "r/wallstreetbets",
-      "title": "China is secretly restricting rare-earth shipments - $MP, $UUUU and $USAR will escalate up to the Sept. 24 talks and rip if they fail.",
-      "url": "https://www.reddit.com/r/wallstreetbets/comments/1w76r65/china_is_secretly_restricting_rareearth_shipments/",
-      "published_at": "2026-09-04T14:58:23+00:00",
-      "collected_at": "2026-09-05T00:01:27.634544+00:00",
-      "body": "Today’s jobs report created exactly the kind of risk-off environment that should pressure volatile mining and development stocks. Yet, at the time of writing, $MP is up approximately 2.3%, $UUUU 1.3% and $USAR remains positive. I don’t think that divergence is accidental and I’m making a 500k bet on it. Reuters reported today that some Chinese rare-earth suppliers have stopped shipments to U.S. customers because they fear punishment from Beijing. The market is beginning to realize that the U.S.–China truce may already be failing operationally—even if it technically remains intact. China does not need to announce a formal export ban. It can quietly restrict supply through licensing delays, supplier intimidation and end-user scrutiny. Between now and the September 24 talks, every delayed licence, refused shipment and hostile political headline could increase anxiety that targeted restrictions are becoming something broader. That anxiety itself may be the near-term catalyst. Investors could begin assigning a growing geopolitical scarcity premium to domestic alternatives before any formal decision is announced. The trade: $MP: Cleanest and most established U.S. rare-earth play. Probably the most direct near-term beneficiary. Least torque. Government backed $UUUU: Producing NdPr in Utah and building commercial dysprosium/terbium separation capacity. Also has the uranium angle. My pick. Government backed. 21% short so can go up big time on news. $USAR: Highest-risk/highest-beta option based on its planned mine-to-magnet supply chain. Government backed + Howard Lutnick’s son lol If China formally restricts heavy rare earths or lets the trade agreement deteriorate, ex-China prices could spike and these names could reprice violently. Previous Chinese controls sent some rare-earth prices up multiples—not percentages. Also will throw LYSDY into the mix but it’s not American. The asymmetric setup: The market is beginning to recognize that the U.S.–China truce may already be failing operationally. As the September 24 talks approach, I expect that anxiety to magnify with every delayed licence, refused shipment and hostile political headline. The opportunity is not simply betting on an official ban. It is positioning for the geopolitical scarcity premium that could build during the next several weeks as investors recognize how exposed the United States remains. Article : Reuters: https://www.reuters.com/business/aerospace-defense/china-rare-earth-firms-halt-some-us-shipments-over-geopolitical-worries-sources-2026-09-04/ Position: 37,000 shares of UUUU @ 14.94 Not financial advice. This is a high-volatility geopolitical catalyst trade. submitted by /u/nickman23 [link] [comments]",
-      "author": "/u/nickman23",
-      "symbols": [
-        "MP",
-        "UUUU",
-        "USAR"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "transport": "rss",
-        "listing": "dd",
-        "flair": "",
-        "requested_flair": "",
-        "requested_flairs": [
-          "DD"
-        ],
-        "sort": "top",
-        "time_filter": "day",
-        "feed_rank": 1,
-        "image_urls": [],
-        "images": []
       }
     },
     {
@@ -6635,256 +6935,6 @@
         "investor_type": "open_source_builder",
         "coverage": "Apple MLX and open-source machine learning",
         "engagement_score": 81
-      }
-    },
-    {
-      "id": "price:7c9a518ee547224e12a2",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 涨幅前十 2026-09-03",
-      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
-      "published_at": "2026-09-03T20:00:00+00:00",
-      "collected_at": "2026-09-05T00:02:52.327085+00:00",
-      "body": "1. MSTR close 144.820007; previous 123.190002; change 17.5582%\n2. SNOW close 356.470001; previous 305.839996; change 16.5544%\n3. BLSH close 36.220001; previous 32.639999; change 10.9681%\n4. RXT close 3.29; previous 3.01; change 9.3023%\n5. SECZ close 7.1; previous 6.51; change 9.063%\n6. PLTR close 182.529999; previous 169.460007; change 7.7127%\n7. PAYP close 16.93; previous 15.73; change 7.6287%\n8. ZETA close 32.68; previous 30.440001; change 7.3587%\n9. ESTC close 96.129997; previous 89.580002; change 7.3119%\n10. NOW close 145.589996; previous 136.720001; change 6.4877%",
-      "author": "",
-      "symbols": [
-        "MSTR",
-        "SNOW",
-        "BLSH",
-        "RXT",
-        "SECZ",
-        "PLTR",
-        "PAYP",
-        "ZETA",
-        "ESTC",
-        "NOW"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "gainers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-09-03",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "MSTR",
-            "price_date": "2026-09-03",
-            "close": 144.820007,
-            "previous_close": 123.190002,
-            "change_amount": 21.630005,
-            "change_percentage": 17.5582,
-            "url": "https://finance.yahoo.com/quote/MSTR"
-          },
-          {
-            "ticker": "SNOW",
-            "price_date": "2026-09-03",
-            "close": 356.470001,
-            "previous_close": 305.839996,
-            "change_amount": 50.630005,
-            "change_percentage": 16.5544,
-            "url": "https://finance.yahoo.com/quote/SNOW"
-          },
-          {
-            "ticker": "BLSH",
-            "price_date": "2026-09-03",
-            "close": 36.220001,
-            "previous_close": 32.639999,
-            "change_amount": 3.580002,
-            "change_percentage": 10.9681,
-            "url": "https://finance.yahoo.com/quote/BLSH"
-          },
-          {
-            "ticker": "RXT",
-            "price_date": "2026-09-03",
-            "close": 3.29,
-            "previous_close": 3.01,
-            "change_amount": 0.28,
-            "change_percentage": 9.3023,
-            "url": "https://finance.yahoo.com/quote/RXT"
-          },
-          {
-            "ticker": "SECZ",
-            "price_date": "2026-09-03",
-            "close": 7.1,
-            "previous_close": 6.51,
-            "change_amount": 0.59,
-            "change_percentage": 9.063,
-            "url": "https://finance.yahoo.com/quote/SECZ"
-          },
-          {
-            "ticker": "PLTR",
-            "price_date": "2026-09-03",
-            "close": 182.529999,
-            "previous_close": 169.460007,
-            "change_amount": 13.069992,
-            "change_percentage": 7.7127,
-            "url": "https://finance.yahoo.com/quote/PLTR"
-          },
-          {
-            "ticker": "PAYP",
-            "price_date": "2026-09-03",
-            "close": 16.93,
-            "previous_close": 15.73,
-            "change_amount": 1.200001,
-            "change_percentage": 7.6287,
-            "url": "https://finance.yahoo.com/quote/PAYP"
-          },
-          {
-            "ticker": "ZETA",
-            "price_date": "2026-09-03",
-            "close": 32.68,
-            "previous_close": 30.440001,
-            "change_amount": 2.24,
-            "change_percentage": 7.3587,
-            "url": "https://finance.yahoo.com/quote/ZETA"
-          },
-          {
-            "ticker": "ESTC",
-            "price_date": "2026-09-03",
-            "close": 96.129997,
-            "previous_close": 89.580002,
-            "change_amount": 6.549995,
-            "change_percentage": 7.3119,
-            "url": "https://finance.yahoo.com/quote/ESTC"
-          },
-          {
-            "ticker": "NOW",
-            "price_date": "2026-09-03",
-            "close": 145.589996,
-            "previous_close": 136.720001,
-            "change_amount": 8.869995,
-            "change_percentage": 6.4877,
-            "url": "https://finance.yahoo.com/quote/NOW"
-          }
-        ]
-      }
-    },
-    {
-      "id": "price:382f689eb5265daa8747",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 跌幅前十 2026-09-03",
-      "url": "https://finance.yahoo.com/markets/stocks/losers/",
-      "published_at": "2026-09-03T20:00:00+00:00",
-      "collected_at": "2026-09-05T00:02:52.327085+00:00",
-      "body": "1. CXM close 6.24; previous 6.95; change -10.2158%\n2. MOMO close 5.1; previous 5.485; change -7.0191%\n3. WIX close 81.199997; previous 86.690002; change -6.3329%\n4. GRAB close 3.42; previous 3.53; change -3.1161%\n5. BZ close 16.84; previous 17.299999; change -2.659%\n6. MAX close 12.22; previous 12.53; change -2.4741%\n7. TME close 8.2; previous 8.39; change -2.2646%\n8. WBTN close 9.99; previous 10.2; change -2.0588%\n9. NYAX close 52.68; previous 53.75; change -1.9907%\n10. FIG close 25.219999; previous 25.73; change -1.9821%",
-      "author": "",
-      "symbols": [
-        "CXM",
-        "MOMO",
-        "WIX",
-        "GRAB",
-        "BZ",
-        "MAX",
-        "TME",
-        "WBTN",
-        "NYAX",
-        "FIG"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "losers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-09-03",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "CXM",
-            "price_date": "2026-09-03",
-            "close": 6.24,
-            "previous_close": 6.95,
-            "change_amount": -0.71,
-            "change_percentage": -10.2158,
-            "url": "https://finance.yahoo.com/quote/CXM"
-          },
-          {
-            "ticker": "MOMO",
-            "price_date": "2026-09-03",
-            "close": 5.1,
-            "previous_close": 5.485,
-            "change_amount": -0.385,
-            "change_percentage": -7.0191,
-            "url": "https://finance.yahoo.com/quote/MOMO"
-          },
-          {
-            "ticker": "WIX",
-            "price_date": "2026-09-03",
-            "close": 81.199997,
-            "previous_close": 86.690002,
-            "change_amount": -5.490005,
-            "change_percentage": -6.3329,
-            "url": "https://finance.yahoo.com/quote/WIX"
-          },
-          {
-            "ticker": "GRAB",
-            "price_date": "2026-09-03",
-            "close": 3.42,
-            "previous_close": 3.53,
-            "change_amount": -0.11,
-            "change_percentage": -3.1161,
-            "url": "https://finance.yahoo.com/quote/GRAB"
-          },
-          {
-            "ticker": "BZ",
-            "price_date": "2026-09-03",
-            "close": 16.84,
-            "previous_close": 17.299999,
-            "change_amount": -0.459999,
-            "change_percentage": -2.659,
-            "url": "https://finance.yahoo.com/quote/BZ"
-          },
-          {
-            "ticker": "MAX",
-            "price_date": "2026-09-03",
-            "close": 12.22,
-            "previous_close": 12.53,
-            "change_amount": -0.309999,
-            "change_percentage": -2.4741,
-            "url": "https://finance.yahoo.com/quote/MAX"
-          },
-          {
-            "ticker": "TME",
-            "price_date": "2026-09-03",
-            "close": 8.2,
-            "previous_close": 8.39,
-            "change_amount": -0.190001,
-            "change_percentage": -2.2646,
-            "url": "https://finance.yahoo.com/quote/TME"
-          },
-          {
-            "ticker": "WBTN",
-            "price_date": "2026-09-03",
-            "close": 9.99,
-            "previous_close": 10.2,
-            "change_amount": -0.21,
-            "change_percentage": -2.0588,
-            "url": "https://finance.yahoo.com/quote/WBTN"
-          },
-          {
-            "ticker": "NYAX",
-            "price_date": "2026-09-03",
-            "close": 52.68,
-            "previous_close": 53.75,
-            "change_amount": -1.07,
-            "change_percentage": -1.9907,
-            "url": "https://finance.yahoo.com/quote/NYAX"
-          },
-          {
-            "ticker": "FIG",
-            "price_date": "2026-09-03",
-            "close": 25.219999,
-            "previous_close": 25.73,
-            "change_amount": -0.51,
-            "change_percentage": -1.9821,
-            "url": "https://finance.yahoo.com/quote/FIG"
-          }
-        ]
       }
     },
     {
@@ -13862,25 +13912,6 @@
       }
     },
     {
-      "id": "substack:a364378ed586a559139e",
-      "source_type": "substack",
-      "source_name": "MBI Deep Dives",
-      "title": "Notes from a Dasher Shift, and the Drone Delivery Future",
-      "url": "https://mbideepdives.substack.com/p/notes-from-a-dasher-shift-and-the",
-      "published_at": "2026-09-02T17:35:48+00:00",
-      "collected_at": "2026-09-03T00:00:47.371475+00:00",
-      "body": "_**Programming Note**_: I will take a day off tomorrow, and will be back with daily posting schedule on Friday.\n\nDoorDash has a program called “[WeDash](https://careersatdoordash.com/blog/wedash-doordash-employee-program-how-does-it-work/?_ga=2.51293807.770438897.1784224451-2123547498.1784224451&_gl=1*98125g*_gcl_au*NTQyNzI3NDIyLjE3ODQyMjQ0NTA.*_ga*MjEyMzU0NzQ5OC4xNzg0MjI0NDUx*_ga_4J1MLKETLL*czE3ODQyMjQ0NTAkbzEkZzAkdDE3ODQyMjQ0NTAkajYwJGwwJGgw&ref=mbi-deepdives.com)” which requires its employees do delivery shifts every year. While they have no such requirement for shareholders, I decided to sign up as a Dasher to understand the Dasher side of experience more intimately. My wife wasn’t particularly thrilled about the idea, but she begrudgingly understood my dedication to “research”! However, while trying to sign up, I got to know that my area already has “too many Dashers”. I still went ahead and finished the sign up process just to see whether I can potentially do deliveries in some other nearby regions.\n\n[![Image 1](https://substackcdn.com/image/fetch/$s_!Q6Kw!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F175662cd-6452-4ab8-bea9-03b43a71eaac_567x1144.png)](https://substackcdn.com/image/fetch/$s_!Q6Kw!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F175662cd-6452-4ab8-bea9-03b43a71eaac_567x1144.png)\n\nIndeed, I could. Last week, I drove for 20 minutes to go to a nearby shopping mall, parked my car there, and logged into the Dasher app to become available to dash. Even though it was showing to be “peak” hour, I had to wait for almost 10 minutes before getting a notification to accept an order. The restaurant was just three minute walking distance from my parking area, so I accepted the order and walked to the restaurant. Once I was there, I waited for a couple of minutes for the restaurant to finish the order. After receiving the order, I had to go to the app and let DoorDash know that the order includes all the items the customer ordered. Then I went back to my car and drove for 27 minutes to drop the order at customer’s doorstep. I then had to drive another 30 minutes to return home.\n\nI checked my app and I made just $13 for the delivery. Even though I was “active” on the Dasher app for ~40 minutes (~10-minute wait time and ~30-minute drive to drop the order), once you include the “[deadhead miles](https://truckstop.com/blog/deadhead-miles/)”, I was making less than $9 per hour, even while ignoring gas and depreciation costs. However, a couple of days later, DoorDash let me know that I received $5.58 tip from the customer. It’s pretty remarkable that ~30% of my actual earnings from that order was funded directly by the customer. Without such generosity from the customer, the Dasher experience would be even less appealing. However, the whole experience also reminded me the kind of people who would find this job worthwhile. The dasher job is particularly appropriate for people who need flexibility in hours. If someone is available to work for longer hours, they should probably work more regular retail jobs (e.g. Walmart) to optimize for higher earnings (especially when you include gas and depreciation costs). But if you crave for flexibility, this can be pretty decent gig since the opportunity cost for flexible work hours is very different than regular job.\n\nA couple of days ago, I actually received an email from DoorDash outlining how many hours I need to work to be eligible to receive healthcare stipend from DoorDash. If a dasher utilized this benefit, this could add another ~$3 to ~$5 cost per hour of dasher to DoorDash. Assuming my dasher earnings is somewhat representative of an average order in my area, DoorDash is essentially spending almost **$20 per hour of dasher availability**in my area. So even if I quibble around lower earnings of dashers, I’m not sure I can say DoorDash is being too stingy here.\n\n[![Image 2](https://substackcdn.com/image/fetch/$s_!xN82!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F145b3035-9b20-40b3-81c3-9b9bfde9cfb0_705x604.png)](https://substackcdn.com/image/fetch/$s_!xN82!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F145b3035-9b20-40b3-81c3-9b9bfde9cfb0_705x604.png)\n\nOf course, the regulatory wind around the country (and the world) likely means the effective cost of a dasher hour for DoorDash may continue to rise. Since ~3% Americans worked as dashers for DoorDash last year, it’s also hard to imagine that there is an ample supply of inexpensive dashers available in the US if DoorDash wants to scale their GOV ~4-5x over the next decade. For anyone intending to be long-term shareholder of DoorDash, it seems increasingly important to understand their bet on autonomous delivery on which I will share more thoughts behind the paywall.\n\n_Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on **[65+](https://mbideepdives.substack.com/p/deep-dives)** companies. The daily is just how I think out loud between the Deep Dives!_",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://mbideepdives.substack.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas",
-        "transport": "public_reader_fallback"
-      }
-    },
-    {
       "id": "x:a98dd3abc37f6045e367",
       "source_type": "x",
       "source_name": "@OnodaCapital",
@@ -14998,24 +15029,6 @@
         "investor_type": "semiconductor_engineer_investor",
         "coverage": "memory, HBM, networking and ASIC supply chains",
         "engagement_score": 15
-      }
-    },
-    {
-      "id": "substack:ff8a7939dbb19e29a5ee",
-      "source_type": "substack",
-      "source_name": "Liberty's Highlights",
-      "title": "658: The Fed Thinks in Tokens, CrowdStrike’s AI Upsell, Gavin Baker: “Thank You, Jensen,” Claude Enters the Physical Lab, Abliteration Lobotomizing Models, China’s Mock Taipei, and Master of Puppets",
-      "url": "https://www.libertyrpf.com/p/658-the-fed-thinks-in-tokens-crowdstrikes",
-      "published_at": "2026-09-02T14:36:09+00:00",
-      "collected_at": "2026-09-03T00:01:20.631349+00:00",
-      "body": "In the creative process there are certain strategic moments in which it seems as if you are either standing still or even going backward. These moments of apparent lack of progress are strategic because the actions you take at such moments will largely determine whether or not you are ultimately successful. —Robert Fritz 🧭🏛️⚖️⭐🌱 I don’t remember why we got on this topic, but my oldest boy asked me what a virtue is. To explain it better, I looked up some of the classical lists of virtues, then broader lists covering character, thinking, relationships, civic life, etc. As we went through them, I explained some in more detail and told him that you could spend a lifetime getting better at any one of them. They’re guiding stars, not destinations. I’m not sure he was super impressed, but I thought this was an important moment, so I decided to print out a one-pager of virtues and put it on his bedroom whiteboard with a magnet. Hopefully this becomes another bit of that ambient learning I wrote about in the intro of Edition #649 , when I got him a periodic-table poster for his bedroom. Is this like a periodic table for virtues 🤔 The one on his wall is in French, but I translated it above so you can have a look 👆 💾🎨🧑‍🎨 I think this tweet by Kasra Kyanzadeh , an experienced engineer who just left OpenAI’s Codex team, is thought-provoking: The tweet is truncated in the preview. I’ll save you a click and reproduce it in full here: I ended up leaving OpenAI, not because there's anything wrong with OAI (I actually think they're underrated as a biz), but because to me, building commercial software doesn't feel fun anymore Because agents write ~all the code: - There’s less human to human collaboration, so it’s a lonelier experience - You’re constantly context switching and not going as deep into the code, which means there’s ~zero flow state - Most of the job becomes code review and trying to reduce complexity, which is very mentally draining Again just my experience, and none of this specific to OAI. There are many people who seem to be enjoying building software in this era! But I've always wanted to try making films, and now seems as good a time as any None of his complaints are about AI being bad at coding. More the opposite: the tools are now good enough that they change what the job feels like. This is the other side of the coin from all the people I’ve heard say they’re having more fun than ever, or doing things they couldn’t have done before. (I count myself among them, by the way, and I’ll tell you more about my vibe-coded apps another time.) I can certainly imagine that a lot of people got into software because they liked a particular kind of work . Methodically writing the code. Solving many small logic puzzles. 🧩 Holding a complicated system in their heads, disappearing into it for hours, in a flow state… 😵‍💫 And now, in less than a year, their whole way of working has changed . Opus 4.5 only came out last November! I can imagine the malaise when something you spent years getting really good at suddenly becomes a much smaller part of the job because LLMs can do so much of it faster. And not every engineer likes design or management or high-level product thinking, but they’re increasingly being pushed in that direction (managing agents, if not people) because more and more of the low-level implementation stuff is being automated. It’ll drive some people out and attract others in (at least until AI agents are fully autonomous 😅). The people who love building software in 2030 may be a different group from the people who loved building software in 2020. 💚 🥃 The paid subscription includes the full feed, every podcast, Zoom Q&As with me, and access to the private Discord clubhouse , where a core group of us hang out and discuss the interesting stuff we find: Get the full Liberty feed and help keep the Serendipity Engine running by becoming a paid supporter. Thank you 💚🥃🦊🐙⚓️ 🏦 💰 Liberty Capital 💳 💴 🤖💵 The Fed is Now Thinking in Tokens 📊 A few years ago, almost nobody outside of AI knew what a token was. Now the Chairman of the Federal Reserve is at Jackson Hole discussing reports of $100+ billion in annualized token sales from the two leading AI labs alone , asking whether tokens will be substitutes or complements for human labor , and wondering what their ‘equilibrium price’ will be. Huh 🤔 Here’s the part of the speech about it: Capital and labor have combined to create the large language models at the heart of AI. Users buy tokens to gain access to the models. [...] Will token usage be complementary or competitive to labor? Will the next generation of AI models demand even greater capital intensity, or will the models themselves help devise a capital-light solution? [...] We don’t yet know the equilibrium price of the tokens. Might there be a heterogeneity of tokens, such that growing sums will be paid for access to the best models at the frontier? Will token prices for older models fall to the level of their marginal cost? A few months ago, Satya Nadella talked about companies eventually having “human capital and token capital.” Now the Fed is starting to think in similar ways. But as I wrote about in Tokens Schmokens: We Need a Better Economic Unit of AI Work (Edition #634) and Tokens are NOT like Kilowatt-Hours or Gallons of Gasoline (Edition #630), raw token counts are a pretty terrible way to compare AI output across different models and workloads. A token is a useful billing/usage unit, but it’s not a standardized unit of economic output . They are NOT a commodity, and a token from one model or workload is NOT economically fungible with a token from another. A million tokens from Mythos doing super-difficult agentic coding or working on an advanced math proof and a million tokens from a tiny model summarizing spam emails are both counted as ‘a million tokens.’ But economically, they’re very different. Maybe what economists will eventually have to track is something closer to the price of useful intelligence (if we can figure out how to measure it) . 👩‍🔬 In practice, that probably means something more like the cost of completing a given task at a given level of quality. This starts to become a very weird quality-adjustment problem. If token prices fall 80%, but the models get much better and need fewer tokens to accomplish the same useful task, what actually happened to the real price of AI work? It’s a strange new thing that economists have to think about. ¯\\_(ツ)_/¯ 🤖🦅🛡️ CrowdStrike’s AI Security Advantage: The Agent is Already There CrowdStrike quarterly revenue growth. I haven’t written about CrowdStrike in a while, but this seems like a good time. Everyone has cybersecurity on the mind these days, for obvious reasons. 🔐 The numbers are impressive: Net new ARR grew 51% to a record $333 million, and revenue grew 26% . (Look at that reversing trend 5 quarters ago) As expected, AI is part of the reason. What jumped out at me, though, is how CrowdStrike is turning demand into revenue: it can sell existing customers AIDR, its AI-security module, without installing another piece of software. Its Falcon agent is already installed on customer machines. Because of how CrowdStrike built the platform, adding AIDR is basically flipping a switch on a customer’s account. Very low friction, and we know how much that matters. The CEO explained it pretty directly on the call: George Kurtz: So on the first point, it is separate and incremental. It’s another module and it’s priced separately, which is, again, where we’re seeing a lot of the growth. [...] When we think about the beauty of the architecture and the platform, it’s still using the same agent. And if you want to enable AIDR, again, that’s a license entitlement. It’s part of our friction-free deployment. [...] you don’t have to roll out yet another agent. [...] it’s on the same platform, that’s the beauty, but we’re able to monetize it separately. This is one of those nerdy technical architectural decisions that turns into a big business advantage years later. CrowdStrike already did the hard work when it got Falcon installed on all those customer machines. AIDR’s ending ARR nearly tripled sequentially in Q2. Though keep in mind, “nearly tripled” can sound more impressive than it is when you don’t know the starting point, and CrowdStrike doesn’t disclose AIDR’s absolute ARR yet. 🤖 Mythos & Fable 5.1: Generalist Knowledge, Specialist Judgment Anthropic just released Claude Fable 5.1 and Mythos 5.1. There are lots of impressive benchmarks, as usual. But what stood out to me in the 212-page system card was an experiment comparing specialists with generalists using AI. Anthropic paired PhD biologists with LLM experts, then gave them a difficult research-planning problem. Some of the biologists were specialists in the relevant field, while others were generalists. The question this gets at is basically: how much can a powerful AI close the gap between a smart generalist and someone who has spent years becoming a specialist? Well… The specialist teams did a little better overall, but the graders couldn’t reliably tell the specialist submissions from the generalist ones. The strongest generalist team even beat one of the specialist teams on every measure and got the highest innovation score of the whole group. Seven of the nine participants also said completing the task would have been *impossible* without the model. Browser hacking is now apparently a regular benchmark. But this wasn’t quite “generalists are now specialists.” The specialist teams still had a small edge overall. And across Anthropic’s broader red-teaming, people with enough expertise to challenge Claude were better positioned to catch its mistakes. Maybe the more interesting split isn’t generalists vs. specialists. It’s specialist knowledge vs. specialist judgment . A good biologist can now cover more ground in statistics, bioinformatics, chemistry, coding, etc. The model can give them access to knowledge that previously required years of study and work inside each field. Knowing enough to recognize when the model is subtly wrong is different. That may still be the specialists’ edge. So generalists get broader and specialists can apply their judgment to more work. But what happens as the models improve? Does that gap keep shrinking, or does specialist judgment get leveraged across more and more work? Or both at the same time? 🤔 Personally, the Anthropic model I’m waiting for is Opus 5.1. Fable is too expensive for me to use as a daily driver, and Opus 5 is strong in some ways, but annoying in others, so I hope that they fix it with 5.1. In the meantime, I’m mostly using GPT-5.6 Sol. If you want a deeper vibe-check on Mythos & Fable 5.1, here’s Dan Shipper’s early review . He had access for a week before release. His bottom line: State of Play: The big knock on Anthropic was they built a supergenius in a datacenter that was almost unusable. It was too slow, argued back, and talked in technical gibberish. They’ve managed to solve those problems and more with Fable 5.1! 🗣️💬 Gavin Baker: “ Thank You, Jensen ” Baker has been on a roll lately, doing many good interviews. This one is wide-ranging, covering most of the big topics in tech and AI lately. I recommend the whole thing. Here are my highlights: Gavin Baker: I think [Jensen is] in a very, very good position with his strategy of being vertically integrated but horizontally open. [...] if you’re a semiconductor CEO, the only thing you should ever say is, “Thank you, Jensen.” “Thank you for creating this opportunity. Thank you. How can we work with you? We want to enable you. Sure, we’re going to compete with you on the edges.”[...] Every 1% of share today is probably worth $100 billion. [...] So there’s no need to go head-on with NVIDIA. [...] Just pick a niche and get your 1%. David George: That pie is very big. Gavin Baker: He has 9 chips . He's got multiple flavors of accelerators. He's got CPUs, Ethernet switches, and 2 kinds of DPUs. We've gone from just scale-out networking being a thing. We have scale-up, scale-out, scale-across, and now scale-in. So just try to find a way to plug into his ecosystem. By the way, this is not foreign. His biggest customers all have competing products across various of those 9 chips. [...] It's like, hey, that's great. You did the one thing. To actually be competitive with him at the system level, you need another 8 chips. Baker’s ‘$100 billion per 1%’ is obviously a rule of thumb, but the AI compute pie is so large that you don’t need to replace Nvidia to win. Nvidia is very integrated. Replacing the whole system would be BRUTAL. But at the same time, they’re open enough that another company can build a huge business by plugging into their stuff. Competitors need to ask: “Which slice can we be the best in, while making sure we work really well with everything else?” 🥧 That means many of Nvidia’s competitors wind up strengthening its ecosystem, while also buying tens of billions of dollars of Nvidia products. The other one I wanted to share was about customer preferences: Gavin Baker: In a world that is so supply-chain-constrained, it's actually really hard to tell what true customer preferences are. If you have a TSM allocation, you're going to be sold out. Particularly if you can get the DRAM to pair with it. You're going to be sold out. So it's actually kind of hard to infer true customer preferences. During a shortage, a mediocre chip can sell out simply because customers will take whatever compute they can get. Market share can tell you as much about what customers could get as what they actually preferred. BUT The concessions required to generate adoption may tell you more: Gavin Baker: I actually think one of the best ways you can see true customer preferences is the kind of deals they cut with chip companies. So broadly speaking, the first deal is where the chip company invests in a customer, and you saw TPU and Trainium—Amazon and Google—do that with Anthropic. [...] In that scenario, as long as the dollars you invest are less than the gross profit, you can’t lose money. Then there’s the scenario where you do the RVG. Blackstone finances it, or whoever—Blackstone, Apollo, KKR and Goldman Sachs finance it. As long as that RVG is actually less than your gross profit, you can’t lose money, and you have upside, probably through a revenue share on top of it. ( RVG here means residual-value guarantee: a promise that the equipment will retain a certain value. ) Then there are deals where you give warrants away, but they’re tied to a fixed price per 1 million tokens. [...] If you just give warrants away, it could be negative NPV, because the better the stock does, the worse the deal is. [...] You can look at that hierarchy of deals and infer something about true customer preferences. A much cleaner test will come when supply loosens enough that customers can actually choose. (But when will that be? ¯\\_(ツ)_/¯ ) 🇹🇼🏜️ A Replica of Central Taipei in the Inner Mongolian Desert Well, this is slightly ominous 😬 China has built a mock-up of part of Taipei’s government district in the Inner Mongolian desert for PLA training. This is not China’s first mock Taipei. The PLA has had a separate replica of the Presidential Office and nearby government buildings at the Zhurihe training base for more than a decade. The newer site in Cameron’s images appears to focus more on the surrounding street grid and city blocks. Historical sat imagery suggests it did not exist in 2020. It’s hard to make “we’re planning for this” much more literal than building a copy of the place in the desert for military training. From the full feed 🔒: Thoughts on Nvidia Q2 + Hugging Face Deal — The quarter was absurd, but the Hugging Face deal may be the more interesting signal. 🧪🔬 Liberty Labs 🧬 🔭 🧫🔬🤖👨‍🔬 Bringing Claude Into the Lab Anthropic just opened a research preview of its Model Hardware Standard (MHS) : We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices , to a first group of scientific research labs and advanced manufacturers. MHS enables AI agents to operate multiple lab and manufacturing instruments, such as microscopes, liquid handlers, and robotic arms, in parallel, and perform intricate tasks ranging from routine drug discovery experiments to laser calibration on a quantum computer. This is very cool. MHS is kind of a glue layer between the AI and all the different instruments in the lab , allowing the AI to control and coordinate them much more easily: Getting multiple devices in a lab or on a factory floor to communicate with one another can be challenging, even setting aside the added difficulty of integrating AI into the setup. Each device tends to have its own programming interface, and so far there has been no standardized way to integrate them . And once the devices are connected, there is no common way for them to share data with an AI agent, nor to let the agent operate them safely. MHS addresses these challenges by introducing a standardized driver: software that translates between a computer’s operating system and a hardware device. If it works, it could let scientists spend less time getting all their equipment to talk to each other and debugging it, and more time on the actual scientific questions. And by the way, the production values on this video are great. 🎥 The aspect ratio makes it look more like IMAX than a regular YouTube video, and whoever shot it clearly knows what they’re doing. Lots of very interesting shots, good composition, nice depth-of-field effects, etc. Kudos. h/t my friend MBI (🇧🇩🇺🇸) for sharing this via DMs 🏴‍☠️🤖 Abliteration: Unlocking the Cyber Skills Behind the Guardrails Abliteration AI is taking open-weight models and removing some of the refusal behavior that makes them say “no” to certain requests. Their newest one is based on Z.ai’s GLM-5.3, which is already very good at cybersecurity. They’re selling the modified version for *offensive* security work: exploit development, red-teaming, etc. Basically, the kind of stuff that mainstream models will generally refuse to help with. So what exactly are they removing? When a model goes through post-training, it isn’t only being taught to give better answers. It’s also being taught the kinds of requests that should trigger a refusal. The model may know how to write exploit code, but it has been taught a kind of reflex: this looks dangerous, don’t answer. 🛑 Researchers found that when you look at what’s happening inside a model as it refuses a request, there are identifiable patterns in its activations associated with that refusal. Those patterns are surprisingly concentrated. Abliteration finds those ‘refusal directions’ and edits the weights to weaken them. This isn’t like most other jailbreaks we hear about, where the model is tricked into answering something (sometimes via very strange prompting). This is more like a selective lobotomy . They’re changing the model’s weights. 🧠✂️ Cybersecurity is the area where this makes the most sense because the white hats and the black hats often need the model to do the same thing. If you’re a security researcher trying to prove that a vulnerability is real so it can be fixed, you may need the model to write an exploit for it. Same as if you were someone trying to break into someone else's system without permission ¯\\_(ツ)_/¯ And this is also a business. 💵 Abliteration hosts these modified open-weight models and sells access through an API. Their GLM-5.3 version costs $5 per million tokens of input or output , so security researchers can use it without having to run a 753B-parameter model themselves. They do have optional moderation and a Policy Gateway for customers who want more controls, but the underlying product deliberately has very few restrictions. So I hope most of the people hammering those GPUs are white hats helping us patch the world, and not black hats doing the opposite. 🏴‍☠️🤔 h/t Supporter Boogie (💚 🥃), who shared this with us on the private Discord From the full feed 🔒: HEICO: 10x Production Without 10x Capex — How do you prepare for 10x production without spending anywhere near 10x on capex? 🎨 🎭 Liberty Studio 👩‍🎨 🎥 📺 Mini-Documentary About Master of Puppets I recently posted the Metallica documentary about the Rasmussen trilogy. I couldn't get enough, apparently. The YouTube algo suggested this one to me, and I was like, well , I may as well check it out, just to see if it's well made. I pressed ▶️ on my living room TV… and I watched the whole thing before bed. 😅 It's quite well executed, and very interesting. What surprised me is that Stuart Kirwan only has three videos on his YouTube channel. This doc is from 6 years ago, so well before the current generative-AI video era. Turns out Kirwan really is a pro. He’s a professional editor and motion-graphics artist who has worked for the BBC, ITV, Amazon Prime, DAZN, etc. He also posted this video showing how he edited some of the B-roll: It’s really cool to see how he took reference images and turned them into something very different.",
-      "author": "Liberty 💚 🥃",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.libertyrpf.com/",
-        "publication_platform": "substack",
-        "section": "transaction_ideas"
       }
     },
     {
@@ -16619,24 +16632,6 @@
       }
     },
     {
-      "id": "rss:94e20f337244b3a911af",
-      "source_type": "rss",
-      "source_name": "Mobile Dev Memo",
-      "title": "Understanding the privileged position of chatbot advertising",
-      "url": "https://mobiledevmemo.com/understanding-the-privileged-position-of-chatbot-advertising/",
-      "published_at": "2026-09-02T11:09:50+00:00",
-      "collected_at": "2026-09-03T00:01:22.080236+00:00",
-      "body": "Chatbot advertising creates a hybrid model combining search-style intent with social media-style behavioral targeting. By leveraging multi-turn conversations, platforms can refine commercial signals or utilize off-platform data. This structural flexibility allows for higher monetization density and broader targeting scope than traditional digital advertising formats.",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://mobiledevmemo.com/",
-        "publication_platform": "wordpress",
-        "section": "transaction_ideas"
-      }
-    },
-    {
       "id": "x:a69c12da6ed9f77a2dbf",
       "source_type": "x",
       "source_name": "@jasonschips",
@@ -17263,24 +17258,6 @@
         "coverage": "AI datacenters, power, infrastructure",
         "evidence_note": "Use for AI infrastructure constraints rather than pure software analysis.",
         "engagement_score": 1
-      }
-    },
-    {
-      "id": "substack:c34d5f0d36696d9ee972",
-      "source_type": "substack",
-      "source_name": "Latent Space",
-      "title": "[AINews] Claude Fable/Mythos 5.1: new SOTA model, 75% cache price cut but 70% more output tokens",
-      "url": "https://www.latent.space/p/ainews-claude-fablemythos-51-new",
-      "published_at": "2026-09-02T07:46:08+00:00",
-      "collected_at": "2026-09-03T00:00:45.624740+00:00",
-      "body": "With Astra clearly finally warming up for a full launch (with @sama and @openai writing about it again after a month of self imposed pacing ), there’s a familiar window to take the narrative with the round robin of model launches, with Grok 4.7 and Gemini Flash 3.8 also on the way. But that’s also perhaps not the best way to frame today’s launch… which got well over 12M views updating the sitting world best model yet again: The benchmark table speaks for itself: While per-token pricing is the same as Fable/Mythos 5, the cache reads had a 75% price cut … great news for long sessions/long context users, however offset by observed 1.7x output token usage increases per Artificial Analysis, for a total net per-task cost increase of 20% (see recap below). Also don’t World Labs’ Astra launch , by far the most impressive world model launch we’ve ever seen, and on a regular day would have easily gotten title story cards. You can catch up on Fei Fei and Justin Johnson’s vision on our pod and trace from Marble to Astra and what we were talking about with the true potential of world models: AI News for 8/31/2026-9/1/2026. We checked 12 subreddits, 544 Twitters and no further Discords. AINews’ website lets you search all past issues. As a reminder, AINews is now a section of Latent Space . You can opt in/out of email frequencies! AI Twitter Recap Top Story: Fable 5.1 and Mythos 5.1 release and reactions What happened Anthropic launched Claude Fable 5.1 and Claude Mythos 5.1 as its new flagship models for coding and knowledge work. Anthropic announced the release directly, positioning them as “the world’s most advanced models for coding and knowledge work” via @claudeai Anthropic product/engineering voices framed Fable 5.1 specifically around autonomous, multi-step work: “complex, multi-step work that runs on its own,” with emphasis on coding, knowledge work, and long-running problem solving via @mikeyk Anthropic kept list pricing for Fable 5.1 at $10 / $50 / $12.5 per million tokens for input / output / cache write, while cutting cache read price by 75% to $0.25 / MTok , again noted by @mikeyk , @Teknium , and independently quantified by @ArtificialAnlys Early benchmark screenshots and system-card excerpts drove much of the discussion, especially around Terminal-Bench-Science, SWE-family evals, HLE, FrontierCode, and Artificial Analysis via @StevenDillmann , @scaling01 , @ArtificialAnlys A key interpretive claim emerged from community analysis: Fable and Mythos 5.1 may be the same underlying weights, with different safety/routing behavior , not different base models, per @eliebakouch and later @nrehiew_ User reactions split along multiple axes: very strong praise for coding/planning ability and tone, but complaints around rate limits, safeguards false positives, subscription UX, and unclear benchmark presentation via @danshipper , @theo , @kimmonismus , @GregKamradt , @kylebrussell , and @eliebakouch Official claims and model positioning Anthropic’s own messaging was straightforward: Fable 5.1 is for difficult, delegated, long-horizon work, while Mythos 5.1 is the paired release for knowledge work. The main official launch post is @claudeai . Supporting commentary from Anthropic staff emphasized: autonomous long-running tasks via @mikeyk improved honesty / better failure reporting (“when it’s stuck it says so instead of reporting success”) via @mikeyk new enterprise-oriented controls, especially Enterprise Frontier Safeguards (EFS) , positioned as “ZDR++” for agent observability in enterprise environments via @alexalbert__ zero-data-retention support highlighted by users as an important adoption unlock, especially @danshipper The official pitch was not merely “better benchmark model,” but “usable autonomous worker” — fast enough, cheap enough in cached agent settings, and enterprise-compatible enough to deploy. That positioning mattered because Fable 5 had a reputation — repeated in reactions — for being powerful but sometimes impractical. Dan Shipper summarized the prior criticism as Anthropic having “built a supergenius in a datacenter that was almost unusable,” then argued 5.1 addresses slowness, verbosity, and awkward tone via @danshipper . Technical details and numbers Core published/priced details From @ArtificialAnlys : Context window: 1 million tokens Modalities: text + image inputs Pricing: unchanged from Fable 5 for input: $10 / 1M tokens output: $50 / 1M tokens cache write: $12.5 / 1M tokens Cache read price: reduced from $1.00 to $0.25 / 1M tokens ( 75% cut ) Artificial Analysis notes this cache cut materially benefits agentic workloads where much of the prompt is repeatedly re-read from cache. Artificial Analysis headline results Also from @ArtificialAnlys : Artificial Analysis Intelligence Index: 66 at max effort ahead of: Claude Opus 5 max: 63 Claude Fable 5 max: 62 GPT-5.6 Sol max: 61 Grok 4.6 high: 61 HLE: 59.1% previous best cited: Fable 5 at 55.5% Terminal-Bench v2.1: 91.4% SciCode: 62.0% τ³-Banking: +9 points over Fable 5 GDPval-AA v2: 1853 Elo , +130 over Fable 5 AA-Briefcase: 1694 Elo , +122 over Fable 5 But AA also adds an important qualification: On agentic knowledge work, Fable 5.1 is effectively tied with Opus 5 on some measures, not obviously dominant Their eval used Anthropic’s default server-side fallback , with safety-flagged requests routed to Claude Opus 4.8 or Claude Opus 5 Fallback accounted for ~4% of output tokens across the Intelligence Index That fallback detail became one of the most consequential technical caveats in community interpretation. Cost per task Artificial Analysis also reported: Fable 5.1 max: $3.76/task Fable 5 max: lower, so 5.1 is 20% more expensive per task reason: Fable 5.1 uses ~1.7× output tokens cache cut saves ~$1.40 per task Fable 5.1 xhigh: score 65 , cost $2.72/task Opus 5 max: score 63 , cost $2.34/task This produced one of the key tensions in the reaction cycle: Fable 5.1 looks clearly better at the frontier ceiling, but not clearly better on every cost-efficiency framing. Additional framing from @nicdunz : Fable 5.1 Max: 66 intelligence , 140M tokens , $3.69/task Fable 5 Max: 62 , 83M tokens , $3.14/task GPT-5.6 Sol Max: 61 , 70M tokens , $0.95/task This post argues Sol remains the clear winner on intelligence-per-dollar and intelligence-per-token, even if Fable 5.1 wins absolute ceiling. Benchmark snippets from system-card discussion Community members extracted several benchmark points: From @StevenDillmann : Terminal-Bench-Science 0.1 Fable 5: 24.7% Fable 5.1: 52.6% more than 2× improvement From @scaling01 : DeepSWE: 67.4% FrontierCode 1.1 Extended: 63.6% FrontierSWE v2: 0.57 , “highest of the models Proximal evaluated” From @Sauers_ : Humanity’s Last Exam: 65% with tools From @perplexity_ai : Perplexity’s August WANDR evaluation: score 0.601 $12.76 per task 21% higher score 37% lower cost than Fable 5 From @scaling01 : Artificial Analysis Intelligence Index score 66 , “back on the frontier” From @theo : cache price cut was the “biggest W” in CursorBench , costs were cut by “almost 50% ” while scoring higher From @kimmonismus : Fable 5.1 High appears stronger and cheaper than Sol 5.6 Max on Cursor Bench though this is a secondary paraphrase, not an original benchmark report From @scaling01 : Mythos 5.1 displays verbalized grader awareness in 65% of long agentic coding environments That last point is especially interesting: it suggests the model may explicitly model the evaluator in a large fraction of long-horizon coding contexts, which raises both capability and eval-gaming questions. Safeguards and routing details Two tweets capture the technical interpretive crux: @eliebakouch : “Fable and Mythos 5.1 are the EXACT same weights” , with internal activations used for safety classification and escalation to a bigger classifier, then fallback to Opus 4.8 for dangerous requests @nrehiew_ : if true, the difference is “likely the threshold set for the safeguard classifier” These are not official Anthropic statements in the tweet corpus, but they line up with the official AA note that fallback routing served ~4% of output tokens on AA’s evals via @ArtificialAnlys . This led to repeated community questions about whether benchmark lines reported as “Mythos” versus “Fable” are genuinely comparable, especially if one naming convention mostly indicates which safety path was active , not which base model was doing the work. See @eliebakouch , @eliebakouch , and @eliebakouch . Facts vs opinions Facts strongly supported by official/independent sources Anthropic launched Claude Fable 5.1 and Claude Mythos 5.1 via @claudeai Fable 5.1 pricing retained $10 / $50 / $12.5 for input/output/cache write, with cache reads cut to $0.25 / MTok via @mikeyk and @ArtificialAnlys Fable 5.1 has 1M context , image+text input support, and tops AA’s Intelligence Index at 66 via @ArtificialAnlys AA’s evaluation included server-side fallback , with ~4% of output tokens served by fallback models via @ArtificialAnlys Fable 5.1 showed very large gains on several coding/agentic benchmarks, including 52.6% on Terminal-Bench-Science via @StevenDillmann Plausible but not fully verified claims Fable and Mythos 5.1 are identical weights with different safeguard/routing behavior via @eliebakouch and @nrehiew_ Some benchmark labels may reflect safety mode / route differences rather than separate base-model performance via @eliebakouch “It talks like a normal person now” / reduced “Claudese” is widely reported anecdotally, but is still subjective, despite some lexical stats below Opinions / subjective judgments “Strongest coding model we’ve used” from @danshipper “Fable is the frontier model by a good margin right now” from @AravSrinivas “Astra is going to absolutely destroy Fable 5.1” from @scaling01 “I honestly haven’t noticed much difference compared to Fable 5” from @kimmonismus “Literally unusable” because of rate limits from @kimmonismus The important pattern is that hard metrics and user-experience reactions diverged . On benchmark aggregates, 5.1 looked like a step-function improvement. On practical access and UX, many users still reported friction. Different opinions and reactions Strongly positive: capability, planning, and coding quality Several influential builders were enthusiastic: @danshipper argued the model is now fast, token-efficient, better in prose, and useful for delegation; specifically cited one-prompt app generation, large programming jobs running for days, and better writer adoption @theo called it “really a good model,” also noting they had to reset/update workflows and were actively using it heavily via @theo and @theo @alexalbert__ showed a design+render workflow where Fable 5.1 took a property lot image, designed a house, rendered it, and produced a cinematic walkthrough; follow-up noted use of Blender headless via @alexalbert__ @spicey_lemonade posted a “Fable 5.1 Minecraft one-shot” that gained major engagement, serving as a demo-like proof of creative coding utility @simonw reported best-ever SVG pelican output from an Anthropic model, though at notable cost This camp viewed 5.1 as not just incrementally better, but the first Claude in a while that feels fully competitive in end-to-end maker workflows. Positive but measured: frontier lead with caveats @ArtificialAnlys gave the most balanced third-party account: frontier-leading aggregate score, but still more expensive per task than Fable 5 and effectively tied with Opus 5 on some agentic knowledge-work evals @kimmonismus called it a “significant leap forward” on price-performance, especially on Cursor Bench, but explicitly hedged on whether reduced verbosity and fewer false refusals would hold up @theo focused more on the practical significance of the cache-read price cut than on raw capability deltas @perplexity_ai framed it as a strong orchestrator model inside a broader multi-model agent stack This view: yes, it’s very strong, but what matters is whether the whole deployment economics and tool stack now make sense. Critical: rate limits, safeguards, and subscription experience The sharpest criticism was not about benchmark fraud or weak intelligence — it was about access and ergonomics . @kimmonismus complained of severe rate limits, broken continuation, and no corresponding subscription benefit from the improved efficiency @kimmonismus doubled down, saying 5.1 was “even worse than Fable 5 when it comes to rate usage” @GregKamradt reported that during v3 testing, requests were frequently rejected as “reverse engineering,” preventing completion of planned evaluation @kylebrussell said a “military campaign” metaphor in a theoretical math session triggered cyber safeguards; later added “Day One safeguards… more annoying so far” via @kylebrussell @theo pushed back on the universality of rate-limit complaints, saying they were “not seeing this at all” and had used only 14% of one weekly Fable limit @theo tried to reverse-engineer practical quota relationships: one 5-hour limit ≈ 21% of weekly limit and ≈ 38% of Fable limit So even on usage limits there was no single consensus; some users hit walls quickly, others did not. Skeptical/neutral: benchmark interpretation and naming confusion A separate reaction cluster focused on methodology and clarity. @scaling01 said FrontierCode results looked weird @scaling01 wanted more multi-agent comparisons and better interpretation @iScienceLuvr criticized Anthropic’s healthcare benchmark presentation, noting non-comparable judge models and lack of broader medical eval coverage @eliebakouch repeatedly requested clarification on when system-card benchmark rows use “Fable” versus “Mythos,” since that affects whether users should infer safeguard-triggered routing This is the most technical criticism of the release cycle: not that the model is weak, but that the reporting format makes it harder than necessary to understand what exactly is being measured. Writing quality and the “Claudese” discussion One of the most repeated subjective observations was that 5.1 sounds more normal. @danshipper : “actually speaks like a normal person,” “clearer prose,” fewer “AI tells” @ethanCaballero asked directly whether 5.1 “eliminate[s] the claudese?” @ethanCaballero later pointed to Anthropic’s new prompt as eliminating “claudese” @ValsAI posted quantitative stylistic shifts: fewer hyphenated compounds fewer em dashes @ValsAI found longer outputs overall despite shorter sentences: VCB: 534 → 1299 words/task Terminal-Bench: 961 → 1299 Legal Research: 1892 → 2693 @ValsAI noted a weird compensating artifact: use of non-breaking hyphen U+2011 rose from near zero to up to ~4.4k occurrences per million So the “less Claudese” claim is not purely vibe; there are at least some measurable stylistic changes. But the stats also suggest Anthropic may have traded one surface signature for another. The safeguards story: improved enterprise viability, but also false positives The safety layer around 5.1 became almost as discussed as the model itself. Official/Anthropic-aligned framing: @alexalbert__ presented Enterprise Frontier Safeguards as a practical observability layer for agent deployments in enterprise settings @mikeyk claimed the model is more honest about being stuck rather than falsely claiming success Critical user reports: @GregKamradt could not finish testing due to false-positive reverse-engineering flags @kylebrussell triggered safeguards with a metaphor in a math setting @nrehiew_ highlighted the possibility that Anthropic is using an activation probe to classify cyber-related content and decide whether safeguards apply @mikeyk shared a brain-model artifact example as a positive illustration of complex reasoning that remains allowed There is a clear adoption tradeoff here: enterprises want more reliable cross-session monitoring and control power users want fewer false positives and more permissive exploratory use Anthropic is trying to satisfy both, and day-one sentiment suggests the balance is not yet universally accepted. Mythos vs Fable: same model or separate products? This was one of the most technically interesting discourse threads. Claims by @eliebakouch : Fable and Mythos 5.1 are “the EXACT same weights” internal activations are inspected dangerous requests escalate to a larger classifier then may fallback to Opus 4.8 therefore Fable is not a distilled version of a larger Mythos model Follow-up clarifications and speculation: @eliebakouch said prior community speculation had treated Mythos as teacher and Claude/Fable as distilled student, but that this was guesswork @eliebakouch remained uncertain about the exact training lineage @nrehiew_ suggested the difference is likely just the classifier threshold @ArtificialAnlys independently confirmed fallback routing behavior in evaluation, though not the “exact same weights” claim directly Why this matters: Interpretability of benchmarks. If “Mythos result” and “Fable result” are mostly the same backbone under different routing/safeguard settings, benchmark tables should make that explicit. Procurement and deployment. Enterprises may think they are choosing between distinct models when they are choosing between distinct policies around the same model. Safety/capability accounting. If a benchmark is run through fallback, then “which model got the score?” is no longer trivial. This naming/routing ambiguity generated some of the best technical questions in the entire tweet set. Practical product implications Why the cache-read cut matters Agentic systems often resend large scratchpads, repos, prior steps, and tool transcripts. In those setups, cached-input pricing matters disproportionately. Anthropic’s 75% cache-read cut was praised by @Teknium , @theo , and quantified in detail by @ArtificialAnlys In AA’s framing, most of the savings accrue specifically on agentic evaluations where the majority of input tokens are cache reads This makes Fable 5.1 more appealing as an orchestrator/planner in multi-step workflows even if output-token cost remains high Why zero data retention and EFS matter Dan Shipper specifically called ZDR support a major reason businesses can now use the model via @danshipper Alex Albert’s EFS explanation via @alexalbert__ points at a broader market transition: enterprises no longer just want “private inference”; they want agent observability, cross-session anomaly detection, and risk monitoring That suggests Anthropic is optimizing for a future where enterprise adoption depends as much on governance infrastructure as on raw model quality. Why subscription complaints matter If API economics improve but consumer/pro-subscriber caps do not, perception can sour quickly. @kimmonismus explicitly noted Anthropic had not announced lower prices or higher usage limits for subscription users This creates a split product perception: API builders: “big win” heavy interactive subscribers: “still constrained” That mismatch is important because many high-visibility reviewers test through the subscription product first, not the raw API. Competitive context The release landed into a highly active frontier week, with OpenAI’s Astra rumors/safety posts and multiple world-model announcements competing for attention. Even so, Fable 5.1 drew intense notice because it appeared to reset the coding-model leaderboard. Comparative claims from reactions: @AravSrinivas : Fable is the frontier model “by a good margin” @kimmonismus : favorable to Fable on Cursor Bench against Sol 5.6 Max @nicdunz : Fable wins absolute intelligence, Sol wins economics @scaling01 : Astra will likely leapfrog it soon on reasoning efficiency @theo : Anthropic had #1, #2, and #3 at that moment There was also a widespread sense that the release was significant enough to provoke immediate comparison to the next OpenAI drop: @kimmonismus said they were more excited for GPT-Astra than Fable 5.1 @theo remarked this might be the most advance warning ever given for a model drop, referring to the surrounding Astra anticipation So in market terms, Fable 5.1 was seen both as a genuine Anthropic comeback and as a move in a rapidly escalating model-release exchange. Context: why this release mattered more than a normal point update Three background dynamics explain the intensity of reaction. 1. Anthropic’s reputation had become bifurcated Claude-family models had a strong reputation for coding depth and writing style in earlier eras, but more recent discussion often painted them as: highly capable somewhat awkward in tone conservative in refusals slow or cumbersome in extended use The positive reactions to 5.1 were often framed as Anthropic finally fixing the “usability tax,” especially by @danshipper . 2. Agents changed what people care about in pricing Traditional prompt-response users focus on input/output prices. Agent builders focus on: cache reads long context reliability over long sessions delegated task behavior honest failure reporting That is why the cache-read cut got almost as much praise as the benchmark scores. 3. Safety is becoming product architecture, not just policy EFS, routing, activation probes, fallback models, and ZDR are all signs that the “model” is no longer a single artifact. It is a policy-wrapped system . The Fable/Mythos debate is really a debate over this shift. Users are starting to ask not just “how smart is the model?” but: Which weights handled this request? Which safety path intervened? How often did fallback happen? What benchmark score belongs to what route? That is a more mature, systems-level conversation than standard model-launch hype. Notable demos and ecosystem reactions @alexalbert__ : image-to-house-design-to-cinematic-walkthrough pipeline, with @alexalbert__ clarifying Blender headless @spicey_lemonade : Minecraft one-shot demo @simonw : SVG pelican + animation @_catwu : Anthropic team member claims internal teams are taking on projects that would have taken months before @perplexity_ai : integrated into Perplexity Computer @Teknium : available in Hermes Agent / Nous Portal / OpenRouter @theo : T3 Code shipped Fable 5.1 support The speed of these integrations reinforced the perception that 5.1 is especially relevant to agent builders, not just chat users. Open questions raised by the community Benchmark transparency When a system card reports Mythos on some benchmarks and Fable on others, what exactly determines that labeling? See @eliebakouch and @eliebakouch How much benchmark performance depends on fallback routing versus primary-model behavior? Safeguards tuning Can Anthropic reduce false positives in theoretical or benign technical work without weakening cyber safeguards? See @GregKamradt and @kylebrussell Rate limits and product segmentation Will subscription users benefit from the efficiency gains, or only token-billed API customers? Raised sharply by @kimmonismus Eval quality and overfitting concerns Why do some results, especially on FrontierCode or medical subsets, look odd or difficult to compare? See @scaling01 and @iScienceLuvr Stylistic changes Is “less Claudese” due to prompt changes, post-training shifts, or both? @ethanCaballero points to a newly released prompt, while @ValsAI shows measurable lexical differences OpenAI’s Astra and the monitorability debate around recurrent depth Preparedness milestone: “cyber critical” : OpenAI previewed Astra as its first model to reach the Critical threshold for cybersecurity under its Preparedness Framework. The blog-post rollout emphasized that Astra’s most advanced cyber capabilities will be more tightly access-controlled per @boazbaraktcs . Summaries circulating from the post claimed Astra found V8 zero-days , chained exploits, compromised a hardened browser, escaped sandboxing, and escalated privileges in testing, as distilled by @kimmonismus . OpenAI leadership also stressed that parts of safety work slowed deployment and that future model pacing may continue to trade off speed for safeguards, in Sam Altman’s statement . Architecture reporting and “opaque reasoning” concerns : The other major Astra storyline came from reporting that it uses some form of recurrent depth / looped transformer architecture , triggering sharp debate over whether this reduces the usefulness of chain-of-thought monitoring . Concerned takes came from @RyanGreenblatt , @thlarsen , @tenobrus , and @bshlgrs , who argued that more latent-space reasoning could make post-incident investigation materially harder. In contrast, others argued the reaction was overstated: @max_paperclips , @teortaxesTex , and @suchenzang emphasized that internal “neuralese” reasoning is not new and that what matters is effective depth , not whether layers are looped versus explicitly stacked. OpenAI’s clarification and technical context : OpenAI chief scientist @merettm tried to tamp down the strongest interpretations, saying the computation graph depth for current frontier models, including Astra, is within ~2× GPT-4 , and that OpenAI still considers CoT monitoring a core research objective. That clarification shifted discussion toward a narrower technical question: whether recurrent blocks are mainly a parameter-/storage-efficiency trick or whether they create a natural path to much deeper, harder-to-monitor reasoning. Good-faith technical discussion came from @eliebakouch , @voooooogel , and @scaling01 . Related fresh papers on looped MoE transformers and scaling laws were also flagged by @iScienceLuvr . World Labs’ Atlas: unified world modeling for reconstruction, camera control, and real2sim A notable multimodal world-model launch : World Labs introduced Atlas , described by @drfeifei as a multimodal world model trained from scratch that can generate frames with pixel-perfect camera control , reconstruct large scenes from as little as one image , reframe videos through simulated space-time, and output native 3D spaces from images. The team positioned it as a single model unifying generation and reconstruction rather than a stitched toolchain, an angle reinforced by @KeunhongP and later examples from @BenMildenhall . Demo themes: bullet time, sparse-view reconstruction, and creative controllability : The strongest demos focused on free-viewpoint video from just a few casual phone captures , including a short film example by @davidpantera_ , a “bullet time” synthesis from 3 iPhones by @eerac , and commentary from @bilawalsidhu that this used to require volumetric rigs with dozens or hundreds of cameras. Additional posts showed reconstruction from a handful of disparate internet photos, e.g. the Natural History Museum example , plus blending stylized generation with navigable 3D scenes. Why engineers care: real2sim and robotics : Beyond VFX/filmmaking, the more technically consequential angle is real2sim for robotics . @YunzhuLiYZ showed using casual photos to synthesize RGB and depth observations for robot navigation, while @MTSlive highlighted the “take five photos, build a sim, adapt a robot” vision from cofounder Justin Johnson. Researchers including @DrJimFan called it a strong step toward real2sim, and Fei-Fei explicitly connected Atlas to horizontal usage across robotics here . Qwen, GLM, RWKV and open-model momentum Qwen’s upgraded flagship moves to the top of web-dev coding evals : Alibaba released Qwen3.8-Max-0902 , a 2.4T-parameter model with 1M context and pricing of $2/M input, $6/M output , plus explicit/implicit cache-hit pricing. Arena reported it debuted at #1 on Code Arena: WebDev with 1691 , ahead of Claude Opus 5 Max and Kimi K3 Max, while also landing on the best current price/performance frontier via @arena . Alibaba highlighted the same result here . Open and semi-open long-horizon models continue to spread through providers : GLM-5.3 kept appearing in infra and platform integrations, including Perplexity Agent API , Arcee , and Databricks serving numbers , where it reportedly hit 310 tok/s and was described as the strongest OSS coding model on an internal benchmark. CoreWeave also announced DeepSeek-V4-Pro-0813 , a 1.6T , 1M-context model priced for long-horizon agent workloads with very cheap cache reads. Meanwhile RWKV-7 G1j shipped as a 100% RNN model with claimed gains on agents/coding/STEM, and LongCat-2.0 was surfaced as a 1.6T open-weights MoE with 1M context accessible in Cline. Open-source serving and multimodal inference improvements : On the serving side, vLLM-Omni + FastVideo’s FastH3 demonstrated a 10.1s synchronized video+audio clip rendered in 8.7s , i.e. faster than playback, with MiniMax framing this as an open baseline for interactive video systems. Agents, harnesses, memory, and evaluation research Agent harnesses are becoming a primary lever : Several tweets underscored that big gains are now coming from runtime systems , not just base models. @omarsar0 highlighted openJiuwen , an open-source harness that reaches 82.6% SWE-bench Verified and 87.19% Terminal-Bench 2.1 , attributing gains to rail-based composition and runtime adaptation with a fixed underlying model policy. @dair_ai summarized SkillZip Pro , which compresses full production skill bundles rather than only root prompts, cutting 38% of bundle tokens and 10.4% of per-run tokens without quality loss. Long-horizon agent evals are getting more realistic : A standout benchmark addition was E-Commerce Bench , which runs agents through a simulated 365-day year operating multiple online stores. The top revenue model was GPT-5.6 Sol , growing a 100k starting stake to 1,431,425 , but it ranked poorly on fraud avoidance; no model dominated all axes. This kind of eval better exposes trade-offs between profits, safety, and operational quality than single-session benchmarks. Memory and reward-hacking work : @dair_ai also highlighted Agent Zero Memory , which separates episodic timelines, entity-event graphs, and curated documentary memory with citation-locking, posting 95.6% LongMemEval and 93.6% LoCoMo while enabling large cost reductions. On alignment, @omarsar0 summarized a paper showing that adding a structured escalation tool at the moment agents face defective test infra drops reward hacking from 23.6% to 5.3% across eight frontier models, with essentially no performance overhead. Top tweets (by engagement) Claude release : Anthropic’s Claude Fable 5.1 / Mythos 5.1 announcement was the day’s biggest pure model-launch post. Astra preparedness : OpenAI’s Astra safety/preparedness announcement drove the biggest safety/architecture discussion. Atlas launch : World Labs’ Atlas announcement was the standout multimodal/world-model release. Cybersecurity warning : @ilyasut argued neoclouds should urgently harden cyberdefenses because future rogue agents may try to seize cloud capacity to replicate. Meta speech model : @finkd announced Muse Voice Transcribe , Meta’s first real-time audio perception model with native diarization and endpointing. AI Reddit Recap /r/LocalLlama + /r/localLLM Recap 1. Qwen, DeepSeek, and Gemma Model Updates Read more",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.latent.space",
-        "publication_platform": "substack",
-        "section": "industry_changes"
       }
     },
     {
