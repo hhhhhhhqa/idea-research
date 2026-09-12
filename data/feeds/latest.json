@@ -1,7 +1,45 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-11T00:48:08.403729+00:00",
+  "generated_at": "2026-09-12T00:02:33.067985+00:00",
   "pipelines": [
+    {
+      "pipeline": "substack",
+      "status": "ok",
+      "item_count": 8,
+      "errors": [],
+      "notes": [
+        "Clouded Judgement: public reader fallback used",
+        "MBI Deep Dives: public reader fallback used",
+        "Aspiring for Intelligence: public reader fallback used",
+        "Chips Ahoy Capital: public reader fallback used",
+        "Meritech Software Pulse: public reader fallback used",
+        "Outspoken Geek: public reader fallback used",
+        "New Moon Cap: public reader fallback used",
+        "Outlier Cap: public reader fallback used"
+      ]
+    },
+    {
+      "pipeline": "reddit",
+      "status": "ok",
+      "item_count": 1,
+      "errors": [],
+      "notes": [
+        "r/wallstreetbets: anonymous dd RSS transport used",
+        "r/SecurityAnalysis: anonymous thesis RSS transport used",
+        "Downloaded 1 Reddit image(s) into the current feed media directory"
+      ]
+    },
+    {
+      "pipeline": "prices",
+      "status": "partial",
+      "item_count": 2,
+      "errors": [],
+      "notes": [
+        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "Ignored incomplete Yahoo EOD date 2026-09-11: 1/203 ticker closes available; latest sufficiently complete date is 2026-09-10.",
+        "Latest available Yahoo EOD date is 2026-09-10; run after the US close to collect 2026-09-11."
+      ]
+    },
     {
       "pipeline": "x",
       "status": "ok",
@@ -139,55 +177,204 @@
         "@kuncheng: 0 tweet(s) via twscrape",
         "Linked articles: 11 article(s) stored; 59 unavailable or skipped"
       ]
-    },
-    {
-      "pipeline": "substack",
-      "status": "ok",
-      "item_count": 5,
-      "errors": [],
-      "notes": [
-        "Clouded Judgement: public reader fallback used",
-        "MBI Deep Dives: public reader fallback used",
-        "Aspiring for Intelligence: public reader fallback used",
-        "Chips Ahoy Capital: public reader fallback used",
-        "Meritech Software Pulse: public reader fallback used",
-        "Outspoken Geek: public reader fallback used",
-        "New Moon Cap: public reader fallback used",
-        "Outlier Cap: public reader fallback used"
-      ]
-    },
-    {
-      "pipeline": "reddit",
-      "status": "ok",
-      "item_count": 3,
-      "errors": [],
-      "notes": [
-        "r/wallstreetbets: anonymous dd RSS transport used",
-        "r/SecurityAnalysis: anonymous thesis RSS transport used",
-        "Downloaded 3 Reddit image(s) into the current feed media directory"
-      ]
-    },
-    {
-      "pipeline": "prices",
-      "status": "partial",
-      "item_count": 2,
-      "errors": [],
-      "notes": [
-        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "Ignored incomplete Yahoo EOD date 2026-09-10: 1/203 ticker closes available; latest sufficiently complete date is 2026-09-09.",
-        "Latest available Yahoo EOD date is 2026-09-09; run after the US close to collect 2026-09-10."
-      ]
     }
   ],
   "counts": {
-    "total": 475,
-    "substack": 14,
+    "total": 477,
+    "substack": 18,
     "rss": 2,
-    "reddit": 3,
+    "reddit": 1,
     "x": 454,
     "price": 2
   },
   "items": [
+    {
+      "id": "reddit:c0f42bcf9b77c9643414",
+      "source_type": "reddit",
+      "source_name": "r/wallstreetbets",
+      "title": "$WOOF: where the regards go",
+      "url": "https://www.reddit.com/r/wallstreetbets/comments/1wdljw0/woof_where_the_regards_go/",
+      "published_at": "2026-09-11T16:44:24+00:00",
+      "collected_at": "2026-09-12T00:01:07.694857+00:00",
+      "body": "Brothers and sisters of the casino, $WOOF is trading around $2.40–$2.50 with a market cap of roughly $700M on ~$6B revenue. This is the definition of a beaten-down, debt-soaked, post-SPAC/post-pandemic meme special. From IPO highs near $30 it is down ~90%+. The stock is priced like the company is going to get eaten by chewy and amazon while the dogs watch. Perfect. The Thesis (maximum regard edition) Pet people are regarded. They will spend money on their fur children even when they themselves are eating ramen. Petco has ~1,380 stores, grooming, vet services, and a real physical footprint that pure online players cannot fully replicate for services. Management has been busy doing the boring shit: closing shitty stores, cutting unprofitable sales, expanding margins, generating free cash flow, and actually paying down debt. https://preview.redd.it/xg2y8k2m0xoh1.jpg?width=1664&format=pjpg&auto=webp&s=c2defe8e83587f86fd282d96c9f1141ab2c1dd02 This is not “set it and forget it and retire.” This is a speculative, high-beta, high-regard bet on operational progress continuing and the market eventually noticing the improving FCF and lower leverage. Size it like a lottery ticket or a leveraged recovery play, not like your retirement account. https://preview.redd.it/1d0m2n9a1xoh1.png?width=1732&format=png&auto=webp&s=8c6ac68331d82d83601e4c7fbf29836d4d3f0014 And the most regarded part of all: they have an actual Italian chicken + carbonara pasta recipe… for dogs. https://preview.redd.it/n413kyvf3xoh1.png?width=710&format=png&auto=webp&s=43d363c5c0419cec25a53e65ac53e7c91026d97c Adding my position: https://preview.redd.it/fbbsv52n4xoh1.png?width=537&format=png&auto=webp&s=b8d32143c51d957e5d16fbd2397915f1fafc01a4 submitted by /u/LoL_Journal [link] [comments]",
+      "author": "/u/LoL_Journal",
+      "symbols": [
+        "WOOF",
+        "AMZN"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "transport": "rss",
+        "listing": "dd",
+        "flair": "",
+        "requested_flair": "",
+        "requested_flairs": [
+          "DD"
+        ],
+        "sort": "top",
+        "time_filter": "day",
+        "feed_rank": 1,
+        "image_urls": [
+          "https://preview.redd.it/xg2y8k2m0xoh1.jpg?width=140&height=52&auto=webp&s=c37e2514214a5314d66573987a7d598874d9fa19"
+        ],
+        "images": [
+          {
+            "url": "https://preview.redd.it/xg2y8k2m0xoh1.jpg?width=140&height=52&auto=webp&s=c37e2514214a5314d66573987a7d598874d9fa19",
+            "path": "data/media/reddit/reddit-image-reddit-c0f42bcf9b77c9643414-1.jpg",
+            "mime_type": "image/jpeg",
+            "bytes": 2750
+          }
+        ]
+      }
+    },
+    {
+      "id": "substack:0bb5fd682261cfbe3100",
+      "source_type": "substack",
+      "source_name": "MBI Deep Dives",
+      "title": "Why “Affordable Luxury” Doesn't Compound",
+      "url": "https://mbideepdives.substack.com/p/why-affordable-luxury-doesnt-compound",
+      "published_at": "2026-09-11T16:04:26+00:00",
+      "collected_at": "2026-09-12T00:00:53.369491+00:00",
+      "body": "_**Programming Note**_: MBI Deep Dives will be off during the weekend and I will resume the daily posting cadence from Monday next week.\n\nEven though I sold my Lululemon position last year, I have to admit I don’t quite feel much relief for avoiding the 50% drawdown experienced this year. If anything, Lulu’s dismal performance is a source of embarrassment for me. The stock today trades around $100 and I was quite bullish when it was trading above $300 a couple of years ago! It’s hard not to feel at least a tinge of embarrassment when you are off by such a large margin! And no, it’s not just stock market being wildly wayward on sentiment alone; there is perhaps no business I was ever more wrong about than Lululemon.\n\nWhile I don’t follow Lulu closely anymore, I was shocked when I opened their earnings press release a couple of weeks ago. I clearly didn’t imagine the business would experience negative growth in almost all possible segments. Even within international segment which was the sole positive contributor to revenue growth, revenue from China Mainland (which is the largest chunk of international revenue) actually also declined by 2% once you adjust for FX.\n\n[![Image 1](https://substackcdn.com/image/fetch/$s_!lcYp!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3f7299b5-1c66-48ec-8e4a-2ead0fdbc99f_516x991.png)](https://substackcdn.com/image/fetch/$s_!lcYp!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3f7299b5-1c66-48ec-8e4a-2ead0fdbc99f_516x991.png)\n\nSource: Lululemon\n\nIn retrospect, I tried to fight the “retail is hard” consensus crowd, and I guess I have to concede that there was more wisdom in that consensus than I appreciated. The moats that I imagined Lulu had turned out to be quite a bit fragile. I thought instead of relying on global superstar athletes, Lulu’s strategy of using local ambassadors to promote their brand would prove to be quite a sustainable way to grow the business over time. Unfortunately, in the age of algorithmic social media, you can buy influence at a relatively cheap price which has only intensified competition over the last few years. Moreover, I have also started to internalize a more fundamental tension around compounding in “affordable luxury” segment. For example, I have spent probably around $1k last year on buying various Lulu products. It’s just hard to imagine that my own spending on Lulu products will compound over time. While there are certainly Lulu addicts out there, perhaps only a small segment of people actually want their wardrobe to be completely dominated by one brand. As a result, the key source of long-term compounding here needs to be driven by widening the customer base. But by its very nature, in fashion the more mainstream a brand becomes, the more likely it becomes that the brand loses its appeal among the OG addicts. These can still be very good businesses but multiple decades of compounding especially when the brand is well past the early part of the S-curve just seems very, very difficult. It’s possible, but such an outcome would be an anomaly. Of course, many investors probably already figured these out before I have learned the hard lessons after paying exorbitant tuition.\n\nWhat gives me bit of a pause amidst this self-flagellation is Lulu’s current woes seem to be much more widespread in branded apparel and footwear land. Both Lululemon and Nike are down 80% from their respective peak a couple of years ago. Even Adidas and Deckers experienced 50-60% drawdown.\n\n[![Image 2: chart](https://substackcdn.com/image/fetch/$s_!W7q3!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe378b330-2618-4607-97b6-5047dcba3dfc_2400x1240.png)](https://substackcdn.com/image/fetch/$s_!W7q3!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe378b330-2618-4607-97b6-5047dcba3dfc_2400x1240.png)\n\nSource: KoyFin (MBI Deep Dives readers get 20% discount; just click **[here](https://app.koyfin.com/?via=abdullah)**)\n\nEven within this group, Nike still looks optically much more expensive despite the whopping 80% drawdown. Lulu, Adidas, and Deckers are all trading now at low double digit NTM P/E multiples whereas Nike is still trading at ~22x P/E. So even though it may not feel like it, but if anything, investors are likely exhibiting a lot of patience with Nike. Perhaps investors think Nike is already closer to trough earnings whereas the rest still have to travel a bit longer before reaching the trough.\n\n[![Image 3: chart](https://substackcdn.com/image/fetch/$s_!MAJ7!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7f398270-4425-4998-8034-8cbb6d3210f6_2400x1240.png)](https://substackcdn.com/image/fetch/$s_!MAJ7!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7f398270-4425-4998-8034-8cbb6d3210f6_2400x1240.png)\n\nSource: KoyFin (MBI Deep Dives readers get 20% discount; just click **[here](https://app.koyfin.com/?via=abdullah)**)\n\nI asked Claude to show me annual revenue of Lulu, Nike, Adidas, and Deckers in 2015, 2019, 2023, and on LTM basis. As you can see below, it is only Nike within this group that experienced revenue decline LTM compared to their respective revenue in FY2023. It’s also quite revealing to observe just how anomalous the 2019-2023 period seems in hindsight. Lulu added only ~$2 Billion incremental revenue in 2019 vs 2015, but added almost $6 Billion incremental revenue during 2019-2023 period. Post-covid spending splurge on consumer goods propelled these businesses so much that it misled investors like me thinking much of this growth had more secular forces behind such as athleisure, and DTC. But as consumers moved more of their spending to experiences, and other macro forces such as inflation, interest rates, rise of dupes, and tariffs played their roles, these businesses now appear to be much shakier. It also doesn’t help that China, which is supposed to be growth driver, has been turning out to be a drag instead.\n\n[![Image 4](https://substackcdn.com/image/fetch/$s_!vBm4!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5e5f6aed-41db-41f4-ab0a-5e4be914d0c9_1620x633.png)](https://substackcdn.com/image/fetch/$s_!vBm4!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5e5f6aed-41db-41f4-ab0a-5e4be914d0c9_1620x633.png)\n\nSource: Claude Fable 5.1\n\nWhile Lulu is trading at a cheap multiple today, I cannot say I feel enticed by it. I was actually wondering if consumer agents are the latest headwind for these businesses. These consumer agents will be exceptionally capable of finding discount codes, and may nudge consumers more to long-tail brands than mainstream ones especially if Shopify’s catalog becomes their first pass before deciding to spend compute for browsing the open web. “Too hard pile” is perhaps indeed where branded apparel belongs if you intend to invest for the long-term.\n\n_Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on **[65+](https://mbideepdives.substack.com/p/deep-dives)** companies. The daily is just how I think out loud between the Deep Dives!_\n\n**Current Portfolio:**\n\nPlease note that these are **NOT** my recommendation to buy/sell these securities, but just disclosure from my end so that you can assess potential biases that I may have because of my own personal portfolio holdings. Always consider my write-up my personal investing journal and never forget my objectives, risk tolerance, and constraints may have no resemblance to yours.\n\nI have made a couple of changes to my portfolio yesterday.",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mbideepdives.substack.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas",
+        "transport": "public_reader_fallback"
+      }
+    },
+    {
+      "id": "substack:3f142a2d630b2bcf0030",
+      "source_type": "substack",
+      "source_name": "Liberty's Highlights",
+      "title": "660: Nvidia’s $99B Portfolio, Agents for Couples, 400,000 GPUs Need Power, Zach Dell’s Turtles, ASML’s Bigger Stencil, Token Heists, Where’s Google?, Math Breakthroughs, and Seeding Future Nostalgia",
+      "url": "https://www.libertyrpf.com/p/660-nvidias-99b-portfolio-agents",
+      "published_at": "2026-09-11T15:56:10+00:00",
+      "collected_at": "2026-09-12T00:01:03.348085+00:00",
+      "body": "The past is the present biting into the future. –Edwin Land 🎬🧠🌱 I've been consciously trying to seed some future nostalgia lately. I've been watching a lot of older films with my kids. Some are movies I first saw when I was around their age, and I can still remember what it felt like to see them then. Seeing a great film as a kid isn't quite the same as discovering it as an adult. There’s a limited window to make watching these films together part of their childhood. I’m trying to use that window well! I used to think of films and TV as just entertainment, something you do when you’re not doing something that matters more. But over the years I’ve come to realize that a really good film or a really good TV show shared with the people you love is one of the peak human experiences. 🏔️ So why not make time for it instead of just letting it happen randomly? Family Movie Night™ is a tradition in this house! When older adults look back over their lives, a disproportionate number of their memories come from childhood and adolescence. Psychologists call this the reminiscence bump (related to the U-shaped curve of memory I mentioned in Logtime ). This pattern shows up with music, too. Songs we hear as teenagers have a weird ability to stay welded to us for decades. So I’ve been playing my kids music from all kinds of genres and eras. At first, I was doing most of the choosing. Now they’re requesting songs, exploring on their own, and showing me music I didn’t know about! I love that. It also makes me think more consciously about films, music, books, trips, little traditions, etc. What are the things that might become keys to whole rooms of memory 30 years from now? Not that I want to turn childhood into some kind of memory-optimization program 😅 I have no idea what will stick. I’m just trying to get more shots on goal: sharing things I genuinely love, watching them together, talking about them afterward, revisiting favorites, building up shared references and stupid inside jokes. And then maybe, decades from now, one of those old movies comes on, and for a moment they’re back here with us. 👨‍👩‍👦‍👦 🤖🗓️📝👩‍❤️‍👨 Later in this Edition, I write about the new bots/agents that are starting to become popular as digital coworkers and personal assistants. I’ve tried Grok Bot and Instinct, and I’m waiting for Meta Muse to be available in Canada to give it a try. While testing them, I had this idea: Agents for couples! I’d love to be in a group chat with my wife and an agent for schedules, calendars, and household coordination stuff. ( No agents in normal conversations! Just for this. ) Mockup of what this may look like. A kind of household chief-of-staff for logistics. It would be great to have an agent there taking notes, adding things to the calendar, scanning our inboxes for emails from the kids’ school, and reminding us automatically about things we need to know when we need to know them. 👦👧🗓️🎗️ September is Childhood Cancer Awareness Month. If you want to do something concrete about it, St. Jude is hard to beat . It’s a children’s hospital and research institution with an unusual model: families never receive a bill from St. Jude for treatment, travel, housing, or food , so parents can focus on their child. But your donation also helps kids who will never set foot in St. Jude. They share their research and treatment advances with doctors and researchers around the world. When St. Jude opened in 1962, only about 4% of children with acute lymphoblastic leukemia (the most common childhood cancer) survived. Today, St. Jude patients with acute lymphoblastic leukemia have a 94% survival rate. Their work has also helped push overall childhood cancer survival in the U.S. from about 20% to more than 80%. Science FTW! 👩‍🔬🧪⚗️🧫 That’s what I like about the model: you’re helping families at St. Jude directly, while also funding research that can help sick kids anywhere. 💚 💚 🥃 The paid subscription includes the full feed, every podcast, Zoom Q&As with me, and access to the private Discord clubhouse , where a core group of us hang out and discuss the interesting stuff we find: Get the full Liberty feed and help keep the Serendipity Engine running by becoming a paid supporter. Thank you 💚🥃🦊🐙⚓️ 🏦 💰 Liberty Capital 💳 💴 💰 Nvidia’s Portfolio Isn’t Like Yours (and I don’t just mean the size 😅) Nvidia now has an equity investment portfolio worth roughly $99 billion , including stakes in companies that buy its products (that’s why you hear so much about the 🔄 nature of it). Our first reflex may be to judge these the way we judge our stocks: Did Nvidia pay a good price based on whatever valuation metrics? What return can it expect going forward? But Nvidia has more ways to make an investment pay off than regular, passive investors do. Helping a customer fund its next data center or lower its cost of financing can generate extra GPU/networking/etc profits, on top of whatever Nvidia earns from the appreciation of the shares. Backing a supplier can help it expand production (leading to more sales, or a bigger allocation than competitors), while backing a software company can help bring more workloads to Nvidia’s ecosystem. That means an investment with a mediocre standalone return could still be attractive once those extra profits are included. 💵 💸 Here are some of its announced investments and commitments: OpenAI: a $30 billion investment announced in February. Anthropic: a commitment to invest up to $10 billion . SpaceX: a stake reportedly worth roughly $21 billion as of June 30 . That’s the value of the holding, rather than the amount Nvidia originally invested. CoreWeave: another $2 billion invested in January , adding to its existing stake. Lumentum and Coherent: $2 billion each in announced investments in these optical-component suppliers ( Lumentum , Coherent ). Intel: a $5 billion investment announced in September 2025 , with plans to jointly develop PC and data-center products. Synopsys: $2 billion invested in the chip-design and engineering-software company . Nebius: a $2 billion investment announced in March to help expand its AI cloud. Marvell: $2 billion invested alongside a partnership on custom chips and optical networking . Nokia: a $1 billion investment announced in October 2025 , alongside a partnership on AI networking. Corning: an equity arrangement of up to $3.2 billion , including an option to buy shares, alongside its optical-fiber manufacturing partnership. SB Energy: a $1.5 billion investment commitment in the developer behind OpenAI’s Ohio data-center project. Of course, Nvidia takes on some of the customer’s risk as part of the deal. There’s no such thing as a free lunch. 🥪 The catch is that those sales have to be additional: If the customer would have raised money elsewhere and bought the same Nvidia chips anyway, Nvidia can’t count those profits as a benefit of its investment. 🔌 400,000 GPUs: A Power Plant Problem ⚡ OpenAI trained Astra on more than 100,000 GPUs at its Stargate site in Texas . Jensen Huang is already pointing to 400,000 GPUs “coming online next”. We don’t yet know whether all of those will work together on one training run. But what would a frontier lab pay to get that electricity six months sooner? Nvidia NVL72 GB200 racks Read more",
+      "author": "Liberty 💚 🥃",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.libertyrpf.com/",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:51b7e092c5cb61bfb7be",
+      "source_type": "substack",
+      "source_name": "Aspiring for Intelligence",
+      "title": "Is the promise of “Siri” finally here?",
+      "url": "https://aspiringforintelligence.substack.com/p/is-the-promise-of-siri-finally-here",
+      "published_at": "2026-09-11T15:31:43+00:00",
+      "collected_at": "2026-09-12T00:00:58.322622+00:00",
+      "body": "When ChatGPT first came out, there was a lot of discussion around having an all in one personal AI assistant - what some would refer to as a true Siri. We’ve all tried Siri before and on its best day, it’s still meh. In the wake of the “ChatGPT moment for personal assistants”, hundreds of companies emerged trying to be the next-gen PA and none of them really stuck.\n\nBut what's happened in the last couple of weeks has caught our attention - companies like Instinct, Town, and Grok Bot are suddenly taking center stage as they target the mass consumer.\n\n*   **[Instinct](https://instinct.co/)** emerged last month with a bang and became the darling of X (at least with VCs), racking up $350M at a $2.5B valuation (Index Ventures, Benchmark, Kleiner Perkins, Conviction, Greenoaks). It has no app UI at all. You text or call it, and it operates a [persistent cloud desktop with full account access](https://www.wsj.com/tech/ai/the-latest-viral-ai-assistant-rocketing-across-silicon-valley-abb46276) to book travel, negotiate bills, manage email, even reportedly help someone buy a house.\n\n*   **[Town](https://www.town.com/)** raised a fresh $55M Series A led by a16z (Forerunner, First Round, Alt Capital, Conviction) and has reportedly spread “like wildfire”. Town connects to email/calendar/Slack/docs, learns your voice and patterns, and wraps the assistant in a personified Townie avatar.\n\n*   **[Grok Bot](https://x.ai/bot)** was released earlier in August as an always-on agent with its own cloud computer that signs into your tools and works unattended, acting as an AI teammate who can sign into tools and do work just like you or a teammate would do.\n\n*   **[Meta Muse](https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/)**launched on Sep 8th, built from Meta “from the ground up to be a safe, secure, private, and widely available personal AI agent” running on Muse Secure VM.\n\nWe’ve been playing around with these products over the last few weeks and wanted to share some of our thoughts as to why these companies are suddenly blowing up and the implications behind them.\n\n[![Image 1: X avatar for @DavidPawlan](https://substackcdn.com/image/fetch/$s_!MMES!,w_40,h_40,c_fill,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fpbs.substack.com%2Fprofile_images%2F1981386897000701952%2FS82atSMY.jpg) David Pawlan@DavidPawlan Assistant Benchmark is live! [assistantbenchmark.com](https://assistantbenchmark.com/) feedback on how to make this as helpful & insightful as possible for everyone would be appreciated 🙏 ![Image 2](https://pbs.substack.com/media/HRuCgehbUAAfgQT.jpg) 7:57 PM · Sep 8, 2026 · 64.1K Views 28 Replies · 9 Reposts · 153 Likes](https://x.com/DavidPawlan/status/2097414009016185268?s=20)\nWe believe this wave is possible because a few model layer capabilities matured together in the last ~6-9 months and not because any single one broke through.\n\n1.   **Computer/browser use got reliable enough to trust with real accounts.** Instinct and Grok Bot both operate persistent cloud desktops — logging into services with no API, clicking through UIs like a human would. That was a novelty a year ago, but now it’s the core product.\n\n2.   **Long-horizon agentic reliability.** Multi-step task completion (book a flight, then rebook it when it changes, then email the itinerary) requires the agent to stay coherent across many tool calls without derailing. This is the direct product of RL environment training runs labs shipped through 2026, and better tooling and infrastructure like [Sail Research](https://www.sailresearch.com/).\n\n3.   **Persistent memory as a default, not a feature flag.** These companies all now carry context across sessions, which is what turns a chatbot into something that feels like it “knows you.”\n\n4.   **Falling inference costs** make it economical to keep an agent running continuously (checking email, waiting on flight changes) rather than only responding to a single prompt.\n\n5.   **Distribution via existing surfaces**. Text/SMS/WhatsApp/iMessage as the interface removes onboarding friction. There is no new app to learn and you can interact with the system the same way you may interact with a true assistant.\n\nWhile the model layer has been moving fast, the productization is exposing a set of hard problems that aren’t solved by simply a bigger model.\n\n*   **Account access & auth.** Most of these agents need standing credentials to email, calendar, banking services, and more. There’s no mature “delegated identity” standard for agents yet (OAuth wasn’t built for this). Today it’s mostly “give it your password/session” or brittle scoped connectors and neither is a real solution at scale. Instinct’s founder Noah Shinn [recently announced a partnership](http://enables%20users%20to%20seamlessly%20and%20securely%20share%20their%20credentials%20with%20instinct./) with 1Password to enable users to seamlessly and securely share their credentials with Instinct, which is a smart play for consumer, but as soon as you’re integrating “work” related accounts, the IT friction becomes real.\n\n*   **Payments and financial trust.** Letting an agent actually transact (book, buy, negotiate a bill) requires a trust and liability framework that doesn’t exist. Card networks, banks, and merchants haven’t agreed on how agent-initiated transactions get authorized, disputed, or insured. We expect to see Stripe get more involved here. It’s different to give an agent access to a booking platform like OpenTable vs. access to your bank account information.\n\n*   **Data trust and liability.** Instinct’s own terms reportedly let it retain indexed data even after you disconnect an account, and appoint itself as your legal agent able to bind you to agreements. This is the kind of fine print that will draw regulatory attention as adoption scales. Early users are already flagging privacy concerns (screen/keystroke logging, plaintext email storage).\n\n*   **The harness problem.** Reliability isn’t just about the model but it’s the surrounding scaffolding. This includes how do you sandbox actions, get human approval on the risky ones, roll back mistakes, and give users an audit trail? Town markets “approval required defaults and a full audit log” as a differentiator precisely because most agents don’t have this yet.\n\n*   **Business model.** None of these companies have settled pricing. Instinct for example is still free right now. At some point to sustain the inference costs (not to mention the expected ROI on VC investment), they’ll have to figure out a business plan and most suitable monetization path.\n\n*   **Trust in the personification layer.** How do you actually get the user to trust this system? Do you anthropomorphize the assistant? For some tasks, you might trust it, but how about for more complexed/data sensitive ones?\n\nThe ones who can turn trial into habit will be the true winners. Right now, willingness to try is high - these products are free and frictionless to download. Everybody has FOMO, so want to get in. The harder problem is turning that initial curiosity into a repeated behavior. Most consumer AI products die in that gap between “I tried it once” and “I use it every day.”\n\n*   **Multi-modality will matter.** It’s likely that the winners will meet the consumer wherever they already are (text, call, messaging platforms) rather than forcing a net new interface, unless this interface is truly novel. The type of interfaces for consumer will vary than for businesses.\n\n*   **Depth of access will be the real proxy for stickiness.** The more of your actual accounts and workflows an agent touches, the harder it becomes to leave - and the more ROI it can credibly claim. We’re watching how many users are willing to hand over real access, not just app downloads.\n\n*   **Solving a real problem beats being a good demo.** Demo moments are fun, but the products that last are the ones that do something that is genuinely painful.\n\n*   **Consumer and B2B are fundamentally different races.** Consumers generate a long tail of one-off, ad hoc requests. Business users need repeatable, auditable workflows. A product built to win one of these will not automatically win the other, and the companies that try to serve both at once risk being mediocre at each.\n\nThe space is still evolving rapidly, but there’s no denying the growth we’re seeing from some of these companies. Not to mention that these products are actually solving real needs - for a long time we were asking “when can AI book me a flight” and now it is happening.\n\nThat said, we’ve seen rapid growth followed by an equally rapid decline in other consumer hits. Clubhouse went from 0 > 100M+ downloads within months in 2020, got valued at close to $4B, then saw a steep drop-off once the novelty wore off. Threads had the fastest signup of any app in history, hitting 100M users in five days, only to see daily active usage fall by 80%+ within weeks. And more recently, OpenClaw went from zero to over 100,000 GitHub stars in days, becoming briefly the fastest-growing open-source project in history, before cooling off hard once the economics of running it changed and a wave of security disclosures hit (and ultimately got acquired by OpenAI). OpenClaw’s fizzle wasn’t about the product getting worse, but was driven by a pricing event. Once inference stopped being cheap, casual users vanished and usage shrank to people with a real need.\n\nWe’re watching how much of today’s assistant excitement is riding the same subsidy. Flashy adoption isn’t the same as durable behavior change. So we’re watching less for the loudest launch, more for who’s building with first principles - reliability, trust, security, pricing that survives initial hype cycles.\n\nFor now - the ultimate winner is the consumer who gets to use all these great apps and products for free :)",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://aspiringforintelligence.substack.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas",
+        "transport": "public_reader_fallback"
+      }
+    },
+    {
+      "id": "substack:e5498b451b942c21212a",
+      "source_type": "substack",
+      "source_name": "Yet Another Value Blog",
+      "title": "UK stocks are dirt cheap. Why won't the boards act? $ZIG $CRW | Undervalued-Shares",
+      "url": "https://www.yetanothervalueblog.com/p/uk-stocks-are-dirt-cheap-why-wont",
+      "published_at": "2026-09-11T14:02:53+00:00",
+      "collected_at": "2026-09-12T00:01:05.489852+00:00",
+      "body": "A quarter of the companies on the London Stock Exchange's main board have disappeared in four years. Private equity keeps paying 50 and 60 percent premiums and still walking away with a bargain, because the starting valuations are broken. Swen Lorenz of Undervalued-Shares has spent the last few months writing open letters to UK boards telling them to stop waiting to be rescued and start pulling the levers they already have . I have been calling the UK an emerging market on this podcast for three years, and my problem with the trade is right there in the setup: if the only way you make money is owning the one company that happens to get taken out, that is not alpha. So we spend the first half on what would actually fix it. Swen puts most of the blame on the big domestic funds, in outflow for a decade, pushing companies toward dividends to fund their own redemptions. I put most of it on boards that own no stock, treat the seat as a club membership, and check the dividend box every year. Then we get concrete on two names. ZIGUP (ZIG), which I own a little of, has a plan that pays seven executives up to 69 million pounds if the share price re-rates, trades under four times EBITDA, and still has not bought back a single share. And Craneware, which turned down a 26 pound approach from Bain last year and now trades at 13. This podcast is sponsored by fiscal.ai Fiscal.ai is the modern financial data provider. Through their web-based Terminal and AI connectors, Fiscal.ai provides real-time financial data, earnings call transcripts, filings, fund letters, and much more. It’s fast, intuitive, and has genuinely helped my research process. Check it out at fiscal.ai/yav for 15% off any of their paid plans. Please follow the podcast on Spotify , iTunes , or YouTube ! And please be sure to rate / review the podcast if you enjoy it, or share it with someone else who would enjoy it (more listeners is a critical part of the flywheel that keeps this Substack and podcast going!). Share Yet Another Value Blog Transcript for paid subs begins below ( The initial transcript is AI-generated and is replaced with a professionally edited version when available) Disclaimer : Nothing on this podcast or on this blog is investing or financial advice; please see our full disclaimer here. The transcript below is from a third party transcription service; it’s entirely possible there are some errors in the transcript. Read more",
+      "author": "Andrew",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.yetanothervalueblog.com/",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:971302811a7b594ddd94",
+      "source_type": "substack",
+      "source_name": "Clouded Judgement",
+      "title": "Clouded Judgement 9.11.26 - Paying for the Curve",
+      "url": "https://cloudedjudgement.substack.com/p/clouded-judgement-91126-paying-for",
+      "published_at": "2026-09-11T13:03:53+00:00",
+      "collected_at": "2026-09-12T00:00:49.563941+00:00",
+      "body": "Every week I’ll provide updates on the latest trends in cloud software companies. Follow along to stay up to date!\n\n**Paying for the Curve**\n\nLots of drama this week on math proofs! I’m sure most have seen the back and forth between folks at OpenAI and Anthropic about a Navier Stokes proof. The point of this post is not to dig in on all the details (too much commentary on that online already, and too much speculation…) Instead - here’s a very high level of one part of the saga (and then something that I found interesting). Producing a proof of the Navier Stokes existence and smoothness problem is one of seven Millennium Prize Problems that each have a $1m prize attached to it (ie solve it, get a $1m prize). And OpenAI said they did it. 10k agents working in parallel for 3-4 days, >100 pages of manuscript and a formalized proof. The drama around this are allegations that OpenAI piggybacked off research two professors had done (but not published) on the same topic (one of whom works at Anthropic).\n\nWho gets credit, how it got discovered, etc, are not what I want to discuss today. What was interesting to me was how much of the commentary online centered around the cost / benefit of producing this proof. The “benefit” was the $1m prize. But at what cost? OpenAI said the agents sent ~2.7m messages and used ~130b output tokens. Many posts then attempted to do the math on the “cost” of solving this problem. At Astra’s list price of ~$50m / million output tokens, the 130b output tokens cost is ~$6.5m. That’s just output though. The input tokens for 2.7m messages passing context back and forth is most likely a much larger number. All in the total costs estimated from $10 - $40m. OpenAI has said that it was in the ballpark of “millions of dollars” of compute.\n\nThe lazy takes then become - “wait, they spent ~$10m+ to win a prize worth $1m?! How is that worth it!” Sam Altman even poked fun at people making these claims:\n\n[![Image 1: X avatar for @sama](https://substackcdn.com/image/fetch/$s_!rDsj!,w_40,h_40,c_fill,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fpbs.substack.com%2Fprofile_images%2F2046764873200394240%2Fr7BxVezs.jpg) Sam Altman@sama @scaling01 ugh AI is such a bubble, i heard they are selling tokens at a loss, did they know this was only worth $1 million? 7:35 PM · Sep 8, 2026 · 1.93M Views 261 Replies · 279 Reposts · 9.27K Likes](https://x.com/sama/status/2097408559583772986)\nThe broader point I want to make - for the most important breakthroughs, the “cost” of the first wave is never really that relevant. What’s most relevant is the binary - could we do it, and what’s the slope of the curve.\n\nNoam Brown described this well. He talked about when OpenAI announced o3 in December ‘24 it cost $500k of compute to score 87.5% on ARC-AGI 1. Today, Astra scores higher for $20. In ‘25, OpenAI and DeepMind spent a ton of compute to get to IMO gold. For the 2026 IMP, anyone with a $20 / month ChatGPT subscription could do it. This is a pattern that will continue to repeat itself. Sure, maybe it cost $10m to solve Navier- Stokes today for a $1m prize. The focus should be on “look what a computer just did!” Not on “but look how much it cost.” Because the trend seems pretty clear - now that we’ve shown computers can solve problems of this difficulty, it should be obvious they will continue to solve more problems of this difficulty but at exponentially lower costs as time progresses. Epoch AI has the price to reach a given benchmark falling from 9x to 900x per year (depending on the milestone). GPT-4 came out in early 2023 at $60m / 1m output tokens. Now you can get that level of performance for <$1.\n\nSo let’s extrapolate this. This year it costs ~$10m to solve a Millennium Prize Problem. Next year it’s $1m. Year after that $100k. Year after that $10k. This specific trajectory of course won’t be exactly right, but the shape of it probably will be. Something that was once very out of reach for the vast majority of the population ($10m dollars, 10k agents, days of running time, etc) will (before long) cost less than a new foldable iphone and be accessible to everyone. That’s the real takeaway for me! And everyone just focusing on the mismatch in $1m price to cost spent is just completely missing the forest for the trees (or intentionally being dogmatic).\n\nTying this back to another (hotly) debated topic in AI - gross margins. Today, many folks will look at AI businesses with low gross margins and see a “broken business.” But this is making the same mistake as the cost / prize of the math proof I described above… Gross margins are point in time on a curve, and the cost of that curve is falling dramatically.\n\nThe pace of innovation is staggering, and only accelerating. Too often analysis of the industry looks at point in time metrics, and not at where things are heading. And the “where things are heading” can be tricky when the slope of the exponential is so steep. Last thing I’ll end with (maybe most important) - Noam also mentioned the model used at OpenAI for the proof was an unreleased model more powerful than astra (you can see his chart below). There are models that exist today that are already meaningfully more performant than what’s out in the public. The pace of the exponential will only steepen from here!\n\n[![Image 2: X avatar for @polynoamial](https://substackcdn.com/image/fetch/$s_!-Ml8!,w_40,h_40,c_fill,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fpbs.substack.com%2Fprofile_images%2F1872883170292457472%2F8ywVGO5M.jpg) Noam Brown@polynoamial I understand how, looking at today’s LLMs, people might think the only way we'd achieve NS is by using Levent’s/Tristan’s prompts. But I hope this plot conveys the model used is a huge step up from today’s LLMs. Nobody looked at Levent’s/Tristan’s prompts. That’d be insane. ![Image 3](https://pbs.substack.com/media/HRtk2q3bIAATUBd.jpg) ![Image 4: X avatar for @SebastienBubeck](https://substackcdn.com/image/fetch/$s_!MaOs!,w_20,h_20,c_fill,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fpbs.substack.com%2Fprofile_images%2F1709609135321583616%2F6bXuF85D.jpg) Sebastien Bubeck@SebastienBubeck I would like to clarify a few things: 1) The screenshot is my reaching out to Levent to coordinate our releases. I hope it’s clear from the message that we came in with the best possible intentions. 2) I never ever asked for Levent to be removed from authorship of his own work 5:47 PM · Sep 8, 2026 · 162K Views 92 Replies · 82 Reposts · 1.62K Likes](https://x.com/polynoamial/status/2097381286193316203)\n**Quarterly Reports Summary**\n\n[![Image 5](https://substackcdn.com/image/fetch/$s_!89tD!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcd3018ed-1516-4930-99e8-bb556c5c6553_1308x238.png)](https://substackcdn.com/image/fetch/$s_!89tD!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcd3018ed-1516-4930-99e8-bb556c5c6553_1308x238.png)\n\n**Top 10 EV / NTM Revenue Multiples**\n\n[![Image 6](https://substackcdn.com/image/fetch/$s_!CBHc!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa288c258-ad2e-40a9-afd2-61e28821598f_1444x697.png)](https://substackcdn.com/image/fetch/$s_!CBHc!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa288c258-ad2e-40a9-afd2-61e28821598f_1444x697.png)\n\n**Top 10 Weekly Share Price Movement**\n\n[![Image 7](https://substackcdn.com/image/fetch/$s_!IS-B!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe01f42f4-3c3d-43bc-8978-8460fd0f04e0_985x639.png)](https://substackcdn.com/image/fetch/$s_!IS-B!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe01f42f4-3c3d-43bc-8978-8460fd0f04e0_985x639.png)\n\n**Update on Multiples**\n\nSaaS businesses are generally valued on a multiple of their revenue - in most cases the projected revenue for the next 12 months. Revenue multiples are a shorthand valuation framework. Given most software companies are not profitable, or not generating meaningful FCF, it’s the only metric to compare the entire industry against. Even a DCF is riddled with long term assumptions. The promise of SaaS is that growth in the early years leads to profits in the mature years. Multiples shown below are calculated by taking the Enterprise Value (market cap + debt - cash) / NTM revenue.\n\nOverall Stats:\n\n*   Overall Median: 4.0x\n\n*   Top 5 Median: 31.6x\n\n*   10Y: 5.0%\n\n[![Image 8](https://substackcdn.com/image/fetch/$s_!s0kC!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6e9a3d40-0b54-4c4e-865c-4d093384c884_1228x667.png)](https://substackcdn.com/image/fetch/$s_!s0kC!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6e9a3d40-0b54-4c4e-865c-4d093384c884_1228x667.png)\n\n[![Image 9](https://substackcdn.com/image/fetch/$s_!7NlU!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F46783f35-5b60-422d-bef4-17845589b141_1222x661.png)](https://substackcdn.com/image/fetch/$s_!7NlU!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F46783f35-5b60-422d-bef4-17845589b141_1222x661.png)\n\nBucketed by Growth. In the buckets below I consider high growth >22% projected NTM growth, mid growth 15%-22% and low growth <15%. I had to adjusted the cut off for “high growth.” If 22% feels a bit arbitrary, it’s because it is…I just picked a cutoff where there were ~10 companies that fit into the high growth bucket so the sample size was more statistically significant\n\n*   High Growth Median: 17.1x\n\n*   Mid Growth Median: 6.1x\n\n*   Low Growth Median: 3.3x\n\n[![Image 10](https://substackcdn.com/image/fetch/$s_!FhaP!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd9405e15-1266-4738-8c4a-941bb48a374a_1240x664.png)](https://substackcdn.com/image/fetch/$s_!FhaP!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd9405e15-1266-4738-8c4a-941bb48a374a_1240x664.png)\n\n[![Image 11](https://substackcdn.com/image/fetch/$s_!2iA2!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F58058802-0e2b-445c-836e-2fcaccab4cac_3028x1293.png)](https://substackcdn.com/image/fetch/$s_!2iA2!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F58058802-0e2b-445c-836e-2fcaccab4cac_3028x1293.png)\n\n**EV / NTM Rev / NTM Growth**\n\nThe below chart shows the EV / NTM revenue multiple divided by NTM consensus growth expectations. So a company trading at 20x NTM revenue that is projected to grow 100% would be trading at 0.2x. The goal of this graph is to show how relatively cheap / expensive each stock is relative to its growth expectations.\n\n[![Image 12](https://substackcdn.com/image/fetch/$s_!HF39!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4dda1373-43b3-47b3-8f35-7f82379ae03d_1225x667.png)](https://substackcdn.com/image/fetch/$s_!HF39!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4dda1373-43b3-47b3-8f35-7f82379ae03d_1225x667.png)\n\n[![Image 13](https://substackcdn.com/image/fetch/$s_!dAqZ!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F38abac05-e2b1-4f2c-ba8f-7464a6abc422_2920x1297.png)](https://substackcdn.com/image/fetch/$s_!dAqZ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F38abac05-e2b1-4f2c-ba8f-7464a6abc422_2920x1297.png)\n\n**EV / NTM FCF**\n\nThe line chart shows the median of all companies with a FCF multiple >0x and <100x. I created this subset to show companies where FCF is a relevant valuation metric.\n\n[![Image 14](https://substackcdn.com/image/fetch/$s_!VJFo!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa7b1b45d-ad5f-44ba-841f-0885b9091760_1219x670.png)](https://substackcdn.com/image/fetch/$s_!VJFo!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa7b1b45d-ad5f-44ba-841f-0885b9091760_1219x670.png)\n\nCompanies with negative NTM FCF are not listed on the chart\n\n[![Image 15](https://substackcdn.com/image/fetch/$s_!j-RG!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc9a2fa24-1d5d-4a68-8a51-79686701e9c1_3091x1266.png)](https://substackcdn.com/image/fetch/$s_!j-RG!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc9a2fa24-1d5d-4a68-8a51-79686701e9c1_3091x1266.png)\n\n**Scatter Plot of EV / NTM Rev Multiple vs NTM Rev Growth**\n\nHow correlated is growth to valuation multiple?\n\n[![Image 16](https://substackcdn.com/image/fetch/$s_!3-vi!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F07906b7d-aabc-41c0-9403-f1eb9c84325f_2514x1342.png)](https://substackcdn.com/image/fetch/$s_!3-vi!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F07906b7d-aabc-41c0-9403-f1eb9c84325f_2514x1342.png)\n\n**Operating Metrics**\n\n*   Median NTM growth rate: 13%\n\n*   Median LTM growth rate: 16%\n\n*   Median Gross Margin: 76%\n\n*   Median Operating Margin 2%\n\n*   Median FCF Margin: 21%\n\n*   Median Net Retention: 110%\n\n*   Median CAC Payback: 44 months\n\n*   Median S&M % Revenue: 34%\n\n*   Median R&D % Revenue: 23%\n\n*   Median G&A % Revenue: 13%\n\n**Comps Output**\n\nRule of 40 shows rev growth + FCF margin (both LTM and NTM for growth + margins). FCF calculated as Cash Flow from Operations - Capital Expenditures\n\nGM Adjusted Payback is calculated as: (Previous Q S&M) / (Net New ARR in Q x Gross Margin) x 12. It shows the number of months it takes for a SaaS business to pay back its fully burdened CAC on a gross profit basis. Most public companies don’t report net new ARR, so I’m taking an implied ARR metric (quarterly subscription revenue x 4). Net new ARR is simply the ARR of the current quarter, minus the ARR of the previous quarter. Companies that do not disclose subscription rev have been left out of the analysis and are listed as NA.\n\n[![Image 17](https://substackcdn.com/image/fetch/$s_!VmLB!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd6aff31d-e2ea-4af0-abef-758a976499a6_3145x1447.png)](https://substackcdn.com/image/fetch/$s_!VmLB!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd6aff31d-e2ea-4af0-abef-758a976499a6_3145x1447.png)\n\n[![Image 18](https://substackcdn.com/image/fetch/$s_!QmwU!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe344820a-46e2-4405-91bf-053b6b8f8e59_3145x1261.png)](https://substackcdn.com/image/fetch/$s_!QmwU!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe344820a-46e2-4405-91bf-053b6b8f8e59_3145x1261.png)\n\nSources used in this post include Bloomberg, Pitchbook and company filings\n\nThe information presented in this newsletter is the opinion of the author and does not necessarily reflect the view of any other person or entity, including Altimeter Capital Management, LP (”Altimeter”). The information provided is believed to be from reliable sources but no liability is accepted for any inaccuracies. This is for information purposes and should not be construed as an investment recommendation. Past performance is no guarantee of future performance. Altimeter is an investment adviser registered with the U.S. Securities and Exchange Commission. Registration does not imply a certain level of skill or training. Altimeter and its clients trade in public securities and have made and/or may make investments in or investment decisions relating to the companies referenced herein. The views expressed herein are those of the author and not of Altimeter or its clients, which reserve the right to make investment decisions or engage in trading activity that would be (or could be construed as) consistent and/or inconsistent with the views expressed herein.\n\n**This post and the information presented are intended for informational purposes only.** The views expressed herein are the author’s alone and do not constitute an offer to sell, or a recommendation to purchase, or a solicitation of an offer to buy, any security, nor a recommendation for any investment product or service. While certain information contained herein has been obtained from sources believed to be reliable, neither the author nor any of his employers or their affiliates have independently verified this information, and its accuracy and completeness cannot be guaranteed. Accordingly, no representation or warranty, express or implied, is made as to, and no reliance should be placed on, the fairness, accuracy, timeliness or completeness of this information. The author and all employers and their affiliated persons assume no liability for this information and no obligation to update the information or analysis contained herein in the future.\n\n[Share Clouded Judgement](https://cloudedjudgement.substack.com/?utm_source=substack&utm_medium=email&utm_content=share&action=share)\n\n[Leave a comment](https://cloudedjudgement.substack.com/p/clouded-judgement-91126-paying-for/comments)",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://cloudedjudgement.substack.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas",
+        "transport": "public_reader_fallback"
+      }
+    },
+    {
+      "id": "substack:331f2c4bc9930cb1eace",
+      "source_type": "substack",
+      "source_name": "TSOH Investment Research",
+      "title": "TSOH Weekly Roundup (09/11/2026)",
+      "url": "https://thescienceofhitting.com/p/tsoh-weekly-roundup-09112026",
+      "published_at": "2026-09-11T13:00:22+00:00",
+      "collected_at": "2026-09-12T00:00:58.178128+00:00",
+      "body": "Welcome to another edition of TSOH Weekly Roundup . Each update features a Chart of the Week, along with a brief discussion on three news items relevant to companies in the TSOH investable universe. Chart Of The Week (from “ Celsius: The Pepsi Put ”) Three Notable Items “Meta Settled Its Child Safety Lawsuit. Now Comes The Hard Part.” Following the settlement announced two weeks ago , this CNBC video examines the specific changes that Meta will implement for young users to live up to the terms of the deal with nearly every U.S. state (daily time limits, time based default blocks, muted notifications during school hours, etc.). California Attorney General Rob Bonta: “We’re suing TikTok now, and we’re looking to ensure that they adopt similar practices and commitments to what Meta did. We are very interested in Snap and YouTube as well. We want everyone in the industry to take the steps like Meta is required to now.” “Markel Chairman Steve Markel to Retire” Not a surprising development given that Steve Markel is in his late 70’s, but with the notable change that Tom Gayner will now be CEO and Chairman. In addition to Gayner’s additional role, Simon Wilson and Andrew Crowley were promoted to the roles of Co-Presidents of Markel. “The Board announced the establishment of a Leadership Council, consisting of the Lead Independent Director, Chairman and CEO, and Co-Presidents. The Council is designed to facilitate regular coordination among independent Board leadership and senior management, and enhance the Board and management’s review of strategy, performance, and capital allocation.” “Peloton’s push into gyms: CEO Peter Stern’s big bet” An interview with Peter Stern, which covers his career experience prior to joining Peloton, along with his long-term strategy to evolve the business from a connected fitness company to a connected wellness ecosystem. “I believe so deeply in what Peloton does its members, and what it can do for many more people… When I heard there was an opening at Peloton, I quickly found out who the recruiter was; I called him and said, ‘I’m your guy.’… This was a dream job… Over time, I believe the definition of the company became too narrow compared to the potential of our impact.” TSOH Updates Here’s the updated TSOH research list for the past six months: Monday’s research report will be an initiation on Alarm.com (ALRM) . Have a great weekend! NOTE - This is not investment advice. Do your own due diligence. I make no representation, warranty, or undertaking, express or implied, as to the accuracy, reliability, completeness, or reasonableness of the information presented in this report. Assumptions, opinions, and estimates expressed in this report constitute my judgment as of the date thereof and are subject to change without notice. Projections are based on a number of assumptions, and there is no guarantee that they will be achieved. TSOH Investment Research is not acting as your advisor or in any fiduciary capacity.",
+      "author": "TSOH Investment Research",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://thescienceofhitting.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:76f60d64aa6d789064c0",
+      "source_type": "substack",
+      "source_name": "Interconnects",
+      "title": "Open-Source AI & Open Models Reading List",
+      "url": "https://www.interconnects.ai/p/open-source-ai-reading-list",
+      "published_at": "2026-09-11T12:36:25+00:00",
+      "collected_at": "2026-09-12T00:00:48.788369+00:00",
+      "body": "List last updated: 11 Sep. 2026 This is my list of the best writing on open models in the last few years. If someone decides they want to get up to speed on the area, reading this will be a comprehensive overview of the state of affairs. Please comment pieces to consider adding below, and I’ll update this over time. Share Foundation What open models are, why people release them, how they relate to business strategy, and what the risks are. On open source AI strategy, a walkthrough of how open-source software has been used by businesses and early signs of what that means for AI — From Open Source Software to Open Source Strategy , Bill Gurley (May 2026). One of the clearest articulations is Mark Zuckerberg’s comments around Llama 3’s release as to why Meta releases open models — Open Source AI is the Path Forward , Mark Zuckerberg (Jul. 2024) Why you should view open models on a gradient, rather than binary open/closed, based on factors such as licenses, cost of running the model, data access, etc. — The Gradient of Generative AI Release: Methods and Considerations , Irene Solaiman (Feb. 2023). The role open models will play in the economy of the future, as a complement to strong closed models. Why open models will be used to create custom agentic workflows in enterprises across the world – What comes next with open models , Nathan Lambert / Interconnects (Mar. 2026) A position on how open models will capture value by providing a complementary tool to large swaths of the existing economy, drawing on the history of IP and current debates on open vs. closed models (e.g. distillation) — Some Simple Economics of Open versus Closed AI , Christian Catalini (Aug. 2026) Why open models will constantly be behind closed models in performance — Open models in perpetual catch-up , Nathan Lambert / Interconnects (Feb. 2026) Where adoption differs for open and closed models — Open and closed models are on different exponentials , Nathan Lambert / Interconnects (Jun. 2026) A clear articulation on how to balance releasing powerful open-weight models while taking safety seriously — A Safe Path to Open Weights , Thinking Machines Lab (Jul. 2026). Early paper on marginal risks that showed text-focused LLMs very marginally increased documented potential risks of models — On the Societal Impact of Open Foundation Models , Sayash Kapoor, Rishi Bommasani et al. (Feb. 2024). Closed models safety guardrails are regularly bypassed causing a plethora of real AI-risks before hypothetical risks of open weight models have emerged — The Myth of unsafe Open Source AI , Florian Brand (Jun. 2026). The mass reduction in open data, which is a crucial factor that has hampered truly open AI research — Consent in Crisis: The Rapid Decline of the AI Data Commons , Shayne Longpre et al. (Jul. 2024). Recent examples on how strong Chinese models impact the AI ecosystem — Kimi K3: The open-weights escalation , Nathan Lambert / Interconnects (Jul. 2026) / GLM-5.2 is the step change for open agents , Nathan Lambert / Interconnects (Jun. 2026). A summary of the story of open models in 2025: Nathan Lambert on China’s AI Ecosystem and the Open Model Gap | The Curve 2025 , Golden Gate Institute for AI (Nov. 2025). [ Optional ] Latest data on open model adoption: A general summary on US vs. China model adoption — The ATOM Report (Apr. 2026), The latest data on model downloads, derivatives, and research adoption by region — Interconnects Adoption Dashboard , and The most important models to know about in the ecosystem — Interconnects Artifacts Hub US-China Competition Who is leading in open models, how this has changed over time, how China maintains its leading position, and relevant history. Why the U.S. needs to invest in open models for fundamental R&D / innovation in the face of growing competition from China – The ATOM Project , Nathan Lambert (Aug. 2025) The lens as to why open models help spur research innovation and beneficial outcomes for AI — Why I build open language models , Nathan Lambert / Interconnects (Oct. 2024) Why open models foster education, innovation and competition, three core American values — Banning Open Source AI Would Be A Mistake , Nathan Lambert & Kevin Xu (Jun. 2026) Why the recent “vibe regulation” / vague federal oversight mechanisms set us up for a clash and-or ban of frontier open models in the near future — 6 months to live for open models , Nathan Lambert / Interconnects (Jul. 2026) [ Optional ] Fully open language model technical reports to illustrate the start of the art in understanding: Pythia (EleutherAI, 2023), Olmo (2024), Olmo 2 (2024), Olmo 3 (2025) Chinese open-source history leading up to AI — Chinese Open Source: A Definitive History , Kevin Xu (Mar. 2026). China’s structural advantages in open-source — China’s Structural Advantage in Open Source AI , Kevin Xu (Jun. 2025). How Chinese labs themselves discuss building models, and how the Chinese industry differs from the U.S. — Notes from inside China’s AI labs , Nathan Lambert / Interconnects (May 2026). Why Chinese labs are so good at keeping up with American competition (e.g. American open weight labs struggle to compete with Chinese labs on fair performance comparisons) — GLM-5.3: How Chinese labs keep stride with the frontier , Nathan Lambert / Interconnects (Aug. 2026). Prominent uses of Chinese models by Western companies have prompted meaningful regulatory attention ( more discussion ) Lawmakers have probed the following companies over using Chinese models: DoorDash ( CNBC , Jul. 31 2026), Airbnb ( Bloomberg , Apr. 29 2026; Semafor , Apr. 29 2026), Anysphere / Cursor ( Bloomberg , Apr. 29 2026; Semafor , Apr. 29 2026), Apple ( Reuters , May 17 2025) Other western companies have very publicly shifted the models they use from American, closed labs to Chinese open models to save costs. Examples include Perplexity prominently and rapidly adopted DeepSeek R1 ( Forbes , Jan. 28 2025) and Thomson Reuters building on Qwen to move off Claude ( Business Insider , Aug. 24 2026) Technical Details What is distillation and how much does it help Chinese labs, how do open models impact frontier AI risks like cybersecurity, and how far are open models behind the closed frontier? The open-closed model gap has reduced in recent years, and is now at roughly 4-6 months. The leading open models have all come from Chinese labs since ~2024. SemiAnalysis article which ran independent evaluations, concluding that open models have been getting closer to the closer frontier of performance over time — Are Open Models Catching Up? , SemiAnalysis (Aug. 2026) Data sources from Epoch AI and Artificial Analysis (and U.S. v China , related) showing the open-closed gap over time. An independent analysis of the open-closed gap across a mix of public and private evaluations — How far behind are open models? , Håvard Tveit Ihle (May 2026) E.g. in 2025, the product lead of Z.ai said with respect to their release time “Get it out fast. We open source it within a few hours.” — The Z.ai Playbook , ChinaTalk (Nov. 21, 2025) Cyber, risks & open models (to develop this) Why we cannot effectively ban open models as used by bad actors for cyber capabilities (they will always have access) — The OpenAI/Huggingface incident; how we should manage the imminent arrival of autonomous hacking too cheap to meter , Joshua Saxe (Jul. 2026) What the government should do to observe, orient, decide, and act with respect to emerging cyber threats (versus blocking models based on in-house capability assessments) — We urgently need a coherent national AI cybersecurity policy , Joshua Saxe (Aug. 2026) Why you cannot expect to control access to AI at a certain threshold (e.g. open weight models) and need to prepare society to tackle risks downstream of available intelligence — Nonproliferation is the wrong approach to AI misuse , Helen Toner (Apr. 2025) Distillation – the process of training on output tokens from another model – is the single most eventful debate around open models in 2026. For basic background, see a textbook chapter on synthetic data & distillation generally, from Reinforcement Learning from Human Feedback (post-training textbook published in 2026) How distillation helps the Chinese labs, but doesn’t take away from their innovation — How much does distillation really matter for Chinese LLMs? , Nathan Lambert / Interconnects (Feb. 2026) A recent paper that showed that the frontier labs had implementations in their APIs that made systematic extraction of reasoning traces (the crucial part of modern training) through clever tricks. Recent distillation paper, my writing on it — Stealing Reasoning Traces from Proprietary LLM APIs , Panfilov, Schmotz, Shumailov et. al 2026 (more on X ). Anthropic confirmed this technique was used by Chinese labs. Why the political panic over distillation, claiming that distillation is the only reason Chinese models are close to the frontier, is not grounded in the evidence — The distillation panic , Nathan Lambert / Interconnects (May 2026) How labs can use distillation to improve models in an era of scaling RL environments across agentic behaviors — How distillation is used today and what performance uplift it gives to open models , Nathan Lambert (Jul. 2026) [ Optional ] More history: In 2024, I wrote Frontiers in synthetic data where the key points were that synthetic data, primarily in “distilling” models by training with SFT on outputs from a stronger model, was the dominant form of distillation. Frontier labs had been shifting the logit-based, knowledge distillation, confirmed earliest in Gemini and continuing to this day. In early 2025, there was substantial debate on if DeepSeek-R1 was distilled from OpenAI’s o1 model. There is no clear evidence suggesting that they did, and in Apr. of 2025 I wrote confidently that DeepSeek did not distill. At the time of R1, it is more possible than I gave it credit to that DeepSeek did distill some o1 traces to make it easier for them to train their R1 model – based on the above reasoning trace extraction methods. This does not take away from the innovation of it, but it’s worth being realistic and is a way that distillation could accelerate China closing the gap to American labs.",
+      "author": "Nathan Lambert",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.interconnects.ai",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "substack:b229d86dd77da4e27481",
+      "source_type": "substack",
+      "source_name": "How They Make Money / App Economy Insights",
+      "title": "☁️ Oracle: 850 Megawatts Later",
+      "url": "https://www.appeconomyinsights.com/p/oracle-850-megawatts-later",
+      "published_at": "2026-09-11T12:04:13+00:00",
+      "collected_at": "2026-09-12T00:00:53.137753+00:00",
+      "body": "Welcome to the Free edition of How They Make Money . Over 300,000 subscribers turn to us for business and investment insights. In case you missed it: 🚖 Uber: AV Anxiety 💻 Software Strikes Back 💍 How Oura Makes Money 💳 PRO: Apple, Meta, Samsung, Visa…. Subscribe now 📊 Check out 100+ companies visualized in our latest monthly report. AI had a strange week Meta launched Muse , a personal AI agent that can send emails, shop, book travel, and keep working after you close the app. Muse reached #3 in the US App Store within two days , and Meta says usage has already blown past expectations. More importantly, it pushes Meta into the race to own the consumer agent , leveraging its massive distribution today and AI glasses tomorrow. New $20 and $100 monthly tiers also offer one of Meta’s clearest paths yet to monetizing AI beyond advertising. Meanwhile, Anthropic researcher Jacob Coxon quit, warning that leading AI labs are \"gambling with our lives.\" Anthropic alignment lead Evan Hubinger went further, putting the odds of AI killing all humans within the next decade above 10% . Not exactly ideal PR ahead of a potential IPO. On that cheerful note, Apple just kicked off the Ternus era with its latest iPhone launch, while Oracle faced another test of the AI infrastructure boom. Today at a glance: 📱 Apple: The $2,000 iPhone ☁️ Oracle: 850 Megawatts Later 1. 📱Apple: The $2,000 iPhone New Apple CEO John Ternus just unveiled the iPhone Duo , the company’s first foldable phone, alongside the iPhone 18 Pro, new Watches, and AirPods. The Duo starts at $1,999 and can reach an eye-watering $3,199 with 2TB of storage. It was actually less than some analysts expected given the current RAM-aggeddon. But beyond the sticker shock, the launch says a lot about where Apple sees its next growth opportunities. Dominating a tiny market Apple is seven years late to foldables. Samsung launched its first Galaxy Fold in 2019, yet the category still represents only about 2% of global smartphone shipments . That could change quickly. Industry estimates suggest Apple could sell roughly 6 million Duos in 2026 despite launching in late October, potentially capturing around a quarter of the foldable market almost immediately. Some forecasts see first-year sales approaching 10 million units. That would be an impressive entrance, but it also puts the opportunity in perspective. Apple sells well over 200 million iPhones each year. Even 10 million Duos would represent only a small fraction of its annual volume. So Apple could become one of the largest foldable vendors almost overnight without foldables becoming a major growth driver. Pushing iPhone prices higher Apple generated roughly $210 billion of iPhone revenue last year , so even a successful Duo launch is unlikely to transform the company. If Apple sells 10 million at an average price around $2,000, that would represent roughly $20 billion of revenue. But most of those customers would have bought another iPhone anyway. iPhone remains Apple’s core cash engine, but hardware growth now relies almost entirely on pricing power rather than unit volume. What matters here are the incremental economics. Someone opting for a $1,999 Duo instead of a $1,299 Pro Max adds roughly $700 of revenue per customer . Across 10 million buyers, that’s ~$7 billion of incremental revenue before considering the much pricier storage configurations. Apple is also raising prices elsewhere after the recent memory crunch. The new iPhone Pro and Pro Max both increased by $100, while several older models also became more expensive. There is no standard iPhone 18 this fall either, meaning anyone who wants the newest generation has to buy a Pro or Duo. The Duo may remain niche, but it gives Apple room to push iPhone average selling prices materially higher. Turning AI into an ecosystem feature Apple also used the event to clarify where it fits in the AI race. Ternus spent time describing an Intelligent Personal Hub , walking through the features the perfect AI device would need and making it sound like he was about to unveil something revolutionary. He concluded that this device already exists. It’s the iPhone. It sounded almost like an early rebuttal to OpenAI and Jony Ive’s work on a new AI device. The new Siri can use personal context from messages, emails, photos and apps, understand what is on the screen, and take actions across the operating system. Apple is extending similar capabilities to the Watch, including AI-generated recaps and health insights. That is a very different strategy from OpenAI or Anthropic. Apple does not need users spending hours inside an Apple chatbot. Its advantage is controlling the device, operating system, and personal context where AI can become useful. Apple can also rely on outside models when needed while keeping control of the customer experience. In other words, Apple does not necessarily need to win the foundation-model race to benefit from AI. The monetization is indirect too. Better AI can make the next iPhone more compelling, increase attachment to the Watch and AirPods, and make it harder to leave the ecosystem. Apple does not need a $20 monthly Siri subscription if AI helps sell more $1,200, $2,000, or even $3,000 devices. Takeaway: The Duo is the flashy part of this week’s launch. But the broader strategy is familiar. New technology gives customers another reason to move up the hardware ladder and stay within the ecosystem. 2. ☁️ Oracle: 850 Megawatts Later Oracle’s AI story has been easy to summarize over the past year. It signed enormous contracts first, spent enormous sums building the capacity to serve them, and promised the revenue would follow. That promise finally started showing up in the August quarter. Oracle delivered 850 megawatts of new data center capacity in Q1 FY27, almost triple what it delivered in Q4 FY26, while deploying more than 300,000 GPUs . OCI revenue more than doubled, total revenue accelerated to 30% growth, and the company still added another $26 billion to its enormous backlog. The stock jumped after hours. After months of concern about Oracle’s debt, dilution, and massive AI spending, investors finally got more evidence of what all that money is buying. But even after the bounce, shares remain roughly 50% below their September 2025 peak. Q1 FY27 in numbers: 🚀 Growth accelerated again: Revenue reached $19.3 billion, up 30% Y/Y and ahead of Oracle’s 27%–29% guidance. Adjusted EPS reached $1.92, comfortably above the $1.74 consensus. ☁️ OCI more than doubled: Cloud revenue grew 62% to $11.6 billion, led by OCI growth of 121% to $7.4 billion. Cloud applications grew a much slower 10% to $4.2 billion, while traditional software revenue fell 3% to $5.6 billion. 📦 The backlog is still growing: RPO reached $664 billion, up $209 billion Y/Y and $26 billion sequentially. Oracle booked more than $30 billion of additional AI cloud contracts during the quarter, even as it began converting more of the existing backlog into revenue. Source: Fiscal.ai 💰 The CapEx number needs some context: Reported CapEx reached an extraordinary $28.5 billion, contributing to roughly $5 billion of negative free cash flow (and $29 billion in the past 12 months). But customer prepayments covered $11 billion of the infrastructure spending, bringing Oracle’s net cash outlay to roughly $18 billion. Oracle also completed its previously announced $20 billion equity offering. Oracle is burning cash to build infrastructure, but customer checks are softening the blow. Source: Fiscal.ai So what to make of all this? 📈 The backlog is becoming real revenue: OCI growth accelerated from 93% to 121% as Oracle nearly tripled the capacity it brought online. The bull case is no longer based only on a giant RPO number. Oracle is now showing it can turn that backlog into revenue, while demand for AI training and inference still exceeds available capacity. 💵 Customers are sharing the financing burden: Customer prepayments are becoming a meaningful part of Oracle’s AI funding model. The company still had to fund roughly $18 billion of net CapEx in Q1, but customers effectively financed more than $11 billion of the buildout. Oracle also said its latest $30+ billion of AI contracts require no incremental increase to its planned capital raise. ⚖️ Gross margins are under pressure: Oracle’s gross margin fell roughly 6 percentage points Y/Y as lower-margin OCI became a much larger part of the revenue mix. But that pressure has not flowed through to operating margins yet. GAAP operating margin expanded by nearly 6 points to 35%. So far, operating leverage elsewhere is absorbing the infrastructure mix shift. What to watch Oracle expects cloud revenue growth to accelerate again to 65%–71% in Q2 FY27 . With demand already under contract, attention is increasingly shifting to execution and economics. Can Oracle bring capacity online fast enough, fund roughly $70 billion of net CapEx this year, and maintain attractive margins as infrastructure becomes a much larger part of the business? Takeaway: Oracle no longer needs to prove that AI demand exists. Q1 showed that it can turn that demand into capacity and revenue at remarkable speed. The remaining question is whether the economics justify the enormous capital required to get there. This quarter was an important step toward proving they can. That's it for today. Happy investing! How They Make Money Premium members unlock hundreds of visuals every quarter Want to sponsor this newsletter? Get in touch here . Thanks to Fiscal.ai for being our official data partner. Create your own charts and pull key metrics from 50,000+ companies directly on Fiscal.ai . Save 15% with this link . Disclosure: I own AMD, AMZN, GOOG, META, and NVDA in App Economy Portfolio . I share my ratings (BUY, SELL, or HOLD) with App Economy Portfolio members. Author's Note (Bertrand here 👋🏼): The views and opinions expressed in this newsletter are solely my own and should not be considered financial advice or any other organization's views.",
+      "author": "App Economy Insights",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.appeconomyinsights.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
     {
       "id": "x:7493bb5709e1c36998af",
       "source_type": "x",
@@ -1760,48 +1947,6 @@
       }
     },
     {
-      "id": "reddit:f3264fa57c64c498443d",
-      "source_type": "reddit",
-      "source_name": "r/wallstreetbets",
-      "title": "$DECK DD: Hoka is taking over the trail and the stock is dirt cheap (11 P/E)",
-      "url": "https://www.reddit.com/r/wallstreetbets/comments/1wcvpmf/deck_dd_hoka_is_taking_over_the_trail_and_the/",
-      "published_at": "2026-09-10T21:00:29+00:00",
-      "collected_at": "2026-09-11T00:00:57.198497+00:00",
-      "body": "https://preview.redd.it/c47fqkw7eroh1.jpg?width=915&format=pjpg&auto=webp&s=5a25a87ae5cfccecd509f57ac6cf9ac8f8c8f668 Listen up, regards. Runner here from Switzerland. While you're busy lighting your portfolios full of GPUs, DRam and 0DTE options, there is a literal money printer running laps around the market right now. I’m talking about Deckers Outdoor Corporation ($DECK) the parent company of Hoka and UGG. Trail running is exploding, Hoka is sitting on the throne, and the fundamentals are solid. Let’s break down. The Macro: Trail Running is Taking Over If you haven't stepped outside recently, running culture is booming. But road running is old news - trail running and ultramarathons are where the real growth is happening. Let’s look at the Super Bowl of trail running: UTMB (Ultra-Trail du Mont-Blanc). UTMB is sponsored by Hoka, but it's not just a logo on a banner. Hoka absolutely dominates the starting line. Recent stats from major ultras show Hoka capturing between 35% and 40% of the entire market share of shoes worn by runners. Think about that. In a market packed with Nike, Salomon, Brooks, and Altra, nearly 4 out of every 10 hardcore runners are strapping thick-soled Hokas to their feet to run 100 miles through the Alps. The Fundamentals: Stupid Cheap $DECK is insanely undervalued right now, especially for a growth machine. * P/E Ratio: $DECK is currently trading at a P/E of exactly 11. For context, its 10-year historical average is up in the 30s. It is trading at a massive, stupid discount compared to its own history. * The Competitors are Overpriced: Nike ($NKE) is sitting at a ~21 P/E while hemorrhaging market share. On Running ($ONON) is trading at ~ 14 P/E. ($AS) is the strongest competitor in my opinion. * Earnings Crush: They don't just beat earnings; they annihilate them. The company is printing cash and growing revenue at a double-digit rate while the rest of the retail sector is whining about macro headwinds and tariffs. * Return on Equity: They are chilling with a ridiculous ROE. This company is incredibly efficient at turning foam shoes into cold, hard cash. Trail running is the new golf, and Hoka is the undisputed king of the mountain. $DECK is putting up massive growth numbers, dominating the global running market, and trading at an 11 P/E ratio that makes it a screaming value play compared to its peers. Poor consumer sentiment will not last forever. Positions: Long 400 shares and planning to double that🚀👟💰 https://preview.redd.it/bac6bx88eroh1.jpg?width=915&format=pjpg&auto=webp&s=4bd471f18fb52bc7f07cbee0140981dc69213070 submitted by /u/montblanc2020 [link] [comments]",
-      "author": "/u/montblanc2020",
-      "symbols": [
-        "DECK",
-        "NKE",
-        "ONON",
-        "AS"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "transport": "rss",
-        "listing": "dd",
-        "flair": "",
-        "requested_flair": "",
-        "requested_flairs": [
-          "DD"
-        ],
-        "sort": "top",
-        "time_filter": "day",
-        "feed_rank": 1,
-        "image_urls": [
-          "https://preview.redd.it/c47fqkw7eroh1.jpg?width=140&height=20&auto=webp&s=01a618c483aad955fdca21dee8f59f9884eb7306"
-        ],
-        "images": [
-          {
-            "url": "https://preview.redd.it/c47fqkw7eroh1.jpg?width=140&height=20&auto=webp&s=01a618c483aad955fdca21dee8f59f9884eb7306",
-            "path": "data/media/reddit/reddit-image-reddit-f3264fa57c64c498443d-1.jpg",
-            "mime_type": "image/jpeg",
-            "bytes": 1091
-          }
-        ]
-      }
-    },
-    {
       "id": "x:9e4fb545546d84035c31",
       "source_type": "x",
       "source_name": "@TheValueist",
@@ -2113,6 +2258,256 @@
         "investor_type": "technology_investor",
         "coverage": "technology and software equity trade ideas",
         "engagement_score": 40
+      }
+    },
+    {
+      "id": "price:a74033b0f339487a4a2d",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 跌幅前十 2026-09-10",
+      "url": "https://finance.yahoo.com/markets/stocks/losers/",
+      "published_at": "2026-09-10T20:00:00+00:00",
+      "collected_at": "2026-09-12T00:02:33.060099+00:00",
+      "body": "1. NAVN close 20.26; previous 25.889999; change -21.7458%\n2. RELY close 21.93; previous 24.07; change -8.8907%\n3. CRWV close 89.120003; previous 94.940002; change -6.1302%\n4. CHYM close 32.669998; previous 34.549999; change -5.4414%\n5. ORCL close 152.940002; previous 161.630005; change -5.3765%\n6. NBIS close 228.110001; previous 240.350006; change -5.0926%\n7. QLYS close 161.570007; previous 170.169998; change -5.0538%\n8. TENB close 32.029999; previous 33.669998; change -4.8708%\n9. SECZ close 8.04; previous 8.43; change -4.6263%\n10. GENI close 6.72; previous 7.03; change -4.4097%",
+      "author": "",
+      "symbols": [
+        "NAVN",
+        "RELY",
+        "CRWV",
+        "CHYM",
+        "ORCL",
+        "NBIS",
+        "QLYS",
+        "TENB",
+        "SECZ",
+        "GENI"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "losers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-09-10",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "NAVN",
+            "price_date": "2026-09-10",
+            "close": 20.26,
+            "previous_close": 25.889999,
+            "change_amount": -5.629999,
+            "change_percentage": -21.7458,
+            "url": "https://finance.yahoo.com/quote/NAVN"
+          },
+          {
+            "ticker": "RELY",
+            "price_date": "2026-09-10",
+            "close": 21.93,
+            "previous_close": 24.07,
+            "change_amount": -2.139999,
+            "change_percentage": -8.8907,
+            "url": "https://finance.yahoo.com/quote/RELY"
+          },
+          {
+            "ticker": "CRWV",
+            "price_date": "2026-09-10",
+            "close": 89.120003,
+            "previous_close": 94.940002,
+            "change_amount": -5.82,
+            "change_percentage": -6.1302,
+            "url": "https://finance.yahoo.com/quote/CRWV"
+          },
+          {
+            "ticker": "CHYM",
+            "price_date": "2026-09-10",
+            "close": 32.669998,
+            "previous_close": 34.549999,
+            "change_amount": -1.880001,
+            "change_percentage": -5.4414,
+            "url": "https://finance.yahoo.com/quote/CHYM"
+          },
+          {
+            "ticker": "ORCL",
+            "price_date": "2026-09-10",
+            "close": 152.940002,
+            "previous_close": 161.630005,
+            "change_amount": -8.690002,
+            "change_percentage": -5.3765,
+            "url": "https://finance.yahoo.com/quote/ORCL"
+          },
+          {
+            "ticker": "NBIS",
+            "price_date": "2026-09-10",
+            "close": 228.110001,
+            "previous_close": 240.350006,
+            "change_amount": -12.240005,
+            "change_percentage": -5.0926,
+            "url": "https://finance.yahoo.com/quote/NBIS"
+          },
+          {
+            "ticker": "QLYS",
+            "price_date": "2026-09-10",
+            "close": 161.570007,
+            "previous_close": 170.169998,
+            "change_amount": -8.599991,
+            "change_percentage": -5.0538,
+            "url": "https://finance.yahoo.com/quote/QLYS"
+          },
+          {
+            "ticker": "TENB",
+            "price_date": "2026-09-10",
+            "close": 32.029999,
+            "previous_close": 33.669998,
+            "change_amount": -1.639999,
+            "change_percentage": -4.8708,
+            "url": "https://finance.yahoo.com/quote/TENB"
+          },
+          {
+            "ticker": "SECZ",
+            "price_date": "2026-09-10",
+            "close": 8.04,
+            "previous_close": 8.43,
+            "change_amount": -0.39,
+            "change_percentage": -4.6263,
+            "url": "https://finance.yahoo.com/quote/SECZ"
+          },
+          {
+            "ticker": "GENI",
+            "price_date": "2026-09-10",
+            "close": 6.72,
+            "previous_close": 7.03,
+            "change_amount": -0.31,
+            "change_percentage": -4.4097,
+            "url": "https://finance.yahoo.com/quote/GENI"
+          }
+        ]
+      }
+    },
+    {
+      "id": "price:0c0fc2d5ba0d28a19e63",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 涨幅前十 2026-09-10",
+      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
+      "published_at": "2026-09-10T20:00:00+00:00",
+      "collected_at": "2026-09-12T00:02:33.060099+00:00",
+      "body": "1. WLTH close 10.88; previous 9.46; change 15.0106%\n2. RDDT close 155.339996; previous 146.440002; change 6.0776%\n3. BAND close 51.619999; previous 48.830002; change 5.7137%\n4. BSP close 39.669998; previous 37.75; change 5.0861%\n5. MNDY close 85.169998; previous 81.110001; change 5.0055%\n6. STNE close 10.3; previous 9.82; change 4.888%\n7. FOUR close 43.029999; previous 41.130001; change 4.6195%\n8. NTSK close 15.1; previous 14.46; change 4.426%\n9. DUOL close 145.160004; previous 139.240005; change 4.2517%\n10. SNAP close 5.52; previous 5.31; change 3.9548%",
+      "author": "",
+      "symbols": [
+        "WLTH",
+        "RDDT",
+        "BAND",
+        "BSP",
+        "MNDY",
+        "STNE",
+        "FOUR",
+        "NTSK",
+        "DUOL",
+        "SNAP"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "gainers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-09-10",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "WLTH",
+            "price_date": "2026-09-10",
+            "close": 10.88,
+            "previous_close": 9.46,
+            "change_amount": 1.42,
+            "change_percentage": 15.0106,
+            "url": "https://finance.yahoo.com/quote/WLTH"
+          },
+          {
+            "ticker": "RDDT",
+            "price_date": "2026-09-10",
+            "close": 155.339996,
+            "previous_close": 146.440002,
+            "change_amount": 8.899994,
+            "change_percentage": 6.0776,
+            "url": "https://finance.yahoo.com/quote/RDDT"
+          },
+          {
+            "ticker": "BAND",
+            "price_date": "2026-09-10",
+            "close": 51.619999,
+            "previous_close": 48.830002,
+            "change_amount": 2.789997,
+            "change_percentage": 5.7137,
+            "url": "https://finance.yahoo.com/quote/BAND"
+          },
+          {
+            "ticker": "BSP",
+            "price_date": "2026-09-10",
+            "close": 39.669998,
+            "previous_close": 37.75,
+            "change_amount": 1.919998,
+            "change_percentage": 5.0861,
+            "url": "https://finance.yahoo.com/quote/BSP"
+          },
+          {
+            "ticker": "MNDY",
+            "price_date": "2026-09-10",
+            "close": 85.169998,
+            "previous_close": 81.110001,
+            "change_amount": 4.059998,
+            "change_percentage": 5.0055,
+            "url": "https://finance.yahoo.com/quote/MNDY"
+          },
+          {
+            "ticker": "STNE",
+            "price_date": "2026-09-10",
+            "close": 10.3,
+            "previous_close": 9.82,
+            "change_amount": 0.48,
+            "change_percentage": 4.888,
+            "url": "https://finance.yahoo.com/quote/STNE"
+          },
+          {
+            "ticker": "FOUR",
+            "price_date": "2026-09-10",
+            "close": 43.029999,
+            "previous_close": 41.130001,
+            "change_amount": 1.899998,
+            "change_percentage": 4.6195,
+            "url": "https://finance.yahoo.com/quote/FOUR"
+          },
+          {
+            "ticker": "NTSK",
+            "price_date": "2026-09-10",
+            "close": 15.1,
+            "previous_close": 14.46,
+            "change_amount": 0.64,
+            "change_percentage": 4.426,
+            "url": "https://finance.yahoo.com/quote/NTSK"
+          },
+          {
+            "ticker": "DUOL",
+            "price_date": "2026-09-10",
+            "close": 145.160004,
+            "previous_close": 139.240005,
+            "change_amount": 5.919998,
+            "change_percentage": 4.2517,
+            "url": "https://finance.yahoo.com/quote/DUOL"
+          },
+          {
+            "ticker": "SNAP",
+            "price_date": "2026-09-10",
+            "close": 5.52,
+            "previous_close": 5.31,
+            "change_amount": 0.21,
+            "change_percentage": 3.9548,
+            "url": "https://finance.yahoo.com/quote/SNAP"
+          }
+        ]
       }
     },
     {
@@ -2808,48 +3203,6 @@
         "investor_type": "ai_researcher",
         "coverage": "Stanford, xAI and AI reasoning",
         "engagement_score": 231
-      }
-    },
-    {
-      "id": "reddit:3f6fbbd75b6b09a56978",
-      "source_type": "reddit",
-      "source_name": "r/wallstreetbets",
-      "title": "BRUN, about to go on a RUN? My First DD. Second time posting.",
-      "url": "https://www.reddit.com/r/wallstreetbets/comments/1wcrcpd/brun_about_to_go_on_a_run_my_first_dd_second_time/",
-      "published_at": "2026-09-10T18:23:58+00:00",
-      "collected_at": "2026-09-11T00:00:57.198497+00:00",
-      "body": "Ok, listen up all my helmet wearing brethren. Maybe I had bought NBIS when it was $20 and then sold when it was $60. Why did you sell you might ask? Because I have no idea wtf they do. That's right, I dont understand it. What I do understand, is that I lost my path to an early retirement with that decision. With the stock now way up and teaming up with PLTR to destroy the world as we know it, I'm not sure that now is the best time financially to jump back in. Maybe I should have bought back when Butters Stotch was margin called, but if I was that smart I wouldn't be here. Anyway, point is, I need another chance, another shot, a triple deke that doesn't hit the goal post (Looking at you Emilio). That's when I found Boost Run. Originally a SPAC. A SPAC?! Yes, that's right. The exact thing that lost me money because I thought Don Jr was going to take me to Valhalla on PEW. This time it's different. **This is Nebius 2.0.** This is my chance - and yours, to 10x your port and then ride off into the sunset in Bangkok to chill with those lovely lady bois we all dream about for our retirement. Last quarter this company made moves. I asked chat to pull the data so I didn't have to. * **Revenue:** $31.1 million, up **270% year over year** from $8.4 million. * **Long-term contracted revenue (TCV):** **$1.9 billion**, including more than $1 billion of new contracts signed during Q2. * **Cash:** **$120.2 million** of unrestricted cash at June 30, 2026. * **2026 ARR target:** Management expects to exit 2026 at approximately **$400 million ARR**. * **Net cash-flow margin target:** Management is targeting a sustainable **15%–20%** in forward periods. * **Net income:** Q2 was approximately **-$75.1 million**, according to reported financial data; the loss was heavily affected by unusual/accounting items. * **Operating income:** approximately **-$12.9 million** for Q2. * **EBITDA:** approximately **$3.4 million** for Q2. * **Debt/financing:** Boost Run entered **34 finance lease agreements for GPU servers** during the first half of 2026. * **Capital deployment:** It has a **$1.44 billion Dell purchase agreement** fully committed/allocated and is pursuing another **$4–$5 billion** in compute hardware procurement. Damn bruh? Is that revenue up 270% yoy? Yea cuh, you read that correctly. Are they net positive and profitable? No, but who the fuck cares? What we want is to get in early and right now BRUN is down off its all time highs and resting around $17/share. Next point, this company runs only NVDA GPU's. Take a look at their website and see those chips lined up ready to be leased out by companies who need more computer. I don't know what the names mean or what they really do, but god damn, don't we all love computer? So what the fuck does Boost Run actually do? They buy a metric fuckton of NVIDIA GPUs, put them into data centers, and rent the compute capacity to companies that need AI infrastructure. Lets break it down like this. NVIDIA makes the cocaine, Dell delivers the cocaine, BRUN builds the warehouse, and AI companies are the degenerates doing lines off the server rack. I don't need to understand what any of this means. I just need to understand that people are paying BRUN to use their very expensive computers. You heard me mention SPAC before, they have warrants out for sure. However, those investors when they were able to sell, held. Is that investor confidence in a company? I believe so and it is a green flag. Green means go, homies. Lastly, I believe our supreme leader had mentioned DELL in his previous ramblings. The company that had a pothead on their television ads. C'mon is there anybody more relatable? How could they fire that guy? I'm not sure so pay attention. DELL recently went into a purchase agreement with BRUN for $1.44 billion. Do most companies lay out that kind of cah-sheesh if they don't believe in the product? Probably, not. Wtf do I know tho? I'm just a guy. If BRUN can turn that hardware into revenue at the rate management is projecting, the Dell agreement isn't just a gigantic expense, it's the machinery required to fulfill the contracts. If I was a gambling man, and I am. I lost 38K on 0DTE's last year. I would say that by fulfilling and gaining more contracts, means more revenue, and more revenue means they're more likely to turn net profitable, and therefore....gains. Anyway, I'm just trying to make some money before the TSLA Fuck Bot's take over our homes, our wives, and our lives. Good Speed Regards. Position: 1000 shares. Currently 5% of the port. Looking into options for February now but IV is shit. Will ctm. submitted by /u/Alwaysfavoriteasian [link] [comments]",
-      "author": "/u/Alwaysfavoriteasian",
-      "symbols": [
-        "NBIS",
-        "PLTR",
-        "NVDA",
-        "TSLA"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "transport": "rss",
-        "listing": "dd",
-        "flair": "",
-        "requested_flair": "",
-        "requested_flairs": [
-          "DD"
-        ],
-        "sort": "top",
-        "time_filter": "day",
-        "feed_rank": 2,
-        "image_urls": [
-          "https://preview.redd.it/ksw3b0cpjqoh1.jpeg?width=640&crop=smart&auto=webp&s=b70ebf16e74b6ad296e5cfdf42487bb094b238b4"
-        ],
-        "images": [
-          {
-            "url": "https://preview.redd.it/ksw3b0cpjqoh1.jpeg?width=640&crop=smart&auto=webp&s=b70ebf16e74b6ad296e5cfdf42487bb094b238b4",
-            "path": "data/media/reddit/reddit-image-reddit-3f6fbbd75b6b09a56978-1.jpeg",
-            "mime_type": "image/jpeg",
-            "bytes": 4206
-          }
-        ]
       }
     },
     {
@@ -6534,45 +6887,6 @@
       }
     },
     {
-      "id": "reddit:7bb35a0d5a12b2dd3ac6",
-      "source_type": "reddit",
-      "source_name": "r/wallstreetbets",
-      "title": "$CHTR - Perhaps Heavily Undervalued?",
-      "url": "https://www.reddit.com/r/wallstreetbets/comments/1wc3vtz/chtr_perhaps_heavily_undervalued/",
-      "published_at": "2026-09-10T00:47:30+00:00",
-      "collected_at": "2026-09-11T00:00:57.198497+00:00",
-      "body": "Hello good friends. I've been looking at $CHTR for a bit, and I think it's a very interesting play. The stock is down about 80% from it's highs, and the reasons for that are reasonable: they're losing subscribers and market share to fiber, wireless, and satellite. However I believe that the sell off has gone too far. The company is now so cheap that the market is pricing in catastrophic failure, which I don't believe will happen. The initial picture when you look at $CHTR sucks honestly. $90 billion in debt, revenue dropping due to subscriber loss, insane capex. But when you look a bit deeper, this company pumps some crazy numbers. P/E: 3.5 FCF: $4.4 billion (last year) FCF Yield: 24% ->>> !!!! insane Ok, but there must be a reason for these numbers right? What's the reason? Honestly, I'm not sure. Let's go through all the bad. Debt - $90 billion With an $18 billion market cap, the debt number seems insane. Although these telecom companies do seem to operate with higher leverage ratios, $CHTR's leverage is higher than its peers. This has both positive and negative side effects. On the positive side it increases shareholder returns (because debt is money that shareholders aren't putting up, but is working for the shareholder nonetheless). On the negative side, the more debt you have the more likely it is that the company death spirals, and the more likely cash must be used to pay back debt in order to maintain an investable leverage profile. For $CHTR however, death spiral and bankruptcy risk is still pretty far in the future. $CHTR still carries investment grade on most of its debt, and the debt cliffs for refinancing aren't coming until ~2030. Management has reiterated plans to deleverage as well, whether that's a good choice, I'm not sure. Of course the debt burden problem will be exacerbated with continued subscriber loss, which I believe is part of the reason that management wants to deleverage. But again, $CHTR is not at any risk of bankruptcy for at least for the next 2 years. I think that the major risk of the debt is that rates remain high through the 2030s and $CHTR has to refinance a large portion of debt at higher rates, leading to further leverage pressure and the increased need to deleverage. https://preview.redd.it/xh2euvl43loh1.png?width=1912&format=png&auto=webp&s=672a0e2e089023e56cd6962f1aadab2b593bc00c Subscriber Loss This is a big one, and I believe it's the primary reason that this company is so hated. The narrative is so easy. SpaceX is extremely hyped right now. What's more cool than satellites in space? Fiber is coming to everywhere. Wireless is cheaper than everything. And this has been showing up. CHTR has been losing subscribers in internet which is their most profitable and highest margin sector. About 170k lost last quarter from their total of ~29 million. But I mean let's compare the products. Wireless - Cheap, internet can be spotty, terrible for gaming / latency / consistent uptime. Basically for people who use internet just for browsing and light / medium streaming Starlink - IDK how expensive it is, but probably has similar problems to wireless I'd imagine. I mean surely sending a signal to space and back is not the most efficient way to transmit data. Mainly for rural people with no other coverage options. Fiber - The best for speed, data transmission, latency. If you want the best internet you get this Cable - similar price to fiber, worse quality product, but actually not that much worse. Don't know if you know this but cable internet providers actually run fiber for much of the data transmission. It's only the last bit to your house that's cable. This actually leads to comparable speeds and performance to Fiber. They call this DOCSIS 4.0 or something (terrible marketing name). The product is quite good, the marketing not so much. \"Fiber\" just has an aura that cable can't match. And honestly off marketing alone, the majority of people will choose fiber if they have a choice. So basically to fight the subscriber loss, the name of the game is retention. Price competition drives down margins and ARPU which is bad, so $CHTR has been doing things with bundles. They offer mobile lines bundled with internet. And honestly switching internet providers is an annoying experience. If your internet works well enough for you, are you likely to switch? But I think arguing that subscriber loss won't continue is a stupid argument. But I think that this company at the current price is still a bargain EVEN IF subscriber losses continue. If subscriber losses stabilize (which is honestly best case) this company just seems so insanely undervalued. When I initially looked at the company I did a DCF and I estimated a figure for the % YOY subscriber loss to justify the current price. I don't remember exactly what it was but it was pretty damn high. A lot higher than the current rate (although the rate could accelerate, and if it accelerates enough, my thesis breaks down). But I truly don't believe subscriber loss will accelerate. This is a big ass company, providing essentially one service, and literally everyone is working toward the singular goal of keeping as many subscribers as possible. They have plenty of time and resources (see FCF) to try a ton of shit. And if they manage to stop the bleeding (or even grow subscribers), then the multiple should expand and it should be a 2x at least. That's essentially the bad, but there are some other things to talk about too that I would consider neutral or good. The recent acquisition of Cox Some people view this as a bad, some as a good, some whatever. I personally think it's good. The Cox deal was completed as a $34 billion dollar deal. $CHTR assumed Cox's debts which were about $12 billion. The remaining $22 billion was paid out with $4 billion in debt and $18 billion in equity ($CHTR stock). The great thing about this deal was that this deal was penned when $CHTR stock was a lot higher, so the equity portion was calculated with a $CHTR stock price of $353.64. At today's stock price, effectively $CHTR acquired Cox for 63% off. I actually haven't looked that deeply into Cox's financials, and the Cox equity portion does dilute existing $CHTR holders quite a bit, but the merged companies do the same thing and there should be savings (or synergies as they corporate people like to say). The estimated figures are $1 billion in capex and $800 billion in operating synergies. That's quite a lot. In addition to getting the cash flows and income (which was deemed good when $CHTR was at $356), at $133 (today's price) it's even better, I think Cox's leverage profile is also better than $CHTR's so this also helps to deleverage somewhat. I really like the acquisition. And I think it helps my case. Upcoming Capex Cliff This is the most exciting \"event\" that's coming up. Leadership is guiding Capex to decrease from ~$11.5 billion to ~$8 billion by 2028. This is caused by buildout finishing for the DOCSIS 4.0 I think. But anyway that extra 3.5 billion will directly hit FCF which will pump the FCF yield to an insane like 40%? Nuts. In 2028 they could literally pay a 40% dividend if they wanted to. Although that's unlikely to happen, it's an insane amount of cash. Conclusion. Honestly it's a dying company. But it's dying very slowly, and has the potential to throw off a ton of cash before it dies. I really like it. Also management really likes to buy back stock. Which I think is a great move at the current prices. They could potentially retire half of their shares within the next few years. If you have any objections I'd love to hear it. Always open to changing my mind :) submitted by /u/LiyangHuang [link] [comments]",
-      "author": "/u/LiyangHuang",
-      "symbols": [
-        "CHTR"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "transport": "rss",
-        "listing": "dd",
-        "flair": "",
-        "requested_flair": "",
-        "requested_flairs": [
-          "DD"
-        ],
-        "sort": "top",
-        "time_filter": "day",
-        "feed_rank": 3,
-        "image_urls": [
-          "https://preview.redd.it/xh2euvl43loh1.png?width=140&height=94&auto=webp&s=0546711a716ddc6b4441b6653e0493fc099b0062"
-        ],
-        "images": [
-          {
-            "url": "https://preview.redd.it/xh2euvl43loh1.png?width=140&height=94&auto=webp&s=0546711a716ddc6b4441b6653e0493fc099b0062",
-            "path": "data/media/reddit/reddit-image-reddit-7bb35a0d5a12b2dd3ac6-1.png",
-            "mime_type": "image/png",
-            "bytes": 4378
-          }
-        ]
-      }
-    },
-    {
       "id": "x:7799179e859bd32e8fdc",
       "source_type": "x",
       "source_name": "@buccocapital",
@@ -8037,256 +8351,6 @@
         "investor_type": "technology_analyst",
         "coverage": "AI products, devices and consumer technology",
         "engagement_score": 2654
-      }
-    },
-    {
-      "id": "price:13486d85abf5d1226b51",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 涨幅前十 2026-09-09",
-      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
-      "published_at": "2026-09-09T20:00:00+00:00",
-      "collected_at": "2026-09-11T00:01:35.322512+00:00",
-      "body": "1. BAND close 48.830002; previous 43.619999; change 11.9441%\n2. NET close 314.179993; previous 284.299988; change 10.51%\n3. DDOG close 225.270004; previous 210.229996; change 7.1541%\n4. CHYM close 34.549999; previous 32.310001; change 6.9328%\n5. META close 653.690002; previous 613.47998; change 6.5544%\n6. FSLY close 22.709999; previous 21.49; change 5.6771%\n7. FICO close 983.190002; previous 933.299988; change 5.3455%\n8. AKAM close 110.75; previous 105.610001; change 4.867%\n9. DOCN close 132.669998; previous 126.690002; change 4.7202%\n10. FFIV close 404.630005; previous 389.619995; change 3.8525%",
-      "author": "",
-      "symbols": [
-        "BAND",
-        "NET",
-        "DDOG",
-        "CHYM",
-        "META",
-        "FSLY",
-        "FICO",
-        "AKAM",
-        "DOCN",
-        "FFIV"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "gainers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-09-09",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "BAND",
-            "price_date": "2026-09-09",
-            "close": 48.830002,
-            "previous_close": 43.619999,
-            "change_amount": 5.210003,
-            "change_percentage": 11.9441,
-            "url": "https://finance.yahoo.com/quote/BAND"
-          },
-          {
-            "ticker": "NET",
-            "price_date": "2026-09-09",
-            "close": 314.179993,
-            "previous_close": 284.299988,
-            "change_amount": 29.880005,
-            "change_percentage": 10.51,
-            "url": "https://finance.yahoo.com/quote/NET"
-          },
-          {
-            "ticker": "DDOG",
-            "price_date": "2026-09-09",
-            "close": 225.270004,
-            "previous_close": 210.229996,
-            "change_amount": 15.040009,
-            "change_percentage": 7.1541,
-            "url": "https://finance.yahoo.com/quote/DDOG"
-          },
-          {
-            "ticker": "CHYM",
-            "price_date": "2026-09-09",
-            "close": 34.549999,
-            "previous_close": 32.310001,
-            "change_amount": 2.239998,
-            "change_percentage": 6.9328,
-            "url": "https://finance.yahoo.com/quote/CHYM"
-          },
-          {
-            "ticker": "META",
-            "price_date": "2026-09-09",
-            "close": 653.690002,
-            "previous_close": 613.47998,
-            "change_amount": 40.210022,
-            "change_percentage": 6.5544,
-            "url": "https://finance.yahoo.com/quote/META"
-          },
-          {
-            "ticker": "FSLY",
-            "price_date": "2026-09-09",
-            "close": 22.709999,
-            "previous_close": 21.49,
-            "change_amount": 1.219999,
-            "change_percentage": 5.6771,
-            "url": "https://finance.yahoo.com/quote/FSLY"
-          },
-          {
-            "ticker": "FICO",
-            "price_date": "2026-09-09",
-            "close": 983.190002,
-            "previous_close": 933.299988,
-            "change_amount": 49.890015,
-            "change_percentage": 5.3455,
-            "url": "https://finance.yahoo.com/quote/FICO"
-          },
-          {
-            "ticker": "AKAM",
-            "price_date": "2026-09-09",
-            "close": 110.75,
-            "previous_close": 105.610001,
-            "change_amount": 5.139999,
-            "change_percentage": 4.867,
-            "url": "https://finance.yahoo.com/quote/AKAM"
-          },
-          {
-            "ticker": "DOCN",
-            "price_date": "2026-09-09",
-            "close": 132.669998,
-            "previous_close": 126.690002,
-            "change_amount": 5.979996,
-            "change_percentage": 4.7202,
-            "url": "https://finance.yahoo.com/quote/DOCN"
-          },
-          {
-            "ticker": "FFIV",
-            "price_date": "2026-09-09",
-            "close": 404.630005,
-            "previous_close": 389.619995,
-            "change_amount": 15.01001,
-            "change_percentage": 3.8525,
-            "url": "https://finance.yahoo.com/quote/FFIV"
-          }
-        ]
-      }
-    },
-    {
-      "id": "price:118620327e5fc340adcf",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 跌幅前十 2026-09-09",
-      "url": "https://finance.yahoo.com/markets/stocks/losers/",
-      "published_at": "2026-09-09T20:00:00+00:00",
-      "collected_at": "2026-09-11T00:01:35.322512+00:00",
-      "body": "1. TTAN close 57.119999; previous 81.580002; change -29.9828%\n2. BRZE close 23.725; previous 30.309999; change -21.7255%\n3. PINS close 18.280001; previous 20.139999; change -9.2353%\n4. KVYO close 16.27; previous 17.889999; change -9.0553%\n5. LYFT close 14.9; previous 16.24; change -8.2512%\n6. MNTN close 11.84; previous 12.81; change -7.5722%\n7. KSPI close 100.0; previous 107.209999; change -6.7251%\n8. GRAB close 3.04; previous 3.25; change -6.4615%\n9. ASAN close 8.25; previous 8.79; change -6.1433%\n10. EVCM close 6.76; previous 7.18; change -5.8496%",
-      "author": "",
-      "symbols": [
-        "TTAN",
-        "BRZE",
-        "PINS",
-        "KVYO",
-        "LYFT",
-        "MNTN",
-        "KSPI",
-        "GRAB",
-        "ASAN",
-        "EVCM"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "losers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-09-09",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "TTAN",
-            "price_date": "2026-09-09",
-            "close": 57.119999,
-            "previous_close": 81.580002,
-            "change_amount": -24.460003,
-            "change_percentage": -29.9828,
-            "url": "https://finance.yahoo.com/quote/TTAN"
-          },
-          {
-            "ticker": "BRZE",
-            "price_date": "2026-09-09",
-            "close": 23.725,
-            "previous_close": 30.309999,
-            "change_amount": -6.584999,
-            "change_percentage": -21.7255,
-            "url": "https://finance.yahoo.com/quote/BRZE"
-          },
-          {
-            "ticker": "PINS",
-            "price_date": "2026-09-09",
-            "close": 18.280001,
-            "previous_close": 20.139999,
-            "change_amount": -1.859999,
-            "change_percentage": -9.2353,
-            "url": "https://finance.yahoo.com/quote/PINS"
-          },
-          {
-            "ticker": "KVYO",
-            "price_date": "2026-09-09",
-            "close": 16.27,
-            "previous_close": 17.889999,
-            "change_amount": -1.619999,
-            "change_percentage": -9.0553,
-            "url": "https://finance.yahoo.com/quote/KVYO"
-          },
-          {
-            "ticker": "LYFT",
-            "price_date": "2026-09-09",
-            "close": 14.9,
-            "previous_close": 16.24,
-            "change_amount": -1.34,
-            "change_percentage": -8.2512,
-            "url": "https://finance.yahoo.com/quote/LYFT"
-          },
-          {
-            "ticker": "MNTN",
-            "price_date": "2026-09-09",
-            "close": 11.84,
-            "previous_close": 12.81,
-            "change_amount": -0.97,
-            "change_percentage": -7.5722,
-            "url": "https://finance.yahoo.com/quote/MNTN"
-          },
-          {
-            "ticker": "KSPI",
-            "price_date": "2026-09-09",
-            "close": 100.0,
-            "previous_close": 107.209999,
-            "change_amount": -7.209999,
-            "change_percentage": -6.7251,
-            "url": "https://finance.yahoo.com/quote/KSPI"
-          },
-          {
-            "ticker": "GRAB",
-            "price_date": "2026-09-09",
-            "close": 3.04,
-            "previous_close": 3.25,
-            "change_amount": -0.21,
-            "change_percentage": -6.4615,
-            "url": "https://finance.yahoo.com/quote/GRAB"
-          },
-          {
-            "ticker": "ASAN",
-            "price_date": "2026-09-09",
-            "close": 8.25,
-            "previous_close": 8.79,
-            "change_amount": -0.54,
-            "change_percentage": -6.1433,
-            "url": "https://finance.yahoo.com/quote/ASAN"
-          },
-          {
-            "ticker": "EVCM",
-            "price_date": "2026-09-09",
-            "close": 6.76,
-            "previous_close": 7.18,
-            "change_amount": -0.42,
-            "change_percentage": -5.8496,
-            "url": "https://finance.yahoo.com/quote/EVCM"
-          }
-        ]
       }
     },
     {
@@ -12751,80 +12815,6 @@
         "investor_type": "technology_investor",
         "coverage": "technology and AI equity ideas",
         "engagement_score": 157
-      }
-    },
-    {
-      "id": "substack:c10252138f6d4945746c",
-      "source_type": "substack",
-      "source_name": "MBI Deep Dives",
-      "title": "Pulte’s Bag of Tricks",
-      "url": "https://mbideepdives.substack.com/p/pultes-bag-of-tricks",
-      "published_at": "2026-09-08T16:20:46+00:00",
-      "collected_at": "2026-09-09T00:00:48.845782+00:00",
-      "body": "While covering FICO’s FY 3Q’26 earnings, I **[wrote](https://mbideepdives.substack.com/p/fico-fy-3q26-welcome-to-gaming?utm_source=publication-search)**: “…_there is no doubt that Pulte’s FHFA is overtly hostile to FICO and perhaps investors are concerned that Pulte may have more tricks in his bag to truly hurt FICO’s compounding machine_.”\n\nOn Thursday evening last week, Pulte pulled a few of those tricks out of his bag. For a change, he actually first took aim at the credit bureaus and [posted](https://x.com/pulte/status/2095671962806689853) the following on X:\n\n> “Equifax, Experian, and TransUnion have been overcharging Americans for far too long. This will end soon. We are seriously considering bi-merge, and stronger solutions (SAFER and SOUNDER). We will not allow companies to take advantage of American consumers. No more.”\n\nIn case FICO shareholders felt left out, four minutes later Pulte [posted](https://x.com/pulte/status/2095672962422562893) a separate rant about FICO:\n\n> Since 2020, FICO has increased the price per a person’s credit score by 1,800%. FICO has enjoyed a monopoly. No more. \n> Fannie and Freddie’s initial rollout of VantageScore has been incredibly successful, with 50 LENDERS DELIVERING LOANS. So, EFFECTIVE IMMEDIATELY, I’m instructing Fannie and Freddie to approve ALL lenders to use VantageScore.\n\nPulte wasn’t done yet. The next morning, he floated the possibility of just one credit report instead of three (the status quo) or even the two he suggested the night before.\n\n[![Image 1](https://substackcdn.com/image/fetch/$s_!LY03!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F16cc1239-2610-47a8-b34b-d54af892fc02_685x384.png)](https://substackcdn.com/image/fetch/$s_!LY03!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F16cc1239-2610-47a8-b34b-d54af892fc02_685x384.png)\n\nFICO stock cratered more than 20% following the series of tweets and despite regaining a bit by the close, the stock is still down ~45% YTD. I will elaborate more about the stock price reaction and some implications for Pulte’s bag of tricks behind the paywall.\n\n[![Image 2: chart](https://substackcdn.com/image/fetch/$s_!m6K8!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8470ec48-822d-49c2-bac0-4a6a3ca72a01_2400x1240.png)](https://substackcdn.com/image/fetch/$s_!m6K8!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8470ec48-822d-49c2-bac0-4a6a3ca72a01_2400x1240.png)\n\nSource: KoyFin (MBI Deep Dives readers get 20% discount; just click **[here](https://app.koyfin.com/?via=abdullah)**)\n\n_Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on **[65+](https://mbideepdives.substack.com/p/deep-dives)** companies. The daily is just how I think out loud between the Deep Dives!_",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://mbideepdives.substack.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas",
-        "transport": "public_reader_fallback"
-      }
-    },
-    {
-      "id": "substack:65f0c7f8c10de5a2d16e",
-      "source_type": "substack",
-      "source_name": "Interconnects",
-      "title": "Latest open artifacts (#24): Motif-3, GLM-5.3, Hy4-preview and open model licenses",
-      "url": "https://www.interconnects.ai/p/latest-open-artifacts-24-motif-3",
-      "published_at": "2026-09-08T14:15:25+00:00",
-      "collected_at": "2026-09-09T00:00:46.778759+00:00",
-      "body": "Avid Artifacts readers know that we have been covering not only models but also their licenses for quite some time. There was a period when custom licenses were all the rage, for example the custom Qwen2.5 72B-Instruct license or the Llama licenses . DeepSeek had a custom license for DeepSeek V3 before R1 changed it to MIT , which has resulted in many (Chinese) model makers adopting MIT or Apache 2.0 licenses in 2025. In 2026, open models are more competitive than ever, which has led to two interesting developments: Western model makers adopt open licenses, with both Google and Meta switching to Apache 2.0. Chinese model makers at the frontier, however, are becoming more restrictive: Kimi K3 comes with a license which requires commercial agreements for those who run inference or fine-tuning services, and MiniMax M3 requires agreements above a revenue threshold and has prohibited use cases. The newest addition is Zhipu’s GLM-5.3 , which switched from MIT (GLM-5.2 and earlier) to a custom license with the following clause for inference and fine-tuning providers: If the Licensee or any of its affiliates operates a Model as a Service business, and the aggregate revenue of the Licensee and its affiliates exceeds 10 billion US dollars (or the equivalent in other currencies) in total over any consecutive 12 months, the Licensee must pass Z.AI’s security review before using the Software or its derivative works for any commercial purpose. The scope and method of the security review shall be reasonably determined by Z.AI. While the 10 billion US dollar threshold is very high compared to other licenses of this kind, “affiliates” is not defined in the license, which adds uncertainty and creates barriers to adoption. Furthermore, the license is provided in both English and Chinese, with the Chinese text using “关联方” for affiliated parties, which does have a definition in Chinese law . We are by no means legal experts and there are obvious reasons why those licenses are created. However, we want to highlight the issues that come with creating such licenses, especially in a world with a lot of valid open and closed alternatives. Share Our Picks Motif-3 by Motif-Technologies : Motif is one of the few hidden gems out there, showcasing innovation in their model training with very limited resources compared to others. Motif-3 comes with an MIT license and impressive scores for its size. Given the trajectory of model releases from Motif 2.6B, which we covered in 2025 and Motif-2-12.7B , the improvements are impressive. dots3-note-prev by dots-studio : RedNote/Xiaohongshu, the Chinese Instagram, is also getting more serious about model training, although they aren’t exactly a newcomer , having released models as early as 2025. dots3 was also able to win the IMO 2026 with a perfect score using an internal harness. We expect more from them in the near future. Qwen3.8-Flash-Next by Qwen : A preview of the next version of Qwen models in terms of architecture: 125B-A6B with 51B n-gram embeddings. It uses GDN and Qwen Sparse Attention. Similar to Qwen3-Next-80B-A3B-Instruct , we expect similar architectures to become more popular and the ecosystem to fix integrations by the time Qwen4 drops. GLM-5.3-Flash by zai-org : This release perfected the version of the Chinese model playbook we’ve written about in 2025 : The model got released as a free-to-use “stealth model” under the name “Ox-Alpha” on OpenRouter and OpenCode, which got people excited to try it out in the first place. They then speculated about its creator and size, alleging it is a >1T model from Cursor/xAI, Gemini or a new pre-train from open source labs. Because the model is relatively performant, people kept speculating for days about its creator, thus building up hype. It also dampens the accusations of benchmaxxing which accompany every (open) model release. Hy4-preview by tencent : Tencent is becoming a serious player in the open model space, increasing the size of their flagship model while spinning the post-training flywheel. The result, Hy4-preview, is a competent model which currently has an issue with overthinking. However, if the trajectory from Hy3-preview to Hy3 is any indication, the final model might be a legit shot at the front ranks of open models. View more details on all the models in this issue at our Artifacts Hub . Visit artifactshub.ai Models General Purpose NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16 by nvidia : An update to Nemotron, which comes with performance — but especially speed improvements — across the board. Ling-3.0-flash by inclusionAI : Ant Ling is a frequent guest at the Artifacts Log; they are now on their third iteration of models, adopting a hybrid design (KDA + Gated MLA), similar to others. They also release a small 7.9B-A1.3B version. Qwen3.8-2.4T-A95B by Qwen : In a rather surprising turn of events, Alibaba started to openly release their biggest versions of Qwen as well. However, it comes with a custom license and its performance is behind other models of its size. Read more",
-      "author": "Florian Brand",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.interconnects.ai",
-        "publication_platform": "substack",
-        "section": "industry_changes"
-      }
-    },
-    {
-      "id": "substack:8f8486145c06afe4c4f7",
-      "source_type": "substack",
-      "source_name": "Outlier Cap",
-      "title": "Why I Picked $IREN Over $NBIS and $CRWV?",
-      "url": "https://outliercapx.substack.com/p/why-i-picked-iren-over-nbis-and-crwv",
-      "published_at": "2026-09-08T12:46:57+00:00",
-      "collected_at": "2026-09-09T00:01:26.659436+00:00",
-      "body": "I did not buy $IREN because it is a neocloud. I bought it because it is the **asymmetric** neocloud.\n\nAs I told paid subscribers yesterday in the **main chat**: I initiated the position last thursday **$40.8**.\n\n[![Image 1](https://substackcdn.com/image/fetch/$s_!urkM!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff7ee24ef-6fc5-4701-974d-6c6629f5a644_600x329.png)](https://substackcdn.com/image/fetch/$s_!urkM!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff7ee24ef-6fc5-4701-974d-6c6629f5a644_600x329.png)\n\n$NBIS is the clean software-plus-cloud story the Street already paid up for. $CRWV is the scale story the Street already paid up for — $100 billion-plus of backlog, and a balance sheet that looks like a leveraged buyout of Nvidia’s product cycle. Both can work. Both are already priced as if the identity change is finished.\n\n$IREN is the one the market still files next to the miners.\n\nThat filing error is the entire trade.\n\nThis is not a cheap turnaround. The stock has already been to **~$77** and back. At roughly **$16 billion** of market cap, a 10x would imply around **$160 billion** of equity value. That is an aggressive number. It only works if three things happen together: Horizons 2–4 clear Microsoft before the calendar turns, 2026 capacity converts the contracted **$4 billion ARR** into recognized revenue, and 2027 stops being a slide and starts printing a run-rate the Street cannot ignore — **$10 billion-plus** in the conservative case, more if Sweetwater and the rest of the 5 GW pipeline do what the interconnection agreements say they can do.\n\nI believe the asymmetry is real after this washout.\n\nMy view is constructive and high-conviction: $IREN is the only AI cloud on the U.S. tape that can **finance the factory through the factory**, because it owns the full stack. Land. Power. Substations. Data halls. GPUs. Now software, after Mirantis. That is not a slogan. That is why Microsoft prepaid 20% of a **$9.7 billion**, five-year contract, why Nvidia put a **$3.4 billion** air-cooled deal on the same campus, and why customer prepayments plus GPU financing are covering the overwhelming majority of the silicon bill that is supposed to scare you.\n\nThe market spent four years viewing IREN as “the renewable Bitcoin miner.” That framing is not wrong about fiscal 2025. It is incomplete about the company that reported last week.\n\nAI data centers are now a **power and ownership** problem, not just a GPU-rental problem. CoreWeave still runs more live megawatts. Nebius still looks cleaner on software and on the income statement. What almost nobody else on the U.S. tape offers is this combination: own the interconnection, own the campus, own the liquid-cooled hall, own the GB300 NVL72 cluster, own a path to 5 gigawatts, and already have Microsoft accepting buildings.\n\nIn Q4 FY2026 (quarter ended June 30) AI Cloud revenue printed **$70.5 million** and overtook Bitcoin mining revenue (**$66.7 million**) for the first time in the company’s history. For the full year, AI Cloud still only did **$128.8 million** against **$578.2 million** of mining. That is the costume the tape is trading. The costume comes off by December. Management is decommissioning the fleet on purpose.\n\nThe constraint, repeated until it should be tattooed on the 10-K, is not demand. It is whether Horizons 2–4 and the rest of the 2026 IT load clear customer acceptance fast enough that the multiple can survive the day mining revenue goes to zero.\n\nThis is not incremental. This is a platform story the tape just marked as a miner story.\n\nI looked at all three. I bought one.\n\nThat sentence needs to be earned, because the group-chat reflex is “just own the biggest neocloud.” The biggest neocloud is already owned. The question for a book that hunts 5x in five years is which name still has **room** left after the identity change.\n\n~$37–45 billion of equity. Enterprise value closer to **$80–95 billion** once you add the debt. **~$104 billion** of contracted backlog, then another **$25 billion** of commitments in early Q3. That is real demand. It is also a capital structure. Total debt in the mid-thirties of billions. Interest expense already running hundreds of millions a quarter. A large share of the power and the shells sits on leases. Software and orchestration are the best in the cohort. The stock is priced as if that combination is scarce. It is scarce. It is not cheap. A 5x from here is a $200 billion equity story on a balance sheet that already borrowed the cycle.\n\n~$50–60 billion of equity. Microsoft and Meta as anchors. Software layer (Aether, Token Factory, the acquisitions) that looks more like a cloud company and less like a colocation company. Adjusted EBITDA already printed. Capex guided $20–25 billion. Cash is real. So is the need to keep tapping markets to fill the gap between cash and the build. The multiple assumes the software attach works and the Meta structure converts. If it does, NBIS deserves the premium. The premium is why it is not the seat I wanted at this size of book.\n\n~$16 billion of equity. 5 GW of secured power — Childress 750 MW, Sweetwater ~2 GW, Kiowa 1.6 GW, British Columbia, Bundey, Badajoz — not a marketing pipeline, interconnection. Owns the substations at Childress. Owns the land. Builds the halls. Buys the GPUs. Sells the cloud. Microsoft accepted Horizon 1 in August. Horizons 2–4 targeted for delivery in the December quarter. Operating ARR $1 billion today. Contracted ARR $4 billion against 2026 capacity that management says is largely sold out. FY2027 capex of $25–30 billion sits on a funding stack the company has spent twelve months assembling: ~$19 billion of funding secured, $5.9 billion of unrestricted cash at June 30, investment-grade GPU financing on the Microsoft kit at 6%, Blue Owl / PIMCO paper on the air-cooled kit at 9%, and customer prepayments covering 45–55% of GPU capex on recent deals.\n\nThat is the asymmetry.\n\nSame bottleneck. Same customer set. Same GPU generation. One-third the equity value of the names the tape already respects — and the only one that can point at a campus it owns and say the building is also the financing collateral.\n\n[![Image 2](https://substackcdn.com/image/fetch/$s_!ONPb!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26cc89bc-6657-45c4-a2d9-cccfb25c725d_909x479.png)](https://substackcdn.com/image/fetch/$s_!ONPb!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26cc89bc-6657-45c4-a2d9-cccfb25c725d_909x479.png)\n\nIREN plans 75MW liquid-cooled AI data center in Texas - DCD\n\nThese are not secrets. They are just not priced.\n\n$70.5 million versus $66.7 million. First quarter in the company’s history. Full-year mix is still 82% mining because that is how years work when you spend three quarters converting a fleet. The crossover quarter is the tell. Mining is scheduled to be substantially gone by December 31, 2026. The impairment charges — **$638.8 million** for the year, **$450.4 million** in Q4 — are the cost of taking the costume off. The tape traded the charge. It did not trade the room those halls now have for GB300s.\n\nFour buildings. 50 MW of IT load each. 200 MW of liquid-cooled Microsoft capacity at Childress under the **$9.7 billion**, five-year contract. Horizon 1 accepted in August, NVIDIA Exemplar Cloud on GB300 NVL72. Horizon 2 in commissioning. 3 and 4 in late-stage construction. Management’s language: targeted for the December quarter, with contractual grace into early calendar Q2 2027. H1 delivered on time. The next three are the exam the multiple will sit.\n\n[![Image 3](https://substackcdn.com/image/fetch/$s_!Vpf7!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0694fdbf-9629-4ee1-9a55-9feb39330461_1800x941.jpeg)](https://substackcdn.com/image/fetch/$s_!Vpf7!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0694fdbf-9629-4ee1-9a55-9feb39330461_1800x941.jpeg)\n\n**$25–30 billion** against **$707 million** of FY2026 revenue is the sentence bears screenshot. It is also incomplete. GPU capex is being pre-funded by the customer and by asset-backed paper tied to the same customer. Microsoft prepaid ~20%. Recent deals prepay 45–55% of the silicon. The $3.6 billion Microsoft GPU facility carried an **A / A(low)** rating and funded 96% of the associated GPU bill. The $2.8 billion of newer GPU facilities funds ~90% of the non-IG silicon. That is not “we hope the ATM is open.” That is “the tenant financed the rack.” CoreWeave and Nebius are also raising. They are not doing it from a campus they own end-to-end, with a miner’s cash-flow bridge still running in the background for one more quarter.\n\nARR is not GAAP. The 10-K says recognized revenue can be materially lower. Believe the footnote. Also believe the direction. Operating ARR went from ~$0.5 billion at Q4-end to **$1 billion** after Horizon 1 acceptance. Management’s script is **more than $4 billion** by the end of the December quarter, already under contract, plus ~$700 million of NVIDIA ARR that does not even start until 2027. Push that through 0.8 GW of IT load targeted for 2027 at $15–20 million of ARR per MW and you are looking at a **$10 billion-plus** run-rate in a conservative mix. That is the number the bull case actually uses. It is not in the FY2026 income statement. It is why the FY2026 income statement is the wrong document.\n\nMost neoclouds rent the building, lease the power, finance the GPU, and pray utilization stays high enough to cover all three. IREN owns the interconnection and the hall. The building is an asset. The contract is collateral. The prepayment is working capital. That is why this is the only name in the trio that can look at a $25–30 billion capex year and talk about funding it without pretending the equity window is the product.\n\n[![Image 4](https://substackcdn.com/image/fetch/$s_!oJVf!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4c717374-2bc4-4caf-b0f4-d37e6a11ca69_850x560.webp)](https://substackcdn.com/image/fetch/$s_!oJVf!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4c717374-2bc4-4caf-b0f4-d37e6a11ca69_850x560.webp)\n\nIREN Builds $300M Liquid-Cooled AI Data Center at Childress, TX\n\nThe print was a transition quarter. The stock did what transition quarters do.\n\nWhat the market wanted, after a trip toward $70–77, was AI revenue that already looked like a cloud company _and_ mining that had already vanished _and_ a capex guide that did not have a 10-handle. What it got was:\n\n*   Total Q4 revenue of **$137.2 million**, down sequentially, because they unplugged miners to plug in GPUs.\n\n*   AI Cloud **$70.5 million**, more than double Q3’s $33.6 million, and larger than mining for the first time.\n\n*   FY2026 revenue **$707.0 million**. AI Cloud **$128.8 million**, up ~8x from FY2025.\n\n*   Adjusted EBITDA **$245.7 million** for the year. Q4 adjusted EBITDA compressed to **$19.2 million** as the mix flipped.\n\n*   A **$684 million** Q4 net loss, driven by **$450.4 million** of mining impairments plus fair-value hits on kit held for sale.\n\n*   FY2027 capex guided at **$25–30 billion**.\n\n*   Debt up to ~**$7.4 billion**. Cash still **$5.9 billion** unrestricted, **$1.7 billion** restricted, mostly tied to the Microsoft GPU spend.\n\n*   Short interest still sitting in the high-20s / ~30% of float. The miner crowd and the AI crowd are in the same name, arguing.\n\nNone of that is a broken demand story. All of that is a business the tape marked as a miner that took a charge to stop being a miner.\n\nFrom the November 2025 high near **$77**, the stock is ~45–50% lower. I did not buy the $77 version. I bought the version the market marked after it decided a first-ever AI-over-Bitcoin quarter and a live Microsoft building were not enough.\n\nThe window is the drop.\n\nThe question:\n\n**Who has the watts, the land and the hall — already interconnected — when the hyperscaler needs another 50 megawatts this year and not in 2029?**\n\nThis is on of the most important layers, power and campus. The layer the market keeps misfiling because the company that owns it used to mint Bitcoin on the same concrete.\n\nIREN plays in this layer with a cloud P&L growing on top of it.\n\nA 100,000-GPU cluster does not fail because a marketing deck lacked a software logo. It fails because the interconnect to the grid is a seven-year study and the building is a PowerPoint. Childress is not a PowerPoint. Sweetwater 1’s substation energized on schedule in May. Kiowa is 2,000 acres with grid studies done and power ramping from 2028. That timeline is ugly if you wanted 2026 to look like AWS. It is exactly the timeline a 5x book is supposed to underwrite.\n\n[![Image 5](https://substackcdn.com/image/fetch/$s_!oWr8!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fad148483-645e-4aee-bcf1-6784819239fe_1200x671.jpeg)](https://substackcdn.com/image/fetch/$s_!oWr8!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fad148483-645e-4aee-bcf1-6784819239fe_1200x671.jpeg)\n\nIREN Texas Data Center\n\nThis is the whole thesis. Everything else is commentary.\n\nIREN now sells — and owns — the path from dirt to token:\n\n[![Image 6](https://substackcdn.com/image/fetch/$s_!ZcnZ!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feae85d00-5497-48b3-862e-a2fd91114367_1584x730.png)](https://substackcdn.com/image/fetch/$s_!ZcnZ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feae85d00-5497-48b3-862e-a2fd91114367_1584x730.png)\n\n**Two facts sit under that table.**\n\n1.   **Near-term recognized dollars are still small.** FY2026 AI Cloud was $129 million. Q1 FY2027 will still look like a company in conversion. That is the script. First-half fiscal 2027 is a delivery year. The P&L inflects when Horizons 2–4 and the rest of the 2026 IT load get past acceptance. Late December deliveries show up in the March quarter. Anyone trading the September print as the verdict has the calendar wrong.\n\n2.   **The contracted layer is three logos, not one slide.** Microsoft is the reference customer. NVIDIA is the strategic partner and a $3.4 billion customer of its own. The unnamed frontier lab, plus Cohere, Prometheus, Perplexity, Figure, Fal, Higgsfield, is how concentration is supposed to decay. If those ramps stay slides, this stays a Microsoft building company. If they convert, the multiple has a second engine.\n\nIgnore street price targets written when the stock was $60. Consensus in the high-$70s to low-$80s is a trailing indicator of last quarter’s tape, not a model.\n\nEntry: **$40.8**, as flagged last thursday in the subscriber chat. Market cap at entry ~**$16 billion**.\n\nNot the price. $IREN’s price is a panic sensor. It just proved it.\n\n**Add if two or more print:**\n\n*   Horizons 2–4 accepted in the December quarter, or slippage that is days-and-weeks rather than quarters\n\n*   Operating ARR that makes $4 billion look conservative heading into March\n\n*   A second named hyperscaler or a disclosed expansion of the Microsoft footprint past 200 MW\n\n*   FY2027 funding commentary that does not lean on an ATM\n\n*   A quarter where AI Cloud gross profit already covers the interest bill without mining\n\n**Trim if:**\n\n*   Weight drifts above a core sleeve size on a melt-up back through $70 without matching acceptances\n\n*   The stock re-rates to mid-20s forward ARR before 2027 IT load is proven\n\n*   Management starts talking about “capacity investments” that sound like an equity raise first and a customer second\n\n**Kill / watchlist if:**\n\n*   Horizons 2–4 miss the grace window and Microsoft language cools\n\n*   2026 contracted ARR is quietly walked toward $2 billion of actual operating ARR\n\n*   A named customer pauses\n\n*   Dilution becomes the funding model, not the backstop\n\n*   Net leverage jumps without a matching contracted ARR step-up\n\nThis is not a risk-free compounder. It is a high-quality power-and-cloud compounder with a high beta and a costume the market has not fully taken off.\n\nThe building blocks are visible:\n\n*   First quarter in company history where AI Cloud revenue beat Bitcoin\n\n*   Horizon 1 delivered and accepted; NVIDIA Exemplar Cloud on GB300 NVL72\n\n*   Horizons 2–4 targeted before December, H1 already on time\n\n*   $4 billion of ARR contracted against 2026 capacity; $1 billion already running\n\n*   A conservative path to **$10 billion-plus** of 2027 ARR if 0.8 GW of IT load monetizes\n\n*   FY2027 capex that looks terrifying until you notice who prepaid the GPUs\n\n*   5 GW of secured power, substations owned, Sweetwater 1 energized\n\n*   A software door (Mirantis) so this does not have to stay bare-metal forever\n\n*   A $16 billion equity value against peers the tape already awarded $40–60 billion\n\n*   A stock the market just marked 45–50% below the high because a miner took a charge to stop being a miner\n\nIf they only deliver the base case, this is still a compounding owned-power cloud with a 2–4x path from $40.8 over a few years. That is enough for our portfolio.\n\nI looked at $NBIS. I looked at $CRWV. I bought the one the market is still allowed to hate.\n\nI am long $IREN. Journal of a book aiming for 5x+ over five years.\n\n> You should take a look at **my portfolio** (pinned to my profile). The blueprint is public.\n\nBest wishes,\n\nThe Founder, Outlier Capital\n\n_Disclaimer: This memo is for informational analysis only and is not investment advice. It is a buy-side framework to stress-test the thesis around execution, funding, and conversion of contracted ARR into recognized revenue. All investing involves risk of loss. Do your own due diligence._",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://outliercapx.substack.com/",
-        "publication_platform": "substack",
-        "section": "transaction_ideas",
-        "transport": "public_reader_fallback"
-      }
-    },
-    {
-      "id": "substack:dc33bb785328db6585f2",
-      "source_type": "substack",
-      "source_name": "How They Make Money / App Economy Insights",
-      "title": "💍 How Oura Makes Money",
-      "url": "https://www.appeconomyinsights.com/p/how-oura-makes-money",
-      "published_at": "2026-09-08T12:01:14+00:00",
-      "collected_at": "2026-09-09T00:00:48.593120+00:00",
-      "body": "Welcome to the Premium edition of How They Make Money . Over 300,000 subscribers turn to us for business and investment insights. In case you missed it: 📈 How to Invest in IPOs 📊 Earnings Visuals (8/2026) ❄️ Snowflake & Palo Alto Networks 💻 PRO: Broadcom, Dell, MongoDB… Subscribe now 💍 Oura is going public Oura started as a niche sleep tracker and has become one of the breakout consumer health products of the decade. It still looks like a hardware company. But the S-1 tells a more interesting story. Revenue surged 74% Y/Y to $1.2 billion in the first nine months of FY26, which ends in September. The company is profitable, and 5 million members now pay for the software layer attached to the ring. The main question is whether Oura remains a hit hardware vendor or successfully scales into an enduring consumer health platform. I condensed 300+ pages of the S-1 into a clean breakdown, supported by our signature visuals. By the end, you'll have a clear view of the Oura investment case. Today at a glance: Overview Business Model Financial highlights Risks & Challenges Management Use of Proceeds Future Outlook Personal Take 1. Overview Oura was founded in Finland in 2013 around a simple idea: the finger is a particularly good place to measure the body . Compared with the wrist, Oura says the finger can provide a much stronger photoplethysmography signal, helping improve measurements such as heart rate and heart rate variability. The ring form factor also encourages continuous wear. The basics Headquarters: San Francisco, California Ticker: OURA (Nasdaq) Mission: Empower people to live healthier, longer Latest product: Oura Ring 5, launched June 2026 Oura has evolved from a sleep-and-recovery tracker into a broader health wearable covering more than 50 health and wellness metrics , including activity, stress, heart health, metabolic health, and women’s health. That expansion has helped turn smart rings from a niche product into a meaningful wearable category. Still small in wearables Oura sold 3.6 million rings in the 12 months through June 2026, compared with approximately 212 million wearable devices shipped globally. That’s only around 2% of global wearable shipments. Who wears Oura? I don’t own an Oura Ring myself. I lift weights regularly, and having to take a ring off during strength training undermines some of the appeal of an always-on fitness tracker for me. But living in San Francisco, it sometimes feels like every woman around me does. And the S-1 actually backs that up: 72% are women 73% are 45 or younger 63% report household income above $100,000 More than half report at least one chronic condition What’s particularly interesting is that Oura isn’t replacing smartwatches. For many users, the ring is creating a new slot on the body rather than fighting directly for the wrist. Many members either had no previous wearable or continue wearing another alongside it. Takeaway: Oura has already built meaningful scale, but it still represents only a small fraction of global wearables. Oura’s runway depends less on stealing smartwatch share than on making smart rings a much larger category. 2. Business Model Oura makes money in two ways: Read more",
-      "author": "App Economy Insights",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.appeconomyinsights.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas"
       }
     }
   ]
