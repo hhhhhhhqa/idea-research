@@ -1,7 +1,44 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-28T08:10:11.227321+00:00",
+  "generated_at": "2026-09-28T08:11:31.167451+00:00",
   "pipelines": [
+    {
+      "pipeline": "substack",
+      "status": "ok",
+      "item_count": 1,
+      "errors": [],
+      "notes": [
+        "Clouded Judgement: public reader fallback used",
+        "MBI Deep Dives: public reader fallback used",
+        "Aspiring for Intelligence: public reader fallback used",
+        "Chips Ahoy Capital: public reader fallback used",
+        "Meritech Software Pulse: public reader fallback used",
+        "Outspoken Geek: public reader fallback used",
+        "New Moon Cap: public reader fallback used",
+        "Outlier Cap: public reader fallback used"
+      ]
+    },
+    {
+      "pipeline": "reddit",
+      "status": "ok",
+      "item_count": 1,
+      "errors": [],
+      "notes": [
+        "r/wallstreetbets: anonymous dd RSS transport used",
+        "r/SecurityAnalysis: anonymous thesis RSS transport used",
+        "Downloaded 1 Reddit image(s) into the current feed media directory"
+      ]
+    },
+    {
+      "pipeline": "prices",
+      "status": "ok",
+      "item_count": 2,
+      "errors": [],
+      "notes": [
+        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "Latest available Yahoo EOD date is 2026-09-25; run after the US close to collect 2026-09-28."
+      ]
+    },
     {
       "pipeline": "x",
       "status": "ok",
@@ -138,43 +175,6 @@
         "@deanwball: 0 tweet(s) via twscrape",
         "@kuncheng: 0 tweet(s) via twscrape",
         "Linked articles: 9 article(s) stored; 50 unavailable or skipped"
-      ]
-    },
-    {
-      "pipeline": "substack",
-      "status": "ok",
-      "item_count": 1,
-      "errors": [],
-      "notes": [
-        "Clouded Judgement: public reader fallback used",
-        "MBI Deep Dives: public reader fallback used",
-        "Aspiring for Intelligence: public reader fallback used",
-        "Chips Ahoy Capital: public reader fallback used",
-        "Meritech Software Pulse: public reader fallback used",
-        "Outspoken Geek: public reader fallback used",
-        "New Moon Cap: public reader fallback used",
-        "Outlier Cap: public reader fallback used"
-      ]
-    },
-    {
-      "pipeline": "reddit",
-      "status": "ok",
-      "item_count": 1,
-      "errors": [],
-      "notes": [
-        "r/wallstreetbets: anonymous dd RSS transport used",
-        "r/SecurityAnalysis: anonymous thesis RSS transport used",
-        "Downloaded 1 Reddit image(s) into the current feed media directory"
-      ]
-    },
-    {
-      "pipeline": "prices",
-      "status": "ok",
-      "item_count": 2,
-      "errors": [],
-      "notes": [
-        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "Latest available Yahoo EOD date is 2026-09-25; run after the US close to collect 2026-09-28."
       ]
     }
   ],
@@ -1911,7 +1911,7 @@
       "title": "AMZN earnings",
       "url": "https://www.reddit.com/r/wallstreetbets/comments/1wryctg/amzn_earnings/",
       "published_at": "2026-09-27T23:01:10+00:00",
-      "collected_at": "2026-09-28T07:22:02.984259+00:00",
+      "collected_at": "2026-09-28T08:10:44.697805+00:00",
       "body": "Loading up on Amazon at $250. This stock is only up ~50% over the last 5 years. AWS, ads, logistics, etc all ripping. AWS growth is accelerating. Deal with meta for Muse compute. Efficiency from robotics in warehouses and logistics. Anthropic investment worth a quadrillion. Jada Jada Jada. The market hates capex but it’s a drop in the bucket for them and they’re one of the best positioned hyper scalers. There will be a vibe shift and rerating at some point soon. The stock feels cheap with little downside. And yes, I’m a regard and sold my long term meta shares in the six hundreds to build this position. As long as daddy Jeff doesn’t sell a bag and rug pull so he can blow up another Blue Orgy rocket or the entire market doesn’t get nuked. submitted by /u/Das_oul [link] [comments]",
       "author": "/u/Das_oul",
       "symbols": [
@@ -3365,7 +3365,7 @@
       "title": "Outlier Capital Portfolio | Fourth Week of September, 2026 Update",
       "url": "https://outliercapx.substack.com/p/outlier-capital-portfolio-fourth-c83",
       "published_at": "2026-09-27T12:45:37+00:00",
-      "collected_at": "2026-09-28T07:21:59.997227+00:00",
+      "collected_at": "2026-09-28T08:10:43.890990+00:00",
       "body": "Welcome to this week’s update.\n\n*   **Portfolio Performance: +36.19% YTD.**\n\n*   **S&P 500 Performance:**+12.91% YTD.\n\nPortfolio target is clear: **5x+ returns over the next 5 years**. No options, no leverage, just stock picking. Our edge lies in market inefficiencies and structural mispricings—identifying high-asymmetry opportunities long before they hit the institutional radar. This is about capturing the signal before it becomes consensus.\n\nThe table below features our **#5 top-performing long positions**since we started posting on Substack. Full portfolio allocations are available exclusively to paid subscribers.\n\n[![Image 1](https://substackcdn.com/image/fetch/$s_!iGIR!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd2833134-c352-465d-afa5-d6d10c741f8b_2582x516.png)](https://substackcdn.com/image/fetch/$s_!iGIR!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd2833134-c352-465d-afa5-d6d10c741f8b_2582x516.png)\n\nWe don't bet on short-term noise; we align with long-term reality. This portfolio is engineered around the **core engines driving the next decade of growth**—positioning us directly in front of massive capital flows to deliver asymmetrical, market-beating returns.\n\nThe goal is simple: **5x+ returns without the reckless risk.** We don’t chase hype; we hunt for **asymmetric opportunities** where the upside is massive but the downside is protected by fundamentals.\n\nThis section holds my 10 first positions—high-conviction stocks with massive upside and an **exceptional risk-reward profile**. Most are already performing strongly, validating the underlying thesis.\n\n_(Full portfolio is exclusive to paid subscribers. Upgrade to see it and build generational wealth)._",
       "author": "",
       "symbols": [],
@@ -3646,7 +3646,7 @@
       "title": "SaaS / software / Internet 跌幅前十 2026-09-25",
       "url": "https://finance.yahoo.com/markets/stocks/losers/",
       "published_at": "2026-09-25T20:00:00+00:00",
-      "collected_at": "2026-09-28T07:23:30.416502+00:00",
+      "collected_at": "2026-09-28T08:11:31.164695+00:00",
       "body": "1. ZS close 193.050003; previous 214.639999; change -10.0587%\n2. TWLO close 275.799988; previous 299.660004; change -7.9624%\n3. SAIL close 20.639999; previous 22.120001; change -6.6908%\n4. S close 22.379999; previous 23.98; change -6.6722%\n5. TENB close 33.490002; previous 35.880001; change -6.6611%\n6. FSLY close 24.959999; previous 26.68; change -6.4468%\n7. GEN close 21.620001; previous 23.07; change -6.2852%\n8. BB close 8.21; previous 8.73; change -5.9565%\n9. QLYS close 172.429993; previous 182.940002; change -5.7451%\n10. OKTA close 195.190002; previous 206.639999; change -5.541%",
       "author": "",
       "symbols": [
@@ -3771,7 +3771,7 @@
       "title": "SaaS / software / Internet 涨幅前十 2026-09-25",
       "url": "https://finance.yahoo.com/markets/stocks/gainers/",
       "published_at": "2026-09-25T20:00:00+00:00",
-      "collected_at": "2026-09-28T07:23:30.416502+00:00",
+      "collected_at": "2026-09-28T08:11:31.164695+00:00",
       "body": "1. PPLI close 40.0; previous 35.93; change 11.3276%\n2. GENI close 6.44; previous 5.8; change 11.0345%\n3. DDOG close 268.130005; previous 256.920013; change 4.3632%\n4. NXDR close 2.51; previous 2.42; change 3.719%\n5. MSFT close 516.169983; previous 497.929993; change 3.6632%\n6. PDFS close 49.549999; previous 47.880001; change 3.4879%\n7. AKAM close 113.940002; previous 110.410004; change 3.1972%\n8. MQ close 16.959999; previous 16.440001; change 3.163%\n9. KSPI close 95.669998; previous 92.790001; change 3.1038%\n10. CARS close 10.9; previous 10.61; change 2.7333%",
       "author": "",
       "symbols": [
