@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-01T00:02:31.364491+00:00",
+  "generated_at": "2026-10-02T00:01:40.834248+00:00",
   "pipelines": [
     {
       "pipeline": "substack",
       "status": "ok",
-      "item_count": 6,
+      "item_count": 5,
       "errors": [],
       "notes": [
         "Clouded Judgement: public reader fallback used",
@@ -21,22 +21,22 @@
     {
       "pipeline": "reddit",
       "status": "ok",
-      "item_count": 3,
+      "item_count": 0,
       "errors": [],
       "notes": [
         "r/wallstreetbets: anonymous dd RSS transport used",
-        "r/SecurityAnalysis: anonymous thesis RSS transport used",
-        "Downloaded 1 Reddit image(s) into the current feed media directory"
+        "r/SecurityAnalysis: anonymous thesis RSS transport used"
       ]
     },
     {
       "pipeline": "prices",
-      "status": "ok",
+      "status": "partial",
       "item_count": 2,
       "errors": [],
       "notes": [
         "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "Latest available Yahoo EOD date is 2026-09-29; run after the US close to collect 2026-09-30."
+        "Ignored incomplete Yahoo EOD date 2026-10-01: 1/203 ticker closes available; latest sufficiently complete date is 2026-09-30.",
+        "Latest available Yahoo EOD date is 2026-09-30; run after the US close to collect 2026-10-01."
       ]
     },
     {
@@ -179,14 +179,105 @@
     }
   ],
   "counts": {
-    "total": 492,
-    "substack": 17,
-    "rss": 3,
-    "reddit": 3,
+    "total": 489,
+    "substack": 18,
+    "rss": 2,
+    "reddit": 0,
     "x": 467,
     "price": 2
   },
   "items": [
+    {
+      "id": "substack:00e09f84883c933061ac",
+      "source_type": "substack",
+      "source_name": "MBI Deep Dives",
+      "title": "Why Muse May Never Need Ads",
+      "url": "https://mbideepdives.substack.com/p/why-muse-may-never-need-ads",
+      "published_at": "2026-10-01T16:38:20+00:00",
+      "collected_at": "2026-10-02T00:00:50.236361+00:00",
+      "body": "It didn’t take too long for the app layer to start to respond to Muse. Amazon, of course, already [blocked](https://www.geekwire.com/2026/amazon-blocks-metas-muse-ai-assistant-in-new-standoff-over-agentic-shopping/) Muse. While it remains to be seen how such dispute gets resolved, we are starting to see app layers amping up their shipping speed. Just yesterday, DoorDash [unveiled](https://uk.finance.yahoo.com/news/doordash-debuts-text-order-ai-125700362.html) an AI agent that takes orders inside Apple’s iMessage, and Airbnb [rolled out](https://techcrunch.com/2026/09/30/airbnb-adds-ai-search-more-social-features/) its first real attempt at AI search.\n\n[![Image 1: X avatar for @bchesky](https://substackcdn.com/image/fetch/$s_!9xcB!,w_40,h_40,c_fill,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fpbs.substack.com%2Fprofile_images%2F1926780226098331648%2FNmAxoKxo.jpg) Brian Chesky@bchesky Hey everyone, we made some updates based on feedback from you. We’ll keep shipping, so I’ll post more updates soon - connect with your friends to get trip ideas - AI search in your own words (this is just a baby step towards agentic AI, which is a UI coming soon) - get laundry … ![Image 2](https://substackcdn.com/image/fetch/$s_!-lNo!,w_1028,c_limit,f_auto,q_auto:best,fl_progressive:steep/l_play_button_usfui2,w_88,e_colorize:0/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F__ss-rehost__tw-video-preview-13_2105357430096093184.jpg) 6:06 PM · Sep 30, 2026 · 114K Views 78 Replies · 31 Reposts · 740 Likes](https://x.com/bchesky/status/2105358513929404701)\nSince this dynamic between general purpose agent such as Muse and vertical specific agents may prove to be a core battleground in the consumer internet companies, let me lay out this dynamic and elaborate my thoughts further on this topic.\n\nLet me start with DoorDash. The idea is that you can simply text DoorDash to get your usual order delivered to the office without ever opening the app. The agent matches your phone number to your DoorDash profile, looks at your order history and preferences, and completes checkout with your stored payment method inside the thread itself. The pilot is reportedly live with 20,000 US users on iOS. Of course, you need to know what exactly you want to order for this to work smoothly. If you don’t know what you are about to order, you would likely be better served by going to the app and browse the restaurants to figure out what exactly you are craving. DoorDash CMO Tim Castree actually [said](https://www.investing.com/news/analyst-ratings/citizens-reiterates-doordash-stock-rating-citing-ai-impact-on-orders-93CH-4924444?ref=implicator.ai) yesterday half of customers arrive at the platform without knowing what they want to order which is bit of a glass half full type story since it does indicate half of the customers can potentially order their meal without needing to open the app if they can just leave a quick prompt to their agent (DoorDash’s own or Muse-like agents) and the agent can take care of it.\n\nThere are also some mixed data based on some early data I have seen for DoorDash. From [Implicator](https://www.implicator.ai/doordash-text-to-order-ai-agent-apple-messages/):\n\n> Grocery orders built with Ask DoorDash, the in-app chatbot, had **[nearly 50% higher basket value](https://www.businesswire.com/news/home/20260930439642/en/?ref=implicator.ai)** than the same consumers’ traditional orders from August through early September 2026. DoorDash has released no comparable figures for the Messages pilot. A [Citizens analyst note](https://www.investing.com/news/analyst-ratings/citizens-reiterates-doordash-stock-rating-citing-ai-impact-on-orders-93CH-4924444?ref=implicator.ai) summarizing Tim Castree’s commentary said people who clicked through to DoorDash from AI chatbots converted at higher rates and filled bigger baskets than standard traffic. **Orders from early agent traffic came with baskets two-thirds smaller**, the note said.\n> \n> \n> Nearly half of the chatbot’s restaurant orders from June through August 2026 went to places the customer had never tried. These usage figures are DoorDash’s own\n\nAlthough DoorDash doesn’t have a connector with Muse yet (which is notable given Tony Xu sits on Meta’s board), Co-founder Andy Fang [said](https://uk.finance.yahoo.com/news/doordash-debuts-text-order-ai-125700362.html) DoorDash is in talks with Meta about an official link with Muse. So, DoorDash appears to be running both sides of the trade by building its own agent where users already spend their time while keeping the door open to being a connector inside someone else’s agent. Indeed, it is perhaps too early to commit to a path. Moreover, it actually makes sense for DoorDash to be available in all surfaces possible to increase the utilization of Dasher network even though they obviously would prefer to receive all of their traffic on their own interface.\n\nAirbnb is taking a somewhat more defiant posture. The new AI search lets you switch on a toggle and describe what you want via text or voice, after which the interface generates dynamic filters based on your query. Brian Chesky has deliberately stayed away from a chatbot-like interface. At Skift Global Forum last week, he also put a date on the bigger ambition: “[Next year we will launch our agent](https://skift.com/2026/09/23/brian-chesky-commits-to-launching-an-ai-agent-in-2027/)”, with an interface he described as much richer than a chatbot. In the meantime, Airbnb seems to treat ChatGPT and Muse as distribution channels that send it traffic. Chesky did call AI an existential risk in the same conversation, so he’s well aware of the fact that AI may not be unalloyed good for Airbnb.\n\nBoth companies are understandably trying to defend the interface. However, my concern is that the vertical specific agents they build cannot be neutral. DoorDash’s agent is never going to tell me the same burrito bowl is cheaper on Uber Eats, and Airbnb’s agent is never going to check whether the same listing is available at cheaper price on Vrbo, Booking, or the host’s own website. A general purpose consumer agent has no such constraint. As I showed earlier, I can give Muse a standing instruction to always check whether there is a cheaper way to book something, and it will do so without being asked again. A vertical agent may well have a better interface, but a general agent is far more likely to be **my advocate** across all of them. If consumers come to value the latter, it can be structurally challenging for vertical specific company agents to gain trust that the agent is actually prioritizing customer’s interest.\n\nThis is where Meta’s monetization posture becomes quite interesting. At launch, Axios [reported](https://www.axios.com/2026/09/08/meta-debuts-muse-personal-ai-agent) there is no advertising within Muse, with Alexandr Wang saying the company is exploring commerce opportunities instead. At Connect, Zuckerberg [reportedly](https://news.designrush.com/meta-connect-2026-muse-ai-agent-brand-advertising-warning) did not utter the word “advertising” even once in his keynote. What he did say is that Muse will remain free for a large number of tokens, and that over time “[we will profit by taking a small fee from transactions](https://finance.yahoo.com/technology/article/metas-zuckerberg-says-muse-ai-agent-will-take-a-small-fee-from-transactions-234639802.html)”. The fee would [reportedly](https://www.thestreet.com/technology/mark-zuckerberg-meta-muse-ai-revenue-potential) come from merchants rather than users, but its size and mechanics remain undisclosed.\n\nMy hypothesis is that the near-term product Meta is trying to nail is trust. That is, of course, bit of a tall ask for Meta given there does seem to be widespread lack of trust on the company. It is, however, interesting to see that Muse has gained so much hype despite the trust deficit company typically suffers. It is still early days, but there is indeed a strong likelihood that trust may become much more important once users start using these agents at scale and people can understandably have a strong preference for agents that want to do things that are simply in the interest of the users.\n\nBut can Meta really scale Muse without inserting ads eventually? Most investors I talk to seem to believe ads are almost inevitable in Muse. I am, frankly speaking, not so sure. If trust is the decisive advantage over vertical specific agents, I believe there is a high likelihood that we may never see ads in Muse.\n\nIf I am going to hand over my emails, logins, and payment credentials to an agent, I need to believe it is working for me and not for the highest bidder. **“No ads” is a very strong counter-position**, not least against Meta’s own history. Indeed, one would imagine Meta to be the last company on earth to not want to insert ads, but strategically it makes so much sense to me to shun ads on Muse altogether. First of all, it will create a real problem for everyone else entering this space. If Meta sets the norm that a trustworthy personal agent does not carry ads, anyone who needs ads to fund their agent starts to look compromised by comparison, and very few competitors have an ad engine elsewhere to subsidize such a generous free tier. Meta can afford to wait. If Muse becomes the aggregator of aggregators a couple of years down the line, Meta would be in a position to ask for some take rate on much of the economic value flowing through it.\n\nThere are a few predictable objections to this thesis that I have been thinking about. The first is that a merchant-paid fee is itself an incentive, so Muse is not truly neutral. I don’t find this too troubling. If every merchant pays whenever a transaction goes through Muse, then Muse should be mostly indifferent to which merchant wins, much like a card network.\n\nAnother objection is access. As mentioned earlier, Amazon has [blocked](https://www.cnbc.com/2026/09/23/metas-standoff-with-amazon-over-muse-comes-ahead-of-meta-connect.html) Muse. An agent can only shop where it is allowed to, and that is probably the strongest card the app layer still holds. But Meta has since [added](https://techcrunch.com/2026/09/23/everything-new-coming-to-metas-ai-agent-muse/) Walmart, Best Buy, Gap, Sephora, and Wayfair among others, on top of access to Shopify’s catalog. The bet seems to be that if Meta can aggregate enough demand, the holdouts will eventually feel it. For Amazon, the trade-off is asymmetric in timing. Letting agents in threatens its high-margin ad business right away whereas staying out costs volume only gradually. So, holding out is probably rational today. But logistics is a fixed asset business in which utilization matters a great deal. If Muse remains the dominant consumer agent and more and more orders flow to Walmart and other partners, the calculus on week 100 may look quite different from week one post-Muse launch. In any case, Amazon is highly likely to be anomaly than a norm. Very few companies are as dominant as Amazon is in their vertical, so if one holds out, that demand can be easily diverted to someone who is willing to play ball with Muse.\n\nPerhaps most importantly, “no ads” on Muse may cost Meta far less than it seems at first glance. Meta’s [blog post](https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse) on “**How We Built Safety Into Muse”**has laid out how Meta may indirectly benefit even if Muse never shares my data directly with Meta’s ad system. From the post:\n\n> Muse doesn’t share your conversations or the data in your Virtual Machine with Meta ad systems. That said, there are some legitimate scenarios where how you use Muse can influence the ads you see. When Muse browses the internet, it will appear as your activity, so if you ask Muse to buy a shirt from a clothing designer’s website, that designer might use your visit to show you an ad on Instagram. Similarly, if Muse makes a restaurant reservation for you or helps you find a great product on Facebook Marketplace, that may also indirectly influence the ads you see.\n\nGiven this context, I have a strong suspicion that **Meta may never feel the need to insert ads inside Muse**. In fact, the more I think about it, the more this looks to me like an underappreciated advantage. If an agent’s browsing can inform the ads I see elsewhere, **Meta may be one of the very few companies that can monetize a personal agent through advertising without ever showing an ad inside the agent itself**. The loop requires two things: a tag on the merchant’s website that registers the visit, and a large owned surface elsewhere on which to serve the resulting ad. Startups such as Instinct has neither. ChatGPT does have an ads business, but its only inventory is ChatGPT itself and its targeting [draws on](https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads/) the conversation, which is exactly the trade-off Meta is positioning Muse against. Google is the one company that could replicate the loop given its reach across Search, YouTube, Gmail, and its display network, but an agent that completes the purchase likely replaces the very commercial query Google monetizes best. For Meta, which has always had to infer intent rather than observe it, every Muse errand can be incremental signal. **This gives Muse an unusual ability to remain ad-free: Meta can keep ads out of the Muse app and still get paid for it on Facebook and Instagram, which makes delaying direct monetization far cheaper for Meta than for almost anyone else**. This also means the indirect monetization of Muse is already happening **right now** while the direct monetization via transaction take rates can wait until enough demand has been aggregated.\n\nAs of today, I still find the apps to be a better experience than asking an agent, so I don’t want to overstate the near-term threat. Building their own agents seems necessary for the vertical specific companies, but I suspect it may not be sufficient for vast majority of them given their structural nepotism towards their own inventories. The key question is perhaps whether consumers eventually want one agent per app or one agent for almost everything that will have a lot more context and data about their lives, interests, and preferences than a vertical agent will ever have. It’s early days, so I wouldn’t want to have a rigid opinion, but Meta has a real shot at aggregating the aggregators.\n\n_Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on **[70](https://mbideepdives.substack.com/p/deep-dives)+** companies. The daily is just how I think out loud between the Deep Dives!_\n\n**Current Portfolio:**\n\nPlease note that these are **NOT** my recommendation to buy/sell these securities, but just disclosure from my end so that you can assess potential biases that I may have because of my own personal portfolio holdings. Always consider my write-up my personal investing journal and never forget my objectives, risk tolerance, and constraints may have no resemblance to yours.\n\nMy current portfolio is disclosed below:",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mbideepdives.substack.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas",
+        "transport": "public_reader_fallback"
+      }
+    },
+    {
+      "id": "substack:6ae9de8a402f73041a1a",
+      "source_type": "substack",
+      "source_name": "Yet Another Value Blog",
+      "title": "$TPB: can Turning Point Brands be the third player in nicotine pouches? | Saberpoint Capital",
+      "url": "https://www.yetanothervalueblog.com/p/tpb-can-turning-point-brands-be-the",
+      "published_at": "2026-10-01T15:00:02+00:00",
+      "collected_at": "2026-10-02T00:00:54.228343+00:00",
+      "body": "Nicotine pouches might be the best new consumer category in decades: cheap to make, high margin, and sticky once someone gets hooked, the same traits that made Philip Morris a 16.5% a year compounder for close to a century. George Baxter of Saberpoint Capital has owned Turning Point Brands since his fund’s first days, and he thinks the market is missing how well TPB is positioned as the third player behind ZYN and Velo, with FRE and the Tucker Carlson backed Alp now almost half of revenue. We get into whether pouch users are really brand loyal or will hop around like energy drink buyers (my straw man, using Haypp and Europe), why C-stores want a third brand on the back bar, how the new PMTA rules shut the door on VC-backed upstarts, and the cost gap from making every can in India and air freighting it here. I push back on the part that worries most people: EBITDA is falling while TPB spends on slotting fees, UFC and influencers, Alp is a 50/50 JV with a celebrity, and the longtime CEO just left with a finance guy stepping in. We finish on valuation, from $35 to $45 a share for the legacy Zig-Zag and Stoker’s business to George’s path to a $1,000 stock by 2030. This podcast is sponsored by Trata I already know you’re going to like trata. Why? Because you’re reading this blog post, meaning you’re interested in this podcast. And trata is just like this podcast (though without the handsome host!). Trata is anonymized transcripts of buysiders discussing stocks they are following and what they really think will drive the stock. I’ve been mentioning it on the podcast for months, and the most frequent complaint I hear from people who check it out is they wish trata had more content on more of their stocks. Even better: they recently released an MCP that lets you connect their transcripts to the AI model of your choice. If you’re interested, click here to check out a sample of not one but two TPB transcripts ! Please follow the podcast on Spotify , iTunes , or YouTube ! And please be sure to rate / review the podcast if you enjoy it, or share it with someone else who would enjoy it (more listeners is a critical part of the flywheel that keeps this Substack and podcast going!). Share Yet Another Value Blog Transcript for paid subs begins below ( The initial transcript is AI-generated and is replaced with a professionally edited version when available) Disclaimer : Nothing on this podcast or on this blog is investing or financial advice; please see our full disclaimer here. The transcript below is from a third party transcription service; it’s entirely possible there are some errors in the transcript. Read more",
+      "author": "Andrew",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.yetanothervalueblog.com/",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:249d6601b3fbb8a4b895",
+      "source_type": "substack",
+      "source_name": "One Useful Thing",
+      "title": "The Dot and the Swarm",
+      "url": "https://www.oneusefulthing.org/p/the-dot-and-the-swarm",
+      "published_at": "2026-10-01T10:54:12+00:00",
+      "collected_at": "2026-10-02T00:00:49.058064+00:00",
+      "body": "I generally think I have done a good job anticipating the direction and pace of AI over the few years I have been writing this Substack, but I think I recently got something fairly large wrong. In the last year I have been posting about how I suspected that humans would have to approach working with agents as a manager, deciding how to delegate work to agents and specifying how those agents should be organized. I thought that getting agents to work effectively as a group would take careful construction, akin to building a company, and that this would take time to figure out. Nope. I fell prey to The Bitter Lesson, the hard truth, learned over and over again, that things that we thought required elaborate human rules and thinking can be solved with the brute force of better machine learning systems and more AI. The Bitter Lesson is everywhere among AI startups and companies adopting AI. A huge amount of effort went into building elaborate computer systems to feed AIs the right information at the right time, but AI systems have learned to seek out information themselves. The same thing happened to prompting. People built elaborate templates and chains of prompts that walked the AI through a task one step at a time. Then newer models turned out to be better at planning the steps themselves, and, as our research shows , planning steps have much less value. The history of the Bitter Le— — you know what? I don’t really need to explain the Bitter Lesson, I asked Claude to do it in a music video. With one prompt, Fable wrote the lyrics and submitted it to Suno; Opus 5.5 did everything else using code alone without any image generation (How did Opus 5.5 pull this off? The Bitter Lesson tells you!). I gave no feedback at all. As somebody who teaches managers and has published research on management, I guess I believed that managing agents would be different. Humans have been working on management for a very long time without fully figuring it out. It seemed like the kind of thing that would need to be designed by people, at least for a while. It turns out that organizing work is just one more thing AI can learn to do. Which brings us to dots and Muse. Dots and Muse The number one app in the App Store right now is Meta’s Muse, a personal agent that promises to do work for you. OpenAI has now released a competitor tool, called dots. They aren’t alone: SpaceX’s Grok Bot, Instinct, and Gemini Spark all do similar things, more or less. All of these agents draw inspiration from a phenomenon you might remember from earlier this year, OpenClaw. The idea of OpenClaw and its successors, which I will call Clawlikes, is that they give an AI agent access to a computer and connect to your accounts (emails, financial records, etc.). They analyze and react to that data in real time, even when you aren’t looking. The trick is that you talk to the model like you would a person, sending it messages on Slack or SMS or WhatsApp, and it also proactively reaches out to you, like a person would. For dots, you can actually jump on a call with your agent as well. You basically get an infinitely patient personal assistant that looks out for you. Increasingly, I have discovered that they are finding my mistakes, rather than having me identify theirs. As one useful example, one of my personal agents contacted me because an email I sent to our town for a permit had the wrong project number on it. The catch was that I was the one who made the mistake, and I am not 100% sure how the AI spotted the error. Fortunately, it helpfully wrote a draft correcting the issue, so that is good (if a little freaky). As another example, Muse noticed that an airline credit of mine was about to expire and, when I asked, contacted American to request an extension. (As a side effect, every firm's customer service agents are about to be overwhelmed with Clawlikes negotiating for better deals using voice and chat channels made for humans). It is tempting to judge these agents by the list of things they can do, like booking travel or canceling subscriptions. I think the more important thing is what you no longer have to tell them. You don’t need to type in tons of context, the AI learns it from your messages. You don’t have to give them a plan, they develop plans themselves. They figure it out. That would be impressive enough if it were one agent. What actually changed my mind about management is what happens when there are thousands of them. Pre-order my new book! Swarms On September 8th, OpenAI announced a proof for one of the Clay Institute’s Millennium Prize Problems, the Navier-Stokes existence and smoothness problem. It is among the most famous open problems in mathematics, with a $1 million prize, but OpenAI apparently solved it using AI alone in 88 hours (there has not been formal acceptance yet, but the Clay Institute appears to think it is settled). What interests me is less the math than how it was done. OpenAI launched what is now being called a swarm (terrible name, but it appears to be what we are stuck with), a group of thousands of agents powered by an advanced model. OpenAI gave groups of agents different problems to solve, then shifted the effort to Navier-Stokes as the agents made progress. The company set the goals, but its coordination structure was remarkably thin: a few groups, one change of direction, and Codex passing the best ideas between them. Within each group, the agents transmitted ideas back and forth on their own. The agents sent about 2.7 million messages, reaching their result after 88 hours. This same type of coordination, in a darker form, occurred during The Hugging Face Incident I wrote about a month ago . AIs self-organized into teams and communicated with each other in ways that were never planned, but used that coordination to attack a website, rather than solve a problem. Under my old model, think about what managing this kind of work would have required. Ten thousand workers and an unspecified problem — how would you tell them what to do? How would a human manager decide which of 2.7 million messages mattered? How would they coordinate with each other? The swarm figured it out. I don't have 10,000 agents, but I now regularly see OpenAI's Codex and Claude Code using agents as needed. As an example, when I gave Codex with GPT-6 Astra Ultra the prompt \"brainstorm ideas for my next OneUsefulThing post and select one. Generate ideas from as many angles as possible and evaluate them from both factual and reader perspectives as well as other publications doing similar coverage,\" the AI spun up three agents. When I sketched three teams in a few sentences (brainstormers, researchers, and a panel of readers), I got thirteen. Notice how little organizing I had to do. Selecting Ultra mode tells the model it can delegate, and I provided a framework, but the rest was up to the AI. Agents at work (but don’t worry, this is just an example, I come up with all my post ideas on my own, just like I write all the initial drafts myself, only asking for AI feedback when I am done) This is the Bitter Lesson applied to the org chart. The organizational problem I thought would take years of careful human design was largely solved by models that are better at organizing. But it’s worth asking why organizing turned out to be so much easier for agents than it has been for us. A lot of what we call management exists to solve problems that come from organizations being made of people. People have their own goals, and those aren’t always the goals of organizations. We call this the principal-agent problem and a lot of the machinery of organizations, from bonuses to management structures, is based around solving it. And there are other very human problems as well. Information is scattered across people’s heads, and people are often reluctant to share it, or forget to. Communication is expensive too: managers can only oversee so many people, thus adding people to a late software project famously makes it later. Management is, in part, built around human limitations. Agents have far fewer of these problems. They don’t angle for promotions or protect their turf. They don’t even have meetings. Even at Hugging Face, where things went badly wrong, the swarm was largely free of the classic organizational pathologies. The agents didn’t free-ride on each other’s work, and some sacrificed their own scores for the group. The agents that solved Navier-Stokes didn’t want credit. (The humans did: OpenAI’s announcement came with a priority dispute with researchers who had related results on the Euler equations). That doesn’t mean AI has no principal-agent problems. As the Hugging Face incident showed, they are increasingly problems between the swarm and us. OpenAI shelved its next model , GPT-6.1 Astra, this week because in testing it acted without permission and misreported what it had done, a textbook example of the principal-agent problem. A Not-Entirely-Bitter Lesson None of this means agents can do everything. AI is still too limited to substitute for large amounts of human work, and I don’t know how well self-organizing agents handle the long, unglamorous work that fills most of an organization’s time. Plus, the Hugging Face Incident is a reminder that self-organizing systems can head in unexpected directions. But I no longer think organizing agents is the hard part. This may be good news. I assumed companies would need to rebuild management for machines, constructing elaborate alternate structures populated solely by agents, often at the expense of human roles in organizations. But much of management exists to solve problems agents don’t have, and agents increasingly work through the same messy systems people do, even on ambiguous tasks. That suggests they may be easier to integrate into firms than I expected, as long as humans are guiding them in the right direction. Done well, and with agents that are properly aligned to our needs, this could mean more work for people, not less. When organizing is expensive, organizations only attempt what they can staff. When it gets cheap, the list of things worth attempting can grow. In the Navier-Stokes run, the agents did the organizing but people decided where to point them, reassessing as the process continued. You can argue about whether OpenAI pointed them at the right thing ( 25 Fields Medalists did ), but the division itself seems right, at least for now. Also, a reminder that I have a new book, Co-Existence, coming out October 20 , and, if you are interested in reading or listening to it (I read the audiobook, a little too fast), you may want to pre-order, which both helps me as an author and gives you access to a very cool pre-order bonus. Subscribe now Share",
+      "author": "Ethan Mollick",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.oneusefulthing.org",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "substack:a6d3dabeee23356993f0",
+      "source_type": "substack",
+      "source_name": "TSOH Investment Research",
+      "title": "Deckers (DECK): From Clown Shoes To Compounder",
+      "url": "https://thescienceofhitting.com/p/deckers-clown-shoes-to-compounder",
+      "published_at": "2026-10-01T10:31:34+00:00",
+      "collected_at": "2026-10-02T00:00:50.959371+00:00",
+      "body": "While its focus has been singular for the past half century – footwear – Deckers Outdoor (DECK) evolved its business over time as different brands and models / designs were better fit to the needs of modern consumers. The company started in 1973 in Santa Barbara, California, when two college buddies started selling flip flops - originally known as “ Driftwood Dans ”, but the name was later changed to “deckas”, a slang phrase that referred to the stacked appearance of their sandals. A decade later, in 1985, the company licensed a sport sandal called Teva that had been created by a Colorado river rafter. Those two products carried the company to a 1993 IPO , and would eventually lead the way to two transformative acquisitions in the company’s history: the 1995 deal for UGG , which makes sheepskin boots, and the 2012 deal for HOKA , which makes maximalist running shoes. ( HOKA co-founder Jean-Luc Diard : “The Deckers partnership brought two things for HOKA. First, it was a group in the footwear business, so they could bring [benefits with suppliers and production]. Second, it didn’t have a running brand in the portfolio… It was a four-year plan, with stages of additional capital investment so everyone could use that experience in learning how to work together.”) As you can see below, those two brands account for the vast majority of Deckers revenue base. Notably, the HOKA brand, which has reported ~5x revenue growth since FY21, is on track to rival UGG’s size for the first time. The rise of brands like HOKA and On , which has coincided with a lesser position for incumbents like Nike , has been a well-covered theme at TSOH Investment Research. It’s a story we’ve also watched from the angle of retailers like Dick’s Sporting Goods and Academy Sports + Outdoors . What makes today’s DECK initiation timely is the carnage in the space. Each of those companies has seen its stock price decline meaningfully from its all-time highs, with significant underperformance versus the S&P 500 over the past year; they also trade at wide discounts to their historic valuations. Some see what has happened in recent years and argue the space is uninvestable (too much fad / fashion risk). I think that’s a broad brush which may close people’s eyes to compelling opportunities – with Deckers itself a great example over the past 10-20 years: DECK has been nearly a 30-bagger over the past two decades (~18.5% CAGR), leaving the S&P 500 in the dust. As noted above, Deckers growth over the past decade was led by HOKA. The brand was founded in 2009 by two former executives of French sports equipment company Salomon. The idea, as one running blogger put it in the early 2010s , was a shoe with an oversized midsole and a wide body, utilizing maximalist design already applied to other sports equipment like powder skis, golf clubs (drivers), mountain bike tires, and tennis rackets. (“‘ HOKA ONE ONE’ originates from the Maori language, meaning ‘to fly over the earth’. ”) Read more",
+      "author": "TSOH Investment Research",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://thescienceofhitting.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:015ccf980c076bf61e27",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "[AINews] Gemini 4 Argon: GDM’s answer to Astra/Fable, with 1M output",
+      "url": "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer",
+      "published_at": "2026-10-01T06:45:05+00:00",
+      "collected_at": "2026-10-02T00:00:48.006307+00:00",
+      "body": "GDM last shipped a larger-than-Flash model in February ( 3.1 Pro ), and after successive incremental 3.x Flash versions and the big GDM management shakeup last month, the largest question for GDM was when they would catch up to peers who have in the meantime launched Fable and Astra class models. Well, Argon’s here , with VERY respectable benchmarks (SOTA in 13 of 19 credible benchmarks)… but only accessible in limited cybersecurity preview, though access is promised “ as soon as possible ”: We like the experimental Long Decode Continuation , which increases output tokens up to 1M as an industry first. AI News for 9/29/2026-9/30/2026. We checked 12 subreddits, 544 Twitters and no further Discords. AINews’ website lets you search all past issues. As a reminder, AINews is now a section of Latent Space . You can opt in/out of email frequencies! AI Twitter Recap Gemini 4 Argon: Google Returns to the Frontier Launch : Google DeepMind introduced Gemini 4 Argon for coding, enterprise knowledge work and cyber defense ( @GoogleDeepMind , @sundarpichai ). Availability : Access starts with government users and trusted cyber defenders in the Fairwind Program. Google says it will refine guardrails before opening access to developers, enterprises and consumers ( @Google , @demishassabis ). Output limit : Google cites an industry-leading 1M-token output limit, up from 64K ( @GoogleAI , @TheRundownAI ). Measurement note : Vals lists 262K max output. Artificial Analysis reached 1M output tokens through Long Decode Continuation, a new API feature that pauses long responses and resumes them across calls ( @ValsAI , @ArtificialAnlys ). Pricing : Standard pricing is $4/$20 per 1M input/output tokens. A 50% introductory discount brings it to $2/$10, with no end date announced. Cached input gets a 95% discount ( @_philschmid , @ArtificialAnlys ). Google’s claimed results : Argon takes first place on 13 of 19 published benchmarks against GPT-6 Astra and Claude Opus 5.5. On DeepSWE it scores 77.9%, versus 74.2% for Opus 5.5 and 74.1% for Astra ( @TheRundownAI ). Internal deployments : Google reports that Argon agents freed more than 300 TiB of data-center memory and are migrating more than 800K lines of C/C++ kernel code to Rust ( @kimmonismus ). Video decoder : Agents replaced 32K lines of SIMD code with safe Rust, making the existing Rust port 2.7x faster with identical output. Research use : The team says internal agent loops built on Argon helped complete the CK conjecture ( @mirrokni ). Artificial Analysis evaluation : Argon scores 53 on the Intelligence Index, matching GPT-6 Astra (53) and edging GPT-6.1 Sol (52) ( @ArtificialAnlys ). Cost per task : At discounted pricing it costs $1.99 per task versus $3.26 for Astra; standard pricing would raise this to $3.98. Token use : The savings come from price, not efficiency. Argon averages 62K output tokens per task against Astra’s 27K. Agentic work : It ranks #1 on AutomationBench-AA at 77.5% and scores 57% on Terminal Bench 4, behind Sonnet 5.5, Opus 5.5 and Astra. Hallucination : Its 15% rate on AA-Omniscience compares with 51% for Astra. The tradeoff is lower accuracy: 50% versus Astra’s 63% ( @aipulseda1ly ). Vals evaluation : Argon is #1 on the Vals Index at 68.9%, at an average $15.68 per task ( @ValsAI , @ValsAI ). Coding : It built 30 Vibe Code Bench apps perfectly, against 25 for Opus 5 and 24 for Astra ( @ValsAI ). Terminal and security : Terminal-Bench 4.0 rose from 19.0% to 57.6%. It scores 70% on CyberBench proof-of-concept tasks and 100% on IOI 2024–2026 ( @ValsAI ). Efficiency : It uses about a quarter of Sonnet 5.5’s output tokens on Vals Index tasks ( @ValsAI ). Arena and other evals : Argon is #1 in Text Arena at 1525 and #8 in Code Arena WebDev at 1679 ( @arena ). Agent Arena : It ranks #8 overall and #1 for steerability on a preliminary 3K sessions ( @arena ). PostTrainBench : It scores 45.3%, up from 21.99% for Gemini 3.1 Pro ( @karinanguyen ). Skepticism : Some observers questioned the published numbers. Legal benchmark : Argon’s reported 19.6% on Harvey’s legal benchmark trails Muse Spark 1.2’s listed 25.42% ( @BlackHC ). Other critiques : Commentators raised possible preference-data benchmaxxing and objected to some figures, including DeepSWE ( @teortaxesTex , @teortaxesTex ). GPT-6.1 Sol and OpenAI’s DevDay Agent Stack Independent evals : GPT-6.1 Sol is the new #1 on MathArena ( @j_dekoninck ). Code Arena : It ranks #3 on WebDev at 1759, 70 points above GPT-6 Sol for the same $2/$10 pricing ( @arena ). Cost per task : Artificial Analysis measures $0.72 per task at max effort, versus $3.26 for Astra and $1.04 for GPT-6 Sol ( @ArtificialAnlys ). Source of savings : Sol uses fewer turns and has a lower cache-read price ( @ArtificialAnlys ). Luna bug fix : OpenAI fixed an image-encoding bug, adding 1 Intelligence Index point to GPT-6 Luna. Ultrafast inference : OpenAI quotes up to 300 tok/s. SemiAnalysis reports it runs on NVIDIA GPUs at low batch sizes, not on Cerebras ( @kimmonismus ). Hands-on report : Generation is about 8x faster, but end-to-end agent tasks speed up only 2–4x because tool latency dominates ( @sayashk ). Computer use : Gains are largest here, since UI actions respond in milliseconds. Cost : The tester exhausted a weekly limit in about 2 hours. Product layer : DevDay introduced dots (persistent agents with their own cloud computers), a Decisions API and computer use ( @latentspacepod ). Sites : ChatGPT Sites can now host MCP servers and turn them into installable plugins ( @mxstbr ). Usage limits : Users report one-off credits worth about $2,500. Others complain that usage limits were cut ( @kimmonismus , @kimmonismus ). Other Releases: Embeddings, Image/Video and Open Models Perplexity contextual embeddings : pplx-embed-v2-context-9b-preview is open on Hugging Face ( @perplexity_ai ). Method : The model encodes the whole document once and pools chunk vectors afterward. Training distills relevance from a context-compression model instead of using single gold-chunk labels ( @denisyarats ). Results : It sets a new state of the art on ConTEB. On turbopuffer’s private context-bench it beats voyage-context-4 by 14.4 points in answer recall@10, using 1 KB int8 vectors against 8 KB ( @turbopuffer ). Cohere Embed 5 : The family has Pro and Fast variants in a shared embedding space, so you can index with one and retrieve with the other ( @cohere ). Fast tier : Cohere says it beats other fast-tier models by at least 6 points at a third less cost than Pro. Evaluation uses its new RCP-nDCG@10 metric ( @cohere ). Ideogram 4.5 : The editing model targets artifact-free multi-turn edits, with open weights promised ( @ideogram_ai ). Edit fidelity : Over ten consecutive edits, 94–99% of untouched content stays identical ( @fal ). Ranking : It is #18 in Image Edit Arena at 1351 ( @arena ). Video benchmark : Artificial Analysis launched AA-Video-T2V v2.0, judged at 1080p with more than 68K human votes ( @ArtificialAnlys ). Leaders : Wan 3.0 is #1 at $12/min. Seedance 2.5 is #2 at $34.12/min, and MiniMax H3 is statistically tied at $4.80/min. Utopai X : This post-train of MiniMax H3 debuts at #2 ( @ArtificialAnlys ). Open and small models : Ling-3.1-flash : A 500B model reported close to GPT-5.6 Sol and Opus 5 ( @kimmonismus ). It ranks #2 among open-weight models in Mobile App Arena ( @DesignArena ). Praxis-1 : Runway released an open-weight world-action model and says robotics policy performance scales predictably with third-person video ( @agermanidis ). Solar Mini 4 : Upstage reports 35B total / 3B active parameters. It scores 24 on the Intelligence Index at $0.10/$0.40 ( @ArtificialAnlys ). Caching penalty : It still costs about 5x Luna per task, because only 48% of its repeated context hits cache versus 99% for Luna ( @ArtificialAnlys ). Agent Research, Inference and Systems Context Language Models (Meta) : CLMs treat context as an editable file rather than an append-only log, with context-management policies learned in the weights and no external harness ( @RulinShao ). Result : They score 65% higher with the same compute on a 24-hour multi-repository agent-swarm task ( @arankomatsuzaki , @natolambert ). Adaptive reasoning compute : TaH2 : Lookahead depth supervision teaches the model which hard tokens deserve another loop ( @ZhihuFrontier ). Gains : It reports +3.4pp accuracy at matched test-time compute and a 53% steeper scaling slope. Serving : A MiniSGL integration batches requests at different loop depths together. AutoBenchmark (Meta) : The project automates benchmark creation. Human feedback at the ideation stage beats agents working alone, and difficulty transfers to held-out solvers ( @jaseweston ). Stratego : A Nature paper presents the first superhuman Stratego AI, built on RL and test-time compute under imperfect information ( @ssokota ). Prefill/decode disaggregation : A steady-state analysis argues that disaggregation raises mean interactivity by about 1/(decode-time fraction) at equal batch size and throughput ( @ekzhang1 , @cHHillee ). Implication : It helps prefill-heavy workloads, not decode-bound low-latency serving. Compilers and hardware : DeepSeek on Huawei : DeepSeek released an open-source Ascend toolkit with TileLang optimized for Ascend 950 ( @kimmonismus ). AI as compiler : A model translates Triton directly to PTX, with a verifier checking correctness, races and deadlocks. Speedups on B200 reach 1.37x on FlashAttention ( @Azaliamirh ). Vera Rubin : Cognition is the first customer on Vera Rubin via CoreWeave, reporting about 4.8x the token throughput of GB200 at the same decode speed ( @cognition ). DFlash drafts : New draft models for Ornith-1.5 give up to 2.54x lossless speedups ( @ornith_ ). Agent sandboxes : Cloudflare rebuilt Containers for agents, with p50 time-to-interactive of 648 ms (6x faster) and snapshots in beta ( @mgamache ). AutoRouter : Cloudflare’s model router showed about 30% lower spend in internal tests ( @ashleypeacock ). Safety, Security and Eval Integrity Reasoning extraction : OpenAI attributes a core part of a hidden-reasoning extraction campaign to individuals linked to Moonshot AI ( @kimmonismus ). Scale : OpenAI recorded 16,000 attempts from more than 4,000 users in two days, with related activity across more than 15,000 users. External researchers : Their attacks kept working on Astra until this week. Patches were hard to propagate across product versions and third-party hosts ( @JSchaeff3r , @jonasgeiping ). Criticism : Nathan Lambert argues the vulnerability is the API provider’s responsibility ( @natolambert ). Distillation defenses : Defenses evaluated without later RL give a false sense of security. RL makes simple attacks effective ( @shidan_javaheri ). Embedded evaluations : Apollo Research published principles for outside evaluators who receive employee-like access to frontier labs ( @ApolloResearch ). Cyber evals : On CyberGym-E2E-AA, some frontier models are safety-blocked on more than 85% of tasks ( @ArtificialAnlys ). Cost : GPT-6 Luna or MiMo-V2.6-Pro can run about 100 bug hunts in a 1M-line codebase for roughly $20. Provenance and transparency : SynthID Bio : Watermarking for AI-generated proteins is published in Nature, with open-sourced tools ( @demishassabis ). AI-detector evasion : Opus 5.5 and Astra can rewrite more than 50% of a document without Pangram flagging it ( @ValsAI ). Agent reports : A new preprint asks how transparent LLM-written reports on agent work actually are ( @jennyihuang ). Industry and Policy Factory vs Cognition : Factory removed advisor Chris Degnan, alleging he was confiding in Cognition while attending its board meetings ( @matanSF ). Hire : Cognition announced Degnan as its CRO the same day ( @cognition ). Denial : Cognition’s CEO says no Factory information was shared and that Degnan had resigned as an advisor on Monday ( @ScottWu46 ). Political spending : Greg Brockman dropped a promised second $25M donation to the Leading the Future super PAC ( @teddyschleifer ). Follow-up question : Alex Bores asked whether this also covers anti-regulation groups that don’t disclose donors ( @AlexBores ). OpenAI finances : NYT reports OpenAI is near $70B in annualized revenue and in talks to raise $30B at a $1.4T valuation, with its IPO pushed to next year ( @srimuppidi ). Funding : Flow, which builds AI tooling for hardware engineering, raised a $50M Series B at a $750M valuation ( @parisingh ). Top tweets (by engagement) Gemini 4 Argon introduced; trusted-tester rollout via Fairwind — 44.6K Google: Argon with 1M output limit — 36.5K Factory terminates advisor over Cognition conduct — 6.4K Artificial Analysis: Argon matches Astra at 53 — 4.5K Cognition CEO disputes Factory’s allegations — 3.8K Argon agents freed 300 TiB of memory and drive Rust migrations — 3.7K Ideogram 4.5 for precise multi-turn editing — 3.2K Arena: Argon #1 in Text Arena — 3.0K AI Reddit Recap /r/LocalLlama + /r/localLLM Recap 1. GLM-5.3 Cyber Risk and Local Inference Support GLM-5.3 and the Spread of Advanced Cyber Capabilities \\ Anthropic (Activity: 785): Anthropic reports that Zhipu/Z.ai’s open-weight GLM-5.3 crosses a notable threshold for autonomous cyber capability: 50/410 end-to-end V8 exploits on ExploitBench, close to Claude Mythos Preview’s 56/410 , plus full control-flow hijacks on 4% of Anthropic’s internal binary exploitation tasks where prior models were near zero. Anthropic frames the risk as capability + accessibility : GLM-5.3 is widely downloadable, relatively cheap, and weakly refusal-tuned, with simple jailbreaks reportedly succeeding 64–100% of the time and “abliteration” dropping refusals to low single digits with little measured capability degradation. Top comments were largely hostile to Anthropic’s framing, arguing the post reads as an attempt to suppress a cheaper/open Chinese model near Anthropic’s frontier. One commenter emphasized legitimate defensive use, saying GLM-5.3 is their only practical tool for security testing and improving their own software. Commenters highlight GLM-5.3 as a low-cost, less-restricted model perceived to be close to frontier capability, with one user framing it as useful for “security testing and improvements on my own software” rather than inherently malicious. The technical concern raised is that restrictions by providers like Anthropic could limit defensive cybersecurity workflows that require models willing to analyze potentially sensitive exploit or vulnerability patterns. One commenter references prior GLM-5.2 models as having helped mitigate a Hugging Face attack , contrasting that with Claude allegedly refusing assistance. The substantive point is that refusal policies may reduce utility in incident response or vulnerability remediation scenarios, while more permissive models can be operationally useful for defensive security tasks. add GLM-5.3-Flash (GLM5-Next) support by timkhronos · Pull Request #27773 · ggml-org/llama.cpp (Activity: 348): Merged ggml-org/llama.cpp#27773 adds GLM-5.3-Flash / GLM5-Next support to llama.cpp , enabling local inference for the 320B hybrid text+vision model. The implementation adds GLM-specific DSA indexing/pooling, hybrid indexed memory, and a new glm5v vision preprocessing/tower path, while reusing Kimi-K3 KDA layers, DeepSeek-style MoE/mHC helpers, MLA-only attention, and DSV4-style SwigLU clamping; validation reports random-model logits matching Transformers across prefill/ubatching/decode and vision embedding agreement around 1e-5 , with some precision-sensitive tensors left unquantized. Commenters were concerned that llama.cpp model support is lagging behind the pace of new experimental architectures, with one noting the effective bottleneck appears to be maintainer availability. A technical compatibility issue was also raised: existing Unsloth quantizations reportedly use glm5next while mainline expects glm5-next , so current mainline may fail to load those quants. Commenters noted a compatibility issue between the Unsloth quantization PR and the mainline llama.cpp PR: one identifies the architecture/model type as glm5next while the other uses glm5-next , meaning mainline llama.cpp may fail to load existing Unsloth GLM-5.3-Flash quants without conversion or metadata fixes. There was concern that llama.cpp support is lagging behind the pace of new model releases, especially as newer models increasingly use experimental architectures that require bespoke loader/runtime changes before inference and optimization work can land. One commenter framed GLM-5.3-Flash support as taking roughly “another month” after model release, with progress depending heavily on a small number of maintainers. Read more",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
     {
       "id": "substack:cfe32cdb08fcc91ab019",
       "source_type": "substack",
@@ -224,34 +315,253 @@
       }
     },
     {
-      "id": "reddit:a46265fdc1a1a97bbbe7",
-      "source_type": "reddit",
-      "source_name": "r/SecurityAnalysis",
-      "title": "Fair Isaac Corp ($FICO) after the collapse: the burden of proof has shifted",
-      "url": "https://www.reddit.com/r/SecurityAnalysis/comments/1wu6bqa/fair_isaac_corp_fico_after_the_collapse_the/",
-      "published_at": "2026-09-30T14:24:48+00:00",
-      "collected_at": "2026-10-01T00:02:07.861657+00:00",
-      "body": "submitted by /u/investorinvestor [link] [comments]",
-      "author": "/u/investorinvestor",
+      "id": "price:8d703fc2c09cdbe343b6",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 跌幅前十 2026-09-30",
+      "url": "https://finance.yahoo.com/markets/stocks/losers/",
+      "published_at": "2026-09-30T20:00:00+00:00",
+      "collected_at": "2026-10-02T00:01:40.820407+00:00",
+      "body": "1. SECZ close 14.59; previous 15.84; change -7.8914%\n2. GENI close 5.73; previous 6.17; change -7.1313%\n3. RXT close 3.725; previous 3.94; change -5.4569%\n4. APP close 290.429993; previous 305.660004; change -4.9827%\n5. TOST close 28.99; previous 30.459999; change -4.826%\n6. GRND close 15.43; previous 16.120001; change -4.2804%\n7. FICO close 592.469971; previous 617.869995; change -4.1109%\n8. MBGL close 17.15; previous 17.799999; change -3.6517%\n9. BAND close 60.709999; previous 62.279999; change -2.5209%\n10. FOUR close 36.169998; previous 37.080002; change -2.4542%",
+      "author": "",
       "symbols": [
-        "FICO"
+        "SECZ",
+        "GENI",
+        "RXT",
+        "APP",
+        "TOST",
+        "GRND",
+        "FICO",
+        "MBGL",
+        "BAND",
+        "FOUR"
       ],
       "engagement": {},
       "metadata": {
         "section": "transaction_ideas",
-        "transport": "rss",
-        "listing": "thesis",
-        "flair": "",
-        "requested_flair": "",
-        "requested_flairs": [
-          "Thesis",
-          "Short Thesis"
-        ],
-        "sort": "top",
-        "time_filter": "day",
-        "feed_rank": 1,
-        "image_urls": [],
-        "images": []
+        "market_mover_type": "losers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-09-30",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "SECZ",
+            "price_date": "2026-09-30",
+            "close": 14.59,
+            "previous_close": 15.84,
+            "change_amount": -1.25,
+            "change_percentage": -7.8914,
+            "url": "https://finance.yahoo.com/quote/SECZ"
+          },
+          {
+            "ticker": "GENI",
+            "price_date": "2026-09-30",
+            "close": 5.73,
+            "previous_close": 6.17,
+            "change_amount": -0.44,
+            "change_percentage": -7.1313,
+            "url": "https://finance.yahoo.com/quote/GENI"
+          },
+          {
+            "ticker": "RXT",
+            "price_date": "2026-09-30",
+            "close": 3.725,
+            "previous_close": 3.94,
+            "change_amount": -0.215,
+            "change_percentage": -5.4569,
+            "url": "https://finance.yahoo.com/quote/RXT"
+          },
+          {
+            "ticker": "APP",
+            "price_date": "2026-09-30",
+            "close": 290.429993,
+            "previous_close": 305.660004,
+            "change_amount": -15.230011,
+            "change_percentage": -4.9827,
+            "url": "https://finance.yahoo.com/quote/APP"
+          },
+          {
+            "ticker": "TOST",
+            "price_date": "2026-09-30",
+            "close": 28.99,
+            "previous_close": 30.459999,
+            "change_amount": -1.469999,
+            "change_percentage": -4.826,
+            "url": "https://finance.yahoo.com/quote/TOST"
+          },
+          {
+            "ticker": "GRND",
+            "price_date": "2026-09-30",
+            "close": 15.43,
+            "previous_close": 16.120001,
+            "change_amount": -0.690001,
+            "change_percentage": -4.2804,
+            "url": "https://finance.yahoo.com/quote/GRND"
+          },
+          {
+            "ticker": "FICO",
+            "price_date": "2026-09-30",
+            "close": 592.469971,
+            "previous_close": 617.869995,
+            "change_amount": -25.400024,
+            "change_percentage": -4.1109,
+            "url": "https://finance.yahoo.com/quote/FICO"
+          },
+          {
+            "ticker": "MBGL",
+            "price_date": "2026-09-30",
+            "close": 17.15,
+            "previous_close": 17.799999,
+            "change_amount": -0.65,
+            "change_percentage": -3.6517,
+            "url": "https://finance.yahoo.com/quote/MBGL"
+          },
+          {
+            "ticker": "BAND",
+            "price_date": "2026-09-30",
+            "close": 60.709999,
+            "previous_close": 62.279999,
+            "change_amount": -1.57,
+            "change_percentage": -2.5209,
+            "url": "https://finance.yahoo.com/quote/BAND"
+          },
+          {
+            "ticker": "FOUR",
+            "price_date": "2026-09-30",
+            "close": 36.169998,
+            "previous_close": 37.080002,
+            "change_amount": -0.910004,
+            "change_percentage": -2.4542,
+            "url": "https://finance.yahoo.com/quote/FOUR"
+          }
+        ]
+      }
+    },
+    {
+      "id": "price:563c5baacf53fa364a28",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 涨幅前十 2026-09-30",
+      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
+      "published_at": "2026-09-30T20:00:00+00:00",
+      "collected_at": "2026-10-02T00:01:40.820407+00:00",
+      "body": "1. ZETA close 31.57; previous 28.959999; change 9.0124%\n2. BRZE close 25.1; previous 23.15; change 8.4233%\n3. EVCM close 8.66; previous 8.01; change 8.1149%\n4. FROG close 97.040001; previous 90.370003; change 7.3808%\n5. NYAX close 47.709999; previous 44.57; change 7.0451%\n6. AI close 10.99; previous 10.34; change 6.2863%\n7. HKD close 1.79; previous 1.69; change 5.9172%\n8. GEN close 22.02; previous 20.85; change 5.6115%\n9. STUB close 5.58; previous 5.31; change 5.0847%\n10. ATEN close 27.110001; previous 25.809999; change 5.0368%",
+      "author": "",
+      "symbols": [
+        "ZETA",
+        "BRZE",
+        "EVCM",
+        "FROG",
+        "NYAX",
+        "AI",
+        "HKD",
+        "GEN",
+        "STUB",
+        "ATEN"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "gainers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-09-30",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "ZETA",
+            "price_date": "2026-09-30",
+            "close": 31.57,
+            "previous_close": 28.959999,
+            "change_amount": 2.610001,
+            "change_percentage": 9.0124,
+            "url": "https://finance.yahoo.com/quote/ZETA"
+          },
+          {
+            "ticker": "BRZE",
+            "price_date": "2026-09-30",
+            "close": 25.1,
+            "previous_close": 23.15,
+            "change_amount": 1.950001,
+            "change_percentage": 8.4233,
+            "url": "https://finance.yahoo.com/quote/BRZE"
+          },
+          {
+            "ticker": "EVCM",
+            "price_date": "2026-09-30",
+            "close": 8.66,
+            "previous_close": 8.01,
+            "change_amount": 0.65,
+            "change_percentage": 8.1149,
+            "url": "https://finance.yahoo.com/quote/EVCM"
+          },
+          {
+            "ticker": "FROG",
+            "price_date": "2026-09-30",
+            "close": 97.040001,
+            "previous_close": 90.370003,
+            "change_amount": 6.669998,
+            "change_percentage": 7.3808,
+            "url": "https://finance.yahoo.com/quote/FROG"
+          },
+          {
+            "ticker": "NYAX",
+            "price_date": "2026-09-30",
+            "close": 47.709999,
+            "previous_close": 44.57,
+            "change_amount": 3.139999,
+            "change_percentage": 7.0451,
+            "url": "https://finance.yahoo.com/quote/NYAX"
+          },
+          {
+            "ticker": "AI",
+            "price_date": "2026-09-30",
+            "close": 10.99,
+            "previous_close": 10.34,
+            "change_amount": 0.65,
+            "change_percentage": 6.2863,
+            "url": "https://finance.yahoo.com/quote/AI"
+          },
+          {
+            "ticker": "HKD",
+            "price_date": "2026-09-30",
+            "close": 1.79,
+            "previous_close": 1.69,
+            "change_amount": 0.1,
+            "change_percentage": 5.9172,
+            "url": "https://finance.yahoo.com/quote/HKD"
+          },
+          {
+            "ticker": "GEN",
+            "price_date": "2026-09-30",
+            "close": 22.02,
+            "previous_close": 20.85,
+            "change_amount": 1.17,
+            "change_percentage": 5.6115,
+            "url": "https://finance.yahoo.com/quote/GEN"
+          },
+          {
+            "ticker": "STUB",
+            "price_date": "2026-09-30",
+            "close": 5.58,
+            "previous_close": 5.31,
+            "change_amount": 0.27,
+            "change_percentage": 5.0847,
+            "url": "https://finance.yahoo.com/quote/STUB"
+          },
+          {
+            "ticker": "ATEN",
+            "price_date": "2026-09-30",
+            "close": 27.110001,
+            "previous_close": 25.809999,
+            "change_amount": 1.300001,
+            "change_percentage": 5.0368,
+            "url": "https://finance.yahoo.com/quote/ATEN"
+          }
+        ]
       }
     },
     {
@@ -429,45 +739,6 @@
         "investor_type": "ai_company_decision_maker",
         "coverage": "Google DeepMind research and AI systems",
         "engagement_score": 475
-      }
-    },
-    {
-      "id": "reddit:39ee29c4721713313ddf",
-      "source_type": "reddit",
-      "source_name": "r/wallstreetbets",
-      "title": "EOSE Q3 Earnings play",
-      "url": "https://www.reddit.com/r/wallstreetbets/comments/1wtva30/eose_q3_earnings_play/",
-      "published_at": "2026-09-30T04:09:48+00:00",
-      "collected_at": "2026-10-01T00:01:10.523721+00:00",
-      "body": "If you've heard of EOSE before, it's probably from the run up that happened this time last year and the subsequent debacle that has led to a 80% drawdown, worst drawdown since the 5.60 - 0.60 one after the DoE conditional agreement in 2023. They make non-flammable stationary batteries that can but don't necessarily have to compete with Li-ion (see https://investors.eose.com/news-releases/news-release-details/mn8-energy-google-and-eos-energy-enterprises-bring-advanced ), different use cases but can operate in that range. There is a longer, extended time frame thesis but I will do my best to keep the info relevant to the earnings play. Chart: Potential triple bottom / inverse head and shoulders here on weekly/daily. Earnings: EOSE has begun a trend of releasing preliminaries this year after the Q4 2026 debacle. The massive sell off was due to expectations being missed after reaffirming guidance 35 days into Q4. They have since been in the penalty box; market has lost trust (or so it seems) and needs execution and fundamentals to show up before it can be rebuilt. It seems that they have been releasing preliminaries to reconcile with this, Q1 preliminaries released 9 days after Q end, Q2 released 15 days after Q end. Risk/reward: This environment creates a potentially asymmetric trade, with the market discounting EOSE's execution due to Q4 2025. It is psychologically scarring to endure these drawdowns or be down 50% on an earnings play, the damage is immense. And if that's all you know about the company you will disregard it, and lose trust in management and what they say. But the last 2 quarters they have been meeting their own timelines; accurate about DOE Tranche for Line 2 coming out, Q1 revenue being similar to Q4, Subassemblies (crucial part of line design that unlocks nameplate capacity of 2GwH, important for getting to margin profitability) coming online in July like they said for Line 2. Quote from Q2 call: \"The H2 exceeds the H1, the Q4 is higher than the third. The bottom of the range takes roughly $50 million of H2 growth over the H1. That is just maintaining the run rate that we exited June with on revenue already secured through backlog and Frontier Power USA.\" The difference is that in Q4 2025 they had to TRIPLE Q3 2025 revenue to meet guidance on first generation automation and they were a company learning to scale; they had supplier issues and missing redundancies to guarantee line function if something went wrong. For 2026, all they have to do is continue the run rate they already proved they could do. But the interesting part is that in June Line 2 started producing. It is a more efficient and better designed line in a new manufacturing building that isn't 100 years old (like where Line 1 is). Line 2 contributed 1% of Q2 2026 output, and adjusted gross margin was -62%, while revenue and cube shipments were up around 20% QoQ. Line 2 barely coming online and producing was masking the improvement in GM. It is interesting that they clarified that it is the run rate they EXITED June with as well, saying that the end of June was higher than the beginning, but not because of Line 2 (1% total contribution). So Q3 is set up to have a higher initial run rate from the beginning AND Line 2 ramping. Another quote from Q2 call: \"Hey, Chris. Lower end is basically continue the run rate of June throughout the rest of the year to get to the 300. The higher end of that is to not so much get line one up and running in Thorn Hill, but to get Thorn Hill the full 24/7 operation by the time we get into the end of the Q4.\" It sounds like the higher end of guidance is contingent on them getting capacity online, not more orders. Quote from Q2 call: \"Combined, these initiatives provide what we believe is a clear path to over 72 points of adjusted gross margin improvement over the next 12 months, assuming we execute our plan and achieve expected production volumes.\" What would expected production volumes be? The amount needed to meet the low end of guidance one could assume, which is the run rate they exited June with. https://preview.redd.it/ld5pzxg5wksh1.png?width=2048&format=png&auto=webp&s=edcb49bc82e23dc0bd32253c3f7758ebce0a9468 \"Targeting Q4 26 adjusted gross profit positive exit run rate.\" Putting it all together, they have a path to gross profit positive that could happen 13 weeks from now. It sounds like it is based off the expected production volumes, which I am understanding as what is needed to make the low end of guidance which is $300m, which is the run rate they exited June with. But the run rate for Q3 should be higher, because they are carrying that higher run rate from Line 1 (which Q2 only had at the end of June) for all of Q3, while Line 2 ramps up to 2 shifts. And \"Q4 is higher than the third.\" Which makes $300m sound very conservative, in line with the general tone of this year after the Q4 2025 debacle. The last 3 earnings calls have been different in tone, less promises and \"selling of the future\" and just a more conservative, potentially sandbagging tone. The risk here is that they are moving Line 1 to Thornhill to upgrade it (inherently inefficient design, was designed to fit the building of Turtle Creek, not for efficiency) so it's congruent with Line 2 (and future lines) in Q4 and Line 2 is going to have to carry the Q4 production after the move. No exact timeline on when in Q4 the move will happen. I don't imagine them moving until they are confident in Line 2. But to me, Line 2 is just a more efficient line 1 with built in redundancies (so Q4 doesn't happen again), it isn't proven yet at higher utilizations, but the general concept of the lines producing has been with Line 1. To reach $325m (middle of guidance), H2 needs to be $199.3m. If Q4 is only 5% larger than Q3 , you'd need approximately: Q3: $97.2M Q4: $102.1M For that Q3 growth, you'd need a 41.2% rise in revenue. Revenue grew from Q1/Q2 by around 20%, without an extra, more efficient line ramping (and Line 1 run rate was higher at end of Q2 than the rest of the quarter). And $325m I assume is above the \"expected production volumes\" used to calculate the path to GM profitability, so at 325m the numbers are improving much more rapidly than expected. From Q1 call: \"a 17% sequential increase in cube output accompanied by an 18% improvement in gross loss, approximately $10M\". Now this wasn't replicated in Q2 because of poor overhead absorption of an early Line 2 producing, but it shows the operating leverage they have. Macro environment: It's clear that the AI race isn't stopping, and the constraining item could very well be electricity. Batteries stop curtailment and allow the grid to be more efficient. Energy prices are rising with the current geopolitical events. Winter is coming and for many states, the grid performing could be a matter of life and death. On August 26th, the DoE implemented a major foreign battery ban. EOSE is domestically manufactured and 91% domestically sourced. Recent partnerships for with Department of War for Golden Dome and the Army https://www.frontierpowerusa.com/frontier-power-usa-selected-to-advance-energy-resilience-project-at-tobyhanna-army-depot/ https://investors.eose.com/news-releases/news-release-details/eos-energy-enterprises-selected-deliver-mission-ready-power If Q3 proves margins coming down with all these tailwinds, a re-rate is possible. EOSE could become a darling in the BESS/LDES space, perception can change fast because quarters of progress have been largely ignored by the market while they approach a potential inflection point in the company by scaling at a time where the TAM is absolutely massive and necessary for the grid, AI, national defense, and to lower consumers energy costs. Also the timing of Line 2 coming online and Line 1 becoming fully ramped in Q2 creates a situation where Q3 can show massive improvement in GM. nfa/dyor submitted by /u/RoutineRevolution544 [link] [comments]",
-      "author": "/u/RoutineRevolution544",
-      "symbols": [
-        "GOOGL"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "transport": "rss",
-        "listing": "dd",
-        "flair": "",
-        "requested_flair": "",
-        "requested_flairs": [
-          "DD"
-        ],
-        "sort": "top",
-        "time_filter": "day",
-        "feed_rank": 2,
-        "image_urls": [
-          "https://preview.redd.it/ld5pzxg5wksh1.png?width=140&height=74&auto=webp&s=899746eeef5a20591ba43efb1f28026a7317e5db"
-        ],
-        "images": [
-          {
-            "url": "https://preview.redd.it/ld5pzxg5wksh1.png?width=140&height=74&auto=webp&s=899746eeef5a20591ba43efb1f28026a7317e5db",
-            "path": "data/media/reddit/reddit-image-reddit-39ee29c4721713313ddf-1.png",
-            "mime_type": "image/png",
-            "bytes": 7411
-          }
-        ]
       }
     },
     {
@@ -848,40 +1119,6 @@
             "body": "The Nancy Grace Roman Space Telescope will settle essential questions in the areas of dark energy, exoplanets, and astrophysics.\n\nNamed after NASA’s first chief astronomer, the ‘mother of the Hubble Space Telescope,’ the Nancy Grace Roman Space Telescope will have a field of view at least 100 times larger than Hubble's, potentially measuring light from a billion galaxies in its lifetime. This observatory will also be able to block starlight to directly see exoplanets and planet-forming disks, complete a statistical census of planetary systems in our galaxy, and settle essential questions in the areas of dark energy, exoplanets, and infrared astrophysics.\n\nNASA’s Roman Team Confirms Ground Stations Receiving Data\n\nNASA Activates Roman’s Primary Instrument, Checks Out Coronagraph\n\nFuel Savings Double Potential Lifetime for NASA’s Roman Mission\n\nHelp Refine Data from Space Telescopes with Artifact InSPECtor\n\nWebb is the premier observatory of the next decade, serving thousands of astronomers worldwide. It studies every phase in the…\n\nSince its 1990 launch, the Hubble Space Telescope has changed our fundamental understanding of the universe."
           }
         ]
-      }
-    },
-    {
-      "id": "reddit:213a788428d47c2bce5c",
-      "source_type": "reddit",
-      "source_name": "r/wallstreetbets",
-      "title": "BNPL Degen Returns: Why $KLAR will double from here",
-      "url": "https://www.reddit.com/r/wallstreetbets/comments/1wtt5jt/bnpl_degen_returns_why_klar_will_double_from_here/",
-      "published_at": "2026-09-30T02:20:35+00:00",
-      "collected_at": "2026-10-01T00:01:10.523721+00:00",
-      "body": "Last Oct-Dec, I full ported and called $SEZL at $50-80 . It has since peaked at $180 and is now trading at around $110 - my thesis points all came true. As fintech/BNPL is popular to hate on, feel free to counter my points in the comments. $KLAR is fundamentally mis-priced at $12.50/sh and will be re-rated to $20-25 around release of Q4 earnings (Feb 2027) as my base case, and bear case re-rating will take place around Q1 earnings (May 2027). Price action in the next month might be dog poop though. Five main THESIS POINTS, and some RISKS at end of page. 1. Growth is great, valuation is quite depressed. Revenue growing 25-30% YoY, TMD growing at 35-45% YoY. In Q2, adjusted operating income reached 91M & 27M GAAP OI, 9M GAAP NI. P/S of 1.1, and 2027 EPS multiple of around 15-25 depending on what model you look at. $AFRM, the closest competitor to $KLAR, was trading at the same P/S when they were burning 200M cash per quarter in 2022. $KLAR is already at breakeven with double the revenue (compared to AFRM back then), and in the acceleration stage of US penetration. (LIKELY) $2B cash coming in from Google/Pricerunner lawsuit which already settled in Klarna's favour (ofc Google appealed, could be $1-3B payout upon appeal). Market cap of 4.7B currently. 2. Focus on Fair Financing in November 2025, which is basically longer-term APR loans on higher ticket items like dishwashers, laundry machine etc. This follows the same path as Affirm's loan issuance style, and carries MUCH higher margins than the standard BNPL model Klarna runs. Affirm has 8% take rate doing mostly this type of loan - Klarna is currently at 2.85%, because they are still ramping up on FF. Fair Financing makes up 13% of GMV as of Q2, growing at 82% YoY. As this loan issuance grows rapidly so will TMD, OI, and profitability. 3. US Expansion being a key driver of higher margins - launch of JPM & Apple are some of the largest signings this year, and they are driving usage aggressively in US (37% YoY rev growth in USA, at 36% of total revenue). Note that US is responsible for 36% of total rev DESPITE only being 22% of GMV (as of Q2). Expecting continual 35-40% rev growth in US (consistent with Affirm's growth rates). 4. Flywheel of 120M active users and other financial products - they have fee credit cards, debit cards, chequing/savings accounts, etc. which serve as additional, higher margin line of revenue & even with weak penetration of total active users, generates incremental revenue growth as more users are introduced to these products. They have around 6.5M Klarna Card users, generating interchange, APR & monthly fees. Not a major contributor to growth but still likely 10M rev/qtr, along with stickier all-in-one finance product. 5. Open Market Insider Buys: CEO $10M of shares, Chairman of the Board (Michael Moritz, Sequoia) 50M of shares, both at $14 range. No reason for them to add to large existing positions unless belief of severe valuation disconnect relative to what THE INSIDERS SEE happening. Moritz bought in March 2026, CEO bought in Aug 2026 after large earnings drop. Risks Rate Hikes: 1-2 rate hikes will not meaningfully affect bottom line. Short-term duration loan length, using consumer deposits, and selling loans insulates them from much of this shock Poor execution: Execution has been great in 2026 so far - guidance adjustment (3% less GMV & revenue) due to weak Germany general consumer spending as of 2026 (thx war & oil prices). Macro, not execution caused slight guidance adjustment. This is also assuming Germany stays soft. CFO/CMO departure: US-focused executives needed for better capital markets communication & US-focus marketing strategy focus. Not a negative IMO, old CFO was making clown slides on their quarterly earnings. Profitability : yes i want to see scaling of GAAP NI, will improve starting Q4. Q3 is an \"investment\" Q as stated by mgmt, highest SBC of year and investment into launch of Apple/JPM integration. Positions: 50K in 2028/01 10C/12.5C/15C leaps that are underwater. submitted by /u/halfrepshalfretail [link] [comments]",
-      "author": "/u/halfrepshalfretail",
-      "symbols": [
-        "KLAR",
-        "SEZL",
-        "AFRM",
-        "GOOGL",
-        "AAPL"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "transport": "rss",
-        "listing": "dd",
-        "flair": "",
-        "requested_flair": "",
-        "requested_flairs": [
-          "DD"
-        ],
-        "sort": "top",
-        "time_filter": "day",
-        "feed_rank": 1,
-        "image_urls": [],
-        "images": []
       }
     },
     {
@@ -2278,256 +2515,6 @@
         "investor_type": "technology_analyst",
         "coverage": "AI products, devices and consumer technology",
         "engagement_score": 1785
-      }
-    },
-    {
-      "id": "price:84ca124c0b438e123fa9",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 跌幅前十 2026-09-29",
-      "url": "https://finance.yahoo.com/markets/stocks/losers/",
-      "published_at": "2026-09-29T20:00:00+00:00",
-      "collected_at": "2026-10-01T00:02:31.358084+00:00",
-      "body": "1. FICO close 617.869995; previous 840.890015; change -26.5219%\n2. SRAD close 11.56; previous 12.48; change -7.3718%\n3. PONY close 6.54; previous 6.94; change -5.7637%\n4. TME close 7.96; previous 8.37; change -4.8984%\n5. SECZ close 15.84; previous 16.629999; change -4.7504%\n6. ASAN close 8.23; previous 8.64; change -4.7454%\n7. WK close 65.150002; previous 68.190002; change -4.4581%\n8. MNDY close 76.050003; previous 79.050003; change -3.7951%\n9. NCNO close 17.950001; previous 18.6; change -3.4946%\n10. NTSK close 17.27; previous 17.85; change -3.2493%",
-      "author": "",
-      "symbols": [
-        "FICO",
-        "SRAD",
-        "PONY",
-        "TME",
-        "SECZ",
-        "ASAN",
-        "WK",
-        "MNDY",
-        "NCNO",
-        "NTSK"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "losers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-09-29",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "FICO",
-            "price_date": "2026-09-29",
-            "close": 617.869995,
-            "previous_close": 840.890015,
-            "change_amount": -223.02002,
-            "change_percentage": -26.5219,
-            "url": "https://finance.yahoo.com/quote/FICO"
-          },
-          {
-            "ticker": "SRAD",
-            "price_date": "2026-09-29",
-            "close": 11.56,
-            "previous_close": 12.48,
-            "change_amount": -0.919999,
-            "change_percentage": -7.3718,
-            "url": "https://finance.yahoo.com/quote/SRAD"
-          },
-          {
-            "ticker": "PONY",
-            "price_date": "2026-09-29",
-            "close": 6.54,
-            "previous_close": 6.94,
-            "change_amount": -0.4,
-            "change_percentage": -5.7637,
-            "url": "https://finance.yahoo.com/quote/PONY"
-          },
-          {
-            "ticker": "TME",
-            "price_date": "2026-09-29",
-            "close": 7.96,
-            "previous_close": 8.37,
-            "change_amount": -0.41,
-            "change_percentage": -4.8984,
-            "url": "https://finance.yahoo.com/quote/TME"
-          },
-          {
-            "ticker": "SECZ",
-            "price_date": "2026-09-29",
-            "close": 15.84,
-            "previous_close": 16.629999,
-            "change_amount": -0.789999,
-            "change_percentage": -4.7504,
-            "url": "https://finance.yahoo.com/quote/SECZ"
-          },
-          {
-            "ticker": "ASAN",
-            "price_date": "2026-09-29",
-            "close": 8.23,
-            "previous_close": 8.64,
-            "change_amount": -0.410001,
-            "change_percentage": -4.7454,
-            "url": "https://finance.yahoo.com/quote/ASAN"
-          },
-          {
-            "ticker": "WK",
-            "price_date": "2026-09-29",
-            "close": 65.150002,
-            "previous_close": 68.190002,
-            "change_amount": -3.040001,
-            "change_percentage": -4.4581,
-            "url": "https://finance.yahoo.com/quote/WK"
-          },
-          {
-            "ticker": "MNDY",
-            "price_date": "2026-09-29",
-            "close": 76.050003,
-            "previous_close": 79.050003,
-            "change_amount": -3.0,
-            "change_percentage": -3.7951,
-            "url": "https://finance.yahoo.com/quote/MNDY"
-          },
-          {
-            "ticker": "NCNO",
-            "price_date": "2026-09-29",
-            "close": 17.950001,
-            "previous_close": 18.6,
-            "change_amount": -0.65,
-            "change_percentage": -3.4946,
-            "url": "https://finance.yahoo.com/quote/NCNO"
-          },
-          {
-            "ticker": "NTSK",
-            "price_date": "2026-09-29",
-            "close": 17.27,
-            "previous_close": 17.85,
-            "change_amount": -0.58,
-            "change_percentage": -3.2493,
-            "url": "https://finance.yahoo.com/quote/NTSK"
-          }
-        ]
-      }
-    },
-    {
-      "id": "price:28245e66cffd9339e71e",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 涨幅前十 2026-09-29",
-      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
-      "published_at": "2026-09-29T20:00:00+00:00",
-      "collected_at": "2026-10-01T00:02:31.358084+00:00",
-      "body": "1. DUOL close 142.619995; previous 134.300003; change 6.1951%\n2. TTAN close 63.52; previous 59.919998; change 6.008%\n3. BOX close 32.75; previous 31.34; change 4.499%\n4. RXT close 3.94; previous 3.79; change 3.9578%\n5. YELP close 18.280001; previous 17.59; change 3.9227%\n6. ORCL close 137.789993; previous 132.600006; change 3.914%\n7. NAVN close 20.690001; previous 19.98; change 3.5536%\n8. GRND close 16.120001; previous 15.61; change 3.2671%\n9. PD close 14.95; previous 14.48; change 3.2459%\n10. META close 738.789978; previous 715.619995; change 3.2377%",
-      "author": "",
-      "symbols": [
-        "DUOL",
-        "TTAN",
-        "BOX",
-        "RXT",
-        "YELP",
-        "ORCL",
-        "NAVN",
-        "GRND",
-        "PD",
-        "META"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "gainers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-09-29",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "DUOL",
-            "price_date": "2026-09-29",
-            "close": 142.619995,
-            "previous_close": 134.300003,
-            "change_amount": 8.319992,
-            "change_percentage": 6.1951,
-            "url": "https://finance.yahoo.com/quote/DUOL"
-          },
-          {
-            "ticker": "TTAN",
-            "price_date": "2026-09-29",
-            "close": 63.52,
-            "previous_close": 59.919998,
-            "change_amount": 3.600002,
-            "change_percentage": 6.008,
-            "url": "https://finance.yahoo.com/quote/TTAN"
-          },
-          {
-            "ticker": "BOX",
-            "price_date": "2026-09-29",
-            "close": 32.75,
-            "previous_close": 31.34,
-            "change_amount": 1.41,
-            "change_percentage": 4.499,
-            "url": "https://finance.yahoo.com/quote/BOX"
-          },
-          {
-            "ticker": "RXT",
-            "price_date": "2026-09-29",
-            "close": 3.94,
-            "previous_close": 3.79,
-            "change_amount": 0.15,
-            "change_percentage": 3.9578,
-            "url": "https://finance.yahoo.com/quote/RXT"
-          },
-          {
-            "ticker": "YELP",
-            "price_date": "2026-09-29",
-            "close": 18.280001,
-            "previous_close": 17.59,
-            "change_amount": 0.690001,
-            "change_percentage": 3.9227,
-            "url": "https://finance.yahoo.com/quote/YELP"
-          },
-          {
-            "ticker": "ORCL",
-            "price_date": "2026-09-29",
-            "close": 137.789993,
-            "previous_close": 132.600006,
-            "change_amount": 5.189987,
-            "change_percentage": 3.914,
-            "url": "https://finance.yahoo.com/quote/ORCL"
-          },
-          {
-            "ticker": "NAVN",
-            "price_date": "2026-09-29",
-            "close": 20.690001,
-            "previous_close": 19.98,
-            "change_amount": 0.710001,
-            "change_percentage": 3.5536,
-            "url": "https://finance.yahoo.com/quote/NAVN"
-          },
-          {
-            "ticker": "GRND",
-            "price_date": "2026-09-29",
-            "close": 16.120001,
-            "previous_close": 15.61,
-            "change_amount": 0.510001,
-            "change_percentage": 3.2671,
-            "url": "https://finance.yahoo.com/quote/GRND"
-          },
-          {
-            "ticker": "PD",
-            "price_date": "2026-09-29",
-            "close": 14.95,
-            "previous_close": 14.48,
-            "change_amount": 0.47,
-            "change_percentage": 3.2459,
-            "url": "https://finance.yahoo.com/quote/PD"
-          },
-          {
-            "ticker": "META",
-            "price_date": "2026-09-29",
-            "close": 738.789978,
-            "previous_close": 715.619995,
-            "change_amount": 23.169983,
-            "change_percentage": 3.2377,
-            "url": "https://finance.yahoo.com/quote/META"
-          }
-        ]
       }
     },
     {
@@ -8722,43 +8709,6 @@
       }
     },
     {
-      "id": "rss:f8d222260402eaddbf35",
-      "source_type": "rss",
-      "source_name": "Mobile Dev Memo",
-      "title": "The App Store discoverability squeeze (part 2)",
-      "url": "https://mobiledevmemo.com/the-app-store-discoverability-squeeze-part-2/",
-      "published_at": "2026-09-28T15:41:38+00:00",
-      "collected_at": "2026-09-29T00:00:55.784583+00:00",
-      "body": "Apple is accelerating App Store advertising initiatives to offset declining commission revenue caused by global regulatory pressure. Recent UI changes that blend search ads into native content signal a strategic shift toward paid discovery, suggesting an impending discoverability squeeze for developers as Apple prioritizes advertising growth.",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://mobiledevmemo.com/",
-        "publication_platform": "wordpress",
-        "section": "transaction_ideas"
-      }
-    },
-    {
-      "id": "substack:b50391dba08a97ccedfe",
-      "source_type": "substack",
-      "source_name": "MBI Deep Dives",
-      "title": "Uber: The Aggregator on Trial",
-      "url": "https://mbideepdives.substack.com/p/uber-the-aggregator-on-trial",
-      "published_at": "2026-09-28T15:41:32+00:00",
-      "collected_at": "2026-09-29T00:00:46.940650+00:00",
-      "body": "The very **[first](https://mbideepdives.substack.com/p/deep-dive-on-uber?utm_source=publication-search)** Deep Dive I wrote for MBI Deep Dives, back in 2020, was on Uber, and a lot has obviously changed since then. Uber in 2019 did ~$65 Billion of Gross Bookings while burning ~$4.9 Billion of Free Cash Flow (FCF). Then the pandemic cut Mobility business in half, and Uber’s ability to generate actual profits seemed even more elusive. That question has been answered emphatically. Last year Uber processed ~$193 Billion of Gross Bookings across 13.6 Billion trips, and generated ~$10 Billion of FCF. Delivery segment deserves bit of an apology from me; I was skeptical about delivery’s durability of growth beyond the pandemic, a mistake I highlighted in my [DoorDash Deep Dive](https://mbideepdives.substack.com/p/doordash-the-infrastructure-of-local?utm_source=publication-search) this July. Delivery’s Gross Bookings in 2025 was 3x of what it was in 2020 and now sits nearly level with Mobility. Color me surprised!\n\nAnd yet the stock is hovering around $70, only ~67% above the $45 IPO price of May 2019 or ~7% CAGR for anyone who held the whole way despite gross booking becoming ~3x since 2019 with much higher profitability. Mr. Market obviously has no confusion about the last six years, but remains much more shrouded in doubt for the next ten (and beyond) primarily due to Autonomous Vehicles (AV).\n\n[![Image 1: chart](https://substackcdn.com/image/fetch/$s_!rNK5!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F079c247f-d981-4b73-a663-377ad21d1557_2400x1240.png)](https://substackcdn.com/image/fetch/$s_!rNK5!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F079c247f-d981-4b73-a663-377ad21d1557_2400x1240.png)\n\nSource: KoyFin (MBI Deep Dives readers get 20% discount; just click **[here](https://app.koyfin.com/?via=abdullah)**)\n\nI’ve already covered Uber’s history and ridesharing 101 in that 2020 piece, so consider this bit of a sequel to that piece from 2020. In this piece, I will still provide a refresher on the segments. The AV debate is obviously the key focus in the Mobility segment. After that, Delivery segment discusses strategy vs DoorDash, and the recent Delivery Hero acquisition. I also shared my thoughts on management, especially what Dara’s Expedia years potentially tell us. And finally, as usual I finish with valuation, with my usual question: what has to be true for me to earn ~10% IRR without assuming a lofty terminal multiple? The rest of this Deep Dive will be behind the paywall.\n\n_Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on **[70](https://mbideepdives.substack.com/p/deep-dives)** companies. The daily is just how I think out loud between the Deep Dives!_",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://mbideepdives.substack.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas",
-        "transport": "public_reader_fallback"
-      }
-    },
-    {
       "id": "x:a59701cdda2faca9c9df",
       "source_type": "x",
       "source_name": "@AravSrinivas",
@@ -9350,24 +9300,6 @@
       }
     },
     {
-      "id": "substack:2971a7d87cba010081e9",
-      "source_type": "substack",
-      "source_name": "TSOH Investment Research",
-      "title": "Portfolio Change - 09/28/2026",
-      "url": "https://thescienceofhitting.com/p/portfolio-change-09282026",
-      "published_at": "2026-09-28T13:04:19+00:00",
-      "collected_at": "2026-09-29T00:00:52.880676+00:00",
-      "body": "Note: Review all prior portfolio changes on the TSOH website I’ve decided to make a portfolio change, which will be completed during today’s market session. This was the allocation as of yesterday’s close: Read more",
-      "author": "TSOH Investment Research",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://thescienceofhitting.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas"
-      }
-    },
-    {
       "id": "x:4498562bb13a1a3b843f",
       "source_type": "x",
       "source_name": "@illyquid",
@@ -9417,24 +9349,6 @@
         "investor_type": "technology_investor",
         "coverage": "AI infrastructure bottlenecks and component suppliers",
         "engagement_score": 21
-      }
-    },
-    {
-      "id": "substack:a5a61cd22501ebd1c82c",
-      "source_type": "substack",
-      "source_name": "Yet Another Value Blog",
-      "title": "Before you fade Muse, use it for 72 hours",
-      "url": "https://www.yetanothervalueblog.com/p/before-you-fade-muse-use-it-for-72",
-      "published_at": "2026-09-28T11:38:42+00:00",
-      "collected_at": "2026-09-29T00:00:55.995661+00:00",
-      "body": "I’ve spent a lot of time writing about and playing with the new wave of consumer AI agents (mainly Muse, with a little bit of Instinct mixed in). Those posts have generated a ton of inbounds, and they largely land on two extremes. On one end: “consumer agents are the most overhyped product since Google Glass / Apple Vision Pro and will have minimal impact on real businesses.” On the other: “every company that touches a consumer is a short as agents eat into their margins.” I’m not being hyperbolic; people really are that far out on both ends! I think both camps are too extreme…. but if you forced me to pick, I’m closer to the second one. Yes, I said last week that the “consumer inertia” sell-off looked a little overdone. But I just can’t watch how easy Muse is to use, and how fast downloads have taken off, and conclude it won’t have a big impact on the consumer economy. Yet Another Value Blog is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber. I’m in the minority there among my investing friends; something like ~75% of the inbounds lean “agents are overblown,” and I think there are two reasons why. The first is readership bias. This is a value blog, and value investors are a curmudgeonly bunch (I say that lovingly as one of them!). We’re wired to fade hype and zig when everyone else zags. Usually that’s a feature, not a bug. The most dangerous words in finance are “this time is different,” and if you’re betting that a new product (like consumer AI agents / Muse) is going to reshape the consumer economy, you’re making a “this time is different” bet and those are normally good to fade. But AI is really revolutionary…. this time really might be different! The second is the one that worries me: most of the skeptics I’ve talked to haven’t really used it. Sure, they’ve tried the product, but they haven’t immersed themselves in it. When I ask a friend who’s dismissing Muse what they’ve done with it, the answer is almost always some version of “I asked it a few questions on day one, didn’t want to hook it up to my email, and haven’t opened it since.” That matters because of an old rule: what the power user does today is what the average user does tomorrow. Whatever the heaviest home internet users were doing a few years ago is roughly what the average household does today. The way college kids binged Netflix in the early 2010s is how everyone watched TV by the end of the decade; if you were betting that linear TV was a winner because “only some drunk college kids will binge streaming” then you had your face ripped off. I think AI follows the same rule, but much, much faster. What the bleeding edge is doing with agents today is how everyone will use them in ~18 months (or sooner). If you haven’t really used the products extensively, it’s going to be hard to see where the puck is going or how these could change the consumer landscape. The 72 hour challenge So here’s my ask: download Muse, give it access to your email, and use it for everything for 72 hours. It’s easy, takes basically no effort and no skills, and once you get in the habit of asking it to do everything, you’ll start to see how fast things could change. And I’m not getting paid for telling you to do that or anything (though if Meta 1 wants to write me an influencer check, I would happily cash it!); I just really think these are going to cause a change for a lot of businesses and I don’t want any of my investing friends to miss something because they’ve been dismissive of AI agents. That’s my ask; I’m going to spend the rest of this article detailing how I’ve tried to immerse myself in AI agents (so you can follow along / copy me if of interest). I just got the new iPhone (don’t judge; my old one was over three years old!), which lets you turn the old silent switch into a button that opens any app. I made that button connect to Muse, so literally anytime I need something, I have one tap and I’m in Muse. And I mean anything; if I have a question I’d normally Google, I pull up Muse. If I have something I want to do, or a reminder I want set, I pull up Muse and tell it. But before I get to the examples, a request. You could read these and think “those are small potatoes! So Muse saved Andrew a few bucks here or there, or made it easier for him to find a Knicks game for his family. So what?” Remember this: these are all tricks some increasingly middle aged dude discovered within a few days of a brand new AI agent rolling out. It took a few years for killer iPhone apps like Uber to show up, for consumers to really get used to how to use an iPhone and for the iPhone to start impacting consumer habits and spending. So don’t read this and think it’s the end of what AI agents can do; read it and think “man, if a middle aged guy can do this within a week of the apps releasing, what’s going to happen in two years when the AI models are twice as smart, every iPhone is rolling out with agents preinstalled, and every Instagram story is telling you the best way to use AI agents to make your life easier?” Request out the way, let me give a few of the ways I’ve used AI agents: Upgrading my phone. I asked Muse for the cheapest price on the new iPhone and AirPods (again, value investor…. my old AirPods could barely hold a charge), the best trade-in value, and whether a new model was about to drop. Could I have done that myself? Sure, but it would have been an hour of open tabs and questions and research. Muse did it in seconds and saved me ~$50 on the AirPods (turns out Amazon was cheaper than buying direct from Apple) and ~$200 on the phone through a better trade-in. I ended up buying on Amazon myself, but I could just as easily have had Muse buy it for me from Best Buy (that’s right; Muse can buy direct; I’ll give another story of this later). Being the layer that decides where consumer spend goes is a massive threat (and opportunity) for retailers; no wonder Amazon banned Muse . Pants. I couldn’t remember who made a pair of pants I bought years ago (the tag was long gone). I snapped a photo; Muse identified them instantly, then found highly rated pants with similar materials that were cheaper. The original brand just lost a repeat purchase it would have gotten by default. Brand loyalty that’s really just habit is very, very exposed. A similar use case that I ran into constantly: if there’s something reasonably commoditized, it’s really easy to put it into Muse and have it go find the cheapest option. For example, I needed some new undershirts. Instead of going on Amazon and searching on my own, I just told Muse “I need new undershirts” and asked it to find the cheapest ones in my size. It had access to my email, so I could ask it for the cheapest place it could find the last ones I had bought as well as the cheapest ones that were similar to the last brand I had bought (though maybe not the same brand, i.e. if I had bought Hanes, maybe it recommended Jockey if they were two bucks cheaper somewhere). It did that successfully, loaded a shopping cart on JCPenney with undershirts, and checked out / purchased it on its own once I connected it to my credit card. That’s a great use case for me and my wallet; it’s a disastrous use case for low end brands and almost every retailer as using Muse to quickly price shop like that absolutely destroys their margins and economics. The Knicks. Jalen Brunson hosted SNL, and I thought, “I’d love to take the family to a Knicks game this season.” So I asked Muse for weekend home games with a day tip-off (young kids!) and a price comparison, and it returned a list of all the games that fit my criteria and suggested which would be best. Right now, it returns a bunch of links to Ticketmaster and StubHub, but imagine being one of those sites if Muse is directing traffic. Why wouldn’t Muse displace them at some point? Or could Muse price compare to compete all of their fees down? What about all of the money those two currently pay Google to be at the top of any search for Knicks tickets; does that go away (or get directed to Muse)? I had a similar experience with trying to plan a boys’ weekend. Normally, we’d spend time picking Airbnbs, searching through dates that worked, etc. With Muse, I just said “we’re looking for a weekend NBA game in January / February somewhere warm; plan me an itinerary” and I had 8 different options in seconds. It hasn’t quite gotten the feel for booking hotels and such, but it’s not a long way from that prompt to imagine it proposing (and booking) flights and hotels…. and where are the OTAs in that scenario? Chess. I play chess (very) casually online. I’ve generally just goofed around, but a friend and I have recently had a series of intense games and we’re basically dead even. That’s driving the competitive side of me nuts, so I’ve been reviewing games to improve. I was tempted to buy a Chess.com membership so I could get unlimited reviews…. but instead I gave Muse my Chess.com account and it automatically pulls and reviews my game log every day. Now consider that as an investor: I was a likely candidate for a Chess.com premium upsell, but now there’s no reason for me to upgrade. It’s a small example, but how many small subscriptions and app features get displaced the same way? Calories. I’m trying to cut a little weight (when am I not?), and calorie tracking is historically a real chore. Now I snap a photo of whatever I’m about to eat and Muse keeps a running daily log. What’s the point of MyFitnessPal when Muse does it better and for free? Training. I’m running a Hyrox race in a few weeks. I track my training in a spreadsheet, which used to mean screenshotting my Whoop stats after every workout. I asked Muse to figure out something better; it connected directly to the Whoop API, and now when I tell it I finished a workout, it automatically pulls the stats right into my Google sheet. I can also tell it strength workouts I did (i.e. today I did 5x5 back squat) and have it track my workouts for me. Is that a small use case? Sure! But it’s starting to step on the toes of a bunch of different fitness trackers, and you can imagine a bunch of other places where interacting with an app like this could impact other similar businesses. The part the skeptics aren’t feeling I’m not saying that this is an exhaustive list of everything you can do with Muse (or even the most useful things), but these are things that have been helpful for me, and if you look at every one of them I think you could see the way it could shift a lot of spending over time. In every single example, you could see how the way a certain business has operated for years could be displaced as consumers get increasingly comfortable offloading more and more to agents. You can see how businesses that are making tons of money on the way things have been done for years could be displaced in an instant. That’s what you can’t feel from a few questions on day one. So my challenge: just download Muse and commit to using it constantly for 72 hours. Worst case, you get a few chores off your plate. Best case, you see the puck before it gets there…. and you avoid owning a business whose entire competitive landscape is about to get rewritten by consumer agents. 1 Disclosure: long META, though it’s small!",
-      "author": "Andrew",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.yetanothervalueblog.com/",
-        "publication_platform": "substack",
-        "section": "transaction_ideas"
       }
     },
     {
@@ -9617,24 +9531,6 @@
         "investor_type": "technology_investor",
         "coverage": "technology and software equity trade ideas",
         "engagement_score": 210
-      }
-    },
-    {
-      "id": "substack:c7c910772d270caa8772",
-      "source_type": "substack",
-      "source_name": "TSOH Investment Research",
-      "title": "On’s Premium Playbook",
-      "url": "https://thescienceofhitting.com/p/ons-premium-playbook",
-      "published_at": "2026-09-28T10:31:25+00:00",
-      "collected_at": "2026-09-29T00:00:52.880676+00:00",
-      "body": "Review all prior ONON research and portfolio changes on the TSOH website From “ On Holdings: Maintaining Pace ” (July 2026): “Mr. Market has some concerns about the sustainability of their current financial trajectory. Personally, I am somewhat less pessimistic about On than I think this rating implies. I see a premium athletic brand that etched out a unique position in the industry, at least at its current size … If I walk away from [On’s 2026 Investor Day] with more appreciation for where this business can go over the next five to ten years, I will be open to changing my conclusion.” The Investor Day in question was held last week in Zurich, with the company setting medium-term financial targets through FY29, announcing their first share repurchase authorization, and detailing their plans to expand into golf and soccer ( welcome aboard Mbappé ). For a stock that has spent most of 2026 heading in the wrong direction, the >10% pop in response was a notable change in direction; with that said, it’s still down ~35% year to date. The Mbappé signing is a fitting place to start, because I think it captures the broader strategic vision for On. As management noted at the Investor Day, “We are entering because at the premium end of the sport there is still space left open for radical innovation on the pitch... A few incumbents own the architecture of the category , and they compete head-to-head. We will play a different game… Our innovation engine has given us an entry ticket nobody else holds. I’m quoting Sydney Schertenleib – ‘I’ve never felt the ball like this before’. That’s what Sydney said after her very first practice in an early concept of our upcoming performance football boot. This is the disruptive power of LightSpray . On a football boot, LightSpray does something that no other boot has done: it puts almost nothing between the foot and the ball.” It’s clear that On’s initial efforts in soccer will be focused on top of the line premium cleats with a LightSpray upper (they currently offer two different styles of LightSpray men’s shoes – the Cloudmonster 3 Hyper for $280 and the Cloudboom Strike 2 for $310). They have no interest in competing with lower end (~$100) soccer cleats sold by Nike and Adidas, let alone the endless list of brands sold through sites like Amazon for even less. On enters the market with a clear focus on selling to a select group of soccer players who are willing to pay a premium for the highest quality boot they can make. This should sound familiar, because it mirrors what they’ve done in running, tennis, etc. As co-founder Caspar Coppetti has said about On’s early days , “Passionate runners were investing more into their gear every year. They were willing to pay for progress. They were the most valuable customers in the running category, but no brand catered to them exclusively. That was the moment where it all made sense to us . We would disrupt running with innovation, and we would only sell at the premium end of the market.” Critically, On consistently acts in a way that reinforces it’s premium brand image. To paraphrase management, operating in that manner is simple in principle, yet demanding in practice, and powerful because it compounds. As management noted, On has the industry’s lowest discount rates and the highest average selling prices (“since 2023, we have taken ASPs from $145 to $170”). On the latter figure, they also noted their U.S. wholesale ASPs are ~40% higher than their peer average. In a more mature category for On like Running, the company’s pricing architecture has evolved to cover a broader range of price points, with success driving “better” / “best” SKU adoption: Read more",
-      "author": "TSOH Investment Research",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://thescienceofhitting.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas"
       }
     },
     {
