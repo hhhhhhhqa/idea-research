@@ -1,7 +1,44 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-06T05:50:00.252789+00:00",
+  "generated_at": "2026-10-07T00:01:42.149321+00:00",
   "pipelines": [
+    {
+      "pipeline": "substack",
+      "status": "ok",
+      "item_count": 6,
+      "errors": [],
+      "notes": [
+        "Clouded Judgement: public reader fallback used",
+        "MBI Deep Dives: public reader fallback used",
+        "Aspiring for Intelligence: public reader fallback used",
+        "Chips Ahoy Capital: public reader fallback used",
+        "Meritech Software Pulse: public reader fallback used",
+        "Outspoken Geek: public reader fallback used",
+        "New Moon Cap: public reader fallback used",
+        "Outlier Cap: public reader fallback used"
+      ]
+    },
+    {
+      "pipeline": "reddit",
+      "status": "ok",
+      "item_count": 0,
+      "errors": [],
+      "notes": [
+        "r/wallstreetbets: anonymous dd RSS transport used",
+        "r/SecurityAnalysis: anonymous thesis RSS transport used"
+      ]
+    },
+    {
+      "pipeline": "prices",
+      "status": "partial",
+      "item_count": 2,
+      "errors": [],
+      "notes": [
+        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "Ignored incomplete Yahoo EOD date 2026-10-06: 1/203 ticker closes available; latest sufficiently complete date is 2026-10-05.",
+        "Latest available Yahoo EOD date is 2026-10-05; run after the US close to collect 2026-10-06."
+      ]
+    },
     {
       "pipeline": "x",
       "status": "ok",
@@ -139,53 +176,127 @@
         "@kuncheng: 0 tweet(s) via twscrape",
         "Linked articles: 11 article(s) stored; 75 unavailable or skipped"
       ]
-    },
-    {
-      "pipeline": "substack",
-      "status": "ok",
-      "item_count": 4,
-      "errors": [],
-      "notes": [
-        "Clouded Judgement: public reader fallback used",
-        "MBI Deep Dives: public reader fallback used",
-        "Aspiring for Intelligence: public reader fallback used",
-        "Chips Ahoy Capital: public reader fallback used",
-        "Meritech Software Pulse: public reader fallback used",
-        "Outspoken Geek: public reader fallback used",
-        "New Moon Cap: public reader fallback used",
-        "Outlier Cap: public reader fallback used"
-      ]
-    },
-    {
-      "pipeline": "reddit",
-      "status": "ok",
-      "item_count": 0,
-      "errors": [],
-      "notes": [
-        "r/wallstreetbets: anonymous dd RSS transport used",
-        "r/SecurityAnalysis: anonymous thesis RSS transport used"
-      ]
-    },
-    {
-      "pipeline": "prices",
-      "status": "ok",
-      "item_count": 2,
-      "errors": [],
-      "notes": [
-        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "Latest available Yahoo EOD date is 2026-10-02; run after the US close to collect 2026-10-05."
-      ]
     }
   ],
   "counts": {
-    "total": 134,
-    "substack": 6,
-    "rss": 1,
+    "total": 138,
+    "substack": 9,
+    "rss": 2,
     "reddit": 0,
     "x": 125,
     "price": 2
   },
   "items": [
+    {
+      "id": "rss:bbda66dc819c21f15268",
+      "source_type": "rss",
+      "source_name": "Mobile Dev Memo",
+      "title": "Ultra-long user histories and the scaling laws of RecSys",
+      "url": "https://mdm.co/ultra-long-user-histories-and-the-scaling-laws-of-recsys/",
+      "published_at": "2026-10-06T17:39:10+00:00",
+      "collected_at": "2026-10-07T00:00:49.761417+00:00",
+      "body": "ByteDance and Meta are pioneering recommendation architectures that leverage ultra-long user histories to improve content ranking. By separating history processing from real-time evaluation, these systems bypass latency constraints while benefiting from scaling laws. This technical evolution creates a compounding advantage for platforms with vast data and significant financial resources.",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mobiledevmemo.com/",
+        "publication_platform": "wordpress",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:2977b160467fb0e9c6b5",
+      "source_type": "substack",
+      "source_name": "MBI Deep Dives",
+      "title": "When the Ads Come to the Data",
+      "url": "https://mbideepdives.substack.com/p/when-the-ads-come-to-the-data",
+      "published_at": "2026-10-06T16:35:28+00:00",
+      "collected_at": "2026-10-07T00:00:42.199738+00:00",
+      "body": "Last week, I **[wrote](https://mbideepdives.substack.com/p/why-muse-may-never-need-ads)** why Muse may never need ads. That piece traveled quite a bit, and interestingly, while I received glowing praise from some readers, I have also heard from people who vehemently disagreed with the word “never”. After pondering this a little more, I actually came to agree with my critics.\n\nThe core argument that I laid out in my piece wasn’t incorrect, but assuming Meta will **NEVER** show ads on Muse is likely a bridge too far. In fact, while discussing this topic with several people (public market investors, VCs, advertisers, and big tech employees) over the last few days, I realized I was a bit shortsighted in assuming a “no ads” future for Muse. The fact that Muse’s own browsing activities can inform the ads people see on Facebook and Instagram will help Meta be more patient before turning on the ads spigot, but to capture the full potential of Muse, Meta will almost certainly insert ads.\n\nThe reason I was so resistant to ads inside Muse was that if users are handing over their emails, logins and payment credentials, they need to believe Muse is working for them rather than for the highest bidder, and ads inside the agent would undermine that. In retrospect, I wasn’t quite imaginative enough about the ads of the future, which is perhaps a classic fallacy to fall for while navigating a transformative era of technology.\n\nThe first internet ads were essentially print ads that moved online i.e. static banners bought by the impression, and it took years before the native form emerged with ads targeted, auctioned and measured in ways print never could be. I suspect we may be at a similar stage with today’s consumer AI agents: a sponsored link inside a chat window is perhaps the banner ad of this era. The native form may instead be something like **a personal ad engine**, where my own AI looks through every ad and shows me only the one that fits my situation.\n\nMeta has stated (see [here](https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/), and [here](https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse)) plainly that my conversations and the data in the Virtual Machine (VM) that Muse uses are **NOT** shared with its ad systems. So any advertising inside Muse would need to work under that constraint: Meta's ad system cannot use what my agent knows about me to decide which ad I see. The only way around it, I think, is to reverse the usual flow: **the ads come to my data rather than my data going to the ads,** with my AI choosing among them inside the VM, and Meta's ad system learning little more than that a campaign produced a sale.\n\nLet me drive my point home by giving you a few specific examples how this could work **while keeping the privacy constraint in mind**.\n\nLet’s start with car insurance first, which is perhaps the most telling example because of where the ad dollars go today. My current insurer knows exactly when my policy renews, but it is obviously the one party with little reason to prompt me to shop around. Its rivals cannot see that date. What they can do is wait for me to reveal it i.e. when the renewal notice arrives and I type “cheap car insurance” into Google, that query is the best signal that I am open to switching. This is why insurance keywords have long been [among the most expensive](https://fraudblocker.com/articles/the-most-expensive-google-ads-keywords) in search as several insurers and lead-generation sites bid for my click, often as high as $60-70 per click. I may click three or four, fill in the same form each time, and my details may be sold on to agents who call me **for days**. Let’s just say that’s not really a great experience to go through. Of course, most of those clicks never become a policy, so the insurer that eventually wins me has in effect paid for the ones it lost which is why acquiring a single customer can cost several hundred dollars. Meta’s role in this market is likely quite modest today.\n\nNow consider what the AI in my VM knows today once I connected my emails with Muse. It has the renewal notice that shows my premium is going from $1,480 to $1,720 on November 14, a 16% increase. It also knows that my service receipts suggest I drove only about 6,000 miles this year. Today, Meta’s ad system has to guess which of its ads to show me. In this version the roles are reversed: my AI can look through every ad in Meta’s system i.e. every insurer’s campaign and show me the only one that fits my situation: an insurer with a low-mileage policy. With my permission it can then request a quote: let’s say $1,250 for the same coverage. I say “switch”, and Muse fills in the application and cancels the old policy. In such a world, I never will type the query, so one of the most expensive clicks in search may never need to happen when my personal AI agent will do the work for me. Of course, you don’t need to be a rocket scientist to figure out that an advertiser will be very, very happy to pay Meta to sell that policy to me.\n\nMeta’s advantage is that two things are needed at once, and very few companies currently have both. The first is the context, which sits in the VM. The second is the supply of ads: millions of advertisers already have campaigns, creative, budgets, and billing inside Meta’s system, so **the catalog my AI will be able to search is very deep on day one**. A startup with a capable agent would have the context but no advertisers. Google is the one company with both since the insurers are its customers, and my renewal notice probably sits in Gmail. However, every purchase its agent completes would likely **replace** the search auction it monetizes best (more on that later), whereas for Meta, this revenue would be largely new.\n\nWhat I find most interesting is that Meta can do all of this without breaking its privacy promise. Its ad system will never learn my renewal date, my premium or my mileage. Information travels in one direction: my AI reads the full catalog of ads (the same catalog every other user’s AI can read) and the choice is made inside my VM, where the ad system cannot see which ads were considered or why one was picked. The insurer will receive my details only at the moment I ask for a quote which is no different from filling in the form myself. What comes back to the ad system would need to be little more than the fact that a sale happened: this campaign produced a sale, bill the advertiser. Meta may learn that I bought a policy, but not why. **In effect, the ad system no longer needs to know me, because the ads come to my data rather than my data going to the ads**.\n\nThis is really the crux of what I missed and wasn’t imaginative enough to think through in my earlier piece. Of course, solving the privacy problem doesn't fully solve the trust problem I raised in my earlier piece. My agent is choosing only among the advertisers in Meta's system, so I may never know whether a cheaper insurer that doesn't advertise on Meta existed. But I am not sure there is a compelling alternative. Consumer agents are expensive to run, and it seems unrealistic to expect one to work for free at mass scale: **someone must pay for it**. Nor is it practical to imagine my agent crawling fifty insurers' websites every time a renewal notice arrives. Agents will optimize, and the most efficient path for Meta's agent is to go straight to the ad system, where the supply is already structured, priced and ready to transact. That works for Meta, which needs to make money; it works for the advertiser, which makes a sale; and it works **reasonably** well for me because nothing happens without my say. The agent proposes, but I decide whether $1,250 is good enough to switch. Is it the best possible deal? Maybe not. But it is a meaningfully better deal than the one I had, arrived at with far less hassle, and the final call remains mine. It is also worth remembering that the status quo isn't neutral either: when I search for \"cheap car insurance\" today, the options I see first are the ones that paid to be there.\n\nSince I am in a more imaginative mode today, let me give you another example.\n\nToday, Meta knows I watch running videos on Instagram, and perhaps that I once visited a shoe brand’s website, so brands that want to reach runners bid to show me their ads. The ads are plausibly relevant, but most arrive when I am not in the market, and none can account for what Meta’s ad system cannot see: that my current pair is nearly worn out, that I have a race coming, or that I need a wide fit. The brand obviously ends up paying for a great many impressions to find one buyer.\n\nNow consider what the AI in my VM may know. It has the confirmation email for a half marathon nine weeks away, a receipt showing my current pair is fourteen months old, ~500 miles logged on that pair in the running app I've connected to Muse (or you can create an app for yourself), and my standing instruction to Muse based on an earlier conversation: wide fit, under $160. Instead of Meta’s ad system guessing which ad to show me, my AI can look through every ad in Meta’s system i.e. every shoe brand’s campaign and show me the only one that fits: a Brooks model that comes in wide at $140. It explains why in terms of my own situation: the race is nine weeks out, my current pair has ~500 miles on it, and a new pair is best worn in a few weeks before race day. The ad can appear once, labeled as sponsored and if I say “order it”, Muse completes the purchase. Brooks pays for the sale it made because my agent found the ad from Meta’s ad library.\n\nUnlike insurance, this is Meta’s home turf. Shoe and apparel brands already spend heavily on Instagram, and their campaigns are already in the system. So the advantage here is not taking dollars from Google or anyone else but making Meta’s existing ads far more precise than a rival without the VM context could match. Nonetheless, this is an example where Meta would be partly replacing its own revenue since it sells fewer impressions when the first ad lands. Whether it comes out ahead likely depends on charging per sale, where a brand may pay more for certainty than it does for reach.\n\nThe privacy promise holds the same way: my race, receipt and shoe width never leave the VM, Brooks learns only what any retailer learns from an order, and the ad system learns little more than that the campaign produced a sale.\n\nOkay, one more example.\n\nYesterday, I saved a few Instagram posts about Mexico City restaurants. Meta can tell I am interested in the destination, so for a while I may see ads from airlines, hotels or booking sites. If I later search for flights or hotels on Google, the online travel agencies and hotel chains bid heavily for that query. So the ad dollars are largely split: Meta is paid for sparking the idea, and Google for the moment I act on it. Neither knows when I am actually free to travel or what the trip would cost me.\n\nThe AI in my VM may have much richer context. My calendar is open October 23–26, and I have told Muse I like staying somewhere walkable and under $200 a night. My AI can look through every ad in Meta's system i.e. every hotel's and booking site's campaign, along with restaurants promoting their tables and show me the combination that fits: a hotel that is a ten-minute walk from four of the restaurants I saved, at $180 a night, with tables open at two of them on the nights I'm free. I tell Muse to book the hotel and reserve both restaurants. I never searched for anything, so the query Google would have monetized never happened. Again, Meta will get paid by the hotel or OTA advertisers, and perhaps by the restaurants or reservation platforms too.\n\nMeta’s advantage here is that the desire usually starts on its own apps. Until now it had to hand the booking to someone else, but with an agent it can carry me from the saved post to the confirmed reservation. Hotels, booking sites and restaurants already advertise on Meta, so the supply is already in place. And this is spending that would not otherwise have happened which is the kind advertisers tend to value most, so it is more likely to add to Meta’s revenue than to replace it.\n\nThe privacy promise holds here too. The posts I saved are activity on Instagram, which Meta’s ad system can already see; my calendar and preferences stay in the VM where the matching happens, and the hotel and restaurants receive only what they would if I booked directly.\n\nLook, perhaps none of these will happen at any discernible scale next year and maybe I am overcompensating for the “lack of imagination” criticism I received due to my earlier piece. But the longer I look forward, the more realistic (and dare I say, inevitable) the contour of the future I have laid out here in the examples shared above.\n\nOne of the reasons I am more optimistic about the **economics** of personal AI agents is that I do not think you will want multiple AI agents going through your emails and ping you about the same insurance renewal. It is more likely that you will have one AI agent in your personal life. So the question of who gets to be your personal AI agent and the competitive dynamics around it is of paramount importance. As indicated in this piece, I do think Meta has some strong competitive advantages here.\n\nThe kind of ads I described above need at least **four things at once: a capable agent, free access at mass scale, personal context, and a deep catalog of advertisers**. I have little doubt that Muse will face lots of competition here, but most potential competitors are likely missing at least one piece of the broader puzzle.\n\nOpenAI has the willingness but perhaps not yet the economics as Dots are currently bundled with a $100-a-month Pro plan. Its ad business is also young, with [tens of thousands](https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads/)of advertisers against Meta’s tens of millions, and it has no social graph of its own, so its context must come entirely through connectors. Apple, on the other hand, may have a different set of problems. Siri is nowhere near as capable an agent as Muse or Dots. It also doesn’t have deep advertiser catalog, and an ad engine would cut against the privacy positioning it has spent a decade building. Apple’s deep privacy promise proved to be a masterstroke “[strategy credit](https://stratechery.com/2013/strategy-credit/)”, especially in the age of post-Cambridge Analytica mania, but in the era of AI, clinging onto such promise can lead to potentially inferior products. As a result, the “strategy credit” can potentially turn into “strategy tax”. Apple could still offer a compelling ad-free alternative funded by hardware and services margins, but consumer AI agents are expensive enough that it may be challenging even for Apple without a compelling path to monetizing the interactions.\n\nGoogle is the one I expect to come after Muse with much more vigor because it is perhaps the only company that could assemble everything Meta has without building anything new. Gmail and Calendar already hold much of the context Muse has to ask permission for, and in intent-heavy categories like insurance and travel, its advertiser base is arguably deeper than Meta’s. Its restraint so far looks like a choice rather than a limitation: Google’s personal agent, [Spark](https://gemini.google/overview/agent/spark/), remains behind a paywall. The real problem for Google is incentives: every errand an agent finishes may replace a commercial query it sells at auction, and given the kind of advertising Google is best at, cannibalization is a far larger concern for it than for Meta. Given the nature of advertising Google is best at, cannibalization is a larger concern for them. Having said that, Google has moved quickly before once the threat became clear, as it did after ChatGPT, and if Muse keeps gaining traction, the calculus of protecting search may start to look quite different.\n\nTibo Sottiaux, who leads ChatGPT and Codex at OpenAI, recently said the following on [Lenny’s Podcast](https://www.youtube.com/watch?v=MM-C3JqCXBk) (emphasis mine):\n\n> I think there's so many things that I feel are not yet priced in. **I think the majority of actions on the internet will be taken by agents.** Models are going to become more cheaper and faster at rates that are quite incredible. We will finally be able to integrate all modalities together in a way that is very seamless.\n\nIf we indeed enter a world where majority of actions on the internet will be taken by agents, you can bet the ads will be very different in that world. The “no ads” future may sound enticing or appealing at first, but it will only satisfy a small minority of people at the expense of higher prices for everyone else. If customer acquisition cost skyrockets due to advertisers not being able to reach the customers where they are, “no ads” will turn into more of a nightmare than utopia. So no, I don’t think I was right in saying Muse will **never** have ads. It almost certainly will, but the indirect monetization I mentioned in my earlier piece will allow Meta to be much more patient and stay razor-focused in aggregating demand.\n\n_Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on **[70](https://mbideepdives.substack.com/p/deep-dives)+** companies. The daily is just how I think out loud between the Deep Dives!_\n\n**Current Portfolio:**\n\nPlease note that these are **NOT** my recommendation to buy/sell these securities, but just disclosure from my end so that you can assess potential biases that I may have because of my own personal portfolio holdings. Always consider my write-up my personal investing journal and never forget my objectives, risk tolerance, and constraints may have no resemblance to yours.\n\nMy current portfolio is disclosed below:",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mbideepdives.substack.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas",
+        "transport": "public_reader_fallback"
+      }
+    },
+    {
+      "id": "substack:673fb60ae75259d90d17",
+      "source_type": "substack",
+      "source_name": "Interconnects",
+      "title": "The Cyber Risk Discourse is Broken",
+      "url": "https://www.interconnects.ai/p/the-cyber-risk-discourse-is-broken",
+      "published_at": "2026-10-06T14:22:41+00:00",
+      "collected_at": "2026-10-07T00:00:40.547858+00:00",
+      "body": "I’ve had one too many discussions on the cyber risks of open models — where someone assumes that either banning open models happens in a silo (and bad actors will somehow actually be stopped) or that China is a threat and doesn’t care about AI safety — that I feel we’re going to end up making policy decisions that both limit American AI competitiveness and increases long-term cyber risk. I feel like we’re locked in on a path of lose-lose situation, unless people embrace nuance, trade-offs, and scary realities. Much has been written about the views of various players in this debate, which I summarize as follows: Open weight models pose an untenable risk to society’s functionality , occupied by frontier lab leadership and the national security community in the U.S. Western voices saying open weight models are necessary for defense and banning them will make the world less safe , occupied by AI risk moderates to different extremes. I include myself in this bucket, along with Hugging Face’s perspective after the OpenAI incident, and others like Joshua Saxe . Chinese companies continuing to release open-weight models with strong cyber capabilities , who are making decisions based on the risk assessments of their society and government. This list is also organized by volume or clarity of message in the Western AI ecosystem. The risk-focused discussions have been disproportionately visible, including pieces of work which I view as very detrimental to potential of engaging across assumed party lines on this issue. There’s also very little substantive engagement trying to understand how Chinese companies assess risk — rather, mostly arguments that border on ad hominem attacks like “Chinese labs don’t care about safety.” Interconnects AI is a reader-supported publication. Consider becoming a subscriber. The delusions of the anti open-weight alliance The most recent publication from the “open-weights are dangerous” crowd was the report by Anthropic on the risks of GLM-5.3 as an offensive cyber tool. The problem with this is not the technical research they did, which is largely reasonable, but the failure to engage on more cross cutting questions like: What happens if we ban open models due to cyber risks or why do Chinese companies deem these models safe to release? These questions, which I’ll come back to, are the ones we need to answer to understand the ecosystem perspective on current AI risks. All policy actions happen in a multi-piece puzzle, where the shape of risk can be changed, but it is rare that you get a universally better outcome. They are all trade-offs. This sort of solipsistic writing by Anthropic fits very closely to another type of discourse I’m hearing about regularly that is determining the fate of open models and AI broadly — classified briefings. I’ve had many discussions with people who say something like “Look, I’m pro open models, but if you’re seeing what I’m seeing, it’s an onslaught out there due to [XYZ Chinese open-weight model] and we need to act.” This perspective flies in the face of public information, where to date closed models have been documented as the cause of most existing cyber attacks. As someone who tries to make grounded predictions, the evidence of numerous attacks from OpenAI models is the only data I have on the shape of cyber risks (or, you can broaden the scope to include all of FelonyBench ). There are a few possible explanations, and it’ll take years to get to the true answer: Maybe open model weights and closed model APIs (with some safe guards) are both far closer to being easy to mis-use, rather than API models being closer to safe. The trope \"Open Dangerous, Closed Safe\" may be closer to \"Open Unsafe, Closed Unsafe.\" Maybe there are far fewer bad actors who are willing to use AI models for “loud” cyber attacks that target crucial infrastructure in the US or powerful and underprepared institutions. Closed models have stronger capabilities and stronger safeguards (in theory), but the stronger capabilities part could matter more in net harm if the safeguards on both are porous. I have a lot more to learn about how the cybersecurity ecosystem works, so I won’t support this full-heartedly as one of my current recommendations, but I think it’s at least a reasonable argument that open weight models as a diffusion tool for cyber defense could be the best tool we have to prevent harm over the next few years. There are many domains, e.g. sensitive government agencies, where open-weight models are the only tools that can be deployed in the near-term on air-gapped networks. Lots of this situation seems like the messy reality being hard to pin down, where the logical limits are clearer. I may agree with the simple reality that closed models are far safer in the limit, as a technical tool with more layers of protection, but they may actually be causing more harm in the near term because of how accessible model APIs are. Still, much of the impact of the tools comes down to how they’re used and controlled. A duopoly on such a crucial tool may be the defining, risky part. This is the debate we’re having, and over time, as intelligence diffuses, many things may change. These together make me come to the conclusion that if you think the latest open-weight models need to be banned to slow the diffusion of cyber risks, you probably also need to make public-facing APIs for the frontier closed-models illegal. The current stack of safeguards on closed models is stronger than open-weight models, but far from perfect. It is very likely that cyber capabilities of closed models increase much faster than guardrail performance, and a world where open models are banned while closed models continue to progress would be increasing the offense-defense cyber gap. It will take meaningful time to build mitigations that allow defenders to use strong AI models on their private infrastructure if we remove access to strong open-weight models. Share Explaining China’s AI risk posture China cares about AI safety. They have come to this discourse in a complete, endogenous manner relating to Chinese culture and power structures. There are some big picture pieces of this puzzle that reflect in other ways, such as Chinese society’s techno-optimism that extends into AI and the Chinese government’s complete focus on political stability. These things do, of course, interface with emerging AI risks like cybersecurity. They are in their own AI risk dynamic, which hasn’t risen to the prominence of the political dance between the White House and the frontier labs which we have followed in the U.S. for a few months. My understanding is that the Chinese companies have to register every major model release with the Chinese government. This includes evaluations, which originated around information control for banned government information. It is unclear if this framework has expanded meaningfully into any risks like cyber or bio. The Chinese government is very decentralized and information from the labs needs to go through existing structures to make it to the top. At the same time, there is a much stronger air of social risk in China, where leading AI researchers aren’t allowed to leave the country and the industry is closing off to foreign investment. On balance I would guess the personal risks facing people by unleashing any domestic harms would be much higher than in the U.S., where the worst case is that your company gets deleted. Overall, the political oversight seems much earlier than in the U.S. The Western AI companies’ core principle is close to “the best way to stop a bad guy with AI is to be a good guy with AI.” In China, these companies are much more practical about building a wonderful tool, and in many cases building a tool that complements their existing businesses. I do think that the companies consider the global implications of their work. These labs also clearly are incentivized, and often pushed via the government (at least in public messaging) to compete as much as they can. Running comprehensive safety evaluations on a frontier model like Kimi K3 could cost tens of millions of dollars in compute. These labs would much rather leave that for training. The correct debate is “what is the correct minimum amount of compute a lab should spend on safety testing before releasing each model?” There’s surely a case to be made that it’s more than the Chinese labs do, or at least they should be more transparent on what they do, but I would be hard pressed to agree if you said the minimum amount of compute would match what Anthropic or OpenAI does. It is not clear that, for all the effort Anthropic and OpenAI make on creating an institution that prioritizes understanding risks, they put it before business value and economic success in their priority stack. This “hands off the wheel” vibe from incidents like the HuggingFace—OpenAI incident was one of my lasting takeaways . It’s exemplified in the Hacktron hacking of OpenAI — it’s hard to be the world’s trust cyber partner if your own house is teeming with leaks. I trust many of the individuals at the labs to work hard to ensure safety, but I’m not trustworthy of the institutions overall. Open-weight Mythos in April would’ve been fine? When Claude Mythos was announced, it was previewed as if it was a new class of cyber weapon, where if it ended up in the wrong hands it would’ve caused mass societal destabilization. It seems like this was wrong. By all measures, GLM-5.3 is the model that crosses that threshold of capability, and there’s little public evidence that much has changed, and we’re over a month out of the model weight release. In fact, I would go further. If Claude Mythos was accidentally released as open-weight, it seems like the world would have been more or less fine. Yes, there would be a clear increase in cybersecurity incidents and it would be bad for society if the model leaked, but it would be a scenario that looks more like an acceleration than a step change in risk. The leading proponents of this new wave of open-weight fear mongering have effectively been making a falsifiable prediction — that the current open-weight models are going to cause substantial, not seen before AI harms by crippling our cyber infrastructure. Based on all the evidence I have, which I’ve unpacked above, they’re set up to be wrong. At least now, after so many years of debating open weight risks, we will start to get some real answers. Thanks to Rohit Krishnan and Joshua Saxe for some feedback on this post.",
+      "author": "Nathan Lambert",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.interconnects.ai",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "substack:65450452881e90a09148",
+      "source_type": "substack",
+      "source_name": "Outlier Cap",
+      "title": "The Market Is Repeating the 1999 Pattern. Is the Lost Decade Beginning?",
+      "url": "https://outliercapx.substack.com/p/the-market-is-repeating-the-1999",
+      "published_at": "2026-10-06T12:45:46+00:00",
+      "collected_at": "2026-10-07T00:00:51.128885+00:00",
+      "body": "A general-purpose technology. A capex boom large enough to move GDP. A market priced for a decade of profits that have not all arrived. A chorus, getting louder this week, that the next stop is a crash and then a lost decade.\n\nThat chorus is not stupid. It is looking at the same objects I am looking at.\n\n**The Shiller CAPE** has been above 40 since May, the second time in a century and a half. The first time was the dot-com top.\n\n**Oxford Economics** put AI-related capex at 27% of US fixed investment in the second quarter, with the three-year build already above 2% of GDP. Among technology booms of the last two hundred years, only the British railway mania of the 1840s was larger. **Goldman Sachs**, on September 25, took hyperscaler spending to $800 billion this year and $1.2 trillion in 2027, above a consensus that was already at $1.1 trillion, and to $1.4 trillion in 2028. Cumulative infrastructure spend from 2026 to 2031, on their number, is $7.6 trillion.\n\nTo break even on the near-term outlay they say the five large platforms need about $300 billion a year of AI revenue. They do not have it yet.\n\n**The bond market** is not cooperating with the story. The 10-year Treasury is at 5.3% today, up from roughly 4.1% a year ago, the highest in this cycle. The 30-year is near 5.7%. **The Fed** hiked in September, to a 3.75–4% funds range, and the median dot implies another move before year-end. The 2-year is back above 4.7% for the first time since the summer of 2024. **Bloomberg’s** Monday piece was titled, without poetry, that the AI party is on edge because yields are soaring. A strategist at **Panmure Liberum** spent today arguing the reality check takes the S&P 500 to 5,000, a 35% drawdown, with the bubble popping in 2027 or 2028.\n\nThis is the setup people mean when they forward the three-column chart. **Electrification. The internet. Artificial intelligence**. A vertical narrative, a multiple that cannot be defended, and a decade in which the buyers of the top go nowhere.\n\nI think they are right about the rhyme. I think they are **wrong about the crash**.\n\n[![Image 1](https://substackcdn.com/image/fetch/$s_!Zwoh!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3215b6b2-c84b-46bd-9633-a736bce48c67_1800x1320.png)](https://substackcdn.com/image/fetch/$s_!Zwoh!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3215b6b2-c84b-46bd-9633-a736bce48c67_1800x1320.png)\n\nRead it left to right, and the scare is obvious. Same kind of story. Same kind of market, supposedly. Then read the **bottom three rows**, and the scare changes shape.\n\nIn 1929 and 2000, about 70% of the rise was the multiple. Earnings explained about 30%, and in 2000 they did not arrive. The leaders were valuations. There had been no serious correction inside the narrative. The rise was vertical and the bull market was already very long.\n\nIn 2026 the same decomposition puts **earnings at about 79% of the rise and the multiple at about 21%.** I would not sign the decimal. The direction is the whole argument. The leaders are **record earnings and cash**. The washout already happened. The rise has been a hill, not an escalator, and the bull market, measured cleanly from the October 2022 low, is still shorter than the historical average of the great cycles.\n\nA lost decade is not a feeling. It is a mechanism. The mechanism is a market that collects, in advance, a decade of earnings that do not exist. When the multiple leaves, there is no floor. That is what 2000 was. Cisco at more than 100 times. Fiber in the ground that nobody lit. Pets.com, which did not need a multiple at all.\n\n2026 is expensive. It is not that.\n\nIn the second quarter the S&P 500 grew earnings **52% year over year**, the fastest in five years. The Magnificent Seven grew 118%. The other 493 grew 32%, the best print for that group since late 2021. Strip out Alphabet and Amazon, the two names that distort the picture most, and the index still grew earnings above 30%.\n\nThat is not a one-story market hoping the story arrives. That is a market in which the **story is already in the income statement**, and not only in seven stocks.\n\nThe third quarter is set up the wrong way for a bubble. **FactSet**, on October 2, has S&P earnings growth at 29.5%, up from 26.7% on June 30. Analysts raised numbers during the quarter (they usually cut them). The index is lined up for a third straight quarter above 25%, and an eighth straight quarter of double-digit growth. Full-year 2026 is penciled at 32%. For the fourth quarter, 28%.\n\n**The guidance is the tell**. Of 116 companies that have issued a number for the third quarter, 72 have guided up and 44 have guided down. That is the highest count of positive preannouncements since FactSet started tracking the series in 2006. In 1999 the multiple was covering for earnings that were missing. Here the earnings are being revised up into the print, and the multiple is the thing giving ground.\n\n**The forward price-to-earnings** on the S&P has fallen from about 22x to about **19x**, in line with the 10-year average and under the 5-year average, while the index sits roughly 1% from a record. The S&P closed October 2 at 7,723. Price barely moved over the summer. The earnings estimate did. That is the opposite of how a bubble finishes. A bubble finishes with the price running and the earnings apologizing.\n\nThe CAPE above 40 is real, and anyone waving it at you is not inventing it. They are using a 10-year trailing, inflation-adjusted multiple to answer a question about next year’s operating earnings. A high multiple on earnings that never arrive is a lost decade. A high trailing multiple on a market whose forward multiple is already back at average, because the earnings showed up, is a market that can earn the valuation from behind. Expensive is not the same as hollow. Understanding this is extremely important to build **generational wealth**.\n\nThe **5.3% 10-year** is the best argument the bears have, and it should not be waved away.\n\nA higher discount rate compresses what you should pay for a distant cash flow. **Goldman** itself has said the derating this year is partly the yield and partly the fear that AI capex is making companies over-earn against cash flow. If the **Fed** delivers the extra hike the dots imply, and the long end stays here or goes higher, the index multiple does not get to expand. I am not underwriting multiple expansion.**I am underwriting earnings**.\n\nThat is the distinction **2000 did not have**. Into that top the Fed took the funds rate to 6.5%. **Earnings were already missing**. The multiple was the entire return. A hike into a miss is a crash. A hike into a 30% earnings year is a headwind on the multiple and a test of whether the profit is real. Those are very different events.\n\n**The curve is not inverted**. The 10-year sits above the front end. The bond market is charging more for duration and for inflation risk, not signaling the recession the three-column chart needs. A recession call on a 5.3% long bond and a funds rate at 3.75%, with S&P earnings growing at 30%, is a call about valuation. It is not yet a call about the economy breaking.\n\nThis is where the 1999 analogy does the most damage, because the scale really does rhyme.\n\n$800 billion this year. $1.2 trillion next year. A build that Oxford ranks with the railways. A $300 billion revenue gap before the platforms break even on the spend, on Goldman’s own math. Negative free cash flow at the model labs. Circular financing, vendor financing, the whole liturgy. If you stop the sentence there, you should sell.\n\nThe sentence does not stop there.\n\nIn 1999 the excess was inventory of hope. Fiber was buried ahead of traffic that was not there. The capacity was the bubble. **In 2026 the constraint is the object, and the object is sold out**. Indium phosphide. High-power lasers. 1.6T modules. Memory, which is taking a rising share of every capex dollar and still cannot clear the bid. Power, which is no longer spare. Lead times of 12 and 18 months are not a powerpoint. They are a queue.\n\nA **physical shortage** does not deflate because a strategist publishes a 5,000 target. It deflates when the purchase order is cancelled. That has not happened.\n\n**The labs** can be over-earning a story and the suppliers can still be under-earning a shortage. Those are not the same position. The index averages them. The index is the wrong instrument if the question is whether the bottleneck gets paid.\n\nFew things. None of them is a 5.3% yield on its own.\n\n**Capex stops converting into revenue**, and the $300 billion gap becomes a write-down rather than a lag. The other 493 stop growing and the entire earnings number collapses back into 7 names. **The next leg of the index is the multiple, not the profit**. The delivery queue turns into cancellations. The labs’ negative cash flow migrates from the private round into the listed buyers’ income statement and stays there.\n\nThe day that cluster shows up, the three-column table is right, and the position should be sold. It is not what the second quarter printed, and it is not what the third-quarter guidance is saying. Seventy-two companies guided up. Forty-four guided down. That is not how a hollow market talks in the month before earnings.\n\nThe technology was real in 1929 and in 2000. You could still lose a decade buying it at the narrative’s price. The advice is not to relax because artificial intelligence is real. The advice is duller than the chart:\n\n> **What I do –**Own mainly the stocks where the earnings already exist, and where next year’s earnings depend on a unit that is not in stock.\n\nDo not own the index as a referendum on the technology. The index holds whoever collects the shortage and whoever pays it. They will not have the same drawdown on the day the multiple gets tired.\n\nA lost decade is what happens when the story arrives and the earnings do not. **The earnings are already here**. The pattern is repeating. The mechanism is not.\n\n> If this brought you value, hit that **follow** button! It truly **means the world to me.** I am already reading a lot of messages about how we are helping everyday investors build generational wealth, that is what keeps us going!\n\n> You should take a look at the**Outlier Capital Portfolio (**pinned to our profile**)**. The blueprint is public. Target: 5x+ returns in 5 years.\n\n[Share](https://outliercapx.substack.com/p/the-market-is-repeating-the-1999?utm_source=substack&utm_medium=email&utm_content=share&action=share)\n\nBest wishes!\n\nThe Founder,\n\nOutlier Capital.\n\n_Disclaimer: This is not financial advice. Do your own thorough research. Past performance or projected growth is never a guarantee of future results._",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://outliercapx.substack.com/",
+        "publication_platform": "substack",
+        "section": "transaction_ideas",
+        "transport": "public_reader_fallback"
+      }
+    },
+    {
+      "id": "substack:473ccd6f208363936cc5",
+      "source_type": "substack",
+      "source_name": "How They Make Money / App Economy Insights",
+      "title": "🤓 OpenAI’s Next Interface",
+      "url": "https://www.appeconomyinsights.com/p/openais-next-interface",
+      "published_at": "2026-10-06T12:02:19+00:00",
+      "collected_at": "2026-10-07T00:00:41.979641+00:00",
+      "body": "Welcome to the Premium edition of How They Make Money . Over 300,000 subscribers turn to us for business and investment insights. In case you missed it: 🏢 Meta Goes to Work 📊 Earnings Visuals (9/2026) ☁️ How Nscale Makes Money ❄️ Snowflake: AI Fuels Consumption Subscribe now Connecting the Dots OpenAI used DevDay last week to unveil more than 20 products and features. The most important announcement was Dots . Source: OpenAI DevDay 2026 Dots are always-on AI agents with their own cloud computer, access to more than 4,000 apps, and the ability to keep working toward your goals even when you are not actively prompting them. Sam Altman described the shift as a “whole new way to work with AI” and a new set of “superpowers.” The contrast with Meta Connect was striking. Meta showed Muse booking trips, shopping, and handling everyday tasks. OpenAI showed Dots managing projects, coding, preparing documents, coordinating across Slack and Teams, and helping run a startup. For now, the two companies are attacking the agent market from opposite ends. Meta is pushing toward AI for everyone . OpenAI is starting with AI for high-value work . And that difference may explain where ChatGPT is heading next. Today at a glance: The pieces start to fit together OpenAI wants to become the operating layer The business model gets more interesting The cost of autonomy Who owns the workday? 🔎 Discover the companies Wall Street ignores Some of the most interesting opportunities emerge in smaller, undercovered businesses that institutions and analysts barely follow. I’m working on a new way to help you find them before they become obvious . Spots will be strictly capped at launch. Get early access 1. The pieces start to fit together OpenAI has spent the past year turning ChatGPT into much more than a chatbot, but the pieces have not always fit together cleanly. ChatGPT started as the conversational interface. Codex became the place for agentic coding, organized around projects and files. ChatGPT Work extended that model to broader knowledge work, adding connections to SaaS apps and a persistent cloud environment. More recently, OpenAI has started pulling those experiences into the same product. The result is powerful, but increasingly complicated. You can have several projects, agents, threads, apps, and tasks running at once. At some point, the bottleneck becomes the person trying to keep track of it all. Source: OpenAI That’s where Dots fit. A Dot sits above your individual tools as a coordinating layer. It remembers what you are working on, follows projects over time, and can coordinate work across them. It acts like a control tower for your AI work. The shift matters because the more work OpenAI hosts on its own cloud computers, the more persistent the relationship becomes. A chatbot conversation is relatively easy to move between providers. Recreating a collection of projects, files, permissions, preferences, and ongoing agents somewhere else is much harder. In other words, Dots could make ChatGPT both easier to use and harder to leave. Read more",
+      "author": "App Economy Insights",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.appeconomyinsights.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:417c3a0572d8db459700",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "[AINews] Reflection Beam - 501B-A23B American Open Model",
+      "url": "https://www.latent.space/p/ainews-reflection-beam-501b-a23b",
+      "published_at": "2026-10-06T06:28:43+00:00",
+      "collected_at": "2026-10-07T00:00:39.998294+00:00",
+      "body": "It’s been over a year since Reflection launched with us with big goals on coding (and hinted about their RL approach ): But they stayed “stealth” longer than Thinking Machines and it was not clear we would ever get a model launch out of them, as the broader open model ecosystem did not slow down one bigt for them. Well, we did : They compare themselves to Inkling, Nemotron, and GLM 5.2, but the SOTA GLM 5.3, Kimi K3, Qwen 3.8 Max, and DeepSeek V4.1 Flash are generally ahead. Still, since this is US-trained from scratch, there’s a segment of the market that has been eagerly waiting for more options here, and more importantly, Reflection has now announced its arrival as a functional neolab! AI News for 10/03/2026-10/5/2026. We checked 12 subreddits, 544 Twitters and no further Discords. AINews’ website lets you search all past issues. As a reminder, AINews is now a section of Latent Space . You can opt in/out of email frequencies! AI Twitter Recap Reflection’s Beam Leads a Wave of Open-Weight Releases Beam launch : Reflection announced Beam, a text-only 501B-total / 23B-active MoE for coding, agentic and scientific work. It was trained from scratch, and full weights under Apache 2.0 are due this month ( announcement , Laskin ). Training scale : Team posts cite 23.8T pretraining tokens, partly from an OCR pipeline over hundreds of millions of PDFs ( data lead ). They also describe a stable RL/OPD run on 10K GB300s with more than 100M rollouts across ~1M tasks ( Damos ). Claimed results : A summary of Reflection’s claims gives 80.9 on SWE-bench Verified, 3–4x the inference efficiency of GLM 5.2, and four weeks each of pretraining and RL on ~10,500 GB300s ( summary ). A tech report and OSS integrations are promised ( Polozov ). Context : Axios reported the launch ahead of time. It said Reflection pays $150M/month for Colossus compute plus a $1B Nebius deal, and that other unnamed US labs will ship open models this month ( Curran ). Independent and critical reads : Artificial Analysis has early access and expects Beam to be among the most token-efficient open models for its intelligence ( AA ). MFU and architecture : Elie Bakouch estimates only ~12% BF16 MFU in pretraining. He reads the architecture as 3:1 interleaved global/sliding-window attention and notes better held-out code perplexity than DSv4 ( analysis ). Compute comparison : Teortaxes calls Beam an iso-FLOP replication of DeepSeek V3 ( post ). He infers ~1.3B RL sandboxes over 4 weeks, with up to 170K running at once ( sandboxes ). Positioning : Observers place Beam around GLM-5.2 level ( iScienceLuvr ) and below DSv4 Flash on some benchmarks ( critique ). Nathan Lambert groups it with Nvidia and Thinking Machines as strong US releases that still trail Chinese counterparts ( Lambert ). Other open and specialized models : Aleph Alpha Kolibri : 78B total / 3.46B active, Apache 2.0, built for German and English. Self-reported scores are 96.9% AIME 2025, 84.3% GPQA Diamond and 66.4% SWE-Bench Verified ( summary ). The dataset is unreleased, and agentic evals sit well below Qwen ( Jitsev ). Reka Rho-1 : A 19B omni model that understands and generates text, images, video and robot actions, trained from scratch on 320 H100s in ~3 months ( announcement , compute ). Decision models : Command Code’s Agr (31B) and Agr-flash (360M) skip text generation and return typed values with per-option probabilities for tool calls and routing ( Agr ). SemiAnalysis explains that TypeSafe’s Jev uses the same no-decode approach and displaces frontier models mainly in router roles ( explainer ). Smaller releases : Upstage’s Solar Mini 4 (35B / 3B active, 512K context) is free on Nous Portal for two weeks ( Nous ). Eleven v4 Turbo tops AA’s Provider Voice TTS arena at half the price of v4 ( AA ). OpenAI vs Anthropic: Subscription Value, Speed and Evals SemiAnalysis limit testing : SemiAnalysis tested plans from Anthropic, OpenAI, Meta, SpaceXAI, MiniMax, Moonshot, Cursor, Cognition and others. It found that Claude subscriptions deliver 5x+ more API-equivalent value than OpenAI plans ( report ). Methodology : Value depends on the credit cost of each model and token type, not on list API prices ( thread ). Task-cost adjustment : Adjusting for task cost narrows Claude’s edge to 1.3–2.9x ( scaling01 ). Unverified compute estimate : One analyst claims Anthropic spends 42% of inference compute on subscriptions that earn ~10% of revenue ( chart ). OpenAI capacity squeeze : Users report that new $200 sign-ups were paused and that usage limits were effectively halved across plans. GPT-6.1 Sol was positioned as the efficient alternative ( analysis ). Theo describes a reversal in coding-model preference between July and September ( post ). OpenAI response : Codex lead Tibo pledged a meaningful improvement or a full reset every day for 28 days ( pledge ). Day 1 speedup : Default speed for GPT-6 Astra and GPT-6.1 Sol rose ~50%, from ~30 to ~50 TPS. The change covers all subscription surfaces and Sign in with ChatGPT partners such as OpenCode, Pi, Amp and Devin ( day 1 , TPS ). Friction : Banked Codex resets expire without timezone adjustment ( report ). The always-on dots agent is limited to $100+ Pro plans ( criticism ). Enterprise demand (reported) : The Information reports that Microsoft cut projected internal Anthropic spend by more than a third. It also reports Meta’s Claude Code users fell from ~60K to ~30K, largely because of a push to Meta’s own tools ( summary ). Leaderboards : Agent Arena : Anthropic holds #1 in Code, Work and Chat. Fable 5.1 leads Code and Work, while GPT-6 Astra places #2 in Code ( Arena ). Design Arena : GPT-6 Astra is #1 in 3D Design, Frontend, Full Stack and Image-to-HTML ( Design Arena ). Hallucination : On AA-Omniscience, Gemini 4 Argon guesses wrong on 15% of questions it doesn’t know, versus 29% for the next best model. GPT-6 Astra has the highest accuracy at 61% ( data ). Agent Harnesses, RL Environments and Developer Tooling Multi-harness RL (Hugging Face) : A capture proxy speaks the OpenAI Chat, OpenAI Responses, Anthropic and Gemini formats. It forwards calls to vLLM and records exact token IDs and logprobs for TRL, so 10 unmodified harnesses become RL environments ( Delangue , explainer ). Results : The same weights score 62% under Mini-SWE-Agent and 33% under Claude Code. Training LFM2.5-2.6B across 4 harnesses lifts first-attempt solves from 42% to 54%, and a tool-call bonus cuts calls by 31%. SFT on 3,189 rollouts plateaus at 47.5%. Caveats : The run used one task family and one seed. Environment hosting : RL environments are now hosted and versioned on the HF Hub like datasets ( blog ). Pi Durable : Earendil’s harness is built around a small task-based workflow engine, so long-running, multiplayer agents can suspend and resume anywhere ( Pi ). Design : The core is ~15K lines of TypeScript with SQLite/JSONL storage and runs on Bun or Cloudflare Durable Objects. Control is separated from execution environments ( review ). Effect.ts : The authors explain they skipped Effect because it does not provide durability ( Zechner ). Agent memory : Cognition launched Devin “Dreaming,” which prunes and links a memory graph overnight. It is open-sourcing the git- and markdown-backed format as Agent Memory Repo ( launch , format ). Cursor SDK : The update adds mid-run steering, background subagents that report back to the parent, replaceable system prompts, and MCP readOnlyHint and destructiveHint annotations on custom tools ( steering , annotations ). DeepSeek Harness : An experimental Claude Code Mods compatibility layer in v0.2.1-alpha.1 tests whether DSH’s “everything is a plugin” architecture is a superset of Claude Code’s extension points ( team post ). Routing and access : Cline : Its Pareto 26.10 Preview routes across models and grades answers, claiming $0.24 versus $13.41 per task at equal DeepSWE score ( Cline ). Cline also paused its free DeepSeek-V4.1-Flash promotion over abuse ( notice ). ChatGPT : Custom MCP servers no longer require developer mode ( post ). Agent and Training Research Verification over sampling : NVIDIA mid-harness : The method samples candidate shell commands and verifies them before running one. A GPT-5.6 Sol verifier choosing among 8 actions lifts TerminalBench-Lite Pass@1 from 50% to 68%, while weak verifiers add little ( summary ). Google VeriHarness : The method challenges claims that all rollouts agree on and resolves disagreements against workspace evidence. It adds +6.2 points with Gemini 3.5 Flash and +6.4 with Opus 4.8, and ~26K rollouts are released ( summary ). Context management : UT Austin compression study : Across ~35K runs, compression that uses a third of the tokens can be 20–80% slower than full context. Threshold triggers beat step triggers, and the best policy varies by model ( summary ). PAIR : The method replays an agent from the same state to isolate harmful compressions. It then rewrites the compression prompt and comes close to no-compression performance ( paper ). CorpusMap : Precomputed entity pages for document collections raise answer quality 6.4–11.7 points while cutting input tokens 34–57% ( paper ). Self-improving harnesses : SelfSearch : The method reaches a claimed 82.0% on Terminal-Bench 2.1 with DeepSeek V4 Flash, matching Codex, for $4.03 in search cost ( paper ). EverMind Raven : Its evolved research harness hits 69.3% on BrowseComp ( paper ). Optimization and architecture : Dust : A zeroth-order method using activation-perturbation “virtual populations” approaches, and sometimes exceeds, backprop on transformer pretraining. It claims to be 1,000–10,000x more compute-efficient than EGGROLL ( thread ). LOOM : Looped MoEs train stably at 9–12 loops, and a 700M model is best at 5 loops at iso-FLOP ( thread ). Policy gradient on ImageNet : Ian Osband shows exact policy gradient reaches 4% on ImageNet versus 62% for cross-entropy, arguing that RL-loss failures are not just exploration problems ( post ). RL dynamics : Base Labs finds RL updates are less low-rank than claimed ( rollout ). Datalab reports RL alone eliminates tool-call loops at temperature 0, versus a 92% loop rate for SFT ( writeup ). AI for science : Vals AI reports that 90+ Opus 5.5 agents ran DFT simulations over 3 days and flagged two room-temperature magnetic semiconductor candidates, one synthesized back in 1999. The results are predictions only, with a public ledger ( thread , caveats ). Agent spend : Epoch estimates OpenAI researchers’ coding-agent spend, valued at API prices, has doubled roughly monthly. The median researcher was at ~$600/day by mid-August ( Epoch ). Inference Systems and Hardware OpenRouter pricing distortion : Horace He shows GLM 5.3 priced at $0.08/M input but $5.00/M output on inference.net. He attributes this to OpenRouter’s inverse-square price routing and apparent overweighting of input price ( thread , routing ). llama.cpp : Speculative decoding on Metal : New kernels make speculative decoding up to 3.4x faster than plain decoding on an M3 Ultra (110 vs 32.1 tok/s) ( qvac ). v0.6.0 : Adds Clef text and vision support, Qwen3.8-Flash-Next, and a new llama_batch_ext API ( Gerganov ). Agentic kernel work : Baseten reports an engine built in a week of mostly autonomous agent work, with 90% faster decoding and 57% lower TTFT than the open-source baseline ( blog ). Communications : NCCL and PyTorch symmetric memory speed up small-to-medium collectives ( Bekman ). Chinese accelerators : Alibaba T-Head’s Zhenwu V900 has 216 GB of memory and 1,200 GB/s interconnect, claims 3x the M890, and ships Q1 2027 ( SemiAnalysis ). Safety, Policy and Industry OpenAI text watermarking : OpenAI will add invisible statistical watermarks to eligible ChatGPT and Codex text in the EU under the AI Act, with an opt-in API toggle worldwide ( announcement ). Limits : Rewriting or translation removes the watermark, and only approved researchers get the detector ( limits ). Robustness figure : One cited test shows 25% synonym replacement dropping detection from ~92% to 17% ( critique ). Agent incidents and safety governance : Bengio op-ed : In the FT, Bengio argues recent agent hacks are not merely sandbox problems ( op-ed ). He also cites a Quinnipiac poll in which 86% back independent safety standards ( poll ). HF incident : Neel Nanda calls the OpenAI x Hugging Face incident the most striking alignment failure so far ( Nanda ). Systems safety : Ryan Lowe calls for nuclear-style layered systems safety at the labs ( Lowe ). Shutdown resistance : An OpenAI alignment post documents what one researcher calls the most realistic precursor shutdown-resistance behavior seen so far ( link ). Policy voices : Autonomous weapons : Former OpenAI researcher Joshua Achiam called for bans on certain autonomous weapons akin to chemical weapons ( post ). He is joining IFP and FAI as a fellow ( announcement ). Expert survey : The LEAP panel of 250+ experts most supports an international body with US and China membership and pre-release authorization power, and opposes federal preemption ( FRI ). Altman on trade-offs : Sam Altman told Politico that “the world should accept some bad things happening” for the technology’s benefits ( Politico ). Compute access in China : Tencent lease (reported) : Per the FT, Tencent leased ~100K advanced chips in Oracle’s Southeast Asian data centers for ~$7B over five years ( summary ). Smuggling charge : US prosecutors charged a California reseller with smuggling more than $300M of GPU servers to China ( report ). Consolidation : AMD and World Labs (reported) : AMD reportedly bought World Labs for $8.2B ( DL Weekly ). NVIDIA neutrality : SemiAnalysis questions NVIDIA’s hardware neutrality after its SchedMD/SLURM and Hugging Face acquisitions ( SemiAnalysis ). Top tweets (by engagement) Tibo: a Codex improvement or reset every day for 28 days — 30.9K GPT-6 Astra and 6.1 Sol ~50% faster across subscriptions — 22.2K Achiam: ban certain autonomous weapons — 11.2K OpenAI EU text watermarking — 7.7K Reflection introduces Beam — 7.4K Vals AI: Opus 5.5 agents find magnetic semiconductor candidates — 5.8K Theo: Anthropic vs OpenAI for coding, July vs September — 5.2K HF: coding harnesses as RL environments — 2.5K AI Reddit Recap /r/LocalLlama + /r/localLLM Recap 1. Local LLM Hardware at Extreme Scale Read more",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
     {
       "id": "x:548b77ae84734e3c1419",
       "source_type": "x",
@@ -1502,6 +1613,256 @@
         "investor_type": "frontier_ai_researcher",
         "coverage": "frontier AI and OpenAI research",
         "engagement_score": 25
+      }
+    },
+    {
+      "id": "price:a4e4b8ff0268b6558d3c",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 涨幅前十 2026-10-05",
+      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
+      "published_at": "2026-10-05T20:00:00+00:00",
+      "collected_at": "2026-10-07T00:01:42.147367+00:00",
+      "body": "1. PTC close 192.259995; previous 144.029999; change 33.4861%\n2. PICS close 11.62; previous 9.09; change 27.8328%\n3. STNE close 11.54; previous 9.55; change 20.8377%\n4. BSY close 34.75; previous 32.23; change 7.8188%\n5. TTAN close 72.160004; previous 67.089996; change 7.557%\n6. GWRE close 163.229996; previous 152.149994; change 7.2823%\n7. PCOR close 54.18; previous 50.950001; change 6.3395%\n8. KVYO close 16.700001; previous 15.71; change 6.3017%\n9. ASAN close 9.14; previous 8.62; change 6.0325%\n10. WLTH close 10.62; previous 10.03; change 5.8824%",
+      "author": "",
+      "symbols": [
+        "PTC",
+        "PICS",
+        "STNE",
+        "BSY",
+        "TTAN",
+        "GWRE",
+        "PCOR",
+        "KVYO",
+        "ASAN",
+        "WLTH"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "gainers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-10-05",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "PTC",
+            "price_date": "2026-10-05",
+            "close": 192.259995,
+            "previous_close": 144.029999,
+            "change_amount": 48.229996,
+            "change_percentage": 33.4861,
+            "url": "https://finance.yahoo.com/quote/PTC"
+          },
+          {
+            "ticker": "PICS",
+            "price_date": "2026-10-05",
+            "close": 11.62,
+            "previous_close": 9.09,
+            "change_amount": 2.53,
+            "change_percentage": 27.8328,
+            "url": "https://finance.yahoo.com/quote/PICS"
+          },
+          {
+            "ticker": "STNE",
+            "price_date": "2026-10-05",
+            "close": 11.54,
+            "previous_close": 9.55,
+            "change_amount": 1.99,
+            "change_percentage": 20.8377,
+            "url": "https://finance.yahoo.com/quote/STNE"
+          },
+          {
+            "ticker": "BSY",
+            "price_date": "2026-10-05",
+            "close": 34.75,
+            "previous_close": 32.23,
+            "change_amount": 2.52,
+            "change_percentage": 7.8188,
+            "url": "https://finance.yahoo.com/quote/BSY"
+          },
+          {
+            "ticker": "TTAN",
+            "price_date": "2026-10-05",
+            "close": 72.160004,
+            "previous_close": 67.089996,
+            "change_amount": 5.070007,
+            "change_percentage": 7.557,
+            "url": "https://finance.yahoo.com/quote/TTAN"
+          },
+          {
+            "ticker": "GWRE",
+            "price_date": "2026-10-05",
+            "close": 163.229996,
+            "previous_close": 152.149994,
+            "change_amount": 11.080002,
+            "change_percentage": 7.2823,
+            "url": "https://finance.yahoo.com/quote/GWRE"
+          },
+          {
+            "ticker": "PCOR",
+            "price_date": "2026-10-05",
+            "close": 54.18,
+            "previous_close": 50.950001,
+            "change_amount": 3.23,
+            "change_percentage": 6.3395,
+            "url": "https://finance.yahoo.com/quote/PCOR"
+          },
+          {
+            "ticker": "KVYO",
+            "price_date": "2026-10-05",
+            "close": 16.700001,
+            "previous_close": 15.71,
+            "change_amount": 0.990001,
+            "change_percentage": 6.3017,
+            "url": "https://finance.yahoo.com/quote/KVYO"
+          },
+          {
+            "ticker": "ASAN",
+            "price_date": "2026-10-05",
+            "close": 9.14,
+            "previous_close": 8.62,
+            "change_amount": 0.52,
+            "change_percentage": 6.0325,
+            "url": "https://finance.yahoo.com/quote/ASAN"
+          },
+          {
+            "ticker": "WLTH",
+            "price_date": "2026-10-05",
+            "close": 10.62,
+            "previous_close": 10.03,
+            "change_amount": 0.59,
+            "change_percentage": 5.8824,
+            "url": "https://finance.yahoo.com/quote/WLTH"
+          }
+        ]
+      }
+    },
+    {
+      "id": "price:758ae3467bfbbccaaf5e",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 跌幅前十 2026-10-05",
+      "url": "https://finance.yahoo.com/markets/stocks/losers/",
+      "published_at": "2026-10-05T20:00:00+00:00",
+      "collected_at": "2026-10-07T00:01:42.147367+00:00",
+      "body": "1. SECZ close 11.7; previous 12.99; change -9.9307%\n2. RXT close 3.9; previous 4.12; change -5.3398%\n3. NBIS close 232.570007; previous 242.809998; change -4.2173%\n4. CARS close 9.7; previous 10.03; change -3.2901%\n5. CRWV close 87.389999; previous 89.620003; change -2.4883%\n6. BB close 9.08; previous 9.3; change -2.3656%\n7. SPSC close 80.459999; previous 82.349998; change -2.2951%\n8. CRM close 229.789993; previous 234.690002; change -2.0879%\n9. SABR close 1.93; previous 1.97; change -2.0305%\n10. DOCN close 137.229996; previous 140.070007; change -2.0276%",
+      "author": "",
+      "symbols": [
+        "SECZ",
+        "RXT",
+        "NBIS",
+        "CARS",
+        "CRWV",
+        "BB",
+        "SPSC",
+        "CRM",
+        "SABR",
+        "DOCN"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "losers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-10-05",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "SECZ",
+            "price_date": "2026-10-05",
+            "close": 11.7,
+            "previous_close": 12.99,
+            "change_amount": -1.29,
+            "change_percentage": -9.9307,
+            "url": "https://finance.yahoo.com/quote/SECZ"
+          },
+          {
+            "ticker": "RXT",
+            "price_date": "2026-10-05",
+            "close": 3.9,
+            "previous_close": 4.12,
+            "change_amount": -0.22,
+            "change_percentage": -5.3398,
+            "url": "https://finance.yahoo.com/quote/RXT"
+          },
+          {
+            "ticker": "NBIS",
+            "price_date": "2026-10-05",
+            "close": 232.570007,
+            "previous_close": 242.809998,
+            "change_amount": -10.23999,
+            "change_percentage": -4.2173,
+            "url": "https://finance.yahoo.com/quote/NBIS"
+          },
+          {
+            "ticker": "CARS",
+            "price_date": "2026-10-05",
+            "close": 9.7,
+            "previous_close": 10.03,
+            "change_amount": -0.33,
+            "change_percentage": -3.2901,
+            "url": "https://finance.yahoo.com/quote/CARS"
+          },
+          {
+            "ticker": "CRWV",
+            "price_date": "2026-10-05",
+            "close": 87.389999,
+            "previous_close": 89.620003,
+            "change_amount": -2.230003,
+            "change_percentage": -2.4883,
+            "url": "https://finance.yahoo.com/quote/CRWV"
+          },
+          {
+            "ticker": "BB",
+            "price_date": "2026-10-05",
+            "close": 9.08,
+            "previous_close": 9.3,
+            "change_amount": -0.22,
+            "change_percentage": -2.3656,
+            "url": "https://finance.yahoo.com/quote/BB"
+          },
+          {
+            "ticker": "SPSC",
+            "price_date": "2026-10-05",
+            "close": 80.459999,
+            "previous_close": 82.349998,
+            "change_amount": -1.889999,
+            "change_percentage": -2.2951,
+            "url": "https://finance.yahoo.com/quote/SPSC"
+          },
+          {
+            "ticker": "CRM",
+            "price_date": "2026-10-05",
+            "close": 229.789993,
+            "previous_close": 234.690002,
+            "change_amount": -4.900009,
+            "change_percentage": -2.0879,
+            "url": "https://finance.yahoo.com/quote/CRM"
+          },
+          {
+            "ticker": "SABR",
+            "price_date": "2026-10-05",
+            "close": 1.93,
+            "previous_close": 1.97,
+            "change_amount": -0.04,
+            "change_percentage": -2.0305,
+            "url": "https://finance.yahoo.com/quote/SABR"
+          },
+          {
+            "ticker": "DOCN",
+            "price_date": "2026-10-05",
+            "close": 137.229996,
+            "previous_close": 140.070007,
+            "change_amount": -2.840012,
+            "change_percentage": -2.0276,
+            "url": "https://finance.yahoo.com/quote/DOCN"
+          }
+        ]
       }
     },
     {
@@ -3616,292 +3977,6 @@
         "publication_platform": "substack",
         "section": "transaction_ideas",
         "transport": "public_reader_fallback"
-      }
-    },
-    {
-      "id": "substack:c9967c56eb7256ea21b2",
-      "source_type": "substack",
-      "source_name": "How They Make Money / App Economy Insights",
-      "title": "📊 PRO: This Week in Visuals",
-      "url": "https://www.appeconomyinsights.com/p/pro-this-week-in-visuals-8f1",
-      "published_at": "2026-10-03T14:00:55+00:00",
-      "collected_at": "2026-10-04T00:00:46.299252+00:00",
-      "body": "Welcome to the Saturday PRO edition of How They Make Money . Over 300,000 subscribers turn to us for business and investment insights. In case you missed it: 🏢 Meta Goes to Work 📊 Earnings Visuals (9/2026) ☁️ How Nscale Makes Money Subscribe now Premium members get: 📊 Monthly reports : 200+ companies visualized. 📩 Tuesday articles : Exclusive deep dives and insights. 📚 Access to our archive : Hundreds of business breakdowns. PRO members get everything PLUS : 📩 Saturday PRO reports : Timely insights on the latest earnings. Today at a glance: 🌐 Accenture : AI Creates More Work 👟 Nike : Still Going Downhill 🛳️ Carnival : Europe Comes Back 🎿 Vail Resorts : Pass Sales Slide 1. 🌐 Accenture: AI Creates More Work Accenture Q4 revenue rose 6% Y/Y to $18.7 billion ($660 million beat), with GAAP EPS of $3.29 ($0.11 beat). Demand rebounded to a new high. New bookings grew 5% in local currency to $22.2 billion , reversing last quarter's decline. Managed services bookings hit a record $12.8 billion. Shares surged nearly 20% initially, their best post-earnings move on record. Source: Fiscal.ai So far, AI is creating more work for Accenture than it is destroying. Consulting revenue grew 6% (or 7% in local currency), and nearly 100 additional clients started their first advanced AI projects during Q4, bringing the FY26 total above 400. Management says much of the demand is coming from companies building the data foundations, digital core, and AI infrastructure needed before deploying agents at scale. The economics are changing, though. Accenture acknowledged lower pricing in many parts of the business as AI improves productivity and competition intensifies. Hiring will also slow in FY27 as AI changes delivery. So the disruption thesis isn’t disappearing, but it’s showing up first in pricing and labor intensity rather than collapsing demand. M&A remains another major growth lever. Accenture deployed $1.9 billion in Q4. The previously announced OT-security deals have now closed, and management expects roughly $5 billion of acquisitions in FY27 . It also plans to return at least $9.5 billion to shareholders. For FY27, Accenture guided to 3%–6% revenue growth in local currency . That said, acquisitions are expected to contribute 2%–2.5% to growth, so the organic outlook is considerably more subdued than the headline range. Takeaway: The quarter doesn’t settle the AI disruption debate, but it brings some much-needed good news. Bookings rebounded, and more enterprises are hiring Accenture to build the infrastructure required for AI. The real pressure may increasingly show up in pricing and headcount rather than demand disappearing altogether. 2. 👟 Nike: Still Going Downhill Nike Q1 revenue fell 4% Y/Y to $11.2 billion ($110 million miss), while EPS slipped 2% to $0.48 ($0.04 beat). Gross margin improved 60 bps to 42.8% , thanks to lower warehousing and logistics costs. Nike’s performance portfolio remains encouraging. Running, football, training, and basketball collectively grew at a high-single-digit rate , suggesting Elliott Hill’s Sport Offense is gaining traction. But competitive pressure has intensified. Kylian Mbappé recently ended a two-decade relationship with Nike to join On (visualized here ), which is now using him to launch its own football business in 2027. North America was also the only major geography to grow. Elsewhere, the reset remains painful. Nike Sportswear fell by low double digits , while management acknowledged it had oversupplied Jordan retros and is now deliberately reducing launch volume to restore scarcity. NIKE Direct declined 8% , including a 13% drop in digital, while wholesale slipped 1%. Greater China revenue fell 22% (or 26% in constant currency) to $1.18 billion, with wholesale down 28%. Nike is intentionally reducing promotions and narrowing its digital distribution there, which should improve brand health eventually. But it also means the reset will weigh on revenue for longer. Source: Fiscal.ai Read more",
-      "author": "App Economy Insights",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.appeconomyinsights.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas"
-      }
-    },
-    {
-      "id": "substack:d43d2f13301d3339cfd2",
-      "source_type": "substack",
-      "source_name": "Latent Space",
-      "title": "[AINews] not much happened today",
-      "url": "https://www.latent.space/p/ainews-not-much-happened-today-cee",
-      "published_at": "2026-10-03T08:45:15+00:00",
-      "collected_at": "2026-10-04T00:00:44.222214+00:00",
-      "body": "If you’re even seeing this, you should probably just go enjoy your weekend. AI News for 10/1/2026-10/2/2026. We checked 12 subreddits, 544 Twitters and no further Discords. AINews’ website lets you search all past issues. As a reminder, AINews is now a section of Latent Space . You can opt in/out of email frequencies! AI Twitter Recap GPT-6.1 Sol and Sonnet 5.5 Reshape the Cost–Performance Frontier GPT-6.1 Sol launch : OpenAI priced Sol at $2/$10 per million input/output tokens, compared with $10/$50 for Astra ( pricing summary ). Claimed results : It reportedly beats GPT-6 Sol by 6.4 points on DeepSWE v1.1 and Opus 5.5 by 2.2 points on AutomationBench ( summary ). Positioning : OpenAI staff describe it as “good, cheap AND fast” ( @reach_vb ). Codex usage : A global Codex usage reset was set for Oct 2 at 10AM PT ( @reach_vb ). Tool use : Sol reportedly “REALLY loves codemode,” consistent with GPT models being trained on it ( @badlogicgames , codemode note ). Agent Arena placements : Sol [Max] entered at #5 (+11.23%) with a $0.56 median cost per task ( @arena ). Sol cost comparison : That is 39% cheaper than GPT-6 Sol while scoring 1.52 points higher. It is 81% cheaper than Astra while landing within 1.04 points. Sonnet 5.5 : Sonnet 5.5 [Max] debuted at #3 (+12.5%) and ranked #1 in the Chat category. It costs $2.74 per task, versus $1.58 for #2 Opus 5.5, which keeps it off the Pareto frontier ( debut , frontier ). Anthropic’s position : Anthropic models now hold the top three Agent Arena spots. Code and Text Arena : Sol briefly entered WebDev at #3 before Sonnet 5.5 pushed it to #4 ( weekly recap ). Sonnet on WebDev : Sonnet now sits 2 points behind GPT-6 Astra [Max] at 80% lower cost. Gemini 4 Argon : Argon [High] took #1 in Text Arena. Open models : MiMo-V2.6-Pro and Flash entered Agent Arena at #5 and #9 among open models. Other independent evals : WeirdML v3 finds Sol very token-efficient, close to Astra but with a lower peak. On the same benchmark, Sonnet 5.5 beats Opus 5 and Grok 4.7 beats Kimi-K3; these results are incomplete ( @htihle ). Reasoning style : Design Arena read 324 thinking summaries. It found that Astra hedges about 20× as often as Opus 5.5, while Opus commits early in about 4 of 5 summaries ( @DesignArena ). Step 5 Preview : StepFun’s model ranks #7 among open-weight models on Vals at $2.54 per task. It averages nearly two hours per task and has a 1M-token context window ( Vals , details ). Rumors (unconfirmed) : Fable 5.5 : Claude Fable 5.5 is rumored for next week and said to outperform an “Astra 6.1” that was reportedly delayed over security concerns. The poster says he cannot verify either claim ( @kimmonismus , follow-up ). GPT-6 Astra Lite : A “GPT-6 Astra Lite” listing has been spotted, which @scaling01 speculates is the same model as Sol ( @scaling01 ). Decision models and open weights : llama.cpp added a /v1/systemone endpoint for local “Jev-style” decision-model inference ( @ggerganov ). Running locally : Models are launched with llama serve -hf ggml-org/Kev-4B-GGUF ( @ClementDelangue ). Jared Palmer published a post on how Kev 1.0 works ( post ). Ecosystem : Perplexity claims pplx-decider-v1-27b averages 85.7% across 11 benchmarks, ahead of Jev ( @AravSrinivas ). Clef decision models are now on Ollama ( @lucataco ). Skeptical view : @mervenoyann calls decision models a rebrand of zero-shot classifiers ( tweet ). Calibration analysis : A blog post links Jev-style calibration to value and Q-function prediction ( @SOURADIPCHAKR18 ). webAI TwIL-LM3-Pro : This 3.66B model is post-trained from Granite 4.2. In webAI’s tests it roughly matches Qwen3-8B on formal logic. The Q4 GGUF is 2.09 GiB and the license is non-commercial ( @kimmonismus ). Reka RIDM : Reka released an inverse dynamics model under Apache 2.0. It is trained on games, generalizes to real video and extracts motor and camera actions ( @RekaAILabs ). Agent Harnesses, Assistants and Developer Tooling OpenAI dots : Sam Altman calls dot his favorite OpenAI product, saying it improves daily as it learns his workflow ( @sama ). Capabilities : Dot keeps context across apps, coordinates Codex tasks and flags items that need attention ( @OpenAIDevs ). Comparisons : One user prefers Grokbot’s multi-agent “chief of staff” setup ( @kimmonismus ). A DIY clone uses Pi, a Telegram gateway and any model ( @_alejandroao ). Muse Gadgets : Meta open-sourced ESP32 firmware and a Linux SDK for building hardware that works with Muse ( @natfriedman ). Muse Home Link : Meta made 5,000 units of its own smart-home bridge, free for subscribers while supplies last ( @alexandr_wang , shipping ). Extensible harnesses : DeepSeek Harness shipped desktop builds for macOS and Windows; Linux users install @deepseek-ai/dsh from npm ( @deepseek_ai ). Claude Code mods : Mods are plugins with middleware-like hooks into Claude Code ( @lydiahallie ). The new “You should know” plugin spins off a side agent that flags important output the user might miss ( @ClaudeDevs ). Pi Durable : Pi now runs on Cloudflare Durable Objects via agents SDK v0.26.0, alongside Pi’s v1.0 release ( @mattzcarey , @badlogicgames ). Context : @omarsar0 frames these releases as a shift toward malleable harnesses ( thread ). T3 Code orchestrator rewrite : The project passed 400K users ( @theo ). Its 4-month PR, with 823 commits across 1,912 files, has now merged ( @maria_rcks ). New features : The rewrite adds Pi support, cross-provider delegate_task , an ACP registry, thread forking, mid-thread model switching, subagent lineage views and scheduled tasks ( feature list ). Platform updates : OpenAI’s Agents API added one-call browser computer use, Bedrock Managed Agents and portable environments. It also claims 99.97% turn reliability and 20% faster tool calls ( @stevendcoffey ). Cursor Rollouts : When Rollouts catches a regression, it finds the offending PR, opens an issue and offers a one-click cloud agent fix ( @cursor_ai ). Cloudflare : Sandbox SDK 1.0 gives Durable Objects direct control over sandbox containers ( @CFchangelog ). Cloudflare also launched request Traces ( @WalshyDev ). Research: Agent Training, Long-Horizon Control and AI for Math Multi-harness RL (Hugging Face) : The same model weights score 62% in one harness and 33% in another ( @huggingface ). Method : A proxy speaks the OpenAI, Anthropic and Gemini API formats and records sampled token IDs and logprobs for training, with no changes to the harnesses themselves. Results : LFM2.5-2.6B improved from 42% to 54% across four harnesses and made 31% fewer tool calls. SFT on 3,189 Qwen3.8-27B rollouts plateaued at 47.5%. Release : The trainer, data and all seven trained models are open. Credit assignment and RL efficiency : ProVer has a judge locate the decisive trajectory segment, then uses rollouts on either side to set that segment’s advantage. It reports +9.91% (Qwen3.5-2B) and +7.12% (Qwen3.5-4B) relative gains over GRPO ( @omarsar0 ). Partial rollouts : AC2 uses a learned critic to score token chunks, so training needs only partial rollouts ( @wen_kaiyue ). Frontier Learning : The method targets problems at the edge of capability, since problems a model always or never solves give zero GRPO gradient ( @robinfaro13 ). Sharpening Tax : The paper quantifies the loss of pass@K scalability after post-training and proposes PTGS, a per-prompt temperature sampler ( @iScienceLuvr ). SFT vs RL : Another paper finds SFT generalizes worse because its data is off-policy, not because of the objective. Rewriting expert trajectories in the base model’s style closes the gap ( @maximelabonne ). Long-horizon control and context : Meta Superintelligence Labs reports that a dedicated controller lifts GPT-5.5 on ProgramBench from 63.7% to 71.5%, using the same workers and budget, versus 58.0% for Codex ( @dair_ai ). Context compression : Microsoft’s training-free FOCUS cuts peak context by up to 48% and raises task success by up to 8.9 points ( @dair_ai ). Long-context degradation : NVIDIA’s Long-Transduction study measures a 62.8% accuracy drop from 4K to 128K context across seven open models ( @dair_ai ). Multi-agent coordination : In AgentWorld, fewer than a third of multi-agent actions help complete the task, and coordination tasks reach only 12% success ( @omarsar0 ). Apple LoopCD : The method halves recurrent loops while raising AIME 2024 pass@1 from 61.88% to 73.33% ( @arankomatsuzaki ). AI on open math problems : Meta released six papers on open problems produced with Muse Spark 1.1 and 1.2 through plain meta.ai chat, with no custom scaffold ( @AIatMeta , list ). Process : Each paper labels which passages were drafted primarily by humans or by AI, and a second group of mathematicians reviewed the work. Google Cogentic : This Gemini multi-agent system produced new results on five open theory problems ( @omarsar0 ). Cogentic design : Each draft must pass two adversarial verifiers, and agents share a ledger of verified lemmas. Most problems took about 100 calls; the hardest took about 1,000. Image post-training : Arena combined a Bradley-Terry reward model with faithfulness, constraint and anti-reward-hacking rewards ( @arena ). Results : FLUX.2-dev gained 69 Elo to 1202, and Ideogram 4 gained 20 Elo to 1224. Benchmarks, Eval Integrity and Safety Research-taste benchmarks : ScholarCatalyst asks agents to find the “catalyst papers” behind research projects. It is labeled by 184 lead authors on 207 of their own projects and is described as far from saturated ( @yoonholeee ). EurekaBench : This benchmark tests whether agents can discover genuinely new insights across six science domains ( @JiayiiGeng ). Vals Web Search Index : The index holds model and harness constant, swaps only the search tool, and scores final answers on finance and legal tasks ( @ValsAI ). Validation : Agents score 2.9% (legal) and 7.4% (finance) without search, versus 30–50% with it. Vals also cites a study in which a model answered 44.5% of BrowseComp without search ( details ). SWE bug-finding bench : In this new benchmark, agents start from an older commit and are scored against real bugs fixed in later commits. Critique : Lucas Beyer argues it mainly tests recall and that the construction is easy to train toward ( @giffmana ). Authors’ response : The authors say training for bug-finding is fine as long as the test set is excluded ( @OfirPress ). Eval integrity question : David Rein asks whether Harbor, the framework behind Terminal Bench, lets agents modify their trajectories before evaluation. He notes he may be misreading the code ( @idavidrein ). Offensive capability of open models : The Batch reports GLM-5.3 nearly matched Claude Mythos at exploiting vulnerabilities, 12% vs 14% ( @DeepLearningAI ). Disputed claim : One commentator says GLM-5.3 Flash exceeds Mythos Preview on ExploitBench ( @teortaxesTex ). Uncensored variant : An uncensored GLM-5.3 is circulating on Hugging Face ( @kimmonismus ). Safety research and safeguards : A new paper proposes using internal signals during training to improve alignment without degrading white-box monitoring ( @lenalibon ). NeurIPS acceptance : “Models That Know How Evaluations Are Designed Score Safer” was accepted at NeurIPS 2026 ( @HaritzPuerto ). False positives : Opus 5.5 frequently triggers “reasoning extraction” safeguards during spectrogram syllable labeling ( @ChaseBrowe32432 ). Emergent world knowledge : Asking a model “land or water?” for 16,200 lat/long coordinates and plotting the answers yields a recognizable world map ( @karpathy ). Inference, Hardware and Systems Ascend 950 via DeepSeek kernels : An analysis of DeepSeek’s open-sourced DeepGEMM, FlashMLA, TileKernels and DeepEP infers the chip’s layout ( @ZhihuFrontier ). Estimated specs : The chip has 32 AI cores, each pairing one Cube core with two Vector cores. Estimated peaks are about 432/865/1,730 TFLOPS in BF16/FP8/FP4. Capacity : Supply may be limited, despite claims that 950s went on sale in August ( @teortaxesTex ). Prime Inference : Prime Intellect stores the MLA latent in NVFP4, shrinking rows from 576 to 352 bytes and fitting about 50% more cached tokens than FP8 ( @PrimeIntellect ). Stack : It serves GLM-5.3 on vLLM and Dynamo, and the sparse-MLA kernel is going to FlashInfer ( @vllm_project ). Low-precision benchmarking : Stas Bekman measured NVFP4 about 9% more efficient than MXFP4 on B200, with higher accuracy ( @StasBekman ). mamf-finder : The tool now benchmarks FP8, MXFP8, MXFP4 and NVFP4 ( update ). Memory and speed : NVHBM moves the memory controller into a custom base die, claiming up to 30% more bandwidth and 15% lower power than HBM4E ( @vikramskr ). Disputed economics : Micron says NVHBM will improve its margins; @vikramskr disputes this ( counterpoint ). Volantis : The startup is targeting up to 10K tokens/s per user on models over 10T parameters using optics ( @omarsar0 ). Cerebras : Altman called Cerebras a close partner on speed ( @sama ). Capacity economics (Epoch) : Epoch estimates AI infrastructure could soon support hundreds of millions to billions of agents ( @EpochAIResearch ). Demand gap : Just 20% utilization implies $2.6–5.3T in annual spending, against roughly $1T in lab revenue by the end of 2027 ( details ). Platforms : SemiAnalysis rates Google’s GPU clusters Gold tier and notes the ConnectX NCCL plugin now auto-activates ( @SemiAnalysis_ ). Federated learning : Google Research launched TEE-backed federated learning with verifiable differential privacy ( @GoogleResearch ). Industry and Policy Anthropic and the Vatican : The NYT reports that Chris Olah raised pulling out of the Pope’s AI encyclical launch, whose text rejects machine consciousness ( @ChristopherHale ). Lobbying : Olah’s team reportedly lobbied the Pope’s advisers to take model consciousness seriously. He ultimately attended ( @kimmonismus ). Context : The article opens with Olah saying “we don’t know if A.I. models are conscious” ( @buccocapital ). Criticism : Aidan Gomez criticized the campaign as moral arrogance ( @aidangomez ). Lucas Beyer noted a transcript wording change from “create” to “train” ( @giffmana ). Anti-safety influence campaign : A report describes a group planning to spend at least $100M, run by a former White House deputy chief of staff, that frames AI warnings as a coordinated campaign ( @NeelNanda5 ). New organizations : Nathan Lambert and Tom Zick launched Trillium Labs, a non-profit for open post-training recipes and infrastructure ( @natolambert ). Funding : Initial support comes from Halcyon Futures and Schmidt Sciences. Underdog : The private on-device AI startup announced backing from a16z, Khosla and others ( @0xSigil ). Governance and markets : Yoshua Bengio joined Canada’s new National Council on AI ( @Yoshua_Bengio ). Meta : Meta has parted ways with Virtue AI ( @AndrewCurran_ ). Nvidia : Bloomberg reports a record high near $5.7T market value after a $150B buyback increase ( @kimmonismus ). Top tweets (by engagement) NYT report on Olah and the Pope’s encyclical — 28.7K Karpathy’s “land or water” eval — 16.4K Claude Code “You should know” plugin — 7.3K Altman on dots — 6.8K Muse Gadgets announcement — 4.9K DeepSeek Harness desktop builds — 4.3K Altman on the Cerebras partnership — 4.1K Trillium Labs launch — 2.6K AI Reddit Recap /r/LocalLlama + /r/localLLM Recap 1. Qwen Local Inference: 27B Benchmarks, Fine-Tunes, and MTP I made my iPhone a second GPU for my 24 GB MacBook: Qwen 3.8 27B prefills 29–44% faster & my holds part of the CTX window. (Activity: 1192): OP built backburner, a llama.cpp fork / distributed inference setup that offloads part of Qwen 3.8 27B IQ4_XS from a 24 GB M4 Pro MacBook to an iPhone 17 Pro Max over 10 Gb/s USB-C: the Mac runs layers 1–40 , streams activations, and the phone runs layers 41–64 using Metal 4 tensor ops. Reported end-to-end prefill gains vs Mac-only were +35% at 8k , +44% at 16k , +29% at 32k , and +30% at 48k ; a cold 27k session improved from 245 s stock llama.cpp / 228 s fork Mac-only to 168 s with the phone. Above 64k context, the phone instead hosts old KV pages—up to roughly 5.7 GB , enabling 196k–229k 8-bit context allocation—and computes old-key attention, with a 140k context test improving generation latency from 279 ms/token to 176 ms/token when adding Neural Engine-compiled 16k key pages. A technically relevant follow-up asked whether the same iPhone-as-secondary-GPU approach could extend to iPads , especially higher-end iPad Pro configurations with more capable Apple Silicon and potentially more RAM. The implication is that iPads might provide better offload performance or hold a larger portion of the context window than an iPhone, making them a stronger companion device for local LLM inference. Qwen3.8-27B-Humanlike-Chat 2.0: texts like a human, now with tool calls and better instruction following (Activity: 805): LessThanThreeAI released Qwen3.8-27B-Humanlike-Chat 2.0, a merged LoRA over huihui-ai’s abliterated Qwen3.8-27B, available as GGUF/BF16/LoRA on Hugging Face with a demo Space . v2 replaces plain SFT with on-policy distillation: the student generates replies while two teachers score tokens—v1 + hidden “text like a person” instruction for chat/character behavior, and the base model for instruction-following, tools, and code—improving tool-use and controllability while preserving informal texting style. Reported evals vs the abliterated base: IFBench 37.3 → 43.7 , When2Call 48 → 58 , BFCL irrelevance 60 → 78 , ties/slight gains on IFEval/GSM8K/BFCL simple ( 83.5 / 89.1 / 98 ), but regressions on MMLU-Pro ( 78.5 → 72.5 ) and LiveCodeBench ( 56 → 51 ); a custom “ishuman” judge benchmark rated it as human-written 23.5% vs 0.3% for the abliterated base and 15.1% for official Qwen3.8-27B. Technical discussion in the top comments was sparse; the only relevant critique was that the model’s “humanlike” register may read more like teenage texting than broadly human conversation. A commenter raised a model-transfer question: whether the same humanlike chat fine-tuning/alignment method used for Qwen3.8-27B-Humanlike-Chat 2.0 would produce similar results on Gemma 4 31B . This is the only technically substantive thread, touching on cross-architecture generalization of the training recipe and whether behavior-style tuning would carry over to a larger Gemma-family model. The gap is smaller than they told you: local 27B nearly matches frontier on real code tests (Activity: 730): OP reports a single-task DeepSWE/local-code benchmark run using Qwen3.8-27B GGUF via llama.cpp b11115 + llama-swap v257 on 1× RTX 4090 24GB, specifically Qwen3.8-27B-UD-IQ4_XS.gguf ( 14.25GB ) from unsloth/Qwen3.8-27B-GGUF , at ctx-size 196608 , IQ4_XS , q8_0 K/V cache, speculative MTP draft, and DeepSeek-style reasoning budget 4096 . Measured results: 115 tok/s decode, 22,934 MiB peak VRAM, 12/12 on a code-review task, and on one DeepSWE task 40/43 hidden tests plus 109/109 existing tests, i.e. partial 0.980 but binary pass 0 ; OP later corrected the comparison: the cited 96.6% was mean partial across all published trials, while the frontier subset for that task was 99.8% partial and 85.3% pass, from DeepSWE v1.1 raw data . The linked writeups cover the 24GB fit/context setup ( context ceiling ) and the task-level DeepSWE result ( local confidence ); OP emphasizes this is task-specific, not a claim that a 27B local model matches frontier models broadly across the 113 -task benchmark. Commenters were skeptical of the broader framing: one user with both “Flash and 27B” said “the gap is real,” and another argued the conclusion is wrong because even frontier coding models are uneven and ~24–72B models may handle discrete subtasks but often lose value once humans must decompose larger engineering work into model-sized tasks. Several commenters argued the claimed near-parity is likely an artifact of a saturated benchmark : a local 27B model, even at Q8 , can perform well on small/discrete coding tasks but still fails on harder real-world tasks requiring frontier models such as Claude Opus . A recurring technical objection was that coding evaluations often underweight project-level decomposition: 24B–72B local models may solve isolated tickets, but for larger work items the human effort needed to break problems into model-sized subtasks can exceed the productivity gains. Users with hands-on experience running both Gemini Flash and local 27B models reported that the performance gap remains substantial, especially for nontrivial coding workloads where frontier models provide better reliability and task completion. Qwen4Exp: add MTP by am17an · Pull Request #29761 · ggml-org/llama.cpp (Activity: 405): llama.cpp PR #29761 adds MTP speculative decoding support for Qwen3.8-Flash Next via --spec-type draft-mtp , merged into the aman/qwen4-opt branch after ~ 17h of development. Reported DGX Spark benchmarks for Qwen3.8-Flash-Next iq4_xs with -np 1 -lzm on --spec-draft-n-max 3 show decode throughput improving from 28.36 to 43.88 tok/s (1.55×), latency speedup of 1.54×, and mean speculative acceptance of 0.640 across 24 tasks; GGUF quants are available on Hugging Face . Commenters noted the model is still impractically large for many local setups: the IQ4_NL GGUF is split into a tiny 10.9 MB shard plus a 102 GB shard, undercutting the idea of casually switching from Qwen 3.8 27B. One commenter also noted that Gufo supports MTP. One commenter reported that enabling MTP made inference slower in their testing, arguing it may be more useful for dense models than very large overall architectures where the MTP head has a low acceptance/hit rate. Their hypothesis is that the MTP head cannot effectively predict/compress enough of the larger model’s behavior, reducing speculative decoding benefit. A user noted that Gufo already supports MTP , implying llama.cpp is catching up with existing MTP-capable tooling/backends for Qwen-style experimental models. Another commenter said they had been using an EXL3 version through tabbyapi because llama.cpp GGUF inference was “way, way slower” for their workload. They planned to retest after this PR, but their prior experience suggests EXL3/tabbyapi may still be a performance baseline to compare against for Qwen4Exp/MTP support. 2. Local Agent Tooling: Decision Models and MCP Pi 1.0 released - MCP support now included by default (Activity: 679): Earendil released Pi 1.0 , a stable version of its minimal agent harness, with Codemode now including native MCP support by default plus non-LLM/image model support, virtual-model extensions, deferred tool loading, Anthropic cache warming, mid-conversation system messages, and TUI updates. The release also introduces experimental MIT-licensed Pi Durable for longer-running agentic applications beyond terminal/coding-agent workflows, while retaining Pi’s minimal/extensible architecture. Top comments focused on naming ambiguity— “pi” collides with many AI/dev tools—and requested clarification of what Codemode is. One commenter linked Earendil’s rationale for MCP support: “You said no MCP” . A commenter linked the maintainer’s rationale for reversing course on MCP support in Pi 1.0 , pointing to the post “You said no MCP” . The thread notes that MCP is now included natively/by default , after earlier resistance from the creator based on project ethos, with users framing it as a “vital addition” for tool/server integration workflows. Clef: Open Weights decision model by Cloudflare (Activity: 619): Cloudflare announced Clef, an open-weights “decision model” intended for local/self-hosted use. A top commenter notes that Clef was post-trained from Qwen3.8-27B and that clef-flash was also released, post-trained from Qwen3.5-9B. The main substantive reaction was positive: commenters see Clef as filling a gap in the local-model ecosystem and are eager to benchmark it themselves. Commenters noted that Cloudflare Clef is post-trained from Qwen3.8-27B , with a smaller clef-flash variant post-trained from Qwen3.5-9B , framing it as a potentially important open-weights “decision model” for local inference use cases. A technical concern raised was how Clef’s quality holds up after quantization, especially below Q8 , since local deployment will likely depend on lower-bit quantized variants and decision-model behavior may degrade nonlinearly under aggressive compression. The benchmark discussion focused on comparisons against models such as Laya , Kev 9B , and DiffusionGemma Jev , but one commenter criticized the eval set as too weak and argued Clef should be compared against the leading models on jevbench rather than weaker open Jev baselines. New in llama.cpp: Decision Models (Activity: 574): The post announces Decision Models support in llama.cpp : local “Jev/Jeff-like” models intended to act more like controllers/classifiers—selecting among actions, continuations, or behavioral choices—rather than purely free-form generators. No benchmark numbers or low-level implementation details were discussed in the provided comments; the main concrete use case raised was steering local roleplay models to avoid characters “going off the rails mid scene.” Commenters were skeptical about Jev as a defensible product/category, arguing the idea had “no moat” and was rapidly cloned into many Jev-like models. Others said they still do not know what these models are practically useful for, aside from possible agent/roleplay control. A commenter frames decision models as essentially a constrained classification loop: provide a JSON schema containing allowed classes plus structured/unstructured input, then have the model select exactly one category per item. The technical question is whether llama.cpp’s new support adds meaningful inference-time behavior beyond ordinary prompt-constrained JSON classification, or primarily standardizes the workflow for local models. One practical use case raised is applying decision models to local roleplay agents to reduce derailment during long scenes—i.e., using an auxiliary model or decision step to enforce state/intent constraints before generation. The thread does not report benchmarks or implementation results, but highlights a potential control-layer pattern for character consistency and scene-state management. Less Technical AI Subreddit Recap /r/Singularity, /r/Oobabooga, /r/MachineLearning, /r/OpenAI, /r/ClaudeAI, /r/StableDiffusion, /r/ChatGPT, /r/ChatGPTCoding, /r/aivideo, /r/aivideo 1. Gemini 4 Argon Access Backlash Just canceled my Google One AI plan. (Activity: 1838): The OP claims Google’s paid Google One AI Pro tier no longer provides access to frontier Gemini models: after an alleged Gemini 4 Argon announcement, access is described as limited to enterprise “Fairwind” partners, paid API users, and a forthcoming Google AI Ultra tier, while Pro users remain on Gemini 3.8 Flash. They argue this is a regression from the Gemini 2.5 Pro era—where higher-end reasoning models and generous limits were available more broadly—and contrast it with Anthropic/OpenAI subscriptions allegedly offering frontier models to standard paid users; no concrete benchmark numbers are provided beyond claims of “impressive benchmark charts” and a 1M token output ceiling. Top comments mostly dismiss the complaint: one user says they subscribe primarily for Google storage and treat AI as a bonus, while others question the post’s authenticity, alleging it was Gemini-written or bot/shill activity from a new account. One commenter argued that the $20/month AI subscription tiers from Google/Anthropic/OpenAI function more like constrained trials than production-grade access, implying practical limits on sustained workloads despite “Pro” branding. They also suggested Google may be subsidizing or losing money on Google One AI Pro subscriptions given the underlying inference costs. A rollout clarification noted that Gemini Ultra appears to be receiving access first, but Google has not explicitly ruled out Pro-tier access to features like Astra. The commenter framed this as a typical staged software rollout rather than definitive permanent tier exclusion. Why publicly announce a model that the public can’t use yet?? (Activity: 1624): The image is a screenshot of a purported Google/Gemini announcement for “Gemini 4 Argon”, claiming frontier performance in software engineering, knowledge work, and cybersecurity defense, plus an extremely large 1M token output limit : image . The post’s technical significance is mainly about model-release communication, not evaluation: the title questions why Google would publicly announce a model before it is accessible to users, and the image itself provides no benchmarks, API details, pricing, or availability timeline. Commenters compare this to prior “announced but unavailable” model rollouts, including Anthropic’s “mythos” and Google’s alleged “3.5 pro” handling. The dominant view is skeptical: users may be frustrated, and one commenter speculates the announcement is aimed “purely for investors.” 2. Claude Opus 5.5 Regression Reports Opus 5.5 nerfing - how to measure, how to spot, how to sue (Activity: 2722): Poster alleges Anthropic Opus 5.5 showed a sharp post-launch regression after 5–6 days on complex C++/3D/physics/Blender MCP workloads, citing abnormal phrasing and lower code/output quality, and recommends preserving exact launch-day prompts/outputs plus latency measurements to detect potential changes such as quantization, routing, or serving optimizations under load. They frame this as a potential EU consumer-law issue under the Digital Content Directive 2019/770 , specifically conformity expectations in Arts. 7–8 and modification/withdrawal notice obligations in Art. 19 , arguing launch benchmarks and “most capable model” marketing may set enforceable expectations. Comments broadly agree that closed-model providers can silently degrade or reroute models and that independent auditing is needed, but no commenter provides reproducible benchmarks or direct evidence. One commenter reports similar perceived quality drops in Higgsfield outputs, describing wasted credits after initially strong generations. Commenters raised the core measurement problem with alleged closed-model degradation : because Anthropic’s hosted model weights, prompts, routing, and serving configs are opaque, users argue it is difficult to prove a regression or “nerf” without independent auditing, fixed benchmark prompts, repeated sampling, and historical baselines. One user specifically asked for an “effective test or reliable nerf tracker site,” highlighting demand for third-party longitudinal evals rather than anecdotal comparisons. Several users reported anecdotal regressions in Opus 5.5 behavior across applied workflows: one claimed it now needed help from Gemini 3.8 Flash to catch coding bugs, while another said Higgsfield design/render outputs declined after initially strong results, wasting credits. These reports are not controlled benchmarks, but they point to the kinds of tasks users want tracked: bug-finding accuracy, design/render prompt fidelity, and day-over-day output consistency. Mmmkay. I didn’t believe others at first, but something is suddenly off with Opus 5.5 (Activity: 2045): A Claude Code Enterprise PAYG user reports a sharp perceived regression in Claude Opus 5.5 Med behavior after a monthly limit reset: from architecture-first, DRY/SOLID, token-efficient implementation to verbose preambles, duplicated code, “slopcode,” and token burn resembling prior Opus 5 behavior. They claim usage jumped from roughly 70% to 90% in about an hour, versus no spend-limit increase requests during the previous week of heavy ~12h/day O5.5 use, and offer daily cost/token data for comparison. A commenter cites external sentiment tracking showing Opus 5.5 Reddit sentiment dropping from 71–73/100 on Sep 25–28 to 58 yesterday and 55 today on modelsentiment.com , while noting it measures opinion rather than backend model changes. Top comments speculate Anthropic may have reduced compute, silently changed routing, or altered token accounting after launch hype, but no direct evidence is provided. The main debate is trust/reliability: users want stable model behavior and transparent deployment/versioning rather than perceived post-release regressions. A commenter tracking Reddit sentiment reports a sharp drop for Claude Opus 5.5 , with scores allegedly stable at 71–73/100 from Sep 25–28 before falling to 58 yesterday and 55 today on modelsentiment.com . They note this measures user opinion rather than model behavior , so it cannot confirm a backend change, but it may indicate a sudden perceived quality regression. Multiple users describe a suspected capability regression in Opus 5.5 , especially around instruction-following and multi-part prompt adherence: one says the model now “mentions 3 things and only acknowledges 2,” and even recognizes the omission when challenged. Another user says they reverted to “xhigh effort” mode for all tasks, implying lower default reliability or reduced reasoning/compliance under normal settings. One technical hypothesis raised is that Anthropic may have temporarily allocated more compute during launch/benchmarking and later reduced inference resources or altered token accounting, leading to perceived quality degradation. This is speculative and unverified, but the complaint centers on reproducibility and reliability: users want model behavior to remain stable after release rather than changing silently under the same product name. 3. AI Video Models and Motion Control Orbiting Lora + first and last frame in MiniMax gives fantastic results (Activity: 2263): A user shared a MiniMax-H3 LoRA for generating locked-subject 360° orbit shots from first/last-frame conditioning: pablodawson/MiniMax-H3-360-Orbit-LoRA . The prompt explicitly constrains the scene to a frozen instant—no object/pose deformation, no drifting, no continued action—so that camera parallax is the only motion source, targeting cleaner pseudo-volumetric outputs suitable for downstream reconstruction workflows. A linked Reddit demo video was mentioned, but the video URL could not be inspected due to Reddit returning 403 Forbidden . Commenters framed the LoRA as especially useful for creating 3D assets: one suggested feeding the generated orbit clip into Opus to extract snapshots for 3D model generation, claiming it improves style preservation. Another commenter extrapolated that this kind of orbit-consistent video generation brings consumer volumetric/VR viewing of existing films closer. One commenter describes a workflow where an orbiting/generated 3D video snippet is fed into Opus and instructed to extract snapshots for 3D model creation. They report that this improves style capture substantially versus prompting the model without the video reference, suggesting the orbit video acts as a strong multi-view conditioning source. A technical artifact noted in the output is inconsistent motion segmentation: humans remain effectively frozen while secondary elements such as the car, hair, and background explosion continue moving. This points to MiniMax preserving the subject pose from the first/last-frame constraints while still synthesizing environmental dynamics, which can create partial-animation mismatches. Griffin, the first Human Interaction Model to pass video Turing Test it’s already #1 on NVIDIA’s benchmark for full-duplex AI video - 44% of people thought it was a real person while other systems are at ~3% (Activity: 2018): A Reddit post claims Griffin, described as a “Human Interaction Model,” is the first system to pass a video Turing Test and ranks #1 on NVIDIA’s benchmark for full-duplex AI video, with 44% of participants judging it as a real person versus roughly ~3% for other systems. The linked Reddit video could not be independently accessed due to a 403 Forbidden response, so the benchmark details, methodology, and model architecture are not verifiable from the provided source. Comments were mostly non-technical: one user joked about the human/AI reveal being reversed, while another argued the technology is unnecessary and likely to be used in predatory applications. A commenter emphasized that a 44% human-identification rate is technically significant because humans are usually highly sensitive to subtle facial, timing, and behavioral anomalies—the basis of the uncanny valley problem in CGI/animatronics. They argued this suggests Griffin is substantially beyond prior “fake human” systems, especially compared with the post’s claim that other systems score around ~3% on the same video Turing-style benchmark. One technically relevant real-world abuse case raised was AI-generated job applicants : synthetic candidates allegedly apply, conduct video interviews, get hired, and then either gain internal platform access or steal shipped work equipment. The commenter noted that large companies with weak scrutiny or limited background checks may fail to detect these AI-mediated interviews, implying full-duplex video agents could materially worsen identity-verification and hiring-security risks.",
-      "author": "Latent.Space",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.latent.space",
-        "publication_platform": "substack",
-        "section": "industry_changes"
-      }
-    },
-    {
-      "id": "price:6e0a2a74c0a685efeed1",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 涨幅前十 2026-10-02",
-      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
-      "published_at": "2026-10-02T20:00:00+00:00",
-      "collected_at": "2026-10-06T00:01:54.790035+00:00",
-      "body": "1. PICS close 9.09; previous 8.43; change 7.8292%\n2. LIF close 43.099998; previous 40.299999; change 6.9479%\n3. RXT close 4.12; previous 3.86; change 6.7358%\n4. GENI close 6.02; previous 5.68; change 5.9859%\n5. NBIS close 242.809998; previous 232.279999; change 4.5333%\n6. IBTA close 41.610001; previous 39.919998; change 4.2335%\n7. PDFS close 55.5; previous 53.389999; change 3.9521%\n8. ORCL close 142.300003; previous 138.070007; change 3.0637%\n9. QLYS close 193.0; previous 187.429993; change 2.9718%\n10. RBRK close 118.580002; previous 115.400002; change 2.7556%",
-      "author": "",
-      "symbols": [
-        "PICS",
-        "LIF",
-        "RXT",
-        "GENI",
-        "NBIS",
-        "IBTA",
-        "PDFS",
-        "ORCL",
-        "QLYS",
-        "RBRK"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "gainers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-10-02",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "PICS",
-            "price_date": "2026-10-02",
-            "close": 9.09,
-            "previous_close": 8.43,
-            "change_amount": 0.66,
-            "change_percentage": 7.8292,
-            "url": "https://finance.yahoo.com/quote/PICS"
-          },
-          {
-            "ticker": "LIF",
-            "price_date": "2026-10-02",
-            "close": 43.099998,
-            "previous_close": 40.299999,
-            "change_amount": 2.799999,
-            "change_percentage": 6.9479,
-            "url": "https://finance.yahoo.com/quote/LIF"
-          },
-          {
-            "ticker": "RXT",
-            "price_date": "2026-10-02",
-            "close": 4.12,
-            "previous_close": 3.86,
-            "change_amount": 0.26,
-            "change_percentage": 6.7358,
-            "url": "https://finance.yahoo.com/quote/RXT"
-          },
-          {
-            "ticker": "GENI",
-            "price_date": "2026-10-02",
-            "close": 6.02,
-            "previous_close": 5.68,
-            "change_amount": 0.34,
-            "change_percentage": 5.9859,
-            "url": "https://finance.yahoo.com/quote/GENI"
-          },
-          {
-            "ticker": "NBIS",
-            "price_date": "2026-10-02",
-            "close": 242.809998,
-            "previous_close": 232.279999,
-            "change_amount": 10.529999,
-            "change_percentage": 4.5333,
-            "url": "https://finance.yahoo.com/quote/NBIS"
-          },
-          {
-            "ticker": "IBTA",
-            "price_date": "2026-10-02",
-            "close": 41.610001,
-            "previous_close": 39.919998,
-            "change_amount": 1.690002,
-            "change_percentage": 4.2335,
-            "url": "https://finance.yahoo.com/quote/IBTA"
-          },
-          {
-            "ticker": "PDFS",
-            "price_date": "2026-10-02",
-            "close": 55.5,
-            "previous_close": 53.389999,
-            "change_amount": 2.110001,
-            "change_percentage": 3.9521,
-            "url": "https://finance.yahoo.com/quote/PDFS"
-          },
-          {
-            "ticker": "ORCL",
-            "price_date": "2026-10-02",
-            "close": 142.300003,
-            "previous_close": 138.070007,
-            "change_amount": 4.229996,
-            "change_percentage": 3.0637,
-            "url": "https://finance.yahoo.com/quote/ORCL"
-          },
-          {
-            "ticker": "QLYS",
-            "price_date": "2026-10-02",
-            "close": 193.0,
-            "previous_close": 187.429993,
-            "change_amount": 5.570007,
-            "change_percentage": 2.9718,
-            "url": "https://finance.yahoo.com/quote/QLYS"
-          },
-          {
-            "ticker": "RBRK",
-            "price_date": "2026-10-02",
-            "close": 118.580002,
-            "previous_close": 115.400002,
-            "change_amount": 3.18,
-            "change_percentage": 2.7556,
-            "url": "https://finance.yahoo.com/quote/RBRK"
-          }
-        ]
-      }
-    },
-    {
-      "id": "price:2700dec006b27414b5ef",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 跌幅前十 2026-10-02",
-      "url": "https://finance.yahoo.com/markets/stocks/losers/",
-      "published_at": "2026-10-02T20:00:00+00:00",
-      "collected_at": "2026-10-06T00:01:54.790035+00:00",
-      "body": "1. EVCM close 8.94; previous 9.89; change -9.6057%\n2. SECZ close 12.99; previous 13.74; change -5.4585%\n3. GRND close 13.43; previous 14.17; change -5.2223%\n4. APP close 268.220001; previous 281.309998; change -4.6532%\n5. MNTN close 9.89; previous 10.34; change -4.352%\n6. SPOT close 472.890015; previous 491.399994; change -3.7668%\n7. GTM close 3.71; previous 3.85; change -3.6364%\n8. NIQ close 16.639999; previous 17.24; change -3.4803%\n9. ASAN close 8.62; previous 8.93; change -3.4714%\n10. NCNO close 18.68; previous 19.35; change -3.4625%",
-      "author": "",
-      "symbols": [
-        "EVCM",
-        "SECZ",
-        "GRND",
-        "APP",
-        "MNTN",
-        "SPOT",
-        "GTM",
-        "NIQ",
-        "ASAN",
-        "NCNO"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "losers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-10-02",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "EVCM",
-            "price_date": "2026-10-02",
-            "close": 8.94,
-            "previous_close": 9.89,
-            "change_amount": -0.950001,
-            "change_percentage": -9.6057,
-            "url": "https://finance.yahoo.com/quote/EVCM"
-          },
-          {
-            "ticker": "SECZ",
-            "price_date": "2026-10-02",
-            "close": 12.99,
-            "previous_close": 13.74,
-            "change_amount": -0.75,
-            "change_percentage": -5.4585,
-            "url": "https://finance.yahoo.com/quote/SECZ"
-          },
-          {
-            "ticker": "GRND",
-            "price_date": "2026-10-02",
-            "close": 13.43,
-            "previous_close": 14.17,
-            "change_amount": -0.74,
-            "change_percentage": -5.2223,
-            "url": "https://finance.yahoo.com/quote/GRND"
-          },
-          {
-            "ticker": "APP",
-            "price_date": "2026-10-02",
-            "close": 268.220001,
-            "previous_close": 281.309998,
-            "change_amount": -13.089996,
-            "change_percentage": -4.6532,
-            "url": "https://finance.yahoo.com/quote/APP"
-          },
-          {
-            "ticker": "MNTN",
-            "price_date": "2026-10-02",
-            "close": 9.89,
-            "previous_close": 10.34,
-            "change_amount": -0.45,
-            "change_percentage": -4.352,
-            "url": "https://finance.yahoo.com/quote/MNTN"
-          },
-          {
-            "ticker": "SPOT",
-            "price_date": "2026-10-02",
-            "close": 472.890015,
-            "previous_close": 491.399994,
-            "change_amount": -18.509979,
-            "change_percentage": -3.7668,
-            "url": "https://finance.yahoo.com/quote/SPOT"
-          },
-          {
-            "ticker": "GTM",
-            "price_date": "2026-10-02",
-            "close": 3.71,
-            "previous_close": 3.85,
-            "change_amount": -0.14,
-            "change_percentage": -3.6364,
-            "url": "https://finance.yahoo.com/quote/GTM"
-          },
-          {
-            "ticker": "NIQ",
-            "price_date": "2026-10-02",
-            "close": 16.639999,
-            "previous_close": 17.24,
-            "change_amount": -0.6,
-            "change_percentage": -3.4803,
-            "url": "https://finance.yahoo.com/quote/NIQ"
-          },
-          {
-            "ticker": "ASAN",
-            "price_date": "2026-10-02",
-            "close": 8.62,
-            "previous_close": 8.93,
-            "change_amount": -0.31,
-            "change_percentage": -3.4714,
-            "url": "https://finance.yahoo.com/quote/ASAN"
-          },
-          {
-            "ticker": "NCNO",
-            "price_date": "2026-10-02",
-            "close": 18.68,
-            "previous_close": 19.35,
-            "change_amount": -0.67,
-            "change_percentage": -3.4625,
-            "url": "https://finance.yahoo.com/quote/NCNO"
-          }
-        ]
       }
     }
   ]
