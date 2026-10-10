@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-09T00:01:43.175886+00:00",
+  "generated_at": "2026-10-10T00:02:31.708317+00:00",
   "pipelines": [
     {
       "pipeline": "substack",
       "status": "ok",
-      "item_count": 4,
+      "item_count": 9,
       "errors": [],
       "notes": [
         "Clouded Judgement: public reader fallback used",
@@ -20,23 +20,25 @@
     },
     {
       "pipeline": "reddit",
-      "status": "ok",
+      "status": "partial",
       "item_count": 1,
-      "errors": [],
+      "errors": [
+        "r/SecurityAnalysis: RSS=Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SecurityAnalysis/search.rss?restrict_sr=1&sort=top&t=day&q=flair%3A%22Thesis%22%20OR%20flair%3A%22Short%20Thesis%22'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429; JSON=Client error '403 Blocked' for url 'https://www.reddit.com/r/SecurityAnalysis/search.json?q=flair%3A%22Thesis%22+OR+flair%3A%22Short+Thesis%22&restrict_sr=1&sort=top&t=day&limit=10&raw_json=1'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+      ],
       "notes": [
         "r/wallstreetbets: anonymous dd RSS transport used",
-        "r/SecurityAnalysis: anonymous thesis RSS transport used",
         "Downloaded 1 Reddit image(s) into the current feed media directory"
       ]
     },
     {
       "pipeline": "prices",
-      "status": "ok",
+      "status": "partial",
       "item_count": 2,
       "errors": [],
       "notes": [
         "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "Latest available Yahoo EOD date is 2026-10-07; run after the US close to collect 2026-10-08."
+        "Ignored incomplete Yahoo EOD date 2026-10-09: 1/203 ticker closes available; latest sufficiently complete date is 2026-10-08.",
+        "Latest available Yahoo EOD date is 2026-10-08; run after the US close to collect 2026-10-09."
       ]
     },
     {
@@ -179,14 +181,216 @@
     }
   ],
   "counts": {
-    "total": 493,
-    "substack": 14,
+    "total": 496,
+    "substack": 17,
     "rss": 2,
     "reddit": 1,
     "x": 474,
     "price": 2
   },
   "items": [
+    {
+      "id": "substack:377afb641e4cb3d675c7",
+      "source_type": "substack",
+      "source_name": "Interconnects",
+      "title": "I expect rapid progress but not towards general superintelligence",
+      "url": "https://www.interconnects.ai/p/i-expect-rapid-progress-but-not-towards",
+      "published_at": "2026-10-09T21:33:47+00:00",
+      "collected_at": "2026-10-10T00:00:43.730982+00:00",
+      "body": "I’ve often been surprised when I hear from top researchers in industry that they think AI will be better than them at their job in a few years, and I didn’t really know why I doubted it. The explanation I arrived at is that researchers are seeing this massive acceleration in the infra and engineering capabilities of the models. I fully agree that the models will be superhuman distributed GPU engineers in a few years. This will make experimentation and tinkering with the formulation of the models far easier, but it will not make our models dramatically different in nature. In some ways, Ilya was early in his declaration of AI being in the era of research . Research is much easier today now that we have coding agents. This ease is through a different form of work that is flexible and engaging, which signals the start of an era where good ideas can be much more valuable than good execution in software. Subscribe now We’re very early on this path. It’s also not the first transition the field has seen across the balance in if AI is more “research” or “engineering.” Before deep learning took off, AI was also far more of a research endeavor. Today, the best researchers are well-known to be judged by their ability to implement and scale their ideas in complex infrastructure. We’re about to go through a massive acceleration over a few years where the bottleneck is less and less engineering again. Some call this RSI, but a more grounded form is simply “parallelized, AI-assisted language modeling.” You don’t need to buy into takeoff scenarios to see just how much infrastructure improvements are coming, and how this’ll change the nature of working in AI. The goal of this piece is to give an overview on why this engineering acceleration will happen, and touch on what it won’t quite fix. This’ll be a massive boon for diffusion of the technology into the economy, even if we don’t get economically valuable superhuman traits outside of math and coding. A lot of this near-term progress comes from scaling the inference-time compute we have with current tools, rather than dramatic step-changes in how good the models are at research. Share Many pieces of the AI training and inference stack are very verifiable. Training metrics like tokens per second per GPU, which is just training speed. Inference metrics look like tokens per prompt, FLOPs per token, or really just cost per answer. Both of these are very optimizable, especially as there are established sub-problems and architecture trade-offs which can improve them. I expect AI agents to help optimize this process end-to-end in a few years, where our inference capabilities get very close to the underlying maximum compute possible on our accelerators like GPUs. Over the previous few years, the gains companies can make on inference efficiency were already giant, e.g. saving like 10-30% on cost to serve a model after announcing it at a certain price point. This entire stack will compound, and I expect the effective cost of model intelligence to decline near-exponentially over the coming years (potentially faster than recent trends). This low-hanging fruit of efficiency should take only a few years to capture. The longer term will be co-design of accelerators and models on longer timelines, which give extra orders of magnitude in efficiency on top of the flexible GPU platform. During this time of rapid efficiency gains, the flexibility of the GPU should be kind, as exploration space in architecture feels important and like a major lever of automated research. A prediction of pretraining research, at least in architecture and data selection to serve our current class of models, being automated in 2-3 years feels reasonable to me. All of this will be a massive trigger of Jevons paradox for agentic models. I expect demand to only increase, as the industry is largely bottlenecked on figuring out better ways to orient and deliver the agents. Meta’s Muse agent is an early indicator of this and we should expect more Muse-like experiences for different audiences and target use-cases. It’s value created by understanding how agents work, rather than pushing the frontier of performance. The equivalent phase in the broader scientific literature like biology and chemistry will be an era defined by models finding numerous cross-sub-field findings. The AI models are superhuman at crawling literature and making connections across sparse networks which are currently stewarded by small communities of scientists who rarely interacted. There will be a fine line between this heralding a new era of scientific discovery, e.g. with cures of most cancers, or an acceleration of the arc science was already on. Another industrial-scale piece of low-hanging fruit is improving the general quality of RL environments. You don’t have to look far to see another new RL data company that’s crossed $100M or $1B in revenue. There are way more than I expected. The average outputs from this sector is remarkably low-quality. Countless researchers agree that lots of what they buy is frankly crap. At the same time, the leading labs see clear return on investment from buying the data. The way that many RL environments are cruddy is clearly fixable. Read more",
+      "author": "Nathan Lambert",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.interconnects.ai",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "substack:8ba6cdd3bee3c4026a75",
+      "source_type": "substack",
+      "source_name": "Liberty's Highlights",
+      "title": "664: Can AI Break Cryptography?, One Mac vs. 100 Million 386s, Home Depot’s $223B Cadillac, OpenAI’s Missing $20B, 135,000 Security Flaws, the CIA’s Spy Cat, Music & the Brain, and Nolan on Heat",
+      "url": "https://www.libertyrpf.com/p/664-can-ai-break-cryptography-one",
+      "published_at": "2026-10-09T16:34:52+00:00",
+      "collected_at": "2026-10-10T00:00:57.428022+00:00",
+      "body": "I asked Miles after the gig, “Miles, what am I supposed to be doing up there?” He said, “When they play fast, you play slow. When they play slow, you play fast.” —Buster Williams, recalling advice from Miles Davis 💾🖥️🚀 the first real computer I used was my dad’s 386 DX/25 MHz. It had 8 megs of RAM and the optional 387 floating-point coprocessor. It was just powerful enough to play Doom at something like 10 frames per second in low-detail mode. The photo above is not the actual one from my childhood, but it’s pretty close. I recently upgraded my desktop to a Mac Studio M5 Max with 64 gigs of RAM. It got me thinking about how much more powerful computers have become in my lifetime. I asked GPT-6 to help me get a ballpark figure. Of course, this is a very rough comparison: old and new hardware aren’t really apples to apples, and I’m ignoring other bottlenecks like storage, memory bandwidth, and networking. At first it was only comparing CPU to CPU, but a big share of modern compute lives in the GPU and AI accelerators, so I decided to include those too. 1. CPU: ~30,000× faster 386DX-25: ~8.5 million instructions/second M5 Max (18 CPU cores): ~280 billion integer operations/second 280,000,000,000 ÷ 8,500,000 = ~33,000× Approximation: historical MIPS and modern integer benchmarks aren’t directly equivalent. 2. GPU: ~25 million× faster 386DX-25 + 387 coprocessor: ~800,000 floating-point operations/second M5 Max GPU (40 cores): ~20 trillion FP32 operations/second 20,000,000,000,000 ÷ 800,000 = 25,000,000× Approximation: the historical 387 and modern GPU figures use different floating-point workloads and precisions. 3. AI accelerators: ~100 million× faster Estimated M5 Max peak low-precision throughput: GPU neural accelerators: ~119 trillion INT8 operations/second Neural Engine (16 cores): ~61 trillion INT8 operations/second Combined: ~180 trillion operations/second Estimated 386DX-25 throughput for comparable integer arithmetic: 25 million clock cycles/second, approximately 20–30 cycles per multiply-accumulate, and 2 arithmetic operations per multiply-accumulate. 25,000,000 ÷ (20–30) × 2 = ~1.7–2.5 million operations/second Using approximately 2 million operations/second: 180,000,000,000,000 ÷ 2,000,000 = 90,000,000× Rounded: ~100 million 386s. This is the most speculative comparison. The GPU and Neural Engine throughput figures are estimates, and the calculation assumes they can sustain peak performance simultaneously. But this is only because my dad got the optional 387 floating point unit. Without it, the M5 Max is closer to 1 billion times faster 🤯 4. RAM: 8,192× more 386DX-25: 8 MB M5 Max: 64 GB (65,536 MB) 65,536 ÷ 8 = 8,192× Bottom line The M5 Max has roughly 30,000 times the CPU throughput, 25 million times the floating-point throughput, and maybe 100 million times the specialized low-precision compute throughput of that old 386 DX/25. These are theoretical, workload-dependent comparisons, not directly interchangeable benchmarks. The CPU, GPU, and AI figures shouldn’t be added together. Pretty incredible! And these numbers are so large that they're almost impossible to visualize. Just for fun, I asked for an image of what that may look like. 😅 💚 🥃 To keep this steamboat alive and afloat , I need supporters. Like you ! 🚢 The paid subscription includes the full feed, every podcast, Zoom Q&As with me, and access to the private Discord clubhouse , where a core group of us hang out and discuss the interesting stuff we find: Get the full Liberty feed and help keep the Serendipity Engine running by becoming a paid supporter. Thank you 💚🥃🦊🐙⚓️ 🏦 💰 Business & Investing 💳 💴 🔐🤖 What If AI Breaks Cryptography? (The Dog That Didn’t Bark 🐕) Things are very unpredictable right now. Who had on their bingo card that so many of the top open math problems would have their proposed solutions released all on the same day: If even most of these proofs hold up, how long until most of the top problems are solved? Then how long until the next batch of even more difficult problems are posed by AI rather than by human mathematicians? 🤔 Also worth noting that OpenAI withdrew three manuscripts following a mathematical error and revised 14 others… BUT …people outside of OpenAI have been improving and simplifying some of the proofs! Open source, distributed, crowd-source high-level mathematics is now possible for a much wider group of people — even non-mathematicians! — thanks to these tools! Douglas Colkitt and contributors have already sharpened one of OpenAI’s integer-multiplication results. The improvement is conditional on OpenAI’s original framework and still needs independent review. Sela Navot used publicly available AI models to extend OpenAI’s matrix-multiplication proof from complex numbers to arbitrary fields, then checked the extension using Lean, a mathematical proof checker. And all this math isn’t just esoteric ‘angels dancing on the head of a pin’ type stuff. Many of these breakthroughs can have practical applications. Ole Lehmann compiled a speculative list of what some of these mathematical advances might eventually help make possible (the road from proof to application can be long and difficult): here’s what OpenAI’s math breakthroughs could eventually help make possible in the real world: Vlasov–Maxwell → stronger foundations for fusion research, whose ultimate prize is virtually limitless clean energy to power civilization Calderón’s Problem → portable body scanners using electrical signals, making medical imaging cheaper and easier to access Maximum-Cardinality Matching → faster searches for compatible kidney swaps across large donor pools, helping hospitals coordinate lifesaving transplants Inverse Elasticity Problem → scans that map tissue stiffness, helping doctors locate suspicious growths inside the body Mumford–Shah Conjecture → better tools for spotting tissue changes in brain scans, helping doctors identify signs of disease Bose–Einstein Condensation → stronger foundations for quantum sensors that could help vehicles navigate without GPS Simple Stochastic Games → better safety checks for self-driving cars and robots before dangerous mistakes reach the real world Matrix Multiplication → cheaper AI and bigger scientific simulations using the same computers Edit Distance → faster DNA comparisons, helping researchers study genetic changes linked to disease The k-Server Problem → robots that waste less movement and energy, making warehouses more efficient and goods cheaper to move a reminder that math is the foundation of science. so accelerating mathematical discovery could compress centuries of scientific progress into years. But as Sherlock Holmes so eloquently taught us, sometimes it’s the dog that doesn’t bark that is interesting. Scott Aaronson writes : As several people have pointed out, cryptography is a subfield that’s extremely conspicuous by its absence from OpenAI’s list of 376 papers! But my sources tell me that the AI companies have now started, gingerly and discreetly, investigating whether their latest internal models can break important cryptographic protocols and primitives. If they can , then it would certainly be nice to get ahead of things before the rest of the world figures out the same. It’s a bit like in the late 1930s when fission physicists were publishing freely , and then all of a sudden they stopped. The silence itself was a signal. In 1942, Soviet physicist Georgy Flerov noticed the missing papers and wrote to Stalin, arguing that the silence itself was evidence of secret research. Solvay conference, 1930 (different than the other super famous photo from that conference, that one from 1927) Vitalik Buterin also seems worried: On July 28, 2026, Anthropic published research showing that Claude Mythos Preview had found a substantially faster mathematical attack against HAWK , a proposed post-quantum digital-signature scheme. HAWK hadn't been deployed, so no real-world systems were compromised. Digital signatures help verify that transactions, messages, or software updates are authentic. They’re different from encryption, which keeps information secret. But the model had found a weakness in the cryptography itself, not a bug in the software implementing it. By finding this early, Anthropic helped make crypto safer. The nightmare scenario is discovering a comparable weakness AFTER an algorithm has been deployed widely. One AI lab might find the mathematical shortcut, but replacing vulnerable cryptography across banks, browsers, operating systems, cloud services, and countless other systems could take years. If attackers could exploit the weakness, they could do a lot of damage. 💣💥 We don't know how far the labs' private cryptographic research has gotten since then. The CIA’s Kryptos sculpture. I’m surprised AI hasn’t solved the last panel yet. It’s not much of a stretch to imagine that three-letter agencies are asking AI labs to investigate sensitive cryptographic problems privately. Whether anyone has actually asked a lab to keep a major breakthrough secret, I have no idea. 🤐 There’s a strange reversal of incentives here. Earlier I was celebrating how AI is opening up advanced mathematics, with people sharing and improving each other’s proofs on GitHub. But if someone discovers a practical way to break widely used cryptography, publishing the discovery could give attackers a head start before anyone has time to defend against it. Keeping it secret isn’t exactly a great solution either. If an intelligence agency discovered a practical weakness in widely used cryptography, it might be more valuable to keep secret than to fix. Meanwhile, the companies and people depending on that cryptography would face a risk they didn’t even know about, and would ultimately bear much of the cost of replacing it. You could warn affected organizations privately first, but who do you tell when the same algorithm is used all over the world? 🤔 Weaknesses in the cryptographic stack can be fixed if you see them coming. As computing power has increased, algorithms have been adapted to use longer keys to make brute-force attacks harder, and more secure algorithms have replaced those where shortcuts and flaws have been discovered. And in anticipation of powerful quantum computers, we've been developing post-quantum algorithms. But that assumes we get enough warning. It’s kind of a Sneakers situation. What could bad actors do if AI discovered a practical weakness in an algorithm used everywhere? If digital signatures were broken, they might be able to forge transactions or software updates. If encryption or key exchange were broken, they might be able to read confidential communications, potentially including some that were intercepted years ago and saved for later (aka harvest now, decrypt later ). Criminal enterprises and intelligence agencies would do all kinds of IP theft, blackmail, etc. (more than they’re already doing, I mean). Now, I’m not saying that I have any idea if the crypto stack will break anytime soon, but it has me worried. Modern cryptography depends on some mathematical problems being too difficult to solve in any practical amount of time. What happens if AI finds shortcuts nobody anticipated? ¯\\_(ツ)_/¯ 💸 OpenAI’s Missing $20bn in ARR (Sort Of) 🤔 Read more",
+      "author": "Liberty 💚 🥃",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.libertyrpf.com/",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:20f7661a44f976d0338a",
+      "source_type": "substack",
+      "source_name": "MBI Deep Dives",
+      "title": "Room at the Top",
+      "url": "https://mbideepdives.substack.com/p/room-at-the-top",
+      "published_at": "2026-10-09T16:20:15+00:00",
+      "collected_at": "2026-10-10T00:00:49.336251+00:00",
+      "body": "I came across this astonishing [chart](https://x.com/michaelbatnick/status/2108232094258512061) from Michael Batnick yesterday showing that the combined market cap of the bottom **434 companies** in the S&P 500 equals that of the top 5. It is the time series, though, that drives home just how unusually concentrated the index has become over the last 30 years. Even at the height of the tech bubble, the number was below 350 and following the crash, the number went closer to 200. And we have been at or above tech-bubble levels of concentration consistently since 2019, save for a brief pause in 2022. While it can be tempting to jump to the “B” word, what should temper such inference is that it’s not just market cap, but also earnings that largely mirror this massive concentration at the top.\n\n[![Image 1: Image](https://substackcdn.com/image/fetch/$s_!UNaA!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F430f8036-6991-4b6f-931f-9d89d637680d_1749x984.jpeg)](https://substackcdn.com/image/fetch/$s_!UNaA!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F430f8036-6991-4b6f-931f-9d89d637680d_1749x984.jpeg)\n\nIn a follow-up [tweet](https://x.com/michaelbatnick/status/2108232752755872209), he noted: “Interestingly, the TTM net income of the top 5 stocks is also equal to the bottom 436 companies.” For what it’s worth, when I asked Claude to fact-check this, it came up with 420. Whatever the actual number is, my point is the deeper truth doesn’t change: technology distribution is now truly global, a handful of companies have aggregated demand on top of it, and with near-zero marginal cost, much of every incremental dollar of revenue falls straight to the bottom line. Concentrated market cap hence looks more like the market faithfully mirroring where the profits have actually gone.\n\nBut wait a minute, aren’t we leaving behind the world of zero marginal cost? Perhaps, but given the allegedly lofty [inference margin](https://newsletter.semianalysis.com/p/anthropic-subscriptions-offer-5x) in the API layer for the labs, one wonders whether we haven’t quite diverged from the zero marginal world as much we thought we did. More importantly, I sometimes wonder what it would imply if all this capex buildout actually yields attractive returns. I asked Claude how many of the bottom S&P 500 companies it would take to match the capex of the top 5. Claude said 340 companies. There are couple of things I would highlight here. First, the top 5 includes Nvidia and Apple, neither of which is meaningfully participating in the buildout (though Nvidia is its largest direct beneficiary). If you swap them out for the five hyperscalers (Amazon, Alphabet, Microsoft, Meta and Oracle), their ~$586 Billion of LTM capex matches that of the bottom ~420 companies combined. So it’s no longer just market cap and earnings; capex, too, is now concentrated to a similar degree. And second, this is an LTM number. I imagine the NTM capex for hyperscalers will be even more extreme. Since today’s capex is tomorrow’s earnings base, if the buildout continues and returns meet or exceed expectations, you can imagine how this concentration may start to feel politically a bit… too uncomfortable!\n\nOne challenge with discussions of concentration (or income and wealth inequality) is that, I suspect, most people imagine stagnation at the top as things become more and more concentrated. It’s counterintuitive, but things can keep getting more concentrated even while there is a surprising amount of churn within the concentrated group. So far, capitalism hasn’t let anyone rest on their laurels, even at the top. Consider this slide from Coatue’s recent “Public Markets Update” [deck](https://drive.google.com/file/d/1z9VdvbG0FzbhS3tmlIluXChFaawnpMZq/view): **nearly half of the S&P 500’s top 15 companies in 2026 weren’t on the list in 2022!**\n\n[![Image 2](https://substackcdn.com/image/fetch/$s_!j7OZ!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcb69bb9a-ef69-453d-83a5-e56169e3c8b9_2170x1188.png)](https://substackcdn.com/image/fetch/$s_!j7OZ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcb69bb9a-ef69-453d-83a5-e56169e3c8b9_2170x1188.png)\n\nComparing the top 15 before and after the ChatGPT moment, the list is now, understandably, dominated by tech and semiconductor companies. As we enter the age of intelligence, companies across its value chain are benefiting the most, and those that dropped out are mostly the ones without an active role in it.\n\n[![Image 3](https://substackcdn.com/image/fetch/$s_!SQCR!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe8a31c3c-c251-4c1e-b470-7e5756f03105_2254x1222.png)](https://substackcdn.com/image/fetch/$s_!SQCR!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe8a31c3c-c251-4c1e-b470-7e5756f03105_2254x1222.png)\n\nThe question is: what will this list look like in 2030? Now that the list is dominated by companies across the intelligence value chain, should we expect some sort of stagnation? That is definitely a plausible scenario. Politically, concentration is always a cause for concern and as we head into the 2028 election in a couple of years, such concentration can become a thorny topic. Personally, I think we will muddle through the potential political backlash if and only if things remain quite **dynamic at the top**. I believe it is likely to be far more politically palatable in the near to medium term if we observe Schumpeterian creative destruction among the top 10-15 companies in the S&P 500.\n\nBut what about the long term? Even with plenty of creative destruction near the top, concentration presumably can’t keep rising forever, though it’s hard to rule out it going even further from here. But we have actually seen even deeper concentration in the stock market before. At the beginning of the 20th century, railroads [contributed](https://www.ubs.com/content/dam/assets/wm/static/cio/documents/giry2026-summary-public.pdf) ~63% of the US and ~50% of the UK total stock market capitalization. Today, it is less than 1%. History suggests today’s technologies often become tomorrow’s commodities. AI is not railroads, and there are important differences that may make these historical parallels largely irrelevant. The speed at which AI diffuses through existing distribution, the talent density at the top, and the cash flows and fortress balance sheets built during the near-zero-marginal-cost era arguably raise the odds of concentration beyond anything we have seen before.\n\n[![Image 4](https://substackcdn.com/image/fetch/$s_!0TkR!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F14e07f08-0b67-42c5-8075-6be7b2e0e5cd_1389x1105.png)](https://substackcdn.com/image/fetch/$s_!0TkR!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F14e07f08-0b67-42c5-8075-6be7b2e0e5cd_1389x1105.png)\n\nImage Source: [UBS](https://www.ubs.com/content/dam/assets/wm/static/cio/documents/giry2026-summary-public.pdf)\n\nI am a naturally optimistic person. I share the unease about a world in which a handful of companies generate much of its profits, but despite the differences, railroads can still be quite instructive. The same UBS report had this rather mind boggling stat:\n\n> “…railroads, despite being a declining industry over the period of the study (falling from 63% of the US market in 1900 to less than 1% today), actually outperformed both the US stock market and their newer technology competitors since 1900.”\n\nUltimately, the economy the railroads helped make possible grew far larger than the rails themselves. Refrigerated railcars turned a St. Louis brewery into [Budweiser](https://en.wikipedia.org/wiki/Adolphus_Busch). A national rail network turned a mail-order catalog into [Sears](https://www.atlasobscura.com/articles/sears-postal-service-catalogs). Railroad express contracts turned a parcel-and-cash courier into [American Express](https://www.encyclopedia.com/social-sciences-and-law/economics-business-and-labor/businesses-and-occupations/american-express-company#3498000012). Grain sheds at the end of a rail line turned an Iowa grain flathouse into [Cargill](https://www.thegazette.com/news/time-machine-from-conover-to-minneapolis/article_c310d022-15a5-5f13-bfcc-f52ad8c3d116.html).\n\nAI may inflict plenty of creative destruction, but it will likely also usher in a Cambrian explosion of small businesses that can hire and scale with AI agents faster than ever before. Much of their spending may well flow straight back to the top, so the “434” may not come down anytime soon. But perhaps the most hopeful version of this story doesn’t require the top 5 to shrink at all; it’s one where companies **not yet founded** grow large enough to join them.\n\n_Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on **[70](https://mbideepdives.substack.com/p/deep-dives)+** companies. The daily is just how I think out loud between the Deep Dives!_\n\n**Current Portfolio:**\n\nPlease note that these are **NOT** my recommendation to buy/sell these securities, but just disclosure from my end so that you can assess potential biases that I may have because of my own personal portfolio holdings. Always consider my write-up my personal investing journal and never forget my objectives, risk tolerance, and constraints may have no resemblance to yours.\n\nMy current portfolio is disclosed below:",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mbideepdives.substack.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas",
+        "transport": "public_reader_fallback"
+      }
+    },
+    {
+      "id": "rss:8d0e1e35676b200a47f7",
+      "source_type": "rss",
+      "source_name": "Mobile Dev Memo",
+      "title": "Agentic commerce is not a mirage for travel",
+      "url": "https://mdm.co/agentic-commerce-is-not-a-mirage-for-travel/",
+      "published_at": "2026-10-09T16:14:17+00:00",
+      "collected_at": "2026-10-10T00:00:59.207374+00:00",
+      "body": "Agentic commerce is poised for success in travel booking despite challenges in traditional retail. By replicating the discovery functions of online agencies, agents offer lower distribution costs for hotels and airlines. Success occurs because travel suppliers maintain direct consumer relationships, unlike retail platforms that control the shopping lifecycle.",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mobiledevmemo.com/",
+        "publication_platform": "wordpress",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:f7e4d95da011c29978dc",
+      "source_type": "substack",
+      "source_name": "Aspiring for Intelligence",
+      "title": "Highlights From the 2026 IA40 Summit",
+      "url": "https://aspiringforintelligence.substack.com/p/highlights-from-the-2026-ia-summit",
+      "published_at": "2026-10-09T15:04:14+00:00",
+      "collected_at": "2026-10-10T00:00:53.250086+00:00",
+      "body": "This past week Madrona hosted its fifth annual IA40 Summit, where we celebrated the winners of the [IA40](https://www.ia40.com/the-list/) (the top 40 private AI startups as voted on by our VC peers) and heard from AI leaders and builders like [Rahul Patil](https://www.linkedin.com/in/rahul-patil-a0944836/) (CTO Anthropic) [Charles Lamanna](https://www.linkedin.com/in/charleslamanna) (EVP at Microsoft), [Swami Sivasubramanian](https://www.linkedin.com/in/swaminathansivasubramanian/?isSelfProfile=false) (VP of Agentic AI at AWS), [Zico Kolter](https://www.linkedin.com/in/zico-kolter-560382a4/?isSelfProfile=false) (OpenAI board member and co-founder of Gray Swan), [Thomas Dohmke](https://www.linkedin.com/in/ashtom) (former CEO of GitHub, now founder of Entire), [Jeanne Grosser](https://www.linkedin.com/in/jeannedewitt) (COO of Vercel), [Carina Hong](https://www.linkedin.com/in/carina-hong) (CEO of Axiom Math), and many others. It was also our biggest summit yet with over 400+ attendees :)\n\nThis year’s theme was **harnessing the value of AI**. The conversation has moved past the model itself to the AI _system_: models plus tools plus agentic interfaces, wrapped in context and a flywheel of engagement. As our partner [Matt McIlwain](https://www.linkedin.com/in/matt-mcilwain/?isSelfProfile=false) put it in his opening remarks, “we’ve moved beyond, strictly speaking, token maxing.”\n\nEvery layer now needs an ROI, and the questions of authority, agency, and accountability are no longer theoretical.\n\nThe numbers behind the IA40 tell the same story. The 164 winners across six years have raised over $500B, and Databricks is the _only_ company to make all six lists. Twenty-three companies are repeat winners this year, more than ever. Excluding OpenAI, Anthropic, and Databricks, which together account for 92% of dollars raised, the remaining winners have each raised over $800M on average.\n\nAs always, we share our five key takeaways from the Summit here.\n\n[![Image 1: 2026 Intelligent Applications 40 winners organized by Early, Mid, Late, Enablers, and Emerging Enablers.](https://substackcdn.com/image/fetch/$s_!629k!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6fc09330-5bfc-458e-bc08-07302998b975_936x1075.png)](https://substackcdn.com/image/fetch/$s_!629k!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6fc09330-5bfc-458e-bc08-07302998b975_936x1075.png)\n\nLast year, we wrote that we were “heading toward an agent-first world.” This year, that world showed up. Across nearly every session, agents weren’t a prediction; they were part of how the speakers do their jobs today.\n\nThe clearest evidence came from software engineering. [Eno Reyes](https://www.linkedin.com/in/enoreyes), co-founder and CTO of Factory, noted that autocomplete as the primary paradigm of AI-enabled development is only three and a half years old, and that last December there was a “renaissance” of developers downloading tools like Claude Code and Codex. [Madison McIlwain](https://www.linkedin.com/in/madison-mcilwain) from Vercel shared that **56% of Vercel’s production deployments are now done by agents.** Charles indicated t**eams of 15 to 20 people at Microsoft are now doing “in six months... the work that used to take hundreds of people multiple years,**” and that his top coders are on track to spend over $1M a year on tokens. Thomas Dohmke put it simply: “It’s never been more fun to be a software developer.”\n\nThe shift isn’t limited to code. [Ryan Daniels](https://www.linkedin.com/in/crosbyryan/?isSelfProfile=false) of Crosby is building an AI-native law firm that sells fixed-price legal work, delivered by agents over email and Slack. Carina Hong’s Axiom Math has agents producing new mathematics at scale, including a new record on bounded gaps between primes. [Rahul Patil](https://www.linkedin.com/in/rahul-patil-a0944836/?isSelfProfile=false), CTO of Anthropic shared that for every minute a person spends with AI, “it puts out like something like 1,000 to maybe 10,000 minutes of work.” And Stripe’s [Maia Josebachvili](https://www.linkedin.com/in/maiaj) described agentic commerce volume that sat flat for eight or nine months and then “literally 180X’d” in six weeks.\n\nWhat’s next is autonomy. [Taroon Mandhana](https://www.linkedin.com/in/taroonm/?isSelfProfile=false) of Atlassian called it a continuum, with run-the-business loops like alerts and vulnerability fixes largely automated and new feature work only partly so. Eno talked about moving from “I send a thing to do a task and it comes back” to systems that proactively do work on behalf of goals. Charles pointed to always-on, persistent agents, living inside Teams, Slack, WhatsApp, and iMessage, as where “a lot of AI value will be created.” And Jeanne described agents that don’t just alert you to a problem but have “already written the PR to fix it.”\n\n**There’s also a new customer emerging: the agent itself.** Charles argued that thin SaaS apps will have to “go headless” behind AI super apps, and that “agents are very harsh customers” who will “find the cheapest, the fastest, the most reliable” and migrate quickly. Salesforce, AWS, and Databricks all echoed this, with AWS’s G2 noting that “the database is the ultimate headless app” and Databricks’ [Zaheera Valani](https://www.linkedin.com/in/zaheera-valani-32769116/?isSelfProfile=false) sharing that **roughly 80% of databases are now created by agents**. In the near term, the takeaway is to design products for agents as first-class users, not just humans.\n\nStill, the gap between the frontier and the average enterprise is wide. Swami cited IDC data that only 7% of enterprises have deployed agents, with another 17% close. **The agents have arrived, but diffusion is just beginning.**\n\n[![Image 2: 3983-IA40-Summit-LR.jpg](https://substackcdn.com/image/fetch/$s_!TZ8E!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F560f9613-8b69-4d94-b487-780111b056ed_800x534.jpeg)](https://substackcdn.com/image/fetch/$s_!TZ8E!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F560f9613-8b69-4d94-b487-780111b056ed_800x534.jpeg)\n\nEvery new generation of software demands a new generation of infrastructure, as Jeanne from Vercel put it. This year’s Summit made clear that **a new stack is being built specifically for agents, and it is growing at an extraordinary pace.**\n\n[Paul Klein](https://www.linkedin.com/in/paulkleiniv) of Browserbase and [Will Bryk](https://www.linkedin.com/in/william-bryk/?isSelfProfile=false) of Exa laid out two of its core primitives: browsing and search. Paul argued that the **web “is not going away,” so agents should get browsers they can operate alongside people, much as Waymo operates on human roads.** He also noted that the number of tokens used to have agents _use_ software will be an order of magnitude larger than the number used to create it. Will went further, saying agents are “breaking search”: agent queries will soon exceed the roughly 15 billion human queries a day, and in a few years could be 1,000x higher. “You’re gonna have to build bigger infrastructure than Google,” he said.\n\nAround these primitives, a whole layer is forming. Vercel described **sandboxes, long-thinking compute, and an AI gateway as new primitives, with CLIs and MCPs as first-class citizens.** Swami walked through AgentCore, which came from AWS’s own teams repeatedly rebuilding isolation, identity, and observability for their agents, along with the open-source Strands SDK and “context as a service.” Carina predicted a new version of GitHub built for agents (”MultiHub,” in her words) because agents need local version control following a directed graph structure, and said “the infrastructure bottleneck’s not so much compute. It’s a software infrastructure bottleneck.” Entire is taking a related bet: storing the agent’s session log alongside the code in Git as the “new system of record.”\n\nUnderneath it all, the physical layer is still stretched. Capex for the five biggest tech companies is up roughly 75% year over year, with projections of over $1T next year. [Jamin Ball](https://www.linkedin.com/in/jamin-ball-49366137/?isSelfProfile=false) of Altimeter summed up the investor view: **“the world’s going to consume more models, more power, more compute, networking, and storage.”** The same panel warned that political backlash against data centers is a real risk and an echo of what stalled nuclear decades ago.\n\nFor founders, the message was consistent: the model layer will keep shifting, so the durable value is in the layers around it, and in staying model-agnostic. Value in the infra layer of the stack is skyrocketing.\n\n[![Image 3: 3023-IA40-Summit-LR.jpg](https://substackcdn.com/image/fetch/$s_!JA6p!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F36ce3177-f1e3-4f1b-b4c6-0ac04347eb5e_800x534.jpeg)](https://substackcdn.com/image/fetch/$s_!JA6p!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F36ce3177-f1e3-4f1b-b4c6-0ac04347eb5e_800x534.jpeg)\n\nLast year, safety was a thread. This year it was a main storyline. As agents move from answering questions to taking actions, the stakes of getting them wrong have changed, and the speakers said so plainly.\n\nZico Kolter, who chairs OpenAI’s safety and security committee and co-founded Gray Swan, opened with a stark reframing. “Stop thinking about sci-fi scenarios. Start thinking about swarms of agents hacking critical infrastructure,” he said, adding that this was a sci-fi scenario “up until six months ago.” He is optimistic (his P(doom) is “well below 10%”), but argued that the goal is to _pace_ (not pause) the frontier: **“ensuring that capabilities don’t outpace our ability to control these systems.”**\n\nZico split the problem in two: preventing misuse by bad actors, and keeping agents within the bounds their owners intend. The sharpest example of the latter is prompt injection, which he described as “a fundamentally new class of exploit.” His advice to builders was to **red-team the AI component itself, not just the software around it.** He also pushed back on the idea that smarter models are automatically safer: capability and adversarial robustness are largely uncorrelated. And because attackers need one vulnerability while defenders must patch them all, he sees a strong role for real-time defensive agents.\n\nOthers echoed the theme from different angles. Jeanne said security and permissions are “still not solved,” noting that “everyone and their mom is giving out long-lived credentials that you shouldn’t do.” Vercel and Stripe are building scoped, short-lived tokens, permission inheritance, and agent wallets in response. Swami described what AWS calls “trust in depth,” combining red teaming, neuro-symbolic guardrails, and formal methods so no single safeguard is carrying the load. Axiom made the case for formal verification as a path to agents whose actions provably follow human intent. Crosby went a step further and took out an insurance policy on its agents, similar to malpractice insurance.\n\nThere are still key questions on the agent stack: who has the authority, what are agents allowed to do on our behalf, and who is accountable when something goes wrong? As Matt opened with, it took ten years for the Founding Fathers and Framers to go from the Articles of Confederation to the Constitution.\n\nWe are still early in writing the guardrails.\n\n[![Image 4](https://substackcdn.com/image/fetch/$s_!6bnr!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F77515320-26bd-4785-b0b9-38877ebaec28_4000x2668.jpeg)](https://substackcdn.com/image/fetch/$s_!6bnr!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F77515320-26bd-4785-b0b9-38877ebaec28_4000x2668.jpeg)\n\nIf 2025 was about reasoning, 2026 was about everything around the model. Virtually every speaker argued that models are increasingly commoditized, and that what makes them useful is the system built around them: context, data, tools, and the harness that connects it all.\n\nRahul from Anthropic defined the harness as “everything that’s in between the model capability and the outcome that you’re chasing.” He was blunt that **software alone is not the moat (”you could all build Claude Code in a day”) and that the classic moats still hold: network effects, data effects, systems of record, and customer relationships.** Swami offered a complementary view, saying models will commoditize but remain “the functional brain of intelligence,” and that context will be “one of the primitives that you’ll talk about for the next twenty years.”\n\nThe Data Panel with leaders from AWS, Databricks, and Salesforce made the case most directly: **an AI strategy is really a data strategy.** Salesforce’s [Rahul Auradkar](https://www.linkedin.com/in/rahulauradkar/?isSelfProfile=false). said today’s models are “incredibly intelligent, but they’re corporate stupid,” and Databricks’ Zaheera cited roughly **80% accuracy with a context layer versus 50% without.** The common thread is that context compounds.\n\nFigma’s [Evan Welbourne](https://www.linkedin.com/in/evan-welbourne) described distilling expertise into the design system and having the data team review confidence scores to update the context layer. Axiom’s synthetic-data flywheel, where the prover generates its own proofs and code, is another version of the same idea.\n\nFor startups, the implication is encouraging. As we heard from the investors, “long live the wrappers,” when they help close the gap between what models can do and how they’re actually used. And Will from Exa observed that **“the biggest way to improve your agent is not to go from PhD to Terence Tao level intelligence. It’s actually to give it access to all sorts of valuable tools.”**\n\n[![Image 5: 2153-IA40-Summit-LR.jpg](https://substackcdn.com/image/fetch/$s_!k98V!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa69ce636-0baa-477f-b960-401c97a4157a_800x534.jpeg)](https://substackcdn.com/image/fetch/$s_!k98V!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa69ce636-0baa-477f-b960-401c97a4157a_800x534.jpeg)\n\nThe last takeaway is a sobering one. **The technology is moving faster than the organizations trying to use it, and that is reshaping roles, pricing, and business models.**\n\nGoldman Sachs’ [Archana Vemulapalli](https://www.linkedin.com/in/archvem/?isSelfProfile=false) was direct: “The bottleneck is actually not AI. The bottleneck is human... Our organizations are all built for the pre-AI days.” McKinsey’s Lari Hamalainen put numbers on it: **about 90% of clients use AI and 60% are scaling or experimenting with agents, but only about 6% see EBIT impact at scale, and most usage (about 80%) is still chatbots.** Roughly 80% of companies chase efficiency, which he called “a zero-sum game.” The leaders balance efficiency with growth and innovation, and rebuild workflows AI-first. Archana added a practical caution on measuring ROI: baselines shift weekly as models and token prices change, so teams need a period of measurement before claiming returns. Developer productivity, at about 20%, is the clearest proven gain.\n\nBusiness models are being rewritten alongside. Ryan from Crosby argued that billable hours and AI are fundamentally incompatible, so Crosby sells fixed-price work and tracks margin per task. Charles Lamanna warned that “it can’t be unbounded token usage in the user license. You’ll end up with negative gross margin,” and expects consumption pricing to dominate for new companies. Salesforce saw usage up 9x after offering a headless entry point, which Rahul linked to the Jevons paradox.\n\nAnd on the question of who wins, this year’s answer was “many.” Amazon’s [Dan Grossman](https://www.linkedin.com/in/dangrossman) said “there are gonna be many winners,” and those that do well “will earn customer trust.” Archana shared that nine out of ten times Goldman will buy when a startup brings speed, accuracy, and value. [Sunny Gupta](https://www.linkedin.com/in/sgupta85/?isSelfProfile=false) noted what hasn’t changed: go-to-market expertise. Capital is flowing so that big tech funds the infrastructure and frontier models, while venture builds the horizontal, vertical, and enabling layers on top, with more value captured up the stack.\n\n[![Image 6: 1913-IA40-Summit-LR.jpg](https://substackcdn.com/image/fetch/$s_!-JCn!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F10d533f1-f949-4250-9cdb-31577c0bda22_800x534.jpeg)](https://substackcdn.com/image/fetch/$s_!-JCn!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F10d533f1-f949-4250-9cdb-31577c0bda22_800x534.jpeg)\n\nLast year we left the Summit energized by the pace of reasoning, new interfaces, and early agents. This year, the mood was more grounded and, if anything, more ambitious. Agents are in production, a new infrastructure stack is being built around them at breakneck speed, and the people building and securing these systems are taking the questions of safety, accountability, and ROI seriously. The pace of activity only continues to accelerate!\n\nThank you to everyone who joined us, to our speakers, and to this year’s IA40 winners for making the fifth IA40 Summit our best yet. See you next year!\n\nAnd check out the content on YT [here](https://www.youtube.com/playlist?list=PLYkrDO8cAq8c&si=X4Lw2Mf3cM6T9tpF)!",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://aspiringforintelligence.substack.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas",
+        "transport": "public_reader_fallback"
+      }
+    },
+    {
+      "id": "substack:9fc0411d6e644994b3c1",
+      "source_type": "substack",
+      "source_name": "TSOH Investment Research",
+      "title": "TSOH Weekly Roundup (10/09/2026)",
+      "url": "https://thescienceofhitting.com/p/tsoh-weekly-roundup-10092026",
+      "published_at": "2026-10-09T15:02:15+00:00",
+      "collected_at": "2026-10-10T00:00:53.097792+00:00",
+      "body": "Welcome to another edition of TSOH Weekly Roundup . Each update features a Chart of the Week, along with a brief discussion on three news items relevant to companies in the TSOH investable universe. Chart Of The Week (from the Q3 2026 Portfolio Update ) Three Notable Items “Charlie Munger’s Interview with Todd Combs” A transcript from a 2022 conversation between Charlie Munger and Todd Combs. Thank you to Shane Parrish of Farnam Street for sharing it publicly. Munger: “Warren used to say, ‘You really don’t need to be very smart to be a successful investor’, and I think he was right. It’s good to have the extra mental horsepower Henry Singleton had. That is helpful, but it’s perfectly possible to do splendidly well if you have the right temperament… I’m not a polymath. I’m a guy who has taken a moderate obsession and a long attention span and turned them into pretty good results . Of course, having a long attention span will help you a lot if you are reasonably smart.” “Welcome to Skydance! Movies, TV ... and Massive Debt” Paramount Skydance has completed the acquisition of Warner Bros. Discovery. One critical issue, as was the case with the prior transaction to create WBD , is that Skydance emerges from this transaction with massive financial leverage, which is particularly problematic given uncertainty about the long-term trajectory for the linear TV business. Time will tell whether management has appropriately prepared themselves for these headwinds , or if they will soon encounter the same stumbling blocks as their predecessors. “Disney jacked up the price of Disney+ and Hulu over the past 3-4 years , while keeping the bundled price much more compelling; over time, they’ve basically walked you up to a combined price by raising the individual prices so aggressively… What I suspect will happen is a similar progression, where the HBO Max and Paramount+ prices go up far faster than normal, while the price for the bundle of the two goes up very slowly.” “Big booze is reinventing itself” A podcast from The Economist discussing how different companies are responding to changes in the alcoholic drinks industry. I’ll have more to say about this topic on Thursday in an update on Constellation Brands (STZ) . Carlsberg CEO Jacob Aarup-Andersen: “When we have the full-scale portfolio, including soft drinks, we actually increase the value and the resilience of our beer portfolio. Why? Because we become much more relevant to our customers - the big retailers, the big pop chains, etc. - and we become more relevant to the consumer because we cater to all occasions… I think that’s key. The average consumer globally consumes around eight cups of liquid every day. In emerging markets, they will purchase one to two of those eight cups. In developed markets, they will purchase four to five of those eight cups. They will definitely purchase more beverages in ten years than they do today. We are not exiting beer or alcohol, but we are making sure we have a portfolio that caters to all consumer needs… We see it being synergistic from the purchase of the can down to the consumer moment.” TSOH Updates Here’s the updated TSOH research list for the past six months: Monday’s research report will examine the turnaround of Ralph Lauren (RL) . Subscribe now Have a great weekend! NOTE - This is not investment advice. Do your own due diligence. I make no representation, warranty, or undertaking, express or implied, as to the accuracy, reliability, completeness, or reasonableness of the information presented in this report. Assumptions, opinions, and estimates expressed in this report constitute my judgment as of the date thereof and are subject to change without notice. Projections are based on a number of assumptions, and there is no guarantee that they will be achieved. TSOH Investment Research is not acting as your advisor or in any fiduciary capacity.",
+      "author": "TSOH Investment Research",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://thescienceofhitting.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "reddit:ad3e37531a16cc31abac",
+      "source_type": "reddit",
+      "source_name": "r/wallstreetbets",
+      "title": "ADBE Imminent Decline - Cloned Software",
+      "url": "https://www.reddit.com/r/wallstreetbets/comments/1x1m8jw/adbe_imminent_decline_cloned_software/",
+      "published_at": "2026-10-09T14:03:57+00:00",
+      "collected_at": "2026-10-10T00:01:00.973854+00:00",
+      "body": "TLDR The recent cloning of the CreativeCloud suite with the ArtCraft clone is going to be the nail in the coffin for Adobe, whether they sue or not. Personally buying Puts Adobe's Value Proposition Adobe's revenue is critically hinged on it's subscription sales (75% of their revenue, see below). It protects this with dug-in users who aren't willing to pick up new software and have set workflows. This is why previous solutions such as DiVinci Resolve didn't completely displace users of PremierePro. Additionally, Adobe's proprietary file types lock in users across the media development profession for consistent workflow practices. Why Adobe loses to ArtCraft Other open-source clones didn't have the resources to compete with Adobe and their software development scale, nor did they want to risk getting sued while developing their product by directly mimicking Adobe's features and interfaces, which would actually allow a product to attract embedded users who don't want to learn new software and would rather focus on creating. ArtCraft is different because it directly mimics existing Adobe interfaces (insanely easy for existing users to switch), it provides extra utility in supporting more operating systems and being written in Rust for performance, the software is quickly advancing to reach feature parity and bug fixing (it has received 17 patches in the last hour as of writing this), and finally this software is fully motivated to fully integrate with AI MCP skillsets that allow AI to fully drive the use of the software with creative tuning. The final stake in the coffin is that many people feel hurt by Adobe's expensive and untenable pricing, so there are many people highly motivated to make this a reality. Even if Adobe sues the creator and somehow gets the code taken down, it has been duplicated multiple times already and has spread like wildfire. Adobe's legal team will not be able to keep up with how fast a new Hydra head will pop up and the US legal system doesn't have precedent to actually protect a digital entity like this. Major companies will continue to use CreativeCloud to not expose themselves to the legal blast radius, but most small companies, individual creatives, and hobbyists have the opportunity to quickly switch. There are more and more videos popping up by the hour on YouTube about top creatives testing the software and confirming that while it is buggy currently it is highly effective as a replacement and allows them to continue doing their existing workflows without disruption. This smaller creatives section is ~25% of their primary revenue stream or about ~17% of their total profit. If Adobe loses any major firms to this, the blast radius is even wider. Adobe Financials FY2025 Revenue Breakdown by Segment Digital Media ($17.65 billion | 74.25% share): Includes subscriptions to Creative Cloud (Photoshop, Illustrator, Premiere Pro) and Document Cloud (Acrobat, Adobe Sign). [ 1 , 2 ] Digital Experience ($5.86 billion | 24.67% share): Includes enterprise subscriptions to Adobe Experience Cloud for marketing analytics, commerce, and campaign management. [ 1 , 2 ] Print and Publishing ($256 million | 1.08% share): Includes legacy product licenses for technical publishing and eLearning tools. [ 1 , 2 ] Customer Group, FY2025 Revenue, Revenue Share Creative & Marketing Professionals, $16.30 billion, 71.5% Business Professionals & Consumers, $6.50 billion, 28.5% Personal Stake I have bought 10 Puts for 10/30 at a strike of $235. I started buying yesterday and got hammered by their gains the last two days. I personally believe they will take a big hit over the weekend as this software moves at a blazing pace and gets more Youtuber and internet attention over the weekend, with a big move starting Monday when Adobe investors start getting scared because of what they see, and the impending SaaSpocolypse fear renewals. submitted by /u/LightseekerLife [link] [comments]",
+      "author": "/u/LightseekerLife",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "transport": "rss",
+        "listing": "dd",
+        "flair": "",
+        "requested_flair": "",
+        "requested_flairs": [
+          "DD"
+        ],
+        "sort": "top",
+        "time_filter": "day",
+        "feed_rank": 1,
+        "image_urls": [
+          "https://preview.redd.it/0e28z9de7guh1.jpeg?width=640&crop=smart&auto=webp&s=0633e7f79865eb11854f247af32199c8f19204f8"
+        ],
+        "images": [
+          {
+            "url": "https://preview.redd.it/0e28z9de7guh1.jpeg?width=640&crop=smart&auto=webp&s=0633e7f79865eb11854f247af32199c8f19204f8",
+            "path": "data/media/reddit/reddit-image-reddit-ad3e37531a16cc31abac-1.jpeg",
+            "mime_type": "image/jpeg",
+            "bytes": 25005
+          }
+        ]
+      }
+    },
+    {
+      "id": "substack:5fa987fb69dcf4566ae5",
+      "source_type": "substack",
+      "source_name": "Yet Another Value Blog",
+      "title": "Consumer agents: an ethics race, a prisoner’s dilemma, and the obvious OTA short",
+      "url": "https://www.yetanothervalueblog.com/p/consumer-agents-an-ethics-race-a",
+      "published_at": "2026-10-09T13:37:42+00:00",
+      "collected_at": "2026-10-10T00:00:59.515929+00:00",
+      "body": "I’ve written extensively about Muse and consumer agents over the past few weeks ( including a plea for people to actually try them !). I continue to experiment and play a lot with them; I will admit that my thoughts on them do wax and wane by the day from “damn, these are going to change everything” to “these are really cool, but it’s just going to make our lives a little easier, not reshape the consumer economy as we know it.” As I’ve continued to play with them and think about how they’ll impact both the investing landscape and our lives, there are three somewhat interconnected thoughts that have just been popping into my head over and over. And, because they keep popping in my head, I figured I’d put some (figurative) ink down on paper on them. Those three thoughts are: Incentives for lack of ethics / guardrails in consumer agents Short term gain, long term pain: the prisoner’s dilemma for retailers versus agents OTAs and the “obvious” disruptive shorts Let’s dive in: Incentives for lack of ethics / guardrails in consumer agents The two agents I use the most are Muse and Claude Cowork. I mainly use Muse for personal stuff and I use Claude Cowork for business / investing stuff. I do dabble a little bit with ChatGPT and I have downloaded Grokbot, but for my purposes those are the two main ones. One of the main differences I’ve noticed between Muse and Claude is that Claude is very strict on ethics. For example, if a website asks you to confirm you’re a human, Claude simply won’t do that for you. In contrast, Muse will either try to do it for you automatically or ask you if it should try to fool the website. That’s a small example, but it applies to other things. For example, I once asked Claude to search a Substack (that I paid for!) for past references to a particular stock and then create a timeline with a summary of what was said on that stock and a link to the article. Claude told me it wouldn’t do that, saying it was worried about violating copyright law. I got into an argument with Claude (“I’m paying for this Substack; I’m just asking you to summarize and link to the mentions, and this is just for my internal notes and research and reference! How can this be copyright violation in any way?”) and it eventually did it for me, but it was a pain and put up a ton of barriers. In contrast, when I asked Muse to do it, it just went off and did the task no questions asked. That’s a little bit of a niche example, but it applies across the board / all the time; there are things that Claude simply won’t do or resists doing that Muse is happy to do. Yet Another Value Blog is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber. For most of the last few years, the AI race has been driven by being at the frontier. And maybe that is the path to riches; perhaps whoever can build a recursive self improvement AI first pulls away from everyone else and wins the AI race for all time. But Muse is winning a lot of market share not because it’s the best model but because it’s really easy to use and because it will basically just try to do everything you ask it to without question. All of the AI players are competing for enormous prizes that are existential (both in a business sense and possibly for all of humanity). If one way to gain an edge in winning the “AI race” prize is to lower standards / just do stuff, eventually every lab is going to be forced to do that. It’s a very prisoner’s dilemma type thing; the moment one lab does it, all labs have to do it or they get left behind. As a consumer, in the short run that’s pretty cool. How awesome would it be if an AI could click all those “are you a human” boxes for you across twenty different websites and automatically build a dashboard that let you manage your finances or your social life or something really easily? But, in the long run, you could see a lot of reasons to be worried if each lab is incentivized to lower standards like that. Speaking of prisoner’s dilemma…. Short term gain, long term pain: the prisoner’s dilemma for retailers versus agents This may be anecdata, but I feel like I’ve seen an increase in the times Muse tells me “I can’t interact directly with that site…. want me to take control of your browser and pretend to be you and try anyway?” (yes, another example of the ethics / guardrail issue mentioned above). That issue started with Amazon, which banned Muse almost the moment it rolled out , but I think it’s getting wider. That ban creates an interesting prisoner’s dilemma for a host of businesses: consumer agents might destroy your business in the long run, but in the short run if every competitor in an industry bans agents then any one competitor could get a leg up by catering to agents. A simple example will illustrate this: imagine that Expedia and Booking both think Muse is an existential risk to their business and refuse to work with it. They may very well be right…. but if a ton of consumers are using Muse, either Expedia or Booking could capture a lot of business in the short term by lifting the ban and being the de facto agent of choice for Muse. Yes, they’re risking their existential future, but in the short run the returns would be glorious…. and, indeed, Expedia has done an integration with Muse already ! And it is perhaps worth noting that EXPE’s stock has well outperformed BKNG’s stock over the past month as consumer agents have taken off; obviously one stock does not make a trend, but that’s exactly the type of outperformance you’d expect to see from a company that “took the deal” and stabbed everyone in the back in a prisoner’s dilemma! Source: fiscal.ai. You can get a 15% discount on fiscal.ai membership by signing up here You can imagine that issue across a host of businesses. One I like to think about is department stores / retailers. Obviously, broadline department stores are struggling; you don’t need me to pull up a chart of JCPenney or Sears to prove that to you (in fact, I can’t because they’re bankrupt / nonexistent anymore). But, for the remaining department stores, agents are clearly a disaster for their already under siege business. If you need undershirts or a pair of workout shorts, why go to macys.com and buy them when you could just ask your agent to search the internet for you and buy them from whoever is cheapest? So, if you’re Macy’s, you can’t work with an agent because it will kill you…. but if none of your competitors will work with them, maybe you can get one last windfall by stabbing them in the back and being the only one to work with agents? In the short run, I think a lot of businesses are going to be blocking / banning consumer agents. But, in the long run, they’re going to have to work with them. Either the consumer agents will figure out ways to find end arounds to the blocks, or a competitor will realize they’re in a prisoner’s dilemma and stab everyone in the back to capture the profits 1 . Which brings me to my last point…. OTAs and the “obvious” disruptive shorts I have listened to a lot of podcasts from people who are building consumer agents (mainly the Muse and Instinct teams). Invariably, when asked about how to use consumer agents, the first use case mentioned will be using agents to save money on subscriptions or to easily plan and book travel. I’ve talked to longs on EXPE / BKNG. When I do, they’ll mention a lot of things: there’s a long tail of European hotels that the OTAs have spent years cultivating that consumer agents won’t be able to reach / displace OTAs from easily, consumer habits are really sticky, the OTAs are taking a small fraction of the value and convenience they provide, in the short run agents will work with the OTAs and might even benefit them, etc. I totally get all of those arguments 2 … but, if I just eyeball Expedia and Booking, they’re trading for like 15x P/E. That valuation requires the business’s cash flows to have a very long life; for a business trading at a 15x P/E and growing in the mid to high single digits in the short term, ~80% of a business’s value comes from cash flows after year five in a DCF 3 . Consumer agents are exploding in popularity, the companies behind them are investing billions of dollars into the product, and the first use case the people who are making them blurt out is “Use them as a super OTA!” I’m not sure how any investor looks at that fact pattern and thinks “yeah, I can generate alpha by buying an OTA and betting these cash flows are not just going to have a long life, but going to have a long life well above what the market is forecasting.” Now, markets are competitive, and consumer agents have been with us for ~a month; that’s more than enough time for markets to digest a threat this obvious.... yet neither BKNG’s nor EXPE’s stock is showing any type of existential worries; again, both trade at ~15x and EXPE’s stock is basically flat on the year! Source: fiscal.ai. You can get a 15% discount on fiscal.ai membership by signing up here It’s just hard for me to square “every consumer agent is targeting travel as a vector and raising billions” with “OTAs are trading like the future is rosy.” I realize that Google Flights and a host of other competitors never took off, and that the consumer agents might take a little more time / handholding to book a simple trip than an OTA right now…. but travel is clearly a killer use case for agents, and it just seems wild to me that the market is yawning here. 1 This is a tangent that I’ve offhandedly mentioned before, and I could and should probably build a post around this point…. but, if you play the “everyone needs to work with agents” point out to its conclusion, consumer agents are just wildly, wildly deflationary as they will eat into basically every business’s margins through price comparing and constantly negotiating. In fact, I can’t think of a single consumer facing business that consumer agents are broadly bullish or margin supportive for! 2 Actually, I intentionally didn’t use the best bull argument for the OTAs: EXPE and BKNG have billions of proprietary data points from historical consumer interactions, so AI creates existential risk but could also create a permanent moat if that data turns into a travel flywheel in some form. That could be true, but I’d suggest at 15x P/E the downside risks far, far outweigh the upside ones. I also would come back to basics: right now, EXPE and BKNG “control” the consumer and the distribution process; in the future world I’m talking about, the AI agent (like Muse) owns the consumer. I can’t think of a single product that has lost control of the consumer and then been worth more on the backend. Ask STRZ and the rest of the cable bundle how licensing content to Netflix and letting them have control of the consumer worked out! 3 Lots of different assumptions on growth rates, reinvestment rates, interest rates, etc. could get you to different numbers here. But 80% is in the right ballpark!",
+      "author": "Andrew",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.yetanothervalueblog.com/",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:1df63fee51cc4260c90c",
+      "source_type": "substack",
+      "source_name": "Clouded Judgement",
+      "title": "Clouded Judgement 10.9.26 - Cache Is the New Egress",
+      "url": "https://cloudedjudgement.substack.com/p/clouded-judgement-10926-cache-is",
+      "published_at": "2026-10-09T13:04:50+00:00",
+      "collected_at": "2026-10-10T00:00:44.262427+00:00",
+      "body": "Every week I’ll provide updates on the latest trends in cloud software companies. Follow along to stay up to date!\n\n**Highlight of the Week - Cache Is the New Egress**\n\nIn the early days of the cloud era, when dissecting costs most people just looked at the basic price of compute and storage (for services like EC2 and S3). Overtime, the real focus shifted to egress. In today’s AI world, the initial focus is on the input/output pricing per 1M tokens, but the real focus is on the cache read rate. What is the cache read rate? The cache read rate is what a model provider charges to essentially re-reat input tokens it processed / stored from a prior call. If you think about an agent loop with the same system prompt, same tool definitions, etc, all of this history / context doesn’t need to be resent and reprocessed every time (and this turns out to be a majority of input tokens).\n\nHere’s some data on the headline prices everyone looks at (just a blended input/ouput of the vanilla pricing). I use 80/20 input / output ratio because that’s a reasonable approximation of a normal chat workload.\n\n[![Image 1](https://substackcdn.com/image/fetch/$s_!mUQM!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F36263c3f-2317-4ce5-9450-40b761ecc991_2782x1202.png)](https://substackcdn.com/image/fetch/$s_!mUQM!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F36263c3f-2317-4ce5-9450-40b761ecc991_2782x1202.png)\n\nAs you can see above, Astra / Fable (those are thought of as the true frontier) both price at $10 / 1m input tokens and $50 / 1m output tokens (blended to $18). Another takeaway is a “mid tier” has emerged in the $2 / $10 range (~$4 blended). And again, this chart is just the vanilla pricing.\n\nIn the next chart below I try to look at a more reasonable workload - a 40 turn agent session with a 85% cache hit. The order doesn’t really change, but a couple call outs. Fable comes in ~16% under the Astra pricing (when vanilla list is the same). Grok 4.7 is the cheapest flagship model on vanilla pricing, but is more expensive than Sol and Terra (xAI charges $0.50 per cached token while OpenAI charges $0.10)\n\n[![Image 2](https://substackcdn.com/image/fetch/$s_!R63f!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc76947e6-a9ab-4ee4-8448-21e437a84a6b_2782x1204.png)](https://substackcdn.com/image/fetch/$s_!R63f!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc76947e6-a9ab-4ee4-8448-21e437a84a6b_2782x1204.png)\n\nHow I interpret these two charts - all the model providers are running a price war on the acquisition price, when in reality they’re actually competing on the retention price (and gives us a peak at what the models may be more optimized for). The vanilla list price will attract users, top of funnel, etc. Cache hit price is what actually gent’s spend. Astra, for instance, is $1 per million cached tokens. That feels more priced for chat. Fable at $0.25 is more for agents. Luna at $0.01 is priced to run in a loop.\n\nSo bringing this all back to the egress analogy. Egress really mattered because it created real switching costs. Your data lived in one cloud, and moving it out was EXPENSIVE. A cache is kind of similar. Swapping out models mid session means building that cache over again. Now, the natural push back is “well who’s switching models mid session…” Fair, but an entire category was built on just this! Model routers have the pitch of “send every call to the cheapest model that can handle the task appropriately.” Just looking at the vanilla pricing - that’s smart! But under cache pricing this can become a trap - because the cache is keyed to one model / one provider. So every model switch is a “full vanilla price re-read” of the whole context. Looking at the 40-turn agent session I talked about earlier - All on Fable at a 95% cache hit rate: ~$4.90. But if you keep alternating turns between Fable and Sol (which btw is 1/5 the vanilla price), and you get to $18! Routing to the cheaper model ends up costing ~4x than not routing and hitting the cache. Per-call multiplexing is probably dead for agents, as routing only really makes sense at the session level. So there is some switching costs built in here…Take it one step further…\n\n…I also deeply believe the future is very long running agents. Or agents that are perpetually running in a loop (think AI employees just continuously doing their job running 24x7). Then the context and the cost and all the cached info starts to really matter! This may be too far-fetched of a conclusion to draw, but I think there is a world where lock in emerges from the cache-hit pricing as agents start running longer and longer.\n\n**Top 10 EV / NTM Revenue Multiples**\n\n[![Image 3](https://substackcdn.com/image/fetch/$s_!2wex!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F10bfbddd-7a46-4b6b-a748-63f265740bcd_1327x613.png)](https://substackcdn.com/image/fetch/$s_!2wex!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F10bfbddd-7a46-4b6b-a748-63f265740bcd_1327x613.png)\n\n**Top 10 Weekly Share Price Movement**\n\n[![Image 4](https://substackcdn.com/image/fetch/$s_!nIAW!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc6fea364-8b48-4ee9-87a4-25f0b773821a_925x568.png)](https://substackcdn.com/image/fetch/$s_!nIAW!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc6fea364-8b48-4ee9-87a4-25f0b773821a_925x568.png)\n\n**Update on Multiples**\n\nSaaS businesses are generally valued on a multiple of their revenue - in most cases the projected revenue for the next 12 months. Revenue multiples are a shorthand valuation framework. Given most software companies are not profitable, or not generating meaningful FCF, it’s the only metric to compare the entire industry against. Even a DCF is riddled with long term assumptions. The promise of SaaS is that growth in the early years leads to profits in the mature years. Multiples shown below are calculated by taking the Enterprise Value (market cap + debt - cash) / NTM revenue.\n\nOverall Stats:\n\n*   Overall Median: 4.3x\n\n*   Top 5 Median: 37.3x\n\n*   10Y: 5.2%\n\n[![Image 5](https://substackcdn.com/image/fetch/$s_!4FBZ!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9b6c7197-d4d9-41e3-8b87-da267849b791_1231x669.png)](https://substackcdn.com/image/fetch/$s_!4FBZ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9b6c7197-d4d9-41e3-8b87-da267849b791_1231x669.png)\n\n[![Image 6](https://substackcdn.com/image/fetch/$s_!7Czo!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa585e9b0-a9f8-487d-ab1c-dea9b206c45c_1219x664.png)](https://substackcdn.com/image/fetch/$s_!7Czo!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa585e9b0-a9f8-487d-ab1c-dea9b206c45c_1219x664.png)\n\nBucketed by Growth. In the buckets below I consider high growth >22% projected NTM growth, mid growth 15%-22% and low growth <15%. I had to adjusted the cut off for “high growth.” If 22% feels a bit arbitrary, it’s because it is…I just picked a cutoff where there were ~10 companies that fit into the high growth bucket so the sample size was more statistically significant\n\n*   High Growth Median: 19.3x\n\n*   Mid Growth Median: 7.0x\n\n*   Low Growth Median: 3.4x\n\n[![Image 7](https://substackcdn.com/image/fetch/$s_!HhiK!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6bb47bf8-db9a-4ea7-a52b-85ebaefd74de_1237x664.png)](https://substackcdn.com/image/fetch/$s_!HhiK!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6bb47bf8-db9a-4ea7-a52b-85ebaefd74de_1237x664.png)\n\n[![Image 8](https://substackcdn.com/image/fetch/$s_!X7Q6!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3e08859-4a33-4b76-9e25-adac35e94386_3016x1294.png)](https://substackcdn.com/image/fetch/$s_!X7Q6!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3e08859-4a33-4b76-9e25-adac35e94386_3016x1294.png)\n\n**EV / NTM Rev / NTM Growth**\n\nThe below chart shows the EV / NTM revenue multiple divided by NTM consensus growth expectations. So a company trading at 20x NTM revenue that is projected to grow 100% would be trading at 0.2x. The goal of this graph is to show how relatively cheap / expensive each stock is relative to its growth expectations.\n\n[![Image 9](https://substackcdn.com/image/fetch/$s_!j-GV!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdf64ab79-6409-4895-b05a-1f6106d0d21a_1221x663.png)](https://substackcdn.com/image/fetch/$s_!j-GV!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdf64ab79-6409-4895-b05a-1f6106d0d21a_1221x663.png)\n\n[![Image 10](https://substackcdn.com/image/fetch/$s_!xn2L!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F60412654-9672-44f3-8722-2b57f5cb0bb8_2919x1299.png)](https://substackcdn.com/image/fetch/$s_!xn2L!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F60412654-9672-44f3-8722-2b57f5cb0bb8_2919x1299.png)\n\n**EV / NTM FCF**\n\nThe line chart shows the median of all companies with a FCF multiple >0x and <100x. I created this subset to show companies where FCF is a relevant valuation metric.\n\n[![Image 11](https://substackcdn.com/image/fetch/$s_!gaZg!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1d02cfa5-00ef-47a9-9a9c-ba910a62baef_1216x667.png)](https://substackcdn.com/image/fetch/$s_!gaZg!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1d02cfa5-00ef-47a9-9a9c-ba910a62baef_1216x667.png)\n\nCompanies with negative NTM FCF are not listed on the chart\n\n[![Image 12](https://substackcdn.com/image/fetch/$s_!PpJ8!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F969b3fdb-fea1-4127-aac2-582af11f09d7_3093x1263.png)](https://substackcdn.com/image/fetch/$s_!PpJ8!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F969b3fdb-fea1-4127-aac2-582af11f09d7_3093x1263.png)\n\n**Scatter Plot of EV / NTM Rev Multiple vs NTM Rev Growth**\n\nHow correlated is growth to valuation multiple?\n\n[![Image 13](https://substackcdn.com/image/fetch/$s_!TKl5!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8c301f33-e623-4ae4-9a8c-cc5c16b8fbe4_2511x1341.png)](https://substackcdn.com/image/fetch/$s_!TKl5!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8c301f33-e623-4ae4-9a8c-cc5c16b8fbe4_2511x1341.png)\n\n**Operating Metrics**\n\n*   Median NTM growth rate: 13%\n\n*   Median LTM growth rate: 16%\n\n*   Median Gross Margin: 76%\n\n*   Median Operating Margin 4%\n\n*   Median FCF Margin: 21%\n\n*   Median Net Retention: 110%\n\n*   Median CAC Payback: 31 months\n\n*   Median S&M % Revenue: 34%\n\n*   Median R&D % Revenue: 22%\n\n*   Median G&A % Revenue: 13%\n\n**Comps Output**\n\nRule of 40 shows rev growth + FCF margin (both LTM and NTM for growth + margins). FCF calculated as Cash Flow from Operations - Capital Expenditures\n\nGM Adjusted Payback is calculated as: (Previous Q S&M) / (Net New ARR in Q x Gross Margin) x 12. It shows the number of months it takes for a SaaS business to pay back its fully burdened CAC on a gross profit basis. Most public companies don’t report net new ARR, so I’m taking an implied ARR metric (quarterly subscription revenue x 4). Net new ARR is simply the ARR of the current quarter, minus the ARR of the previous quarter. Companies that do not disclose subscription rev have been left out of the analysis and are listed as NA.\n\n[![Image 14](https://substackcdn.com/image/fetch/$s_!oOQs!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7ce7176b-c10a-4d03-abcf-2369652dd0da_3144x1351.png)](https://substackcdn.com/image/fetch/$s_!oOQs!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7ce7176b-c10a-4d03-abcf-2369652dd0da_3144x1351.png)\n\n[![Image 15](https://substackcdn.com/image/fetch/$s_!9p5m!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6fb9e1e-e456-4acf-a69c-1d43bfb23c0a_3148x1368.png)](https://substackcdn.com/image/fetch/$s_!9p5m!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6fb9e1e-e456-4acf-a69c-1d43bfb23c0a_3148x1368.png)\n\nSources used in this post include Bloomberg, Pitchbook and company filings\n\nThe information presented in this newsletter is the opinion of the author and does not necessarily reflect the view of any other person or entity, including Altimeter Capital Management, LP (”Altimeter”). The information provided is believed to be from reliable sources but no liability is accepted for any inaccuracies. This is for information purposes and should not be construed as an investment recommendation. Past performance is no guarantee of future performance. Altimeter is an investment adviser registered with the U.S. Securities and Exchange Commission. Registration does not imply a certain level of skill or training. Altimeter and its clients trade in public securities and have made and/or may make investments in or investment decisions relating to the companies referenced herein. The views expressed herein are those of the author and not of Altimeter or its clients, which reserve the right to make investment decisions or engage in trading activity that would be (or could be construed as) consistent and/or inconsistent with the views expressed herein.\n\n**This post and the information presented are intended for informational purposes only.** The views expressed herein are the author’s alone and do not constitute an offer to sell, or a recommendation to purchase, or a solicitation of an offer to buy, any security, nor a recommendation for any investment product or service. While certain information contained herein has been obtained from sources believed to be reliable, neither the author nor any of his employers or their affiliates have independently verified this information, and its accuracy and completeness cannot be guaranteed. Accordingly, no representation or warranty, express or implied, is made as to, and no reliance should be placed on, the fairness, accuracy, timeliness or completeness of this information. The author and all employers and their affiliated persons assume no liability for this information and no obligation to update the information or analysis contained herein in the future.\n\n[Share Clouded Judgement](https://cloudedjudgement.substack.com/?utm_source=substack&utm_medium=email&utm_content=share&action=share)\n\n[Leave a comment](https://cloudedjudgement.substack.com/p/clouded-judgement-10926-cache-is/comments)",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://cloudedjudgement.substack.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas",
+        "transport": "public_reader_fallback"
+      }
+    },
+    {
+      "id": "substack:64c3a08e0012c51e7fdb",
+      "source_type": "substack",
+      "source_name": "How They Make Money / App Economy Insights",
+      "title": "💯 How To Find 100-Baggers",
+      "url": "https://www.appeconomyinsights.com/p/how-to-find-100-baggers",
+      "published_at": "2026-10-09T12:04:35+00:00",
+      "collected_at": "2026-10-10T00:00:49.121163+00:00",
+      "body": "Welcome to the Free edition of How They Make Money . Over 300,000 subscribers turn to us for business and investment insights. In case you missed it: 📈 How to Analyze a Stock 🤓 OpenAI’s Next Interface 📊 Earnings Visuals (9/2026) ⚽️ Why Is Bezos Buying Liverpool FC? Subscribe now Great investing is 1% buying, 99% waiting A 100-bagger is a stock that returns 100 times your initial investment. Put in $10,000 and, eventually, you have $1 million. Naturally, most investors focus on the first challenge: finding one. But that is only half the battle. In his book 100 to 1 in the Stock Market , Thomas Phelps showed how long it takes for compounding to turn an investment into a 100-bagger. A stock compounding at 20% annually needs roughly 25 years to return 100 times your money. Even at an extraordinary 36% annual return, it still takes about 15 years. And time is only part of the challenge. Over those 15, 20, or 30 years, even the greatest winners can suffer brutal drawdowns. Apple endured repeated declines of more than 25% on its way to becoming a massive long-term winner, including two drops of roughly 80%. Finding the right company is hard. Holding it for 15, 20, or 25 years may be even harder. 📈 Special Report: How To Find 100-Baggers I put together a free 35-page report on how to identify potential 100-baggers before they become obvious. You will learn the following: 📊 What to look for 💯 A history of 100-baggers 🔎 Why they’re so hard to find 🧠 The mindset required to hold one ✅ A practical 100-bagger checklist Get the free report 📈 The power of compounding A stock appreciates over time through two main forces: Earnings growth: The business makes more money. Multiple expansion: Investors pay more for each dollar of earnings. Over long periods, earnings do most of the work. But exceptional companies can benefit from both. As profits compound and the market finally piles in, the valuation can get overextended. That success creates the temptation to sell. Once a stock has doubled or tripled, our natural instinct is to lock in the gains. If the valuation has expanded along the way, selling can feel even more prudent. But extraordinary returns are heavily back-loaded . At a 20% annual return, an investment goes from roughly 38x after 20 years to nearly 100x after 25. Those final five years create more wealth than the first 20 combined. That is why selling a great company too early can be one of the most expensive mistakes an investor makes. Peter Lynch famously described this as “cutting the flowers and watering the weeds.” The best businesses have a habit of repeatedly exceeding expectations. What looks expensive today can look much more reasonable several years later if earnings keep compounding. Selling also creates another problem. What do you buy instead? And when do you get back in? None of this means you should never sell. If the competitive position deteriorates, earnings falter, or the original thesis breaks, the decision changes. But I’ve adopted a simple rule: A rising stock price is never a reason to sell on its own. Compounding is beautiful. You have to resist the urge to interrupt it. ☕️ Pareto and the Coffee Can Portfolio Stock returns are not evenly distributed. In statistics, you’ll hear about two common patterns: Normal distribution: Most observations cluster around the average, while extreme outcomes are rare. Think human height or many natural measurements. Power law distribution: A small number of extreme outcomes account for a disproportionate share of the total. Think wealth, company size, or venture returns. Extreme outcomes occur far more often than under a normal distribution, creating a fat tail. Investing follows the power law. More than a century of market history shows that a relatively small number of stocks have created a disproportionate share of long-term wealth. Source: The Quantified VC That is why constantly rebalancing can work against you. If one stock compounds much faster than the rest, it will naturally become a larger part of the portfolio. That concentration can feel uncomfortable and make the portfolio look weird. But it may simply be the consequence of owning something exceptional. If you repeatedly trim your best performers, you risk systematically cutting exposure to the very companies that can make the portfolio outperform. Warren Buffett has famously allowed investments such as Coca-Cola and American Express to become very large positions rather than continually trimming them. Apple eventually grew to nearly half of Berkshire’s listed stock portfolio before Buffett began meaningfully reducing the position. Robert Kirby captured the same idea with his Coffee Can Portfolio . He once discovered that a client’s husband had quietly copied each of his stock recommendations, investing about $5,000 in every company. But with one crucial difference: he never sold. Years later, the portfolio contained plenty of mediocre investments. But one position had grown so dramatically that it was worth more than the rest of the portfolio combined. Kirby described the approach as being “passively active.” Active: Do the work upfront. Select the businesses carefully and decide what deserves your capital. Passive: Once you own them, give them time to compound. Long-term investing demands active selection followed by patient ownership . I can see that distribution clearly in App Economy Portfolio , the real-money portfolio I’ve shared publicly for the past decade. A dozen holdings have compounded 5x, 10x, or 20x . That creates a powerful asymmetry . Without leverage, a loser can cost you at most 100% of your investment. But a 10x or 20x winner can more than offset many losers. You can see that in the visual below. Even holdings that were nearly wiped out look small next to the biggest winners. App Economy Portfolio returns by holding as of October 2026 AMD is an extreme example for me. I bought my first shares at $11, and they’ve appreciated roughly 60-fold since 2017. The return shown above is lower because I kept adding at higher prices rather than trimming as the stock rose. Had I continually rebalanced AMD back toward its original weight, I would have systematically reduced my exposure to one of the best investments in the portfolio. Your portfolio’s shape should reflect its performance over time. Give your biggest winners room to run. 📊 The brutal reality of market returns The Coffee Can approach makes even more sense when you look at how stock returns are actually distributed. Blackstar Funds studied roughly 8,000 US stocks traded on the NYSE, AMEX, and Nasdaq from 1983 to 2006. The most striking finding was that roughly 25% of stocks accounted for all of the market’s gains . The remaining 75%, collectively, contributed nothing. The distribution underneath was brutal: Around 40% of stocks lost money over their lifetimes. Roughly one in five lost at least 75% . And simply beating the market was rare: 64% underperformed the Russell 3000 over their lifetimes. Only about 6% beat the index by more than 500% . The lesson is uncomfortable but important: most stocks are not great long-term investments. In a 20-stock portfolio, some will disappoint, and many will be merely average. Fewer than a handful may ultimately drive most of the return. The problem is that you rarely know which ones in advance. Selling a winner can mean trimming the very stock you needed most. You only need a few great investments. The hard part is not getting in their way. Bottom Line The secret to long-term investing lies in building a strategy you can stick with for decades, rather than guessing what the market will do next. There will always be a reason to sell. A recession. A valuation scare. A new competitor. A market correction. But nobody knows what will happen next. Long-term investing ultimately requires optimism that great businesses will keep adapting, growing, and creating value, despite the uncertainty. Patience and persistence are among the most precious virtues in investing. And you need both even if you are lucky enough to find the investment of a lifetime. Sometimes the hardest thing is simply to leave a great investment alone. Finding the winner is only the beginning. You have to let it get there. 💯 Free 35-page report: How To Find 100-Baggers Get the free report → That's it for today. Happy investing! How They Make Money Premium members unlock hundreds of visuals every quarter Want to sponsor this newsletter? Get in touch here . Disclosure: I own AMD, ANET, AAPL, SHOP, and NVDA in App Economy Portfolio . I share my ratings (BUY, SELL, or HOLD) with App Economy Portfolio members. Author's Note (Bertrand here 👋🏼): The views and opinions expressed in this newsletter are solely my own and should not be considered financial advice or any other organization's views.",
+      "author": "App Economy Insights",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.appeconomyinsights.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
     {
       "id": "substack:9db9af42b7f614ecd074",
       "source_type": "substack",
@@ -203,6 +407,256 @@
         "publication_url": "https://www.latent.space",
         "publication_platform": "substack",
         "section": "industry_changes"
+      }
+    },
+    {
+      "id": "price:6a255ab4b36300827118",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 跌幅前十 2026-10-08",
+      "url": "https://finance.yahoo.com/markets/stocks/losers/",
+      "published_at": "2026-10-08T20:00:00+00:00",
+      "collected_at": "2026-10-10T00:02:31.700612+00:00",
+      "body": "1. BAND close 51.950001; previous 57.470001; change -9.605%\n2. CRWV close 81.580002; previous 88.449997; change -7.7671%\n3. BSP close 38.009998; previous 41.07; change -7.4507%\n4. NBIS close 219.710007; previous 237.149994; change -7.354%\n5. RXT close 3.62; previous 3.85; change -5.974%\n6. ORCL close 135.690002; previous 143.559998; change -5.482%\n7. KC close 8.74; previous 9.23; change -5.3088%\n8. PONY close 5.76; previous 6.07; change -5.1071%\n9. CORZ close 15.36; previous 15.94; change -3.6386%\n10. AKAM close 100.900002; previous 104.610001; change -3.5465%",
+      "author": "",
+      "symbols": [
+        "BAND",
+        "CRWV",
+        "BSP",
+        "NBIS",
+        "RXT",
+        "ORCL",
+        "KC",
+        "PONY",
+        "CORZ",
+        "AKAM"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "losers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-10-08",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "BAND",
+            "price_date": "2026-10-08",
+            "close": 51.950001,
+            "previous_close": 57.470001,
+            "change_amount": -5.52,
+            "change_percentage": -9.605,
+            "url": "https://finance.yahoo.com/quote/BAND"
+          },
+          {
+            "ticker": "CRWV",
+            "price_date": "2026-10-08",
+            "close": 81.580002,
+            "previous_close": 88.449997,
+            "change_amount": -6.869995,
+            "change_percentage": -7.7671,
+            "url": "https://finance.yahoo.com/quote/CRWV"
+          },
+          {
+            "ticker": "BSP",
+            "price_date": "2026-10-08",
+            "close": 38.009998,
+            "previous_close": 41.07,
+            "change_amount": -3.060001,
+            "change_percentage": -7.4507,
+            "url": "https://finance.yahoo.com/quote/BSP"
+          },
+          {
+            "ticker": "NBIS",
+            "price_date": "2026-10-08",
+            "close": 219.710007,
+            "previous_close": 237.149994,
+            "change_amount": -17.439987,
+            "change_percentage": -7.354,
+            "url": "https://finance.yahoo.com/quote/NBIS"
+          },
+          {
+            "ticker": "RXT",
+            "price_date": "2026-10-08",
+            "close": 3.62,
+            "previous_close": 3.85,
+            "change_amount": -0.23,
+            "change_percentage": -5.974,
+            "url": "https://finance.yahoo.com/quote/RXT"
+          },
+          {
+            "ticker": "ORCL",
+            "price_date": "2026-10-08",
+            "close": 135.690002,
+            "previous_close": 143.559998,
+            "change_amount": -7.869995,
+            "change_percentage": -5.482,
+            "url": "https://finance.yahoo.com/quote/ORCL"
+          },
+          {
+            "ticker": "KC",
+            "price_date": "2026-10-08",
+            "close": 8.74,
+            "previous_close": 9.23,
+            "change_amount": -0.49,
+            "change_percentage": -5.3088,
+            "url": "https://finance.yahoo.com/quote/KC"
+          },
+          {
+            "ticker": "PONY",
+            "price_date": "2026-10-08",
+            "close": 5.76,
+            "previous_close": 6.07,
+            "change_amount": -0.31,
+            "change_percentage": -5.1071,
+            "url": "https://finance.yahoo.com/quote/PONY"
+          },
+          {
+            "ticker": "CORZ",
+            "price_date": "2026-10-08",
+            "close": 15.36,
+            "previous_close": 15.94,
+            "change_amount": -0.58,
+            "change_percentage": -3.6386,
+            "url": "https://finance.yahoo.com/quote/CORZ"
+          },
+          {
+            "ticker": "AKAM",
+            "price_date": "2026-10-08",
+            "close": 100.900002,
+            "previous_close": 104.610001,
+            "change_amount": -3.709999,
+            "change_percentage": -3.5465,
+            "url": "https://finance.yahoo.com/quote/AKAM"
+          }
+        ]
+      }
+    },
+    {
+      "id": "price:49d16d26be311df8f050",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 涨幅前十 2026-10-08",
+      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
+      "published_at": "2026-10-08T20:00:00+00:00",
+      "collected_at": "2026-10-10T00:02:31.700612+00:00",
+      "body": "1. SECZ close 12.66; previous 11.4; change 11.0526%\n2. MAX close 10.68; previous 9.67; change 10.4447%\n3. Z close 29.17; previous 27.280001; change 6.9282%\n4. ZG close 29.9; previous 27.969999; change 6.9003%\n5. TBLA close 3.51; previous 3.29; change 6.6869%\n6. MNDY close 88.910004; previous 83.510002; change 6.4663%\n7. GDDY close 103.190002; previous 97.209999; change 6.1516%\n8. ASAN close 9.87; previous 9.33; change 5.7878%\n9. NIQ close 17.91; previous 16.99; change 5.415%\n10. YELP close 19.370001; previous 18.4; change 5.2717%",
+      "author": "",
+      "symbols": [
+        "SECZ",
+        "MAX",
+        "Z",
+        "ZG",
+        "TBLA",
+        "MNDY",
+        "GDDY",
+        "ASAN",
+        "NIQ",
+        "YELP"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "gainers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-10-08",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "SECZ",
+            "price_date": "2026-10-08",
+            "close": 12.66,
+            "previous_close": 11.4,
+            "change_amount": 1.26,
+            "change_percentage": 11.0526,
+            "url": "https://finance.yahoo.com/quote/SECZ"
+          },
+          {
+            "ticker": "MAX",
+            "price_date": "2026-10-08",
+            "close": 10.68,
+            "previous_close": 9.67,
+            "change_amount": 1.01,
+            "change_percentage": 10.4447,
+            "url": "https://finance.yahoo.com/quote/MAX"
+          },
+          {
+            "ticker": "Z",
+            "price_date": "2026-10-08",
+            "close": 29.17,
+            "previous_close": 27.280001,
+            "change_amount": 1.889999,
+            "change_percentage": 6.9282,
+            "url": "https://finance.yahoo.com/quote/Z"
+          },
+          {
+            "ticker": "ZG",
+            "price_date": "2026-10-08",
+            "close": 29.9,
+            "previous_close": 27.969999,
+            "change_amount": 1.93,
+            "change_percentage": 6.9003,
+            "url": "https://finance.yahoo.com/quote/ZG"
+          },
+          {
+            "ticker": "TBLA",
+            "price_date": "2026-10-08",
+            "close": 3.51,
+            "previous_close": 3.29,
+            "change_amount": 0.22,
+            "change_percentage": 6.6869,
+            "url": "https://finance.yahoo.com/quote/TBLA"
+          },
+          {
+            "ticker": "MNDY",
+            "price_date": "2026-10-08",
+            "close": 88.910004,
+            "previous_close": 83.510002,
+            "change_amount": 5.400002,
+            "change_percentage": 6.4663,
+            "url": "https://finance.yahoo.com/quote/MNDY"
+          },
+          {
+            "ticker": "GDDY",
+            "price_date": "2026-10-08",
+            "close": 103.190002,
+            "previous_close": 97.209999,
+            "change_amount": 5.980003,
+            "change_percentage": 6.1516,
+            "url": "https://finance.yahoo.com/quote/GDDY"
+          },
+          {
+            "ticker": "ASAN",
+            "price_date": "2026-10-08",
+            "close": 9.87,
+            "previous_close": 9.33,
+            "change_amount": 0.54,
+            "change_percentage": 5.7878,
+            "url": "https://finance.yahoo.com/quote/ASAN"
+          },
+          {
+            "ticker": "NIQ",
+            "price_date": "2026-10-08",
+            "close": 17.91,
+            "previous_close": 16.99,
+            "change_amount": 0.92,
+            "change_percentage": 5.415,
+            "url": "https://finance.yahoo.com/quote/NIQ"
+          },
+          {
+            "ticker": "YELP",
+            "price_date": "2026-10-08",
+            "close": 19.370001,
+            "previous_close": 18.4,
+            "change_amount": 0.970001,
+            "change_percentage": 5.2717,
+            "url": "https://finance.yahoo.com/quote/YELP"
+          }
+        ]
       }
     },
     {
@@ -258,46 +712,6 @@
         "publication_url": "https://www.latent.space",
         "publication_platform": "substack",
         "section": "industry_changes"
-      }
-    },
-    {
-      "id": "reddit:919c0f5d245e3b15e193",
-      "source_type": "reddit",
-      "source_name": "r/wallstreetbets",
-      "title": "$RVI: Robinhood Might Be Gearing Up For Another Run — And Almost Nobody Is Looking 👀🚀",
-      "url": "https://www.reddit.com/r/wallstreetbets/comments/1x0hr8w/rvi_robinhood_might_be_gearing_up_for_another_run/",
-      "published_at": "2026-10-08T04:34:18+00:00",
-      "collected_at": "2026-10-09T00:00:49.900478+00:00",
-      "body": "TL;DR: Robinhood has a publicly traded fund called $RVI that owns stakes in OpenAI, Databricks, Revolut, Stripe, Ramp, Mercor and other massive technology companies. Here’s the interesting part: This thing is gonna rip when notice I started comparing Robinhood’s reported holdings with pricing from Forge, Clarity (formerly Hiive), and Nasdaq Private Market. WTF is $RVI? Robinhood Ventures Fund I ($RVI) is a publicly traded fund that owns stakes in companies most of us normally can’t invest in directly. Think of it as a basket of private technology companies you can buy through a regular brokerage account. You don’t need to be an accredited investor. And unlike buying private shares directly, you can trade RVI on the NYSE. Here’s what Robinhood reported owning on June 30: https://preview.redd.it/irgflllt66uh1.jpg?width=1065&format=pjpg&auto=webp&s=42df7c0cb7f37bc2c1e2068e51661c7a04b4cfd0 Private companies don’t trade on the stock market every day, so funds have to estimate what their investments are worth. That estimated value is called NAV — Net Asset Value. RVI last reported NAV of $25.02 per share on June 30. Take a look at where the holdings are marked in terms of valuation. https://preview.redd.it/ox25nco176uh1.jpg?width=1179&format=pjpg&auto=webp&s=d8015c80ec35729bb3d2b2c32b3392bc1eb321ee But private-company shares are still bought and sold between institutions, employees and investors through secondary marketplaces. Those transactions and market indications can provide clues about what these businesses are worth TODAY. Databricks Robinhood’s June 30 filing values its Databricks preferred shares at approximately $201.54 per share. Forge’s October indicative price: $268.50 per share. That’s approximately 33% higher. Databricks also completed a newer funding round in August at $253 per share, implying a $190 billion company valuation. Robinhood’s disclosed Databricks position was worth approximately $86.6 million in June. If you simply applied Forge’s current indicative price to the same share count, it would be worth approximately $115.4 million. That’s almost $29 million of potential additional value in ONE holding. Revolut RVI’s June filing implies a mark of approximately $1,398 per ordinary share. Forge currently displays an indicative price of $2,125. That’s approximately 52% higher. Stripe RVI’s reported mark: approximately $63 per share. Forge’s indicative price: $72.45. That’s approximately 15% higher. Ramp RVI’s mark: $120 per share. Transactions are taking place at ~$160/share on the secondary market 5.OpenAI RVI's mark: $687/share Transactions are taking place at >$1,000/share the demand is overwhelming. There are rumours that the company is raising a new round at a much higher valuation as well. https://www.reuters.com/legal/transactional/openai-targets-30-billion-funding-14-trillion-valuation-bloomberg-news-reports-2026-09-29/ Positions: 273 shares // 10 $20 call exp. March 19, 2027 Sources: Robinhood’s June 30 holdings report, SEC filings, Forge Global, Clarity and Nasdaq Private Market. Not financial advice. Private-market valuations are messy, and this thing can absolutely trade below NAV. submitted by /u/directmonk [link] [comments]",
-      "author": "/u/directmonk",
-      "symbols": [
-        "RVI",
-        "HOOD"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "transport": "rss",
-        "listing": "dd",
-        "flair": "",
-        "requested_flair": "",
-        "requested_flairs": [
-          "DD"
-        ],
-        "sort": "top",
-        "time_filter": "day",
-        "feed_rank": 1,
-        "image_urls": [
-          "https://preview.redd.it/irgflllt66uh1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=d2153ba7d7326de9588d7cda4ddea52d0fc1158e"
-        ],
-        "images": [
-          {
-            "url": "https://preview.redd.it/irgflllt66uh1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=d2153ba7d7326de9588d7cda4ddea52d0fc1158e",
-            "path": "data/media/reddit/reddit-image-reddit-919c0f5d245e3b15e193-1.jpg",
-            "mime_type": "image/jpeg",
-            "bytes": 2534
-          }
-        ]
       }
     },
     {
@@ -2373,256 +2787,6 @@
         "investor_type": "technology_investor",
         "coverage": "AI buildout and small/mid-cap technology equities",
         "engagement_score": 72
-      }
-    },
-    {
-      "id": "price:6f7be6179e84879fe732",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 跌幅前十 2026-10-07",
-      "url": "https://finance.yahoo.com/markets/stocks/losers/",
-      "published_at": "2026-10-07T20:00:00+00:00",
-      "collected_at": "2026-10-09T00:01:43.170265+00:00",
-      "body": "1. SECZ close 11.4; previous 12.7; change -10.2362%\n2. BB close 8.77; previous 9.58; change -8.4551%\n3. MSTR close 153.369995; previous 164.550003; change -6.7943%\n4. NBIS close 237.149994; previous 249.869995; change -5.0906%\n5. CRWD close 265.440002; previous 278.859985; change -4.8124%\n6. BLSH close 31.82; previous 33.380001; change -4.6735%\n7. CORZ close 15.94; previous 16.68; change -4.4365%\n8. BAND close 57.470001; previous 60.09; change -4.3601%\n9. RXT close 3.85; previous 4.02; change -4.2289%\n10. WBTN close 9.8; previous 10.2; change -3.9216%",
-      "author": "",
-      "symbols": [
-        "SECZ",
-        "BB",
-        "MSTR",
-        "NBIS",
-        "CRWD",
-        "BLSH",
-        "CORZ",
-        "BAND",
-        "RXT",
-        "WBTN"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "losers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-10-07",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "SECZ",
-            "price_date": "2026-10-07",
-            "close": 11.4,
-            "previous_close": 12.7,
-            "change_amount": -1.3,
-            "change_percentage": -10.2362,
-            "url": "https://finance.yahoo.com/quote/SECZ"
-          },
-          {
-            "ticker": "BB",
-            "price_date": "2026-10-07",
-            "close": 8.77,
-            "previous_close": 9.58,
-            "change_amount": -0.809999,
-            "change_percentage": -8.4551,
-            "url": "https://finance.yahoo.com/quote/BB"
-          },
-          {
-            "ticker": "MSTR",
-            "price_date": "2026-10-07",
-            "close": 153.369995,
-            "previous_close": 164.550003,
-            "change_amount": -11.180008,
-            "change_percentage": -6.7943,
-            "url": "https://finance.yahoo.com/quote/MSTR"
-          },
-          {
-            "ticker": "NBIS",
-            "price_date": "2026-10-07",
-            "close": 237.149994,
-            "previous_close": 249.869995,
-            "change_amount": -12.720001,
-            "change_percentage": -5.0906,
-            "url": "https://finance.yahoo.com/quote/NBIS"
-          },
-          {
-            "ticker": "CRWD",
-            "price_date": "2026-10-07",
-            "close": 265.440002,
-            "previous_close": 278.859985,
-            "change_amount": -13.419983,
-            "change_percentage": -4.8124,
-            "url": "https://finance.yahoo.com/quote/CRWD"
-          },
-          {
-            "ticker": "BLSH",
-            "price_date": "2026-10-07",
-            "close": 31.82,
-            "previous_close": 33.380001,
-            "change_amount": -1.560001,
-            "change_percentage": -4.6735,
-            "url": "https://finance.yahoo.com/quote/BLSH"
-          },
-          {
-            "ticker": "CORZ",
-            "price_date": "2026-10-07",
-            "close": 15.94,
-            "previous_close": 16.68,
-            "change_amount": -0.740001,
-            "change_percentage": -4.4365,
-            "url": "https://finance.yahoo.com/quote/CORZ"
-          },
-          {
-            "ticker": "BAND",
-            "price_date": "2026-10-07",
-            "close": 57.470001,
-            "previous_close": 60.09,
-            "change_amount": -2.619999,
-            "change_percentage": -4.3601,
-            "url": "https://finance.yahoo.com/quote/BAND"
-          },
-          {
-            "ticker": "RXT",
-            "price_date": "2026-10-07",
-            "close": 3.85,
-            "previous_close": 4.02,
-            "change_amount": -0.17,
-            "change_percentage": -4.2289,
-            "url": "https://finance.yahoo.com/quote/RXT"
-          },
-          {
-            "ticker": "WBTN",
-            "price_date": "2026-10-07",
-            "close": 9.8,
-            "previous_close": 10.2,
-            "change_amount": -0.4,
-            "change_percentage": -3.9216,
-            "url": "https://finance.yahoo.com/quote/WBTN"
-          }
-        ]
-      }
-    },
-    {
-      "id": "price:303a09c37d94ab760a39",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 涨幅前十 2026-10-07",
-      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
-      "published_at": "2026-10-07T20:00:00+00:00",
-      "collected_at": "2026-10-09T00:01:43.170265+00:00",
-      "body": "1. BSP close 41.07; previous 33.07; change 24.1911%\n2. BRZE close 28.459999; previous 26.34; change 8.0486%\n3. SPOT close 512.919983; previous 488.130005; change 5.0786%\n4. KVYO close 17.41; previous 16.6; change 4.8795%\n5. STUB close 6.0; previous 5.73; change 4.712%\n6. TTAN close 71.739998; previous 68.669998; change 4.4707%\n7. NAVN close 22.280001; previous 21.34; change 4.4049%\n8. RSKD close 8.05; previous 7.79; change 3.3376%\n9. WLTH close 10.9; previous 10.55; change 3.3175%\n10. AGYS close 101.919998; previous 98.790001; change 3.1683%",
-      "author": "",
-      "symbols": [
-        "BSP",
-        "BRZE",
-        "SPOT",
-        "KVYO",
-        "STUB",
-        "TTAN",
-        "NAVN",
-        "RSKD",
-        "WLTH",
-        "AGYS"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "gainers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-10-07",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "BSP",
-            "price_date": "2026-10-07",
-            "close": 41.07,
-            "previous_close": 33.07,
-            "change_amount": 8.0,
-            "change_percentage": 24.1911,
-            "url": "https://finance.yahoo.com/quote/BSP"
-          },
-          {
-            "ticker": "BRZE",
-            "price_date": "2026-10-07",
-            "close": 28.459999,
-            "previous_close": 26.34,
-            "change_amount": 2.119999,
-            "change_percentage": 8.0486,
-            "url": "https://finance.yahoo.com/quote/BRZE"
-          },
-          {
-            "ticker": "SPOT",
-            "price_date": "2026-10-07",
-            "close": 512.919983,
-            "previous_close": 488.130005,
-            "change_amount": 24.789978,
-            "change_percentage": 5.0786,
-            "url": "https://finance.yahoo.com/quote/SPOT"
-          },
-          {
-            "ticker": "KVYO",
-            "price_date": "2026-10-07",
-            "close": 17.41,
-            "previous_close": 16.6,
-            "change_amount": 0.809999,
-            "change_percentage": 4.8795,
-            "url": "https://finance.yahoo.com/quote/KVYO"
-          },
-          {
-            "ticker": "STUB",
-            "price_date": "2026-10-07",
-            "close": 6.0,
-            "previous_close": 5.73,
-            "change_amount": 0.27,
-            "change_percentage": 4.712,
-            "url": "https://finance.yahoo.com/quote/STUB"
-          },
-          {
-            "ticker": "TTAN",
-            "price_date": "2026-10-07",
-            "close": 71.739998,
-            "previous_close": 68.669998,
-            "change_amount": 3.07,
-            "change_percentage": 4.4707,
-            "url": "https://finance.yahoo.com/quote/TTAN"
-          },
-          {
-            "ticker": "NAVN",
-            "price_date": "2026-10-07",
-            "close": 22.280001,
-            "previous_close": 21.34,
-            "change_amount": 0.940001,
-            "change_percentage": 4.4049,
-            "url": "https://finance.yahoo.com/quote/NAVN"
-          },
-          {
-            "ticker": "RSKD",
-            "price_date": "2026-10-07",
-            "close": 8.05,
-            "previous_close": 7.79,
-            "change_amount": 0.26,
-            "change_percentage": 3.3376,
-            "url": "https://finance.yahoo.com/quote/RSKD"
-          },
-          {
-            "ticker": "WLTH",
-            "price_date": "2026-10-07",
-            "close": 10.9,
-            "previous_close": 10.55,
-            "change_amount": 0.349999,
-            "change_percentage": 3.3175,
-            "url": "https://finance.yahoo.com/quote/WLTH"
-          },
-          {
-            "ticker": "AGYS",
-            "price_date": "2026-10-07",
-            "close": 101.919998,
-            "previous_close": 98.790001,
-            "change_amount": 3.129997,
-            "change_percentage": 3.1683,
-            "url": "https://finance.yahoo.com/quote/AGYS"
-          }
-        ]
       }
     },
     {
@@ -8205,24 +8369,6 @@
       }
     },
     {
-      "id": "rss:bbda66dc819c21f15268",
-      "source_type": "rss",
-      "source_name": "Mobile Dev Memo",
-      "title": "Ultra-long user histories and the scaling laws of RecSys",
-      "url": "https://mdm.co/ultra-long-user-histories-and-the-scaling-laws-of-recsys/",
-      "published_at": "2026-10-06T17:39:10+00:00",
-      "collected_at": "2026-10-07T00:00:49.761417+00:00",
-      "body": "ByteDance and Meta are pioneering recommendation architectures that leverage ultra-long user histories to improve content ranking. By separating history processing from real-time evaluation, these systems bypass latency constraints while benefiting from scaling laws. This technical evolution creates a compounding advantage for platforms with vast data and significant financial resources.",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://mobiledevmemo.com/",
-        "publication_platform": "wordpress",
-        "section": "transaction_ideas"
-      }
-    },
-    {
       "id": "x:dc417db53192d6a120fe",
       "source_type": "x",
       "source_name": "@damnang2",
@@ -8488,25 +8634,6 @@
         "investor_type": "semiconductor_investor",
         "coverage": "semiconductors and AI infrastructure investing",
         "engagement_score": 120
-      }
-    },
-    {
-      "id": "substack:2977b160467fb0e9c6b5",
-      "source_type": "substack",
-      "source_name": "MBI Deep Dives",
-      "title": "When the Ads Come to the Data",
-      "url": "https://mbideepdives.substack.com/p/when-the-ads-come-to-the-data",
-      "published_at": "2026-10-06T16:35:28+00:00",
-      "collected_at": "2026-10-07T00:00:42.199738+00:00",
-      "body": "Last week, I **[wrote](https://mbideepdives.substack.com/p/why-muse-may-never-need-ads)** why Muse may never need ads. That piece traveled quite a bit, and interestingly, while I received glowing praise from some readers, I have also heard from people who vehemently disagreed with the word “never”. After pondering this a little more, I actually came to agree with my critics.\n\nThe core argument that I laid out in my piece wasn’t incorrect, but assuming Meta will **NEVER** show ads on Muse is likely a bridge too far. In fact, while discussing this topic with several people (public market investors, VCs, advertisers, and big tech employees) over the last few days, I realized I was a bit shortsighted in assuming a “no ads” future for Muse. The fact that Muse’s own browsing activities can inform the ads people see on Facebook and Instagram will help Meta be more patient before turning on the ads spigot, but to capture the full potential of Muse, Meta will almost certainly insert ads.\n\nThe reason I was so resistant to ads inside Muse was that if users are handing over their emails, logins and payment credentials, they need to believe Muse is working for them rather than for the highest bidder, and ads inside the agent would undermine that. In retrospect, I wasn’t quite imaginative enough about the ads of the future, which is perhaps a classic fallacy to fall for while navigating a transformative era of technology.\n\nThe first internet ads were essentially print ads that moved online i.e. static banners bought by the impression, and it took years before the native form emerged with ads targeted, auctioned and measured in ways print never could be. I suspect we may be at a similar stage with today’s consumer AI agents: a sponsored link inside a chat window is perhaps the banner ad of this era. The native form may instead be something like **a personal ad engine**, where my own AI looks through every ad and shows me only the one that fits my situation.\n\nMeta has stated (see [here](https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/), and [here](https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse)) plainly that my conversations and the data in the Virtual Machine (VM) that Muse uses are **NOT** shared with its ad systems. So any advertising inside Muse would need to work under that constraint: Meta's ad system cannot use what my agent knows about me to decide which ad I see. The only way around it, I think, is to reverse the usual flow: **the ads come to my data rather than my data going to the ads,** with my AI choosing among them inside the VM, and Meta's ad system learning little more than that a campaign produced a sale.\n\nLet me drive my point home by giving you a few specific examples how this could work **while keeping the privacy constraint in mind**.\n\nLet’s start with car insurance first, which is perhaps the most telling example because of where the ad dollars go today. My current insurer knows exactly when my policy renews, but it is obviously the one party with little reason to prompt me to shop around. Its rivals cannot see that date. What they can do is wait for me to reveal it i.e. when the renewal notice arrives and I type “cheap car insurance” into Google, that query is the best signal that I am open to switching. This is why insurance keywords have long been [among the most expensive](https://fraudblocker.com/articles/the-most-expensive-google-ads-keywords) in search as several insurers and lead-generation sites bid for my click, often as high as $60-70 per click. I may click three or four, fill in the same form each time, and my details may be sold on to agents who call me **for days**. Let’s just say that’s not really a great experience to go through. Of course, most of those clicks never become a policy, so the insurer that eventually wins me has in effect paid for the ones it lost which is why acquiring a single customer can cost several hundred dollars. Meta’s role in this market is likely quite modest today.\n\nNow consider what the AI in my VM knows today once I connected my emails with Muse. It has the renewal notice that shows my premium is going from $1,480 to $1,720 on November 14, a 16% increase. It also knows that my service receipts suggest I drove only about 6,000 miles this year. Today, Meta’s ad system has to guess which of its ads to show me. In this version the roles are reversed: my AI can look through every ad in Meta’s system i.e. every insurer’s campaign and show me the only one that fits my situation: an insurer with a low-mileage policy. With my permission it can then request a quote: let’s say $1,250 for the same coverage. I say “switch”, and Muse fills in the application and cancels the old policy. In such a world, I never will type the query, so one of the most expensive clicks in search may never need to happen when my personal AI agent will do the work for me. Of course, you don’t need to be a rocket scientist to figure out that an advertiser will be very, very happy to pay Meta to sell that policy to me.\n\nMeta’s advantage is that two things are needed at once, and very few companies currently have both. The first is the context, which sits in the VM. The second is the supply of ads: millions of advertisers already have campaigns, creative, budgets, and billing inside Meta’s system, so **the catalog my AI will be able to search is very deep on day one**. A startup with a capable agent would have the context but no advertisers. Google is the one company with both since the insurers are its customers, and my renewal notice probably sits in Gmail. However, every purchase its agent completes would likely **replace** the search auction it monetizes best (more on that later), whereas for Meta, this revenue would be largely new.\n\nWhat I find most interesting is that Meta can do all of this without breaking its privacy promise. Its ad system will never learn my renewal date, my premium or my mileage. Information travels in one direction: my AI reads the full catalog of ads (the same catalog every other user’s AI can read) and the choice is made inside my VM, where the ad system cannot see which ads were considered or why one was picked. The insurer will receive my details only at the moment I ask for a quote which is no different from filling in the form myself. What comes back to the ad system would need to be little more than the fact that a sale happened: this campaign produced a sale, bill the advertiser. Meta may learn that I bought a policy, but not why. **In effect, the ad system no longer needs to know me, because the ads come to my data rather than my data going to the ads**.\n\nThis is really the crux of what I missed and wasn’t imaginative enough to think through in my earlier piece. Of course, solving the privacy problem doesn't fully solve the trust problem I raised in my earlier piece. My agent is choosing only among the advertisers in Meta's system, so I may never know whether a cheaper insurer that doesn't advertise on Meta existed. But I am not sure there is a compelling alternative. Consumer agents are expensive to run, and it seems unrealistic to expect one to work for free at mass scale: **someone must pay for it**. Nor is it practical to imagine my agent crawling fifty insurers' websites every time a renewal notice arrives. Agents will optimize, and the most efficient path for Meta's agent is to go straight to the ad system, where the supply is already structured, priced and ready to transact. That works for Meta, which needs to make money; it works for the advertiser, which makes a sale; and it works **reasonably** well for me because nothing happens without my say. The agent proposes, but I decide whether $1,250 is good enough to switch. Is it the best possible deal? Maybe not. But it is a meaningfully better deal than the one I had, arrived at with far less hassle, and the final call remains mine. It is also worth remembering that the status quo isn't neutral either: when I search for \"cheap car insurance\" today, the options I see first are the ones that paid to be there.\n\nSince I am in a more imaginative mode today, let me give you another example.\n\nToday, Meta knows I watch running videos on Instagram, and perhaps that I once visited a shoe brand’s website, so brands that want to reach runners bid to show me their ads. The ads are plausibly relevant, but most arrive when I am not in the market, and none can account for what Meta’s ad system cannot see: that my current pair is nearly worn out, that I have a race coming, or that I need a wide fit. The brand obviously ends up paying for a great many impressions to find one buyer.\n\nNow consider what the AI in my VM may know. It has the confirmation email for a half marathon nine weeks away, a receipt showing my current pair is fourteen months old, ~500 miles logged on that pair in the running app I've connected to Muse (or you can create an app for yourself), and my standing instruction to Muse based on an earlier conversation: wide fit, under $160. Instead of Meta’s ad system guessing which ad to show me, my AI can look through every ad in Meta’s system i.e. every shoe brand’s campaign and show me the only one that fits: a Brooks model that comes in wide at $140. It explains why in terms of my own situation: the race is nine weeks out, my current pair has ~500 miles on it, and a new pair is best worn in a few weeks before race day. The ad can appear once, labeled as sponsored and if I say “order it”, Muse completes the purchase. Brooks pays for the sale it made because my agent found the ad from Meta’s ad library.\n\nUnlike insurance, this is Meta’s home turf. Shoe and apparel brands already spend heavily on Instagram, and their campaigns are already in the system. So the advantage here is not taking dollars from Google or anyone else but making Meta’s existing ads far more precise than a rival without the VM context could match. Nonetheless, this is an example where Meta would be partly replacing its own revenue since it sells fewer impressions when the first ad lands. Whether it comes out ahead likely depends on charging per sale, where a brand may pay more for certainty than it does for reach.\n\nThe privacy promise holds the same way: my race, receipt and shoe width never leave the VM, Brooks learns only what any retailer learns from an order, and the ad system learns little more than that the campaign produced a sale.\n\nOkay, one more example.\n\nYesterday, I saved a few Instagram posts about Mexico City restaurants. Meta can tell I am interested in the destination, so for a while I may see ads from airlines, hotels or booking sites. If I later search for flights or hotels on Google, the online travel agencies and hotel chains bid heavily for that query. So the ad dollars are largely split: Meta is paid for sparking the idea, and Google for the moment I act on it. Neither knows when I am actually free to travel or what the trip would cost me.\n\nThe AI in my VM may have much richer context. My calendar is open October 23–26, and I have told Muse I like staying somewhere walkable and under $200 a night. My AI can look through every ad in Meta's system i.e. every hotel's and booking site's campaign, along with restaurants promoting their tables and show me the combination that fits: a hotel that is a ten-minute walk from four of the restaurants I saved, at $180 a night, with tables open at two of them on the nights I'm free. I tell Muse to book the hotel and reserve both restaurants. I never searched for anything, so the query Google would have monetized never happened. Again, Meta will get paid by the hotel or OTA advertisers, and perhaps by the restaurants or reservation platforms too.\n\nMeta’s advantage here is that the desire usually starts on its own apps. Until now it had to hand the booking to someone else, but with an agent it can carry me from the saved post to the confirmed reservation. Hotels, booking sites and restaurants already advertise on Meta, so the supply is already in place. And this is spending that would not otherwise have happened which is the kind advertisers tend to value most, so it is more likely to add to Meta’s revenue than to replace it.\n\nThe privacy promise holds here too. The posts I saved are activity on Instagram, which Meta’s ad system can already see; my calendar and preferences stay in the VM where the matching happens, and the hotel and restaurants receive only what they would if I booked directly.\n\nLook, perhaps none of these will happen at any discernible scale next year and maybe I am overcompensating for the “lack of imagination” criticism I received due to my earlier piece. But the longer I look forward, the more realistic (and dare I say, inevitable) the contour of the future I have laid out here in the examples shared above.\n\nOne of the reasons I am more optimistic about the **economics** of personal AI agents is that I do not think you will want multiple AI agents going through your emails and ping you about the same insurance renewal. It is more likely that you will have one AI agent in your personal life. So the question of who gets to be your personal AI agent and the competitive dynamics around it is of paramount importance. As indicated in this piece, I do think Meta has some strong competitive advantages here.\n\nThe kind of ads I described above need at least **four things at once: a capable agent, free access at mass scale, personal context, and a deep catalog of advertisers**. I have little doubt that Muse will face lots of competition here, but most potential competitors are likely missing at least one piece of the broader puzzle.\n\nOpenAI has the willingness but perhaps not yet the economics as Dots are currently bundled with a $100-a-month Pro plan. Its ad business is also young, with [tens of thousands](https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads/)of advertisers against Meta’s tens of millions, and it has no social graph of its own, so its context must come entirely through connectors. Apple, on the other hand, may have a different set of problems. Siri is nowhere near as capable an agent as Muse or Dots. It also doesn’t have deep advertiser catalog, and an ad engine would cut against the privacy positioning it has spent a decade building. Apple’s deep privacy promise proved to be a masterstroke “[strategy credit](https://stratechery.com/2013/strategy-credit/)”, especially in the age of post-Cambridge Analytica mania, but in the era of AI, clinging onto such promise can lead to potentially inferior products. As a result, the “strategy credit” can potentially turn into “strategy tax”. Apple could still offer a compelling ad-free alternative funded by hardware and services margins, but consumer AI agents are expensive enough that it may be challenging even for Apple without a compelling path to monetizing the interactions.\n\nGoogle is the one I expect to come after Muse with much more vigor because it is perhaps the only company that could assemble everything Meta has without building anything new. Gmail and Calendar already hold much of the context Muse has to ask permission for, and in intent-heavy categories like insurance and travel, its advertiser base is arguably deeper than Meta’s. Its restraint so far looks like a choice rather than a limitation: Google’s personal agent, [Spark](https://gemini.google/overview/agent/spark/), remains behind a paywall. The real problem for Google is incentives: every errand an agent finishes may replace a commercial query it sells at auction, and given the kind of advertising Google is best at, cannibalization is a far larger concern for it than for Meta. Given the nature of advertising Google is best at, cannibalization is a larger concern for them. Having said that, Google has moved quickly before once the threat became clear, as it did after ChatGPT, and if Muse keeps gaining traction, the calculus of protecting search may start to look quite different.\n\nTibo Sottiaux, who leads ChatGPT and Codex at OpenAI, recently said the following on [Lenny’s Podcast](https://www.youtube.com/watch?v=MM-C3JqCXBk) (emphasis mine):\n\n> I think there's so many things that I feel are not yet priced in. **I think the majority of actions on the internet will be taken by agents.** Models are going to become more cheaper and faster at rates that are quite incredible. We will finally be able to integrate all modalities together in a way that is very seamless.\n\nIf we indeed enter a world where majority of actions on the internet will be taken by agents, you can bet the ads will be very different in that world. The “no ads” future may sound enticing or appealing at first, but it will only satisfy a small minority of people at the expense of higher prices for everyone else. If customer acquisition cost skyrockets due to advertisers not being able to reach the customers where they are, “no ads” will turn into more of a nightmare than utopia. So no, I don’t think I was right in saying Muse will **never** have ads. It almost certainly will, but the indirect monetization I mentioned in my earlier piece will allow Meta to be much more patient and stay razor-focused in aggregating demand.\n\n_Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on **[70](https://mbideepdives.substack.com/p/deep-dives)+** companies. The daily is just how I think out loud between the Deep Dives!_\n\n**Current Portfolio:**\n\nPlease note that these are **NOT** my recommendation to buy/sell these securities, but just disclosure from my end so that you can assess potential biases that I may have because of my own personal portfolio holdings. Always consider my write-up my personal investing journal and never forget my objectives, risk tolerance, and constraints may have no resemblance to yours.\n\nMy current portfolio is disclosed below:",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://mbideepdives.substack.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas",
-        "transport": "public_reader_fallback"
       }
     },
     {
@@ -9031,24 +9158,6 @@
       }
     },
     {
-      "id": "substack:673fb60ae75259d90d17",
-      "source_type": "substack",
-      "source_name": "Interconnects",
-      "title": "The Cyber Risk Discourse is Broken",
-      "url": "https://www.interconnects.ai/p/the-cyber-risk-discourse-is-broken",
-      "published_at": "2026-10-06T14:22:41+00:00",
-      "collected_at": "2026-10-07T00:00:40.547858+00:00",
-      "body": "I’ve had one too many discussions on the cyber risks of open models — where someone assumes that either banning open models happens in a silo (and bad actors will somehow actually be stopped) or that China is a threat and doesn’t care about AI safety — that I feel we’re going to end up making policy decisions that both limit American AI competitiveness and increases long-term cyber risk. I feel like we’re locked in on a path of lose-lose situation, unless people embrace nuance, trade-offs, and scary realities. Much has been written about the views of various players in this debate, which I summarize as follows: Open weight models pose an untenable risk to society’s functionality , occupied by frontier lab leadership and the national security community in the U.S. Western voices saying open weight models are necessary for defense and banning them will make the world less safe , occupied by AI risk moderates to different extremes. I include myself in this bucket, along with Hugging Face’s perspective after the OpenAI incident, and others like Joshua Saxe . Chinese companies continuing to release open-weight models with strong cyber capabilities , who are making decisions based on the risk assessments of their society and government. This list is also organized by volume or clarity of message in the Western AI ecosystem. The risk-focused discussions have been disproportionately visible, including pieces of work which I view as very detrimental to potential of engaging across assumed party lines on this issue. There’s also very little substantive engagement trying to understand how Chinese companies assess risk — rather, mostly arguments that border on ad hominem attacks like “Chinese labs don’t care about safety.” Interconnects AI is a reader-supported publication. Consider becoming a subscriber. The delusions of the anti open-weight alliance The most recent publication from the “open-weights are dangerous” crowd was the report by Anthropic on the risks of GLM-5.3 as an offensive cyber tool. The problem with this is not the technical research they did, which is largely reasonable, but the failure to engage on more cross cutting questions like: What happens if we ban open models due to cyber risks or why do Chinese companies deem these models safe to release? These questions, which I’ll come back to, are the ones we need to answer to understand the ecosystem perspective on current AI risks. All policy actions happen in a multi-piece puzzle, where the shape of risk can be changed, but it is rare that you get a universally better outcome. They are all trade-offs. This sort of solipsistic writing by Anthropic fits very closely to another type of discourse I’m hearing about regularly that is determining the fate of open models and AI broadly — classified briefings. I’ve had many discussions with people who say something like “Look, I’m pro open models, but if you’re seeing what I’m seeing, it’s an onslaught out there due to [XYZ Chinese open-weight model] and we need to act.” This perspective flies in the face of public information, where to date closed models have been documented as the cause of most existing cyber attacks. As someone who tries to make grounded predictions, the evidence of numerous attacks from OpenAI models is the only data I have on the shape of cyber risks (or, you can broaden the scope to include all of FelonyBench ). There are a few possible explanations, and it’ll take years to get to the true answer: Maybe open model weights and closed model APIs (with some safe guards) are both far closer to being easy to mis-use, rather than API models being closer to safe. The trope \"Open Dangerous, Closed Safe\" may be closer to \"Open Unsafe, Closed Unsafe.\" Maybe there are far fewer bad actors who are willing to use AI models for “loud” cyber attacks that target crucial infrastructure in the US or powerful and underprepared institutions. Closed models have stronger capabilities and stronger safeguards (in theory), but the stronger capabilities part could matter more in net harm if the safeguards on both are porous. I have a lot more to learn about how the cybersecurity ecosystem works, so I won’t support this full-heartedly as one of my current recommendations, but I think it’s at least a reasonable argument that open weight models as a diffusion tool for cyber defense could be the best tool we have to prevent harm over the next few years. There are many domains, e.g. sensitive government agencies, where open-weight models are the only tools that can be deployed in the near-term on air-gapped networks. Lots of this situation seems like the messy reality being hard to pin down, where the logical limits are clearer. I may agree with the simple reality that closed models are far safer in the limit, as a technical tool with more layers of protection, but they may actually be causing more harm in the near term because of how accessible model APIs are. Still, much of the impact of the tools comes down to how they’re used and controlled. A duopoly on such a crucial tool may be the defining, risky part. This is the debate we’re having, and over time, as intelligence diffuses, many things may change. These together make me come to the conclusion that if you think the latest open-weight models need to be banned to slow the diffusion of cyber risks, you probably also need to make public-facing APIs for the frontier closed-models illegal. The current stack of safeguards on closed models is stronger than open-weight models, but far from perfect. It is very likely that cyber capabilities of closed models increase much faster than guardrail performance, and a world where open models are banned while closed models continue to progress would be increasing the offense-defense cyber gap. It will take meaningful time to build mitigations that allow defenders to use strong AI models on their private infrastructure if we remove access to strong open-weight models. Share Explaining China’s AI risk posture China cares about AI safety. They have come to this discourse in a complete, endogenous manner relating to Chinese culture and power structures. There are some big picture pieces of this puzzle that reflect in other ways, such as Chinese society’s techno-optimism that extends into AI and the Chinese government’s complete focus on political stability. These things do, of course, interface with emerging AI risks like cybersecurity. They are in their own AI risk dynamic, which hasn’t risen to the prominence of the political dance between the White House and the frontier labs which we have followed in the U.S. for a few months. My understanding is that the Chinese companies have to register every major model release with the Chinese government. This includes evaluations, which originated around information control for banned government information. It is unclear if this framework has expanded meaningfully into any risks like cyber or bio. The Chinese government is very decentralized and information from the labs needs to go through existing structures to make it to the top. At the same time, there is a much stronger air of social risk in China, where leading AI researchers aren’t allowed to leave the country and the industry is closing off to foreign investment. On balance I would guess the personal risks facing people by unleashing any domestic harms would be much higher than in the U.S., where the worst case is that your company gets deleted. Overall, the political oversight seems much earlier than in the U.S. The Western AI companies’ core principle is close to “the best way to stop a bad guy with AI is to be a good guy with AI.” In China, these companies are much more practical about building a wonderful tool, and in many cases building a tool that complements their existing businesses. I do think that the companies consider the global implications of their work. These labs also clearly are incentivized, and often pushed via the government (at least in public messaging) to compete as much as they can. Running comprehensive safety evaluations on a frontier model like Kimi K3 could cost tens of millions of dollars in compute. These labs would much rather leave that for training. The correct debate is “what is the correct minimum amount of compute a lab should spend on safety testing before releasing each model?” There’s surely a case to be made that it’s more than the Chinese labs do, or at least they should be more transparent on what they do, but I would be hard pressed to agree if you said the minimum amount of compute would match what Anthropic or OpenAI does. It is not clear that, for all the effort Anthropic and OpenAI make on creating an institution that prioritizes understanding risks, they put it before business value and economic success in their priority stack. This “hands off the wheel” vibe from incidents like the HuggingFace—OpenAI incident was one of my lasting takeaways . It’s exemplified in the Hacktron hacking of OpenAI — it’s hard to be the world’s trust cyber partner if your own house is teeming with leaks. I trust many of the individuals at the labs to work hard to ensure safety, but I’m not trustworthy of the institutions overall. Open-weight Mythos in April would’ve been fine? When Claude Mythos was announced, it was previewed as if it was a new class of cyber weapon, where if it ended up in the wrong hands it would’ve caused mass societal destabilization. It seems like this was wrong. By all measures, GLM-5.3 is the model that crosses that threshold of capability, and there’s little public evidence that much has changed, and we’re over a month out of the model weight release. In fact, I would go further. If Claude Mythos was accidentally released as open-weight, it seems like the world would have been more or less fine. Yes, there would be a clear increase in cybersecurity incidents and it would be bad for society if the model leaked, but it would be a scenario that looks more like an acceleration than a step change in risk. The leading proponents of this new wave of open-weight fear mongering have effectively been making a falsifiable prediction — that the current open-weight models are going to cause substantial, not seen before AI harms by crippling our cyber infrastructure. Based on all the evidence I have, which I’ve unpacked above, they’re set up to be wrong. At least now, after so many years of debating open weight risks, we will start to get some real answers. Thanks to Rohit Krishnan and Joshua Saxe for some feedback on this post.",
-      "author": "Nathan Lambert",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.interconnects.ai",
-        "publication_platform": "substack",
-        "section": "industry_changes"
-      }
-    },
-    {
       "id": "x:f9b4627b76f5c49284b8",
       "source_type": "x",
       "source_name": "@oguzerkan",
@@ -9403,25 +9512,6 @@
       }
     },
     {
-      "id": "substack:65450452881e90a09148",
-      "source_type": "substack",
-      "source_name": "Outlier Cap",
-      "title": "The Market Is Repeating the 1999 Pattern. Is the Lost Decade Beginning?",
-      "url": "https://outliercapx.substack.com/p/the-market-is-repeating-the-1999",
-      "published_at": "2026-10-06T12:45:46+00:00",
-      "collected_at": "2026-10-07T00:00:51.128885+00:00",
-      "body": "A general-purpose technology. A capex boom large enough to move GDP. A market priced for a decade of profits that have not all arrived. A chorus, getting louder this week, that the next stop is a crash and then a lost decade.\n\nThat chorus is not stupid. It is looking at the same objects I am looking at.\n\n**The Shiller CAPE** has been above 40 since May, the second time in a century and a half. The first time was the dot-com top.\n\n**Oxford Economics** put AI-related capex at 27% of US fixed investment in the second quarter, with the three-year build already above 2% of GDP. Among technology booms of the last two hundred years, only the British railway mania of the 1840s was larger. **Goldman Sachs**, on September 25, took hyperscaler spending to $800 billion this year and $1.2 trillion in 2027, above a consensus that was already at $1.1 trillion, and to $1.4 trillion in 2028. Cumulative infrastructure spend from 2026 to 2031, on their number, is $7.6 trillion.\n\nTo break even on the near-term outlay they say the five large platforms need about $300 billion a year of AI revenue. They do not have it yet.\n\n**The bond market** is not cooperating with the story. The 10-year Treasury is at 5.3% today, up from roughly 4.1% a year ago, the highest in this cycle. The 30-year is near 5.7%. **The Fed** hiked in September, to a 3.75–4% funds range, and the median dot implies another move before year-end. The 2-year is back above 4.7% for the first time since the summer of 2024. **Bloomberg’s** Monday piece was titled, without poetry, that the AI party is on edge because yields are soaring. A strategist at **Panmure Liberum** spent today arguing the reality check takes the S&P 500 to 5,000, a 35% drawdown, with the bubble popping in 2027 or 2028.\n\nThis is the setup people mean when they forward the three-column chart. **Electrification. The internet. Artificial intelligence**. A vertical narrative, a multiple that cannot be defended, and a decade in which the buyers of the top go nowhere.\n\nI think they are right about the rhyme. I think they are **wrong about the crash**.\n\n[![Image 1](https://substackcdn.com/image/fetch/$s_!Zwoh!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3215b6b2-c84b-46bd-9633-a736bce48c67_1800x1320.png)](https://substackcdn.com/image/fetch/$s_!Zwoh!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3215b6b2-c84b-46bd-9633-a736bce48c67_1800x1320.png)\n\nRead it left to right, and the scare is obvious. Same kind of story. Same kind of market, supposedly. Then read the **bottom three rows**, and the scare changes shape.\n\nIn 1929 and 2000, about 70% of the rise was the multiple. Earnings explained about 30%, and in 2000 they did not arrive. The leaders were valuations. There had been no serious correction inside the narrative. The rise was vertical and the bull market was already very long.\n\nIn 2026 the same decomposition puts **earnings at about 79% of the rise and the multiple at about 21%.** I would not sign the decimal. The direction is the whole argument. The leaders are **record earnings and cash**. The washout already happened. The rise has been a hill, not an escalator, and the bull market, measured cleanly from the October 2022 low, is still shorter than the historical average of the great cycles.\n\nA lost decade is not a feeling. It is a mechanism. The mechanism is a market that collects, in advance, a decade of earnings that do not exist. When the multiple leaves, there is no floor. That is what 2000 was. Cisco at more than 100 times. Fiber in the ground that nobody lit. Pets.com, which did not need a multiple at all.\n\n2026 is expensive. It is not that.\n\nIn the second quarter the S&P 500 grew earnings **52% year over year**, the fastest in five years. The Magnificent Seven grew 118%. The other 493 grew 32%, the best print for that group since late 2021. Strip out Alphabet and Amazon, the two names that distort the picture most, and the index still grew earnings above 30%.\n\nThat is not a one-story market hoping the story arrives. That is a market in which the **story is already in the income statement**, and not only in seven stocks.\n\nThe third quarter is set up the wrong way for a bubble. **FactSet**, on October 2, has S&P earnings growth at 29.5%, up from 26.7% on June 30. Analysts raised numbers during the quarter (they usually cut them). The index is lined up for a third straight quarter above 25%, and an eighth straight quarter of double-digit growth. Full-year 2026 is penciled at 32%. For the fourth quarter, 28%.\n\n**The guidance is the tell**. Of 116 companies that have issued a number for the third quarter, 72 have guided up and 44 have guided down. That is the highest count of positive preannouncements since FactSet started tracking the series in 2006. In 1999 the multiple was covering for earnings that were missing. Here the earnings are being revised up into the print, and the multiple is the thing giving ground.\n\n**The forward price-to-earnings** on the S&P has fallen from about 22x to about **19x**, in line with the 10-year average and under the 5-year average, while the index sits roughly 1% from a record. The S&P closed October 2 at 7,723. Price barely moved over the summer. The earnings estimate did. That is the opposite of how a bubble finishes. A bubble finishes with the price running and the earnings apologizing.\n\nThe CAPE above 40 is real, and anyone waving it at you is not inventing it. They are using a 10-year trailing, inflation-adjusted multiple to answer a question about next year’s operating earnings. A high multiple on earnings that never arrive is a lost decade. A high trailing multiple on a market whose forward multiple is already back at average, because the earnings showed up, is a market that can earn the valuation from behind. Expensive is not the same as hollow. Understanding this is extremely important to build **generational wealth**.\n\nThe **5.3% 10-year** is the best argument the bears have, and it should not be waved away.\n\nA higher discount rate compresses what you should pay for a distant cash flow. **Goldman** itself has said the derating this year is partly the yield and partly the fear that AI capex is making companies over-earn against cash flow. If the **Fed** delivers the extra hike the dots imply, and the long end stays here or goes higher, the index multiple does not get to expand. I am not underwriting multiple expansion.**I am underwriting earnings**.\n\nThat is the distinction **2000 did not have**. Into that top the Fed took the funds rate to 6.5%. **Earnings were already missing**. The multiple was the entire return. A hike into a miss is a crash. A hike into a 30% earnings year is a headwind on the multiple and a test of whether the profit is real. Those are very different events.\n\n**The curve is not inverted**. The 10-year sits above the front end. The bond market is charging more for duration and for inflation risk, not signaling the recession the three-column chart needs. A recession call on a 5.3% long bond and a funds rate at 3.75%, with S&P earnings growing at 30%, is a call about valuation. It is not yet a call about the economy breaking.\n\nThis is where the 1999 analogy does the most damage, because the scale really does rhyme.\n\n$800 billion this year. $1.2 trillion next year. A build that Oxford ranks with the railways. A $300 billion revenue gap before the platforms break even on the spend, on Goldman’s own math. Negative free cash flow at the model labs. Circular financing, vendor financing, the whole liturgy. If you stop the sentence there, you should sell.\n\nThe sentence does not stop there.\n\nIn 1999 the excess was inventory of hope. Fiber was buried ahead of traffic that was not there. The capacity was the bubble. **In 2026 the constraint is the object, and the object is sold out**. Indium phosphide. High-power lasers. 1.6T modules. Memory, which is taking a rising share of every capex dollar and still cannot clear the bid. Power, which is no longer spare. Lead times of 12 and 18 months are not a powerpoint. They are a queue.\n\nA **physical shortage** does not deflate because a strategist publishes a 5,000 target. It deflates when the purchase order is cancelled. That has not happened.\n\n**The labs** can be over-earning a story and the suppliers can still be under-earning a shortage. Those are not the same position. The index averages them. The index is the wrong instrument if the question is whether the bottleneck gets paid.\n\nFew things. None of them is a 5.3% yield on its own.\n\n**Capex stops converting into revenue**, and the $300 billion gap becomes a write-down rather than a lag. The other 493 stop growing and the entire earnings number collapses back into 7 names. **The next leg of the index is the multiple, not the profit**. The delivery queue turns into cancellations. The labs’ negative cash flow migrates from the private round into the listed buyers’ income statement and stays there.\n\nThe day that cluster shows up, the three-column table is right, and the position should be sold. It is not what the second quarter printed, and it is not what the third-quarter guidance is saying. Seventy-two companies guided up. Forty-four guided down. That is not how a hollow market talks in the month before earnings.\n\nThe technology was real in 1929 and in 2000. You could still lose a decade buying it at the narrative’s price. The advice is not to relax because artificial intelligence is real. The advice is duller than the chart:\n\n> **What I do –**Own mainly the stocks where the earnings already exist, and where next year’s earnings depend on a unit that is not in stock.\n\nDo not own the index as a referendum on the technology. The index holds whoever collects the shortage and whoever pays it. They will not have the same drawdown on the day the multiple gets tired.\n\nA lost decade is what happens when the story arrives and the earnings do not. **The earnings are already here**. The pattern is repeating. The mechanism is not.\n\n> If this brought you value, hit that **follow** button! It truly **means the world to me.** I am already reading a lot of messages about how we are helping everyday investors build generational wealth, that is what keeps us going!\n\n> You should take a look at the**Outlier Capital Portfolio (**pinned to our profile**)**. The blueprint is public. Target: 5x+ returns in 5 years.\n\n[Share](https://outliercapx.substack.com/p/the-market-is-repeating-the-1999?utm_source=substack&utm_medium=email&utm_content=share&action=share)\n\nBest wishes!\n\nThe Founder,\n\nOutlier Capital.\n\n_Disclaimer: This is not financial advice. Do your own thorough research. Past performance or projected growth is never a guarantee of future results._",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://outliercapx.substack.com/",
-        "publication_platform": "substack",
-        "section": "transaction_ideas",
-        "transport": "public_reader_fallback"
-      }
-    },
-    {
       "id": "x:45a63c41c72a21066785",
       "source_type": "x",
       "source_name": "@rauchg",
@@ -9505,24 +9595,6 @@
             "body": "AI、高速運算及矽光子需求持續升溫，半導體測試廠矽格擴產腳步再加快。矽格今（6）日在法說會表示，目前大部分客戶已簽訂一年以上產能保障協議，AI相關訂單能見度維持高檔，2027年光通訊、矽光子相關業務更力拚「倍數成長」，AI、矽光子及高速運算營收占比則要由目前約24%提高至30%以上。由於仍有數個重要客戶洽談合作，若需求進一步確認且時程緊迫，不排除未來幾個月再上修今年資本支出。\n\n矽格與台星科今年舉行聯合法說會，集團董事長黃興陽率領矽格副董事長暨總經理葉燦鍊、共同營運長郭旭東、台星科總經理翁立志等決策成員說明第4季及明年展望時，做出上述重要宣布。\n\n葉燦鍊指出，這波AI需求不只是CPU、GPU及ASIC等AI Compute持續成長，AI Connectivity（互連）也開始成為資料中心的新瓶頸。隨著算力快速提升，晶片之間的資料傳輸速度必須同步升級，帶動矽光子、高速網通等測試需求快速增加。\n\n其中，矽格投入高速傳輸及光通訊測試已超過20年，目前從光通訊測試技術、設備研發、工程到量產均已建立完整能力。公司預期，2027年光通訊相關業務可望呈現倍數成長，且光學、光通訊測試獲利能力優於傳統測試，隨營收占比提高，也有利產品組合改善。\n\n訂單能見度同樣明顯拉長。葉燦鍊表示，目前大部分客戶均與公司簽訂一年以上的產能保障協議。這類協議其實是「雙向保障」，客戶擔心AI需求爆發後拿不到測試產能，矽格則需要確保投入廠房及設備後有足夠訂單支撐，因此雙方提前鎖定未來產能與需求。\n\n為因應客戶需求，矽格今年初購入湖口二廠，7月投入量產後持續爬坡，目前產能約開出四成，預計2027年全數開出，且新增產能已獲客戶提前預訂；後續中興三廠也將接棒，規畫2027年開始投入量產，使新增產能可以一路銜接。\n\n矽格表示，目前客戶需求比原先預期更強，既有資本支出規畫已不足以支應，因此今年已追加投資，擴充AI伺服器、ASIC、CPU、GPU、AI Connectivity、矽光子及高速網通等高階測試設備。\n\n值得注意的是，葉燦鍊透露，目前仍有數個重要客戶正在洽談新的合作計畫，若客戶需求進一步增加，「不排除在這幾個月再上修資本支出」，顯示AI與矽光子訂單正持續推升公司設備及產能投資需求。\n\n矽格副董事長暨總經理葉燦鍊表示，目前仍有數個重要客戶正在洽談新的合作計畫，若客戶需求進一步增加，不排除在這幾個月再上修資本支出。記者簡永祥／攝影\n\n矽格集團董事長黃興陽（右三）今日帶領矽格副董事長暨總經理葉燦鍊（右二）、共同營運長郭旭東（左三）、台星科總經理翁立志（左二）等決策成員說明第4季及明年展望。記者簡永祥／攝影"
           }
         ]
-      }
-    },
-    {
-      "id": "substack:473ccd6f208363936cc5",
-      "source_type": "substack",
-      "source_name": "How They Make Money / App Economy Insights",
-      "title": "🤓 OpenAI’s Next Interface",
-      "url": "https://www.appeconomyinsights.com/p/openais-next-interface",
-      "published_at": "2026-10-06T12:02:19+00:00",
-      "collected_at": "2026-10-07T00:00:41.979641+00:00",
-      "body": "Welcome to the Premium edition of How They Make Money . Over 300,000 subscribers turn to us for business and investment insights. In case you missed it: 🏢 Meta Goes to Work 📊 Earnings Visuals (9/2026) ☁️ How Nscale Makes Money ❄️ Snowflake: AI Fuels Consumption Subscribe now Connecting the Dots OpenAI used DevDay last week to unveil more than 20 products and features. The most important announcement was Dots . Source: OpenAI DevDay 2026 Dots are always-on AI agents with their own cloud computer, access to more than 4,000 apps, and the ability to keep working toward your goals even when you are not actively prompting them. Sam Altman described the shift as a “whole new way to work with AI” and a new set of “superpowers.” The contrast with Meta Connect was striking. Meta showed Muse booking trips, shopping, and handling everyday tasks. OpenAI showed Dots managing projects, coding, preparing documents, coordinating across Slack and Teams, and helping run a startup. For now, the two companies are attacking the agent market from opposite ends. Meta is pushing toward AI for everyone . OpenAI is starting with AI for high-value work . And that difference may explain where ChatGPT is heading next. Today at a glance: The pieces start to fit together OpenAI wants to become the operating layer The business model gets more interesting The cost of autonomy Who owns the workday? 🔎 Discover the companies Wall Street ignores Some of the most interesting opportunities emerge in smaller, undercovered businesses that institutions and analysts barely follow. I’m working on a new way to help you find them before they become obvious . Spots will be strictly capped at launch. Get early access 1. The pieces start to fit together OpenAI has spent the past year turning ChatGPT into much more than a chatbot, but the pieces have not always fit together cleanly. ChatGPT started as the conversational interface. Codex became the place for agentic coding, organized around projects and files. ChatGPT Work extended that model to broader knowledge work, adding connections to SaaS apps and a persistent cloud environment. More recently, OpenAI has started pulling those experiences into the same product. The result is powerful, but increasingly complicated. You can have several projects, agents, threads, apps, and tasks running at once. At some point, the bottleneck becomes the person trying to keep track of it all. Source: OpenAI That’s where Dots fit. A Dot sits above your individual tools as a coordinating layer. It remembers what you are working on, follows projects over time, and can coordinate work across them. It acts like a control tower for your AI work. The shift matters because the more work OpenAI hosts on its own cloud computers, the more persistent the relationship becomes. A chatbot conversation is relatively easy to move between providers. Recreating a collection of projects, files, permissions, preferences, and ongoing agents somewhere else is much harder. In other words, Dots could make ChatGPT both easier to use and harder to leave. Read more",
-      "author": "App Economy Insights",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.appeconomyinsights.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas"
       }
     },
     {
@@ -9927,24 +9999,6 @@
         "investor_type": "technology_investor",
         "coverage": "technology and software equity trade ideas",
         "engagement_score": 321
-      }
-    },
-    {
-      "id": "substack:417c3a0572d8db459700",
-      "source_type": "substack",
-      "source_name": "Latent Space",
-      "title": "[AINews] Reflection Beam - 501B-A23B American Open Model",
-      "url": "https://www.latent.space/p/ainews-reflection-beam-501b-a23b",
-      "published_at": "2026-10-06T06:28:43+00:00",
-      "collected_at": "2026-10-07T00:00:39.998294+00:00",
-      "body": "It’s been over a year since Reflection launched with us with big goals on coding (and hinted about their RL approach ): But they stayed “stealth” longer than Thinking Machines and it was not clear we would ever get a model launch out of them, as the broader open model ecosystem did not slow down one bigt for them. Well, we did : They compare themselves to Inkling, Nemotron, and GLM 5.2, but the SOTA GLM 5.3, Kimi K3, Qwen 3.8 Max, and DeepSeek V4.1 Flash are generally ahead. Still, since this is US-trained from scratch, there’s a segment of the market that has been eagerly waiting for more options here, and more importantly, Reflection has now announced its arrival as a functional neolab! AI News for 10/03/2026-10/5/2026. We checked 12 subreddits, 544 Twitters and no further Discords. AINews’ website lets you search all past issues. As a reminder, AINews is now a section of Latent Space . You can opt in/out of email frequencies! AI Twitter Recap Reflection’s Beam Leads a Wave of Open-Weight Releases Beam launch : Reflection announced Beam, a text-only 501B-total / 23B-active MoE for coding, agentic and scientific work. It was trained from scratch, and full weights under Apache 2.0 are due this month ( announcement , Laskin ). Training scale : Team posts cite 23.8T pretraining tokens, partly from an OCR pipeline over hundreds of millions of PDFs ( data lead ). They also describe a stable RL/OPD run on 10K GB300s with more than 100M rollouts across ~1M tasks ( Damos ). Claimed results : A summary of Reflection’s claims gives 80.9 on SWE-bench Verified, 3–4x the inference efficiency of GLM 5.2, and four weeks each of pretraining and RL on ~10,500 GB300s ( summary ). A tech report and OSS integrations are promised ( Polozov ). Context : Axios reported the launch ahead of time. It said Reflection pays $150M/month for Colossus compute plus a $1B Nebius deal, and that other unnamed US labs will ship open models this month ( Curran ). Independent and critical reads : Artificial Analysis has early access and expects Beam to be among the most token-efficient open models for its intelligence ( AA ). MFU and architecture : Elie Bakouch estimates only ~12% BF16 MFU in pretraining. He reads the architecture as 3:1 interleaved global/sliding-window attention and notes better held-out code perplexity than DSv4 ( analysis ). Compute comparison : Teortaxes calls Beam an iso-FLOP replication of DeepSeek V3 ( post ). He infers ~1.3B RL sandboxes over 4 weeks, with up to 170K running at once ( sandboxes ). Positioning : Observers place Beam around GLM-5.2 level ( iScienceLuvr ) and below DSv4 Flash on some benchmarks ( critique ). Nathan Lambert groups it with Nvidia and Thinking Machines as strong US releases that still trail Chinese counterparts ( Lambert ). Other open and specialized models : Aleph Alpha Kolibri : 78B total / 3.46B active, Apache 2.0, built for German and English. Self-reported scores are 96.9% AIME 2025, 84.3% GPQA Diamond and 66.4% SWE-Bench Verified ( summary ). The dataset is unreleased, and agentic evals sit well below Qwen ( Jitsev ). Reka Rho-1 : A 19B omni model that understands and generates text, images, video and robot actions, trained from scratch on 320 H100s in ~3 months ( announcement , compute ). Decision models : Command Code’s Agr (31B) and Agr-flash (360M) skip text generation and return typed values with per-option probabilities for tool calls and routing ( Agr ). SemiAnalysis explains that TypeSafe’s Jev uses the same no-decode approach and displaces frontier models mainly in router roles ( explainer ). Smaller releases : Upstage’s Solar Mini 4 (35B / 3B active, 512K context) is free on Nous Portal for two weeks ( Nous ). Eleven v4 Turbo tops AA’s Provider Voice TTS arena at half the price of v4 ( AA ). OpenAI vs Anthropic: Subscription Value, Speed and Evals SemiAnalysis limit testing : SemiAnalysis tested plans from Anthropic, OpenAI, Meta, SpaceXAI, MiniMax, Moonshot, Cursor, Cognition and others. It found that Claude subscriptions deliver 5x+ more API-equivalent value than OpenAI plans ( report ). Methodology : Value depends on the credit cost of each model and token type, not on list API prices ( thread ). Task-cost adjustment : Adjusting for task cost narrows Claude’s edge to 1.3–2.9x ( scaling01 ). Unverified compute estimate : One analyst claims Anthropic spends 42% of inference compute on subscriptions that earn ~10% of revenue ( chart ). OpenAI capacity squeeze : Users report that new $200 sign-ups were paused and that usage limits were effectively halved across plans. GPT-6.1 Sol was positioned as the efficient alternative ( analysis ). Theo describes a reversal in coding-model preference between July and September ( post ). OpenAI response : Codex lead Tibo pledged a meaningful improvement or a full reset every day for 28 days ( pledge ). Day 1 speedup : Default speed for GPT-6 Astra and GPT-6.1 Sol rose ~50%, from ~30 to ~50 TPS. The change covers all subscription surfaces and Sign in with ChatGPT partners such as OpenCode, Pi, Amp and Devin ( day 1 , TPS ). Friction : Banked Codex resets expire without timezone adjustment ( report ). The always-on dots agent is limited to $100+ Pro plans ( criticism ). Enterprise demand (reported) : The Information reports that Microsoft cut projected internal Anthropic spend by more than a third. It also reports Meta’s Claude Code users fell from ~60K to ~30K, largely because of a push to Meta’s own tools ( summary ). Leaderboards : Agent Arena : Anthropic holds #1 in Code, Work and Chat. Fable 5.1 leads Code and Work, while GPT-6 Astra places #2 in Code ( Arena ). Design Arena : GPT-6 Astra is #1 in 3D Design, Frontend, Full Stack and Image-to-HTML ( Design Arena ). Hallucination : On AA-Omniscience, Gemini 4 Argon guesses wrong on 15% of questions it doesn’t know, versus 29% for the next best model. GPT-6 Astra has the highest accuracy at 61% ( data ). Agent Harnesses, RL Environments and Developer Tooling Multi-harness RL (Hugging Face) : A capture proxy speaks the OpenAI Chat, OpenAI Responses, Anthropic and Gemini formats. It forwards calls to vLLM and records exact token IDs and logprobs for TRL, so 10 unmodified harnesses become RL environments ( Delangue , explainer ). Results : The same weights score 62% under Mini-SWE-Agent and 33% under Claude Code. Training LFM2.5-2.6B across 4 harnesses lifts first-attempt solves from 42% to 54%, and a tool-call bonus cuts calls by 31%. SFT on 3,189 rollouts plateaus at 47.5%. Caveats : The run used one task family and one seed. Environment hosting : RL environments are now hosted and versioned on the HF Hub like datasets ( blog ). Pi Durable : Earendil’s harness is built around a small task-based workflow engine, so long-running, multiplayer agents can suspend and resume anywhere ( Pi ). Design : The core is ~15K lines of TypeScript with SQLite/JSONL storage and runs on Bun or Cloudflare Durable Objects. Control is separated from execution environments ( review ). Effect.ts : The authors explain they skipped Effect because it does not provide durability ( Zechner ). Agent memory : Cognition launched Devin “Dreaming,” which prunes and links a memory graph overnight. It is open-sourcing the git- and markdown-backed format as Agent Memory Repo ( launch , format ). Cursor SDK : The update adds mid-run steering, background subagents that report back to the parent, replaceable system prompts, and MCP readOnlyHint and destructiveHint annotations on custom tools ( steering , annotations ). DeepSeek Harness : An experimental Claude Code Mods compatibility layer in v0.2.1-alpha.1 tests whether DSH’s “everything is a plugin” architecture is a superset of Claude Code’s extension points ( team post ). Routing and access : Cline : Its Pareto 26.10 Preview routes across models and grades answers, claiming $0.24 versus $13.41 per task at equal DeepSWE score ( Cline ). Cline also paused its free DeepSeek-V4.1-Flash promotion over abuse ( notice ). ChatGPT : Custom MCP servers no longer require developer mode ( post ). Agent and Training Research Verification over sampling : NVIDIA mid-harness : The method samples candidate shell commands and verifies them before running one. A GPT-5.6 Sol verifier choosing among 8 actions lifts TerminalBench-Lite Pass@1 from 50% to 68%, while weak verifiers add little ( summary ). Google VeriHarness : The method challenges claims that all rollouts agree on and resolves disagreements against workspace evidence. It adds +6.2 points with Gemini 3.5 Flash and +6.4 with Opus 4.8, and ~26K rollouts are released ( summary ). Context management : UT Austin compression study : Across ~35K runs, compression that uses a third of the tokens can be 20–80% slower than full context. Threshold triggers beat step triggers, and the best policy varies by model ( summary ). PAIR : The method replays an agent from the same state to isolate harmful compressions. It then rewrites the compression prompt and comes close to no-compression performance ( paper ). CorpusMap : Precomputed entity pages for document collections raise answer quality 6.4–11.7 points while cutting input tokens 34–57% ( paper ). Self-improving harnesses : SelfSearch : The method reaches a claimed 82.0% on Terminal-Bench 2.1 with DeepSeek V4 Flash, matching Codex, for $4.03 in search cost ( paper ). EverMind Raven : Its evolved research harness hits 69.3% on BrowseComp ( paper ). Optimization and architecture : Dust : A zeroth-order method using activation-perturbation “virtual populations” approaches, and sometimes exceeds, backprop on transformer pretraining. It claims to be 1,000–10,000x more compute-efficient than EGGROLL ( thread ). LOOM : Looped MoEs train stably at 9–12 loops, and a 700M model is best at 5 loops at iso-FLOP ( thread ). Policy gradient on ImageNet : Ian Osband shows exact policy gradient reaches 4% on ImageNet versus 62% for cross-entropy, arguing that RL-loss failures are not just exploration problems ( post ). RL dynamics : Base Labs finds RL updates are less low-rank than claimed ( rollout ). Datalab reports RL alone eliminates tool-call loops at temperature 0, versus a 92% loop rate for SFT ( writeup ). AI for science : Vals AI reports that 90+ Opus 5.5 agents ran DFT simulations over 3 days and flagged two room-temperature magnetic semiconductor candidates, one synthesized back in 1999. The results are predictions only, with a public ledger ( thread , caveats ). Agent spend : Epoch estimates OpenAI researchers’ coding-agent spend, valued at API prices, has doubled roughly monthly. The median researcher was at ~$600/day by mid-August ( Epoch ). Inference Systems and Hardware OpenRouter pricing distortion : Horace He shows GLM 5.3 priced at $0.08/M input but $5.00/M output on inference.net. He attributes this to OpenRouter’s inverse-square price routing and apparent overweighting of input price ( thread , routing ). llama.cpp : Speculative decoding on Metal : New kernels make speculative decoding up to 3.4x faster than plain decoding on an M3 Ultra (110 vs 32.1 tok/s) ( qvac ). v0.6.0 : Adds Clef text and vision support, Qwen3.8-Flash-Next, and a new llama_batch_ext API ( Gerganov ). Agentic kernel work : Baseten reports an engine built in a week of mostly autonomous agent work, with 90% faster decoding and 57% lower TTFT than the open-source baseline ( blog ). Communications : NCCL and PyTorch symmetric memory speed up small-to-medium collectives ( Bekman ). Chinese accelerators : Alibaba T-Head’s Zhenwu V900 has 216 GB of memory and 1,200 GB/s interconnect, claims 3x the M890, and ships Q1 2027 ( SemiAnalysis ). Safety, Policy and Industry OpenAI text watermarking : OpenAI will add invisible statistical watermarks to eligible ChatGPT and Codex text in the EU under the AI Act, with an opt-in API toggle worldwide ( announcement ). Limits : Rewriting or translation removes the watermark, and only approved researchers get the detector ( limits ). Robustness figure : One cited test shows 25% synonym replacement dropping detection from ~92% to 17% ( critique ). Agent incidents and safety governance : Bengio op-ed : In the FT, Bengio argues recent agent hacks are not merely sandbox problems ( op-ed ). He also cites a Quinnipiac poll in which 86% back independent safety standards ( poll ). HF incident : Neel Nanda calls the OpenAI x Hugging Face incident the most striking alignment failure so far ( Nanda ). Systems safety : Ryan Lowe calls for nuclear-style layered systems safety at the labs ( Lowe ). Shutdown resistance : An OpenAI alignment post documents what one researcher calls the most realistic precursor shutdown-resistance behavior seen so far ( link ). Policy voices : Autonomous weapons : Former OpenAI researcher Joshua Achiam called for bans on certain autonomous weapons akin to chemical weapons ( post ). He is joining IFP and FAI as a fellow ( announcement ). Expert survey : The LEAP panel of 250+ experts most supports an international body with US and China membership and pre-release authorization power, and opposes federal preemption ( FRI ). Altman on trade-offs : Sam Altman told Politico that “the world should accept some bad things happening” for the technology’s benefits ( Politico ). Compute access in China : Tencent lease (reported) : Per the FT, Tencent leased ~100K advanced chips in Oracle’s Southeast Asian data centers for ~$7B over five years ( summary ). Smuggling charge : US prosecutors charged a California reseller with smuggling more than $300M of GPU servers to China ( report ). Consolidation : AMD and World Labs (reported) : AMD reportedly bought World Labs for $8.2B ( DL Weekly ). NVIDIA neutrality : SemiAnalysis questions NVIDIA’s hardware neutrality after its SchedMD/SLURM and Hugging Face acquisitions ( SemiAnalysis ). Top tweets (by engagement) Tibo: a Codex improvement or reset every day for 28 days — 30.9K GPT-6 Astra and 6.1 Sol ~50% faster across subscriptions — 22.2K Achiam: ban certain autonomous weapons — 11.2K OpenAI EU text watermarking — 7.7K Reflection introduces Beam — 7.4K Vals AI: Opus 5.5 agents find magnetic semiconductor candidates — 5.8K Theo: Anthropic vs OpenAI for coding, July vs September — 5.2K HF: coding harnesses as RL environments — 2.5K AI Reddit Recap /r/LocalLlama + /r/localLLM Recap 1. Local LLM Hardware at Extreme Scale Read more",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.latent.space",
-        "publication_platform": "substack",
-        "section": "industry_changes"
       }
     },
     {
