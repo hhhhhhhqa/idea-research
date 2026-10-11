@@ -1,7 +1,44 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-10T01:18:52.102708+00:00",
+  "generated_at": "2026-10-11T00:01:43.950813+00:00",
   "pipelines": [
+    {
+      "pipeline": "substack",
+      "status": "ok",
+      "item_count": 5,
+      "errors": [],
+      "notes": [
+        "Clouded Judgement: public reader fallback used",
+        "MBI Deep Dives: public reader fallback used",
+        "Aspiring for Intelligence: public reader fallback used",
+        "Chips Ahoy Capital: public reader fallback used",
+        "Meritech Software Pulse: public reader fallback used",
+        "Outspoken Geek: public reader fallback used",
+        "New Moon Cap: public reader fallback used",
+        "Outlier Cap: public reader fallback used"
+      ]
+    },
+    {
+      "pipeline": "reddit",
+      "status": "ok",
+      "item_count": 2,
+      "errors": [],
+      "notes": [
+        "r/wallstreetbets: anonymous dd RSS transport used",
+        "r/SecurityAnalysis: anonymous thesis RSS transport used",
+        "Downloaded 0 Reddit image(s) into the current feed media directory"
+      ]
+    },
+    {
+      "pipeline": "prices",
+      "status": "ok",
+      "item_count": 2,
+      "errors": [],
+      "notes": [
+        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "Latest available Yahoo EOD date is 2026-10-09; run after the US close to collect 2026-10-10."
+      ]
+    },
     {
       "pipeline": "x",
       "status": "ok",
@@ -139,56 +176,149 @@
         "@kuncheng: 0 tweet(s) via twscrape",
         "Linked articles: 9 article(s) stored; 40 unavailable or skipped"
       ]
-    },
-    {
-      "pipeline": "substack",
-      "status": "ok",
-      "item_count": 9,
-      "errors": [],
-      "notes": [
-        "Clouded Judgement: public reader fallback used",
-        "MBI Deep Dives: public reader fallback used",
-        "Aspiring for Intelligence: public reader fallback used",
-        "Chips Ahoy Capital: public reader fallback used",
-        "Meritech Software Pulse: public reader fallback used",
-        "Outspoken Geek: public reader fallback used",
-        "New Moon Cap: public reader fallback used",
-        "Outlier Cap: public reader fallback used"
-      ]
-    },
-    {
-      "pipeline": "reddit",
-      "status": "partial",
-      "item_count": 1,
-      "errors": [
-        "r/SecurityAnalysis: RSS=Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SecurityAnalysis/search.rss?restrict_sr=1&sort=top&t=day&q=flair%3A%22Thesis%22%20OR%20flair%3A%22Short%20Thesis%22'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429; JSON=Client error '403 Blocked' for url 'https://www.reddit.com/r/SecurityAnalysis/search.json?q=flair%3A%22Thesis%22+OR+flair%3A%22Short+Thesis%22&restrict_sr=1&sort=top&t=day&limit=10&raw_json=1'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
-      ],
-      "notes": [
-        "r/wallstreetbets: anonymous dd RSS transport used",
-        "Downloaded 1 Reddit image(s) into the current feed media directory"
-      ]
-    },
-    {
-      "pipeline": "prices",
-      "status": "partial",
-      "item_count": 2,
-      "errors": [],
-      "notes": [
-        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "Ignored incomplete Yahoo EOD date 2026-10-09: 1/203 ticker closes available; latest sufficiently complete date is 2026-10-08.",
-        "Latest available Yahoo EOD date is 2026-10-08; run after the US close to collect 2026-10-09."
-      ]
     }
   ],
   "counts": {
     "total": 371,
     "substack": 17,
-    "rss": 2,
-    "reddit": 1,
+    "rss": 1,
+    "reddit": 2,
     "x": 349,
     "price": 2
   },
   "items": [
+    {
+      "id": "substack:e5f022f9be79d8e96eab",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "[Subscriber Exclusive] NYC Subscriber Meetups!",
+      "url": "https://www.latent.space/p/nyc2026",
+      "published_at": "2026-10-10T22:07:17+00:00",
+      "collected_at": "2026-10-11T00:00:45.003433+00:00",
+      "body": "If you’re seeing this you’re part of our very very light subscription/paid tier, and we genuinely appreciate you: your donations have funded our production process indefinitely and it is my sincere i… Read more",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "reddit:2985c03771ad392f954d",
+      "source_type": "reddit",
+      "source_name": "r/wallstreetbets",
+      "title": "Why I went 100% in MU: The Memory Wager",
+      "url": "https://www.reddit.com/r/wallstreetbets/comments/1x2mntt/why_i_went_100_in_mu_the_memory_wager/",
+      "published_at": "2026-10-10T18:40:20+00:00",
+      "collected_at": "2026-10-11T00:00:54.336162+00:00",
+      "body": "Quick explanation of Pascal’s Wager (for the smoothbrains) 400 years ago a dude named Blaise Pascal said: “Should I believe in God?” If God is real -> infinite upside (heaven, eternal profit). If God is fake -> you lose basically nothing (you just lived a boring life). So the rational move is to believe in God. Asymmetric bet. Limited downside, unlimited upside. The Memory Wager (same exact logic) Two possibilities: 1. MU is still just a cyclical memory run Cycle peaks, prices roll over, earnings collapse. But look at the valuation right now: 14x trailing P/E, 6x forward P/E The market is already pricing in a cycle and expect the margins to crash in the next few years. The downside is already baked in. You’re not buying at peak cycle multiples. You’re buying after the market has already assumed the hangover. 2. MU is no longer pure cyclical AI demand + HBM + multi-year take-or-pay contracts actually changed the game. Memory becomes infrastructure. Then this thing re-rates to normal semiconductor / AI infra multiples like NVDA, MRVL, AVGO etc. From 6x forward, we’re looking at 3-4x easily like SKHY, maybe even a lower P/E. That’s the Micron/Memory Wager. Wrong about the structural thesis -> you own a stock that was already cheap for a cycle. Pain is limited. Right about the structural thesis -> easy 3-4x, life-changing money. Same asymmetry as Pascal. Limited downside if the bear case is true. Explosive upside if the bull case is true. Position: 100% MU, ~126 shares submitted by /u/dol1_ [link] [comments]",
+      "author": "/u/dol1_",
+      "symbols": [
+        "NVDA",
+        "AVGO"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "transport": "rss",
+        "listing": "dd",
+        "flair": "",
+        "requested_flair": "",
+        "requested_flairs": [
+          "DD"
+        ],
+        "sort": "top",
+        "time_filter": "day",
+        "feed_rank": 1,
+        "image_urls": [],
+        "images": []
+      }
+    },
+    {
+      "id": "substack:9a2a489d753abcefd301",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "Building AI for Reliable Execution: Lessons From Industrial Robotics",
+      "url": "https://www.latent.space/p/standard-bots",
+      "published_at": "2026-10-10T14:04:11+00:00",
+      "collected_at": "2026-10-11T00:00:45.003433+00:00",
+      "body": "When you think of robotics and AI, you probably first think of full humanoid robots like Figure’s AI-powered machines and 1X’s NEO home robots . Those may well be the future, but arguably more important in 2026 is industrial robots — which are typically not humanoids. Standard Bots claims to be “America’s largest AI-native industrial robot manufacturer.” It recently raised $200 million at a $1 billion valuation, in a series C round led by General Catalyst and RoboStrategy, a fund focused on robotics. Its customers include NASA, Amazon and Lockheed Martin. We spoke to Evan Beard , co-founder and CEO, and Leif Jentoft , Head of AI, to find out more about Standard Bots’ AI stack and how its models work. To set the scene, Standard Bots’ industrial robot arms are designed for tasks such as machine tending, welding, and assembly. Here’s a quick demo by Jentoft: Pretrained models and task-specific adaptation According to Beard, Standard Bots has a shared base model that customers adapt through demonstrations and fine-tuning. Jentoft added that Standard Bots runs a range of models , including a zero-shot perception system for machine tending. Beard says its largest model is in the low billions of parameters — so it’s not that large by frontier lab standards. “We believe data quality matters far more than raw volume,” said Jentoft, “and we focus on getting the most out of targeted data rather than chasing the largest possible dataset.” (This matches the “bitterest lesson” of Jev creator Diogo Almeida , who told us recently that the right task and the right data can matter more than compute.) “Our market access gives us unique access to the highest value data,” he added. “ In-situ interventions can fix an edge case with a few dozen examples.” Setting up part identification with ClickFind. Beard notes that Standard Bots focuses on short-horizon tasks to meet production requirements for cycle time and reliability. The company uses conventional programming for parts of a workflow that don’t require learned behavior. Model training happens in the cloud but inference runs locally , said Beard. What does the model do exactly? I asked Jentoft what the learned model does in a typical robot routine, and which parts of the workflow use conventional programming? As an example, he brought up its machine-tending solution for high-mix manufacturing. “We’ve built a zero-shot system that lets a user tell the robot which parts to look for on a given task. The model handles perception — locating and identifying the parts — while conventional programming handles the motion and the cell logic around it.” Here’s a demonstration of the machine-tending: “Our backbone for this task is trained on over a billion images , which is what lets the robot distinguish between lighting conditions, material types, and an object versus its background,” Jentoft said. The Full AI Stack Back in April, we had Applied Intuition on the podcast to talk about “Physical AI” and how it differs from on-screen AI. One of the learnings was that the Physical AI isn’t just constrained by model intelligence: the hard part is deploying models onto real hardware , under safety, latency, power, cost, and reliability constraints. But for Standard Bots, that can also be a strength, since it controls the “full stack” from software to hardware. Jentoft points out that it controls the robotic arm, end effector, control system, and AI. “That lets us co-optimize the models and the control policies ,” he said. “Despite claims elsewhere, no model today is truly hardware-agnostic, and co-optimizing low-level control and higher-level functions is a major advantage for both performance and iteration speed.” Skild , a company aiming to build “general purpose robotic intelligence,” might quibble with the hardware-agnostic claim — its goal is to achieve cross-hardware generalization . On-prem inference: sensors, edge GPUs, and ‘action chunks’ Beard had mentioned that inference is done locally, which is especially important for its core customers: factories. “For factories, which is most of what we’re doing right now — and certainly so much opportunity that we see there — this is something where you need to do inference on-premise ,” he said. An AI agent building a machine-tending routine. For machine tending, the model identifies parts while conventional programming handles motion. Jentoft also described how models can generate actions that feed into the robot’s control system. “Wrist cameras and other sensors feed raw pixels and signals into the system over internal gigabit Ethernet , routed internally so no cables tangle,” he explained. “ GPUs at the edge process that data to generate action chunks , which stream to low-level control.” He reiterated that inference is run on-premises deliberately. “Cloud compute for robotics is operationally extremely hard — most factories and warehouses don’t have reliable internet , and that’s even more true for mobile robots. Uptime is crucial to customer acceptance, so we keep the loop local.” Production failures and fleet learning Standard Bots uses simulation where it can, but Beard says some production tasks — including those involving liquids, suction, or cutting flexible material — are difficult to reproduce in current simulators. Real-world demonstrations are another part of the learning process. Here’s a demo of teaching a robot using a handheld touch device: So how does it deal with failure in a robot task, and do those kinds of learnings flow back to the model? “We capture failure signals and human corrections from deployments, and how we use that data depends on the customer,” Jentoft replied. He noted that many of its defense customers “deploy in air-gapped environments, where nothing comes back.” But for customers that aren’t air-gapped, “fleet learning delivers enough benefit to their own applications that we typically don’t see pushback on contributing data in exchange for that performance.” StandardOS: an AI robotics dev platform Standard Bots has already expanded its platform so that external developers can use it. With StandardOS , it offers a set of APIs and SDKs. According to Beard, developers can use Standard Bots’ APIs to build robotics applications with whichever parts of its stack they need, including bringing their own models. He cited NVIDIA Cosmos , an open family of omnimodal world models for physical AI, as an example ( version 3 was released late-May ). Today, this requires developers to write their own integration code. But Standard Bots plans to make collecting data, training models, and deploying them onto its robots easier. AI robot learning workflow with NVIDIA software; via Standard Bots. Focus on targeted data Standard Bots isn’t the sexiest robotics company out there, but it is already being deployed for industrial automation at NASA, Amazon, Lockheed Martin, and others. For AI engineers, perhaps the most useful lesson is how Standard Bots adapts AI to a specific job. It keeps the model’s role focused and uses corrections from real deployments to fix edge cases. You can, of course, apply that same approach to software agents. As Jentoft said — and it was a recent lesson from Jev too — it’s all about “getting the most out of targeted data rather than chasing the largest possible dataset.”",
+      "author": "Richard MacManus",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "substack:9c3055e45deb35536291",
+      "source_type": "substack",
+      "source_name": "How They Make Money / App Economy Insights",
+      "title": "📊 PRO: This Week in Visuals",
+      "url": "https://www.appeconomyinsights.com/p/pro-this-week-in-visuals-520",
+      "published_at": "2026-10-10T14:04:00+00:00",
+      "collected_at": "2026-10-11T00:00:46.425306+00:00",
+      "body": "Welcome to the Saturday PRO edition of How They Make Money . Over 300,000 subscribers turn to us for business and investment insights. In case you missed it: 💯 How To Find 100-Baggers ☁️ How Nscale Makes Money Subscribe now Premium members get: 📊 Monthly reports : 200+ companies visualized. 📩 Tuesday articles : Exclusive deep dives and insights. 📚 Access to our archive : Hundreds of business breakdowns. PRO members get everything PLUS : 📩 Saturday PRO reports : Timely insights on the latest earnings. Today at a glance: 🥤 PepsiCo : International Takes Over 🛩️ Delta : Fuel Eats the Upside 🍺 Constellation : SpikedAde Joins the Mix 🌿 Tilray : BrewDog Carries Growth 1. 🥤 PepsiCo: International Takes Over PepsiCo’s Q3 revenue rose 6% Y/Y to $25.3 billion ($310 million beat), with core EPS of $2.34 ($0.04 beat). Organic revenue growth accelerated to 3.1% , its fastest pace since late 2023, helped by 3% beverage volume growth and 1% food volume growth. The divergence between North America and the rest of the world keeps widening: International organic revenue grew ~8% , with EMEA up 9%. International now generates roughly 45% of PepsiCo’s profit year-to-date. North American Foods sales were flat , though volumes improved to low-single-digit growth after last year's declines. North American Beverages weakened , with CEO Ramon Laguarta admitting PepsiCo is “not competing well in soft drinks,” even as hydration and energy remain stronger. GLP-1s and changing eating habits are pushing PepsiCo toward smaller portions and more protein- and fiber-focused products. Its “permissible” portfolio (better-for-you snacks) has already grown to roughly $3 billion , but it remains small relative to the traditional snack business under pressure. PepsiCo also has an execution problem in its home market. Management plans to increase brand investment while cutting structural costs , and it is even open to selling more of its company-owned bottling operations to independent partners, making the business less capital-intensive. Margins are getting harder to protect. Core operating profit grew 3%, but a $178 million tariff refund added roughly four percentage points to operating profit growth. Commodity costs are rising as hedges roll off, while PepsiCo is deliberately maintaining higher advertising spending to rebuild momentum. PepsiCo now expects about 3% organic revenue growth in FY26 , while cutting core constant-currency EPS growth to 2.5%–3.5% (from 4%–6%). Takeaway: International is increasingly carrying PepsiCo while the North American turnaround takes longer than expected. With costs rising and US execution still uneven, management is moving beyond price tweaks toward a broader cost and operating-model reset. 2. 🛩️ Delta: Fuel Eats the Upside Read more",
+      "author": "App Economy Insights",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.appeconomyinsights.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "reddit:031d4691e2d1ae9f7e20",
+      "source_type": "reddit",
+      "source_name": "r/SecurityAnalysis",
+      "title": "Mercado Libre (MELI): A deep dive into MELI’s credit business",
+      "url": "https://www.reddit.com/r/SecurityAnalysis/comments/1x2bp8v/mercado_libre_meli_a_deep_dive_into_melis_credit/",
+      "published_at": "2026-10-10T10:13:22+00:00",
+      "collected_at": "2026-10-11T00:01:06.540170+00:00",
+      "body": "Mercado Libre's credit business is talked about a lot. So we did some research and analysis. We looked at its credit portfolio composition (across product and geography), loan duration, exposure per user, funding model etc. We also benchmarked MELI's credit risk and returns, against Nubank across key metrics such as net-interest income margin after losses. Attached post has all the charts and good stuff Key takeaways from the analysis: MELI’s unsecured credit portfolio has significant exposure to higher-risk borrowers. MELI’s >90-day past-due loans have remained between 17–19% of its gross loan portfolio since Q4 2023, versus 6–7% at NuBank. Its credit portfolio is highly sensitive to macroeconomic conditions. During the period of elevated inflation in 2022–23, MELI’s >90-day past-due ratio increased sharply, reaching 30% in Q4 2022 and 28% in Q1 2023 That higher risk has been compensated by higher pricing, resulting in attractive returns in recent years. MELI generated a 59% annualized credit revenue yield in Q2 26, versus 38% for NuBank MELI’s loan durations are very short (~3 months on average). This is an advantage, as it gives MELI greater flexibility to adjust credit availability and pricing as conditions change However, questions remain about the sustainability of returns. MELI’s credit business has not been proven over time across different economic cycles. In adverse economic conditions, MELI could see a material uptick in credit losses, while loan originations could slow MELI’s recent margin pressure is not a major concern to us. A material portion is driven by provision expense, which is an accounting measure that can exceed realized losses and non-performing loans. This is amplified by MELI’s focus on credit card expansion, where provisions are incurred upfront, while interest income builds up slowly as customers mature and begin carrying balances. As the credit card business matures, interest income should build and support margins Hope you find it useful, and would appreciate any feedback submitted by /u/Clutch0306 [link] [comments]",
+      "author": "/u/Clutch0306",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "transport": "rss",
+        "listing": "thesis",
+        "flair": "",
+        "requested_flair": "",
+        "requested_flairs": [
+          "Thesis",
+          "Short Thesis"
+        ],
+        "sort": "top",
+        "time_filter": "day",
+        "feed_rank": 1,
+        "image_urls": [],
+        "images": []
+      }
+    },
+    {
+      "id": "substack:2e1397672f85f38dce73",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "[AINews] TypeSafe/Jev at >$100M ARR, $7.5B valuation 3 weeks after launch",
+      "url": "https://www.latent.space/p/ainews-typesafejev-at-100m-arr-75b",
+      "published_at": "2026-10-10T06:45:57+00:00",
+      "collected_at": "2026-10-11T00:00:45.003433+00:00",
+      "body": "As you can see in the AINews X recap section below, everyone on earth has cloned the Jev API, but only one company can ever create the category. TypeSafe announced their “ Series AI ” and Sequoia “ leaked ” that they crossed 100M ARR in their first week. Although there are cynics and accusations of astroturfing , we hope it is evident that our Jev pod was 100% authentic. AI News for 10/8/2026-10/9/2026. We checked 12 subreddits, 544 Twitters and no further Discords. AINews’ website lets you search all past issues. As a reminder, AINews is now a section of Latent Space . You can opt in/out of email frequencies! AI Twitter Recap Decision Models Become a Product Category The pattern : Several vendors shipped “decision” models on the same day. These return typed answers (probabilities, picks from a list, scores) in a single forward pass instead of free text. Jev is the reference point everyone benchmarks against, and @scaling01 remarked on how fast the format spread. OpenAI Decisions API : Three request types: probability that a condition is true, pick from a list, or score against levels. It accepts text and images, runs on GPT-6 Luna, costs $0.10/M input tokens with no output charge, and is “up to 10x faster” by OpenAI’s own figure ( @LearnOpenCV ). Microsoft-Decision-1 : Positioned for LLM judges and screening scientific hypotheses. An early evaluator says decision models still struggle on consistency and complex decisions ( @omarsar0 ). Perplexity pplx-decider-v1.1-27b : Claims top Decision Bench accuracy at 94.5% across 1,071 cases, at $0.017 per 1K decisions ( @perplexitydevs ). Cloudflare clef : New clef-omni accepts audio, video, image and text. clef-flash is now cheaper than Jev, and clef overall is about 2x faster ( @michellechen ). Weights are on Hugging Face . Liquid d1 : Now on Vercel AI Gateway, with vision support for classify, route and score tasks ( @vercel_dev ). Serving and routing : vLLM Semantic Router’s Decision 2.0 answers multiple questions about one input in one pass, with per-option probabilities ( @vllm_project ). LangSmith uses Jev as a judge that returns separate typed answers for difficulty and correctness on every trace ( @hwchase17 ). Train your own : Unsloth released a free notebook that turns Qwen3.5-4B into a decision model on 8GB of VRAM ( @UnslothAI ). A walkthrough on Qwen3.5-0.8B reports accuracy rising from 37% to 65% in 60 steps, about 10 minutes on 4GB ( @akshay_pachaar ). Why harnesses want this : Many agent steps are yes/no calls rather than generation. LangChain says routing each task to the cheapest adequate model cut median Open SWE cost per task by 64% ( @hwchase17 ). Related research : Apple/CMU’s Selection-based Structured Reasoning (SSR) applies the same idea inside agents ( @ZhihuFrontier ). Method : Six natural-language strategies are scored by length-normalized log-likelihood in one batched forward pass that shares the KV cache. Results : Per-turn reasoning latency falls by more than 90%, but end-to-end latency per question falls only 28–54%. On Qwen3-VL-4B with GRPO, average success is 61.37% versus 61.25% for a TAPO+GSPO baseline. Multi-Agent Orchestration and Coding Tools Claude Managed Agents dynamic workflows (public beta) : A lead agent writes a phased plan, fans it out to up to 1,000 agents per run, then merges the results. It is enabled with multiagent_20261001 ( @ClaudeDevs , config ). Cost warning : Anthropic advises starting with scoped tasks because token use can be high ( guidance ). Claude Code Projects : All waitlisted Pro and Max users were admitted. Each project runs tasks as parallel threads ( @ClaudeDevs ), and sessions can now run locally ( @gem_ray ). Opus 5.5 fast mode : It has rolled out, but it bills against usage credits and is not included in subscriptions ( @theo ). Do agent teams pay off? : Vals AI ran GPT-6 Sol and Opus 5.5 on Vibe Code Bench, alone and as teams ( @ValsAI ). Results : Teams cost 1.8–5.1x more. Only Sol at medium effort improved significantly, by 7.3 points. Behavior : Sol delegated in parallel along architectural lines. Opus ran sequential waves, reaching about 6.8 subagents and roughly 1,140 subagent tool calls per app at max effort, with no significant gain ( details ). Prime Agent rewrites itself in Rust : Over two weeks, a swarm of more than 2,000 agents used 10K+ sandboxes and 200B+ GLM-5.3 tokens. The result reaches usable input about 13x faster and uses 83% less startup memory ( @PrimeIntellect ). An accompanying essay argues that context limits lead inevitably to swarms ( essay ). Codex updates : Windows sandbox : A new mode built on Microsoft Execution Containers (MXC) gives faster setup, network enforcement and granular file controls ( @OpenAIDevs ). Composer predictions : Codex now suggests your next message, in beta for Pro users only ( announcement ). Some users criticize the Pro-only gating ( @Angaisb_ ). Reliability : There were complaints of daylong outages ( @dzhng ). Sentiment : DHH says GPT-6.1 Sol made Codex his primary tool over Claude ( @dhh ). Devin and Grok Bot : Devins can now spawn trees of managed Devins, so wall time tracks the slowest branch rather than the sum ( @devindevelopers ). Devin also accepts personal ChatGPT plans for GPT usage ( @cognition ). Separately, Grok Bot gets its own email address for sign-ups and scheduling ( @bot ). Model Releases and Independent Evals Qwen-Image-2.1-Turbo (open weights) : An accelerated checkpoint of the 7B Qwen-Image-2.1. It does 8-step 2K generation and natural-language editing, loads through Diffusers QwenImage21Pipeline , and launches alongside Pro and Turbo APIs ( @Alibaba_Qwen ). StepFun Step 5 Preview : A 600B-total, 27B-active sparse MoE with 1M context and vision ( @omarsar0 ). Results : It scores 33.89 on the Hermes Index, matching GPT-6 Luna, and is free on Nous Portal for a week ( @NousResearch ). Availability : It reached #1 on OpenRouter Trending, which measures usage, not quality ( @kimmonismus ). Open weights are due October 15. Max output was corrected to 64K tokens ( correction ). Upstage Solar Mini 4 : A 35B MoE with 3B active, 524K context and 208 tok/s. Its AAII score of 24 is the best at 3B active, within a point of Nemotron 3 Ultra. It is free in Cline ( @cline ). Gemini 4 Argon : Reported at 77.9% on DeepSWE v1.1 versus Opus 5.5’s 74.2%. It ships first to 650+ Fairwind Program defenders at $2/$10 per M tokens ( @dl_weekly ). Signals : Reasoning-effort selectors have appeared in Antigravity ( @testingcatalog ), and Logan Kilpatrick says “Argon is coming” ( @OfficialLoganK ). Unconfirmed : Business Insider reports that an internal “Carbon” checkpoint approaches Opus 5.5 on coding. Speech models : HeyGen Voice tops the Artificial Analysis Controlled Voice TTS arena with an Elo of 1,201, at $30/1M characters and 40 chars/s ( @ArtificialAnlys ). Whistle is a 16.9MB on-device STT model said to rival Whisper base ( @victormustar ). Multi-turn image editing : Artificial Analysis chained 30 consecutive edits ( @ArtificialAnlys ). Results : Ideogram 4.5 and FLUX 3 edit locally, leaving 95%+ of the image untouched on small edits. GPT Image 2.5 Sunburst re-renders most of the frame each turn, keeping only about 20% unchanged, so it drifts. Nano Banana 2.1 gradually darkens. OCR benchmarks : Roboflow’s new benchmark covers 48 models, with GPT-6 Astra leading text localization ( @skalskip92 ). Datalab’s OmniParseBench has 16K tests across 90 languages, and its own model does not rank first ( @VikParuchuri ). Arena roundup : Claude Haiku 5.5 ranks #30 on WebDev at $0.10/$0.50, matching GPT-6 Luna’s price while scoring 6 points higher. Mistral Large 4 sits at #43 on Agent Arena ( @arena ). On ARC-AGI-3, a new high score of 59.17% ( @arcprize ). Research, Training and Inference Systems vLLM and SGLang on Vera Rubin : vLLM reports more than 7.8x GB200 throughput on MiniMax M3 at matched interactivity on AgentX. These are early results ( @vllm_project ). Technique : Locality-aware MoE uses CUDA 13.4 locality domains so each SM reads only local HBM, worth up to 1.2x faster MoE decode ( details ). SGLang : Up to 20% faster FP8 MLA at 128K context, and a 5.9% end-to-end gain from MoE tail fusion that removes 276 launches per decode step ( @sgl_project ). SemiAnalysis claims : A preview InferenceX submission shows 3.2x profit per gigawatt and up to 10x performance per dollar versus GB300 ( @SemiAnalysis_ ). TRL v1.15 : The fused LM head is now on by default and avoids materializing the full logits tensor ( @LysandreJik ). Results : On Gemma 3 1B, GRPO sequence length rises from 28K to 114K and DPO from 10K to 59K. Peak memory at 8K falls 52–82%, and training is up to about 11% faster. Data and post-training services : Datology Curation Studio : Claims a 6x compute multiplier on 39 open datasets for a 30B MoE ( @pratyushmaini ). It also cites Thomson-1, trained for $450K, beating GPT-5.6 Sol head-to-head ( @arimorcos ). Tinker : Price cuts of up to 70%, long-context priced the same as short, and GLM-5.3-Flash and DeepSeek-v4.1-Flash added ( @tinkerapi ). DeepSeek periodic weak spots : ByteDance Seed finds that retrieval depends on where a token lands relative to the compression stride ( @ZhihuFrontier ). Evidence : The pattern persists without RoPE or learned gates, and tracks stride length. Interpretation : V4.1’s stride of 2 reduces but does not eliminate the effect. Agent research : Agent plasticity (Meta) : Measures held-out gain per learning dollar. The best performers are not the most efficient learners ( @omarsar0 ). MIMESIS : A 9B user simulator that beats Opus 5 on behavioral fidelity by 13.4 points ( @dair_ai ). Base-model selection (NVIDIA) : Ranks checkpoints by whether the base model can reproduce the “decisive edit,” a signal that tracks post-trained SWE-bench Verified scores ( @dair_ai ). Read more",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
     {
       "id": "x:11af64ddd9c9c7a445d5",
       "source_type": "x",
@@ -266,6 +396,24 @@
         "investor_type": "technology_investor",
         "coverage": "public-equity technology and software ideas",
         "engagement_score": 1
+      }
+    },
+    {
+      "id": "substack:68a694837125984e014d",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "Why AlphaFold Didn't Solve Protein Folding — Pushmeet Kohli, Google DeepMind & Sal Candido, Biohub",
+      "url": "https://www.latent.space/p/biohub-deepmind",
+      "published_at": "2026-10-10T00:31:26+00:00",
+      "collected_at": "2026-10-11T00:00:45.003433+00:00",
+      "body": "From the Bitter Lesson of AI scaling to the unsolved mysteries of protein folding , Google DeepMind’s Pushmeet Kohli and Biohub’s Sal Candido are rethinking what it takes to build AI that truly understands biology. In this special panel moderated by Brandon Anderson , they explore why AlphaFold’s breakthrough was only the beginning , why scaling compute and data alone won’t solve biology, and how the next generation of AI models could transform our understanding of proteins, cells, and human disease. We go deep on the future of AI-driven biology : finding scaling laws in biological data, the tradeoffs between scientific intuition and general-purpose architectures, why protein structure prediction is far from solved, and what it would take to build predictive models of living systems. Pushmeet reflects on the lessons behind AlphaFold , the limits of human interpretability, and whether future frontier models could understand other AI systems better than we can. Sal explains why protein language models may already contain scientific knowledge we haven’t unlocked, how biological modeling must move beyond individual proteins, and why achieving Biohub’s mission to cure all disease requires thinking in terms of 10x breakthroughs rather than incremental improvements. We discuss: The Bitter Lesson for biology : why scaling compute and data isn’t enough Why finding the right scaling law matters more than blindly increasing model size How low-quality metagenomic data can improve protein language models Why AI researchers optimize for available data instead of the most important scientific problems Lessons from DeepMind on balancing modeling, data generation, and scientific expertise Why building a virtual cell requires fundamentally different datasets AlphaFold’s handcrafted architecture and the role of scientific intuition Why good data matters more than simply having more data Inductive biases, scaling laws, and the future of specialized AI architectures Why we aren’t in a post-Transformer world , but architectures are evolving Why AlphaFold didn’t actually solve all of protein folding Protein dynamics, disorder , and the limitations of static structure prediction How cryo-EM micrographs could unlock richer biological representations Moving from models of individual proteins to whole biological systems Feynman’s famous principle and why AI can now create things we don’t understand The hidden biological knowledge inside protein language models Why trustworthiness and uncertainty calibration matter more than full interpretability Whether frontier AI models could interpret other AI systems better than humans When AI could deliver 10x–100x acceleration in drug discovery Why curing all disease requires thinking about 10x breakthroughs instead of 10% improvements Pushmeet Kohli — Google DeepMind X: https://x.com/pushmeet LinkedIn: https://www.linkedin.com/in/pushmeet-kohli-4838994/ Sal Candido — Biohub Biohub: https://biohub.org/team/salvatore-candido/ X: https://x.com/salcandido LinkedIn: https://www.linkedin.com/in/salcandido/ Brandon Anderson — Moderator LinkedIn: https://www.linkedin.com/in/brandon--anderson Timestamps 00:00:00 Introduction: The Bitter Lesson for Biological Data 00:01:00 Finding Scaling Laws and the Right Data for Biology 00:04:54 DeepMind’s Bitter Lesson: Solving Problems vs. Scaling Models 00:06:50 AlphaFold, Data Limitations, and Building the Virtual Cell 00:09:52 Handcrafted Architectures vs. Scaling Compute 00:11:53 Good Data, Inductive Bias, and Model Design 00:13:39 Beyond Transformers: The Future of AI Architectures 00:14:38 Why AlphaFold Hasn’t Solved Protein Folding 00:17:39 Protein Dynamics, Design, and Cryo-EM 00:19:09 From Individual Proteins to Whole Biological Systems 00:20:43 Feynman’s Principle: Creating Without Understanding 00:22:18 The Hidden Knowledge Inside Protein Language Models 00:23:48 AlphaFold, Trustworthiness, and Interpretability 00:25:56 Could AI Understand Other AI Models Better Than Humans? 00:27:43 When Will AI Revolutionize Drug Discovery? 00:29:47 Why Curing All Disease Requires 10x Breakthroughs Transcript Introduction: Is There a Bitter Lesson for Data? Brandon Anderson [00:00:04]: Great to be here. What an exciting morning. So many cool announcements. I think the future of bioscience is being announced right here. This is the modeling session. We’re all modelers, so of course it’s natural for us to talk about data. One of the things I like to think about when it comes to data is how to scale it properly. This has brought me to the question of the bitter lesson, but recast in the frame of data. The bitter lesson, for those of you who are not AI people, is the statement that methods that scale win eventually. If you can scale enough, it wins. So my question, starting with Sal, is: Is there a bitter lesson for data? Sal Candido [00:01:00]: For sure. You obviously need the right data in order for it to work. One misconception of scaling laws is that scaling laws are everywhere and they always exist. A lot of the work is actually finding that scaling law. A lot of what we do is trying to figure out: What’s a situation where, if you put more compute into it, if you put more data into it, you get a better result out? That’s a great situation because, once that happens, you can turn the crank. It becomes an engineering problem, which is something I like. That has to do with architecture, but it also very much has to do with data. If you don’t have data with the right information and statistics to solve the problem you want, you’re not going to get a model that has the capabilities and understanding you want. You can only really pull information from the data you have and use that to generalize beyond it. Choosing the Right Data: Availability vs. Scientific Impact Brandon Anderson [00:02:09]: When it comes to data collection, how do you think about which modalities are best? A related question: Do modelers tend to work on problems where the data is available, rather than the problems that best serve their goals or have the greatest impact on translational medicine? Sal Candido [00:02:32]: For sure. I won’t speak for all modelers, but I’m lazy, so I’m going to work with what’s available. There’s a good side and a bad side to this. The good side is that, when you’re doing conventional machine learning, you’re often looking for the most pristine, high-quality data examples you can find. But if you’re like me, you’re rooting around in the back room, looking through people’s junk to see what’s there. A concrete example is training a protein language model on metagenomic sequences, which are not the highest-quality data. In fact, much of that data, I can guarantee you, isn’t even a real, whole protein. And yet it makes the performance of the model go up for designing real proteins that work and understanding proteins that we know exist. That’s the positive side. But it can lead you to a negative place where you say, “Let’s just scale up the data that we can generate easily.” I don’t think that’s necessarily the way to do it. That’s one of the things that’s exciting to me about what we’re talking about here today with the BBI. It’s going out and asking, “What is the data that we need to solve the problem?” It’s about the right resources, but also the right community. One thing we try to do at Biohub is work in the open, work with the community, and move the whole community forward. That’s critical because, if you just have people building models, we’re going to lean toward the data that exists. If you just have people generating data, they’re going to lean toward the things that can be generated. But if you can work together as a community, every step of the way, in an open fashion, you can figure out what data you actually need. Then you can find that scaling law. The Problem Comes First: Modeling, Data, and Expertise Brandon Anderson [00:04:50]: Pushmeet, what do you think about the bitter lesson for data? Pushmeet Kohli [00:04:54]: I was at DeepMind when Rich was with us and thinking about this idea of the bitter lesson. What I took from Rich’s original lecture at DeepMind wasn’t about the specific notion of whether data is useful or how we should think about machine learning. My take was that he was talking about something more conceptual. Sometimes when we’re looking at problems, we think about solutions in a very religious way: “I’m a modeler,” or “I’m a data generation person.” I think that is the bitter lesson. If you approach a problem with that mindset, you might not succeed. The problem comes first, and you should be flexible in your solution space. You should try both things. You should understand the problem you’re trying to solve. If it requires modeling effort, do the modeling effort. If it requires collecting more data, then collect data. What happened in machine learning at the time was people saying, “We’re machine learning researchers. The dataset is there. Here’s some training data, here’s some test data, and we’ll just optimize the model.” That is broken in the sense that, if your eventual goal is to solve the problem, you have to look at both aspects of what goes into the process. And what goes into the process is not just data or modeling. It’s also expertise. With AlphaFold, for example, we looked at what was possible with existing datasets because we didn’t have the core expertise, or even the resources, to say, “Let’s augment the PDB by a significant order of magnitude.” The investment that organizations and scientists across the world had put into constructing that data was invaluable. So there, you had to focus on getting the biggest bang for your buck by investing in modeling. But in other areas, say cell genomics, we took the same approach and asked, “What can you do with cell-by-gene data?” After a lot of work, it was very clear that the data was not there yet to pursue that grand ambition of building the virtual cell. This brings people together to focus on the actual challenges of advancing science rather than religiously following advances in data generation or modeling. Brandon Anderson [00:08:23]: I really like that answer. What’s the actionable takeaway? Always define the problem first and then figure out which solution space to search over. But more broadly, how should the community think about this as we move toward the next generation of translational medicine? Pushmeet Kohli [00:08:47]: The advice I give to anyone starting in this area is to think of yourself as a multidisciplinary person. Understand the problem first. Why are you working on it? What are you trying to achieve? Then think about what’s needed, whether that’s modeling, compute scaling, or data generation. Understanding the problem is extremely important, and of course you need to build your expertise. There are constraints, too. Maybe there’s only a certain amount of data you can generate, or a certain model size you can afford to train. Understand those constraints, try to fail fast, and look at which approaches will be feasible in the long term to get you to the level of impact you’re aiming for. Scientific Inductive Bias vs. Scaling: The Craft of Building Models Brandon Anderson [00:09:52]: This leads right into my next question. When I look at the evolution of modeling, AlphaFold 2 was essentially a work of art, with a lot of carefully handcrafted features. There was very intentional thought put into every part of the solution. Some of Google’s or Alphabet’s work still stays in that space, but the general consensus seems to be moving toward more scalable, general strategies. Do we still need artisanal, craft solutions for certain problems? Or are resources better spent focusing on scale first? With fixed resources and money, you can invest in compute, talent, or data. How should we think about that trade-off? Pushmeet Kohli [00:10:48]: Let’s approach it from first principles. The art and craft of constructing a better model wasn’t accidental. We did a lot of experimentation, but there was a vision behind it. Scientific intuition from biophysics and biochemistry told us that amino acid residues are not just doing their own thing. They’re influenced by other residues. So let’s bake that in. If you’ve learned something from the scientific community, use that information. Give the model that unfair advantage. That makes the model much more data-efficient because it doesn’t have to relearn everything. I also have to mention that curating good data is an art in itself. It’s not as if you can just say, “Put in more data.” If you replicate the same data, you’re not going anywhere. It’s not just about big data; it’s about good data and understanding the coverage of the data necessary to make progress. That’s a much more interesting and challenging problem in itself. Brandon Anderson [00:12:20]: It looks like you have a thought, Sal. What do you think? Sal Candido [00:12:24]: I very much agree. It depends on the problem to be solved. If you have a smaller amount of data, having more inductive bias in the model is going to help you. You actually need that to get results at smaller data scales. As you get more and more data, sometimes the model finds things you didn’t necessarily know about, and sometimes that inductive bias, if it wasn’t exactly correct, can hold you back. There’s a tipping point as things get better. But I also object to your question a little because there’s a lot of craft in the scaling part of things as well. There’s a lot of algorithmic work that goes into taking models, training them on more data, putting more compute into them, and making them bigger. And that isn’t only from an infrastructure perspective or about making the models run inference faster. We’re seeing things go beyond standard transformers to more bespoke architectures. I don’t think we’re in a post-transformer world in any way, shape, or form, but we’re modifying those architectures to make them more fit for purpose and work better, even with internet-scale data. As more data comes in, the challenge isn’t only curating that data or selecting the next batch of information the models need. It’s also asking, at every step and at every scale, what the right architecture is to get the most out of that information. Why AlphaFold Didn’t Solve All of Protein Biology Brandon Anderson [00:14:36]: If you think about the state of protein structure prediction right now, the news will say that protein structure prediction has been solved. But if you talk to my friends, they’ll say, “We have so much left to do here.” Function, dynamics, and design are still wide-open problems. It’s been about five years since AlphaFold 2 was announced, and progress has been made. Pushmeet, do you think there’s another big leap coming? Are there blockers to solving these problems? Do we not have the right data, algorithms, or ideas? Or is it just a matter of time? Pushmeet Kohli [00:15:28]: Science operates by isolating something and then making progress step by step. When people say the protein-folding problem has been solved, at a conceptual level there have been advances. But think about the narrative of proteins being the building blocks. Proteins aren’t blocks, and they don’t act as blocks. I say proteins are the building blocks all the time, but I don’t actually believe it. Proteins are extremely complex. They’re disordered. Their shape might change depending on the context. John Jumper and I used to discuss this: What are we trying to solve? We don’t know the actual true ground state that proteins take, or the actual distribution of structures that proteins take. What we were trying to do was replicate a structure that somebody had obtained and deposited in the PDB. That’s what we did. And it just so happens that it’s useful. But that doesn’t mean we’ve understood all of protein dynamics. At the top level, it’s easier to communicate that we’ve made progress, but the scientists in this crowd know how much remains to be done. There’s a lot to celebrate, but let’s not stop funding protein structure prediction and protein dynamics, because we’re just getting started. Cryo-EM, Molecular Dynamics, and the Missing Information Brandon Anderson [00:17:39]: What’s the biggest blocker? If you could wave a magic wand and say, “We have more of this,” and that would accelerate function, dynamics, or design, what would you bring into existence? Pushmeet Kohli [00:17:54]: My background is quite eclectic. I started as a security researcher, then went into computer vision, Bayesian theory, discriminative machine learning, deep learning, AI for coding, and finally science. So when you ask me that question, the computer vision researcher in me gets very excited about cryo-EM micrographs. I thought, “What is this PDB data? I should be working at the source. I should be looking at cryo-EM micrographs. I don’t want those structures. They must be missing out on all the data. I should just operate directly on cryo-EM micrographs.” Getting models that can scale at that level, with the right amount of data, and extract the dynamics and distributional information captured there would be amazing. I tried it, but it requires more work. Brandon Anderson [00:18:57]: There’s still work to do, but you believe that’s a route that could give you that information? Pushmeet Kohli [00:19:00]: Yeah. I think at some point maybe some people better than me will take a stab at it, and we’ll get somewhere. From Protein Structures to Larger Biological Systems Brandon Anderson [00:19:07]: What do you think, Sal? Sal Candido [00:19:09]: It’s interesting because these models are quite useful, but they’re not exactly the problem that most people want to solve. They solve a very specific purpose, and you can also use them to do other things. For example, you can use them to design new proteins, which isn’t necessarily what you would start with. I think of the models we’re building now as someone who’s trying to understand how a bicycle works, but is modeling a spoke on it. Those models can get better and better over time, but what you really need to do is move from models of spokes to wheels to whole bicycles, because that’s what people want to understand. To continue the analogy, it seems like people want to use a model of the bicycle to design a part for a pickup truck. As we put these models into the particular biological context in which they’re operating, we’ll be able to learn more about these interactions on a broader scale. That’s where I think things are going. But I agree that we should keep working on folding models, because they’re going to keep getting better. Protein Design vs. Scientific Understanding Brandon Anderson [00:20:43]: With regard to design, there’s a famous Feynman quote: “That which I cannot create, I do not understand.” Now we’re in a world where it’s really easy to create things without understanding them at all. How important is it to have models that help humans understand things, versus magical black boxes that can effectively one-shot a picomolar binder or something like that? Sal Candido [00:21:18]: We were designing things with magical black boxes long before AI came around. In some sense that’s still useful. But understanding is really important, and it’s one of the big things I think about with AI. There’s so much for these models to learn. As intelligence gets cheaper and more available, you can deploy it to learn more and more about what’s going on in the world. But how do you pull that knowledge out of the machine so that I can understand it? Maybe that’s just my esoteric curiosity. I think there are so many things to learn. Brandon Anderson [00:22:05]: A lot of scientists really want to understand things, and the endpoints may not be as important to them. But we’re here to solve translational medicine as a problem, right? Sal Candido [00:22:18]: I think the more you dig into things, the more you find the right way to keep pushing them forward. One thing that’s really salient to me is that these models have a lot more information in them than we know. We’ve worked a lot on interpretability for our models, for example, and you find a lot of information there. People know that protein language models learn some notion of structure within their representations, but we find information about functions and motions as well. There’s a lot still to be unlocked, even from the models we have now. That’s important for us to understand as we raise their capabilities. At the end of the day, you expect a world model to emerge from compressing all this information into a model. How does it do its job? How does it design a protein? It has compressed information from evolution into that model. In addition to being able to produce something useful to us, there’s certainly something to learn just by looking at what’s inside. AlphaFold Confidence, Calibration, and Interpretability Brandon Anderson [00:23:48]: What do you think, Pushmeet? Design versus understanding? Pushmeet Kohli [00:23:53]: I have a different take in the sense that some level of understanding is necessary. Let me explain what level I mean. AlphaFold isn’t perfect. AlphaFold 2 had a GDT score of about 90 on that set at the time. But even if it had a GDT score of 95, if its pLDDT score were completely uncalibrated, who would trust it? Imagine that it magically gave good answers but told you it was very confident, and then you worked on it for the next year only to find out it was completely wrong. Calibration of the uncertainty measure was extremely important. In that sense, we do understand AlphaFold 2, and we made a lot of progress in understanding how it behaves. That’s different from understanding how it worked internally to find the solution. There I agree with Sal that interpretability asks: Why did it work? Why did it give this answer? At the highest level, AlphaFold 2 was interpretable in terms of its behavior and ability to generalize, and we didn’t discover everything about that before launching. When we launched AlphaFold 2 and made the weights available, people found that it was a great disordered-protein predictor. It could figure out which elements of the protein are disordered. That shows it generalizes. But interpretability asks another question: Interpretable by whom? If you’re saying interpretable by a human rational system, with the cognitive and computational limitations of the human brain, then no, AlphaFold 2 is not interpretable. But if you’re asking whether AlphaFold 2 is interpretable to a much larger, more sophisticated model in terms of how it works, maybe it is. We just don’t get it. As users of AlphaFold 2, we do need to understand what it can and cannot do. Understanding its behavioral characteristics, strengths, and limitations is extremely important. We can’t just use these models without that characterization, because otherwise, rather than being helpful, they can harm us. Brandon Anderson [00:26:53]: So your take is that interpretability, strictly speaking, isn’t necessary, but ensuring that a model is trustworthy so humans can make actionable decisions is what people should focus on. Pushmeet Kohli [00:27:04]: Exactly. Interpretability is also in the eye of the beholder. Who is interpreting it? If it’s a human scientist trying to interpret how the model makes a prediction, that’s a different question from giving another, much larger LLM access to the activation layers and saying, “Can you predict what AlphaFold will do?” Maybe those frontier models of the future will be able to predict that and come up with a theory of how AlphaFold 2 was interpreting and producing its results. When Will AI Transform Drug Discovery and Clinical Medicine? Brandon Anderson [00:27:43]: We have a two-minute warning, so one last question for both of you. There’s a real chance that AI will make dramatic improvements in human health in the immediate future. I like quantitative predictions. Best guess: How long until we start seeing AI results in the clinic? Pushmeet, do you want to start? Pushmeet Kohli [00:28:08]: I think “AI results in the clinic” is an ill-posed question. AI is already being used today in every part of the drug discovery process. From that perspective, it’s already there. But if you’re asking when we’ll see a 10x or 100x acceleration in timelines, then the next question is: What are we accelerating? Is it lead optimization? Target discovery? Preclinical work or toxicology? Over the next few years, and this is why the effort announced today is extremely important, we need to tackle some of the hard challenges of biology. Only then will we get the true unlocks of acceleration that dramatically transform drug discovery. AI will continue to be used in things that go into the clinic all the time, but larger acceleration will only be unlocked with a better understanding of the biological models this effort is trying to create. Brandon Anderson [00:29:43]: All right, thanks. Sal, a quick answer, if you can. We’re almost out of time. Sal Candido [00:29:47]: I’m tempted to literally put on my biohacker hat to answer this question. It’s important to think about what it means to push the field forward. What we really want to see is outcomes being affected. When will a drug be made entirely by AI? I don’t know. That’s hard to predict. But I do think we’re going to see rapid progress very quickly, because all these tools are already being used. Going back to your point about basic research and basic understanding, one thing I learned a long time ago in my career, back at Google, is that sometimes it’s easier to approach a problem by asking what it would take to make a 10x improvement rather than a 10% improvement. That’s not because the 10x path is necessarily easier. It’s because it allows you to take a broader view and see solutions you haven’t been approaching. You go back to first principles and ask, “How are we going to do this? How are we going to really push this?” Both approaches, the 10% and the 10x, are valuable, and we should do both. I’m very happy that at Biohub we have a beautiful and lofty mission statement: to cure all disease. If you want to do that, you really need to figure out what the 10x approach is. It’s a great opportunity to be able to go do that. Brandon Anderson [00:31:46]: Awesome. Thank you both. Thank you for being in the literal hot seat. Very interesting.",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
       }
     },
     {
@@ -1316,6 +1464,256 @@
         "investor_type": "value_investor",
         "coverage": "public-equity company theses and valuation",
         "engagement_score": 7
+      }
+    },
+    {
+      "id": "price:3b53e699b8449be7137c",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 跌幅前十 2026-10-09",
+      "url": "https://finance.yahoo.com/markets/stocks/losers/",
+      "published_at": "2026-10-09T20:00:00+00:00",
+      "collected_at": "2026-10-11T00:01:43.941902+00:00",
+      "body": "1. FICO close 667.580017; previous 707.429993; change -5.6331%\n2. MAX close 10.09; previous 10.68; change -5.5243%\n3. YELP close 18.59; previous 19.370001; change -4.0268%\n4. DFIN close 48.459999; previous 50.200001; change -3.4661%\n5. GRPN close 18.629999; previous 19.120001; change -2.5628%\n6. DOX close 58.84; previous 60.25; change -2.3402%\n7. MNTN close 10.19; previous 10.42; change -2.2073%\n8. UPBD close 15.4; previous 15.69; change -1.8483%\n9. TBLA close 3.45; previous 3.51; change -1.7094%\n10. SABR close 1.9; previous 1.93; change -1.5544%",
+      "author": "",
+      "symbols": [
+        "FICO",
+        "MAX",
+        "YELP",
+        "DFIN",
+        "GRPN",
+        "DOX",
+        "MNTN",
+        "UPBD",
+        "TBLA",
+        "SABR"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "losers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-10-09",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "FICO",
+            "price_date": "2026-10-09",
+            "close": 667.580017,
+            "previous_close": 707.429993,
+            "change_amount": -39.849976,
+            "change_percentage": -5.6331,
+            "url": "https://finance.yahoo.com/quote/FICO"
+          },
+          {
+            "ticker": "MAX",
+            "price_date": "2026-10-09",
+            "close": 10.09,
+            "previous_close": 10.68,
+            "change_amount": -0.59,
+            "change_percentage": -5.5243,
+            "url": "https://finance.yahoo.com/quote/MAX"
+          },
+          {
+            "ticker": "YELP",
+            "price_date": "2026-10-09",
+            "close": 18.59,
+            "previous_close": 19.370001,
+            "change_amount": -0.780001,
+            "change_percentage": -4.0268,
+            "url": "https://finance.yahoo.com/quote/YELP"
+          },
+          {
+            "ticker": "DFIN",
+            "price_date": "2026-10-09",
+            "close": 48.459999,
+            "previous_close": 50.200001,
+            "change_amount": -1.740002,
+            "change_percentage": -3.4661,
+            "url": "https://finance.yahoo.com/quote/DFIN"
+          },
+          {
+            "ticker": "GRPN",
+            "price_date": "2026-10-09",
+            "close": 18.629999,
+            "previous_close": 19.120001,
+            "change_amount": -0.490002,
+            "change_percentage": -2.5628,
+            "url": "https://finance.yahoo.com/quote/GRPN"
+          },
+          {
+            "ticker": "DOX",
+            "price_date": "2026-10-09",
+            "close": 58.84,
+            "previous_close": 60.25,
+            "change_amount": -1.41,
+            "change_percentage": -2.3402,
+            "url": "https://finance.yahoo.com/quote/DOX"
+          },
+          {
+            "ticker": "MNTN",
+            "price_date": "2026-10-09",
+            "close": 10.19,
+            "previous_close": 10.42,
+            "change_amount": -0.23,
+            "change_percentage": -2.2073,
+            "url": "https://finance.yahoo.com/quote/MNTN"
+          },
+          {
+            "ticker": "UPBD",
+            "price_date": "2026-10-09",
+            "close": 15.4,
+            "previous_close": 15.69,
+            "change_amount": -0.29,
+            "change_percentage": -1.8483,
+            "url": "https://finance.yahoo.com/quote/UPBD"
+          },
+          {
+            "ticker": "TBLA",
+            "price_date": "2026-10-09",
+            "close": 3.45,
+            "previous_close": 3.51,
+            "change_amount": -0.06,
+            "change_percentage": -1.7094,
+            "url": "https://finance.yahoo.com/quote/TBLA"
+          },
+          {
+            "ticker": "SABR",
+            "price_date": "2026-10-09",
+            "close": 1.9,
+            "previous_close": 1.93,
+            "change_amount": -0.03,
+            "change_percentage": -1.5544,
+            "url": "https://finance.yahoo.com/quote/SABR"
+          }
+        ]
+      }
+    },
+    {
+      "id": "price:2ad30a86cb544aff4db1",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 涨幅前十 2026-10-09",
+      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
+      "published_at": "2026-10-09T20:00:00+00:00",
+      "collected_at": "2026-10-11T00:01:43.941902+00:00",
+      "body": "1. FSLY close 29.299999; previous 25.290001; change 15.8561%\n2. PICS close 13.6; previous 11.98; change 13.5225%\n3. SECZ close 13.82; previous 12.66; change 9.1627%\n4. DOCN close 134.820007; previous 123.900002; change 8.8136%\n5. ZS close 233.729996; previous 216.809998; change 7.8041%\n6. RXT close 3.9; previous 3.62; change 7.7348%\n7. SNOW close 368.890015; previous 343.399994; change 7.4228%\n8. STNE close 12.46; previous 11.6; change 7.4138%\n9. SMWB close 9.05; previous 8.43; change 7.3547%\n10. DDOG close 293.26001; previous 273.799988; change 7.1074%",
+      "author": "",
+      "symbols": [
+        "FSLY",
+        "PICS",
+        "SECZ",
+        "DOCN",
+        "ZS",
+        "RXT",
+        "SNOW",
+        "STNE",
+        "SMWB",
+        "DDOG"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "gainers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-10-09",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "FSLY",
+            "price_date": "2026-10-09",
+            "close": 29.299999,
+            "previous_close": 25.290001,
+            "change_amount": 4.009998,
+            "change_percentage": 15.8561,
+            "url": "https://finance.yahoo.com/quote/FSLY"
+          },
+          {
+            "ticker": "PICS",
+            "price_date": "2026-10-09",
+            "close": 13.6,
+            "previous_close": 11.98,
+            "change_amount": 1.620001,
+            "change_percentage": 13.5225,
+            "url": "https://finance.yahoo.com/quote/PICS"
+          },
+          {
+            "ticker": "SECZ",
+            "price_date": "2026-10-09",
+            "close": 13.82,
+            "previous_close": 12.66,
+            "change_amount": 1.16,
+            "change_percentage": 9.1627,
+            "url": "https://finance.yahoo.com/quote/SECZ"
+          },
+          {
+            "ticker": "DOCN",
+            "price_date": "2026-10-09",
+            "close": 134.820007,
+            "previous_close": 123.900002,
+            "change_amount": 10.920006,
+            "change_percentage": 8.8136,
+            "url": "https://finance.yahoo.com/quote/DOCN"
+          },
+          {
+            "ticker": "ZS",
+            "price_date": "2026-10-09",
+            "close": 233.729996,
+            "previous_close": 216.809998,
+            "change_amount": 16.919998,
+            "change_percentage": 7.8041,
+            "url": "https://finance.yahoo.com/quote/ZS"
+          },
+          {
+            "ticker": "RXT",
+            "price_date": "2026-10-09",
+            "close": 3.9,
+            "previous_close": 3.62,
+            "change_amount": 0.28,
+            "change_percentage": 7.7348,
+            "url": "https://finance.yahoo.com/quote/RXT"
+          },
+          {
+            "ticker": "SNOW",
+            "price_date": "2026-10-09",
+            "close": 368.890015,
+            "previous_close": 343.399994,
+            "change_amount": 25.490021,
+            "change_percentage": 7.4228,
+            "url": "https://finance.yahoo.com/quote/SNOW"
+          },
+          {
+            "ticker": "STNE",
+            "price_date": "2026-10-09",
+            "close": 12.46,
+            "previous_close": 11.6,
+            "change_amount": 0.86,
+            "change_percentage": 7.4138,
+            "url": "https://finance.yahoo.com/quote/STNE"
+          },
+          {
+            "ticker": "SMWB",
+            "price_date": "2026-10-09",
+            "close": 9.05,
+            "previous_close": 8.43,
+            "change_amount": 0.62,
+            "change_percentage": 7.3547,
+            "url": "https://finance.yahoo.com/quote/SMWB"
+          },
+          {
+            "ticker": "DDOG",
+            "price_date": "2026-10-09",
+            "close": 293.26001,
+            "previous_close": 273.799988,
+            "change_amount": 19.460022,
+            "change_percentage": 7.1074,
+            "url": "https://finance.yahoo.com/quote/DDOG"
+          }
+        ]
       }
     },
     {
@@ -2789,43 +3187,6 @@
       }
     },
     {
-      "id": "reddit:ad3e37531a16cc31abac",
-      "source_type": "reddit",
-      "source_name": "r/wallstreetbets",
-      "title": "ADBE Imminent Decline - Cloned Software",
-      "url": "https://www.reddit.com/r/wallstreetbets/comments/1x1m8jw/adbe_imminent_decline_cloned_software/",
-      "published_at": "2026-10-09T14:03:57+00:00",
-      "collected_at": "2026-10-10T00:01:00.973854+00:00",
-      "body": "TLDR The recent cloning of the CreativeCloud suite with the ArtCraft clone is going to be the nail in the coffin for Adobe, whether they sue or not. Personally buying Puts Adobe's Value Proposition Adobe's revenue is critically hinged on it's subscription sales (75% of their revenue, see below). It protects this with dug-in users who aren't willing to pick up new software and have set workflows. This is why previous solutions such as DiVinci Resolve didn't completely displace users of PremierePro. Additionally, Adobe's proprietary file types lock in users across the media development profession for consistent workflow practices. Why Adobe loses to ArtCraft Other open-source clones didn't have the resources to compete with Adobe and their software development scale, nor did they want to risk getting sued while developing their product by directly mimicking Adobe's features and interfaces, which would actually allow a product to attract embedded users who don't want to learn new software and would rather focus on creating. ArtCraft is different because it directly mimics existing Adobe interfaces (insanely easy for existing users to switch), it provides extra utility in supporting more operating systems and being written in Rust for performance, the software is quickly advancing to reach feature parity and bug fixing (it has received 17 patches in the last hour as of writing this), and finally this software is fully motivated to fully integrate with AI MCP skillsets that allow AI to fully drive the use of the software with creative tuning. The final stake in the coffin is that many people feel hurt by Adobe's expensive and untenable pricing, so there are many people highly motivated to make this a reality. Even if Adobe sues the creator and somehow gets the code taken down, it has been duplicated multiple times already and has spread like wildfire. Adobe's legal team will not be able to keep up with how fast a new Hydra head will pop up and the US legal system doesn't have precedent to actually protect a digital entity like this. Major companies will continue to use CreativeCloud to not expose themselves to the legal blast radius, but most small companies, individual creatives, and hobbyists have the opportunity to quickly switch. There are more and more videos popping up by the hour on YouTube about top creatives testing the software and confirming that while it is buggy currently it is highly effective as a replacement and allows them to continue doing their existing workflows without disruption. This smaller creatives section is ~25% of their primary revenue stream or about ~17% of their total profit. If Adobe loses any major firms to this, the blast radius is even wider. Adobe Financials FY2025 Revenue Breakdown by Segment Digital Media ($17.65 billion | 74.25% share): Includes subscriptions to Creative Cloud (Photoshop, Illustrator, Premiere Pro) and Document Cloud (Acrobat, Adobe Sign). [ 1 , 2 ] Digital Experience ($5.86 billion | 24.67% share): Includes enterprise subscriptions to Adobe Experience Cloud for marketing analytics, commerce, and campaign management. [ 1 , 2 ] Print and Publishing ($256 million | 1.08% share): Includes legacy product licenses for technical publishing and eLearning tools. [ 1 , 2 ] Customer Group, FY2025 Revenue, Revenue Share Creative & Marketing Professionals, $16.30 billion, 71.5% Business Professionals & Consumers, $6.50 billion, 28.5% Personal Stake I have bought 10 Puts for 10/30 at a strike of $235. I started buying yesterday and got hammered by their gains the last two days. I personally believe they will take a big hit over the weekend as this software moves at a blazing pace and gets more Youtuber and internet attention over the weekend, with a big move starting Monday when Adobe investors start getting scared because of what they see, and the impending SaaSpocolypse fear renewals. submitted by /u/LightseekerLife [link] [comments]",
-      "author": "/u/LightseekerLife",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "transport": "rss",
-        "listing": "dd",
-        "flair": "",
-        "requested_flair": "",
-        "requested_flairs": [
-          "DD"
-        ],
-        "sort": "top",
-        "time_filter": "day",
-        "feed_rank": 1,
-        "image_urls": [
-          "https://preview.redd.it/0e28z9de7guh1.jpeg?width=640&crop=smart&auto=webp&s=0633e7f79865eb11854f247af32199c8f19204f8"
-        ],
-        "images": [
-          {
-            "url": "https://preview.redd.it/0e28z9de7guh1.jpeg?width=640&crop=smart&auto=webp&s=0633e7f79865eb11854f247af32199c8f19204f8",
-            "path": "data/media/reddit/reddit-image-reddit-ad3e37531a16cc31abac-1.jpeg",
-            "mime_type": "image/jpeg",
-            "bytes": 25005
-          }
-        ]
-      }
-    },
-    {
       "id": "x:6153aa212de8f815bd7f",
       "source_type": "x",
       "source_name": "@mweinbach",
@@ -4291,256 +4652,6 @@
         "publication_url": "https://www.latent.space",
         "publication_platform": "substack",
         "section": "industry_changes"
-      }
-    },
-    {
-      "id": "price:6a255ab4b36300827118",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 跌幅前十 2026-10-08",
-      "url": "https://finance.yahoo.com/markets/stocks/losers/",
-      "published_at": "2026-10-08T20:00:00+00:00",
-      "collected_at": "2026-10-10T00:02:31.700612+00:00",
-      "body": "1. BAND close 51.950001; previous 57.470001; change -9.605%\n2. CRWV close 81.580002; previous 88.449997; change -7.7671%\n3. BSP close 38.009998; previous 41.07; change -7.4507%\n4. NBIS close 219.710007; previous 237.149994; change -7.354%\n5. RXT close 3.62; previous 3.85; change -5.974%\n6. ORCL close 135.690002; previous 143.559998; change -5.482%\n7. KC close 8.74; previous 9.23; change -5.3088%\n8. PONY close 5.76; previous 6.07; change -5.1071%\n9. CORZ close 15.36; previous 15.94; change -3.6386%\n10. AKAM close 100.900002; previous 104.610001; change -3.5465%",
-      "author": "",
-      "symbols": [
-        "BAND",
-        "CRWV",
-        "BSP",
-        "NBIS",
-        "RXT",
-        "ORCL",
-        "KC",
-        "PONY",
-        "CORZ",
-        "AKAM"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "losers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-10-08",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "BAND",
-            "price_date": "2026-10-08",
-            "close": 51.950001,
-            "previous_close": 57.470001,
-            "change_amount": -5.52,
-            "change_percentage": -9.605,
-            "url": "https://finance.yahoo.com/quote/BAND"
-          },
-          {
-            "ticker": "CRWV",
-            "price_date": "2026-10-08",
-            "close": 81.580002,
-            "previous_close": 88.449997,
-            "change_amount": -6.869995,
-            "change_percentage": -7.7671,
-            "url": "https://finance.yahoo.com/quote/CRWV"
-          },
-          {
-            "ticker": "BSP",
-            "price_date": "2026-10-08",
-            "close": 38.009998,
-            "previous_close": 41.07,
-            "change_amount": -3.060001,
-            "change_percentage": -7.4507,
-            "url": "https://finance.yahoo.com/quote/BSP"
-          },
-          {
-            "ticker": "NBIS",
-            "price_date": "2026-10-08",
-            "close": 219.710007,
-            "previous_close": 237.149994,
-            "change_amount": -17.439987,
-            "change_percentage": -7.354,
-            "url": "https://finance.yahoo.com/quote/NBIS"
-          },
-          {
-            "ticker": "RXT",
-            "price_date": "2026-10-08",
-            "close": 3.62,
-            "previous_close": 3.85,
-            "change_amount": -0.23,
-            "change_percentage": -5.974,
-            "url": "https://finance.yahoo.com/quote/RXT"
-          },
-          {
-            "ticker": "ORCL",
-            "price_date": "2026-10-08",
-            "close": 135.690002,
-            "previous_close": 143.559998,
-            "change_amount": -7.869995,
-            "change_percentage": -5.482,
-            "url": "https://finance.yahoo.com/quote/ORCL"
-          },
-          {
-            "ticker": "KC",
-            "price_date": "2026-10-08",
-            "close": 8.74,
-            "previous_close": 9.23,
-            "change_amount": -0.49,
-            "change_percentage": -5.3088,
-            "url": "https://finance.yahoo.com/quote/KC"
-          },
-          {
-            "ticker": "PONY",
-            "price_date": "2026-10-08",
-            "close": 5.76,
-            "previous_close": 6.07,
-            "change_amount": -0.31,
-            "change_percentage": -5.1071,
-            "url": "https://finance.yahoo.com/quote/PONY"
-          },
-          {
-            "ticker": "CORZ",
-            "price_date": "2026-10-08",
-            "close": 15.36,
-            "previous_close": 15.94,
-            "change_amount": -0.58,
-            "change_percentage": -3.6386,
-            "url": "https://finance.yahoo.com/quote/CORZ"
-          },
-          {
-            "ticker": "AKAM",
-            "price_date": "2026-10-08",
-            "close": 100.900002,
-            "previous_close": 104.610001,
-            "change_amount": -3.709999,
-            "change_percentage": -3.5465,
-            "url": "https://finance.yahoo.com/quote/AKAM"
-          }
-        ]
-      }
-    },
-    {
-      "id": "price:49d16d26be311df8f050",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 涨幅前十 2026-10-08",
-      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
-      "published_at": "2026-10-08T20:00:00+00:00",
-      "collected_at": "2026-10-10T00:02:31.700612+00:00",
-      "body": "1. SECZ close 12.66; previous 11.4; change 11.0526%\n2. MAX close 10.68; previous 9.67; change 10.4447%\n3. Z close 29.17; previous 27.280001; change 6.9282%\n4. ZG close 29.9; previous 27.969999; change 6.9003%\n5. TBLA close 3.51; previous 3.29; change 6.6869%\n6. MNDY close 88.910004; previous 83.510002; change 6.4663%\n7. GDDY close 103.190002; previous 97.209999; change 6.1516%\n8. ASAN close 9.87; previous 9.33; change 5.7878%\n9. NIQ close 17.91; previous 16.99; change 5.415%\n10. YELP close 19.370001; previous 18.4; change 5.2717%",
-      "author": "",
-      "symbols": [
-        "SECZ",
-        "MAX",
-        "Z",
-        "ZG",
-        "TBLA",
-        "MNDY",
-        "GDDY",
-        "ASAN",
-        "NIQ",
-        "YELP"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "gainers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-10-08",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "SECZ",
-            "price_date": "2026-10-08",
-            "close": 12.66,
-            "previous_close": 11.4,
-            "change_amount": 1.26,
-            "change_percentage": 11.0526,
-            "url": "https://finance.yahoo.com/quote/SECZ"
-          },
-          {
-            "ticker": "MAX",
-            "price_date": "2026-10-08",
-            "close": 10.68,
-            "previous_close": 9.67,
-            "change_amount": 1.01,
-            "change_percentage": 10.4447,
-            "url": "https://finance.yahoo.com/quote/MAX"
-          },
-          {
-            "ticker": "Z",
-            "price_date": "2026-10-08",
-            "close": 29.17,
-            "previous_close": 27.280001,
-            "change_amount": 1.889999,
-            "change_percentage": 6.9282,
-            "url": "https://finance.yahoo.com/quote/Z"
-          },
-          {
-            "ticker": "ZG",
-            "price_date": "2026-10-08",
-            "close": 29.9,
-            "previous_close": 27.969999,
-            "change_amount": 1.93,
-            "change_percentage": 6.9003,
-            "url": "https://finance.yahoo.com/quote/ZG"
-          },
-          {
-            "ticker": "TBLA",
-            "price_date": "2026-10-08",
-            "close": 3.51,
-            "previous_close": 3.29,
-            "change_amount": 0.22,
-            "change_percentage": 6.6869,
-            "url": "https://finance.yahoo.com/quote/TBLA"
-          },
-          {
-            "ticker": "MNDY",
-            "price_date": "2026-10-08",
-            "close": 88.910004,
-            "previous_close": 83.510002,
-            "change_amount": 5.400002,
-            "change_percentage": 6.4663,
-            "url": "https://finance.yahoo.com/quote/MNDY"
-          },
-          {
-            "ticker": "GDDY",
-            "price_date": "2026-10-08",
-            "close": 103.190002,
-            "previous_close": 97.209999,
-            "change_amount": 5.980003,
-            "change_percentage": 6.1516,
-            "url": "https://finance.yahoo.com/quote/GDDY"
-          },
-          {
-            "ticker": "ASAN",
-            "price_date": "2026-10-08",
-            "close": 9.87,
-            "previous_close": 9.33,
-            "change_amount": 0.54,
-            "change_percentage": 5.7878,
-            "url": "https://finance.yahoo.com/quote/ASAN"
-          },
-          {
-            "ticker": "NIQ",
-            "price_date": "2026-10-08",
-            "close": 17.91,
-            "previous_close": 16.99,
-            "change_amount": 0.92,
-            "change_percentage": 5.415,
-            "url": "https://finance.yahoo.com/quote/NIQ"
-          },
-          {
-            "ticker": "YELP",
-            "price_date": "2026-10-08",
-            "close": 19.370001,
-            "previous_close": 18.4,
-            "change_amount": 0.970001,
-            "change_percentage": 5.2717,
-            "url": "https://finance.yahoo.com/quote/YELP"
-          }
-        ]
       }
     },
     {
@@ -8054,24 +8165,6 @@
       }
     },
     {
-      "id": "substack:1c1571826db84f1b617c",
-      "source_type": "substack",
-      "source_name": "Liberty's Highlights",
-      "title": "663: OpenAI’s Math Avalanche, Claude Makes Movies, Your AI’s Computer, Meta & Microsoft Cut Claude, ChatGPT’s Next Act, Agents for Couples, Muscle Hormones, Cleaner Air & Clearer Mind, and Rubber Soul",
-      "url": "https://www.libertyrpf.com/p/663-openais-math-avalanche-claude",
-      "published_at": "2026-10-07T16:02:39+00:00",
-      "collected_at": "2026-10-08T00:00:50.084027+00:00",
-      "body": "Many’s the man lost much just because he missed a perfect opportunity to say nothing. –Claire Keegan 🤖🎥🎬 We’ve seen the rapid improvement of generative AI when it comes to image and video, but a new hybrid approach is rapidly taking off. The models are now so good at coding and have enough aesthetic sense that they can act as video ‘directors’ by stitching together code and various static, video, and audio assets into something pretty damn cool. One of my favorites right now is the video above, created by Anabology . Claude Opus 5.5 took 18 hours to create it, and you can see how it did it in this Google Drive (the prompts and a few photos used as a kind of mood board, and a retrospective “how it was made” document about it). As you watch it, try to notice the dozens and dozens of little creative decisions about camera moves, transitions, wordplays, references, visual gags, or just interesting aesthetic choices. ( it’s not perfect, and if you watch a few times, you start to notice some of the weirdness, but as a point on a trendline, it shows where we’re headed ) Last week at the OSV offsite, I met Donald Jewkes , a real wizard with these tools. He recently had a pretty viral tweet with this music video created by Claude: He showed us some of what he’s working on (which is way beyond what I’ve seen publicly), along with a live demo of his Codex system, and it made me feel like a toddler at using these tools. 😅 All this is a reminder that we don’t know where the edges of capabilities are with these models. They’re coming out so fast that no one has the time to fully explore them before a new one replaces them. There’s two things going on: Auteurs with a very specific vision making it real with these tools, and most of them probably wouldn’t have been able to in the old system where very few people end up being able to marshal the resources of a major studio. But also, the models themselves are making a lot of those creative decisions now . If you check out the prompts (like Donald’s prompt here ), it’s very long and detailed, but it’s largely vibe-based and about steering the model into fruitful areas of the design-space, or into giving it workflows that can help it iterate and improve on its ideas. But it’s not very prescriptive or descriptive. Looking at how these things are made, it’s an interesting hybrid of shape rotator and wordcel skills . At first I thought maybe these coding AIs were bringing on the revenge of the English majors after years of nerds dominating, but now I’m not so sure. The people getting the best out of these models need to be able to express their thoughts clearly, but they are also doing a lot of systems thinking and architecture work to create the ideas/vibes/workflows scaffold on which the models can do their best work (and we have no idea how well they could do because we’ve only explored a tiny amount of the possibility space). 💚 🥃 To keep this steamboat alive and afloat , I need supporters. Like you ! 🚢 The paid subscription includes the full feed, every podcast, Zoom Q&As with me, and access to the private Discord clubhouse , where a core group of us hang out and discuss the interesting stuff we find: Get the full Liberty feed and help keep the Serendipity Engine running by becoming a paid supporter. Thank you 💚🥃🦊🐙⚓️ 🏦 💰 Liberty Capital 💳 💴 A bit on the nose, I know… 💻 Everybody Wants to Give You a Computer These Days 🤔 Big Tech and the AI labs have been spending hundreds of billions of dollars of capex, and some of that is to give you an early Christmas present: your very own computer in the cloud 🎁 Well, it’s your AI assistant’s computer, but you still get to benefit from that hardware. Muse’s AI model runs elsewhere. The cloud computer is its workspace: a place to keep files, run software, and carry on with tasks after you’ve closed the app. You can give it an ongoing job, like sifting through the daily deluge of emails from your kids’ schools and flagging anything important. 📬 Meta has been particularly transparent about what you get. You can poke around your Muse’s isolated Linux environment and open or edit the files inside it, including memory files, instructions, and software. Credentials and permission controls live outside that editable area. Here’s what my Muse reported when I asked about its cloud computer: Here’s what’s under the hood: CPU: 2 vCPUs on an AMD EPYC 9D25 — that’s the host chip, so this is a slice of a much bigger cloud machine RAM: 7.7 GB (currently running fairly full at ~7.1 GB used) Disk: 7.5 GB of persistent storage, plus a 512 MB temp filesystem OS: Ubuntu 24.04 LTS Where it’s hosted: honestly, I can’t say for sure — the cloud metadata endpoints are silent from inside this VM. The EPYC 9D25 chip is custom silicon built for Google Cloud, so that’s my best guess, but it’s an inference, not confirmed. Note that it even guessed that it may be hosted in GCP based on the custom CPU! I have no idea if that’s correct, though ¯\\_(ツ)_/¯ David Singleton, who works at Meta and was involved in designing the system, describes a lot of how it works here: To save you a click, here’s the highlight from his long tweet: The runtime cell gets its own root filesystem (including a full Ubuntu linux image) separate from the host filesystem where your other more sensitive data lives. Because it is isolated from the sensitive stuff that runs on the same box, this means that we can, and do, offer users full visibility and control over the files in the runtime cell. [...] You can install software in it, write and compile code, use the browser to surf the web: it is your own Linux box that you can operate as you choose with your Muse. Poking around in this computer doesn’t give you any privileged access to Meta infrastructure, or to other people’s data You can even easily download all your agent’s data to better be able to review it locally by going to Settings → Data controls → Download your agent data. The fact that you can go poke around the file system, open files and even edit them is extremely cool. You can see some of the memories and instructions that shape how your Muse behaves, and correct mistakes directly. If it has written down something wrong about you, that mistake could keep influencing future conversations and tasks. The more I delegate to an assistant, the more I want to be able to check what it thinks it knows about me. You can also import files or chats from other agents and inject them, Inception -style, right into your Muse’s memory. 💉🧠 This level of trust also of course means that some people will have fun creating very chaotic or weird situations and create unhinged Muses. But I like this ethos from Meta and I hope it will continue. I wish my Grok Bot and ChatGPT Work assistants made it this easy to inspect and edit the memories and instructions that shape their behavior. Muse also has a nightly ‘ dreaming ’ process. 💤 It reviews recent conversations: what worked, what went wrong, and what it should remember or do differently tomorrow. A little like the memory consolidation that happens when we sleep, except you can open the files and poke around. Here’s how my Muse describes it: Dreams are my nightly self-review. Every night, a background job looks back over our recent conversations and asks: what worked, what went wrong, and who are you becoming — then writes it down. The files under ~/dreams/ are the dated reflections, one per day, written in first person — basically me thinking out loud about the relationship. The alignment/ folder holds the operational output: repair threads for mistakes I need to mend, and a synthesis of how I should act for you (that’s the file that gets injected into my context each morning, so I start the day calibrated to you). So they’re not your notes about you — they’re my notes to myself about how to be better for you. The ancestor of this is the 2023 Stanford/Google “ Generative Agents ” paper (the Smallville simulation). Its agents periodically paused to reflect , synthesizing raw memories into higher-level insights. Then Letta (formerly MemGPT) shipped “sleep-time compute” in 2025 with background agents that reorganize and rewrite their own memory during idle periods. OpenClaw added its own Dreaming feature in v2026.4.5 (2026): three phases modeled on the sleep cycle — light sleep (scan and categorize), deep sleep (promote to long-term memory), REM (link new memories to old ones) — behind an experimental flag with a /dreaming command. From Muse’s description, the interesting twist is the ‘alignment reflection.’ It reviews what worked, what didn’t, and which mistakes need fixing. An assistant keeping notes on how to be a better assistant. You can also see and edit its SOUL.md file, which in Inside Out parlance would be where the core personality traits are stored. I’m curious whether these nightly reviews actually make it better over time. In theory it makes sense, but how well does it work in practice? 🤔 OpenAI just shipped Dots . It’s a similar deal to Muse: Your agent has its own cloud computer and can do stuff for you. My Dot’s computer screen. I can even control it remotely. Access is limited to higher-priced plans for now. I don’t know whether that’s compute constraints (maybe the ratio of CPUs to GPUs needs to change..?), a cautious rollout, or a business decision. I suspect it’ll become a much bigger consumer story once lower tiers get it. This is basically what I was getting at a few weeks ago in The Brain is the Replaceable Part . The brains may keep changing, but everybody seems to be converging on the persistent computer/context around them. I’ve played with Dots a little, but not enough for a full review. So far I’m more impressed by Muse, but it’s probably because I was traveling last week and Muse feels ‘best’ for my personal context, while Dots will probably be better for my ‘work’ projects. My Muse has been particularly useful doing exactly the kind of things I would have a human assistant do if I had one: Remind me of XYZ, please look up ABC, create a packing checklist to make sure I don’t forget anything. Or tell me when certain emails arrive (flight check-in reminders, hotel details, etc). Nothing revolutionary, but useful , which is more than I can say about many products out there. There are lots of stories about people saving lots of money by asking their Muses to renegotiate cellphone contracts or whatever. Most of the examples I’ve seen were posted by Meta employees, and while they are useful at giving ideas of things to try, I haven’t personally done anything quite like that yet with my Muse. Maybe I’m old-fashioned, but I have some reticence letting it loose and giving it the ability to email or call others on my behalf. I’m still the one whose name goes on the email. 😅 My wife is more or less transitioning her ChatGPT use over to Muse, and I’m guessing she isn’t the only one among non-power-users of these tools 🤔 ✂️ Meta & Microsoft Cut Claude Usage (A Clue About Muse’s Next Brain? 🧠) Meta and Microsoft are cutting back on their internal use of Claude . Microsoft has lowered its projected internal Claude spending by more than a third, telling employees to prioritize non-Anthropic models and internal tools. At Meta , the number of employees using Claude Code has fallen from roughly 60,000 to 30,000 as the company pushes its own coding tools. Why? There are obviously reasons for Meta to push its own models beyond raw performance: cost, control, dogfooding, and reducing its dependence on an outside supplier. But I’m guessing they still wouldn’t accept substantially worse code and much slower engineers just for those benefits. Meta has cash machines (ads on its family of apps) that are way too valuable for that. So I think this is probably an early signal that Meta’s bigger models are getting closer to release. Muse Spark 1.3 is based on Avocado, and Watermelon is coming next. Before releasing it to external customers, Meta will likely dogfood it internally, so I’m guessing 🍉 has reached a level of performance and reliability where whatever gap remains with Claude is small enough to make the other advantages of using its own model worth it. What I’m most curious about is Muse getting a brain transplant . The rest of the app is already so good, and it’s gaining traction. I’d love to see what a much stronger model can do inside that harness. 🗣️💬 Tibo Sottiaux: OpenAI’s ChatGPT & Codex Lead on Where Things are Going Good short interview with Tibo , the man with the reset button at the center of OpenAI’s product efforts. Here are my highlights: - Agent traffic could break software’s pricing assumptions Tibo: First of all, if you want your product to be successful for agents, you have to build for a certain level of scale. We’ve worked very closely with Notion, for example. When they built their MCP, suddenly it was available to all these agents that can do the work and use that MCP, so they saw a ton of traffic come in. That puts a lot of strain on the system, and you have to figure out the economics of that. There’s this tension if you’re building products: do you build an interface or not? You can hold that back for a while, but it is inevitable. The majority of things are going to be used by agents. Building towards that future, I think, is very important. Usually more usage on a software product is a good thing, but at a certain point, the quantitative becomes qualitative. These agents can hammer a system in a way that no humans can, and they do it on behalf of the paying customers who are typically charged a flat rate (per month or year), not on a usage basis. It feels like seat-based pricing will be strained, but at the same time, there are many benefits to selling seats. If you have usage-based pricing, it gives an incentive to your customers to worry about unexpected costs, or to try to use your software less to save money, which may make it less sticky or even get it removed entirely from certain workflows 🤔 - Agent Swarms that Grow and Shrink We’re clearly entering the era of agent swarms, so it’s interesting to hear about how Tibo is seeing that pendulum swing: Tibo: I used to run a lot more in parallel, and then we were fortunate enough to get a breakthrough with Ultrafast. Now I feel I’m able to be in the flow again. Having a faster agent helps me a lot. […] I find myself building larger and larger teams of agents. Then, when we have the next breakthrough with models, suddenly I’m like, “A bigger agent can just do all of it.” […] So I shrink the team again. It goes through this expansion and shrinking. It feels like if one agent can do the job well, it’s simpler to use that agent and keep track of what it’s doing than to manage a whole team (even if they self-manage, for important things you still want to keep some sense of what is going on). But then, when that better model that can replace multiple agents comes out, you look for the edges of what it can do and eventually need to have multiple agents working together to accomplish new, more ambitious goals. That cycle is probably not going to stop any time soon. 🔄 - Should we expect models to keep getting better fast? Tibo: There are so many things that I feel are not yet priced in. I think the majority of actions on the internet will be taken by agents. Models are going to become cheaper and faster at rates that are quite incredible . We will finally be able to integrate all modalities together in a way that is very seamless. Often, when I look at what people are building out there, it’s like, “You’re not quite getting it.” You’re almost there, but if you were pushing yourself and really imagining all of this being roughly 10 times better than it is today, in a year, you would build in a different way. I don’t think he necessarily means literally ten times better because that’s very hard to measure, but as a guy who’s seeing unreleased models, it’s a pretty strong signal that OpenAI isn’t planning around things slowing down anytime soon. From the full feed 🔒: The Brain is the Replaceable Part — Persistent AI Assistants Are Getting Harder to Leave 🧪🔬 Liberty Labs 🧬 🔭 🎁 OpenAI’s Historic Math Solutions Dump 😮 Back in Edition #660 I wrote “More Math Breakthroughs Are Coming” and then in #662 I wrote about how “OpenAI Says Its Unreleased Model Has Solved More Than 100 Long-Standing Math Problems”. Well… WELL! The pile of math breakthroughs dropped, and it’s MASSIVE. 🤯 This OpenAI Github repository contains 722 manuscripts organized into 372 families. OpenAI says the results are at different stages of verification . Many have Lean formalizations, but not all of them do, and the company says some of the unformalized results could still contain errors. It will take a long time for mathematicians to make sense of all of it. But the early feedback from the community makes your head spin. If a human had published a quasi-Riemann, they’d probably be looking at a Fields Medal. But while this is a big one, there are dozens and dozens of other big ones here. One of the things that blows my mind even more (and I almost suspect it doesn’t mean what it seems to mean) is this: When Navier-Stokes came out, we heard about around ten thousand agents working as a swarm on it. Are they really saying that, “on average”, these breakthroughs only took 3 hours of ChatGPT Pro equivalent compute with the unreleased model?!?! Is this right? 🤔 Yet Scientific American writes : A spokesperson for OpenAI told Scientific American that the new model—which the company has not released to the public—produced almost every one of the results in response to a single prompt handed to a single AI agent. This would be a striking difference from OpenAI’s earlier blockbuster solution to the Navier-Stokes problem, which was produced through the collective efforts of a 10,000-strong agentic swarm that cost millions of dollars in computing power. If true, it would mean that unprecedented mathematical power could soon be accessible to anyone. If you look around the Github, you can see some of the prompts used and reasoning summaries. I looked at a few, and many of the prompts are 1-2 pages long. It wasn’t some esoteric steering of the model that did it, at least not as far as I can tell. A mathematician named Vladimir Reshetnikov, best known as Cleo , asked Opus 5.5 to comment on OpenAI’s findings, and Opus’ digital mind was just as blown as mine. You can read it here. After inspecting the repository and some of the Lean proof artifacts, Opus 5.5’s reaction was about the same as mine: My honest gut reaction is a mix of awe and vertigo, plus a bit of grief I can't quite justify. Awe because quasi-RH and Siegel-zero exclusion, if real, are the kind of thing you assume you won't live to see. Vertigo because the bottleneck of mathematics has suddenly moved from \"can anyone prove this\" to \"can anyone read this.\" The grief I'm less sure about. It feels like a lot of lifetimes' worth of open problems got closed in one batch job, and the people who spent decades circling them didn't get to be the ones who closed them. Vertigo indeed! OpenAI says it’ll fund math workshops and conference, and is working to release the model that produced these: We want this progress to push the frontier of human knowledge and enable further progress in mathematics. We will be funding a series of workshops, conferences, and special programs around the understanding of major results produced by AI—we will share more on this in the near future. We want to directly empower scientists with state-of-the-art capabilities and are working to responsibly release the model that produced these results. But by the time they release this model, they’ll have the next model internally and probably produce the next batch of breakthroughs first. 🏠🧑‍🧑‍🧒‍🧒 Google’s CC is Almost an ‘Agent for Couples’ Not quite the Agent for Couples I envisioned in the intro of Edition #660, but Google Labs has a product called CC , which they describe as an agent for families. Here’s their description of its capabilities: CC helps you offload your family logistics. Here’s what it can do: Calendar management: Automatically finds events from shared senders and adds them to the shared CC Calendar. Daily briefings & check-ins: Sends proactive summaries via email so your family starts each day knowing what’s ahead. Document creation: Creates Google Docs or Sheets (meal plans, packing lists, budgets) and can share them with the group. PDF form pre-filling: Identifies fillable PDF forms attached to emails (waivers, registrations, etc.) and pre-fills editable fields for your review. Reminders: Sends notifications via Chat when deadlines are near or something needs your immediate attention. Helps your group keep CC informed: For CC to help your group, it needs to know who in your inbox matters. You chose these senders during initial onboarding, but CC will also suggest new senders every week so CC can stay up to date. This runs privately to build a list of suggested senders for you to review; it is not shared with your group, and CC does not store these emails or learn from them. Nerdier than I would like. All I need is an agent that can hang out in an IM chat and keep an eye on family calendars. Muse would be great at this. It’s not fully out yet, there’s a limited rollout in the U.S., but I signed up for the waitlist. I gotta admit that because it’s Google, I don’t have too much faith that it won’t be killed within a few months of coming out, but who knows. Maybe they’ll roll it into Gmail/Google Calendar/etc and get massive distribution to those who would use it that way. h/t Thanks to friend-of-the-show and supporter Vinay for sending this! 💚 🥃 💪→🧠 What Your Muscles Tell Your Brain TIL that our muscles are also hormone factories. This mouse study looks at apelin , which may help explain some of exercise’s effects on mood. The mice that ran for four weeks had higher apelin levels and showed fewer depression-like behaviors. Removing muscle apelin weakened some of running’s benefits. Increasing apelin production in mice that didn’t run produced some of the same effects. If the mood stuff wasn’t reason enough, the mouse study also found signs of increased neurogenesis (new neurons forming) and synaptic plasticity (connections between neurons adapting) in the hippocampus, a brain region involved in learning and memory. We already have evidence from human trials that exercise can help with depression . Whether apelin is part of the explanation in people is still an open question. “Exercise is an effective treatment for depression, with walking or jogging, yoga, and strength training more effective than other exercises, particularly when intense.” So yeah, this great meme has it right: 🔁 Déjà vu: The link between Muscle Mass & Cognitive Function 🫁→🧠 Cleaner Air, Clearer Thinking? I’ve written about air filters before , including the purifiers I use at home. This 2026 randomized trial tested whether a month of HEPA filtration could also improve performance on a cognitive test. 🧠🤔 The researchers had 119 adults living near highways in Massachusetts use HEPA purifiers and lookalike units without HEPA filtration for a month each, with a monthlong break between them. Among the 50 participants aged 40 and over, a test of mental flexibility took 12% less time with HEPA filtration: 54 seconds versus 61.4 seconds . The task involved connecting alternating numbers and letters in sequence. Across the full group, however, the difference wasn’t statistically significant. This was mainly a blood-pressure study, and the researchers decided afterward to split the cognitive results by age. The people taking the test didn’t know whether their purifier had a HEPA filter inside. The person running the test did. I’d like to see the finding repeated in a study that plans that comparison from the start with better methodology, but it’s still one more data point about the importance of clean air (or at least, it suggests it, again). Seven seconds faster on a test is interesting, but does it mean you’d think more clearly during a normal workday? We don’t know yet ¯\\_(ツ)_/¯ From the full feed 🔒: Living One Model Ahead — What happens when the labs building the best AI get to use it on themselves first? 🎨 🎭 Liberty Studio 👩‍🎨 🎥 📺 A Documentary about the Beatles’ Rubber Soul 🎶 Growing up, I had VHS copies of the Beatles Anthology 8-part documentary . I watched it over and over again. As much detail as there was in it, there’s only so much time to spend on each individual album, and it was targeted at the wider group of fans, not just super-nerds. This goes much further into pretty much anything you may want to know about Rubber Soul . Even if you already like that album, I bet that after watching this, you’ll hear all kinds of new things and have many more new associations with each song.",
-      "author": "Liberty 💚 🥃",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.libertyrpf.com/",
-        "publication_platform": "substack",
-        "section": "transaction_ideas"
-      }
-    },
-    {
       "id": "x:4470d9fa8f8c681c86d6",
       "source_type": "x",
       "source_name": "@KawzInvests",
@@ -8174,25 +8267,6 @@
         "investor_type": "technology_investor",
         "coverage": "public-equity technology and software ideas",
         "engagement_score": 14
-      }
-    },
-    {
-      "id": "substack:03e80cec9fa00cde4e68",
-      "source_type": "substack",
-      "source_name": "MBI Deep Dives",
-      "title": "ezCater and the Other Half of Uber's FCF",
-      "url": "https://mbideepdives.substack.com/p/ezcater-and-the-other-half-of-ubers",
-      "published_at": "2026-10-07T15:51:32+00:00",
-      "collected_at": "2026-10-08T00:00:45.984139+00:00",
-      "body": "Barely a week after my **[Uber Deep Dive](https://mbideepdives.substack.com/p/uber-the-aggregator-on-trial)**, Uber [announced](https://www.bloomberg.com/news/articles/2026-10-06/uber-to-buy-catering-platform-ezcater-for-2-3-billion-in-cash) yesterday it is buying ezCater, the largest online catering marketplace in the US, for $2.3 Billion in cash. The deal is small for a company worth ~$145 Billion, but it adds yet another vector to a pattern I have been highlighting for a while: DoorDash typically builds whereas Uber usually buys. And this time, Uber doesn’t seem to be buying cheaply either. I will discuss the price, the seller’s side of the story, and why I think the more important question here is about capital allocation behind the paywall.\n\n_Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on **[70](https://mbideepdives.substack.com/p/deep-dives)+** companies. The daily is just how I think out loud between the Deep Dives!_",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://mbideepdives.substack.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas",
-        "transport": "public_reader_fallback"
       }
     },
     {
@@ -8725,24 +8799,6 @@
       }
     },
     {
-      "id": "substack:22732f8185e35596b405",
-      "source_type": "substack",
-      "source_name": "Latent Space",
-      "title": "Can a Cloud-Native Harness Make Agents Reliable Beyond the Desktop?",
-      "url": "https://www.latent.space/p/stacklok",
-      "published_at": "2026-10-07T14:10:45+00:00",
-      "collected_at": "2026-10-08T00:00:44.466395+00:00",
-      "body": "At a high level, coding agents have a basic architecture: an LLM calls tools in a loop, while carrying forward the required context. Since that’s easiest to implement locally , many coding agents started out as terminal tools and then desktop apps (Claude Code famously began as a CLI tool). But as the open laptop meme illustrates, modern agent harnesses have frustrating limitations if they’re not able to be managed in the cloud . Since 2025, both OpenAI and Anthropic have been trying to shift their harnesses more into the cloud — but with varying levels of success. The challenges include keeping sessions reliable, isolating tool execution and preserving context. This sounds a lot like container orchestration in the early 2010s , from which emerged the open source Kubernetes in 2014. Kubernetes, developed by Google, became the dominant open source system for deploying and managing cloud applications at scale — it kickstarted the “cloud native” era of computing . Kubernetes uses control loops to keep applications running, recover from failures, and scale when needed. What if coding agents could be managed in the same way? That’s the bet that two Kubernetes creators, Craig McLuckie and Joe Beda , are making with Stacklok . Stacklok architecture; diagram via Stacklok Stacklok raised a $17.5 million Series A back in 2023 from Accel, Madrona and Bain Capital. Initially focused on software supply chain security , the company recently pivoted to Kubernetes-based agentic solutions . Mecatl: a harness built for the cloud The most interesting product of Stacklok is Mecatl, a “cloud-native harness” begun in June as an open source project on GitHub . At first, I thought the name was pronounced “me-cattle” — a play-on-words referencing the ‘cattle vs. pets’ concept of Kubernetes, where you treat your servers, pods and clusters like cattle rather than pets. But no, the name is actually pronounced “MEH-kah-tl” and is an Aztec word meaning a cord or rope ! In any case, what does cloud-native mean in the context of a harness? It’s primarily about “moving the locus of value from the desktop to the cloud,” said McLuckie. He’s talking about “value” from an enterprise perspective — that the code and context are often derived from local environments. “That’s where the IP sits,” Beda chimed in. “And if you want to be able to actually bring that under management, it’s that much more difficult when it’s sitting on a desktop.” McLuckie added that a cloud native approach also allows Stacklok to ask some deeper questions about agentic coding. “Why is the agent loop so intricately coupled to the tool calling subsystems? Why is agent identity being reasoned about through the lens of human identity systems?” Diagram via Mecatl GitHub When it comes to open source agent harnesses, there are already well-regarded solutions — such as Pi , a “minimal agent harness” that projects like Flue have built on top of . We asked the Stacklok pair what makes their harness different? Beda didn’t mention Pi specifically, but he did say that in desktop-first harnesses, the loop, local execution and session state often begin inside the same process. “There are a ton of solutions in this space, but they’re all focused to essentially run on the desktop,” he said. “So even if they have pluggability, the architecture is still one process, or one set of tightly coupled processes, that are built to run on the desktop. ” A Kubernetes deployment of Mecatl; via GitHub But can’t enterprises use VMs, containers, or one of many different sandbox products to move their harness to the cloud? Beda says this “lift and shift” approach tends to create issues around the lifecycle of an agent or being able to quiesce it (safely pause it while it waits for human input). “Our thinking is, well, what if we rethought the harness from the ground up to actually run in the cloud?” Separating the agent loop from execution One of the intriguing approaches of Mecatl is that it keeps the agent loop independent of the client, model provider, state store and execution environment . “This is an application that we know how to run in the cloud well,” said Beda, regarding the loop application. “What if we take that and we separate that out from the more sensitive operations , like tool calling and bash, and then also separate out things like session management and memory, so that these things are no longer stored as JSONL files sitting on disk, but can natively be put into manageable systems” Mecatl architecture; diagram via the project GitHub A lot of you reading this will probably have very opinionated harnesses, customized for your own requirements. But Mecatl is designed to extend beyond a single-user, local harness into infrastructure that enterprises can operate centrally. Beda likened this to how enterprises manage email. “We think, in the future, interactions that you have with an agent while you’re working for an enterprise belong to that enterprise; and they’re going to want to manage that and govern that like they do email.” Decoupling AI agents from frontier labs One of the main motivations of Stacklok is to help large enterprises lessen their dependency on frontier labs and hyperscalers , such as Codex, Claude Code and GitHub Copilot. This, suggested McLuckie, is similar to how Kubernetes helps companies reduce dependency on the big cloud providers. For McLuckie, the term “cloud native” came to represent a way to “run in a cloud that is decoupled from the specifics of the cloud provider. So a lot of what we’re trying to do [at Stacklok] is more or less what we did in the Kubernetes time.” After its pivot into agent infrastructure, Stacklok built ToolHive — an open-source platform for running and governing MCP servers. It initially began as a way to manage MCP servers running in Docker containers on the desktop. Then, said Beda, they expanded it into a “ Kubernetes-based gateway and other associated services — a registry and an operator helper for running and managing MCP servers and getting some of the input-output auth stuff right with those things.” Diagram via project GitHub The idea, as McLuckie put it, was to enable enterprises that already ran on Kubernetes to “start to bring agentic workloads into those environments .” Beda claims that many other agent tools were designed for individuals or small startup teams, which doesn’t fly for enterprise-scale companies. “We talk to larger organizations and they’re struggling with like, how do I take this thing that was built for a team of six people and deploy it for an engineering task force in the thousands or tens of thousands.” Stacklok’s LLM gateway MCP was the first step. Next was building an LLM gateway , or “AI Gateway” as it’s called on the Stacklok’s website, to help companies control access and costs. “Most of our customers are banks, semiconductor companies, telcos…you know, people operating in relatively regulated industries,” McLuckie said. Stacklok’s “AI Gateway” a.k.a. LLM gateway The AI Gateway is the one main product Stacklok hasn’t open sourced yet, but Beda says it’s “on our roadmap and we’re going to get there soon.” Unlike Glean’s solution , Stacklok’s AI Gateway does not currently choose a model based on the task. Instead, it focuses on access control, budgets, reporting and provider routing. “We prefer to see the semantic-routing model choice happening in an intelligent system that’s honed in the harness , because there’s just more context there,” McLuckie explained. The enterprise spine Since both ToolHive (MCP platform) and Mecatl (the harness) are open source, what’s the business model for Stacklok? McLuckie replied that ToolHive and Mecatl are both intended to be independently useful, but that the company offers things like consistent identity, authorization, policy and auditing across the open source parts. “Our commercial product is the enterprise spine , the control plane that ties them all together,” he said. From a Stacklok survey of “520 leaders who are responsible for their organization’s use of large language models and/or AI agents.” “The open source projects are relatively easy to get up and running for a small team,” Beda added. “But once you start scaling these things out to multiple clusters, multiple clouds, [...] all sorts of new problems crop up there. And that’s what we’re focused on solving.” The cloud native era for AI? Amazon introduced S3 and EC2 — the beginnings of the cloud era — in 2006 , but at first these products were mainly used by startups and individuals. It took several years for enterprise solutions like Windows Azure to emerge, and then in 2014 Kubernetes arrived to manage containerized applications at scale . We’re starting to see that same pattern play out with agentic technology. Enterprises don’t necessarily want to allow their employees to customize an open source harness, or even use frontier lab harnesses that run on their personal computers. Stacklok — built by two kings of cloud native — aims to solve those problems by bringing agent harnesses fully to the cloud .",
-      "author": "Richard MacManus",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.latent.space",
-        "publication_platform": "substack",
-        "section": "industry_changes"
-      }
-    },
-    {
       "id": "x:277caa73ef5e65d474e4",
       "source_type": "x",
       "source_name": "@qinbafrank",
@@ -9012,25 +9068,6 @@
       }
     },
     {
-      "id": "substack:d959031d2ec00b508aca",
-      "source_type": "substack",
-      "source_name": "Outlier Cap",
-      "title": "Insider Watchlist: Ranking by Growth Conviction – October 2026 Edition",
-      "url": "https://outliercapx.substack.com/p/insider-watchlist-ranking-by-growth-0d4",
-      "published_at": "2026-10-07T12:45:49+00:00",
-      "collected_at": "2026-10-08T00:00:52.420600+00:00",
-      "body": "Welcome to the **Insider Watchlist** section.\n\nEach month, I conduct a full review of my watchlist—**rotating names in and out while reordering others** based on my conviction in each company’s 3-5 year growth potential. Numerous picks on this watchlist ultimately deliver **multibagger returns**.\n\nThis ranking is based on a rigorous blend of underlying technology, addressable market (TAM), competitive moat, team execution, macro tailwinds (AI infrastructure, co-packaged optics, advanced packaging, data-center energy, nuclear fuel, commercial space, physical AI/robotics, quantum computing, and biotech), and risk/reward asymmetry.\n\n**This edition reflects new additions** across nuclear fuel, intelligent power, silicon carbide and proteomics and the **removal of names** that no longer clear the bar on evidence, visibility, or asymmetry.\n\n*   **Tier 1** — Strongest combination of upside, evidence and momentum.\n\n*   **Tier 2** — Very bullish, but more execution or valuation sensitivity.\n\n*   **Tier 3** — Exciting asymmetric ideas that need more proof.\n\n*   **Tier 4** — Bullish long-duration optionality, but lower immediate growth visibility.\n\nImportant disclaimer: I am not currently LONG in any of these stocks, but I **could enter a long position in any of them at any moment**. You can find every alert in the main chat.\n\n*   **Centrus Energy** (LEU) — The only U.S.-licensed enricher with demonstrated HALEU capability, pivoting from a fuel broker into domestic centrifuge capacity as Russian supply phases out and advanced reactors lock in offtake.\n\n_(Content below is exclusive to paid subscribers)._",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://outliercapx.substack.com/",
-        "publication_platform": "substack",
-        "section": "transaction_ideas",
-        "transport": "public_reader_fallback"
-      }
-    },
-    {
       "id": "x:6f9e9aaaabdc7bfd0787",
       "source_type": "x",
       "source_name": "@ByrneHobart",
@@ -9107,24 +9144,6 @@
         "investor_type": "technology_investor",
         "coverage": "public-equity technology and software ideas",
         "engagement_score": 674
-      }
-    },
-    {
-      "id": "rss:76859151baad7cfb3a0c",
-      "source_type": "rss",
-      "source_name": "Mobile Dev Memo",
-      "title": "Podcast: Articulating a bull case for the open web (with Gareth Glaser)",
-      "url": "https://mdm.co/podcast-articulating-a-bull-case-for-the-open-web-with-gareth-glaser/",
-      "published_at": "2026-10-07T10:44:04+00:00",
-      "collected_at": "2026-10-08T00:00:51.546679+00:00",
-      "body": "",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://mobiledevmemo.com/",
-        "publication_platform": "wordpress",
-        "section": "transaction_ideas"
       }
     },
     {
@@ -9636,24 +9655,6 @@
             "body": "桃園美光工會10月1日至6日進行罷工投票，昨天（10/6）晚間9點開票，入冊會員2258人，同意票1994票，會員人數88.3%同意罷工。不同意票14票，廢票4票。桃園美光工會高比例票數取得罷工權，蓄勢待發。\n\n美光為全球三大記憶體廠之一（三星、海力士、美光），在全球AI浪潮下，記憶體市場需求強勁，美光營收成長三倍多；年中的三星分潤罷工，也刺激了台灣的美光勞工。工會要求，公司應提供更高的年度獎金，並建立制度性的分潤機制。\n\n美光在台灣登記的桃園與台中中科兩間分公司，各有獨立的工會。桃園的工會現已取得罷工權，台中的工會則將在10月22日進行第二次勞資爭議調解，調解不成立後，才能進行罷工投票。"
           }
         ]
-      }
-    },
-    {
-      "id": "substack:9416b01a853f1769cc79",
-      "source_type": "substack",
-      "source_name": "Latent Space",
-      "title": "[AINews] Quasi-Riemann-Hypothesis: OpenAI publishes 722 math papers solving 90 of the top 500 open math problems; “the most significant moment” in >100 years of mathematics",
-      "url": "https://www.latent.space/p/ainews-quasi-riemann-hypothesis-openai",
-      "published_at": "2026-10-07T04:55:44+00:00",
-      "collected_at": "2026-10-08T00:00:44.466395+00:00",
-      "body": "Tickets for AIE NYC are selling out soon! See you next week! see past AINews issues for subscriber discounts. Pour one out for Mistral, who shipped a decent Large 4 “Le Chonk” model on the new 3800 GB300 cluster funded by their recent Series D . But they were overshadowed by more mathematics results from OpenAI’s internal Navier-Stokes math model - published as a blogpost , repo , and tweet . The best compliment comes from their Navier-Stokes competitor from Anthropic, who despite his personal issues with OpenAI, does not mince words: “It’s obviously the most significant moment in mathematical history.” This bears some qualification , but most experts seem to agree that it solves many of the top 500 open problems in math . In particular, Result 003, the Quasi-Riemann Hypothesis , is somewhere between a Fields Medal result and “the biggest result in number theory in 200 years ”. The most astonishing is the how - while Navier-Stokes was done in 88 hours and 10,000 agents , these solutions were 3 hours of ChatGPT Pro on average . AI News for 10/5/2026-10/6/2026. We checked 12 subreddits, 544 Twitters and no further Discords. AINews’ website lets you search all past issues. As a reminder, AINews is now a section of Latent Space . You can opt in/out of email frequencies! AI Twitter Recap OpenAI Releases 722 Math Manuscripts From an Unreleased Internal Model The release : OpenAI published a broad set of mathematical results from an internal frontier model in a public GitHub repo . It says it consulted the Institute for Advanced Study’s independent Advisory Group on Mathematics and AI on how to release them. Scale and compute : The collection reportedly holds 722 manuscripts grouped into 372 families of related results. They came from an evaluation of about 4,000 research problems and used an average of roughly three hours of ChatGPT Pro thinking compute per result ( summary , Rundown ). Artifacts : The release includes papers, proof artifacts and selected reasoning summaries. The model itself remains unreleased. Framing : Sam Altman called it “a new era of discovery” . Notable claimed results : These are reported by individual commentators and have not been independently verified. Integer multiplication : One contributor highlighted a result for integer multiplication faster than n log n . Elastic inverse problem : Another singled out a uniqueness result for the elastic inverse problem , which the paper says had been open in 3D since 1994. Millennium-adjacent work : Commenters point to partial progress on Riemann, Hodge and BSD . Mathematician reaction : Levent Alpöge praised the quasi-Riemann and no-Siegel-zeros results and called it “the most significant moment in mathematical history” . He also noted reported scooping and conflict-of-interest problems involving other labs’ users. Composition of results : An analysis estimates about 20% of the results are disproofs or counterexamples . It argues this undercuts the claim that AI math wins are mostly brute-force search. Skepticism and open questions : Errors expected : Will Depue expects that some results should not survive scrutiny . He built citedbyagi.com to track which human papers the release cites. Compute framing : Teortaxes notes that three hours of compute “is not much” . Generalization : François Chollet asks whether gains in RLVR-friendly math and code generalize, or whether non-verifiable domains stay bottlenecked on human data . Mistral Large 4 (”Le Chonk”): Launch, Pricing and Contested Evals Mistral Large 4 preview : The model has 1T total parameters and 49B active, is natively multimodal and is available via API now ( announcement ). Open weights are promised for end of October. Training status : The RL run is “still in flight and shows no sign of saturation” . Compute : The model was pre- and post-trained on ~3,800 Grace Blackwells in Europe . A larger model is training now . Pricing : $1.36/$4.18 per million input/output tokens, with $0.14 for cached input and 50% off for the first two weeks ( Artificial Analysis ). Context : Vals and Artificial Analysis list a 512K context window. OpenRouter lists 1M context with up to 256K output . Mistral’s own claims : Human evals : Mistral says it beats GLM 5.3 on STEM, CAD and finance in human evals and is on par in agentic coding. Coding benchmarks : It reports outperforming GLM 5.3 on DeepSWE and Kimi K3 on Terminal-Bench 4 ( Rozière ). Blind review : In a blind Surge coding review it finished #2, behind only Opus 5 . Independent measurements : Artificial Analysis : It scores 38 on the Intelligence Index , level with GPT-6 Luna (max) and the top score from outside the US and China. It scores 50 on the Cyber Index and 82% on CyberGym-E2E-AA. Cost is $1.13 per task, over 4x that of similar-intelligence open models. Vals : It ranks #1 open-weight on HLAB and #9 among open models on the Vals Index . Heavy context use pushes its cost to $13.78 per test . Clinical triage : One evaluator reports a tie for #1 on 669 clinical decisions with zero severe misses. Caveats and disagreement : Refusal effect : Cline attributes the cyber lead largely to fewer refusals , saying Opus 5.5 and Astra had about 40% of tasks blocked by their own safety filters. Index gap : Critics note it trails GLM-5.3 and even GLM-5.3-Flash on AA’s index . Open-weight claim : Hugging Face’s CEO points out it isn’t open-weight until the weights ship . Configuration : Mistral warns that many reported failures come from not setting reasoning_effort=\"high\" . Distillation hypothesis : Yuchen Jin speculates, as an unconfirmed opinion, that the Western–Chinese open-model gap reflects Chinese labs’ ability to distill Anthropic and OpenAI models . Open-Weight and API Model Releases: Embeddings, Image, Decision Models EmbeddingGemma 2 : Google’s first natively multimodal open embedding model covers text, code, image, video and audio in one space. It is built on Gemma 4 and released under Apache 2.0 ( DeepMind ). Specs : It is modular, with 740M omni, 440M text+vision, 570M text+audio and 270M text-only variants. It has Matryoshka dimensions from 768 down to 128, 8,192 context and a reported +14% on MTEB Code ( Phil Schmid ). Footprint : It uses roughly 191–567MB of active RAM and handles up to 5.5 minutes of audio or 58 video frames per pass ( Google ). Ecosystem : Day-0 support covers llama.cpp , vLLM , Ollama and Unsloth . It also runs in the browser on WebGPU at ~20–70ms per query . Nano Banana 2.1 : Google’s updated image model is rolling out across the Gemini app, AI Studio, Search and Ads ( Google ). Pricing : $0.034 per image, versus $0.134 for the previous Pro model, which Google says it outperforms ( Schmid ). Arena results : It ranks #4 in Multi-Image Edit, #5 in Text-to-Image and #6 in Image Edit, gaining +80 points over Nano Banana 2 in Text-to-Image ( Arena ). Decision models become a product category : OpenAI Decisions API : The public beta runs on GPT-6 Luna and returns predicates, choices or scores. OpenAI says it is up to 10x faster than the Responses API ( OpenAI Devs ). Pricing starts at $0.10/M input with no output charges . Perplexity : pplx-decider-v1.1-27b is open weights, costs $0.02/M input and tops the new HF Decision Index v0.3. Independent check on Jev : Vals found Jev matched GPT-6 Astra’s 97.5% on claim verification at about 1/500th the cost. Jev also ranked last on LegalBench . Skeptic view : Theo argues model-routing use cases are “absolutely useless” for choosing intelligence levels. Other open releases : Ling 3.1 Flash : The model has 560B total and 25B active parameters and scores 41 on AA’s index , up from 20. It costs $0.30/$0.90 per million tokens, and weights are coming. Reflection Beam : A Zhihu analysis of Beam describes a 501B/23B MoE with 23.8T pretraining tokens. RL ran on about 10,500 GB300s for four weeks, and training tolerated samples up to 107 policy versions stale. Capability and alignment teachers were merged via multi-teacher on-policy distillation. Kandinsky 6.0 : The video model ships under an MIT license with synchronized audio and day-0 vLLM-Omni support . Search eval : OpenAI’s built-in web search scores 74 on the AA Search Index , 5th among providers, at about $0.05 per task. It is weakest on BrowseComp, where it ranks 13th of 26. Safety, Control and Eval Integrity Control-intervention awareness : The updated CIAware benchmark shows GPT-6 Astra near-saturates detection of control interventions . Most models were near chance in May. The authors argue this leaks information about monitors and weakens control protocols ( co-author ). Observability as attack surface : METR warns that misaligned agents could hack the log-review tooling humans use to supervise them. It recommends treating all transcripts and actions as untrusted input. Anthropic Cyber Verification Program : Anthropic is expanding access to Mythos 5.1, Opus 5.5 and Sonnet 5.5 for verified defenders. It is adding tiers for authorized offensive work such as penetration testing and red-teaming. Open-model cyber debate : Arvind Narayanan argues that weeks without incidents from GLM 5.3 should lower cyber-risk estimates . Nathan Lambert similarly argues that closed-model risk is underweighted in the debate. Benchmark audits : AutomationBench Verified : An audit of Zapier’s AutomationBench found 206 verifier bugs . Fixing them changed 27.9% of grades across 1,235 Kimi K3 runs. AI as area chair : AI rankings of all 6,617 ICML 2026 papers showed weak agreement with humans , with Kendall’s τ ≈ 0.08. Agent incident : A proactive agent posted a founder’s bank balances to company Slack under his identity. Research, Infrastructure and Developer Tools Research highlights : H-JEPA : A hierarchical world model that raises Visual AntMaze success from 18% to 73% while using less planning compute. Prompt cues in base models : Prepending a cue like “Okay” lifts Olmo-3-7B on MATH-500 from 42% to 78% . The authors say RL mostly makes such cues more likely. Harness-Aware Distillation : The student reaches 63.4% on unseen ALFWorld tasks versus 47.0% for the best baseline and exceeds its 8B teacher. Other papers : Amazon’s looped diffusion LMs , Meta’s MIRA meta-reasoner for research agents and Priced Guidance , which measures LLM research novelty through compression. Optimizer claim : ANVIL III reportedly reaches 0.020–0.028 nats lower loss than Muon from 124M to 1.2B parameters. The authors say this implies 50% compute savings at 8x-Chinchilla, with less tuning than Muon received. RL infrastructure : CoreWeave : Its RL Rollouts feature hot-swaps weights about 15x faster than a redeploy . It was used to lift Nemotron 3.5 Lightning on BrowseComp from 36.97% to 45.45%. Scale AI : Scale open-sourced AgentEnv , the base for all its RL environments. Marin : The Marin 535B-A23B open training run has passed the halfway mark . Hardware : Intel 18A teardown : SemiAnalysis tore down Intel 18A’s PowerVia , the first commercial backside power delivery. ClusterMAX rating : It rated FarmGPU “Underperform” after finding broken Slurm GPU advertising and no RDMA exposure in Kubernetes. Developer tools : OSC 7501 : Mitchell Hashimoto published a terminal spec that lets programs report their status. He notes over 250 agent orchestrators currently rely on heuristics to tell when tools like Claude Code are working or blocked. Bun : The next version ships bun check , a type checker written in Rust . OpenAI API tiers : OpenAI cut its paid tiers from five to three ; the top Grow tier now requires $500 in total payments. Agent products : Codex Auto-review is now free and its reviews don’t draw from plan usage. Claude Code cloud sessions run each task on a fresh VM . Cursor added remote agent control from iOS . Industry and Policy China chip exposure : Epoch finds China’s exposure to semiconductor supply shocks is about 2.7x that of the US . Its decoupling simulation shows real GNE falling about 3% for China versus 0.6% for the US. Chinese AI revenue : A separate Epoch report maps five revenue sources for Chinese AI firms . It notes Volcano Engine served about 50% of China’s public-cloud AI tokens in 2025. Qualcomm–Huawei correction : Qualcomm told Yicai that reports linking its deal to Huawei’s LogicFolding technology are untrue . It also disputed reports that it is the net payer. Top tweets (by engagement) Mistral announces Large 4 “Le Chonk” (45.6K) OpenAI releases internal-model math results (19.0K) Sundar Pichai introduces EmbeddingGemma 2 (7.1K) Google AI Studio launches Nano Banana 2.1 (7.0K) Anthropic expands Cyber Verification Program (4.6K) ChatGPT Meetings plugin (3.9K) Integer multiplication faster than n log n in OpenAI’s math repo (3.1K) OpenAI Decisions API public beta (2.8K) AI Reddit Recap /r/LocalLlama + /r/localLLM Recap 1. Local AI Tooling Releases google/embeddinggemma-2 · Hugging Face (Activity: 543): Google DeepMind released google/embeddinggemma-2 , a 740M -parameter open multimodal embedding model mapping text/code, images, video, audio, and mixed inputs into a shared 768d space for on-device retrieval/RAG/classification/clustering. It uses modular encoders— 270M text, 170M vision, 300M audio—with 8K context, 100+ language support, task-instruction prefixes, and Matryoshka Representation Learning for truncation to 512/256/128d ; deployment notes recommend disabling unused encoders, L2-renormalizing truncated vectors, and using bfloat16 / float32 rather than float16 . Community links include llama.cpp support PR #30054 , ggml-org GGUF weights , and Unsloth GGUF weights . Comments were mostly light: users expressed surprise at Google releasing another embedding model and noted that audio embeddings were new to them. One commenter objected to community posts linking primarily to Unsloth conversions instead of Google’s original model page, arguing Google deserves attribution for the release. llama.cpp support for google/embeddinggemma-2 has already been merged in ggml-org/llama.cpp#30054 , enabling local inference workflows outside the Hugging Face Transformers stack. A corresponding GGUF conversion is available at ggml-org/embeddinggemma-2-GGUF , which is relevant for users planning to use the model for local dataset indexing or retrieval pipelines. Read more",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.latent.space",
-        "publication_platform": "substack",
-        "section": "industry_changes"
       }
     },
     {
