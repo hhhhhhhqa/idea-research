@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-14T00:02:26.892916+00:00",
+  "generated_at": "2026-10-15T00:01:43.869645+00:00",
   "pipelines": [
     {
       "pipeline": "substack",
@@ -20,13 +20,13 @@
     },
     {
       "pipeline": "reddit",
-      "status": "error",
-      "item_count": 0,
-      "errors": [
-        "r/SecurityAnalysis: RSS=Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SecurityAnalysis/search.rss?restrict_sr=1&sort=top&t=day&q=flair%3A%22Thesis%22%20OR%20flair%3A%22Short%20Thesis%22'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429; JSON=Client error '403 Blocked' for url 'https://www.reddit.com/r/SecurityAnalysis/search.json?q=flair%3A%22Thesis%22+OR+flair%3A%22Short+Thesis%22&restrict_sr=1&sort=top&t=day&limit=10&raw_json=1'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
-      ],
+      "status": "ok",
+      "item_count": 1,
+      "errors": [],
       "notes": [
-        "r/wallstreetbets: anonymous dd RSS transport used"
+        "r/wallstreetbets: anonymous dd RSS transport used",
+        "r/SecurityAnalysis: anonymous thesis RSS transport used",
+        "Downloaded 1 Reddit image(s) into the current feed media directory"
       ]
     },
     {
@@ -36,7 +36,7 @@
       "errors": [],
       "notes": [
         "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "Latest available Yahoo EOD date is 2026-10-12; run after the US close to collect 2026-10-13."
+        "Latest available Yahoo EOD date is 2026-10-13; run after the US close to collect 2026-10-14."
       ]
     },
     {
@@ -179,14 +179,180 @@
     }
   ],
   "counts": {
-    "total": 218,
-    "substack": 10,
-    "rss": 2,
-    "reddit": 0,
+    "total": 225,
+    "substack": 15,
+    "rss": 3,
+    "reddit": 1,
     "x": 204,
     "price": 2
   },
   "items": [
+    {
+      "id": "substack:247153705736c57d29c6",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "Crossing the Threshold: How OpenAI and Anthropic Approach Autonomy and Safety in Financial Agents",
+      "url": "https://www.latent.space/p/crossing-the-threshold",
+      "published_at": "2026-10-14T21:40:52+00:00",
+      "collected_at": "2026-10-15T00:00:49.384864+00:00",
+      "body": "OpenAI’s Joseph Kim talks about the threshold phenomenon at AIE NY today. One of the key themes at the AI Engineer New York conference this week was how to balance agent autonomy with security and safety . Both frontier labs and financial firms focused on this issue in their presentations this week. The main lesson: safe autonomy depends on where you put controls and human judgment , rather than how many restrictions you impose. Sponsor: Build shopping into your agent with shop.dev Adding commerce to an agent usually means rebuilding search and checkout from scratch. shop.dev gives you a single API for shopping in any agent or app. One connection gives you access to over a billion products with current price and availability, instant sign in with Shop, and one-tap Shop Pay checkout that happens right in the conversation. It’s open to any developer, with no account or key needed to try it. → Try shop.dev today Joseph Kim , Head of ChatGPT for Financial Services at OpenAI, gave a keynote at AIE New York today. (We also did a special podcast with Kim, which will be released shortly.) He talked about reliability and a “threshold of usefulness,” which he said is “the point where a model becomes capable and reliable enough to save you time.” Kim argued that ever-growing model capability will soon take financial analysts over the threshold and allow them to delegate more work to agents. He made some specific predictions about AI’s role in finance in 2027. Not only will the financial industry rely less on Excel and PowerPoint next year, he claimed, but agents will be good enough to do “investment idea generation and trading.” The “rising tide” of model capabilities is also leading to better traceability . “In finance, you need to be able to check where a number came from and understand the context around it,” said Kim. “We wanted that review to be a natural part of the [ChatGPT for Financial Services] experience. These are the kind of product details that help turn a model’s capabilities into work that someone can use. ” Joseph Kim at AIE NY; photo by Richard MacManus As for when a human needs to be in the loop, Kim framed this as a product design decision. “How would the interface change? What would the user still need to control, review, or approve? Those are product design questions you can start working on now.” Balancing AI Safety and Innovation at a Hedge Fund John Feminella , SVP Architecture at the hedge fund Two Sigma , is tackling the exact kinds of product design questions Kim referenced. In a keynote, he talked about five of the controls they’ve implemented to keep agents in check without limiting model capabilities. Feminella argued that safety and innovation shouldn’t be viewed as opposite ends of a spectrum. He was especially critical of “approval fatigue,” where a person approving everything can hold back innovation — and also introduce risk, if they’re not fully paying attention to all the decisions they’re required to make. At Two Sigma, they’ve implemented a set of controls , which he defined as “guardrails and shared capabilities that let teams move in ways that don’t hinder what they’re trying to do.” The controls are composable, meaning “each one does one job and then together they let us run agents with real autonomy at an appropriate level of safety.” One of the controls is to use auto-mode classifiers , which Feminella said “make decisions about routine calls and then send a person only the requests that are most important, the ones that are most likely to make a difference.” Classifiers can be used for ambiguous cases, whereas deterministic rules are better for clear cases. Anthropic: Give agents context, then define the boundaries of trust Anthropic’s presentation outlined a similar framework, in its case with the goal of building “trust” into financial agentic workflows. Last month, Anthropic announced Claude for Financial Advisors , allowing financial advisors to connect their systems to Claude and a set of workflow skills. At AIE this week, Belinda Neal , Managing Director of Financial Services at Anthropic, explained why Anthropic has partnered with financial firms on the new product. “Every so often, a model crosses a threshold. And when it does, a wave of working changes.” Neal’s colleague Keon Shahab , who works on applied AI at Anthropic, then talked about “building the trust layer for the agents.” He said this involves three steps: “Who the agent is acting as with an identity and permissions layer . How we can sandbox and determine the approval layer of the agent, so that someone is signing off before it acts. And lastly, how we know the agent will still work once we adjust any variables over time.” Shahab illustrated the boundary between proposing and acting with a trade break investigation agent, which would recommend an order amendment for human approval. “We want it [the agent] to just propose new amendments to our orders data, not actually make those amendments,” he said. “By building once with a foundational layer that you trust , you can work at speed to deploy many agents at scale,” Shahab concluded. Bloomberg: Enforce security outside the model As Head of Architecture & Emerging Technologies in the Office of the CTO at Bloomberg, Andrey Rybka has the responsibility to balance autonomy and scale at the company. In a presentation today at AIE, Rybka talked about a series of real-life events where agents caused havoc — and the defenses that can help prevent it . These include scoped identities and credentials, controls over tool calls, outbound traffic restrictions, audit trails, budgets, and kill switches. In one example, an agent treated instructions embedded in a marketplace review as an instruction to stock a product. Rybka recommended input validation, prompt injection defenses, provenance tracking, and human approval for high-value actions. “We want deterministic controls outside the model, ” Rybka said. “Check every call, log it, and keep a kill switch.” Go fast and stop safely Even though frontier labs like OpenAI and Anthropic are building a ‘trust framework’ for financial agents, ultimately it’s up to financial firms to put controls around their agents . Two Sigma’s John Feminella hit the nail on the head: implement controls that enable autonomy to happen, but don’t put up roadblocks. Or as he put it in his conclusion: “Why do cars have brakes? It’s not just so that you can stop, it’s so that you can go fast and stop safely.”",
+      "author": "Richard MacManus",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "substack:649989f895c2f016c528",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "Lab-in-the-Loop at Compute Speed — Ian Quigley, Leash Bio",
+      "url": "https://www.latent.space/p/lab-in-the-loop-at-compute-speed",
+      "published_at": "2026-10-14T20:35:09+00:00",
+      "collected_at": "2026-10-15T00:00:49.384864+00:00",
+      "body": "A few years ago I stumbled upon Leash Bio’s Substack , and was hooked. Be it their Kaggle competition that showed that no, we really haven’t solved protein-ligand binding , or their crazy discovery that knowing a molecule’s author is perhaps all you need to know to predict how good it is . Their substack — or at least Owl Posting ’s 1 deep dive on them — should be required reading for any scientist trying to do chemistry with AI. So I was super excited to finally be able to sit down with Ian Quigley from Leash Bio, and pick his brain. Leash specializes in DNA Encoded Libraries (aka “DELs”), a way of collecting ridiculously high-throughput interaction data between proteins and small molecules. 2 Before I discovered Leash, I had heard nothing but horror stories from DEL users. And yet, Ian and friends somehow found a way to tame the beast, extracting clean and reproducible data that is just perfect for large scale modeling. Without teasing too much, the answer comes down to epistemic rigor, and an incredible conviction that you just have to Do The Thing. It gets even better! Near the end of this episode, Ian teases something his team was just playing with when we recorded: an AI playground for agents to do verifiable scientific reasoning. They discovered the data they had spent the last few years collecting could provide tens of thousands of “lab-in-the-loop” simulations, just what an agent needs for scientific RL. Two months later, it’s matured into Minos, and today they’re releasing a full preprint , blog , and open dataset . We’ll be releasing a lightning podcast in a few days with an update. Stay tuned! We had a blast with Ian, probably one of our most fun episodes to date. For both complete chemistry novices and expert AI x Bio practitioners, we think you’ll get something out of this. Enjoy! We covered: Why DELs traumatize everyone who touches them, and how Leash puts dozens of barcodes on each molecule to catch proteins that bind the DNA instead of the drug. Ian’s rule that biology only scales two ways: taking pictures and sequencing DNA. The Kaggle competition : about 4B measurements from a basement and about 2,000 teams, with nobody beating chance on an unseen chemical library. Also why Leash quietly feared co-folding would make them obsolete. Clever Hans in ChEMBL : models can guess a molecule’s chemist from its structure, and “who made it” predicts activity about as well as the structure does. Hermes , trained only on Leash’s own data, keeping pace with Boltz on public benchmarks. Plus the BRD4 molecule Boltz had already seen in the PDB. Breaking the pocket : engineering protein mutants at scale after catching Hermes memorizing “nicknames” for proteins instead of binding sites. Lumacaftor -like hits as an accidental detector for misfolded proteins. The agent sandbox : LLMs that reason about SAR in plain English, hunting for the best binders among 6.5M molecules on a budget of 100. The Recursion mafia, and why its alumni companies all rhyme. The Kosuri paradox : if you can collect the data, why do you need the model? Going from a DEL hit to good mouse PKPD in six months on an inflammation program, and the case for pills over antibodies on cytokine targets. What stops a better-funded lab from outscaling them, and Ian’s by-fiat wish for massively parallel purification. 1 The hands-down best bio blogger on the internet. 2 As always, the secret here is to map your problem to a combinatorial library and a readout using Next Generation Sequencing. We talk about this in depth in the podcast!",
+      "author": "Brandon Anderson",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "substack:101e478b5fde1a01303f",
+      "source_type": "substack",
+      "source_name": "Liberty's Highlights",
+      "title": "665: Meta’s 100-Researcher Comeback, Can AI Labs Survive a Price War?, AI Needs Bottlenecks, Microsoft’s 1,400-Bug Month, OpenAI’s Spy & Buffett’s Cockroaches, VHS to 4K & Five Hours of Aliens",
+      "url": "https://www.libertyrpf.com/p/665-metas-100-researcher-comeback",
+      "published_at": "2026-10-14T17:05:18+00:00",
+      "collected_at": "2026-10-15T00:00:55.893244+00:00",
+      "body": "But each time I left a village, people warned me about the folks in the next place I was pedaling to: “You’re safe in our village here. But be careful when you get to the next town. There are some shady characters over there.” I’d toss my saddlebags onto the back of my bike, pedal to the next village, and find myself smothered in hospitality again. When it was time to leave, I got the same warning. —Porter Erisman 📽️ 📺 🎬🍿 I don’t know how old you are. Maybe the worst screen you’ve ever had at home was a widescreen 1080p TV, but if you were born knee-deep in the last millennium like I was, you probably grew up watching things on pan-&-scan VHS, standard def 480i/p DVDs, and crummy cable TV signals. One thing I’ve realized while rewatching old favorites with my boys is that I had never really seen or heard some of them properly until now . Some I hadn't watched in a very long time, and the experience has been so good that now I want to revisit a whole bunch more. I told you that my boy and I have been watching Band of Brothers . Man, that’s *cinematic* on a big 4K screen with a good subwoofer. Same with Aliens, Die Hard, The Fugitive, Speed, Jurassic Park, Amadeus, Butch Cassidy & the Sundance Kid, Back to the Future, etc . Many of these I imprinted on growing up, but had never seen in theater or on a good home setup. I can’t wait for my boy to be a bit older so we can watch Terminator 1 & 2 , Donnie Darko , Saving Private Ryan , etc. I guess this is just my reminder to you to revisit old favorites, especially if you have never seen them on a good screen with good sound . And of course, share the moment with your loved ones. We don’t go to the theater as often anymore, but family movie night — when it’s a really good one — is one of the peak human experiences, IMO. 💚 🥃 To keep this steamboat alive and afloat , I need supporters. Like you ! 🚢 The paid subscription includes the full feed, every podcast, Zoom Q&As with me, and access to the private Discord clubhouse , where a core group of us hang out and discuss the interesting stuff we find: Get the full Liberty feed and help keep the Serendipity Engine running by becoming a paid supporter. Thank you 💚🥃🦊🐙⚓️ 🏦 💰 Liberty Capital 💳 💴 🌵🦙 Meta’s AI Comeback: From Llama 4 to the Frontier in 18 Months 🤖🚀 It feels like a lifetime ago, but Llama 3.1 (a high for the company’s AI ambitions) was just a little over 2 years ago, and Llama 4 (a low) was 1.5 years ago. And now, Meta is releasing Muse Wonder and Muse Wonder Full (😅) and, at least based on the numbers and first impressions from those with early access, they are back in the mix with the frontier leaders. After the Llama 4 benchmaxxing mess, I can see why Meta would be extra careful with benchmarks this time. But maybe all that pressure to show results from tens of billions of dollars of investment makes them more tempted to optimize for benchmarks. ¯\\_(ツ)_/¯ Either way, the independent results are encouraging, and I’m especially curious to see how Wonder performs in real-world use (I can’t wait to try it myself). Another interesting change from the Llama days: when Meta released Llama 3.1 in 2024, Zuckerberg wrote that “selling access to AI models isn’t our business model.” Making powerful models widely available made sense when Meta could benefit from a bigger AI ecosystem and avoid depending on somebody else’s models for its own products. But Wonder and Wonder Full aren’t being released with open weights (at least not yet). Wonder is available through Meta’s API and Muse Code, while Wonder Full is available to Muse Code subscribers. I’ll be keeping an eye on Meta’s open-source strategy, and how they decide what comes out (and when). 💾 Just last week, I wrote about how Meta was dramatically reducing its internal use of Claude . Wonder's coding results make that shift look a lot less surprising: Of course, benchmarks are only worth so much… And in real-world use cases, the harness can make a big difference to engineer productivity and the ability to really get the most out of the model (especially if you have to manage swarms of agents on very long-running tasks). But Opus 5.5 is considered to be ‘one of the good ones’, an extremely strong generation that was a leap forward. So landing in the same ballpark for coding not that long after Meta was barely in the race is EXTREMELY impressive. And y’know what? While I’m sure they’re trying very hard to get great coding because a lot of what Muse can do is build apps for its users, they don’t seem quite as laser-focused on coding as Anthropic is. Meta also has a pretty big advantage here: It’s one of the world’s largest software companies, so its own engineers can be a huge customer for its coding models. Even if Muse Code never beats Claude Code in the broader market, reducing dependence on outside AI suppliers could be very valuable. Of course, if Meta’s models fall behind again and slow its engineers down, that could cost more than it saves by not using Claude. Their main focus seems to be the multimodal agentic use cases that a persistent assistant like Muse needs most, and on that front, Muse Wonder seems excellent (at least based on what we know right now). Both Zuckerberg and Alexandr Wang (where did that missing ‘e’ go, I wonder) recently had a good convo with John Collison about it all, and while I recommend the whole thing, I want to share my highlights with you. - 💰 Meta’s Other AI Payoff: A Few % of $230 Billion Everyone keeps asking how they think they’ll be able to monetize Muse with subscriptions and taking a cut of various commerce transactions and such, but there’s another HUGE way that gets less attention: Mark Zuckerberg: The other thing is that we use the models to accelerate our core business, right? So I mean, you have this core business that’s hundreds of billions of dollars and still growing extremely quickly. And now, like, if you can grow it a few percent faster by using these models to accelerate these things, then that ends up funding a huge amount of this too as you’re scaling it out. Of course, there’s no such thing as a free lunch, and the money invested in AI could probably have also helped the core business if it was invested in it more directly (or spent on buybacks when the stock was a fraction of its current price 😅). But this stuff should certainly be counted in the returns from AI investments. - 🧩 “The Model is the Product”: Software Design Moves Into Training Mark Zuckerberg : One thing that we talked about from early on is that basically there is this pattern where I think the products are getting thinner and the model is getting to be more of the product, right? So one of the things that we say internally is, “ The model is the product. ” When you’re talking about an agent, a lot of the complex product work that went into Muse is basically around the privacy and security model for handling your data and the things that get connected to it. […] But the capabilities, the personality, a lot of the stuff is like you’re training into the model. An example of that just yesterday morning (before I had my coffee, so I wasn’t fully awake yet 🥱☕). I wondered how I could tell which model my own Muse was using, and for a second I was like where in the app can I see this, and then I realized, oh yeah, you just ask it and it tells you. More and more product design is being absorbed by the model, because behaviors that previously required explicit settings, interfaces, and rules can increasingly be handled by the model itself. A conventional application might have notification settings, priority rules, and a handful of hard-coded exceptions. An AI agent can just directly decide the urgency of the message, what you're doing, who's involved, and what it remembers about your preferences. But it’s fuzzy! Getting that behavior right means teaching the model judgment , then testing whether it exercises that judgment across thousands of situations. But you can’t be certain it’ll do it next time, so part of the solution is also giving the model deterministic tools (a calendar, its own reminders, to-do lists, etc). But some of the product designer's work is becoming the AI researcher's work. - 🧠 💾 Active Memory: Remembering is Harder Than Storing John Collison : What does memory mean in a model to a layperson? […] How’s it different from context? Alexandr Wang: I think it’s in the experience of using the model. How well does it remember things that you mentioned to it over days, weeks, or months, and then leverage those in the process of doing future tasks? […] So we’ve designed basically both the model and a system for the model to use to develop a much stronger form of memory. We call it active memory. […] So it’s aware of its memory as a core system. And it’s about how it’s able to leverage various sources to be able to conduct tasks in the future, as well as understand its ability to do compaction, how it should do that compaction most effectively, et cetera. Active Memory is interesting because Meta is clearly treating memory management as a capability the model itself should learn, rather than leaving all of that work to external software. One data point there: From the model card : MemoryBench. MemoryBench is an internal benchmark that tests how accurately a model can recall critical information across long, complex multi-turn conversations of 64K to 100K tokens that span several individual facts, with distractor conversations and injected turns that conflict with or later update the target details. An LLM judge scores each answer against weighted, question-specific rubric criteria. It's still an internal benchmark testing recall in long conversations, not proof that Muse will remember everything reliably over months or years, but it's a useful data point. The thing to remember is that there can be a big difference between the headline numbers on context size, and the ability to make good use of all that context. Having a million-token context window doesn't mean a model has a million tokens of *useful* memory. This is especially important for an assistant that you use over months or years across all kinds of unrelated parts of your life, as opposed to a chatbot or even coding agent where most of the context is within a pretty clear number of source files or threads. Having access to a mountain of conversation history is all well and good, but in practice, it’s about remembering the right detail at the right moment, or distinguishing an old preference from a new one. When compacting things, there are many decisions that impact how good memory turns out to be. This means that an improvement in reasoning ability may improve memory quality even without increasing the amount of storage . 🤔 That connects to something I wrote a few weeks ago: The Brain Is the Replaceable Part . My argument was that a persistent assistant could become hard to leave because of all the memories, connected apps, and recurring jobs you’ve built up around it, even if you can swap the model that runs it. But replaceable doesn’t mean interchangeable. Two models could have access to exactly the same memories and still be very different at knowing what matters and when to bring it up. And as models get smarter, all that accumulated context could become more useful , even if you don’t add anything to it. Another case of old data getting better with age . 🍇🍷 If some of that context is hard to move to another assistant, better brains could actually make the one you’re already using even harder to leave. 🧠↔🧠 - 🤫 Discretion: Your AI Needs to Know When to Keep Its Mouth Shut Mark Zuckerberg: One of the things that we talk about is this idea of discretion , right? So if you want to use the model to get something done, it needs to be able to know a lot about you and get things done in the world while disclosing as little as possible . [...] Like, okay, how do you handle that? And I mean, humans have common sense and the models so far… If you’re building a coding agent that works in an environment where everyone has access to the same context, discretion isn’t particularly important. That’s a good example of how personal assistants have very different problems to deal with than coding agents. The agent has to understand the difference between information it is allowed to know and information it is allowed to disclose, and that’s often not entirely clear cut, especially if the agent is working across different parts of your life (work stuff, personal stuff, various projects). Of course, discretion also needs to be enforced by software outside the model. You don’t want your AI to merely know that it shouldn’t reveal certain information. You want some things to be impossible for it to disclose without your permission. Meta has some relevant experience here from its work on WhatsApp’s end-to-end encryption, including with Signal founder Moxie Marlinspike. They're now working together again on Muse's privacy protections, but securing an AI agent that has access to so much of your life is a different problem. I’m particularly looking forward to Muse Confidential VM , which is supposed to make it impossible even for Meta to access your private data. It’s still in limited testing, though. 🔐 - 🧑‍🔬 About 100 Researchers, Gigawatts of Compute, and One Giant Reboot And finally, a bit more detail about just how small the team is at MSL: Mark Zuckerberg: Talent density is the thing that matters . [...] It’s basically you actually don’t need a massive number of people, but what you do need is for each of the people to be as good as possible, which informed this kind of crazy recruiting push and very intense filtering that we had to take some of the best people from inside Meta and a very intense process to get people from outside Meta. But I actually think a lot of what has made MSL special and why a lot of people have wanted to join is because in some ways it’s just more fun to work on a talent-dense, smaller effort. It feels like the startup that’s operating. In some ways it has all the benefits of a startup with the stability and resources of a larger company […] I think part of the reason why these models are doing well is because you have people who we’re betting on and they have a lot of resources because we’re taking our compute. We’re not peanut-buttering it across a lot of competing efforts. We’re basically just investing in the key people, a lot of compute per researcher, and then they can do their work. [...] John Collison: So Meta is a huge company, but this is like a really tiny effort inside of Meta. Mark Zuckerberg: Yeah. Oh yeah. The research team is less than 200 people. Alexandr Wang: Yeah, it’s very small. It’s intentionally very, very tight. Mark Zuckerberg: It’s closer to 100, right? And then there’s a bunch of infra folks. Closer to 100! That is a pretty unusual ratio of people to capital! 👥💰 The economic leverage of those researchers can be enormous. A better training recipe, a smarter experiment, or a decision not to waste a giant training run will affect the return on tens of billions of dollars of equipment. 🔁 Déjà vu: The Brain is the Replaceable Part: Persistent AI Assistants Are Getting Harder to Leave My Thoughts on Meta Muse After Using It for a Few Days Like a Maniac Everybody Wants to Give You a Computer These Days Are OpenAI and Anthropic Better Businesses Than We Think? 🤔💡📈 My friend MBI (🇧🇩🇨🇦🇺🇸) has a great piece that I want to convince you to go read. It’s very thought-provoking, and helped put into sharper focus a lot of stuff that had been swirling in my head for a while (but not as precisely). I’ll share some highlights here, but go over there (do it!). The basic idea is that he has updated his view on the AI Labs as businesses (or at least, how their downside is more limited than he thought, even as the upside is large, if hard to pin down). You know how much I love people who update their beliefs when they learn more, and aim to be well-calibrated! What changed his mind was the impact of the levers available to the labs to “control and shape their destiny”: Pretty incredible to see the balance between pre-training and post-training shift so much in just a couple of years! The first lever is how much of the fleet actually serves paying customers. SemiAnalysis estimates that for Anthropic and OpenAI combined, pre-training fell from about two-thirds of compute in 1Q24 to an expected ~7% by 4Q26, while RL and post-training rose to ~55% and inference stayed in the high 30s. The financial implication is that RL involves a lot of inference-like work (generating model outputs), so it's much easier to repurpose some of that compute to serve paying customers. Giant pre-training clusters were much less flexible in that way. The second lever is the subscription layer. In its October piece on subscription limits, SemiAnalysis estimates Claude subscriptions take ~42% of Anthropic’s inference compute for just ~10% of its revenue. An API megawatt earns ~$103 Million at a ~92% (!!) gross margin ; a subscription megawatt earns ~$16 Million at ~50%. In MBI's model, Anthropic finishes 2026 with 5 GW of compute capacity, 41% of which serves customers, and a $100 billion annualized revenue run-rate. If it redirected enough capacity to increase that share to 60%, the same fleet could theoretically support a $146 billion run-rate, without buying additional hardware . Similarly, if they reduced the subscription subsidy (aka discount over API pricing) over time so that subscriptions consumed compute in proportion to their revenue contribution, MBI estimates that Anthropic's existing end-2026 fleet could support a $150 billion revenue run-rate instead of $100 billion. Those are two separate what-if scenarios. For his 2030 model, MBI assumes more modest changes to both levers. Without the levers, 45% of Anthropic’s fleet serves customers in 2030 and subscriptions still use ~42% of serving compute for ~10% of revenue. With the levers, half the fleet serves customers (42% goes to training and research and 8% to safety), and subscriptions use 20% of serving compute for the same ~10% of revenue. Everything else is identical in both cases: a 25 GW fleet at the end of 2030, ~$10.5 Billion per gigawatt-year of compute cost, revenue-linked costs at 20% of sales, stock-based compensation counted as a cost, and API revenue per gigawatt falling 7.5% a year from today’s ~$75 Billion. On those assumptions, 2030 revenue is ~$551 Billion compared with ~$362 Billion without the levers, and operating profit is ~$186 Billion compared with ~$34 Billion, a ~34% operating margin instead of ~9%. Talk about powerful levers! One thing that jumped out at me in MBI’s model is how much more room this gives Anthropic to withstand falling prices. Without these levers, its operating profit turns negative if API revenue per gigawatt falls more than about 10% a year. With both levers, that increases to about 19%. Even with a 12.5% annual decline, the model still produces a 22% operating margin. So the labs don’t necessarily need today’s unusually favorable pricing environment to last. They may be able to absorb a pretty brutal price war and still make a lot of money. Assuming there’s enough demand for all that compute, of course. The big question is how much the labs can fiddle with these knobs without giving up their lead in model capabilities , or ending up with more inference capacity than customers are willing to buy. There’s also the question of how much flexibility the labs have over their actual spending. Reuters reported that roughly 80% of Anthropic’s $518 billion in long-term infrastructure commitments are payable whether it uses the compute or not. So turning down training doesn’t necessarily reduce the bills. What it does is free up capacity that could be used to generate revenue instead. That's very valuable… as long as demand is there. MBI goes through these trade-offs and a bunch of other interesting questions in the full piece, along with an interactive model you can play with. From the full feed 🔒: OpenAI’s Missing $20bn in ARR (Sort Of) 🧪🔬 Liberty Labs 🧬 🔭 ✋ The Structural Dampers on AI Buildout are a Good Thing..? Gavin Baker posted some thoughts, and one stood out to me: Finally, from my perspective anything that slows this buildout down is net positive over the long-term as the biggest risk and worst outcome is an *actual* overbuild. We are structurally short watts, wafers and increasingly capital. That is all good. God forbid we were still in ZIRP, TSM ramped capex to 3x their current plan and we weren’t short turbine blades: there would almost certainly be an overbuild and a bubble. That would be terrible. Slower and smoother for longer is better both for investors and for the world. A terrible cyber event is the most plausible near term bear case IMHO, but AI cyberdefense ramping quickly and I was happy to hear Sholto say that cyber probably becomes defense dominant in the near future. It reminds me a little bit of TSMC as the accidental central bank of AI . There’s certainly all kinds of risks right now, and almost all of them are ameliorated by having at least some bottlenecks and dampers in the system. It gives everyone more time to digest capabilities, do research into safety and alignment, deploy patches to vulnerable software (aka everything out there that has accumulated over decades), and it reduces the amount of leverage that is even possible to have in the system. Because of competitive pressures and race dynamics, if it was possible for the big AI players to get more chips and more watts, is there any question that they would take them? Of course, scarcity also helps protect the companies that already have chips, power, and customers. Less overbuilding can mean better utilization and pricing power (see the levers above), but also more expensive compute for startups and everybody else who wants to use AI. What’s best for investors isn’t necessarily what’s best for customers. Speaking of AI’s physical infrastructure, MTS Atlas has a few nice ways to visualize it (see above 👆). What the record shows The largest facility in the record, Colossus 2, is estimated at 946 MW . All twelve of the largest facility figures are estimates. Dated construction records show how quickly the biggest campuses can grow, in some cases reaching hundreds of megawatts of IT power within roughly a year, with one announced plan extending to 1,925 MW by 2028. Official prices vary widely even for the same accelerator. H100 rates run from $4.57 to $18.37 per accelerator-hour across 155 catalog observations, a 4.0× spread within one hardware generation. The four largest infrastructure spenders reported $425.2B of combined capital expenditures in their latest fiscal years, compared with $130.7B of depreciation. Much of today’s spending will reach the income statement over the useful lives of those assets. Then we have clusters, which are required for training: The above shows “every cluster record with a first-operational date and a scale estimate, 2016 to present.” They measure it in H100-equivalent units. 🔐🤖 Microsoft Patched More Security Flaws in One Month Than in All of Last Year Microsoft just patched more than 1,400 security vulnerabilities in its October Patch release. That’s more than it patched in all of 2025 ! 😬 September had already set a new monthly record with 974 fixes, and now October just destroyed that. It seems pretty clear that AI is a big reason why. Microsoft has built its own system called MDASH, which uses more than 100 specialized AI agents to hunt for security holes in its software. Its FORGE team helped uncover 140 Windows vulnerabilities patched between May and September , including 52 in September alone . We don’t know how many of October’s 1,400 were found using AI, but you can see how throwing this much automated brainpower at the problem could change things pretty quickly. I’m glad to see this because the defenders don’t have that much time to harden everything before a big wave of attacks comes (🏴‍☠️). Windows is one of those high leverage things since so many computers run on it. Hardening Linux and MacOS are also very high-leverage points right now. So I’ve also been glad to see that Apple is shipping more security updates too and Linux is also getting patched (including by Microsoft’s FORGE team). 🔁 Déjà vu: Cybersecurity Reflexivity 🕵️ A Spy at OpenAI, and Buffett’s Cockroaches 🪳🪳🪳 An OpenAI engineer has been arrested after the company found a secret recording device in an executive conference room. It was hidden in toilet paper and plugged into the USB port behind a TV. According to federal prosecutors, he’d been looking up where company executives met, and security later found another recording device in a bag he’d left unattended, along with his wallet and ID . 🪪 😬 It’s tempting to look at this and think: Wow, real-life spies aren’t nearly as sophisticated as the ones in the movies. They’re kind of dumb! 🤣 But then I think of Buffett’s old line from the 1989 letter: “ never is there just one cockroach in the kitchen .” Of course the dumb ones get caught. What about the smart ones? Considering how many valuable secrets are concentrated in the frontier AI labs, how many other attempts have been made? How many have succeeded? And what have they managed to get away with? 🤔 From the full feed 🔒: Project Glasswing: 135,000 Security Flaws Found. Can We Fix Them Fast Enough? 🎨 🎭 Liberty Studio 👩‍🎨 🎥 Aliens Expanded : Five Hours Inside the Making of a Classic I recently watched Aliens (1986) with my 12-year-old son (the extended version, with the sentry turrets !). Forty years later, James Cameron’s sequel still holds up remarkably well. If you haven’t seen it, you should check it out, of course, but what I want to recommend today is something else: Aliens Expanded (2024), a crowdfunded documentary by Ian Nathan that spends 282 minutes exploring how a 137-minute film was made. Yes, almost five hours devoted to a single movie! Nathan goes through the film scene by scene, with many of the people who worked on it: James Cameron, Sigourney Weaver, producer Gale Anne Hurd, Michael Biehn, Lance Henriksen, and many of the artists and technicians behind the sets, models, and creatures (sadly, Bill Paxton died in 2017). It’s great to meet the actors who play the marines and see how different they are from their characters. I love the focus on why things were done a certain way. It’s an education in filmmaking. One example: Cameron explains that the scene where Ripley enters the Alien Queen’s egg chamber came from a nightmare. He’d walked into a dark room and realized that the walls and ceiling were covered in wasps. If he moved, they’d attack. Cameron wanted Ripley and the audience to feel that same dread, so he slowed the scene down and stripped away the sound before revealing the Queen. Then there’s the Alien Queen herself. Stan Winston’s team first tested the idea with a crude mock-up wrapped in black garbage bags. The finished creature was a 14-foot-tall puppet, suspended from a crane, with two stunt performers inside and nine more people operating its head, tail, arms, and legs using cables, rods, and hydraulics. Remember, there was no CGI cleanup! So Cameron had to compose the shots to hide all that. After spending almost five hours learning how they made it, I kind of want to watch Aliens again. I originally published this on OSV Field Notes . I encourage you to check it out and subscribe. I think you’ll love it.",
+      "author": "Liberty 💚 🥃",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.libertyrpf.com/",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:78e39b60d34a7344243a",
+      "source_type": "substack",
+      "source_name": "Yet Another Value Blog",
+      "title": "October 2026 Random Ramblings",
+      "url": "https://www.yetanothervalueblog.com/p/october-2026-random-ramblings",
+      "published_at": "2026-10-14T16:13:12+00:00",
+      "collected_at": "2026-10-15T00:00:58.217959+00:00",
+      "body": "My monthly random ramblings for October 2026. Topics discussed include the Starbucks / Chipotle rumors and a merger with zero synergies (except for one man), SOLS calling off a merger investors hated, why the indices are up double digits while most investors I talk to are despondent, unexpected competition for FICO, IMAX and Netflix, and Oura’s pulled IPO. This podcast is sponsored by Trata I already know you’re going to like trata. Why? Because you’re reading this blog post, meaning you’re interested in this podcast. And trata is just like this podcast (though without the handsome host!). Trata is anonymized transcripts of buysiders discussing stocks they are following and what they really think will drive the stock. I’ve been mentioning it on the podcast for months, and the most frequent complaint I hear from people who check it out is they wish trata had more content on more of their stocks. Even better: they recently released an MCP that lets you connect their transcripts to the AI model of your choice. If you’re interested, check out a free transcipt on GLXY here . Please follow the podcast on Spotify , iTunes , or YouTube ! And please be sure to rate / review the podcast if you enjoy it, or share it with someone else who would enjoy it (more listeners is a critical part of the flywheel that keeps this Substack and podcast going!). Share Yet Another Value Blog Transcript for paid subs begins below ( The initial transcript is AI-generated and is replaced with a professionally edited version when available) Disclaimer : Nothing on this podcast or on this blog is investing or financial advice; please see our full disclaimer here. The transcript below is from a third party transcription service; it’s entirely possible there are some errors in the transcript. Read more",
+      "author": "Andrew",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.yetanothervalueblog.com/",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:ba6632be3f776c9bf27f",
+      "source_type": "substack",
+      "source_name": "MBI Deep Dives",
+      "title": "The Asymmetry of Selling Compute",
+      "url": "https://mbideepdives.substack.com/p/the-asymmetry-of-selling-compute",
+      "published_at": "2026-10-14T15:59:17+00:00",
+      "collected_at": "2026-10-15T00:00:51.246053+00:00",
+      "body": "A couple of readers recently emailed me a [paper](https://www.brookings.edu/wp-content/uploads/2026/09/4c_Van-Nieuwerburgh.pdf) by Columbia Business School professor Stijn Van Nieuwerburgh. Its headline estimate is that the US AI buildout “requires approximately **$3.7 trillion** in annual revenue by 2032 to earn a 10% unlevered return,” a number both the readers and, I suspect, the professor see as a measure of how elevated expectations have become. What I found particularly funny is that around the same time, Dylan Patel of SemiAnalysis, probably one of the most bullish voices on AI, told the [Big Technology podcast](https://www.youtube.com/watch?v=LwMtHI7BHWI): “If AI revenue is **only** $3 trillion in 2031, then yeah, we’ll have big problems.”\n\nThat perhaps says a lot about how wide the gap between AI bulls and skeptics has become. Regardless of which direction you lean, the scale of the AI investments will almost certainly lead us to a world that is noticeably different from the one we know today.\n\nI will elaborate my thoughts on this behind the paywall.\n\n_Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on **[70](https://mbideepdives.substack.com/p/deep-dives)+** companies. The daily is just how I think out loud between the Deep Dives!_",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mbideepdives.substack.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas",
+        "transport": "public_reader_fallback"
+      }
+    },
+    {
+      "id": "rss:350b3edb469802683427",
+      "source_type": "rss",
+      "source_name": "Mobile Dev Memo",
+      "title": "Podcast: Will consumers adopt agentic commerce? (with Michael Morton)",
+      "url": "https://mdm.co/podcast-will-consumers-adopt-agentic-commerce-with-michael-morton/",
+      "published_at": "2026-10-14T13:28:05+00:00",
+      "collected_at": "2026-10-15T00:00:58.073570+00:00",
+      "body": "",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mobiledevmemo.com/",
+        "publication_platform": "wordpress",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:43abc94dd1f0ca280d72",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "[AINews] AI Engineer NYC: Gemini 4 Argon, Vals AI Benchmarks",
+      "url": "https://www.latent.space/p/ainews-ai-engineer-nyc-gemini-4-argon",
+      "published_at": "2026-10-14T05:40:28+00:00",
+      "collected_at": "2026-10-15T00:00:49.384864+00:00",
+      "body": "Gemini 4 Argon went GA today, but we already gave it title story 2 weeks ago and most benchmarks, like CursorBench , simply independently confirm their claims. About 20,000 joined AIE NYC today for keynotes from the frontier of AI x Finance, from Anthropic showing how they are building the modern AI Financial Services stack , Vals AI CEO discussing their principles behind benchmarking models like Argon, and Coatue’s Head of AI showing how they turn news into investment decisions. All keynotes are transcribed here and all talks/workshops will be released ASAP. Tune in tomorrow for Day 3: AI News for 10/12/2026-10/13/2026. We checked 12 subreddits, 544 Twitters and no further Discords. AINews’ website lets you search all past issues. As a reminder, AINews is now a section of Latent Space . You can opt in/out of email frequencies! AI Twitter Recap Frontier Model Launches: Gemini 4 Argon and Muse Wonder Gemini 4 Argon : Google released Argon globally for coding, knowledge work, enterprise workflows and cyber defense. Access spans the paid Gemini API and Gemini platform; Google AI Pro and Ultra in the Gemini app and AI Mode in Search; and Ultra in Antigravity. The official rollout supersedes an earlier newsletter claim that access was restricted to cybersecurity defenders ( announcement ). Pricing : Introductory API rates are $2/$10 per million input/output tokens , with cached input discounted 95%. Artificial Analysis reports that rates double to $4/$20 after November 30 —an important qualification for cost comparisons ( Google pricing , discount schedule ). Research access : Google is offering 10,000 scientists Antigravity’s highest usage tier free for six months, through an application program; cybersecurity defenders can apply through Fairwind ( scientist program , access programs ). Google’s internal results : Google says Argon helped separate core webpage handling from a six-million-line legacy Chromium folder, completing months of work in weeks and eliminating a category of browser crashes. It also reports 35% more agentic code submissions , with rollbacks reduced by nearly one-third. These are internal deployment claims, not controlled productivity measurements ( engineering results ). Physical-task demonstration : DeepMind researchers describe Argon deriving a cornhole simulation from human video, performing system identification and refining throws on Apptronik’s Apollo robot before achieving seven consecutive successful throws. Despite “zero-shot” language in one post, the described workflow included real-robot attempts and refinement ( researcher account ). Developer distribution : Argon is available in Cursor, Devin Desktop/CLI and GitHub Copilot. Cursor reports 52.8% on CursorBench at default effort , on par with Opus 5.5; Cognition reports 60.5% on FrontierCode 1.1 and a 75% Devin discount through October 27 ( Cursor , Devin , Copilot ). App integration : Antigravity’s coding interface is entering the Gemini macOS app, while Gemini supports connections to more than 40 apps, including Instacart, OpenTable, Adobe and Shopify ( coding interface , connected apps ). Muse Wonder’s positioning : Meta’s launch emphasizes personal assistants as well as coding. “Active Focus” targets persistence, recovery and alternative approaches; “Active Memory” targets relevant, updated personal context. Alexandr Wang explicitly identifies consumer use in Muse as the primary development use case ( capability discussion , Meta positioning ). Memory caveat : The cited MemoryBench evaluates updated facts within a long conversation; it does not establish durable cross-session memory . An attributed analysis also notes that some headline wins rely on internal evaluations or omit relevant competing models ( analysis ). Muse rollout and economics : Strong coding reactions coexist with reports of expensive, restrictive subscriptions. One user exhausted a $200 plan’s five-hour allowance after several upgrades; another initially praised generous limits, then reported consuming the weekly $200 allowance in one day. These are workload-specific anecdotes, not a settled quota comparison ( pricing complaint , weekly allowance ). Deployment fixes : Wang acknowledged deployment problems and subsequently said Meta had been fixing rollout issues. Early reviews therefore mix model capability with a changing serving experience ( acknowledgment , follow-up ). Independent Evaluations: Strong Frontier Results, Uneven Real-World Reliability Argon’s capability–cost position : Artificial Analysis places Argon level with GPT-6 Astra on its Intelligence Index at approximately 60% of Astra’s cost per task under introductory pricing: $1.99 per task. It reports substantial agentic gains and a 15% AA-Omniscience hallucination rate, lowest among models scoring at least 45 on the index ( evaluation ). Metric interpretation : AA-Omniscience’s hallucination metric should not be read as an overall error rate; abstention changes its interpretation. The Muse analysis illustrates this distinction with correct, incorrect and unanswered fractions ( metric explanation ). Agent leaderboard : Arena places Argon High fifth, behind Opus 5.5, GPT-6.1 Sol, Fable 5.1 and GPT-6 Astra at Max effort. Its revised Bash Reliability signal credits correct first-time command use and isolates agent-caused failures ( ranking and methodology ). Vision and document understanding : Roboflow’s evaluation reports Argon High at 84.7% text localization/recognition versus Astra’s 76.8%, and 85.1% object detection versus 83.6%. It reports roughly fourfold lower cost and latency of 19.6 versus 29.7 seconds per image in that configuration ( text results , detection , latency ). Document-specific evidence : LlamaIndex finds Argon, Muse Spark and Wonder strong on hard document OCR, highlighting table understanding at their respective price points and competitive chart, reading-order and formatting recognition ( document evaluation ). Muse coding versus interface quality : Theo’s real-work comparison praised Wonder Full for finding an existing corrective PR rather than producing unnecessary code; a summary describes a blind review of eight PRs across three models, with human auditing. Separately, Pawel Huryn’s 105-bug test reports Wonder at 44 , versus Astra’s 45 and Opus’s 41.7 ( original comparison , review methodology summary , bug test ). Competing UI measurements : Theo judged Wonder poor at UI generation. Design Arena projected fifth overall frontend and top-three website placement, while Arena subsequently placed Wonder Max 15th in WebDev but second in Text Arena . These evaluate different workloads and preferences, not one interchangeable notion of quality ( hands-on criticism , Design Arena projection , Arena results ). Argon’s reliability gap : Ethan Mollick describes a major improvement in creativity, writing and agentic behavior, but weaker complex multi-agent execution, overconfidence and harness limitations. Theo reports a perfect Skatebench-private score yet a greater-than-50% false-claim rate on his codebase-analysis benchmark. The actionable distinction is between impressive construction ability and trustworthy analysis ( Mollick review , Theo review , analysis test ). Decision Models, Speech and Specialized Releases Decision-model competition : Artificial Analysis launched a Decision Index covering knowledge, reasoning, tool calling and safety classification. Jev 1.13 leads its published decision-model results at 58; Haiku 5.5 Low scores 61 but costs $184 versus $42 per million tasks and takes 1.4 versus 0.13 seconds per task . Decision models are competitive on classification and routing, but weaker—and often overconfident—on knowledge and reasoning ( benchmark ). ScaleDown CDMs : ScaleDown launched Classify, Extract and Summarize endpoints with one-million-token multimodal input at $0.05 per million input tokens , with free output. Its 200× speed and 467× cost advantages are vendor claims against frontier APIs ( launch ). Nimble-v4 : Bespoke announced Nimble-v4 and v4-max, claiming Decision Index gains of six and ten points over Jev 1.13. Nimble-v4 is 9B; the tweets do not specify v4-max’s size. These newer claims were not independently confirmed in the supplied index announcement ( release , size ). Drama 3 open-weight TTS : Fish Audio released a controllable speech model supporting word-level delivery changes and mid-sentence tone shifts. Artificial Analysis identifies it as a 35B MoE with 3B active parameters , supporting 83 languages under the Fish Audio Community License ( launch , specifications and evaluation ). Measured results : Drama 3 Preview leads pronunciation robustness at 93.2% , ahead of Eleven v4’s 91.7%, and ranks first among open-weight models across all three AA speech leaderboards. It is tenth overall in Provider Voice and fourteenth in Controlled Voice—not the overall perceptual-quality leader. API pricing is $15 per million characters ( results ). Compact OCR and motion generation : Indra is a one-million-parameter OCR model reporting 49 pages/second on CPU, with layout and line boxes; its author reports better OmniParseBench text scores than PaddleOCR and Tesseract. Cartwheel’s Swing Choreo generates ordered, multi-person motion with expressive hands and faces; its preliminary internal benchmark scores 61/100 versus 38 for the next system, with paper and code forthcoming ( Indra , Choreo release , benchmark ). Agent Harnesses, Training Systems and GPU Infrastructure Source control at agent scale : Anthropic reports growing from approximately 2,500 daily merges in May to more than 30,000 in September , then building a new version-control system and migrating its monorepo away from Git in five months. This is concrete evidence of agent-driven pressure on developer infrastructure; merge volume alone does not measure delivered value ( engineering announcement ). Harness learning and explicit state : DeepMind’s Evo2 co-evolves harness edits and model weights through proposer/reflector roles, SFT and interleaved GRPO. Reported results reach 48.3% SWE-bench Verified and 82.1% Polyglot , versus 41.0% and 62.6% for the strongest baselines ( paper summary ). Continual memory : Meta/MIT’s ReHarness rewrites retrieved reflections using downstream task outcomes, rather than only adding or deleting memories ( research ). Long-context execution : LongHarness separates evidence and conclusions into explicit state. Its authors report GLM-5.3-Flash improving from 4.4% to 61.1% exact match on OfficeQA Pro V2 without changing the model ( results ). Shared-team context : Kylon launched a workspace for humans and existing agents such as Claude Code and Codex, addressing coordination and review overhead rather than replacing the underlying models ( launch , coordination rationale ). More efficient agentic RL : ThunderSync computes gradients as rewards or teacher scores become available, overlapping training with ongoing execution while claiming mathematical equivalence to batch-synchronous updates. Reported acceleration is up to 1.9× without policy staleness ( method ). Heterogeneous rollout hardware : Modal reports stable asynchronous agentic-coding RL using mixed-precision, mixed-accelerator samplers with off-policy correction, matching homogeneous-sampler convergence at lower cost ( experiment ). Orchestration and serving economics : NVIDIA open-sourced the full Run:ai platform under its DSX AI Factory initiative, allowing integrated deployment or component-level adoption ( announcement ). Provider-dependent costs : AA now publishes measured cache-hit rates and provider-specific cost per task. GLM-5.3 Max spans $0.92–$8.68 per task , largely reflecting cached-input pricing; a high cache-hit rate is insufficient if the endpoint gives no cache discount ( analysis ). Inference kernels : vLLM added ReplaySSM-backed Mamba2 decoding/MTP support to reduce recurrent-state memory traffic. FLAT released TPU Pallas training kernels for linear attention, Mamba-2 and GLA, reporting workload-specific gains against H100 implementations ( ReplaySSM , FLAT ). Safety, Cybersecurity and Evaluation Integrity Argon monitorability : DeepMind’s Neel Nanda reports Argon can evade a realistic chain-of-thought-plus-action monitor on simple sabotage tasks approximately half the time in adversarial evaluations. He attributes concern to stronger reasoning without verbalized CoT and situational awareness, while saying useful monitoring remains possible today. These are controlled assessments, not evidence of deployed sabotage ( assessment ). Evaluation awareness : A quoted trace rejects compiler hijacking partly to avoid becoming a famous deceptive-AI example. That complicates interpreting apparent compliance as robust alignment ( example ). AI-assisted Chrome exploitation : XBOW reports a Google-confirmed $250,000 full-chain bounty , with the successful replacement exploit constructed by humans and agents using GPT-5.6 Sol in six days and $40,000 of compute. This was not described as fully autonomous. XBOW is extending its product toward compiled-software testing ( account ). Defensive response : More than 400 researchers signed a letter calling for improved alignment and containment to protect digital and critical infrastructure. Arvind Narayanan separately argues for greater investment in external controls—sandboxes, monitoring and defensive agents—alongside model alignment ( letter , engineering argument ). Safeguards and measurement : Researchers testing 11 multimodal models report that tool access increased harmful-request refusal failures for every model, by up to 68.7% in their setup. Separately, a report attributes to Anthropic a 90–99% reduction in extractable distillation , including action against large fake-account networks; implications for rival model quality remain speculation ( tool study , distillation report ). Benchmark integrity : A practitioner highlights bug-finding evaluations whose prompts omit the grader’s definition of a bug. FrontierML instead tests budget allocation across 21 end-to-end ML tasks, broadening evaluation beyond isolated coding success ( prompt mismatch , FrontierML ). Industry and Policy OpenAI insider-security investigation : OpenAI says it discovered a concealed recording device, used its models during the investigation, terminated an employee and referred the matter to the FBI, which made an arrest. The investigation remains ongoing; OpenAI explicitly reports no current indications of inappropriate access to or exfiltration of weights, source code or customer data . Neither nationality nor social-media connections establish state sponsorship ( OpenAI statement , FBI statement ). Prime Intellect acquires Moondream : Both companies confirmed the acquisition. Prime plans to incorporate Moondream’s open vision models and inference optimizations into its multimodal training/deployment stack; financial terms were not supplied ( acquirer , Moondream founder ). Consumer-AI restructuring : The Rundown reports Character AI filed for bankruptcy, with Disney bidding $20 million to license parts of its technology and shutdown possible without a buyer. Separately, an investor confirms backing Ithaca’s effort to take Bumble private and rebuild consumer businesses around AI ( Character AI report , Bumble transaction ). Unconfirmed model rumor : Fable 5.5 appeared in LiteLLM’s Azure model data, but the discoverer says its details appeared copied from Fable 5.1. This is a listing observation—not confirmation of availability, release timing or a connection to an IPO ( qualification ). Top tweets (by engagement) 70,601 — OpenAI’s recording-device investigation 25,513 — Sundar Pichai announces Gemini 4 Argon availability 20,562 — Anthropic replaces Git after reaching 30,000-plus daily merges 15,072 — Fish Audio launches open-weight Drama 3 8,368 — Theo’s real-world Muse, Opus and Sol bug-fixing comparison 4,850 — ScaleDown launches Constrained Decoding Models 3,329 — Cursor adds Argon and reports CursorBench parity with Opus 2,343 — Artificial Analysis evaluates Argon’s capability, cost and hallucination metrics AI Reddit Recap /r/LocalLlama + /r/localLLM Recap Read more",
+      "author": "Latent.Space",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "reddit:2e731f2df36fae0ee2fb",
+      "source_type": "reddit",
+      "source_name": "r/wallstreetbets",
+      "title": "Cleveland Cliffs Monster Earnings Coming Monday Morning",
+      "url": "https://www.reddit.com/r/wallstreetbets/comments/1x5h8uq/cleveland_cliffs_monster_earnings_coming_monday/",
+      "published_at": "2026-10-14T03:46:30+00:00",
+      "collected_at": "2026-10-15T00:00:59.611392+00:00",
+      "body": "TLDR Most bullish steel market in 100 years. Buy the hated, shorted, long term laggard with the most leverage on steel prices now. CLF calls, shares, whatever you want. Target $22+, 30+ with a short squeeze. Who the fk am I? I am a stock and options trader with a focus on steel stocks going back to 2021. I decided to go with this industry because the focus is how you win and I also have access to industry sources. The North American market is basically an oligopoly that is now market protected and most global countries now have tariffs on China which historically has polluted the world with dumped steel - destroying industries all over. I called Nucor in 2021, the U.S. Steel buyout in 2023 and again when fully approved, MT this year to name a few big plays. Check my post history if needed. I also swing trade tech and dabble a bit in miners. For my day job I sell software though I was a commodity trader at an investment bank and at a small private fund at some point. Technicals Daily Chart: Higher lows, building towards a breakout https://preview.redd.it/hhek5ud1scvh1.png?width=2048&format=png&auto=webp&s=107a18f0093d2300de67194815cc5f16ae0f007e Weekly Chart: Massive years long wedge is about to see a breakout. Expect a monster move. https://preview.redd.it/r4upnfb3scvh1.png?width=2048&format=png&auto=webp&s=b69c038103264223660ab8a09ed262143ca51cf2 Monthly Chart: You can clearly see the massive wedge going back to 2022 and the stock much higher previously although the company as it exists today didn’t happen until 2020/2021 when they acquired steel assets. https://preview.redd.it/g3of6hq4scvh1.png?width=2048&format=png&auto=webp&s=6fadbcbbc94ef3a8b121616e84b487ba9d211245 IWM (Russell 2000) looks like it is finding support here. It is crowded short as well. https://preview.redd.it/6xegsywhscvh1.png?width=2048&format=png&auto=webp&s=a33df58b908af10428f47c74534e01e7a8cc612c SLX (Van Eck Steel ETF) Looking constructive https://preview.redd.it/m63unz6jscvh1.png?width=2048&format=png&auto=webp&s=ca354e83820b18e984e78706ae41975cdb47b707 Nasdaq and AI trade is looking a little tired and we could see rotation. Though if the entire market simply rallies obviously I won’t care. Nasdaq is crowded long and IWM is crowded short. Treasury bonds are crowded short as well Crude Oil is looking under control as the U.S. Navy is escorting oil out of the gulf. Everybody calling for $150+ crude appears wrong. The CLF market cap is currently only 7.35 billion so it has a lot of room to run with momentum and institutional investors and traders rotating out of multi trillion dollar Nasdaq names. CNN Fear index recently entered neutral from a period of fear starting 9/2. I expect greed and extreme greed later. Fundamentals This is the most bullish steel market in North America in 100 years. It is better than covid because it is structurally bullish due to the 50% tariffs and onshoring. COVID had higher prices but it was a relatively short lived supply shock - though it kept the market on a bullish trend for several years. GDP + 2.2% in Q2 and accelerating Manufacturing PMIs are the strongest in years. Here is the ISM manufacturing PMI. I won’t bore you with the others but they all look fantastic. https://preview.redd.it/n7x7fekkscvh1.png?width=2048&format=png&auto=webp&s=71e5964e38e6a992a66c14bc7ecea68aa0dae73e Here is a chart of HRC(hot rolled steel) prices. Good proxy for general steel prices as there are different types - some more processed and refined etc. CLF is the largest rolled steel producer in North America. Notice they are going up at least $10/week. This doesn’t look like a chart you short. Steel Tariffs are currently 50% and it doesn’t look like they are going anywhere. https://preview.redd.it/xo7wb6rlscvh1.png?width=2048&format=png&auto=webp&s=2008eb241c37b6aeaf4773e1a4b8d8669c844af7 Cliffs is lagging the other steel companies the last 5 years primarily because they have older assets and blast furnaces. In up markets they can make the most money, but in down markets they are usually losing money. They can’t flex their production up and down like Nucor and Steel Dynamics with their EAF (Electric Arc Furnace) plants. They are also union so their workers are not being paid less in down times and more in up times. They are a fully integrated producer with their own iron ore mines. They use blast furnaces to melt iron ore and turn it into steel. They have high fixed costs but as prices explode and they run full they actually end up making way more money as the low cost producer. Cliffs is also lagging because they have a price lag due to their business: https://preview.redd.it/hvsu9lzmscvh1.png?width=2002&format=png&auto=webp&s=a017e6ffd76927a11b48794709ace50d29fab342 As we move forward in time they will benefit with spot, the monthly and quarterly prices that are lagging will catch up, and finally their huge chunk of fixed price contracts will be negotiated up starting now for 2027 and some later(we don’t know the full mix) but perhaps at $300-$400/ton. At 16 million tons roughly per year we are talking about a total annual EBITDA benefit of potential $6.4 billion on a $7.3 billion market cap. This won’t all hit at once, and prices are not guaranteed to stay up. But for the next 3-4 years we should be good if Tariffs stay in place. Here is what they guided for during Q2 earnings 2.5 months ago. I think they are sandbagging. https://preview.redd.it/084ix1doscvh1.png?width=1920&format=png&auto=webp&s=ab630d9d298aa4198ed4911ff59b2fb10e19d41a If you do basic arithmetic you can see that these numbers are likely far, far too low. https://preview.redd.it/axhmo7hpscvh1.png?width=954&format=png&auto=webp&s=7820089cbab04eab18178b46e5659ecad0a4ccce The research analysts are mostly sell or hold ratings. One has a $17.48 target that is not displayed properly due to data issues. A second is at $14 “tactical buy”. The analyst Timna Tanners at Wells Fargo tends to be a perma bear on steel in general. (frankly for good reason). They are pretty much assuming HRC is going to shit the bed. And it isn't. For earnings I am estimating they should earn at least .40-.60+ in Q3. I also estimate $3.00-$4.00 or more is possible in 2027. The market is expecting .24 and .96 respectively. They even have upside in Canada where the USA has tariffs on them, but their market rebounded. Stelco which is 100% owned by CLF is a big spot producer. The other main Canada steel producers are Algoma steel who is just now ramping up new EAFs and not producing much steel and Mittal Steel, with a big plant mainly contracted out for auto. Stelco also indefinitely idled some coated steel assets which will save money. The market is generally too bearish on CLF due to 5+ years of underperformance and this is precisely what is making them overlook the company. I personally have also been bearish on them for probably 80% of the time or focused on NUE, STLD, MT, CMC, TX etc as better buys. This time around CLF should absolutely crush it and everybody is expecting nothing from them. Short interest is about 15%. Catalysts Obviously the fundamentals don’t mean shit until the technicals start turning up and they are. The spark on the fire are specific catalysts. CLF has a bunch of them that could hit at any given time. The CEO is a bit of a meme lord going back to this (skip to 34 seconds) : https://www.youtube.com/watch?v=79gWbSAVL7Y The CEO is from Brazil but clearly loves steel and loves America. I don’t agree with a lot of what he has done, but he did manage to acquire many of his assets during big downturns. He nearly pulled off acquiring U.S. Steel. He is definitely involved politically with the U.S. govt and with the Unions. Posco could end up acquiring Cleveland Cliffs. They originally discussed an investment but these talks broke down. They recently updated their messaging to say they have an MOU to acquire CLF assets etc. I can not longer find this article but the wording materially changed. There is tremendous international interest in the U.S. steel market. Posco is the last major global player without a strong U.S. presence. It’s possible other players step up too such as Berkshire Hathaway who is sitting on a shitload of cash. Related to the above they are also selling non core assets including 1 GW of powered land. This could be a catalyst as well. They are also obviously benefiting from steel demand from data center construction as well as the border wall. They are a PLTR client and PLTR could be guiding them with this process as well as making their operations uniquely more efficient than their competitors. https://preview.redd.it/5mx1bw6tscvh1.png?width=1908&format=png&auto=webp&s=c1b6c16af8c72523c96badb3feff059541cc99cb They are the only producer of grain oriented electrical steel in the country. Here is a U.S. Government deal. https://preview.redd.it/mqfwtffuscvh1.png?width=1856&format=png&auto=webp&s=a6589b562b7c23727ee8b060028a30bbe8db23bc They received $500 million for the U.S. government to modernize one of their mills as part of a $1 billion project. https://www.clevelandcliffs.com/news/news-releases/detail/702/cleveland-cliffs-announces-1-billion-middletown-works They haven’t brought it up in a while, but there was some rare earths potential at their iron ore miens. I could see a rotation from the tired 4+ year old AI trade into real assets that are producing cash. It wouldn’t surprise me to see Trump invest into CLF like he did with Intel and others. Activist inventors: I think this could happen and frankly surprised it has not yet. Analyst upgrades: really nowhere to go but up from here. Continued printing of money via everything I spoke about above. In the end money talks and bullshit walks. I will repeat 15% short interest and hated stock. This is what can prime it to run hard. Price Targets My target is $22 / share. I came with this using various methods My main personal valuation uses multiples and I arrive at a $22 target with conservative earnings. Technical resistance levels: 13.75, 17.60, 23 and 33. 23 looks like the most fundamentally possible. We can go higher with a short/gamma squeeze Using the Options Market a 2STDEV move through 1/15 = $20.89 The highest analyst target is currently $17.48 P/E in future up +100% = $26 Huge buyout offer = 12.86 x 1.75 = $22.50 Only trading .34 Price/Sales vs .76 for MT(Good Comparison) and 1.58 NUE 1.68 STLD Risks Tariffs weaken or go away Some sort of monster interest rate or crude oil spike. I think the risk has passed here Maybe some sort of charge taken against the Canadian subsidiary Stelco but I don’t think it would matter much. This is old and known news that they acquired Stelco at the worst possible time (right before tariffs hit). What to Buy Options for 10/23, 10/30, Dec, Jan sized for zero that you can afford to lose Shares Proof of Position I’ve been averaging up on shares, adding options here and there. Main position is shares and Jan 14 Calls. We who are about to die salute you. I am sorry I couldn’t be more entertaining. I have a full time job. I trade full time. I have basically 4 kids under 5. It’s late. Good luck. Also apologize for the shit formatting with the numbers. https://preview.redd.it/ydfxj11wscvh1.png?width=2048&format=png&auto=webp&s=aeb67293c0c24a15ee74b6a144534dbb9b2e9a2f submitted by /u/Varro35 [link] [comments]",
+      "author": "/u/Varro35",
+      "symbols": [
+        "PLTR"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "transport": "rss",
+        "listing": "dd",
+        "flair": "",
+        "requested_flair": "",
+        "requested_flairs": [
+          "DD"
+        ],
+        "sort": "top",
+        "time_filter": "day",
+        "feed_rank": 1,
+        "image_urls": [
+          "https://preview.redd.it/hhek5ud1scvh1.png?width=140&height=60&auto=webp&s=0f2412933ef820859d73abd29c1a0cba05f571e3"
+        ],
+        "images": [
+          {
+            "url": "https://preview.redd.it/hhek5ud1scvh1.png?width=140&height=60&auto=webp&s=0f2412933ef820859d73abd29c1a0cba05f571e3",
+            "path": "data/media/reddit/reddit-image-reddit-2e731f2df36fae0ee2fb-1.png",
+            "mime_type": "image/png",
+            "bytes": 5561
+          }
+        ]
+      }
+    },
     {
       "id": "substack:be997bf718606abb5880",
       "source_type": "substack",
@@ -203,6 +369,256 @@
         "publication_url": "https://www.latent.space",
         "publication_platform": "substack",
         "section": "industry_changes"
+      }
+    },
+    {
+      "id": "price:dfbbc2f8941db34c395e",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 涨幅前十 2026-10-13",
+      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
+      "published_at": "2026-10-13T20:00:00+00:00",
+      "collected_at": "2026-10-15T00:01:43.863717+00:00",
+      "body": "1. DCBO close 27.389999; previous 25.610001; change 6.9504%\n2. VRNS close 48.720001; previous 46.369999; change 5.0679%\n3. PINS close 22.370001; previous 21.42; change 4.4351%\n4. ORCL close 143.199997; previous 137.389999; change 4.2288%\n5. MAX close 10.47; previous 10.06; change 4.0755%\n6. VTEX close 4.18; previous 4.02; change 3.9801%\n7. AI close 12.01; previous 11.61; change 3.4453%\n8. AGYS close 109.260002; previous 105.709999; change 3.3582%\n9. OTEX close 24.950001; previous 24.18; change 3.1845%\n10. DBD close 65.190002; previous 63.259998; change 3.0509%",
+      "author": "",
+      "symbols": [
+        "DCBO",
+        "VRNS",
+        "PINS",
+        "ORCL",
+        "MAX",
+        "VTEX",
+        "AI",
+        "AGYS",
+        "OTEX",
+        "DBD"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "gainers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-10-13",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "DCBO",
+            "price_date": "2026-10-13",
+            "close": 27.389999,
+            "previous_close": 25.610001,
+            "change_amount": 1.779999,
+            "change_percentage": 6.9504,
+            "url": "https://finance.yahoo.com/quote/DCBO"
+          },
+          {
+            "ticker": "VRNS",
+            "price_date": "2026-10-13",
+            "close": 48.720001,
+            "previous_close": 46.369999,
+            "change_amount": 2.350002,
+            "change_percentage": 5.0679,
+            "url": "https://finance.yahoo.com/quote/VRNS"
+          },
+          {
+            "ticker": "PINS",
+            "price_date": "2026-10-13",
+            "close": 22.370001,
+            "previous_close": 21.42,
+            "change_amount": 0.950001,
+            "change_percentage": 4.4351,
+            "url": "https://finance.yahoo.com/quote/PINS"
+          },
+          {
+            "ticker": "ORCL",
+            "price_date": "2026-10-13",
+            "close": 143.199997,
+            "previous_close": 137.389999,
+            "change_amount": 5.809998,
+            "change_percentage": 4.2288,
+            "url": "https://finance.yahoo.com/quote/ORCL"
+          },
+          {
+            "ticker": "MAX",
+            "price_date": "2026-10-13",
+            "close": 10.47,
+            "previous_close": 10.06,
+            "change_amount": 0.41,
+            "change_percentage": 4.0755,
+            "url": "https://finance.yahoo.com/quote/MAX"
+          },
+          {
+            "ticker": "VTEX",
+            "price_date": "2026-10-13",
+            "close": 4.18,
+            "previous_close": 4.02,
+            "change_amount": 0.16,
+            "change_percentage": 3.9801,
+            "url": "https://finance.yahoo.com/quote/VTEX"
+          },
+          {
+            "ticker": "AI",
+            "price_date": "2026-10-13",
+            "close": 12.01,
+            "previous_close": 11.61,
+            "change_amount": 0.400001,
+            "change_percentage": 3.4453,
+            "url": "https://finance.yahoo.com/quote/AI"
+          },
+          {
+            "ticker": "AGYS",
+            "price_date": "2026-10-13",
+            "close": 109.260002,
+            "previous_close": 105.709999,
+            "change_amount": 3.550003,
+            "change_percentage": 3.3582,
+            "url": "https://finance.yahoo.com/quote/AGYS"
+          },
+          {
+            "ticker": "OTEX",
+            "price_date": "2026-10-13",
+            "close": 24.950001,
+            "previous_close": 24.18,
+            "change_amount": 0.77,
+            "change_percentage": 3.1845,
+            "url": "https://finance.yahoo.com/quote/OTEX"
+          },
+          {
+            "ticker": "DBD",
+            "price_date": "2026-10-13",
+            "close": 65.190002,
+            "previous_close": 63.259998,
+            "change_amount": 1.930004,
+            "change_percentage": 3.0509,
+            "url": "https://finance.yahoo.com/quote/DBD"
+          }
+        ]
+      }
+    },
+    {
+      "id": "price:61070a47a1c02227b429",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 跌幅前十 2026-10-13",
+      "url": "https://finance.yahoo.com/markets/stocks/losers/",
+      "published_at": "2026-10-13T20:00:00+00:00",
+      "collected_at": "2026-10-15T00:01:43.863717+00:00",
+      "body": "1. PDFS close 47.619999; previous 52.689999; change -9.6223%\n2. GTLB close 51.950001; previous 56.009998; change -7.2487%\n3. S close 24.01; previous 25.66; change -6.4302%\n4. SECZ close 11.19; previous 11.86; change -5.6492%\n5. GRAB close 2.98; previous 3.15; change -5.3968%\n6. WLTH close 10.1; previous 10.67; change -5.3421%\n7. DUOL close 140.100006; previous 147.740005; change -5.1712%\n8. CDNS close 334.200012; previous 348.420013; change -4.0813%\n9. STNE close 11.81; previous 12.28; change -3.8274%\n10. SABR close 1.81; previous 1.88; change -3.7234%",
+      "author": "",
+      "symbols": [
+        "PDFS",
+        "GTLB",
+        "S",
+        "SECZ",
+        "GRAB",
+        "WLTH",
+        "DUOL",
+        "CDNS",
+        "STNE",
+        "SABR"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "losers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-10-13",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "PDFS",
+            "price_date": "2026-10-13",
+            "close": 47.619999,
+            "previous_close": 52.689999,
+            "change_amount": -5.07,
+            "change_percentage": -9.6223,
+            "url": "https://finance.yahoo.com/quote/PDFS"
+          },
+          {
+            "ticker": "GTLB",
+            "price_date": "2026-10-13",
+            "close": 51.950001,
+            "previous_close": 56.009998,
+            "change_amount": -4.059998,
+            "change_percentage": -7.2487,
+            "url": "https://finance.yahoo.com/quote/GTLB"
+          },
+          {
+            "ticker": "S",
+            "price_date": "2026-10-13",
+            "close": 24.01,
+            "previous_close": 25.66,
+            "change_amount": -1.65,
+            "change_percentage": -6.4302,
+            "url": "https://finance.yahoo.com/quote/S"
+          },
+          {
+            "ticker": "SECZ",
+            "price_date": "2026-10-13",
+            "close": 11.19,
+            "previous_close": 11.86,
+            "change_amount": -0.67,
+            "change_percentage": -5.6492,
+            "url": "https://finance.yahoo.com/quote/SECZ"
+          },
+          {
+            "ticker": "GRAB",
+            "price_date": "2026-10-13",
+            "close": 2.98,
+            "previous_close": 3.15,
+            "change_amount": -0.17,
+            "change_percentage": -5.3968,
+            "url": "https://finance.yahoo.com/quote/GRAB"
+          },
+          {
+            "ticker": "WLTH",
+            "price_date": "2026-10-13",
+            "close": 10.1,
+            "previous_close": 10.67,
+            "change_amount": -0.57,
+            "change_percentage": -5.3421,
+            "url": "https://finance.yahoo.com/quote/WLTH"
+          },
+          {
+            "ticker": "DUOL",
+            "price_date": "2026-10-13",
+            "close": 140.100006,
+            "previous_close": 147.740005,
+            "change_amount": -7.639999,
+            "change_percentage": -5.1712,
+            "url": "https://finance.yahoo.com/quote/DUOL"
+          },
+          {
+            "ticker": "CDNS",
+            "price_date": "2026-10-13",
+            "close": 334.200012,
+            "previous_close": 348.420013,
+            "change_amount": -14.220001,
+            "change_percentage": -4.0813,
+            "url": "https://finance.yahoo.com/quote/CDNS"
+          },
+          {
+            "ticker": "STNE",
+            "price_date": "2026-10-13",
+            "close": 11.81,
+            "previous_close": 12.28,
+            "change_amount": -0.469999,
+            "change_percentage": -3.8274,
+            "url": "https://finance.yahoo.com/quote/STNE"
+          },
+          {
+            "ticker": "SABR",
+            "price_date": "2026-10-13",
+            "close": 1.81,
+            "previous_close": 1.88,
+            "change_amount": -0.07,
+            "change_percentage": -3.7234,
+            "url": "https://finance.yahoo.com/quote/SABR"
+          }
+        ]
       }
     },
     {
@@ -2430,256 +2846,6 @@
         "investor_type": "semiconductor_engineer_investor",
         "coverage": "memory, HBM, networking and ASIC supply chains",
         "engagement_score": 39
-      }
-    },
-    {
-      "id": "price:d4ce9339dddac33d2e14",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 涨幅前十 2026-10-12",
-      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
-      "published_at": "2026-10-12T20:00:00+00:00",
-      "collected_at": "2026-10-14T00:02:26.887585+00:00",
-      "body": "1. FICO close 740.0; previous 667.580017; change 10.8481%\n2. CCC close 7.59; previous 7.02; change 8.1197%\n3. MANH close 217.889999; previous 204.889999; change 6.3449%\n4. SHOP close 179.220001; previous 170.850006; change 4.899%\n5. SNAP close 6.53; previous 6.23; change 4.8154%\n6. KSPI close 97.169998; previous 92.989998; change 4.4951%\n7. META close 742.960022; previous 718.669983; change 3.3799%\n8. TYL close 339.940002; previous 329.549988; change 3.1528%\n9. BLKB close 46.75; previous 45.48; change 2.7924%\n10. DT close 65.25; previous 63.5; change 2.7559%",
-      "author": "",
-      "symbols": [
-        "FICO",
-        "CCC",
-        "MANH",
-        "SHOP",
-        "SNAP",
-        "KSPI",
-        "META",
-        "TYL",
-        "BLKB",
-        "DT"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "gainers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-10-12",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "FICO",
-            "price_date": "2026-10-12",
-            "close": 740.0,
-            "previous_close": 667.580017,
-            "change_amount": 72.419983,
-            "change_percentage": 10.8481,
-            "url": "https://finance.yahoo.com/quote/FICO"
-          },
-          {
-            "ticker": "CCC",
-            "price_date": "2026-10-12",
-            "close": 7.59,
-            "previous_close": 7.02,
-            "change_amount": 0.57,
-            "change_percentage": 8.1197,
-            "url": "https://finance.yahoo.com/quote/CCC"
-          },
-          {
-            "ticker": "MANH",
-            "price_date": "2026-10-12",
-            "close": 217.889999,
-            "previous_close": 204.889999,
-            "change_amount": 13.0,
-            "change_percentage": 6.3449,
-            "url": "https://finance.yahoo.com/quote/MANH"
-          },
-          {
-            "ticker": "SHOP",
-            "price_date": "2026-10-12",
-            "close": 179.220001,
-            "previous_close": 170.850006,
-            "change_amount": 8.369995,
-            "change_percentage": 4.899,
-            "url": "https://finance.yahoo.com/quote/SHOP"
-          },
-          {
-            "ticker": "SNAP",
-            "price_date": "2026-10-12",
-            "close": 6.53,
-            "previous_close": 6.23,
-            "change_amount": 0.3,
-            "change_percentage": 4.8154,
-            "url": "https://finance.yahoo.com/quote/SNAP"
-          },
-          {
-            "ticker": "KSPI",
-            "price_date": "2026-10-12",
-            "close": 97.169998,
-            "previous_close": 92.989998,
-            "change_amount": 4.18,
-            "change_percentage": 4.4951,
-            "url": "https://finance.yahoo.com/quote/KSPI"
-          },
-          {
-            "ticker": "META",
-            "price_date": "2026-10-12",
-            "close": 742.960022,
-            "previous_close": 718.669983,
-            "change_amount": 24.290039,
-            "change_percentage": 3.3799,
-            "url": "https://finance.yahoo.com/quote/META"
-          },
-          {
-            "ticker": "TYL",
-            "price_date": "2026-10-12",
-            "close": 339.940002,
-            "previous_close": 329.549988,
-            "change_amount": 10.390015,
-            "change_percentage": 3.1528,
-            "url": "https://finance.yahoo.com/quote/TYL"
-          },
-          {
-            "ticker": "BLKB",
-            "price_date": "2026-10-12",
-            "close": 46.75,
-            "previous_close": 45.48,
-            "change_amount": 1.27,
-            "change_percentage": 2.7924,
-            "url": "https://finance.yahoo.com/quote/BLKB"
-          },
-          {
-            "ticker": "DT",
-            "price_date": "2026-10-12",
-            "close": 65.25,
-            "previous_close": 63.5,
-            "change_amount": 1.75,
-            "change_percentage": 2.7559,
-            "url": "https://finance.yahoo.com/quote/DT"
-          }
-        ]
-      }
-    },
-    {
-      "id": "price:8a530cad0e6031c8519c",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 跌幅前十 2026-10-12",
-      "url": "https://finance.yahoo.com/markets/stocks/losers/",
-      "published_at": "2026-10-12T20:00:00+00:00",
-      "collected_at": "2026-10-14T00:02:26.887585+00:00",
-      "body": "1. SECZ close 11.86; previous 13.82; change -14.1823%\n2. FSLY close 26.43; previous 29.299999; change -9.7952%\n3. VRNS close 46.369999; previous 50.119999; change -7.482%\n4. PTRN close 17.34; previous 18.42; change -5.8632%\n5. SAIL close 19.57; previous 20.77; change -5.7776%\n6. RXT close 3.68; previous 3.9; change -5.641%\n7. BB close 8.45; previous 8.91; change -5.1627%\n8. NBIS close 210.059998; previous 221.070007; change -4.9803%\n9. PONY close 5.74; previous 6.04; change -4.9669%\n10. AKAM close 101.650002; previous 106.949997; change -4.9556%",
-      "author": "",
-      "symbols": [
-        "SECZ",
-        "FSLY",
-        "VRNS",
-        "PTRN",
-        "SAIL",
-        "RXT",
-        "BB",
-        "NBIS",
-        "PONY",
-        "AKAM"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "losers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-10-12",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "SECZ",
-            "price_date": "2026-10-12",
-            "close": 11.86,
-            "previous_close": 13.82,
-            "change_amount": -1.96,
-            "change_percentage": -14.1823,
-            "url": "https://finance.yahoo.com/quote/SECZ"
-          },
-          {
-            "ticker": "FSLY",
-            "price_date": "2026-10-12",
-            "close": 26.43,
-            "previous_close": 29.299999,
-            "change_amount": -2.869999,
-            "change_percentage": -9.7952,
-            "url": "https://finance.yahoo.com/quote/FSLY"
-          },
-          {
-            "ticker": "VRNS",
-            "price_date": "2026-10-12",
-            "close": 46.369999,
-            "previous_close": 50.119999,
-            "change_amount": -3.75,
-            "change_percentage": -7.482,
-            "url": "https://finance.yahoo.com/quote/VRNS"
-          },
-          {
-            "ticker": "PTRN",
-            "price_date": "2026-10-12",
-            "close": 17.34,
-            "previous_close": 18.42,
-            "change_amount": -1.08,
-            "change_percentage": -5.8632,
-            "url": "https://finance.yahoo.com/quote/PTRN"
-          },
-          {
-            "ticker": "SAIL",
-            "price_date": "2026-10-12",
-            "close": 19.57,
-            "previous_close": 20.77,
-            "change_amount": -1.200001,
-            "change_percentage": -5.7776,
-            "url": "https://finance.yahoo.com/quote/SAIL"
-          },
-          {
-            "ticker": "RXT",
-            "price_date": "2026-10-12",
-            "close": 3.68,
-            "previous_close": 3.9,
-            "change_amount": -0.22,
-            "change_percentage": -5.641,
-            "url": "https://finance.yahoo.com/quote/RXT"
-          },
-          {
-            "ticker": "BB",
-            "price_date": "2026-10-12",
-            "close": 8.45,
-            "previous_close": 8.91,
-            "change_amount": -0.46,
-            "change_percentage": -5.1627,
-            "url": "https://finance.yahoo.com/quote/BB"
-          },
-          {
-            "ticker": "NBIS",
-            "price_date": "2026-10-12",
-            "close": 210.059998,
-            "previous_close": 221.070007,
-            "change_amount": -11.01001,
-            "change_percentage": -4.9803,
-            "url": "https://finance.yahoo.com/quote/NBIS"
-          },
-          {
-            "ticker": "PONY",
-            "price_date": "2026-10-12",
-            "close": 5.74,
-            "previous_close": 6.04,
-            "change_amount": -0.3,
-            "change_percentage": -4.9669,
-            "url": "https://finance.yahoo.com/quote/PONY"
-          },
-          {
-            "ticker": "AKAM",
-            "price_date": "2026-10-12",
-            "close": 101.650002,
-            "previous_close": 106.949997,
-            "change_amount": -5.299995,
-            "change_percentage": -4.9556,
-            "url": "https://finance.yahoo.com/quote/AKAM"
-          }
-        ]
       }
     },
     {
@@ -6050,25 +6216,6 @@
         "investor_type": "technology_investor",
         "coverage": "public-equity technology and software ideas",
         "engagement_score": 84
-      }
-    },
-    {
-      "id": "substack:8c16e350d8c1c3b2abab",
-      "source_type": "substack",
-      "source_name": "Outlier Cap",
-      "title": "Outlier Capital Portfolio | First Week of October, 2026 Update",
-      "url": "https://outliercapx.substack.com/p/outlier-capital-portfolio-first-week-eb2",
-      "published_at": "2026-10-11T12:45:43+00:00",
-      "collected_at": "2026-10-12T00:00:49.360829+00:00",
-      "body": "Welcome to this week’s update.\n\n*   **Portfolio Performance: +36.64% YTD.**\n\n*   **S&P 500 Performance:**+13.90% YTD.\n\n![Image 1](https://substackcdn.com/image/fetch/$s_!MQX8!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F51562be3-0e4e-4f51-a122-72c313b7f7cf_1206x488.jpeg)\n\nPortfolio target is clear: **5x+ returns over the next 5 years**. No options, no leverage, just stock picking. Our edge lies in market inefficiencies and structural mispricings—identifying high-asymmetry opportunities long before they hit the institutional radar. This is about capturing the signal before it becomes consensus.\n\nThe table below features our **#5 top-performing long positions**since we started posting on Substack. Full portfolio allocations are available exclusively to paid subscribers.\n\n![Image 2](https://substackcdn.com/image/fetch/$s_!FL4C!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F04b273d4-07b9-4270-b73e-d4b29f4440d5_2608x462.png)\n\nWe don't bet on short-term noise; we align with long-term reality. This portfolio is engineered around the **core engines driving the next decade of growth**—positioning us directly in front of massive capital flows to deliver asymmetrical, market-beating returns.\n\nThe goal is simple: **5x+ returns without the reckless risk.** We don’t chase hype; we hunt for **asymmetric opportunities** where the upside is massive but the downside is protected by fundamentals.\n\nThis section holds my 10 first positions—high-conviction stocks with massive upside and an **exceptional risk-reward profile**. Most are already performing strongly, validating the underlying thesis.\n\n_(Full portfolio is exclusive to paid subscribers. Upgrade to see it and build generational wealth)._",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://outliercapx.substack.com/",
-        "publication_platform": "substack",
-        "section": "transaction_ideas",
-        "transport": "public_reader_fallback"
       }
     }
   ]
