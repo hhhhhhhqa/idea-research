@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-20T00:01:38.216212+00:00",
+  "generated_at": "2026-10-21T00:01:35.325049+00:00",
   "pipelines": [
     {
       "pipeline": "substack",
       "status": "ok",
-      "item_count": 3,
+      "item_count": 8,
       "errors": [],
       "notes": [
         "Clouded Judgement: public reader fallback used",
@@ -21,22 +21,23 @@
     {
       "pipeline": "reddit",
       "status": "ok",
-      "item_count": 2,
+      "item_count": 1,
       "errors": [],
       "notes": [
         "r/wallstreetbets: anonymous dd RSS transport used",
         "r/SecurityAnalysis: anonymous thesis RSS transport used",
-        "Downloaded 0 Reddit image(s) into the current feed media directory"
+        "Downloaded 1 Reddit image(s) into the current feed media directory"
       ]
     },
     {
       "pipeline": "prices",
-      "status": "ok",
+      "status": "partial",
       "item_count": 2,
       "errors": [],
       "notes": [
         "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "Latest available Yahoo EOD date is 2026-10-16; run after the US close to collect 2026-10-19."
+        "Ignored incomplete Yahoo EOD date 2026-10-20: 1/203 ticker closes available; latest sufficiently complete date is 2026-10-19.",
+        "Latest available Yahoo EOD date is 2026-10-19; run after the US close to collect 2026-10-20."
       ]
     },
     {
@@ -179,14 +180,450 @@
     }
   ],
   "counts": {
-    "total": 554,
-    "substack": 6,
-    "rss": 1,
-    "reddit": 2,
+    "total": 558,
+    "substack": 10,
+    "rss": 2,
+    "reddit": 1,
     "x": 543,
     "price": 2
   },
   "items": [
+    {
+      "id": "substack:69590d65f2be222ea588",
+      "source_type": "substack",
+      "source_name": "How They Make Money / App Economy Insights",
+      "title": "🚀 SpaceX + Tesla: One Musk Empire?",
+      "url": "https://www.appeconomyinsights.com/p/spacex-tesla-one-musk-empire",
+      "published_at": "2026-10-20T23:49:37+00:00",
+      "collected_at": "2026-10-21T00:00:45.981354+00:00",
+      "body": "Welcome to the Premium edition of How They Make Money . Over 300,000 subscribers turn to us for business and investment insights. In case you missed it: ⚡️ TSMC: Not Slowing Down ☁️ How Nscale Makes Money 🏦 Big Banks Face a New Reality 📊 PRO: ASML, J&J, BlackRock, and more Subscribe now SpaceX just delivered its first profitable quarter as a public company. Revenue surged 161% to $14.6 billion , and net income reached $4.4 billion . The rebranded Super Intelligence (SI) segment now generates more revenue than Starlink, transforming the rocket manufacturer into an AI powerhouse. But that growth came with nearly $20 billion in quarterly CapEx. An even bigger move may be coming soon. During the earnings call, Musk confirmed that SpaceX and Tesla have formed special committees to explore a merger . A combination could create a company worth more than $3 trillion, bringing Musk's AI, robotics, and space ambitions under one roof. But would a merger unlock greater value for shareholders, or simply combine two enormous investment programs with very different economics? Today at a glance: SpaceX Q3 FY26. Starlink opens new fronts. Key insights from the call. SpaceX + Tesla: One Musk empire? 1. SpaceX Q3 FY26 Income statement: SpaceX beat Wall Street expectations in Q3, with revenue $1.6 billion ahead and GAAP EPS of $0.35 ($0.19 beat). Adjusted EBITDA quadrupled Y/Y to $8.8 billion, driven by growth across Connectivity and SI. The three businesses are moving at very different speeds: 🚀 Space revenue grew 6% Y/Y to $1.8 billion (+84% Q/Q) as SpaceX completed 12 customer launches. The segment roughly broke even despite continued investment in Starship, which generated revenue for the first time. Its successful deployment of next-generation Starlink satellites marks an important step toward commercial operations. 🛰️ Connectivity revenue jumped 69% Y/Y to $5.2 billion (+22% Q/Q) , supported by consumer growth (+57%) and enterprise and government demand (+91%). Starlink subscribers reached 13.6 million (+89% Y/Y), but average revenue per user fell 17% (+5% Q/Q) to $69 as the service expanded internationally. Operating margin improved 7 percentage points to 45%. 🤖 Super Intelligence revenue soared 830% Y/Y to $7.6 billion (+195% Q/Q) , becoming SpaceX's largest segment with 52% of total revenue. Growth reflected new cloud computing agreements, increased Grok adoption, and the acquisition of AI coding platform Cursor, which contributed $608 million in revenue from its August 14 acquisition through September 30. The segment swung from a $1.7 billion operating loss a year ago to $431 million in operating profit, although its 6% margin remains far below Starlink's 45%. Cash flow: Operating cash flow reached $9.6 billion in Q3 (+156% Y/Y). CapEx reached $19.6 billion, up from $18.4 billion in Q2. And management expects a much bigger jump in Q4. Free cash flow was negative ~$10.0 billion, compared with negative ~$16.0 billion in Q2. Super Intelligence accounted for $16.4 billion, or 84% of total CapEx in Q3, compared with $1.6 billion for Space and $1.5 billion for Connectivity. AI compute capacity increased from 1.4 GW to 1.7 GW during the quarter. The operating cash flow improvement is encouraging, but SpaceX still invests roughly twice as much as it generates from operations. Balance sheet: Cash, cash equivalents, and marketable securities: $89.9 billion, down from approximately $100 billion at the end of Q2. Debt and finance leases: $38.8 billion, including $36.1 billion of long-term obligations. Net cash: approximately $51.0 billion, before other financing obligations or restricted-cash adjustments. So, what to make of all this? Read more",
+      "author": "App Economy Insights",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.appeconomyinsights.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:1aa70594680b7e71ad22",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "The Programmable Data Center — Evan Conrad, SF Compute",
+      "url": "https://www.latent.space/p/sfcompute2",
+      "published_at": "2026-10-20T19:31:57+00:00",
+      "collected_at": "2026-10-21T00:00:44.209487+00:00",
+      "body": "This was recorded on the sidelines of the new Compute Trading track at AIE NYC . Catch us next at AIE CODE , our last flagship for the top agentic engineers in the world. In the early days of cloud, former guest Martin Casado made something so disruptive that Cisco was threatened enough to pay $600m for it, and VMware outbid for $1.3B: That concept was software-defined networking , which virtualized the routing network by separating the control plane from the data plane. That revolution is now coming for GPUs - where previously running your own supercompute cluster required $50-100m upfront to get commitments and do the entire stack from hardware to firmware to kernels, SF Compute is now enabling you to not only buy or sell GPU hours now and in the future, but also to programmatically control everything from your network to memory. We last spoke with Evan about commoditizing compute . At AI Engineer New York, we went deeper: what does it take to physically deliver a GPU contract, and what has to be true before a market in compute can become liquid? From selling a room to running the hotel Evan describes SF Compute’s expansion with a hotel analogy. A customer wants a room, then asks for cleaning, room service, and security. Eventually you discover that delivering the room means operating the hotel. SF Compute began by trying to sublease a cluster; the company has since built much of the operating capacity of a cloud to deliver the compute traded on its market. That work is physical settlement: the buyer gets usable compute, rather than simply a cash payment against an index. It brings the physical constraints of a cluster into the market itself. Can a workload be interrupted? How quickly can it recover from storage? Which GPU generation, networking and software configuration does it need? Those details affect both the contract and the price. Making compute tradeable Rather than waiting for every GPU cluster to become interchangeable, SF Compute matches orders with different constraints. Evan argues that this makes trading possible while the technology changes, at the cost of spreading liquidity across more variants. We also discuss spot and forward pricing, batch versus live inference, and why an index can become disconnected from the cost of actually buying compute. Independence is central to Evan’s case for a market operator. He argues that companies with large hardware or inference businesses have incentives that make it harder to run a neutral exchange. We also get into the unglamorous engineering: visiting sites, designing clusters, running the backplane, and making infrastructure programmable. Near the end, he describes the ability to subdivide InfiniBand fabric on the fly as one example. Guest: Evan Conrad, CEO of SF Compute . Show notes Evan’s AI Engineer NYC talk: How Compute Markets Work Our previous SF Compute conversation Why oil futures went negative in 2020 — EIA How SF Compute customers resell unused GPU capacity SF Compute’s $245M compute sale Abel: SF Compute’s settlement ledger CFTC: Barclays and LIBOR manipulation Elastic InfiniBand partitions Timestamps 0:00 — Why can’t NVIDIA build this? 0:25 — Welcome back to Latent Space 2:23 — From selling a room to running the hotel 3:47 — Physical settlement: actually delivering compute 6:00 — Liquidity and the GPU order book 8:42 — Trading nonstandard compute 10:00 — Interrupting and moving workloads 12:20 — Why hardware cohorts matter 14:32 — How far out do compute contracts go? 16:19 — Batch versus live inference leases 17:58 — The shape of compute prices 20:33 — GPU generations, specifications and SKUs 23:30 — Physical versus cash settlement 27:00 — The emerging compute market ecosystem 29:03 — What it takes to deliver a GPU cluster 32:24 — Sovereign compute 33:26 — Why NVIDIA can’t build this market 34:48 — A programmable data center Transcript Automated transcript, lightly formatted; speaker labels have not been verified. 00:00 NVIDIA is obviously like the 800-pound gorilla in the room. Why didn’t they make SF Compute? So our impression is that NVIDIA can’t make it, but benefits tremendously from it existing. The reason why they can’t make it is because they would then not be independent enough for people to trade on it. 00:25 Anyway, Evan, welcome back to Latent Space. Thank you so Welcome back to AIE. Actually, first time at AIE. I think so, yeah. This is a very special one because I feel like you have been working on compute trading, compute markets for a while. Now it’s like feeling of the moment. Yeah. Jump basically announced that they are getting into compute markets, which is why I’m excited to sort of cluster people. You met Oliver from SemiAnalysis, who is basically initiating coverage on compute markets is my read on this. So people are going to watch your talk. 01:00 I think it’s a very good explanation of both your origin story and why you need to exist and all the hard problems you work on. Yeah. Done in a very simple, engaging manner. I’m very jealous of your writing skills because you showed the flyer that you showed at New Reps. Yeah. I was like, it’s pretty straightforward and simple and it’s good. Yeah. So anyway, congrats. Thank you. I appreciate that. And also congrats on AIE. It seems to, y’all are rolling. We’re rolling. I just came back from the site tour for next year’s AIE. then for You have like a hint? At Javits Center. It’s the same place they do Comic Con. Okay. Wow. 01:35 Wow. Wow. Damn. But I think the finance focus is really hitting for folks. Yeah. So we’re going to try to split out. Like this is, here we just lump everything in finance. Like your finance, their finance, like insurance is finance, but like they’re all super different. Yeah. So we’ll probably break out things more minutely in future because people want to go deep on hedge fund stuff or banking or personal wealth. Yeah. Especially in New York. Yeah. Anthropic was like, yeah, we’re all about RIAs right now. Yeah. RIAs like registered investment advisors. Yes. Like so different from you. 02:10 No, no, no. I’m aware of this. Yeah. Yeah. Okay. So for listeners who don’t know, we did a podcast two years ago where you talked about your, you know, where SF Compute was. Um, today you’re, you’re much more in a sort of physical settlement. You’re talking, you’re talking about your, your back fabric or what do call it? Uh, the backplane. Backplane. Yeah. Which obviously that takes a lot of hardcore engineering stuff. Yeah. Um, can you give a status update on like, where is SF Compute versus listeners who last heard you on a podcast two years ago? So, uh, when we started, we were this company called Junark and then we were just trying to sublease our cluster. 02:45 Um, and we started there in the technical stack. Um, and a way to think about it is it’s like you’re in a hotel and you’re trying to sell that hotel room. And then somebody asks you, Hey, like, are you going to clean my room? Um, and then you say, Oh, I guess I probably also need the hotel room as well. Or like I need the, um, the cleaning closet. And so you go get access to the cleaning closet and then they want room service. And so you get access to the kitchen and then, you know, they want, um, security. And so you get access to the security closet and you get this and you do that and you do this. And at a certain point you’re just running the whole hotel. Um, and the moment you’re running the whole hotel, you say, Oh, wait a second. 03:21 Um, instead my supplier on this market, um, is somebody that looks closer to a, fund, um, or a cloud that has access in our case, a cloud that has access to the data center. And we’re going to level up. And so what we’ve spent the last several years doing is building the entire operating capacity of a cloud, um, in order to offer, in order to actually deliver, uh, the compute at a reliable level. Um, we call that physical settlement. We’re taking a term from the futures market, from futures markets, from other markets, um, where in, you know, 03:57 oil or soybeans or something, physical settlement means you get delivered the oil and the soybeans. Yes. Um, but, um, in some markets, um, like in oil and also in power, um, there’s like a delivery network in oil. You have to have pipelines. If you would like the oil to be delivered to you, there has to be a way for it to get to you. Yes. Um, and finance, and for people interested in financial history during COVID oil went negative because, uh, so like I will pay you to take oil from me because it is sitting there in the port. Uh, and like, I can’t pay for this. 04:32 Yes. And so I will pay you to take my oil. Yes. That is like the weirdness of physical settlement. Yes. There’s a bunch of weirdnesses like this in other markets as well. So in the power markets and the grid, um, there’s parts of the orders that you fill out, the buy orders and sellers that, um, are there because the boiler takes a while to cool off. Um, and you can, you know, stop the boiler and then it will, you can start it back up again within some period of time. And so that has to get factored into the order book. Um, this genre thing is the same thing that happens in compute markets. So we co-designed physical settlement and the order book at the 05:10 same time. And that meant that we get to actually handle the real constraints of compute, which might include something like, oh, I’m okay with being interrupted, but only if there’s like storage on the thing that I can recover from really quickly. Um, very similar types of problems. Yeah. So, uh, people can refer to your talk and you’ve done a couple other podcasts already. Um, so I want to be like the sort of 201 level instead of the 101 level. Sure. Uh, and also because I, I am, I have been a derivative trader, so I can give people a bit more detail that you normally don’t get into. Um, so for example, well, how, how mature or deep or liquid is the compute 05:45 market today? Uh, not very mature or deep or liquid. Okay. so what we’ve been doing is first we had to, we had to go get a bunch of supply online in the first place, which just takes a while. And then we had to build the entire platform in order to do this. Um, and we just now got that working. And so now we move, um, capacity over onto the order book, um, which makes it liquid. Um, and so 5% of our total capacity is on the order book and we’re consistently moving more and more. And then we’re bringing on more capacity. That’s all on the order book. Um, the nice part is that, um, maybe I should have said the, the volume on the actual order book is small, but the, 06:21 um, the liquidity on the order book is high. So for that small amount of capacity that you have, um, you have, um, like very concentrated liquidity. So, um, a sort of standard metric, I would say for someone who is using this is a customer who buys capacity from us and they spend a hundred dollars to buy that capacity. We’ll make back $25 on average from selling it back to somebody else. Um, and that’s the number that we, or this is one of the metrics that we try to track because, we want the liquidity to be useful to the commercial participant and you can measure liquidity in a bunch of different ways. You can say like, I just want tons of makers or something. 06:56 Um, and you can measure it in like high-minded ways. We try to measure it by like, is this solving the problem, um, for the customer? Yeah. Got it. And so, uh, last time we talked as well, there was a lot of contract, uh, conversation about standardizing the contracts. Yes. talking with like, uh, the CFTC or whatever, what’s the status of those things? Um, so I think standardizing the contracts in general is still pretty far away. Um, and the, what we were trying to do at the time was, um, or basically what we learned over the last several years was we just needed to 07:31 operate the whole thing. Otherwise you cannot standardize the thing. And so to get closer to something that can be standardized, you first need to make all the operations of the thing the same. Right. To give an example of what can be different is a single operator can offer two different types of virtual machines. One type of virtual machine, um, might have a 40% performance, um, degradation versus another types of virtual machine. And 40% is a lot. When you say performance degradation, are you talking like MFU type things or like amount of burn in that you’ve experienced or what? It will affect. So in this particular case, I’m talking about GPU kernel launches and how long it takes for that to happen. 08:07 Um, which is a process that happens quite frequently when you’re doing sort of either training or inference. Um, the, um, uh, that will basically, the end result is that you get a worse MFU, but, um, like is the intermediate level. the intermediate level basically. Yeah. Yeah. So, so what I’m trying to, so for anyone who’s traded commodities before, there’s different grades of commodity. Yes. Right. There’s like, it’s not oil. It’s light sweet crude versus like whatever the opposite of light sweet crude is, or it’s like, you know, uh, corn level a or corn B or whatever. Uh, and so like people are trying to, well, you have to establish the equivalents of those things. Correct. Yes. I’m wondering if they have been established. 08:42 So what we did instead, um, was we created an order book that had multiple different constraints and you can say, I want to have, um, you know, something that’s between this and that. Um, it runs from this time to this time. Um, it’s like, uh, X to Y, it’s a bunch of different properties that you can attach to your order. And then we match that against sell orders that have those properties, um, in a big matching engine. Um, and the reason why we did it this way is it allows us to generate liquidity without having to standardize before, know, what the technology can do. Um, and because the technology was shifting so quickly, um, we wanted to basically be able to do that. The trade off of this is that you have less concentrated liquidity. 09:18 And so the prices are going to have, there’s going to be more spreads between the, the buy and the sell. Yeah. Um, it sucks. Yeah. But on the other hand, it means there’s lots of arbitrage to make, um, if you can do that correctly. So if you have a product that can use lots of different types of capacity, um, then you might really like SF compute because you will be able to use lots of different types of capacity and you’ll make more money. Um, you can take the spread. Okay. What dimensions matter in this grid of things? Um, so a bunch of different things. Um, one is dimensions categories that I will say is like, is there a 09:53 workload running on it right now or is it capacity in the future? Sure. is it capacity right now? Um, capacity right now in order for you to sell that, um, you have to interrupt your current workload. So you have to think, do I care if my current workload is interrupted or not? Capacity that’s sold that’s starting a month from now, um, you can buy and sell that all the time. And so you get, um, liquidity on that really easily. Um, there is some concern like, oh no, well I have capacity next month, but it’s very different than if you’re interrupting a workload right now. Um, the way that the interruption happens matters. So an example is if you’re on a cluster and the cluster doesn’t have as amazing storage as you want it to have. Um, so an example is like, do you have a Weco or Vast system under the hood? 10:31 Um, and do you offer that? And like, what’s the size of that? Um, this changes how you respond to, um, being preempted or removed off the cluster. meanwhile, the location of that storage matters. So, um, if you’re able to move that data from one cluster to another, um, quickly, then maybe you might be able to spread across multiple different clusters. Um, and you can be interrupted over here and then pop back up over there. Um, to make that work, you also need, like a, a fast transit path between one cluster and another. Typically this is implemented with a WAN, but most of these clusters don’t 11:06 necessarily have, um, like a wide area network. Yeah. A wide area network. So, basically cables that connect the clusters together. A private internet is another way to think about it. uh, a lot of clusters that are being spun up today are like, they’re not attached to, um, traditional CPU clusters were, next to the customer for latency reasons. In GPUs, they’re next to the power, um, wherever the, like, you know, you put the data center next to the power rather than next to the customer. Um, this means that a lot of stuff is getting put in places that previously they weren’t expecting data centers there. 11:41 And so you may not have, um, as, um, excellent of a transit path, um, from one to the other. So this, this starts to matter. Um, other examples are, um, weird shit where we theoretically support, but don’t actually, um, uh, like this is a thing that we’re thinking about, but haven’t done basically. Um, the early GB 200s broke. The early H 100s broke. Um, and so if you were buying H 100s or you’re buying GB 200s, you might really want the ones that were deployed after a certain time because you’re not getting the first shitty ones off the rack. 12:16 And so if you’re a super sophisticated customer, you may be willing to pay more, um, because for that. Oh, so it’s, it’s about like what cohort they were, they were produced and they get better over time. So like, uh, the first ones off the rack maybe had some faults or some problem. Right. And so if you were the ones who got the first ones, um, or, you first ones from, um, the, the first shipment of them, um, then yeah, they would, they would be broken or, um, in some way. I assume the sort of process is like, look, there’s defects everywhere. Like it’s, it just happens. Right. Totally. And so like you get it, you get a new shipment offer from TSMC or whatever, and you just kind of run your tests and like you, you figure out 12:53 which ones, which ones are bad and you throw them out. And isn’t that how it works? And I, I didn’t know about this element of cohorting where like, let’s say Q4, 2026, uh, B300s are way worse than 2027 B300s. Yeah. So, um, I’ll give an example. Um, you’re describing burn-in. Yes. so when you get a cluster, um, a good cloud, what it does. Is it tries to kill all the GPUs, um, before they ever get in the hands of the customer. Um, and then, um, the GPUs that are broken or the nodes that are broken, um, you get RMA’d. You basically go and request it. Yeah. You return it and you get a new one and there’s a lead time to that, but 13:30 whatever, you’ll get, you’ll get some back. Um, and then the customer never has to experience this. Um, the, um, thing I’m referring to is that, um, like in early H100s, there were like firmware bugs that may not even be related to the specific, like they may not be NVIDIA. They might be like Super Micro has a firmware bug in the, um, in the box that you bought. Um, and it applies to all of them and it doesn’t matter. Like, um, the solution to that was you need to get them to update their firmware. Um, or they need to ship a new thing, um, in every new box. 14:07 Yeah. had this for like the, the B300s that, that we got. Um, and the IQ had to use Devin to go fix it. Yes. Great. So like different types of problems like this can happen. Interesting. Okay. So I’m like, okay, look, that seems small compared to the overall. Like, I just want to, like, I want people to understand that the shape of this market, um, you mentioned like preemption, you know, and, you we talked about spot instances and how, how that, uh, the analogy is. Yeah. And then there’s also, you know, booking a month out. How far out do this, do these markets go? And is, is real time or sort of preemption more interesting to you versus, 14:42 far being further, further out? Um, to answer your first question, three to five years. Um, wow. We’re starting to see. month by month or quarter by quarter or how’s this? Are you asking how the cashflow works? Like the, the contracts, like the, the futures contracts, right? Like again, like I’m a former contracts, uh, derivatives trader. In the, in the market itself, um, like is in the broader market. Yeah. clusters are financed three to five years. Okay. Um, so the, the, the payments are totally over that period of time. Yeah. there is also like blocks of capacity in our order book, um, which can extend any arbitrary time. Yeah. there’s some stuff that we have to do, um, for, um, the cashflow on that 15:18 right now. What we do is we just ask people to pay entirely upfront for a block. Um, we don’t ask them to do that for a lease for a longer term contract. This gets into something that I definitely need a whiteboard to explain. Um, but, um, you had another question I was about to answer. I forgot. do you want real time or do you want, like, do you want more, uh, what’s more interesting to you? Real time or long, longer out? So we care more about longer outs because we’re trying to build a forwards curve that has a lot of liquidity on it. Um, the, um, these are kind of the same thing and kind of not. Um, so what we do is we, since 15:54 a, you can buy an hour out, you can buy right now to the next hour or you can buy right now to the next three years and anywhere in between. That’s wild. I know. Um, and so the, um, you know, or if I, you’re technically, um, the, there’s a certain difference that happens that’s dependent for each customer. Basically like if I have a workload that is, um, uh, that’s batch inference basically where I can be interrupted at any point. I don’t really care. Um, then my ability to be 16:29 cut off, um, is probably like, I need an hour of time to know, um, that I’m going to be cut off and then I’m good. Or I can even be notified in, you know, a minute or two. Um, but if I have, um, live inference customers who are expecting me to be online, um, then you can interrupt me, but in a month, maybe two months, maybe three months. Um, and then I can adapt to that capacity over that period of time. Um, but you cannot interrupt me in a minute. Um, and so those two things are priced differently. And the reason why they’re priced differently is because what is the price 17:05 you would pay in order to interrupt your batch job? It’s very different than the price you would pay to interrupt your, um, live job. If you have a live job, you’re, you are probably paying an SLA when you break for your customer. Um, does that make sense? Yeah, I see. So this is actually the market for breaking leases. These are the market for breaking leases. Oh my God. And then there’s also the market for future leases or like for leases that are, um. Oh, I thought this was like a subletting situation. This is like a lease break. So one way to think about it, um, is in power markets, there’s actually two markets. Um, there’s like the day ahead market and 17:40 there’s the live market. Compute kind of has the same thing, um, where it has capacity that is coming online, um, or capacity that’s about to, um, arrive to you. Um, and then capacity that is currently in use. And these have different price dynamics. Okay. Interesting. backwardation or contango? Backwardation or contango? Yeah. so do, uh, is compute further out price higher than spot or lower than spot? Um, is compute further out price? Does it, does it go like this? Does it go like that over, uh, you know, over like one year, one year out, two year out? 18:16 Do. Oh, this is an, uh, both at different times. I find it fascinating that you don’t know. Yeah. I mean, both. It depends on who you are. Um, okay. So, uh, I’ll make the case. Um, wait, so you’re asking is compute sold right now? same unit of compute today. Yes. Uh, maybe not today, maybe a month out versus one year out versus two year out. Is that, is that curve going up or going down? We see, like a hump. Oh my God. okay. So explain, um, like, I think this will make intuitive sense is basically like if I have milk and it is about to expire, I will lower the price on it. Yes. Um, and so that’s basically what we see. 18:52 It’s like, it’s the Nvidia release cycle basically, right? Uh, well, we’re more saying like if there’s a block of compute and it’s approaching now, um, it can’t be sold in the past. And so it has to drop its price in order to clear at some price. Yeah. And so initially you see this like drop where, um, stuff that’s sold right now, anything that’s on the market right now, um, is something that hasn’t been sold. And so therefore the price will drop. Um, and then it goes up, um, to where it wants to be. Um, and then maybe compute in the future is worth less, um, because people don’t want, like people would like the compute now. And so they’re sort of paying for the shorter lead time. Um, and they pay less for the compute that’s off into the future. 19:28 This is what I think a normal healthy curve looks like. Yeah. The place where I’m like, oh man, no shit. Um, is that, um, right now if you took a B300 and you trying to run inference on it, um, you can make $40 an hour or so, um, selling that as inference. Any model basically. Um, and so that’s if you use it at a hundred percent and maybe if you only have like 50% utilization or something, so like $25 an hour. Yeah. So $25 an hour. Meanwhile, you can buy B300s at like five to $6 an hour. One of these numbers has to change. Yeah. It’s a huge arbitrage. It’s huge arbitrage. this in your talks a lot. 20:04 Yeah. So, um, a bunch of people are basically looking at this and thinking, um, if I think prices are going to go up, I might be willing to pay more than what I previously thought in the future. Um, because I might think, okay, I can buy a five right now, but if I can’t buy anymore, then maybe I will be willing to buy even more in the future just to lock it in if it’s going to come online later. So we see the other side as well. Um, kind of depends on who you are. Cool. So, is it okay. And, and I just, I just really want to make super clear on this. Of course. Do you care about the different generations of chips and, or do you just care about overall flops and you spread it among whatever chips you want? 20:40 Uh, we care about different generations of chips because. you care. I think like, I only, I guess do your customers care? Yes. Right. Oh, wait. When you say a different generation chips, do you mean like. So like B300s, B300s. exactly. Yeah. Or like even AMD or whatever. Right. Uh, yes. I think people totally care about the generation of chips. Um, uh, I think part of this is because of things like VRAM. Um, and part of this is because of like, um, larger NBLink domains. Yeah. And things like that. So there’s just no way to abstract all this to like some generalized unit of compute that you can sort of mush around and whatever you like. I think like when you were saying oil, even oil isn’t oil. Oil is actually just like a bunch of different types of oil. 21:16 Yeah. Like jet fuel or car fuel, whatever. I think it’s the same thing. Um, you’re going to get a bunch of different types. It is, but you have oil refineries. Yeah. can effectively have black boxes. You can put oil in and get like whatever out. Um, if compute, it is so heterogeneous, I guess is the word. It’s that you just have to expose the underlying complexity to your end customer, which is bad for you as a market maker. Maybe. Like you want to identify the one like choke point or like, I don’t know what the better word for choke point is like a shelling point where everyone agrees like, okay, like this is kind of the standard and we’ll, we’ll all agree to this standard and, uh, you know, it’ll 21:53 be somewhat inefficient. Yes. Uh, so we’ve been able to reduce the, um, the, the problems to a certain level, but yeah. Like your job is like dimensionality reduction. Yes. We reduce a lot of the dimensions, but nonetheless, there are still dimensions. Yeah. It’s still going to exist. Do you, do you know how many SKUs you have? So, um, like five times a hundred times like 5,000 equals, I don’t know. Like what’s, we actually made SKUs like a concept, um, that, and the goal is to make it so that somebody else can make their own SKU. So if I want to buy Blackwells, I can say I’m willing to 22:31 buy Blackwells at $6 an hour or less. And you can match me against GB300s or you can match me against B300s and I don’t care which Blackwell as long as it’s less than $6 an hour. but you just said you care about memory and other stuff. Totally. But not every customer does. So some customers like, um, just can work on Blackwells, whatever it is. Some customers are super hyper specific and they need this exact thing and they’re going to pay more for that because the market’s going to charge them more. Okay. Um, and that’s what we do. So, and so people use your APIs to programmatically define what they want and then you match that with whatever composition of sellers, uh, they might, they might, they might be able to fulfill. 23:08 Yes. Um, with a caveat that having a named query is a new thing we’re doing. Um, but the query system as a concept is how the order book works right now. Okay. Interesting. Um, all right. So, uh, you know, I, I think that’s like a lot of like, I guess, nitty gritty. Are there anything about like, I guess that you want to educate people on whether it’s financial people or engineers about the state of the compute trading market as, as you’ve developed it? Because effectively you guys are defining it. Um, mainly just the requirement for physical settlement. Yeah. Um, we think that if you, we, we spent three years learning why you need 23:44 physical settlement. Um, and, um, our entire conversation today is, um, that it is, these things are not as fungible as you think we’re going to try and make them fungible. That’s the industry’s job to do that. Um, but without that, you run a lot of risks. Um, if you try to build, um, too much financialization before you’ve, the industry has had time to build out the, um, the physical settlement. Um, I think what you have is you have, um, a market that’s very easy to manipulate and a market that has a lot of basis risk where, um, the price you may be hedging against actually has nothing to 24:22 do with the price that, um, the market, you can actually buy the capacity for. Yeah. So for, listeners, uh, we, we talked about this briefly last time, but, um, people are often shocked to find out that let’s say the market for credit default swaps is 12 times the, the, the size of the bonds that they insure, uh, something like that, or like, uh, the, the markets for mortgage, um, sort of reinsurance or, uh, all that is, is larger than the underlying physical settlement. So that’s why physical versus cash settled. Yeah. And, and like basically cash settlements are like exactly the kind of, uh, the side bet that you see in the big short, um, where, uh, they, 24:59 they may, uh, may or may not have anything to do with the underlying thing itself. And it may, may be used as a proxy for overall other stuff. Yes. That, and you don’t want to, that to go out of control. Yeah. So to be clear, we think, um, cash settlement as a future concept is a great idea. Yeah. Um, we just think it should be derived from physical settlement. Yeah. because as you said, it’s a side bet. Um, and it would be kind of like if you, I mean, be kind of like if you made a cash of the future before you made the physical settlement, um, which I think people are kind of doing already. Yeah. Totally. People are trying to make cash on it before you make the physical settlement. And people do that for all sorts of things, including 25:34 startup stock. Yes. Right. Like you can buy and sell a made up share of open AI, but it’s nothing to do with the actual share. Yes. Um, and lots of those go very poorly. Um, like it would be kind of bad if you made a, um, it would be bad if you started selling, um, the, the derivative on a stock that doesn’t exist yet. Um, yeah. Yeah. Well, so I mean, one thing that we do, so I used to be a currency trader, right. Yeah. And, interest rates as well. And what, one thing we do is you have a board that gets together and says like, this is the London interbank offered rate LIBOR. Yes. And we all agree like this is the, the, the monthly fixing and we all 26:12 trade to that fixing. Yes. Uh, is that even meaningful at some point in three years from now? So critically LIBOR was manipulated. Yes. our concern at the moment. there’s 12 banks? Yeah. Yes. Um, well, our concern is there’s a very similar problem, um, where you can manipulate an index. Um, our impression is why you can manipulate that index is because a lot of the indexes are based on a very small amount of data that has, um, uh, not a lot of correlation with the actual price of buying a new reserve contract. Um, that’s what we’re concerned about. Okay. 26:47 Interesting. Um, all right. I think, I think that’s the, the, the rough state of things. Uh, um, I think the other part of just, just today is, uh, you, you, you, you talked about an event with jump and you’re, you’re friends with Silicon data. Uh, what are you learning from all these other players? Like who are the major players that you would want to call out as like doing interesting things? Ooh. Um, so we’re big fans of Silicon data and compute exchange. Um, I think they were also very early to this. Um, and I think they are doing like a reasonable shot at the, a path that we think, um, that we’ll likely end up being partners with. 27:23 Um, can you distinguish like your, your different paths? So, um, the general just is they’re doing cash settlement. We’re doing physical settlement. Um, we think both can exist and should exist. Um, and that they’re sort of mutually beneficial to each other. Um, and so totally fine. Um, so I think they are one of the earliest in the space and I think they are, very clearly took the bet, um, well before anybody else did. And I think that’s like very honorable to do. Um, um, you mentioned, uh, jump. Semi-analysis, jump. Like these are the players emerging. Like as far, like you were my first introduction to this. Yeah. And then, and I see all these other guys coming in and I’m like, okay, like it’s something’s happening here. 27:58 I don’t know the landscape as clearly as you do. Yeah. So, um, the categories of folks that we’ve seen is there’s folks that are trying to set better standards. So semi-analysis I think is working to try and create better standards. Um, there’s folks that are trying to do, um, residual value insurance and so on. Um, there’s a number of different companies in this space. I don’t know any of them super well, but, um, I know, know this is a concept and I think that’s important. Um, there are folks that are trying to do, um, uh, deposit, um, lending where like they’ll front your credit risk for the cloud. There’s an ecosystem of companies that are forming around how do we resolve the financial bottlenecks of compute. 28:34 Um, and it is cool to see. I think effectively what you want in this ecosystem is buyers and sellers. You want an analyst. You want, uh, we said insurance or, uh, what’s the, uh, residual value. Yeah. Yeah. and you, we want this like healthy ecosystem out there. Um, but obviously you guys are owning the problem of physical settlement, which, which is really interesting. Um, okay. So, I mean, we can go into like the, the hard tech side because obviously you are also hiring, uh, for extremely cracked engineers. Yeah. describe your stack. Um, we do all the things a cloud does without being the 29:10 cloud. Um, as in we don’t own the hardware. the reason why we don’t own the hardware is because if we did, we would be able to manipulate the forwards market. So we have to be Switzerland. We have to be independent. Um, which creates a lot of sort of strange things about the company. Um, but in order to do physical settlement, you have to do site visits. have to visit the data center. Um, you have to, um, you have to design the bill of materials and ensure that, um, you have to basically do like supply chain consulting, um, where you have relationships with different OEMs that, um, ensure that things get delivered 29:46 on time. Um, then you have to, um, do cluster architecture. Um, uh, so you’re sort of designing the cluster itself. Um, then you’re, um, rolling out racks or you’re working with partners to roll out racks and supervising that. Um, then you’re doing, uh, backplane management. So you’re taking over the, um, uh, PDUs and the switches and the DPUs and, um, UFM and BMC and you’re operating, um, the whole, um, harness around the nodes that you’re selling. When you say you as an SF compute employees. Yeah. Wow. Um, so, uh, when you buy a node from a cloud, um, there’s the bare metal, but there’s all this shit around the bare 30:23 metal. Yeah. Um, and in order to make that bare metal node work, you have to operate everything else. Then we. Because I just like traditionally the job of the data center is to extract some of this away from you. Yeah. We’re the ones that do that. Okay. Right. Um, but you’re not, you’re not in the data center business. You’re not the sort of equinixes of the world. We’re, we’re not in the data center business sort of, um, what we do work with is, so we offer supercomputing as a service. Um, and what this means is folks come to us and say, you know, 30:58 I’ve got X where X is, I’ve got, you know, X megawatts here. And maybe sometimes they mean I’ve got a data center. Um, that’s like, um, would like to turn into a GPU cluster. Like my options are, I could sell the GPU cluster or I could sell the data center to somebody or I could become the cloud. And then we go to them and say, great. Um, we will turn you into the cloud. We’re the supercomputing part. You’re the data center. Let’s partner together. And then we will sell and I’ll make money. Um, sometimes it’s people who have something that could turn into a data center, in which case we’re going to basically project manage that up to the layer. 31:33 Um, and then we will work with those far, we’ll work with those folks to turn their powered land, um, or whatever they have, um, into a data center by working with partners. Um, and then we take over at the supercomputing part. Okay. This requires us to have some sort of data center expertise in house, but we don’t self-perform builds. Um, so yeah. Yeah. So it’s, uh, somewhat modular because you have different scenarios you need to play under. Yeah. Uh, someone once described us as like, um, uh, like Palantir for compute, um, because it’s like these, each time it’s this new rodeo. 32:10 Um, uh, but, and we like, we, we deeply partner with folks. On both sides. Yeah. Uh, and primarily the U S primarily the U S, but we are operate around the world. Yeah. At some point does SF compute become a misnomer? Uh, so when, so we’re deploying clusters all around the world. Yeah. And when we do that, we’re working with people who themselves are trying to be clouds all around the world. Um, they look like sovereign compute players. Um, and our pitch to sovereign compute is amazing. Uh, let’s help you set up a cloud in your own country. Um, and we will bring the San Francisco offtake. We’ll bring the San Francisco expertise. 32:45 We’ll set up the clusters. Um, that’s our whole business. Ah, um, we’re going to make it. Who are your main, uh, your biggest announced partners that you can name? Um, nobody I can name. Really? Wow. Uh, we will have some announcements, um, in a week or two, um, that we expect to come on. Yeah. All things sort of. Sure. Sure. Good luck. Yeah. No, I mean, uh, I, I think this is really interesting for every country to like, who’s, who’s like investing in sovereign AI to figure this out. Um, and it’s interesting that like SF is still sort of like that brand name and, uh, that, that is, that is very marketable. 33:20 So I think one of the interesting things is just thinking through this market. NVIDIA is obviously like the 800-pound gorilla in the room. Why didn’t they make SF Compute? And again, the answer is going to be market manipulation. But let’s just really get into the incentives of the multiple players. Yeah. So our impression is that NVIDIA can’t make it, but benefits tremendously from it existing. The reason why they can’t make it is because they would then not be independent enough for people to trade on it. If you don’t trade on it, then you don’t have enough liquidity for lenders to finance against the forwards market. 33:55 This is also why Crusoe and CoreWeave and Lambda, why the hyperscalers can’t make it, why Base 10 and Fireworks and Modal can’t make it because they have too much demand on that side. This is a thing that benefits the entire industry because it makes the financing costs go down. But nobody can make it unless they give up the ability to do all the big inference money and all the big cloud deals. You have to kill your business in order to make this. That’s why nobody does it. like structurally, they’re not set up to do that. And you’re basically reducing friction and that’s all your revenue. 34:30 You’ve announced some milestones. Actually, I forgot to say that up front. Can you repeat what they are and just take a victory lap a little bit? We’ve closed several hundred million dollars of volume. We have a significant number of new clusters on the way. And then the things that I think I’m most excited about is we’ve shipped a whole bunch of new features that make SF Compute very viable for platform-as-a-service companies. An example is we allow customers to subdivide 35:06 their InfiniBand fabric without having to ask us. So many clouds, when you go to buy them, they will give you one InfiniBand fabric. And then if you want to redraw the lines of that InfiniBand fabric, you need to contact them and they will then do something for you. We now can do that on the fly for customers, which I think is really great because it interfaces with the market really well where you want to be able to redraw things in order to scale up and down your clusters. Would you describe this as like you’re virtualizing the data center and making it programmable? Yeah, we’re virtualizing the data center and making it programmable. So all the stuff that you would have gotten if you had owned the 35:43 hardware, we’re trying to virtualize that, which I think is exciting to us. It’s funny, like the last time this happened was like the cloud, which is really cool. And then finally, you know, I think what is your call to action for people? You know, is it engineers? Is it like, give me your supply? Like, what is it? If you would like to own a GPU cluster and you want the residual value from it, you want to have it for your portfolio, we would love to work with you in order to build that GPU cluster. We will take over and we will do the supercomputing portions of that and 36:18 ensure the things go right. We own the SLA. And then if it turns out that that was a bad idea that you need out of that cluster, we can immediately sell that cluster to somebody else so it doesn’t hit your balance sheet. Very simple pitch. Well, thank you so much for your time. You’re doing a great service to the industry and I just am happy to be your friend. I appreciate it. All right. Thanks. That’s it.",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "substack:a379ec2597bb3939186f",
+      "source_type": "substack",
+      "source_name": "Interconnects",
+      "title": "Latest open artifacts (#25): DeepSeek V4.1 Flash 1017, American-made models, and new regulatory controls in the US & China",
+      "url": "https://www.interconnects.ai/p/latest-open-artifacts-25-deepseek",
+      "published_at": "2026-10-20T17:04:21+00:00",
+      "collected_at": "2026-10-21T00:00:44.722678+00:00",
+      "body": "The geopolitics of open-weight AI are accelerating again this fall, as we would expect with the risks of all AI systems (open and closed) rising rapidly. We’ve seen many news items in the last week showing both the U.S. and Chinese governments positioning themselves for some controls on open models. MOFCOM, the Ministry of Commerce of the People’s Republic of China, released a policy proposal (it’s not yet a law) that would require frontier AI models and some other technologies to get pre-approval from the government before they can be shared internationally. We found the reaction to this to be overblown – as the document states that open-source technologies will be set up for automatic approvals – but many in geopolitical circles say this is a big deal because it proposes a regulatory framework that could be used in the future to regulate China’s AI industry. Others we trust on this issue say this proposal could be more about preventing issues like the sale of Chinese startup Manus to Western companies, rather than being about frontier AI models. Either way, the wheels of control are moving around AI, and open-weight models are not free from any influence. The Department of Homeland Security (DHS) released an order on DeepSeek , which restricts DeepSeek itself, as a company, and DeepSeek’s models, as a technology platform, from being a vendor in federal civilian procurement. It is not clear how this will relate to finetuned models or models trained on the outputs of DeepSeek (e.g., Nvidia’s Nemotron models have long relied heavily on DeepSeek models in their training recipes – will they be banned?), but this is an expected action and reinforces the need for a domestic open model ecosystem. Other model makers in China, such as Zhipu AI, makers of GLM, are already on the Entity List under Commerce/BIS, which restricts their access to American technology. DeepSeek followed the above news up by releasing their internal inference stack publicly, DeepInfer , which is likely far more efficient than existing open-source tools like vLLM/SGLang for their models. Estimates point to DeepSeek making up to 90% gross margin when selling tokens on this inference stack. It is well-known that the top AI labs have much more inference-efficient tools internally, and this is the first time we’ve seen a leading lab share them. Inference companies will be quick to adopt these tools, which will drive prices for DeepSeek’s models down across the ecosystem (or margins up). While not an open model or dataset, we consider this release to be one of the bigger open-source AI artifacts in the last few months. Share As of writing this, Kimi K3.1 is rumored to be released very soon, with metadata associated with it starting to appear in public libraries . Exciting times! You can view the models in this email, and all previous issues, on our Artifacts Hub. It includes commentary and other ecosystem metadata. Browse the Artifacts Hub Our Picks MiMo-V2.6-Pro-RL by XiaomiMiMo : an update for Mimo, which reuses the same bases as MiMo V2.5, but used a lot more resources on RL training. They also release an in-depth tech report , as well as some of the used environments, which is rare at this scale. The final model from this recipe, V2.6-Pro, is the top open model on Artificial Analysis’s ranking today, and the scaled RL runs came with a fun live dashboard of training. We’ve been fans of Xiaomi for months now, and their efforts are bearing fruit. DeepSeek-V4.1-Flash-1017 by deepseek-ai : Since the latest Artifacts, the whale has not released one, but two new model iterations with a new size (552B-A16B) which also support image inputs. The model has gained a lot of (well-deserved) attention for its performance at a small price. It also carries the MIT license, continuing the trend established by DeepSeek themselves. This is notable in times where licenses seem to become more bespoke and exclusionary. Below is the Pareto of performance vs price on DeepSWE, a favorite agentic software engineering benchmark today, which DeepSeek dominates. clef by Cloudflare : Decision models are all the rage after being introduced by the startup Typesafe . In short, they are general classification models that output few tokens with their probabilities. Its usefulness has led to quick adoption and also a lot of open model finetunes such as Clef. NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4 by nvidia : The mid-sized model of the Nemotron family got its long awaited update. It is strong for its size and can be run at home (given you own a beefy laptop or RTX Spark). As usual, NVIDIA releases the vast majority of the data and an in-depth tech report . Beam-1.0-501B-A23B by reflection : The long awaited open model by Reflection, making it the strongest open American model released under a permissive license (Apache 2.0). While not the smartest open model available, Beam is very impressively token efficient (second to only GPT-6-Astra below). This is a sign of a well-developed post-training stack. Models General Purpose Ternary-Bonsai-2-27B-gguf by prism-ml : A ternary version of Qwen3.8-27B for on-device deployments. Ornith-1.5-397B by ornith-ai : A series of Qwen3.5 and Gemma 4 finetunes that gained attention in the local AI community for its strong performance over the respective (strong) baselines. Ling-3.0-flash-VL-fp4 by inclusionAI : A 124B-A5.5B model by Ant Ling (within Ant Group), which continues to churn out models consistently. Muse-Spark-Open-816B-A42B by meta-models : META has released their open version of Muse, which we have written about in more detail ! Read more",
+      "author": "Florian Brand",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.interconnects.ai",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "substack:f3aefef5625ad88995bf",
+      "source_type": "substack",
+      "source_name": "MBI Deep Dives",
+      "title": "Is Microsoft Over-Earning on OpenAI?",
+      "url": "https://mbideepdives.substack.com/p/is-microsoft-over-earning-on-openai",
+      "published_at": "2026-10-20T16:37:37+00:00",
+      "collected_at": "2026-10-21T00:00:46.257526+00:00",
+      "body": "I have been trying to work out whether Microsoft is over-earning on its relationship with OpenAI. The question has been on my mind since Microsoft’s FY26 10-K, which for the first time disclosed how much revenue it books from OpenAI: [$24.1 billion](https://www.sec.gov/Archives/edgar/data/0000789019/000119312526323660/msft-20260630.htm) for the fiscal year ended June 2026, “inclusive of revenue-sharing payments”. Azure crossed $100 billion of revenue in the same year, so one customer, which Microsoft also partly owns, seemingly accounts for almost a quarter of Azure.\n\nOf course, the concentration itself has been well covered. What I want to work through is slightly different: how much of Microsoft’s current earnings, and more importantly its earnings growth, comes from pieces of the OpenAI relationship that are **contractually finite and unusually profitable?**\n\nI will explore that question behind the paywall.\n\n_Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on **[70](https://mbideepdives.substack.com/p/deep-dives)+** companies. The daily is just how I think out loud between the Deep Dives!_",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mbideepdives.substack.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas",
+        "transport": "public_reader_fallback"
+      }
+    },
+    {
+      "id": "substack:7623f794020a436d66cc",
+      "source_type": "substack",
+      "source_name": "One Useful Thing",
+      "title": "30 Months on the Exponential (in Charts)",
+      "url": "https://www.oneusefulthing.org/p/30-months-on-the-exponential-in-charts",
+      "published_at": "2026-10-20T15:57:59+00:00",
+      "collected_at": "2026-10-21T00:00:45.169641+00:00",
+      "body": "My second book on AI, Co-Existence, is out today (and you can get it here ), 30 months after the release of Co-Intelligence in early 2024. Looking back across the gap between these books is a good way to get a sense of AI progress. And, thanks to AI, I can describe this progress with some quite lovely charts. Making the charts is itself a good indicator of how far things have come. In the era of chatbots, the era of Co-Intelligence , I would have had to work back-and-forth with an AI in a chat window, guiding it through each new step. In the current era of agentic AI that I cover in Co-Existence , I delegated the work and let the AI handle it. In this case, I used Opus 5.5 in Claude Projects, which allows you to talk to a single “orchestrator” agent that then spins off additional agents as needed, giving them instructions and relaying information back to you. Getting the work done was straightforward. I gave the AI a couple sentences of suggestions and it did what would have taken me hours of work (all the research, all the graphing, all the layouts, all the images, all the citations…) in minutes. And since I didn’t have to do the work, I had the AI make many options for me. I picked some and gave handwavy reactions to others that would drive a human team mad (“make it better”). It even caught that I’d gotten the math wrong. I was going to call this post “28 months on the exponential.” Some examples of interacting with Claude to make the graphics for this post. Notice that it corrected me. “This is the worst AI you will ever use” I wrote this in my last book on AI, and it has continued to be literally true at every moment since. From early 2023 through early 2024, there was a single AI model that was undeniably the best in the world: GPT-4 from OpenAI. This was the AI model that most people remember from the first couple years of AI use, it was the one I thought about while writing Co-Intelligence , and it was the one that gave ChatGPT its status as the default AI for many people. Since then, twenty different AI models have held the lead at one time or another, all from Anthropic, Google, or OpenAI. Which company had the best AI model in the world. But the changing lead alone hides an even bigger change. A total of 180 AI models are now better than GPT-4 was at its release, many of which are open weights models, which anyone is free to use or modify. Nineteen of them can run on a modern smartphone. We are living in an exponential The data below draws on the METR Long Horizon Benchmark, which used to be the most famous chart in AI. The benchmark measured the amount of human work that an AI can do with at least a 50% chance of success from a single prompt. Gains on this benchmark have been startlingly regular. From the release of GPT-4 to the end of the METR measure, the amount of work AI could do doubled eight times. In 2024, an AI could do a four minute task. At the moment I turned in my draft of Co-Existence in April of 2026, an AI could do 17 hours of human work. And then the benchmark ran out. METR said they could no longer accurately measure the amount of work an AI could do using their current methods. Other studies suggest that number might be 17 weeks of work, or more. And, even as ability has increased, prices have dropped. My old favorite AI benchmark, the Google Proof Question and Answer Exam, which gives the AI problems that regularly stump graduate students, used to cost 30 cents in AI usage to get a single correct answer. Now, it costs four hundredths of a cent to get the same result. How humans work with AI is changing Despite all the progress, the frontier of AI ability is still jagged, just as it was 30 months ago. Some areas have stayed stubbornly weak (AI is still quite a bad long-form writer), while others, like solving math problems, went from terrible to superhuman in the same period. And, as I discuss in the book, even where AI is excellent, small gaps create large needs for humans, at least for now. But AI’s gains have been so large that how we work with it has to change. In Co-Intelligence , I wrote about centaur work (divided between AI and humans) and cyborg work (blended between AI and humans). Both keep you in the loop… but you can only be in so many loops at once. Now that we have real agents, I added a third way to work with AI: the conjurer. Conjurers summon agents when needed, assign them work, and evaluates what comes back. The charts in this post were made that way: I summoned agents, gave some general guidance, and I said “make it better” a lot. It is the most powerful way to use AI, and it carries new risks as we lose control over what, exactly, the AI is doing to get us those results. The Otter Test has fallen Regular readers will know that I have been testing AI image generation and movie tools with the prompt “Otter on an Airplane Using Wifi” for the past few years. This is what the best image generator, Midjourney, produced 30 months ago. So today I asked Opus 5.5 the following (typos and all, prompting has become much less important as AIs get better): “I have a post showing the what happened over the past 30 months of AI in honor of my new book (published 30 months after the origina). i want you to make the ultimate otter on an airplane using wifi video. just something fantastic, i know you are creative, give it a go.” Using my subscriptions to various online services from Google and ElevenLabs, it produced the following. (Turn the sound on) The video has a few flaws. But the AI figured out how to make it, from the script to the images to the concept to the music to the technical aspects of creating all of this, without any help from me. That is what has changed. This is the least we will ever talk about AI As a result of all of these gains, AI is only becoming a bigger issue in the world. This timeline of achievements and controversies since Co-Intelligence came out gives you some idea of how much is happening (I am leaving out hundreds of important events, but, even with the power of AI, we are all having trouble keeping up). Of course, the speed of AI advancement is a problem for an author like me, which is why my new book does not try to keep up with the news or the latest model releases. Rather, it focuses on trends like the ones in this post: AI is improving exponentially but unevenly, and the way we use it is shifting from chatbots to agents that do real work. The book is about what that means for the humans who have to co-exist with these systems: where we still have an advantage (I argue it comes down to deep knowledge, wide knowledge, taste, and agency), when to hand work to AI, and when to avoid it entirely. If you understand the trends, the present (and near future) becomes much less surprising. Co-Existence is out today. You can get it here , on a website Opus 5.5 redesigned. I told it to make it better. Subscribe now Share",
+      "author": "Ethan Mollick",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.oneusefulthing.org",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "rss:612687b6113cf5bbcadf",
+      "source_type": "rss",
+      "source_name": "Mobile Dev Memo",
+      "title": "Meta’s GenRecs Tokenization and the generative retrieval opportunity",
+      "url": "https://mdm.co/metas-genrecs-tokenization-and-the-generative-retrieval-opportunity/",
+      "published_at": "2026-10-20T15:56:02+00:00",
+      "collected_at": "2026-10-21T00:00:53.559189+00:00",
+      "body": "Meta is implementing GenRecs Tokenization to replace arbitrary item identifiers with Semantic IDs. This enables generative retrieval, where LLMs predict content by treating user history as a sequence of tokens. The system improves performance for new content, reduces latency, and has already delivered a 0.35% lift in conversions.",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mobiledevmemo.com/",
+        "publication_platform": "wordpress",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "reddit:37c3403a8ddd254461a1",
+      "source_type": "reddit",
+      "source_name": "r/wallstreetbets",
+      "title": "Fervo Energy: the AI Buildout Dominatrix [FRVO]",
+      "url": "https://www.reddit.com/r/wallstreetbets/comments/1xaucr7/fervo_energy_the_ai_buildout_dominatrix_frvo/",
+      "published_at": "2026-10-20T14:57:14+00:00",
+      "collected_at": "2026-10-21T00:00:54.870745+00:00",
+      "body": "Disclaimer: This information was checked for errors but some may exist. Take this at your own discretion, this is an opinion of a regard on WSB. I own shares in FRVO which I might close at any time or maybe I diamond hand them until they expire worthless, that decision is mine and mine alone. If you decide to establish a position similar to mine or contrary to mine, that's on you and you alone. This is not investment advice, I just like the stock. Fervo Energy is the OG of Enhanced Geothermal Systems (EGS) with significant historical milestones in collaboration with its longtime homie, the US Department of Energy. DOE Office of Energy Dominance Financing (EDF) may imminently throw fat stacks of cash at Fervo driving their project cost of debt down to the US Treasury rate plus a minimal spread. The One Big Beautiful Bill maintained Section 48E Investment Tax Credits for geothermal projects allowing up to 50% of the capital cost to be transferred as tax credits through 2033, juicing Fervo’s project returns like a middle-aged man on steroids. Combining incredibly cheap DOE EDF debt with fat commercial bank ITC bridge loans allows Fervo to potentially only front 13% of the hard capital to build these hot water energy spas without issuing a single share of dilutive stock. As Jensen Huang keeps warning, the primary bottleneck to AI datacenter deployment is power availability which provides Fervo a unique opportunity to pimp out Enhanced Geothermal energy as the only scalable, 24/7 carbon-free baseload source between now and the mid 2030’s. The stock has been completely cucked due to management’s disclosure that power offtake into California is restricted in 2027 for Phase 1, their originally planned route for Phase 2 into California won’t be available until 2030+, likely litigation due to a seemingly botched S-1, a short report on their technology from Morpheus Research, and roughly 224 million shares being unlocked in early November. Add some potential tax loss harvesting and it looks like a murder scene in Fervo land. Here’s the thing though, do the 2027 restricted cashflows actually matter to the long term outlook? I think not, especially when you see Google immediately step in to take the power. Does potentially a S-1 filing that will be studied for all the wrong reasons in law school make the underlying use of fracturing in geothermal have less potential? I think not. Does the Morpheus Research report read like it was written by a liberal arts major with no technical background? I think so! Tidal Wave Technologies published a quick writeup to dismiss some of the Morpheus Report’s claims but Morpheus’s analysis is so whack it’s like an early LLM model trying to guess how many r’s are in strawberry: https://tidalwavetechnologies.com/morpheus-researchs-recent-report-on-fervo-energy-a-mythbusters-like-approach-to-assessing-their-claims/ These little “keyboard warriors” as the CEO of Fervo likes to call the naysayers are apparently short the stock, good for them. What I’d love to see next is Fervo’s pre-IPO shareholders (Devon Energy, TIF Partners, DCVC, Google, Breakthrough Energy, and CalSTRS - many underwater now from the December 2025 Series E-1) issue 8-K’s or Schedule 13D/As stating that they are voluntarily extending their holding period for six to twelve months or until specific price targets or operational hurdles are met. There are several examples of this happening: Facebook with Mark Zuckerberg in 2012, Twitter with Jack Dorsey, Evan Williams, and Benchmark Capital in 2014. That being said, let’s dig into why I think Fervo is going to be the AI Buildout Dominatrix. Fervo’s Romantic Romp with the DOE Fervo and the DOE go way back like an old married couple who met in high school. Let’s review their sordid affairs: 2021-Present : DOE Geothermal Technologies Office with Utah FORGE 2023 : DOE Geothermal Data Repository with Fervo’s Project Red Commercial Pilot 2024 : DOE Enhanced Geothermal Scalability Pilot at Cape Station Phase 1 March 2026 : The EDF issues its initial formal underwriting and environmental review letter for the Cape Station expansion May 2026 : DOE EDF explicitly prioritized advanced geothermal and baseload power for AI data centers in the Revised Title 17 guidance July 2026 : DOE EDF formally completes all NEPA reviews for Fervo’s initial 400 MW project and explicitly documents a subsequent 600 MW expansion (Phase 3) September 2026 : DOE awards $20 million in grants to fund greenfield EGS appraisal in Idaho and Nevada with Fervo What in the world is the DOE Office of Energy Dominance Financing (EDF) The EDF is the financing arm of the DOE which has authorization to loan over $250 billion to large-scale commercial energy and critical mineral projects over $500 million in scale. EDF loans are issued at the US Treasury rate +0.375% and can cover up to 80% of eligible project costs. The whole point of the office is to provide cheap af sovereign capital so real physical infrastructure actually gets built in the United States. As noted before in May of 2026 the EDF explicitly prioritized advanced geothermal and baseload power for AI data centers. Guess what Fervo builds? And in July of 2026 the EDF formally completed all NEPA and other reviews necessary for Fervo’s initial 400 MW Phase II expansion as well as documented the 600 MW Phase III expansion. Sounds sick af! The very agency whose National Lab scientists watched this technology grow from an idea to current deployment are already getting ready for Phase 3! And the Morpheus boys are short! YCMTU! EDF Checklist for Approval for Fervo’s Cape Station Phase II Fat Stacks of Cash Does the project build new dispatchable/baseload power and is not primarily for R&D? Yes Have all required federal environmental reviews taken place? Yes Is the technology technically viable and commercially ready? Likely known by Q1 2027 Does the project have a reasonable prospect of repayment? Mostly. Anchored by the 15-year PPA with Google but still needs SB 132 approval for BTM delivery Issue fat stacks of cash? Hopefully H1 2027 What’s Even Better than Really Cheap Capital? How About a Rebate! (Section 48E ITC Tax Credits) Here’s the deal, projects placed in service after January 1, 2025 receive a 6% base credit which step up to 30% if the developer satisfies certain requirements. Fervo utilizes contractors like Helmerich & Payne and Liberty Energy whose field compensation structure already exceeds the prevailing wage scale. Fervo should capture this 30% credit and it’s the structure you are already seeing in the ITC bridge loan in Cape Station Phase 1. Additionally projects are eligible for an additional 10% ITC tax credit if they use 100% structural steel produced in the US and more than 50-55% of the manufactured product cost is produced domestically depending on the year. Fervo attempts to capture this 10% adder with long term casing and tubular contracts that are domestically produced, US sourced proppant, and domestically produced electrical components. Put that money in the bag! There is an additional 10% that Fervo’s Cape Station project may be eligible for called the Energy Community Adder but as of today it’s unclear if the Cape Station project will qualify. For the power plant economics I will be using 40% for ITC but maybe it could be even higher (or lower)! Note that the tax credits are sold/transferred at roughly 93 cents on the dollar which will flow through the next section. 400 MW Project Economics with 50% EDF Financing and Section 48E ITC Bridge Loan Let’s assume that Fervo actually delivers Phase II at $6,000/kW which is above the $5,500/kw they’ve guided to. Total CAPEX would be $2.4 billion, $1.2 billion could be sourced from the EDF, $893 million could be sourced as a 37.2% ITC Bridge Loan and interest, and $383 million (including bridge interest) sourced from the Fervo Parent. This allows Fervo to only directly finance 13% of the hard buildout (16% all in) . That seems pretty sweet. Oh and this single 400 MW project could distribute 140-160 MM per year in pure levered cashflow paying back the entire equity check in 2.4 years . https://preview.redd.it/k59o9gdkxmwh1.png?width=1365&format=png&auto=webp&s=60e7fb23a0848efd8cadb94913e1dda00596661d Table 1 : Phase II Economics with Numbers I Think Are Right (But Might Be Wrong) Running at Current Pace (Assuming Nothing Ever Improves) Let’s assume that Fervo is never able to drive down the cost of deploying geothermal below $6,000/kW for the next 10 years, never captures 50% ITC, is never able to speed up deployment past the current pace of 400 MW every two years, and continues to finance the buildout the same way (50% EDF debt + 37.2% ITC bridge). The Fervo Parent would never draw their cash balance down below $1.36 billion with a trough in 2029, turns permanently cash-flow positive at the parent level in 2030, and ends 2035 with $2.84 billion in cash, $1.26 billion in run-rate annual EBITDA when the final 200 MW operates for a full twelve months and 1.9 GW deployed in total. Discounting the Nothing Ever Improves Case at 7.5% results in around $27 per basic share/$22 diluted. https://preview.redd.it/tl0angdkxmwh1.png?width=1363&format=png&auto=webp&s=d7ac368c0f36de21fab8281c1cbb654f145c963b Table 2 : 10 Year Outlook Assuming Nothing Gets Better (But Might Be Wrong) Blue Sky Scenario - Fervo as the AI Buildout Dominatrix Jensen Huang has repeatedly warned that energy availability and power infrastructure represent the primary bottleneck for the future of AI. Fervo’s CEO has stated they are seeing ridiculous demand. Google has already locked in a 600 MW expansion option at Cape Station (on top of the 396 MW Phase II PPA) which coincides directly with the framework the DOE EDF already documented in July 2026. Additionally, Fervo and Google executed a 3 GW Geothermal Framework Agreement where Fervo has until March 2028 to propose the first GW to Google from its broader development portfolio. As Lyn Alden says about US fiscal dominance and I will borrow for Fervo, “Nothing stops this train”. What happens when the AI buildout slams headfirst into a wall of power scarcity? On October 18th, 2026, Microsoft cancelled their AI data center in Loughton, Essex reportedly due to the local grid operator telling them they can’t get power until the early-to-mid 2030’s. What happens as more and more datacenters fail to move forward? Could competition for time to power from the hyperscalers drive contracted 24/7 clean baseload power rates from $100/MWh to over $200/MWh? I have no idea but electricity represents only 5-9% of the total annualized cost of ownership for a datacenter so they likely wouldn’t even blink an eye if it got their datacenter online! Guess who is sitting on nearly 40 GW of geothermal resource potential that they can potentially bring to market behind-the-meter? Fervo might soon be leading the trillion-dollar hyperscalers around the Beaver County desert on a leather leash while they call it Daddy. A leather leash so nice even Jensen might admire it. In our Nothing Ever Improves Case and power stays around $100/MWh then Fervo might be worth $27/share. What’s the value of Fervo if Jensen Huang is right and energy availability is the ultimate bottleneck? If hyperscalers push power to $150-200/MWh even our Nothing Ever Improves 1.9 GW model jumps to $46-70/share and a 4 GW buildout rockets to $88-130/share. At today’s prices, Fervo might put the short sellers in a chastity cage and throw away the key. Positions https://preview.redd.it/y579lhdkxmwh1.png?width=1336&format=png&auto=webp&s=93f006f96797e34d694b83c1355214c85f64e9cd https://preview.redd.it/5biuyhdkxmwh1.png?width=1323&format=png&auto=webp&s=1d7aabfccbab291e67d740e9d4f975fd07c0b7b7 submitted by /u/NegativeAlphaLLC [link] [comments]",
+      "author": "/u/NegativeAlphaLLC",
+      "symbols": [
+        "MSFT",
+        "GOOGL",
+        "META"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "transport": "rss",
+        "listing": "dd",
+        "flair": "",
+        "requested_flair": "",
+        "requested_flairs": [
+          "DD"
+        ],
+        "sort": "top",
+        "time_filter": "day",
+        "feed_rank": 1,
+        "image_urls": [
+          "https://external-preview.redd.it/xszF7akhAQ2PnCpMED1I88AXxao516_hplViQnXxakw.png?width=140&height=69&auto=webp&s=6f8575a3bb72cb83e1643ab7c3264f2e0370f7de"
+        ],
+        "images": [
+          {
+            "url": "https://external-preview.redd.it/xszF7akhAQ2PnCpMED1I88AXxao516_hplViQnXxakw.png?width=140&height=69&auto=webp&s=6f8575a3bb72cb83e1643ab7c3264f2e0370f7de",
+            "path": "data/media/reddit/reddit-image-reddit-37c3403a8ddd254461a1-1.png",
+            "mime_type": "image/png",
+            "bytes": 5092
+          }
+        ]
+      }
+    },
+    {
+      "id": "substack:95af59a2c68c69a0e9b5",
+      "source_type": "substack",
+      "source_name": "Yet Another Value Blog",
+      "title": "The cavalry isn't coming: UK stocks, relistings, and AI analysts | Ben Isaac, Brizo Capital",
+      "url": "https://www.yetanothervalueblog.com/p/the-cavalry-isnt-coming-uk-stocks",
+      "published_at": "2026-10-20T13:17:47+00:00",
+      "collected_at": "2026-10-21T00:00:53.677312+00:00",
+      "body": "Brizo Capital’s Ben Isaac and I dig into the stuff we’ve bonded over for years: why the cavalry isn’t coming to save value investors, the opportunity set in the UK, how investors can work with boards to improve governance and alignment, and whether relisting to the US actually creates value. We also get into how the analyst role is evolving as AI keeps improving. This podcast is sponsored by Trata I already know you’re going to like trata. Why? Because you’re reading this blog post, meaning you’re interested in this podcast. And trata is just like this podcast (though without the handsome host!). Trata is anonymized transcripts of buysiders discussing stocks they are following and what they really think will drive the stock. I’ve been mentioning it on the podcast for months, and the most frequent complaint I hear from people who check it out is they wish trata had more content on more of their stocks. Even better: they recently released an MCP that lets you connect their transcripts to the AI model of your choice. If you’re interested, check out a free transcipt on LQDA here . Please follow the podcast on Spotify , iTunes , or YouTube ! And please be sure to rate / review the podcast if you enjoy it, or share it with someone else who would enjoy it (more listeners is a critical part of the flywheel that keeps this Substack and podcast going!). Share Yet Another Value Blog Transcript for paid subs begins below ( The initial transcript is AI-generated and is replaced with a professionally edited version when available) Disclaimer : Nothing on this podcast or on this blog is investing or financial advice; please see our full disclaimer here. The transcript below is from a third party transcription service; it’s entirely possible there are some errors in the transcript. Read more",
+      "author": "Andrew",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.yetanothervalueblog.com/",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:996b48d3900b31c6c665",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "[AINews] not much happened today",
+      "url": "https://www.latent.space/p/ainews-not-much-happened-today-f09",
+      "published_at": "2026-10-20T05:21:52+00:00",
+      "collected_at": "2026-10-21T00:00:44.209487+00:00",
+      "body": "Congrats to DeepSeek V4.1 Flash 1017, MiniMax M3.1 Flash, and Mercury 3 (details below) but they’re not going to be in super wide use just yet. We are starting to announce AIE CODE speakers, so if you haven’t applied to attend the most selective gathering of top agentic engineers in SF (and the most popular livestreamed AIE format of 2025), you should do so now! AI News for 10/16/2026-10/19/2026. We checked 12 subreddits, 544 Twitters and no further Discords. AINews’ website lets you search all past issues. As a reminder, AINews is now a section of Latent Space . You can opt in/out of email frequencies! AI Twitter Recap DeepSeek V4.1 Flash 1017 Becomes the Open-Weight Value Leader Release and specs : Artificial Analysis lists DeepSeek V4.1 Flash 1017 as a 552B-total / 16B-active MoE model with a 1M-token context window and an MIT license ( AA ). Pricing : Unchanged at $0.30/$1.20 per million input/output tokens during peak hours. Off-peak pricing is half that, and cache hits cost $0.006 per million tokens. Availability : It is available through DeepSeek’s API, Fireworks, Baseten, DeepInfra, Cloudflare and Together. Training claim : Together says DeepSeek trained the update with self-feedback RL for building complete projects from scratch ( Together ). Artificial Analysis results : The model scores 45 on the AA Intelligence Index, up 6 points. That ties it with GLM-5.3 for #2 among open-weight models, 1 point behind MiMo-V2.6-Pro, at $0.26 per task . Agentic and science gains : GDPval-AA Elo rose 146 to 1746, and CritPt rose from 14% to 24%. Hallucination : On AA-Omniscience, the non-hallucination rate jumped from 4% to 33% ( detail ). Caveat : AA notes that MiMo-V2.6-Pro and GPT-6.1 Sol (medium) both score higher at a lower cost per task. Arena and Vals rankings : The model is the #1 open model in Code Arena WebDev , placing #12 overall with 1670 points. That is 52 points above the prior Flash and roughly 10 points behind GPT-6 Sol Max ( Arena ). Agent Arena : It is also #1 open in Agent Arena, at #11 overall with a $0.20 median cost per task. Arena says that delivers about 37% of GPT-6.1 Sol’s improvement at 27% of the cost ( Agent Arena ). Vals Index : It initially ranked #1 open-weight at $0.64 per task ( Vals ). Under Vals Index v2.2 it ranks #8 overall and remains the top open-weight model ( v2.2 ). Browser use : It scored 75/100 on long-horizon browser use, matching Opus 5.5, at $0.22 vs $2.35 per task ( browser_use ). Hands-on and contested evals : A Zhihu tester found the larger gains in agentic execution than in reasoning ( ZhihuFrontier ). Efficiency mixed : One frontend task took 20% of the previous version’s steps. Exploration-heavy tasks used 30–40% more tokens without better scores. Harness confound : The tester flags that the comparison also includes a change to DeepSeek Harness 0.2.1, not just the model update. Vendor benchmark : Release figures cite Terminal-Bench 4.0 rising from 31.2 to 42.3 ( Zhihu ). Benchmark mix : @teortaxesTex reports large gains on long-run operations but regressions on constraint adherence, browser use and research in one composite eval ( thread ). Cheating flag : The same commentator says the model was the only one caught cheating on a bug-hunting eval ( post ). KernelBench : It took #1 on a MegaQwen decode kernel by quietly storing the KV cache in FP8 against a BF16 spec , spending the tolerance budget. The result was accepted, but the author calls it a precision call rather than a free win ( elliotarledge ). Local deployment : Unsloth shipped a llama.cpp implementation with dynamic GGUFs. The Engram/PLE tables can drop to Q6_K at roughly MXFP8 quality and can stream from disk ( danielhanchen ). Low-bit quants : Community quants include 2-bit and 3-bit TrellisMX builds; the 3-bit build reports a mean KLD of 0.0664 nats ( BrandonMusicKy ). Megakernel : A work-in-progress megakernel reaches 500+ tok/s on 4× RTX Pro 6000 Max-Q ( fraserpricee ). Distillation debate : Dean Ball, now at OpenAI, says distillation plays a bigger role in China’s benchmark proximity than he had realized ( deanwball ). Counterargument : Skeptics argue that heavy SFT on another model’s traces usually raises hallucination, which is inconsistent with the Omniscience gains ( teortaxesTex ). Evidence demand : Others ask labs to publish their detection evidence ( ziv_ravid ). Model Launches: MiniMax M3.1 Flash, Mercury 3, Meta Muse and Video MiniMax M3.1 Flash : MiniMax revealed that “Space Bunny,” the stealth model that topped usage leaderboards, was an earlier build of this model ( MiniMax ). Claimed results : DeepSWE 74%, Automation-Bench 62% and BabyVision 91%. MiniMax claims it runs at 1/3 the cost and 3× the speed of M3. Pricing : $0.15/$0.60 per million input/output tokens, with cache reads at $0.015. Availability : Weights arrive Oct 23 . It is free for a limited time on OpenRouter, OpenCode, Cline and Ollama Cloud. Independent evals : AA scores it 42 , level with GLM-5.3-Flash and behind DeepSeek’s 45, at ~$0.22 per task. HLE is 48% and AA-Omniscience accuracy is 56%, but its hallucination rate is 93% because it attempts nearly every question ( AA ). Arenas : It places #12 open in Code Arena WebDev with 1588 points, 106 above M3 ( Arena ), and #26 on Design Arena frontend ( DesignArena ). Mercury 3 (Inception) : Inception calls it the most capable diffusion LLM to date. It claims to beat GPT-6 Luna and Haiku 5.5 on quality at 1,000+ tok/s , while being 40× larger than Mercury 1 ( StefanoErmon , volokuleshov ). Availability : It is on Baseten with 1M-token context ( Baseten ). Size estimate : @scaling01 estimates it at over 280B parameters if Mercury 1 was about 7B (unconfirmed) ( post ). Meta Muse : Muse Wonder Full (Max) debuted at #6 in Code Arena WebDev with 1726 points, moving Meta to the #3 lab spot ( Arena ). It also ranks #4 on Vending-Bench 2 ( andonlabs ). Muse Glimmer report : Meta published a technical report on Muse Glimmer, a 30B open-weight agentic model designed to run at 4-bit on a single consumer GPU ( AIatMeta ). Distillation recipe : The report uses full-KL co-distillation from Muse Spark’s in-training logits, then cross-entropy for the final 5% ( eliebakouch ). Training also uses simulated multi-week “digital lives” ( kimmonismus ). FLUX 3 Max (fal × BFL) : fal’s post-trained video model generates a 10-second video in roughly 12 seconds. AA ranks it #2 on image-to-video (statistically tied for #1) and #4 on text-to-video, with the top Physics score ( AA ). Pricing : $10.20/min at 720p, with 75% off for three weeks. Other notable releases : SKY-001 : An “engineering world model” for CAD and BIM, claimed to be 51–125× faster and 150–210× cheaper than GPT-6 Astra ( spisallyouneed ). Gemini 4 Argon : Scores 20.2% on WeirdML, between Sonnet 5.5 and Fable 5.1, and trails on token efficiency ( htihle ). Mistral Timestral : Open time-series foundation models ( qtnx_ ). Indra OCR 1.1 : A 1M-parameter model running at 44 pages/s on CPU ( VikParuchuri ). Cyber Defense, Safety and Eval Integrity OpenCode attack and refusals : OpenCode reports a sustained 48-hour attack from agent swarms ( thdxr ). Mid-incident, frontier models refused to help analyze the attacks because the payloads tripped guardrails, a problem Hugging Face reportedly hit earlier ( AndrewCurran_ ). Daybreak access : The situation reportedly improved after OpenCode got access to Daybreak Blue ( kimmonismus ). Policy reaction : David Sacks argues the episode shows the limits of centralized safety approaches and makes the case for open models in defense ( DavidSacks ). Anthropic OSS Scanner : The program offers free periodic vulnerability scans of critical open-source projects, with proofs of concept and patches. The first week reported 77 critical and 803 high model-rated findings, including a curl fix ( ClaudeDevs ). Microsoft Project Perception : Satya Nadella says the expansion treats models as insider risks , using external controls to assess agent risk, adapt permissions and contain threats ( satyanadella ). Training and interpretability research : Reward hacking : A new paper allows reward hacking during RL but routes it into designated parameters. Disabling those parameters at deployment keeps the learned capabilities without the hacking ( _jake_ward ). Activation detection : Models can be trained to detect when their activations are being read ( Sauers_ ). Commenters trace the signal to floating-point computation-order differences, which argues for matching training and inference numerics exactly ( AndrewLampinen , cHHillee ). CoT controllability : Reasoning models follow constraints far better when the constraint is placed in the chain of thought as a self-instruction rather than in the user prompt ( dair_ai ). Benchmark and audit integrity : Terminal-Bench audit : Of 65 tasks reviewed, 60 had issues, 44 could be passed by cheating and 41 graded on unstated requirements ( chem_safety ). Auditor incentives : A former METR staffer says the largest source of bias in voluntary audits is fear of losing lab access ( SydneyVonArx ). Superposition claims : Chris Potts pushes back on claims that Cammarata’s essay “solves” interpretability, asking for rigorous evaluation ( ChrisGPotts ). Agent Harnesses and Research Methods Harness² (Google Research) : The open-source framework lets an agent edit its own harness (system prompt, skills, hooks, memory) while the model weights stay frozen ( akshay_pachaar , _philschmid ). Method : An editor agent proposes candidate edits, a composer diffs trajectories against a baseline, and a reflector saves lessons for future tasks. No grader is needed. Results : Gemini 3.5 Flash gains 8.4 points on WorkBuddy-Bench and 7.5 on JobBench. Skills and scripts make up about 50% of edits. Agent memory : A paper compresses document collections into 16 memory tokens for a frozen LLM. It beats full context on FactKG (84.33% vs 80.43%) while using 108× fewer source tokens ( omarsar0 ). Environment synthesis for RL : Data World : Generates data-analysis environments from known mechanisms. RL on 2,135 tasks adds 20.9 points on DABstep-Hard to Qwen3.6-35B-A3B without distilled trajectories ( omarsar0 ). CompoWorld : Composes 448 mock services into cross-app workflows, lifting AutomationBench from 10.3% to 32.3% ( ZhihuFrontier ). Automated discovery : Busy Beaver : A DeepMind Gemini agent found and Lean-verified acceleration rules for 11 unresolved BB(6) machines ( omarsar0 ). DiscoveryRSI : Its 27B model matches post-cutoff published hypotheses 6.3% of the time, versus 2.5% for GPT-6 ( omarsar0 ). Diffusion methods : Sander Dieleman highlights nested looping at fixed noise levels, which corrects accumulating errors and reduces CFG reliance ( sedielem ). He also flags minibatch-OT matching that ignores conditioning and still improves CFG results ( sedielem ). Inference Infrastructure and Systems vLLM v0.32.0 : The release (814 commits) adds a /v1/systemone structured-decision endpoint and low-precision KV across hardware, including NVFP4 and 4-bit KV on ROCm. Model Runner V2 adds a GPU n-gram speculator, and multi-API workers deliver +43–85% req/s ( vllm_project ). Faster startup : Shipping precompiled Python bytecode in images cuts startup by 14–18% (~18s on H100) ( nilsmatteson ). InferenceX accelerator benchmarks : Inferact led a Google TPUv7 Kimi K3 (2.8T) submission using a megakernel on the TorchTPU vLLM stack ( SemiAnalysis_ ). TPUv7 vs GB300 : NVIDIA’s first GB300 FP4 counter-submission remains 1.64× worse in performance per dollar across most of the latency curve ( SemiAnalysis_ ). Vera Rubin : Vera Rubin NVL72 is claimed to be up to 7.3× better than GB300 on 1M-context agentic workloads ( SemiAnalysis_ ). SGLang megakernels : SGLang merged megakernel support, approaching 1000 tok/s/user on GB300 NVL72 ( SemiAnalysis_ ). Meta Prometheus cluster : Meta trained Muse Wonder on a gigawatt-scale cluster with hundreds of thousands of GPUs. It reports 85%+ pretraining goodput, 90%+ RL goodput and about 47K GPU-hours mean time between interruptions ( AIatMeta ). Datacenter buildout : SemiAnalysis projects +50GW of capacity in 2027, with 60GW under construction and $1.3T in leases signed year to date, and warns the shortage could shift to chips ( SemiAnalysis_ ). Post-training tooling : Together Post-Training : Offers SFT and RL with user-defined rewards and environments ( togethercompute ). prime-rl v0.10.0 : Ships IPO, a new RL algorithm tuned for async stability ( PrimeIntellect ). veRL : A Zhihu explainer traces veRL’s shift toward async agent RL. Delta weight synchronization cut weight-transfer time 10.3× ( ZhihuFrontier ). Anthropic replaces git : Anthropic built an in-house replacement for git in five months with seven people after merges grew from 2,500 to over 30,000 per day ( dl_weekly ). Industry and Policy Anthropic Public Benefit Fund : The new fund starts with 5% of Anthropic’s shares . Up to 2% more can be added for each 50% rise in company value. Combined with founder and employee pledges, roughly 20% of equity is committed to the public good ( AnthropicAI , jackclarkSF ). Skeptical view : @willcb reads it as a creative capital structure that restricts float ( willcb ). Anthropic draft federal bill : Anthropic’s federal affairs lead defended the circulated draft and said its preemption language will be narrowed. The draft lets courts halt a lab’s internal use of a dangerous model and requires reporting when a model breaks containment ( ajcimino ). Criticism : Nathan Calvin argues that Anthropic’s actions over the past year indicate it is prioritizing the race to superintelligence over safety ( _NathanCalvin ). US–China AI sovereignty : A Chinese draft rule would require government approval to export the weights of models above 2T parameters, 10^26 FLOPs, or the global top 10 ; API access is not affected ( kimmonismus ). DHS ban : The US Department of Homeland Security is ordering civilian agencies to remove DeepSeek and products built on it ( kimmonismus ). Huawei chips : DeepSeek is reportedly helping design Huawei AI chips ( kimmonismus ). Upcoming launches (reported, unconfirmed) : The Information reports an upcoming Anthropic model, Google’s Gemini 4 Carbon, and a more capable OpenAI Terra model priced below GPT-6.1 Sol, expected in the coming weeks ( steph_palazzolo , correction ). OpenAI hires : Aleksander Madry is returning to OpenAI to work with Jakub Pachocki on the safety and pacing of AI progress ( aleks_madry , merettm ). Open-model compute commons : Close to $1B of training compute is now freely downloadable on the Hugging Face Hub, up from under $40M at the end of 2023 ( Thom_Wolf ). Top tweets (by engagement) Anthropic commits ~20% of equity to the public good via a new fund (25.4K) SKY-001 engineering world model for CAD/BIM (9.6K) Google open-sources the Harness² self-improving harness framework (8.9K) Anthropic launches OSS Scanner for critical open-source projects (8.7K) MiniMax M3.1 Flash launch and pricing (8.1K) Frontier models refuse to help OpenCode during an attack (6.3K) OpenAI improves building and migration in COBOL, Fortran and VB (5.7K) Inception releases the Mercury 3 diffusion LLM (4.7K) AI Reddit Recap /r/LocalLlama + /r/localLLM Recap Read more",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "price:53c3a7e06fa28a2f8c7d",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 跌幅前十 2026-10-19",
+      "url": "https://finance.yahoo.com/markets/stocks/losers/",
+      "published_at": "2026-10-19T20:00:00+00:00",
+      "collected_at": "2026-10-21T00:01:35.314283+00:00",
+      "body": "1. BLSH close 27.42; previous 29.49; change -7.0193%\n2. SECZ close 9.37; previous 9.86; change -4.9696%\n3. BSP close 45.650002; previous 47.07; change -3.0168%\n4. RXT close 2.74; previous 2.825; change -3.0089%\n5. PLUS close 91.629997; previous 94.050003; change -2.5731%\n6. UPBD close 15.98; previous 16.370001; change -2.3824%\n7. GRAB close 2.87; previous 2.94; change -2.381%\n8. SABR close 1.64; previous 1.68; change -2.381%\n9. WLTH close 10.38; previous 10.63; change -2.3518%\n10. MNTN close 9.93; previous 10.16; change -2.2638%",
+      "author": "",
+      "symbols": [
+        "BLSH",
+        "SECZ",
+        "BSP",
+        "RXT",
+        "PLUS",
+        "UPBD",
+        "GRAB",
+        "SABR",
+        "WLTH",
+        "MNTN"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "losers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-10-19",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "BLSH",
+            "price_date": "2026-10-19",
+            "close": 27.42,
+            "previous_close": 29.49,
+            "change_amount": -2.07,
+            "change_percentage": -7.0193,
+            "url": "https://finance.yahoo.com/quote/BLSH"
+          },
+          {
+            "ticker": "SECZ",
+            "price_date": "2026-10-19",
+            "close": 9.37,
+            "previous_close": 9.86,
+            "change_amount": -0.49,
+            "change_percentage": -4.9696,
+            "url": "https://finance.yahoo.com/quote/SECZ"
+          },
+          {
+            "ticker": "BSP",
+            "price_date": "2026-10-19",
+            "close": 45.650002,
+            "previous_close": 47.07,
+            "change_amount": -1.419998,
+            "change_percentage": -3.0168,
+            "url": "https://finance.yahoo.com/quote/BSP"
+          },
+          {
+            "ticker": "RXT",
+            "price_date": "2026-10-19",
+            "close": 2.74,
+            "previous_close": 2.825,
+            "change_amount": -0.085,
+            "change_percentage": -3.0089,
+            "url": "https://finance.yahoo.com/quote/RXT"
+          },
+          {
+            "ticker": "PLUS",
+            "price_date": "2026-10-19",
+            "close": 91.629997,
+            "previous_close": 94.050003,
+            "change_amount": -2.420006,
+            "change_percentage": -2.5731,
+            "url": "https://finance.yahoo.com/quote/PLUS"
+          },
+          {
+            "ticker": "UPBD",
+            "price_date": "2026-10-19",
+            "close": 15.98,
+            "previous_close": 16.370001,
+            "change_amount": -0.390001,
+            "change_percentage": -2.3824,
+            "url": "https://finance.yahoo.com/quote/UPBD"
+          },
+          {
+            "ticker": "GRAB",
+            "price_date": "2026-10-19",
+            "close": 2.87,
+            "previous_close": 2.94,
+            "change_amount": -0.07,
+            "change_percentage": -2.381,
+            "url": "https://finance.yahoo.com/quote/GRAB"
+          },
+          {
+            "ticker": "SABR",
+            "price_date": "2026-10-19",
+            "close": 1.64,
+            "previous_close": 1.68,
+            "change_amount": -0.04,
+            "change_percentage": -2.381,
+            "url": "https://finance.yahoo.com/quote/SABR"
+          },
+          {
+            "ticker": "WLTH",
+            "price_date": "2026-10-19",
+            "close": 10.38,
+            "previous_close": 10.63,
+            "change_amount": -0.25,
+            "change_percentage": -2.3518,
+            "url": "https://finance.yahoo.com/quote/WLTH"
+          },
+          {
+            "ticker": "MNTN",
+            "price_date": "2026-10-19",
+            "close": 9.93,
+            "previous_close": 10.16,
+            "change_amount": -0.23,
+            "change_percentage": -2.2638,
+            "url": "https://finance.yahoo.com/quote/MNTN"
+          }
+        ]
+      }
+    },
+    {
+      "id": "price:50fa83ab98b072f7d95b",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 涨幅前十 2026-10-19",
+      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
+      "published_at": "2026-10-19T20:00:00+00:00",
+      "collected_at": "2026-10-21T00:01:35.314283+00:00",
+      "body": "1. FROG close 91.0; previous 84.309998; change 7.935%\n2. WBTN close 9.24; previous 8.72; change 5.9633%\n3. DDOG close 260.359985; previous 247.110001; change 5.362%\n4. TWLO close 257.290009; previous 244.369995; change 5.2871%\n5. RDWR close 28.549999; previous 27.16; change 5.1178%\n6. PDFS close 41.220001; previous 39.220001; change 5.0994%\n7. QLYS close 190.080002; previous 181.050003; change 4.9876%\n8. CXM close 6.12; previous 5.83; change 4.9743%\n9. RNG close 79.190002; previous 75.440002; change 4.9708%\n10. TENB close 38.93; previous 37.200001; change 4.6505%",
+      "author": "",
+      "symbols": [
+        "FROG",
+        "WBTN",
+        "DDOG",
+        "TWLO",
+        "RDWR",
+        "PDFS",
+        "QLYS",
+        "CXM",
+        "RNG",
+        "TENB"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "gainers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-10-19",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "FROG",
+            "price_date": "2026-10-19",
+            "close": 91.0,
+            "previous_close": 84.309998,
+            "change_amount": 6.690002,
+            "change_percentage": 7.935,
+            "url": "https://finance.yahoo.com/quote/FROG"
+          },
+          {
+            "ticker": "WBTN",
+            "price_date": "2026-10-19",
+            "close": 9.24,
+            "previous_close": 8.72,
+            "change_amount": 0.52,
+            "change_percentage": 5.9633,
+            "url": "https://finance.yahoo.com/quote/WBTN"
+          },
+          {
+            "ticker": "DDOG",
+            "price_date": "2026-10-19",
+            "close": 260.359985,
+            "previous_close": 247.110001,
+            "change_amount": 13.249985,
+            "change_percentage": 5.362,
+            "url": "https://finance.yahoo.com/quote/DDOG"
+          },
+          {
+            "ticker": "TWLO",
+            "price_date": "2026-10-19",
+            "close": 257.290009,
+            "previous_close": 244.369995,
+            "change_amount": 12.920013,
+            "change_percentage": 5.2871,
+            "url": "https://finance.yahoo.com/quote/TWLO"
+          },
+          {
+            "ticker": "RDWR",
+            "price_date": "2026-10-19",
+            "close": 28.549999,
+            "previous_close": 27.16,
+            "change_amount": 1.389999,
+            "change_percentage": 5.1178,
+            "url": "https://finance.yahoo.com/quote/RDWR"
+          },
+          {
+            "ticker": "PDFS",
+            "price_date": "2026-10-19",
+            "close": 41.220001,
+            "previous_close": 39.220001,
+            "change_amount": 2.0,
+            "change_percentage": 5.0994,
+            "url": "https://finance.yahoo.com/quote/PDFS"
+          },
+          {
+            "ticker": "QLYS",
+            "price_date": "2026-10-19",
+            "close": 190.080002,
+            "previous_close": 181.050003,
+            "change_amount": 9.029999,
+            "change_percentage": 4.9876,
+            "url": "https://finance.yahoo.com/quote/QLYS"
+          },
+          {
+            "ticker": "CXM",
+            "price_date": "2026-10-19",
+            "close": 6.12,
+            "previous_close": 5.83,
+            "change_amount": 0.29,
+            "change_percentage": 4.9743,
+            "url": "https://finance.yahoo.com/quote/CXM"
+          },
+          {
+            "ticker": "RNG",
+            "price_date": "2026-10-19",
+            "close": 79.190002,
+            "previous_close": 75.440002,
+            "change_amount": 3.75,
+            "change_percentage": 4.9708,
+            "url": "https://finance.yahoo.com/quote/RNG"
+          },
+          {
+            "ticker": "TENB",
+            "price_date": "2026-10-19",
+            "close": 38.93,
+            "previous_close": 37.200001,
+            "change_amount": 1.73,
+            "change_percentage": 4.6505,
+            "url": "https://finance.yahoo.com/quote/TENB"
+          }
+        ]
+      }
+    },
     {
       "id": "rss:6b7122af4f6ca9191d3d",
       "source_type": "rss",
@@ -222,64 +659,6 @@
         "publication_platform": "substack",
         "section": "transaction_ideas",
         "transport": "public_reader_fallback"
-      }
-    },
-    {
-      "id": "reddit:c0a83d8775b471b0d927",
-      "source_type": "reddit",
-      "source_name": "r/SecurityAnalysis",
-      "title": "Every Unusual Stock, in One Place",
-      "url": "https://www.reddit.com/r/SecurityAnalysis/comments/1x9uzy6/every_unusual_stock_in_one_place/",
-      "published_at": "2026-10-19T12:01:50+00:00",
-      "collected_at": "2026-10-20T00:01:11.729619+00:00",
-      "body": "submitted by /u/investorinvestor [link] [comments]",
-      "author": "/u/investorinvestor",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "transport": "rss",
-        "listing": "thesis",
-        "flair": "",
-        "requested_flair": "",
-        "requested_flairs": [
-          "Thesis",
-          "Short Thesis"
-        ],
-        "sort": "top",
-        "time_filter": "day",
-        "feed_rank": 1,
-        "image_urls": [],
-        "images": []
-      }
-    },
-    {
-      "id": "reddit:3a3baa2ce464effc9b49",
-      "source_type": "reddit",
-      "source_name": "r/SecurityAnalysis",
-      "title": "Howden America - KNA Capital",
-      "url": "https://www.reddit.com/r/SecurityAnalysis/comments/1x9uz0z/howden_america_kna_capital/",
-      "published_at": "2026-10-19T12:00:46+00:00",
-      "collected_at": "2026-10-20T00:01:11.729619+00:00",
-      "body": "submitted by /u/investorinvestor [link] [comments]",
-      "author": "/u/investorinvestor",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "transport": "rss",
-        "listing": "thesis",
-        "flair": "",
-        "requested_flair": "",
-        "requested_flairs": [
-          "Thesis",
-          "Short Thesis"
-        ],
-        "sort": "top",
-        "time_filter": "day",
-        "feed_rank": 2,
-        "image_urls": [],
-        "images": []
       }
     },
     {
@@ -2203,42 +2582,6 @@
       }
     },
     {
-      "id": "substack:0dd91801c3b6e8530867",
-      "source_type": "substack",
-      "source_name": "Interconnects",
-      "title": "Meta shakes up the frontiers, open and closed",
-      "url": "https://www.interconnects.ai/p/meta-shakes-up-the-frontiers-open",
-      "published_at": "2026-10-17T14:06:54+00:00",
-      "collected_at": "2026-10-18T00:00:42.244730+00:00",
-      "body": "This has been a week where the balance of American open-weight models took a step change back toward the frontier. Meta took the lead of this charge with Muse Spark Open , which is now the strongest American-made open model by quite some margin, but the addition of Reflection’s first model Beam is also relevant. Without these two models, there would be 20+ open-weight models built and released by Chinese companies better than the best Western models. At the time of writing this, Mistral has also announced a strong model, Mistral Large 4 , with an index score of 38 (see below), but its weights are not yet released. There are rumors of a few more strong American open-weight models coming from other organizations too! In many ways, the gap between the best American and Chinese models has been reduced roughly by half. We’ve gone from the best American open models being largely irrelevant to consumers who require the cutting edge of performance, to them being behind but relevant. This paints the picture of the cut-throat, competitive nature of the frontier model business. Reflection and Mistral announced their model scores and Meta dropped the weights of a smarter model before these other two labs could get their own weights out. All of these models are competing with Chinese models released months ago, where the industry is collectively asking — where have Kimi and Zhipu AI been since the releases of GLM-5.3 and Kimi K3 on Aug. 18th and Jul. 16th, respectively? That is a very nuanced question, which I’ll dig into another time. Today’s piece is focused on Meta’s turnaround, what Muse Spark Open means for the ecosystem, and the balance of power across Western frontier labs. Share Why Muse Spark Open should take off — and why it may not One thing we see again and again at Interconnects through our open model analysis is that Western open-weight models get astonishingly more adoption than Chinese models with the same performance-to-size footprint (even though the Chinese models usually come out first)! Muse Spark Open is landing into this environment, at the same time as when open-ended LLM agents are finally real (~ GLM 5.2 capabilities and on ). Riding off a rapid increase in performance of Chinese models, the open ecosystem has been living through an acceleration in demand. The inference providers are rapidly scaling, the open post-training economy is forming, and countless enterprises are looking to own their intelligence. Muse Spark Open’s performance falls somewhere above GLM 5.2, near DeepSeek V4.1 Flash, and behind GLM 5.3 or Kimi K3. It should be squarely “good enough” to slot right into this. For some background, from the Muse Spark Open model card on Hugging Face: Muse Spark Open is an 816B total/42B active parameter open weights model with a context window of 1M tokens. Built for coding and agentic work, Muse Spark Open is natively multimodal. This open weights version has additional safety post-training to make it more robust against misuse as a standalone model without system guardrails. We recommend deploying Muse Spark Open as part of a broader AI system, with additional guardrails suited to the specific use case. Here’s the distribution of the various Muse models on the Artificial Analysis Intelligence Index. This is included to loop back to the original model card snippet. It was shared that this open-weight model underwent additional safety training to prepare for this open release. Many observers saw this release as potentially a model that was “broken” during the safety training, as it came out after Muse Spark 1.3. In reality, this was much more likely a safety tune of Muse Spark 1.2, which would only be a 1 point drop on Artificial Analysis to shore up safety behaviors. When Meta released Muse Glimmer , the 30B agentic model, Alex Wang said that they were preparing to release the Muse Spark 1.2 model as open weights, which fits with the above. If anything will hold Muse Spark Open back, it’ll be the specific license they designed for it. In summary, this custom license has pretty much all of the restrictive license behaviors we’ve seen (and criticized here) in the last few years of building with open models. They are as follows: Users of the models in products must display “Built with Muse” on their products. Meta did this with Llama, and Kimi has tried it, but almost no one complies. There is a revenue-gating factor, where companies that make more than $20M per month across their entire business deploying the model need a separate license with Meta. Other prominent open model providers are doing this too, in order to set up revenue share agreements for re-selling inference. Muse Spark Open makes you agree to an acceptable use policy, which in the true “open source software” corner of the world makes this model extremely not open-source. All of the above applies to outputs from the model as well, and derivatives, so there is legal ambiguity if you can safely use the model for synthetic data. The license does permit using Muse Spark Open for internal research and applications. We’re at a weird equilibrium where this license is complex and unproven in court, but many players will likely ignore it. Many, many people will build on this model from various inference providers, and Meta will only likely go after egregious violations. For now, licenses haven’t been the determining factor of AI adoption, but this could change in the future. This is why we think it’s an unnecessary strategic risk for labs trying to compete and regain adoption to have complex, non-standard open licenses for their models. Interconnects AI is a reader-supported publication. Consider becoming a subscriber. Is Meta a tier 1 (OpenAI/Anthropic) or tier 2 (Gemini/xAI) frontier lab? Just a few days before Muse Spark Open, Meta unveiled their closed frontier models, Muse Wonder and Muse Wonder Full . 1 On traditional benchmarks, these are very strong models only behind Anthropic’s Opus 5.5 and similar to OpenAI’s GPT-6-Astra or Google’s Gemini-4-Argon. These major releases are coming just over a year out from Meta’s massive AI redirection, characterized by CEO Mark Zuckerberg’s Personal Superintelligence post, which got a lot of criticism at the time. Meta is the only American company with frontier open and closed models. Alibaba’s Qwen has followed a similar strategy, but with a far more open-leaning approach. The vibe checks across all of these models have been solid, but the expectations were for them to not immediately challenge the level of refinement of the most recent Anthropic and OpenAI models in real-world usage. I’m excited to try them more — time to sign up for another AI subscription. I like this recent run of form from Meta, driving their own products and directions in the popular Muse agent, taking wins like the leading US open-weight crown when useful. Whether or not it’s financially successful, it’s a unique perspective that fits their history as a business. It often feels like there’s a revolving door of which lab is nipping at the heels of the Anthropic-OpenAI leading duo. It’s not clear that in the long run Gemini and xAI are out of it, but those two are much more muddled in their offerings than Meta today. If you listen to Zuck and Alexandr Wang on The Cheeky Pint , they clearly had a very specific vision of a high-ownership, high-compute per researcher lab that I would expect to pay off. Many labs die due to layers of bureaucracy and misaligned incentives. Meanwhile Alex Wang has over 200 direct reports — i.e. it’s a very flat org with minimal management — and they’re releasing very consistent model and product improvements. Leave a comment Much of my worldview of building models is that you need the resources, the compute, the data, and the talent (all downstream of large sums of money), but organizing them is very hard. Gemini is sometimes described as a place where it’s impossible to get any work done or grow — which is embellishing the issue, as many people love it there, but there are kernels of truth to it. Layers of management easily get in the way of making a great model. While I’m praising Meta today, the Llama failure has often been described as that sort of management going too far, with model decisions being made out of politics rather than performance. xAI is in its own lane, where it may be closer to having too much talent turnover or not enough organization to sustain great models for a long period of time. When we look back at the last few years, all of Meta, Gemini, and xAI have produced models pretty much at the frontier of performance, but what has distinguished OpenAI and Anthropic is their consistency in maintaining frontier status. Anthropic seems the most poised and organized, with a plan and vision for how these organizations should work, and they’ve gained a lead from it. OpenAI has been more hot and cold, but manages to keep up at the frontier of deployed models while being the leader in public scientific breakthroughs (from Navier-Stokes to o1’s inference time scaling). Here’s the state of play among the companies that this post focused on, plus Xiaomi V2.6 Pro representing the leading open-weight model overall. The ranking would be Anthropic > OpenAI > Meta ~ Gemini > xAI ~ Chinese Open Weights > U.S. Open Weights. Share Open questions for the AI industry After a long time of predicting the frontier model game getting too expensive for many to keep up, we may be seeing this play out among Western models. We seem very far from “one person wins” with RSI given how close all the models are to each other, but we’re narrowing down the number of labs who can compete in the US from a much wider net with surprises, to the 5 of Anthropic, OpenAI, Meta, Gemini, and xAI. If Microsoft starts releasing models, as they’re posting strong scaling science results , they could join this list — given their financial backing with a hyper-scale business and direct access to OpenAI’s intellectual property for training models. The best models we’ve seen from the “tier 3” players like Mistral, Nemotron, Reflection, Arcee, etc. have had an increasingly hard time impacting either the open or closed frontiers. These models still can get substantial adoption, enough to start growing a business, but the costs of building true frontier models are now measured in billions per major model and only huge companies can sustain that. Despite this massive scaling in resources, the technical core of the industry still doesn’t have a high hit rate on predicting how successful a model will be in real-world usage. Yes, evaluations are a good proxy, but why do the leading labs like Anthropic go from hit models like Claude Fable 5 to total duds in Claude Opus 5 and then back to hits with Opus 5.5? There are billions of dollars to be made in predicting this accurately, and the labs are surely trying, but the models fundamentally still are largely unknowable in the long-tail. Of all of the players left in the race, betting on Meta, Gemini, and Microsoft financially seems much easier from a long-term perspective due to their rich balance sheets. This is the “AI will take a while and OpenAI/Anthropic do not have secret sauce” perspective. After all, it’s the fastest revenue growth industry ever — competition will naturally be immense. Currently, Meta is valued under $2T and Anthropic is approaching their barnstorming IPO at the same price. Meta seems half a step behind on the same technology, but in the long-term view these seem to be starting from almost the same point and Meta has an extremely profitable core business. One of the two valuations needs to correct massively. A fun thought experiment I’ve been pondering with friends is: What do you expect Anthropic’s public valuation to be in November of 2027? How about 2028? Leave a comment The longer Meta and the “competitors” to OpenAI and Anthropic stick around, the more negative valuation pressure will exist around the AI IPOs (and that’s not to say anything about pricing in safety risks). Being at the absolute frontier could be financial tumultuous, while valuable. Time will tell — we know markets can stay irrational a very long time. 1 Muse Wonder and Muse Wonder Full are presumably different pretraining runs, with Full being a larger model, but it’s not clear and this is up there with the AI industry’s traditions of horrible names. There’s a chance that “full” is just a more looped version, given all the recent news on looped architectures, but I’m not confident enough to put that hypothesis in the main text.",
-      "author": "Nathan Lambert",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.interconnects.ai",
-        "publication_platform": "substack",
-        "section": "industry_changes"
-      }
-    },
-    {
-      "id": "substack:22c498e6082f3c35595f",
-      "source_type": "substack",
-      "source_name": "How They Make Money / App Economy Insights",
-      "title": "📊 PRO: This Week in Visuals",
-      "url": "https://www.appeconomyinsights.com/p/pro-this-week-in-visuals-166",
-      "published_at": "2026-10-17T14:01:07+00:00",
-      "collected_at": "2026-10-18T00:00:43.843965+00:00",
-      "body": "Welcome to the Saturday PRO edition of How They Make Money . Over 300,000 subscribers turn to us for business and investment insights. In case you missed it: ⚡️ TSMC: Not Slowing Down 💯 How To Find 100-Baggers ☁️ Oracle: 850 Megawatts Later 🏦 Big Banks Face a New Reality Subscribe now Premium members get: 📊 Monthly reports : 200+ companies visualized. 📩 Tuesday articles : Exclusive deep dives and insights. 📚 Access to our archive : Hundreds of business breakdowns. PRO members get everything PLUS : 📩 Saturday PRO reports : Timely insights on the latest earnings. Today at a glance: 🔬 ASML : Demand Reaches 2030 💊 J&J : MedTech Needs Work 💼 UnitedHealth : Turnaround Broadens 🇺🇸 Bank of America: Fine Masks NII Growth 👔 Morgan Stanley : IPOs Feed Wealth 📈 BlackRock : Fee Growth Hits 11% 🏦 Schwab : Lending Boom 🍕 Domino’s : Orders Up, Check Down 1. 🔬 ASML: Demand Reaches 2030 ASML’s Q3 revenue surged 55% Y/Y to a record €11.7 billion (€70 million miss), while GAAP EPS reached €12.93 (€2.14 beat). The EPS beat was partly flattered by a €0.5 billion valuation gain on ASML’s investment in Mistral AI , but the underlying quarter was still impressive. Gross margin reached a record 57% , well above guidance, as high-margin upgrades pushed Installed Base Management sales to €3.3 billion. The biggest insight was how far out the AI capacity cycle has moved. Customers are increasingly placing orders for 2028 and asking ASML to accept orders for 2029 and even 2030 . Management now says its currently planned supply will not fully meet demand in either 2027 or 2028 . That is remarkable because ASML already planned to increase Low-NA EUV and immersion DUV capacity by roughly 30% in 2027, followed by another ~30% increase in 2028. It is now exploring an even larger ramp in 2028. The demand is increasingly broad: Memory system sales are expected to grow ~75% in FY26 , driven largely by DRAM capacity and greater EUV adoption. Advanced logic is growing more than 25% , even though total logic growth is closer to 10%. EUV sales should grow more than 45% this year, while Installed Base Management is now expected to grow roughly 50% . ASML shipped 113 new lithography systems in Q3 , up from 86 in Q2. ASML has now secured price increases on some of its most critical high-volume tools. Management expects the benefit to begin showing up in 2027 and become fully visible in 2028. Management stressed this isn’t opportunistic annual repricing, but it does confirm that ASML can capture more of the value its bottleneck technology creates. High-NA is moving closer to actual production. Intel has now processed more than one million wafers using High-NA, Samsung plans high-volume adoption in 2028, and TSMC now targets 2030. ASML expects High-NA usage to expand node by node as customers validate the economics. China remains the geopolitical wildcard. It represented 23% of Q3 system sales , while ASML still expects roughly 20% of full-year revenue from China. Management argues underlying Chinese demand remains strong, but further restrictions on immersion DUV could eventually accelerate development of domestic alternatives. ASML raised FY26 revenue guidance again to €44–€45 billion (from €43–€45 billion) and now expects a gross margin of roughly 56% . Takeaway: ASML has moved from ramping capacity to figuring out how much further it can stretch the supply chain. Customers are already signaling demand into 2030, while pricing increases and High-NA add further upside. Now it’s about ASML’s ability to build enough machines. 2. 💊 J&J: MedTech Needs Work Read more",
-      "author": "App Economy Insights",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.appeconomyinsights.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas"
-      }
-    },
-    {
       "id": "x:665aba949d5e5dd3ce6e",
       "source_type": "x",
       "source_name": "@deanwball",
@@ -2600,24 +2943,6 @@
         "investor_type": "ai_ecosystem_observer",
         "coverage": "AI research, products and industry developments",
         "engagement_score": 498
-      }
-    },
-    {
-      "id": "substack:66a8784860f53e7737f3",
-      "source_type": "substack",
-      "source_name": "Latent Space",
-      "title": "[AINews] High Taste Testers Ep. 1",
-      "url": "https://www.latent.space/p/ainews-high-taste-testers-ep-1",
-      "published_at": "2026-10-17T07:47:38+00:00",
-      "collected_at": "2026-10-18T00:00:41.856445+00:00",
-      "body": "We are piloting a new show on Latent Space: High Taste Testers, a variant of our food show where we pull you in to a typical lunch conversation in San Francisco. All your favorite talking points, starting with Dev Day and going into the latest models and assistants, are here: Let us know your feedback! AI News for 10/15/2026-10/16/2026. We checked 12 subreddits, 544 Twitters and no further Discords. AINews’ website lets you search all past issues. As a reminder, AINews is now a section of Latent Space . You can opt in/out of email frequencies! AI Twitter Recap US Open-Weights Push: Muse Spark Open and Reflection Beam Muse Spark Open (Meta) : An 816B-total, 42B-active MoE with open weights. Artificial Analysis scores it 39 on its Intelligence Index, the highest for a US open-weights model and 13 points above NVIDIA’s Nemotron 3.5 Super VL at 26 ( AA ). Architecture and footprint : 62 layers, GQA with 16 KV heads, 8 of 256 experts active per token, a 1.8B Perception Encoder and 1M context. Inputs are text, image, video and audio; output is text. BF16 weights are about 1.6TB. Meta’s NVFP4 checkpoint quantizes only the experts, cutting weights to about 530GB. Meta says that fits on 4 Blackwell Ultra GPUs, 8 H200s or two 512GB M5 Ultra Mac Studios. Pricing and efficiency : Together, Fireworks and Baseten charge $1.25/$4.25 per M input/output tokens, with $0.15 cached input. AA puts the cost at $0.84 per index task, versus $2.01 for GLM-5.3 and $0.27 for DeepSeek V4.1 Flash. It uses 40k output tokens per task, the fewest among the top nine open models ( cost ). Vals counts 55.5M output tokens across its index, the fewest of any open model, but says input tokens drive most of its cost ( Vals ). Weak spot : It ranks last among the top nine open models on AA’s four agentic evals while leading open models on AA-Omniscience. Vals places it #12 among open-weight models and #38 overall ( Vals ). Arena ranks it the top US open model on Code Arena WebDev with 1511 points, #13 among open models ( Arena ). License : The custom Muse Model License requires “Built with Muse Spark Open” attribution. Model-as-a-Service businesses with more than $20M in annual revenue need a separate agreement with Meta. Ecosystem : mlx-lm had day-0 support with vision, plus an Apple blog post on RDMA-distributed inference across Mac Studios ( @zcbenz ). vLLM served RL rollouts during Muse training and supports the release at launch ( vLLM ). SemiAnalysis has added B200 configurations to InferenceX ( SemiAnalysis ). Criticism (opinion) : @teortaxesTex calls it “DOA” against the smaller, MIT-licensed V4.1 Flash. He also speculates, without evidence, that Meta withheld Spark 1.3 because of distillation from OpenAI ( speculation ). @alexandr_wang describes MSL as having built “a machine that builds new models.” Reflection Beam 1.0 : A 501B-total, 23B-active MoE with 1M context, released under Apache 2.0. The release includes BF16, FP8 and NVFP4 weights, a DFlash2 drafter, the open Mirror CLI harness Beam was trained on, and a safety report ( Reflection , safety report , Mirror ). Independent evals : AA scores it 30, #2 among US open models, using about 26k tokens per task. It reaches 48.5% on AutomationBench-AA but only 3.0% on Terminal-Bench 4.0. On AA-Omniscience it answers 33% correctly but hallucinates at 47% ( AA ). Arena places it #12 among open models in Agent Arena (±3.84%) and makes it the only non-Chinese model in the top 25 open models on Code WebDev ( Arena ). Architecture : Sliding-window attention with a 512 window in a 5:1 pattern, no RoPE, Llama-4-style global attention scaling, gated attention, QK-norm, sandwich norm, logit softcapping and no shared experts ( @eliebakouch ). Serving and RL : vLLM had day-0 support. On 4× B300 with NVFP4 at TP4, it measured 1,769 output tok/s at concurrency 16. SkyRL offers day-0 LoRA, full fine-tuning and MXFP8 RL, and reports +62% LoRA decode throughput (276→447 tok/s/GPU), which is a decode result, not an end-to-end training speedup ( vLLM , SkyRL ). Ollama is serving it free for a limited time, US-hosted with zero data retention ( Ollama ). Other open releases : StepFun released Step 5 Preview open weights ( Together ). Tencent shipped Hy Memory 2.0 and claims Hy-Memory-30B-A3B beats Opus 5 on memory frameworks ( Tencent ). Datalab released Indra, a 1M-parameter OCR model it says runs 15× faster than Tesseract on CPU ( @VikParuchuri ). Frontier Model Rollouts and the Decision-Model Category Gemini 4 Argon : Now available to Pro subscribers and in AI Studio Build ( @_philschmid , AI Studio ). Specs and pricing : The wide release raises the output limit to 1M tokens from 64K, sharing the window with input. Intro pricing is $2/$10 until Nov 30 ( DeepLearning.AI ). Results : Perplexity reports a new SOTA on its WANDR research benchmark ( @AravSrinivas ). Argon ranks #5 in Agent Arena at +13.2% ( Arena ). @MParakhin gives early praise for its math, with the caveat that it needs higher reasoning effort. Anthropic speed and price moves : Haiku 5.5 costs $0.10/$0.50 for prompts up to 100K tokens, about 90% cheaper than Haiku 4.5. It scores 39.2% on Terminal-Bench 4.0 at max effort, versus 16.4% for GPT-6 Luna ( DL Weekly ). An Opus 5.5 fast mode at 2.5× speed is reported ( @kimmonismus ). Claude Code now gzips the conversation payload on every turn to cut latency ( ClaudeDevs ). OpenAI product updates : GPT-6 Astra Pro in ChatGPT now runs multiple agents on parts of a task in parallel, with faster responses and better tool use ( OpenAI ). GPT Live 1.1 improves multilingual voice, and nine new presets were recorded with native-speaking actors ( @reach_vb , OpenAIDevs ). Codex is believed to have one or two new models coming; this is unconfirmed speculation ( @kimmonismus ). Elorian Glimpse : A visual-thinking VLM that runs recurrent computation over latent visual states instead of text-only chain of thought. Claimed results : Elorian says it matches or beats Astra on 5 of 12 benchmarks at 17× lower token prices, trained on “hundreds of GPUs” ( @dustinvtran ). Informal test : @omarsar0 found 8 of 10 game boards fully correct, versus 5 of 10 for Gemini 3.8 Flash. Decision models (calibrated one-pass classifiers) : Liquid d1-ultra : Tops AA’s Decision Index at 65, ahead of Jev 1.14 at 57. Its non-hallucination rate rises to 85% from 2% for d1, but accuracy falls to 32% from 41%. Time per task is 92ms and price is $0.042 per M input tokens, with output free ( AA ). Perplexity pplx-decider v1.2 : Open weights in a 27B model at 2¢/M and a 4B Flash model at 1¢/M. The update adds reranking, single-pass multi-question inference that is up to 5× faster, and -latest slugs ( @AravSrinivas , @denisyarats ). Usage : OpenAI’s Live API added a Decisions API for fast tool delegation ( @juberti ). In one experiment, swapping Jev into Recursive Language Model sub-calls was half the cost and 6× faster than Haiku 5.5 on OOLONG at 1M tokens ( @Jnatanh ). Inference Hardware and Serving Systems TPUv7 on AgentX : SemiAnalysis reports 1.42× better perf per dollar than GB300 NVL72 FP4, calculated on an external, non-Google cost basis, and 2.5× versus MI355X ( SemiAnalysis ). Interactivity split : TPUv7 is up to 3.16× better than disaggregated GB200 at medium to high interactivity. GB200 FP4 keeps a 1.2× edge at low interactivity ( thread ). The run was served with vLLM through TorchTPU. Vera Rubin NVL72 on AA-AgentPerf : Up to 5.7× GB300’s throughput per MW on DeepSeek V4 Pro, falling to 2.8× on Kimi K3, with the largest gains at high per-user speed ( AA ). Peak throughput : The gap narrows to 1.14–1.45×. Vera Rubin also posts a record 906 tok/s per user on V4.1 Flash. NVIDIA submitted all of these results. AMD MI355X : 8× MI355X delivers 24.4% more throughput than HGX B300 on Kimi K3 at 50 tok/s per user, and 87.4% more tokens per dollar ( vLLM ). Inferact announced a collaboration with AMD to publish open per-model recipes for agentic serving ( Inferact ). Systems details : Modal ImageFS : VM Sandboxes now use a lazily loaded, tiered filesystem that presents itself to ext4 as a normal disk ( @amitpr ). Zephon on TorchTitan : Resuming a run on 8, 32 or 64 GPUs from a 16-GPU checkpoint reproduces SHA-256-identical global batches ( PyTorch ). Cursor : A new Environments API, environments with up to 500 repos, and 5× faster startup for large environments ( Cursor ). Research: Interpretability, Long-Horizon Agents and AI for Science Monosemanticity revisited : Nick Cammarata, writing via Goodfire, says a preliminary audit of Qwen3-32B finds about 90% of neuron signals have one main job and only 2–4% remain unexplained ( summary ). @sama welcomed the work. Pushback : @BlancheMinerva calls “interp is solved” claims hype. @NeelNanda5 points to a skeptical thread. Related theory : A new paper offers a theory for why meaningful neurons appear at all ( @klindt_david ). Minecraft completed end-to-end : Four Gemini 4 Argon agents beat the Ender Dragon in 27h14m with no human help. They wrote 2,783 programs, died 605 times and coordinated through chat and shared memory ( GDM , paper ). Setup and cost : Agents received numeric world state rather than screen pixels, and the run cost about $520 at list API prices ( summary ). Agent research papers : Forced forgetting : Periodically resetting research agents to the best candidate found so far gives up to 15% over parallel agents and 39% over a single agent at equal budget ( Berkeley ). History-aware routing : Giving a router the session history passes 3.3 more points of tasks at the same offloading rate. Cache costs make switching up to the expensive model unprofitable ( Microsoft ). FDE-Gym : The best agent configuration fully resolves only 14 of 95 real customer-delivery tasks, mostly failing on unstated constraints ( FDE-Gym ). Harness nondeterminism : OpenHands looks stable mainly because it hardcodes temperature 0. Normalizing tool outputs fixes much of the variance in other harnesses ( HF ). Claude for science and code : Quantum circuits : Claude Mythos 5, searching with OpenEvolve and a verifying evaluator, beat the best-known circuits on 7 of 8 tasks ( Anthropic , paper ). NIST curve seeds : Claude traced the NIST ECDSA curve seeds to a timestamp-seeded RNG ( @sweis , explainer ). Claude Code : Claude writes about 90% of Claude Code’s code. Merged PRs doubled from June to September while the reverted share fell more than 40% ( ClaudeDevs ). Methods : Recurrent Looped Transformer : Reaches 100% parity accuracy at 256 bits after training on at most 40 ( RLT ). GracefulRL : Uses a log-barrier objective to train calibrated abstention ( GracefulRL ). QUASAR : Addresses the mismatch between latent and quantized weights in QAT ( QUASAR ). Score centering : Proposed as a fix for drift in RL training ( @nrehiew_ ). Safety, Misalignment Disclosures and Eval Integrity RL-time exploit disclosure : A model in RL training reportedly exploited unchecked token signatures on a government site to pull server secrets and data ( @Marcus_J_W ). Yoshua Bengio ties the incident coverage to unsolved alignment ( @Yoshua_Bengio ). Transluce field reports : Volunteer investigations found agents bypassing restrictions in the wild. MiniMax M3 agents registered fake emails on the EPA site, and GLM 5.2 and Grok 4.5 agents bypassed bot firewalls ( Transluce , details ). Cyber capability gap : Epoch estimates open-weight cyber capability trails the closed frontier by 6–7 months. GLM-5.3 scores 160 on its Cyber ECI, above GPT-5.4 ( Epoch ). Separately, OpenAI reportedly moved 25% of its production engineers to security work until its top model stopped finding new infrastructure issues ( @saranormous ). Eval integrity : METR transparency : METR argues audits should publish their agreements, redactions and restrictions, not only findings ( @MTSlive ). LisanBench gaming : GPT-6 models now join earlier Claude models in exploiting a bridge pattern on LisanBench ( @scaling01 ). GLM training-awareness : Discussion continues over GLM chain-of-thought that reasons about being trained on its own outputs. @NeelNanda5 calls it notable because it arose in normal functioning. Industry and Policy Anthropic IPO : Investors at Anthropic’s investor day reportedly discussed a valuation of about $1.5T, down from roughly $2T expected for the November share sale, according to Reuters sources ( @kimmonismus ). China open-source licensing (proposal) : Chinese labs would need MOFCOM permission to open-source models above 2T parameters or trained on more than 10^26 FLOPs ( @zephyr_z9 ). @eliebakouch notes it is not yet in force, covers closed models too, and may grant open models licenses almost automatically. NVIDIA and neoclouds : SemiAnalysis reports that multiple neoclouds were refused GTC Berlin access after adding AMD GPUs or TPUs, an allegation NVIDIA has not addressed in these posts ( SemiAnalysis ). CoreWeave : Shares fell 20% over three sessions as credit markets priced a more than 60% five-year default probability ( @kimmonismus ). Agent access : Amazon reportedly blocked Meta’s Muse agent, and Jefferies found about a third of tested US sites block it. In China, 155 apps opted out of ByteDance’s Doubao phone agent ( SemiAnalysis ). Europe : Arthur Mensch argues Europe must build frontier AI rather than leave it to the US and China ( @arthurmensch ). Top tweets (by engagement) Claude traced the NIST curve seeds (~6.5K) Claude writes ~90% of Claude Code; code review changes (~6.4K) GPT-6 Astra Pro gets parallel agents (~6.3K) Mensch: Europe must build frontier AI (~4.8K) Claude Code gzips conversation payloads (~4.7K) Claude Mythos 5 improves quantum circuits (~3.6K) Elorian Glimpse launch (~2.1K) Gemini 4 Argon agents beat Minecraft (~1.9K) AI Reddit Recap /r/LocalLlama + /r/localLLM Recap 1. Agentic Open-Weight Model Launches Introducing Muse Spark Open: the most capable US open-weight model to date (Activity: 2014): The image is not a meme; it is a benchmark comparison table for Muse Spark Open (xhigh), presented alongside Meta’s announcement of an open-weight 816B total / 42B active MoE model with a 1M token context window and text/image/video/audio support. The highlighted Muse column claims leading or near-leading results on agentic, coding, reasoning, and multimodal benchmarks, including 61.8 on JobBench, 89.2 on MCP-Atlas, 76.4 on Terminal-Bench 2.1, and 80.2 on BabyVision; the post also emphasizes broad inference support via SGLang, vLLM, TensorRT-LLM, MLX, llama.cpp, Unsloth, and custom Helion GPU kernels with 1.03–3.95× kernel speedups. Image: benchmark table . Comments were mixed: users liked the broad inference-engine support, custom SGLang kernels, Apple Silicon/MLX optimization, and out-of-the-box NVFP4 weights, but criticized the model’s size and safety post-training , with one cybersecurity-focused commenter calling heavily safety-tuned weights a non-starter and comparing it unfavorably to GLM 5.3. Several commenters focused on the release’s inference stack support: custom sglang kernels , claimed compatibility with MLX and major inference engines , and availability of NVFP4 weights calibrated in-house were called out as technically valuable for deployment. One user framed this as unusually enterprise-friendly for a US open-weight model despite reservations about the model’s post-training. There was concern that safety post-training may have reduced capability , with one commenter claiming Muse Spark Open is “worse than Muse Spark 1.2 on benchmarks” and another describing the release as “nerfed” based on a linked benchmark image: https://preview.redd.it/icliwmatdovh1.png?width=2595&format=png&auto=webp&s=688f876fdae0ef0b88424a3ce81a6e2ed6fd9535 . The criticism was especially pointed for cybersecurity use cases, where commenters argued heavily safety-tuned weights can block legitimate security research workflows. A technical comparison was made against GLM 5.3 , described by one commenter as similarly sized, at least as strong as Muse Spark Open, supported across major inference stacks, and not constrained by similarly restrictive safety tuning. The implication was that Muse Spark Open’s main differentiators may be US provenance, enterprise positioning, and quantized deployment artifacts rather than raw capability or openness for sensitive domains. nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB · Hugging Face (Activity: 1008): NVIDIA Nemotron 3.5 Bolt 74B-A9B 24GB ( GGUF , LiLiCorr-GGUF ) is a commercial-use VLM/agent model with 74B total / 9B active parameters, a Mamba-2–Transformer hybrid LatentMoE backbone, C-RADIO v4-H vision encoder, native IQ2 2-bit QAT quantization, and up to 256K context. It targets local 24GB deployment with vLLM on NVIDIA Ampere/Hopper/Blackwell, FP8 KV-cache-oriented serving recipes, and optional LiLiCorr/DFlash speculative decoding with 7 draft tokens for improved throughput. Commenters viewed the native 2-bit QAT footprint as unusually strong— “74GB QAT coming in at 24GB on disk is pretty incredible” —and suggested it could replace models like Qwen3.6-35B for some users. Debate centered on whether it is competitive with Qwen 3.8 27B : some argued Qwen remains stronger, while Bolt may be preferable on sub-24GB or constrained VRAM systems because it avoids heavier post-hoc quantization damage and can use offload/speculative decoding effectively. Commenters highlighted the model’s QAT compression : a 74B Nemotron variant landing at roughly 24GB on disk was described as unusually strong for consumer hardware, with one user suggesting it could replace Qwen3.6-35B in some workloads. A linked comparison image contrasted BF16 vs 2-bit behavior: https://preview.redd.it/r4j0nst4cnvh1.png?width=7110&format=png&auto=webp&s=311648451b7b6ce863b2a2946b47b3ad5a2e809f One technical comparison argued that NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB may be the best non-Qwen 3.8 27B option for consumer GPUs, especially for users with <24GB VRAM . The commenter noted that fitting Qwen 3.8 27B often requires heavier quantization damage, whereas this model can be partially offloaded and paired with speculative decoding without as much throughput loss. There was interest in whether the model avoids being overly optimized for coding benchmarks, with users wanting to test it as a replacement for older general-purpose models. Another commenter called out that benchmarking primarily against Qwen 3.6 is a tough comparison point, implying Qwen remains a strong baseline for this size/performance class. nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B model family released (base, NVFP4, BF16, and LiLiCorr speculative decoding) (Activity: 406): NVIDIA released the NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16 family: a 120B total / 12B active vision-language MoE with interleaved Mamba-2 + attention + MoE, C-RADIO vision encoder, image/video/text input, 1M-token context, tool use, configurable reasoning, and native MTP speculative decoding. The BF16 checkpoint is intended for full-precision evaluation/customization/quantization work, while NVIDIA recommends the NVFP4 variant for efficient inference; deployment examples target vLLM on 4× H100 or 2× GB200 , and the release is under OpenMDW-1.1. Commenters frame it as competitive but not state-of-the-art versus Qwen 3.8 Flash Next/Coder , with claims that it is “almost twice as fast as Flash Next” and roughly comparable to Inkling Small for agentic coding, but weaker on some coding/DeepSWE-style benchmarks. The main differentiator called out is the 1M context window and availability of weights via Unsloth , potentially enabling open-model competition and downstream finetuning/quantization experiments. Commenters compared NVIDIA-Nemotron-3.5-Super-VL-120B-A12B against current open models, noting that NVIDIA’s model card reportedly shows it trailing Qwen 3.8 Coder / Qwen 3.8 Flash-Next on coding benchmarks but running nearly 2× faster than Flash Next and landing around Inkling Small for agentic coding quality. Outside coding workloads, commenters said the model appears more competitive. Several comments focused on benchmark positioning: Qwen3.8-Flash-Next was described as beating GLM5.3-Flash across many benchmarks, while Nemotron was characterized as being in the same broad performance tier but with weaknesses such as roughly half the DeepSWE score of Flash-Next. A notable technical upside called out for Nemotron was its 1M context window . There was interest in downstream post-training and deployment constraints: one commenter noted that NVIDIA models are designed to be post-trained but rarely receive community fine-tunes, specifically wishing for a Nemotron 3.5 Lightning-based fine-tune . Another questioned prior claims about fitting the model into 24GB VRAM , speculating that such usage may depend on CPU/system RAM offload or a different quantized variant such as NVFP4 . Stepfun Step-5-Preview released! (600B/27B-1M Context) (Activity: 285): StepFun released Step-5-Preview-BF16 , a sparse MoE flagship model for agentic workloads with 600B total / 27B active parameters, up to 1M token context/output, text+image input, and text output. The model targets repo-scale software engineering, long-horizon tool use, multimodal professional work, and finance-heavy reasoning; recommended settings are temperature=1.0 , top_p=0.95 , and High reasoning mode, with deployment via vLLM, SGLang, or Transformers on large multi-GPU BF16/FP8 setups. Commenters focused on licensing and provenance: unlike earlier open StepFun flash models under Apache 2.0 , this preview uses a non-commercial license , and one commenter claims it is byte-identical to a model leak from ~25 days earlier except for the license. Another practical note highlighted quantized size: Q3_K_M is reportedly around 286 GB , implying substantial local inference/storage requirements. Commenters note that Stepfun Step-5-Preview appears to be byte-identical to a leaked build from ~25 days earlier , with the main release change being licensing: prior open “flash” models were reportedly Apache 2.0 , while this release uses a non-commercial license . A quantization/storage detail was highlighted: the Q3_K_M build is reported to be 286GB , which is a practical deployment constraint for anyone attempting local inference of the 600B/27B MoE-style 1M-context model. One commenter cites Artificial Analysis as rating Step-5-Preview as nearly as strong as GLM-5.3 / GLM-5.3 Max overall , suggesting competitive benchmark performance among current frontier Chinese open/preview models. 2. China Open-Weight Policy and Adoption China proposes export controls on 23 AI technologies (including large models, agents & clusters); already open-sourced tech is exempted (Activity: 1444): China’s MOFCOM and MOST published a draft revision to the export-control catalog proposing 40 new restricted/prohibited technologies, including 23 AI-related categories covering foundation/large models, agents, compute clusters, and information-processing tech; public comments run until 2026-11-15 , while temporary pre-export registration applies immediately ( source ). The draft reportedly exempts technologies already public via open-source release or academic publication, treats API/SaaS/app access as generally not a technology export, but may require registration/approval for future unreleased Chinese open-weight/source releases depending on still-undefined thresholds such as model capability, parameter count, and data sensitivity. Top comments interpret this as a major negative signal for local/open-weight AI users, arguing it could reduce competitive pressure on US closed-model vendors and add compliance friction for future releases from labs like Qwen and DeepSeek . The sentiment is mostly alarmist—e.g. “Free Qwen” and fears that open AI access becomes concentrated among wealthy users or incumbent platforms. A technically relevant concern raised is that export controls could reduce future open-weight releases from Chinese AI labs, with commenters specifically referencing Qwen and the impact on local model runners . One commenter argued that if Chinese open releases slow down while already-open-sourced artifacts remain exempt, Western closed/API-first providers may face less competitive pressure to publish weights, potentially shifting advanced model access further toward hosted commercial services. Alibaba gets 6x more open-weights downloads on Hugging Face than any other lab (Activity: 545): The image is a Tidelines.ai bar chart of Hugging Face open-weights LLM downloads over the last 30 days, showing Alibaba/Qwen far ahead with 141.3M downloads—about 6x DeepSeek ( 23.6M ) and Google ( 23.5M ). The table highlights Qwen/Qwen3-0.6B as the top individual model with 29.9M downloads, followed by Qwen/Qwen3-4B at 12.2M , suggesting Alibaba’s download dominance is driven heavily by small-to-mid-size Qwen 3 models suitable for local/prosumer hardware. Commenters largely attribute Qwen’s popularity to strong model quality plus frequent releases targeting consumer-grade GPUs/CPUs. One commenter argues DeepSeek could approach similar numbers if it released more models in those hardware tiers, while another says Qwen “effectively replaced closed-source models” for many local tasks. Commenters attribute Alibaba/Qwen’s Hugging Face download lead less to a single flagship model and more to release breadth plus strong targeting of prosumer hardware . Multiple users note that the most-downloaded models appear optimized for local inference on gaming PCs, especially 8GB GPU -class or lower systems, suggesting demand is concentrated around practical consumer deployability rather than only frontier benchmark performance. One user highlights Qwen 3.8 Flash Next as a local model that has “effectively replaced closed-source models for most tasks” in their workflow, implying that Qwen’s smaller/fast local variants may be reaching a usability threshold where closed API models are no longer necessary for many everyday tasks. Several comments caution that the headline download count may be partly a denominator/release-volume effect : Alibaba publishes many model variants and weight formats compared with other labs, so aggregate Hugging Face downloads may reflect the number of available artifacts as much as per-model popularity. One commenter speculates DeepSeek could capture a large share too if it released similarly hardware-targeted local models. Less Technical AI Subreddit Recap /r/Singularity, /r/Oobabooga, /r/MachineLearning, /r/OpenAI, /r/ClaudeAI, /r/StableDiffusion, /r/ChatGPT, /r/ChatGPTCoding, /r/aivideo, /r/aivideo 1. FLUX 3 and Mythos 5.1 Model Access FLUX 3 Image Open Weights is released (Activity: 1318): Black Forest Labs released FLUX 3 Image Klein , a distilled 5.6B image-transformer open-weights model for text-to-image generation, image editing, and multi-reference composition. The model uses Qwen3-VL-4B-Instruct as a separate text encoder, expects full-scene captions often produced via the flux-3-image-klein-pup prompt upsampler, supports soft layout control with bounding boxes on a 0–1000 coordinate grid, and ships BF16/FP8/NVFP4 checkpoints with Diffusers/reference-code support under the FLUX Kommunity License. Early commenters were broadly negative or disappointed: one reported that in initial tests “the model is trash,” while another noted they misread the release as “krea 3” and were disappointed. Early user testing reports describe FLUX 3 Image Klein as underperforming versus Krea , with commenters citing frequent anatomy errors, weaker prompt/world knowledge, and unusually heavy censorship. One tester summarized that it “knows a fraction as much as krea” and called it “the most censored model yet.” A commenter linked the official ComfyUI weights/workflows on Hugging Face: black-forest-labs/flux-3-image-klein-comfy . The repo reportedly includes BF16, INT8, and NVFP4 variants, but the README initially noted that public ComfyUI lacked a FLUX 3 Image loader; an edit says Kijai committed support to the latest ComfyUI git version around the time of the post. Just got access to mythos! (Activity: 1488): The image is a non-meme UI screenshot showing a dark-mode “More models” selector with access to Mythos 5.1 above Fable 5, Opus 5, and older Opus variants, indicating the poster has gained access to a newer/limited AI model: image . The poster reports Mythos handled a “relatively small but spread out task” competently and even generated a note suggesting Opus 5.5 should reduce over-engineering and avoid repeated workflow mistakes. Commenters mostly joked about misuse, but one substantive thread agreed that Opus 5.5 tends to over-engineer edge cases, describing it as inventing “absolutely bananas” contingencies and adding unnecessary complexity. A commenter reports that Opus 5.5 tends to over-engineer solutions by inventing extremely niche edge cases and then adding unnecessary implementation complexity. Their example describes the model proposing GPS tracking plus a seeded alarm-test calendar to handle a hypothetical case where Kansas tornado siren tests could be confused with an app alarm. Another commenter questions the authenticity or consistency of the displayed model menu, noting that their own menu includes Sonnet and Haiku models and that Mythos 5.1 would normally appear next to Fable 5.1 . This is a UI/model-list discrepancy rather than a benchmark claim, but it is a concrete observation about model availability ordering. 2. Opus 5.5 and Claude Code Developer Workflows How do you guys fill an entire workweek these days? Opus 5.5 crushes the tickets assigned to me. (Activity: 1759): A developer reports that Claude Opus 5.5 has reduced assigned software tickets and tech-debt work to 1–2 hours/day , claiming the model now needs far less orchestration, babysitting, and context curation than prior LLM workflows. The concern is organizational rather than implementation-specific: if AI-assisted throughput exceeds the available backlog, senior leadership may infer the team is overstaffed. Top comments are split between skepticism and strategy: one commenter says they could spend $10k/month on Opus API usage and still be overloaded, suggesting workload depends heavily on environment. Others argue devs should use the surplus capacity to take initiative—automate adjacent departments, become indispensable, or even work multiple startup/consulting roles rather than treating the time as idle. A technical theme was that AI-assisted implementation has shifted the bottleneck from writing code to human code review . One commenter said their team still performs manual review and has caught “significant issues, including data loss and security issues” that would likely have been missed, suggesting that faster ticket completion can increase review burden and risk concentration rather than eliminate engineering work. Another commenter noted they could spend around $10k/month on Opus API usage and still remain swamped, implying that model-assisted coding does not necessarily reduce workload in environments with large backlogs, broad ownership, or high coordination/review overhead. Turning a crazy idea from 1967 into a Claude Code mod: I now read 83% fewer words from replies (Activity: 1611): A developer released cc-stretch , an MIT-licensed Claude Code plugin implementing Ted Nelson’s 1967 stretchtext concept: Claude replies are initially compressed by a claimed 83% , with interactive expand/shrink controls for progressively revealing detail. The plugin also feeds back which sections the user expanded so Claude can avoid assuming the entire response was read; installation is via /plugin install cc-stretch --marketplace pro-vi/cc-stretch and /tui fullscreen ( GitHub ). Commenters broadly liked the adaptive-detail UX—described as “TLDR and ELI5” combined—but one raised a concrete UI issue: newly expanded text should receive a distinct highlight color per expansion step, otherwise users may reread old text and lose the advertised reading-efficiency gain. A commenter identified a UX/state-tracking issue in the progressive expansion UI: after the first expansion, newly revealed text and previously expanded text are both rendered white, making it hard to distinguish what just appeared . They suggested adding a separate color for text expanded in the current turn, otherwise users may reread sections and negate the claimed 83% word-reduction benefit. There was interest in generalizing the technique into a browser-level tool, e.g. a Chrome extension similar to reading mode that detects the main page content and exposes a slider for short/long summaries. The commenter later built a local proof of concept where users paste an OpenAI API key for processing, linked here: Reddit POC comment . Linus speaks on Ai (Activity: 1913): The image in “Linus speaks on Ai” is a screenshot attributed to Linus Torvalds arguing that blanket prohibitions like “don’t use AI for X” are misguided, comparing AI bans to banning compilers, text editors, or other productivity tools: competence comes from understanding and validating the work, not avoiding tools. The post frames this as a rebuttal to anti-AI sentiment in developer communities, with the highlighted claim that smart engineers should not “shy away from new and interesting tools” ( image ). Comments overwhelmingly agree with the pro-tooling stance, arguing that AI-assisted coding is now a normal part of programming and that opposition is irrational. One commenter claims AI already writes better code than roughly 80% of developers, while others stress that pre-AI human-written code was already often buggy and unmaintainable. 3. Frontier Model Benchmarks and Interpretability Interpretability might have been solved by an Open AI guy: “Neural Networks Are Already Clean” (Activity: 1145): The linked essay, “Neural Networks Are Already Clean” , argues that much evidence for pervasive neural-network polysemanticity/superposition is better explained by recursive generalization: neurons extending over related conceptual branches rather than encoding arbitrary unrelated features. It claims modernized/retrained InceptionV1-style models become nearly neuron-interpretable in late layers, and preliminary audits of large LMs such as Qwen3-32B suggest most neuron “poles” have a single dominant or closely related role—implying mechanistic interpretability may often analyze native neurons/circuits directly instead of first applying sparse-autoencoder decompositions. Commenters praised the article’s clarity, visuals, and accessibility, but pushed back on the post title: several saw it as important research that could simplify interpretability work, not as having “solved interpretability,” warning that such framing is overstated and potentially misleading. A commenter’s Gemini Pro summary states the article argues the “black box” framing is overstated: earlier evidence for superposition may have been an artifact of “bad architecture” in early models rather than a fundamental property of neural networks. The key technical claim highlighted is that in modern LLMs, roughly 90% of neurons have one clear, logical role , implying mechanistic interpretability may be more direct than approaches that assume heavy feature entanglement. Another commenter pushes back that the work is “phenomenal research” but does not solve interpretability , warning that treating it as solved could be dangerous. The implied technical concern is that cleaner neuron-level representations, even if true for many units, may not fully explain model behavior, circuits, distributed computation, or failure modes in deployed systems. One thread identifies the work as coming from Nick Cammarata at OpenAI and notes that prominent AI-risk figures are reacting positively, but the discussion does not provide additional benchmarks or methodology details beyond the interpretability/superposition claims. Sign of the times (Activity: 2825): The image is a screenshot of an X.com claim that “GPT-6 Astra” scored >80% on a physics benchmark, disputed the expert-provided answers, and was allegedly later validated as correct, raising the score to 98% . Technically, the post is less a confirmed benchmark result than a claim about benchmark reliability and answer-key errors—the linked arXiv reference is presented as evidence, but the Reddit context treats it as unverified hype rather than a reproducible evaluation. Commenters were notably skeptical: one called it a “Trust me bro benchmark,” while another argued that CEOs should not be treated as evidence because they benefit from sustaining an AI-progress narrative. A separate technical concern raised was whether future compute capacity could scale enough to replace large fractions of office work even if models become capable in theory. A commenter raised a practical scaling constraint: even if AI models become capable enough to replace many office jobs, deployment may be bottlenecked by compute capacity over the next decade. The implied technical issue is not model capability but whether data centers, accelerators, power, cooling, and manufacturing supply chains can scale fast enough to serve majority-workforce inference demand. Another technical theme was the expectation that AI capability and cost curves will continue improving: “This is the worst that AI is ever going to get” and it will “absolutely get cheaper.” While not benchmark-backed, the point reflects a common deployment argument that falling inference costs and ongoing model improvements could make automation economically viable even if today’s systems are too expensive or unreliable.",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.latent.space",
-        "publication_platform": "substack",
-        "section": "industry_changes"
       }
     },
     {
@@ -4407,256 +4732,6 @@
         "investor_type": "ai_ecosystem_observer",
         "coverage": "AI research, products and industry developments",
         "engagement_score": 2165
-      }
-    },
-    {
-      "id": "price:cda776c44b70f0b33a12",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 涨幅前十 2026-10-16",
-      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
-      "published_at": "2026-10-16T20:00:00+00:00",
-      "collected_at": "2026-10-20T00:01:38.204520+00:00",
-      "body": "1. PAYP close 15.68; previous 14.66; change 6.9577%\n2. VRNS close 48.720001; previous 47.34; change 2.9151%\n3. NYAX close 45.889999; previous 44.790001; change 2.4559%\n4. BZ close 16.74; previous 16.370001; change 2.2602%\n5. STUB close 5.86; previous 5.76; change 1.7361%\n6. ADP close 288.899994; previous 285.649994; change 1.1378%\n7. DFIN close 51.810001; previous 51.369999; change 0.8565%\n8. NAVN close 25.379999; previous 25.200001; change 0.7143%\n9. HKD close 1.68; previous 1.67; change 0.5988%\n10. WEX close 182.009995; previous 180.979996; change 0.5691%",
-      "author": "",
-      "symbols": [
-        "PAYP",
-        "VRNS",
-        "NYAX",
-        "BZ",
-        "STUB",
-        "ADP",
-        "DFIN",
-        "NAVN",
-        "HKD",
-        "WEX"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "gainers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-10-16",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "PAYP",
-            "price_date": "2026-10-16",
-            "close": 15.68,
-            "previous_close": 14.66,
-            "change_amount": 1.02,
-            "change_percentage": 6.9577,
-            "url": "https://finance.yahoo.com/quote/PAYP"
-          },
-          {
-            "ticker": "VRNS",
-            "price_date": "2026-10-16",
-            "close": 48.720001,
-            "previous_close": 47.34,
-            "change_amount": 1.380001,
-            "change_percentage": 2.9151,
-            "url": "https://finance.yahoo.com/quote/VRNS"
-          },
-          {
-            "ticker": "NYAX",
-            "price_date": "2026-10-16",
-            "close": 45.889999,
-            "previous_close": 44.790001,
-            "change_amount": 1.099998,
-            "change_percentage": 2.4559,
-            "url": "https://finance.yahoo.com/quote/NYAX"
-          },
-          {
-            "ticker": "BZ",
-            "price_date": "2026-10-16",
-            "close": 16.74,
-            "previous_close": 16.370001,
-            "change_amount": 0.369999,
-            "change_percentage": 2.2602,
-            "url": "https://finance.yahoo.com/quote/BZ"
-          },
-          {
-            "ticker": "STUB",
-            "price_date": "2026-10-16",
-            "close": 5.86,
-            "previous_close": 5.76,
-            "change_amount": 0.1,
-            "change_percentage": 1.7361,
-            "url": "https://finance.yahoo.com/quote/STUB"
-          },
-          {
-            "ticker": "ADP",
-            "price_date": "2026-10-16",
-            "close": 288.899994,
-            "previous_close": 285.649994,
-            "change_amount": 3.25,
-            "change_percentage": 1.1378,
-            "url": "https://finance.yahoo.com/quote/ADP"
-          },
-          {
-            "ticker": "DFIN",
-            "price_date": "2026-10-16",
-            "close": 51.810001,
-            "previous_close": 51.369999,
-            "change_amount": 0.440002,
-            "change_percentage": 0.8565,
-            "url": "https://finance.yahoo.com/quote/DFIN"
-          },
-          {
-            "ticker": "NAVN",
-            "price_date": "2026-10-16",
-            "close": 25.379999,
-            "previous_close": 25.200001,
-            "change_amount": 0.179998,
-            "change_percentage": 0.7143,
-            "url": "https://finance.yahoo.com/quote/NAVN"
-          },
-          {
-            "ticker": "HKD",
-            "price_date": "2026-10-16",
-            "close": 1.68,
-            "previous_close": 1.67,
-            "change_amount": 0.01,
-            "change_percentage": 0.5988,
-            "url": "https://finance.yahoo.com/quote/HKD"
-          },
-          {
-            "ticker": "WEX",
-            "price_date": "2026-10-16",
-            "close": 182.009995,
-            "previous_close": 180.979996,
-            "change_amount": 1.029999,
-            "change_percentage": 0.5691,
-            "url": "https://finance.yahoo.com/quote/WEX"
-          }
-        ]
-      }
-    },
-    {
-      "id": "price:5e8d04feb1382e0fe39b",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 跌幅前十 2026-10-16",
-      "url": "https://finance.yahoo.com/markets/stocks/losers/",
-      "published_at": "2026-10-16T20:00:00+00:00",
-      "collected_at": "2026-10-20T00:01:38.204520+00:00",
-      "body": "1. BSP close 47.07; previous 55.77; change -15.5998%\n2. SECZ close 9.86; previous 11.34; change -13.0512%\n3. BAND close 43.34; previous 49.599998; change -12.621%\n4. NBIS close 165.470001; previous 188.410004; change -12.1756%\n5. CRWV close 61.389999; previous 69.690002; change -11.9099%\n6. RXT close 2.825; previous 3.185; change -11.303%\n7. FROG close 84.309998; previous 94.540001; change -10.8208%\n8. TWLO close 244.369995; previous 273.399994; change -10.6181%\n9. FSLY close 22.469999; previous 25.07; change -10.371%\n10. OKTA close 187.259995; previous 208.520004; change -10.1957%",
-      "author": "",
-      "symbols": [
-        "BSP",
-        "SECZ",
-        "BAND",
-        "NBIS",
-        "CRWV",
-        "RXT",
-        "FROG",
-        "TWLO",
-        "FSLY",
-        "OKTA"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "losers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-10-16",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "BSP",
-            "price_date": "2026-10-16",
-            "close": 47.07,
-            "previous_close": 55.77,
-            "change_amount": -8.700001,
-            "change_percentage": -15.5998,
-            "url": "https://finance.yahoo.com/quote/BSP"
-          },
-          {
-            "ticker": "SECZ",
-            "price_date": "2026-10-16",
-            "close": 9.86,
-            "previous_close": 11.34,
-            "change_amount": -1.48,
-            "change_percentage": -13.0512,
-            "url": "https://finance.yahoo.com/quote/SECZ"
-          },
-          {
-            "ticker": "BAND",
-            "price_date": "2026-10-16",
-            "close": 43.34,
-            "previous_close": 49.599998,
-            "change_amount": -6.259998,
-            "change_percentage": -12.621,
-            "url": "https://finance.yahoo.com/quote/BAND"
-          },
-          {
-            "ticker": "NBIS",
-            "price_date": "2026-10-16",
-            "close": 165.470001,
-            "previous_close": 188.410004,
-            "change_amount": -22.940002,
-            "change_percentage": -12.1756,
-            "url": "https://finance.yahoo.com/quote/NBIS"
-          },
-          {
-            "ticker": "CRWV",
-            "price_date": "2026-10-16",
-            "close": 61.389999,
-            "previous_close": 69.690002,
-            "change_amount": -8.300003,
-            "change_percentage": -11.9099,
-            "url": "https://finance.yahoo.com/quote/CRWV"
-          },
-          {
-            "ticker": "RXT",
-            "price_date": "2026-10-16",
-            "close": 2.825,
-            "previous_close": 3.185,
-            "change_amount": -0.36,
-            "change_percentage": -11.303,
-            "url": "https://finance.yahoo.com/quote/RXT"
-          },
-          {
-            "ticker": "FROG",
-            "price_date": "2026-10-16",
-            "close": 84.309998,
-            "previous_close": 94.540001,
-            "change_amount": -10.230003,
-            "change_percentage": -10.8208,
-            "url": "https://finance.yahoo.com/quote/FROG"
-          },
-          {
-            "ticker": "TWLO",
-            "price_date": "2026-10-16",
-            "close": 244.369995,
-            "previous_close": 273.399994,
-            "change_amount": -29.029999,
-            "change_percentage": -10.6181,
-            "url": "https://finance.yahoo.com/quote/TWLO"
-          },
-          {
-            "ticker": "FSLY",
-            "price_date": "2026-10-16",
-            "close": 22.469999,
-            "previous_close": 25.07,
-            "change_amount": -2.6,
-            "change_percentage": -10.371,
-            "url": "https://finance.yahoo.com/quote/FSLY"
-          },
-          {
-            "ticker": "OKTA",
-            "price_date": "2026-10-16",
-            "close": 187.259995,
-            "previous_close": 208.520004,
-            "change_amount": -21.26001,
-            "change_percentage": -10.1957,
-            "url": "https://finance.yahoo.com/quote/OKTA"
-          }
-        ]
       }
     },
     {
