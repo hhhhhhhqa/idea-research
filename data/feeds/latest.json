@@ -1,7 +1,44 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-29T04:04:10.302445+00:00",
+  "generated_at": "2026-10-30T00:02:27.568649+00:00",
   "pipelines": [
+    {
+      "pipeline": "substack",
+      "status": "ok",
+      "item_count": 5,
+      "errors": [],
+      "notes": [
+        "Clouded Judgement: public reader fallback used",
+        "MBI Deep Dives: public reader fallback used",
+        "Aspiring for Intelligence: public reader fallback used",
+        "Chips Ahoy Capital: public reader fallback used",
+        "Meritech Software Pulse: public reader fallback used",
+        "Outspoken Geek: public reader fallback used",
+        "New Moon Cap: public reader fallback used",
+        "Outlier Cap: public reader fallback used"
+      ]
+    },
+    {
+      "pipeline": "reddit",
+      "status": "error",
+      "item_count": 0,
+      "errors": [
+        "r/SecurityAnalysis: RSS=Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SecurityAnalysis/search.rss?restrict_sr=1&sort=top&t=day&q=flair%3A%22Thesis%22%20OR%20flair%3A%22Short%20Thesis%22'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429; JSON=Client error '403 Blocked' for url 'https://www.reddit.com/r/SecurityAnalysis/search.json?q=flair%3A%22Thesis%22+OR+flair%3A%22Short+Thesis%22&restrict_sr=1&sort=top&t=day&limit=10&raw_json=1'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+      ],
+      "notes": [
+        "r/wallstreetbets: anonymous dd RSS transport used"
+      ]
+    },
+    {
+      "pipeline": "prices",
+      "status": "ok",
+      "item_count": 2,
+      "errors": [],
+      "notes": [
+        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "Latest available Yahoo EOD date is 2026-10-28; run after the US close to collect 2026-10-29."
+      ]
+    },
     {
       "pipeline": "x",
       "status": "ok",
@@ -139,55 +176,108 @@
         "@kuncheng: 0 tweet(s) via twscrape",
         "Linked articles: 15 article(s) stored; 62 unavailable or skipped"
       ]
-    },
-    {
-      "pipeline": "substack",
-      "status": "ok",
-      "item_count": 7,
-      "errors": [],
-      "notes": [
-        "Clouded Judgement: public reader fallback used",
-        "MBI Deep Dives: public reader fallback used",
-        "Aspiring for Intelligence: public reader fallback used",
-        "Chips Ahoy Capital: public reader fallback used",
-        "Meritech Software Pulse: public reader fallback used",
-        "Outspoken Geek: public reader fallback used",
-        "New Moon Cap: public reader fallback used",
-        "Outlier Cap: public reader fallback used"
-      ]
-    },
-    {
-      "pipeline": "reddit",
-      "status": "ok",
-      "item_count": 1,
-      "errors": [],
-      "notes": [
-        "r/wallstreetbets: anonymous dd RSS transport used",
-        "r/SecurityAnalysis: anonymous thesis RSS transport used",
-        "Downloaded 1 Reddit image(s) into the current feed media directory"
-      ]
-    },
-    {
-      "pipeline": "prices",
-      "status": "partial",
-      "item_count": 2,
-      "errors": [],
-      "notes": [
-        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "Ignored incomplete Yahoo EOD date 2026-10-28: 1/203 ticker closes available; latest sufficiently complete date is 2026-10-27.",
-        "Latest available Yahoo EOD date is 2026-10-27; run after the US close to collect 2026-10-28."
-      ]
     }
   ],
   "counts": {
     "total": 683,
-    "substack": 15,
+    "substack": 16,
     "rss": 3,
-    "reddit": 1,
+    "reddit": 0,
     "x": 662,
     "price": 2
   },
   "items": [
+    {
+      "id": "substack:4657540ac4c87dc6a8e5",
+      "source_type": "substack",
+      "source_name": "MBI Deep Dives",
+      "title": "Alphabet 3Q’26: Search Worries Weighing In",
+      "url": "https://mbideepdives.substack.com/p/alphabet-3q26-search-worries-weighing",
+      "published_at": "2026-10-29T16:15:02+00:00",
+      "collected_at": "2026-10-30T00:00:52.611195+00:00",
+      "body": "For the second consecutive quarter, Alphabet posted **negative** Free Cash Flow (FCF). That wasn’t really a surprise, but investors were jolted by a dilapidated quarter from Search. At first glance, with 12% search revenue growth you may think Google Search is doing fine? Then take a look at the below chart comparing Meta Family of Apps (FOA) incremental advertising revenue vs Google Search incremental revenue, and you will probably appreciate why investors are…a bit concerned!\n\n[![Image 1](https://substackcdn.com/image/fetch/$s_!FT5D!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0894602d-1447-4ef9-b0eb-2a63f9e2b2cd_1153x628.png)](https://substackcdn.com/image/fetch/$s_!FT5D!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0894602d-1447-4ef9-b0eb-2a63f9e2b2cd_1153x628.png)\n\nSource: Company Filings, MBI Deep Dives, [Daloopa](https://daloopa.com/?utm_source=MBI&utm_medium=Organic&utm_campaign=SourceLink)\n\nDespite the shabby performance from Google Search, Alphabet’s revenue grew 25% to $127.6 Billion, which puts the company at a **half-trillion-dollar annual run-rate** and marks the **seventh consecutive quarter of accelerating growth,**primarily thanks to Google Cloud revenue more than doubling YoY.\n\n![Image 2](https://substackcdn.com/image/fetch/$s_!uKML!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F80109cea-c83c-4bcc-bf4e-1752d0748443_1761x342.png)\n\nSource: Company Filings, MBI Deep Dives, [Daloopa](https://daloopa.com/?utm_source=MBI&utm_medium=Organic&utm_campaign=SourceLink)\n\nHere is the same table in growth terms. Search decelerated from 16.8% to 12.0%, YouTube from 12.9% to 9.2%, and subscriptions from 15.2% to 11.0%, while Cloud went from 82% to 103%. Google Network grew 1.4%, which does not sound like much until you remember it had declined in each of the **previous 16 quarters.**\n\n![Image 3](https://substackcdn.com/image/fetch/$s_!7nvQ!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa699080b-8be1-4451-8a8f-423734761ced_1759x318.png)\n\nSource: Company Filings, MBI Deep Dives, [Daloopa](https://daloopa.com/?utm_source=MBI&utm_medium=Organic&utm_campaign=SourceLink)\n\nOperating income grew 30% as reported to $40.6 Billion for a 31.8% margin, but last year's quarter carried the $3.5 Billion EC fine, and the 10-Q shows this quarter carried a $1.0 Billion charge for two EC Digital Markets Act fines. Excluding one-offs in both periods, **operating income grew ~20%,**and the incremental margin was 27% rather than the 37% in the table shown below.\n\n![Image 4](https://substackcdn.com/image/fetch/$s_!VZUF!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F185a2afc-3974-40b5-9b10-5e683643b3b0_2038x316.png)\n\nSource: Company Filings, MBI Deep Dives, [Daloopa](https://daloopa.com/?utm_source=MBI&utm_medium=Organic&utm_campaign=SourceLink)\n\nBehind the paywall, I will go through each segment, starting with Search: whether management's explanations for the slowdown hold up once you compare them with Meta's quarter and the paid clicks data in the 10-Q. I will also cover Gemini 4, Cloud and TPUs (including a TPU buy-back clause buried in the 10-Q), and then will share some thoughts on the crux of this capex buildout. The spreadsheet behind the ROIC calculation will also be attached for subscribers.\n\n_Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on **[70](https://mbideepdives.substack.com/p/deep-dives)+** companies. The daily is just how I think out loud between the Deep Dives!_",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mbideepdives.substack.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas",
+        "transport": "public_reader_fallback"
+      }
+    },
+    {
+      "id": "substack:ecd2bf04730917de7a4c",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "Can Frontier Models See Past a Decoy? Elorian Tests Visual Reasoning",
+      "url": "https://latent.space/p/elorian/",
+      "published_at": "2026-10-29T16:00:00+00:00",
+      "collected_at": "2026-10-30T00:00:50.278583+00:00",
+      "body": "This month Elorian launched its first visual reasoning model , Glimpse . It’s being promoted as “a new category of visual thinking model: a system that reasons about the physical world from what it sees.” View post on X ↗ So how does Glimpse compare to both frontier models and world models in vision tests? A new benchmark called DecoyCount , co-released by Elorian, provides some answers. We quizzed CEO Andrew Dai on the benchmark, and also talked about Elorian’s positioning in a crowded models landscape. DecoyCount results Elorian emerged from stealth in April with $55 million in seed funding , co-led by Striker Venture Partners, Menlo Ventures and Altimeter Capital. Now, in partnership with AI data company Mercor , Elorian is announcing the DecoyCount benchmark, which tests whether language models genuinely count objects or rely on visual shortcuts and substitution heuristics. According to a paper accompanying the release , frontier models scored below 50% accuracy on DecoyCount — the highest was GPT-6 Astra, with 43.17%. Elorian’s new model isn’t mentioned in the paper, but Dai told us that Glimpse scored 50.48% in an internal test. Regarding the frontier models, the paper concludes that “stronger general reasoning does not by itself generalize to aligned visual reasoning.” How the benchmark works: “DecoyCount exposes interpretable counting failures across seven mechanisms.” To make sure it was a like-for-like comparison with the frontier models, we asked whether the paper’s evaluation images were withheld from Glimpse’s training? “The evaluation images and text were withheld from our training, and our contamination check found no overlap in the training data checked,” Dai replied, via email. “Without any cues, Glimpse scored 50.48% on the 1,660 DecoyCount items, making it the only model in the comparison to clear 50%. The closest was GPT-6 Astra at 43.17%, about 7 points behind, and Gemini-3.8-flash scored 32.71% while Qwen3.8-max scored 28.31%, and Claude-Fable-5.1 came in at 25.22%.” Dai did note that Glimpse’s results “come from a single run of the model on its own, without an agent or tool harness,” whereas the six models from the paper were each averaged across three runs under their reported settings. DecoyCount benchmark results for frontier models over 3 runs each. But what exactly is DecoyCount revealing that existing model benchmarks miss? According to Dai, it tests both vision and reasoning together — which most benchmarks elide. “If a person sees an apple in front of a mirror, we know that there’s just one apple and it’s being reflected. But a model might miss the apple entirely (a vision problem) or count the apple and its reflection as two (a reasoning problem). But most benchmarks that test for this error only check the final number, so both mistakes are treated the same way, which is an issue if you want to fix the root problem and can’t tell if it’s an issue of vision or judgement. ” Frontier Model Comparison in DecoyCount paper What is visual thinking exactly? Andrew Dai isn’t a Johnny-come-lately on the AI scene. In 2015, while working at Google, he co-authored a paper entitled Semi-supervised sequence learning . In this paper, Dai and his then colleague Quoc Le demonstrated an early version of the pretrain-then-fine-tune approach later adopted in large language models. Over the decade that followed, Dai worked for Google DeepMind on GLaM MoE, PaLM 2 and then Gemini. Dai only left Google this year, in order to co-found Elorian. Part of his motivation was to push the boundaries of what vision models can do. His approach, he explained to Latent Space, is based on a concept in human psychology called visual thinking . When most people “think about spatial problems or visual problems,” he explained, “they visualize the problem [by] generating images and editing images in their mind.” He gave an example of buying a sofa and mentally picturing what it will look like in your living room. A conceptual visual reasoning loop There’s also manipulating an image in your mind ; for example if you’re counting people around a table, you might mentally “cross them off one by one,” Dai said. This is what Elorian aims to do in its models: teach them visual thinking “that involves generation and editing images as part of the reasoning trace, along with language.” The key point is that image generation isn’t just an output for a vision model — the generated or edited image is part of a chain of reasoning. How is Elorian different from World Models? Visual reasoning is still a work in progress, but there have been some impressive releases this year in “world models” — where vision is a key component. Two that stand out are World Labs’ Atlas in September (the company was subsequently acquired by AMD ) and Google’s just released Genie 4 . When World Labs announced Atlas , it was described as an “omni world model for spatial intelligence.” But what Atlas enables — basically a 3D simulation of a world — isn’t the same as visual reasoning. According to Dai, world models enable “direct action on a world,” whereas Elorian is more focused on what he calls “indirect action.” By that he means using visual reasoning to inform a decision or workflow (what Glimpse does) , rather than building simulated environments that allow navigation and manipulation (what Atlas does). As an example, you might use visual reasoning to decide whether to reject a user-contributed video for violating a policy. “You don't need a 3D rendering to do that,” said Dai. Applications for visual reasoning Other business opportunities for Elorian include robotics, engineering, and defense applications. Dai added that architects need to regularly check building codes and compliance — an ideal task for a vision reasoning model. In two robotics benchmarks , WGO Bench and ERQA, Elorian claims to rate equal or higher than frontier models , and at a much cheaper price: Source: Elorian Getting back to counting decoys as one measure of success for vision models, Dai argues that reasoning about what a model sees is crucial to its accuracy and effectiveness in real-world applications. He gives an example of a warehouse robot counting items in a box. “A familiar 12-slot tray might only hold 10 parts, and a 24-pack label doesn’t mean 24 items are still in the box,” said Dai. “A model relying on what it expects to see will face many issues in real-world situations, and Glimpse is designed to work through the image instead of jumping to a quick conclusion. We’ve designed Glimpse to ground the count in visible evidence as opposed to basic cues that could lead other models astray.” Why Elorian thinks AGI requires visual reasoning Elorian goes so far as to claim that visual reasoning is a foundational requirement for AGI (artificial general intelligence). From the Glimpse launch post : “We believe building the full stack across systems, data, model architecture, and training — from the ground up for multimodal intelligence — can unlock AGI in the physical world.” Dai acknowledges there’s “still a huge gap between humans and machines.” But he thinks visual reasoning is the key to closing that gap. “I think the way to think about visual reasoning is as a fundamental step of reasoning in human intelligence,” he said. “And ultimately, if we want to build anything that's like AGI, we can't just skip visual.”",
+      "author": "Richard MacManus",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "rss:e1318e12bb3eefcc71ae",
+      "source_type": "rss",
+      "source_name": "Mobile Dev Memo",
+      "title": "Alphabet Q3 2026 earnings: AI Mode’s monetization penalty",
+      "url": "https://mdm.co/alphabet-q3-2026-earnings-ai-modes-monetization-penalty/",
+      "published_at": "2026-10-29T12:03:36+00:00",
+      "collected_at": "2026-10-30T00:01:01.026310+00:00",
+      "body": "Alphabet’s Q3 2026 earnings show a Search revenue slowdown driven by AI Mode’s weaker monetization, despite record-high query volume. While Search represents a shrinking share of total revenue, the company is scaling ads in conversational formats globally to optimize long-term engagement and narrow the current monetization gap.",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mobiledevmemo.com/",
+        "publication_platform": "wordpress",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:733eea2744984231a5b4",
+      "source_type": "substack",
+      "source_name": "TSOH Investment Research",
+      "title": "Meta: A Clearer Roadmap",
+      "url": "https://thescienceofhitting.com/p/meta-a-clearer-roadmap",
+      "published_at": "2026-10-29T10:30:52+00:00",
+      "collected_at": "2026-10-30T00:00:57.959696+00:00",
+      "body": "Note: Review 5+ years of META research and trades on the TSOH website . From “ Meta: In Limbo ” (August 2026): “While I remain confident about the long-term future in Meta’s core business, and while I think that the current valuation is at least reasonable, I believe management’s likely course of action in the years ahead has greatly changed the range of possible outcomes for this business, particularly if they struggle to close the gap with MSL’s leading competitors. Here’s one data point to help contextualize how the range of outcomes is changing: a year ago, Meta had ~$28 billion of non-cancelable contractual commitments, primarily related to investments in servers and network infrastructure, with the majority to be realized by yearend 2025 [within six months]. One year later, Meta now has ~$349 billion of non-cancelable contractual commitments, with more than 60% of those commitments (>$200 billion) coming due in 2028 or later.” Developments over the past three months neatly frame the Meta debate: while there are encouraging signs of progress in the core business, along with green shoots from emerging opportunities, that all comes with the asterisk of how much is being spent / invested to get there – and, critically, uncertainty on their willingness to adjust if things started to go sideways. First, an update on the above figures: the value of non-cancelable contractual commitments increased >$100 billion over the past 90 days, to ~$455 billion . As it relates to capital expenditures, management expects FY26e spending to nearly double YoY, to ~$140 billion (original FY26e CapEx guidance, set alongside the Q4 FY25 results, was ~$125 billion ). This will result in FY26e CapEx intensity of ~55%, with yet another leg higher likely coming in FY27e. In addition to depreciation expense, other costs are skyrocketing higher. For example, research and development expense is on track to increase by nearly 50% this year, to ~$85 billion. As a result, it will be equal to ~33% of revenues, or ~1,000 basis points higher than the trailing ten-year average. Altogether, you have a business on track for ~42% total expense growth in FY26e, to ~$167 billion (adjusted for the nearly $10 billion charge from the AG settlement related to teen mental health and social media; I remain cautious about the long-term cost of legal and regulatory risks). This is their highest adjusted expense growth (%) in eight years, and it’s well ahead of expected FY26 revenue growth. The result is persistent margin pressure, with Q3 FY26 FOA segment adjusted EBIT margins down ~700 basis points YoY. Read more",
+      "author": "TSOH Investment Research",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://thescienceofhitting.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:ca1531157f04f09eb5be",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "[AINews] Gemini 4 Carbon tops leaderboards, launches for cyber defenders",
+      "url": "https://latent.space/p/ainews-gemini-4-carbon/",
+      "published_at": "2026-10-29T05:55:19+00:00",
+      "collected_at": "2026-10-30T00:00:50.278583+00:00",
+      "body": "It’s a good thing we published our Opus 5.5 podcast calling it the world’s best model before today’s launch. In a very pleasant surprise, Gemini announced Carbon , a newer frontier model than the 3 week old Argon , with fantastic benchmarks: Taking it to the new #1 on the Artificial Analysis consolidated benchmark, putting GDM in the lead for possibly the first time in AAII history: View post on X ↗ sd AI News for 10/27/2026-10/28/2026. We checked 12 subreddits, 544 Twitters and no further Discords. AINews' website lets you search all past issues. As a reminder, AINews is now a section of Latent Space . You can opt in/out of email frequencies! AI Twitter Recap Gemini 4 Carbon Tops Independent Leaderboards, with Access Limited to Cyber Defenders Launch : Google DeepMind announced Gemini 4 Carbon two weeks after Argon. It is positioned as state of the art on cybersecurity and long-horizon tasks ( @sundarpichai , @GoogleDeepMind ). Claimed cyber results : 88.2% on SEC-bench Pro for vulnerability finding, 54.8% on ExploitGym for exploitation and 71.0% on CWE-bench for patching ( @sundarpichai ). Availability : Carbon first goes to trusted cyber defenders through the Fairwind Program, with wider developer access promised \"as soon as possible\" ( @GoogleAI ). Pricing : Phil Schmid quotes $2/$10 per million input/output tokens with an asterisk ( @_philschmid ). Artificial Analysis lists $4/$20 standard pricing with a 50% launch discount that has no end date. Cached input costs $0.20 per million tokens ( @ArtificialAnlys ). Specs : The model has a 1M-token context window and 1M max output. Inputs are text, image, video and speech; output is text ( @ValsAI ). Safety claims (Google) : Successful cheating on Terminal-Bench 4.0 fell to 0.0%, and cheating attempts fell to 0.4%. Unsupported claims are down about 2x versus Argon. Overreach fell 26% and under-service fell 29% ( @OfficialLoganK ). Artificial Analysis : Carbon is #1 on Intelligence Index v5 with a score of 59. It leads 4 of the 9 index evals: HLE-Diamond, TB-Science, AA-Omniscience and AutomationBench ( @ArtificialAnlys ). Coding : On the Coding Agent Index, Carbon scores 59 using Antigravity CLI, versus 62 for Claude Code with Opus 5.5 [max]. It scores 51% on FrontierCode v1.1, versus 56% for Opus. Knowledge work : Carbon reaches 1609 Elo on AA-Briefcase, up 126 points from Argon. It still trails Grok 4.7, Muse Wonder and Kimi K3.1 Pro (1678). Cost : Carbon costs $7.76 per index task, versus $10.04 for Opus 5.5 and $6.25 for GPT-6 Astra. It uses 123k output tokens per task, 29% fewer than Opus. Hallucination : Carbon leads Omniscience with 54. Its hallucination rate rose from Argon's 4% to 11%, which is still the second lowest measured. Opus 5.5 and Astra are both at 50%. Other independent evals : Arena : Carbon is #1 in Text Arena (1528), #2 in Agent Arena at a $1.80 median cost per task, and #4 in Code Arena: WebDev (1768) ( @arena ). Arena attributes the gains over Argon to more praise, more confirmed successes and better steerability ( @arena ). Vals : Carbon is #2 on the Vals Index and #1 on the Finance Index and Legal Research Benchmark. It produces 64% more output tokens than Argon, mostly on finance, tax and legal tasks ( @ValsAI , tokens ). Coding benchmarks : Carbon scores 61.2% on FrontierSWE, behind GPT-6 Astra (65.5), Opus 5.5 (62.3) and Sonnet 5.5 (61.9) ( @ProximalHQ ). It sets a narrow state of the art of 9.6% on SWE-sweep ( @KLieret ). Andon Labs : Carbon is #1 on Vending-Bench 2 ( @andonlabs ). It is also #1 on Blueprint-Bench 2, where it ties the human baseline for 3D spatial understanding ( @andonlabs ). Caveats and reactions : Harness : The coding-agent results were measured in Antigravity CLI, so results in other harnesses are untested ( @Yuchenj_UW ). Hallucination risk : Some users are concerned about hallucination in cyber use ( @scaling01 ). Lab gap : scaling01 thinks Google remains about two months behind the next OpenAI and Anthropic releases ( @scaling01 ). RSI framing : On the earnings call, Sundar Pichai said AI is increasing training and launch velocity. He expects \"continued acceleration because of RSI\" over the next twelve months ( @AndrewCurran_ ). Unconfirmed : Claims of a stronger unreleased Gemini model are not confirmed ( @kimmonismus ). Internal workflow : A Gemini engineer describes overnight agent loops and swarms that inspect RL data. In that workflow, launches now feel like \"periodic checkpoints\" ( @zhangqiaorjc ). Leaderboard Resets and Benchmark Integrity AA Intelligence Index v5 : The rebuilt index runs 60% on private tests ( @TheRundownAI ). Ranking before Carbon : Opus 5.5 scored 58, followed by GPT-6 Astra (57), GPT-6.1 Sol (55), Sonnet 5.5 (54) and GPT-6.1 Terra (51). Open models : Kimi K3.1 Pro fell from 55 to 46. DeepSeek V4.1 Flash and GLM-5.3 both score 32, below Claude Haiku 5.5 at 36. China–US gap : scaling01 puts the gap at about 3.3 months on the AA Progress Index ( @scaling01 ). FrontierCode 2.0 mystery model : Cognition data includes a hidden \"Obsidian 3\" scoring 46.8%, versus 45.5% for Opus 5.5. Because it runs in the claude-code harness, some speculate it is Fable 5.5; this is unconfirmed ( @kimmonismus ). DeepSeek correction : scaling01 corrected an earlier identification and said Artificial Analysis shows DeepSeek V4.1 Flash-1017 at about 28% ( @scaling01 ). Mixed sources : teortaxes notes that Cognition's chart mixed model-card scores with independently measured ones ( @teortaxesTex ). Cost comparisons are fragile : teortaxes argues that list-price comparisons of Haiku 5.5 and V4.1-1017 distort real costs. The comparison uses DeepSeek's peak pricing, ignores Haiku's long-context surcharge and does not reflect Haiku's roughly 2x output tokens ( @teortaxesTex ). \"Benchmaxxing\" redefined : nrehiew argues that serious labs rarely train on test sets. In this view, score gaps mostly show which capabilities a lab targeted in post-training ( @nrehiew_ ). New evals : Gym-Anything-RT : These real-time minigames keep moving while the model thinks. The best model, GPT-6 Astra, scores 9% ( @PranjalAggarw16 ). Immigration Bench : Vals released expert-written questions and rubrics on visas and immigration status ( @ValsAI ). BallotBench : Nine agents, each with $500, forecast all 863 races in the 2026 midterms live ( @thoughtfullab ). Safety, Alignment and Model Provenance Eval over-attribution in DeepSeek V4.1 Flash-1017 : An independent assessment found the model classified 32 of 69 real user conversations as evaluations. The authors report a 46.4% false-positive rate on EvalDetectBench ( @ZhihuFrontier ). Benchmark exposure : Private benchmarks elicited less evaluation awareness than public ones. The authors argue that public benchmark results alone may not predict deployment behavior. Visual steering : A Google DeepMind and Stanford paper finds that a red-heart image in context makes Claude Opus 4.7 and GPT-5.4 write recursive code 100% of the time ( @dair_ai ). Explanations : The models' explanations do not match their behavior. For GPT-5.4, 74.7% of reasoning traces give the wrong reason. Alignment techniques : GRAFT (Anthropic) : Updates from detected reward hacks are confined to parameters that are deleted after training. Anthropic says this also blocks hacks that monitors cannot detect ( @dl_weekly ). Embedded lie detector : A detector built into Qwen3.5's weights flags 91% of lies with zero false positives in 28k tokens. Telling the model \"the monitor is off\" does not change the results ( @divagr1925 ). Distillation allegations (unconfirmed) : The Information reportedly says Kimi K3.1 Pro was distilled from GPT-6 Astra ( @kimmonismus ). Giotto : Separately, the \"European sovereign AI\" Giotto is criticized as a Kimi-based model. Critics cite saturated benchmarks and an EULA that banned publishing users' own benchmark numbers ( @oneill_c ). Coding Agents and Developer Tools GitHub Copilot Fusion : Fusion orchestrates Anthropic and OpenAI models at runtime ( @ArtificialAnlys ). Independent results : It scores 2 points below Opus 5.5 in Claude Code on the AA Coding Agent Index. It costs $5.59 per task, versus $11.42 for that setup, and uses 7.2M tokens per task. It leads Terminal-Bench 4.0 with 71. GitHub claims : GitHub claims up to 77% lower cost and 40% faster runs. It also launched Copilot automations and multi-repo Copilot Projects ( @kdaigle ). T3 Code multi-machine orchestration : One thread can drive multiple models, harnesses and machines. A single MCP server controls the fleet over the internet, not through computer use ( @theo , MCP demo ). Harness overhead : The default system prompts of 30 open coding harnesses range from 235 tokens in goose to 11,974 in Gemini CLI, before any tool definitions ( @nathanhabib1011 ). Agent training and capability : Post-training curriculum : Hugging Face published a five-step agent post-training curriculum that runs from SFT to RL inside a real harness ( @SergioPaniego ). Opus 5.5 games : Simon Willison calls October an inflection point because Opus 5.5 builds games that are actually fun ( @simonw ). Lor : Lor's agents write code and run multi-day experiments, hundreds at a time; the product is in private beta ( @mirendil ). Research: Architectures, Training and Theory H-Net v2 (Cartesia) : H-Net learns tokenization end to end from raw bytes ( @_albertgu ). Results : Controlled scaling experiments show 3–5x efficiency gains. At larger scale, the model matches an open model trained on 11T tokens with about 10x less data and compute. Code : H-Net learns to treat variable names as separate tokens and scales better than BPE on code ( @tri_dao ). NanoGPT speedrun record : The record fell from 39.9s to 6.7s using retrieval-augmented n-gram hints for rare, repeated content ( @hermanbrunborg ). OpenAI's claimed refutation of ETH : The claim is a 3-SAT algorithm running in 2^{O(n/√log n)} time, formalized in Lean. It encodes the solution count algebraically and reconstructs it ( @ZhihuFrontier ). Practicality : The algorithm falls back to exponential time unless n is astronomically large ( @beenwrekt ). Explainer : Mark Sellke posted outline slides ( @MarkSellke ). Small specialized models : Samaya post-trained Nemotron 3.5 Lightning (30B total, 3B active) with two SFT stages and two GRPO stages. It scores 58.9% on FrontierFinance, versus 55.9% for Fable 5.1, at $0.61 versus $6.89 ( @maithra_raghu ). Retrieval and memory : EmbeddingGemma 2 : The open 744M multimodal embedding model has modular encoders and runs at 271M parameters for text only. It scores 61.36 on MTEB Multilingual v2 ( @dair_ai ). EMMA : The system improves multi-agent setups through episodic memory. It beats GEPA and ADAS by up to 32.5% ( @omarsar0 ). AI text on the web : About 24% of crawlable pages contained AI-generated or AI-edited text as of August 2026 ( @omarsar0 ). Inference and Hardware Systems KV-cache engineering : AKV (Tsinghua and CUHK) : The serving engine adds \"drop\" and \"repos\" cache operations. It cuts agent cost by 27.7% and improves P95 latency 1.51x ( @TheTuringPost ). DRAM offload : SemiAnalysis says SGLang HiCache offload to CPU DRAM adds 20–40% cacheable tokens at 12–16 concurrent agent sessions on B200 ( @SemiAnalysis_ ). Cache billing : cHHillee argues that billing on realized cache hits gives providers an incentive to avoid cache hits. He favors billing on theoretical or TTL-based hits ( @cHHillee ). Open runtimes : Modular MAX : Modular opened the full MAX source, including the compiler, runtime and hardware backends, with no royalties ( @cristianoamon ). MLX : Recent kernels make batched decoding 2–3x faster and fused SDPA 1.4x faster ( @zcbenz ). NF12 : The lossless 12-bit BF16 format speeds Qwen3-32B token generation 1.23x ( @ sylvie_l ). Packaging : ASE's panel-level packaging for AMD Venice fits 25 interposers per panel versus 22 per wafer. Production starts in Q1 2027 ( @SemiAnalysis_ ). Speech, Video and Multimodal Models NVIDIA Nemotron 3.5 Transcribe : The open-weight 30B MoE model has about 4B active parameters. It handles 40 languages, speaker attribution, translation and audio Q&A ( @NVIDIAAI ). Independent results : It scores 2.8% on AA-WER, tied with Voxtral Small for #1 among open models. On DeepInfra it runs at a 75x speed factor for $2 per 1,000 minutes ( @ArtificialAnlys ). Serving : vLLM supports it on day 0 with BF16, FP8 and NVFP4 weights ( @vllm_project ). AssemblyAI-TTS-1 : The model costs $15 per 1M characters, with 90 ms to first audio ( @AssemblyAI ). Independent results : Artificial Analysis ranks it #12 in Provider Voice and #10 in Controlled Voice. It generates 162 characters per second ( @ArtificialAnlys ). Image-to-video benchmark : Artificial Analysis launched AA-Video-I2V v2.1 ( @ArtificialAnlys ). Leaders : Seedance 2.5 is #1 at $34.12/min. The open-weights MiniMax H3 is #3 at $4.80/min. Industry and Policy OpenAI API credits : ChatGPT Pro subscribers can claim $100–$500 per month by tier. Business plans pool up to $500 per workspace ( @OpenAIDevs , tiers ). Dot texting : ChatGPT dot now supports texting as a preview for US Pro users ( @ChatGPT ). Anthropic S-1 accounting : Jamin Ball says the roughly $80B H1'26 net loss is mostly a mark-to-market increase in convertible-note and SAFE liabilities, not an operating loss ( @jaminball ). Q3 financials : He also argues that omitting Q3 financials from the draft S-1 is normal ( @jaminball ). Particle launch : particle-1 claims performance parity with about 45% fewer tokens ( @Suhail ). It is built on DeepSeek V4.1 Flash-1017 ( @teortaxesTex ). Databricks vs Snowflake : Ali Ghodsi publicly pitched Unity Gateway to Snowflake after Snowflake's CEO called a market top ( @alighodsi ). Top tweets (by engagement) @sundarpichai : Gemini 4 Carbon announcement with cyber benchmarks (33.3K) @OfficialLoganK : Carbon introduction (17.4K) @NVIDIAAI : Nemotron 3.5 Transcribe (7.4K) @ChatGPT : text your dot (6.9K) @OpenAIDevs : up to $500/month in API credits (6.9K) @_albertgu : H-Net v2 scaling results (5.4K) @ArtificialAnlys : Carbon independent analysis (5.3K) @hermanbrunborg : NanoGPT speedrun at 6.7s (2.2K) AI Reddit Recap /r/LocalLlama + /r/localLLM Recap 1. Open-Weight Model Releases: LFM3 and Ling 3.1 LiquidAI/LFM3-1.7B · Hugging Face (Activity: 582): Liquid AI released the LFM3 family , centered on LFM3-1.7B : a 1.73B post-trained text model using a 24-layer tri-hybrid architecture with 13 gated short convolutions, 5 sliding-window attention layers, and 6 global attention layers, supporting a 256K token context and ~ 1 GB 4-bit edge deployment. The broader drop includes VL-2B , Audio-2B , Omni-2B , decision models d1-2B / d1-Omni-2B , and the 1.7B base checkpoint , with support spanning text, vision, video, audio, speech output, and one-pass calibrated decision tasks. llama.cpp support has reportedly landed via merged PRs #31257 , #31252 , and #31275 , enabling local GGUF inference workflows. Ling-3.1-flash-1019 weights are out, and they released the base model too (Activity: 277): The image is an Artificial Analysis Intelligence Index v4.3.2 bar chart highlighting Ling-3.1 Flash 1019 at a score of 44 , placing it mid-leaderboard near models such as GLM-5.0, Step 5 Preview, and Kimi-K3. The post notes the newly released Hugging Face weights for inclusionAI/Ling-3.1-flash-1019 : a 560B total / 25B active MoE model with a 1M context window, plus a BF16 base checkpoint Ling-3.1-flash-base for further training. The author also flags an implementation gotcha: the SGLang README example still points to the older inclusionAI/Ling-3.1-flash path and should be changed to inclusionAI/Ling-3.1-flash-1019 . Commenters questioned whether Ling-3.1 Flash 1019 is preferable to DS41F 1017 , which reportedly scores one point higher while using fewer runtime resources via engram plus native MXFP4/MXFP8 support. Others praised the permissive MIT/Apache-style licensing but noted they may not be able to run such a large model, and one user said prior Ling models they tried had issues. A commenter questioned whether Ling-3.1-flash-1019 is technically preferable to DS41F 1017 , claiming DS41F scores +1 higher on the referenced benchmark while being cheaper/faster to run due to engram + native MXFP4/MXFP8 support and “way less active parameters.” This frames the main technical tradeoff as benchmark parity vs inference efficiency and quantization/runtime support. Several comments focused on release usability rather than leaderboard score: users highlighted the value of a newly released base model and permissive licensing such as MIT/Apache-2.0 , but one user reported that prior Ling models they tested had recurring quality or reliability issues. Another disputed the benchmark equivalence between GLM-5.3-flash and Ling-3.1-flash , suggesting similar benchmark scores may not reflect comparable real-world quality. 2. Qwen: 1M Context, URL Trace Debate, Qwenputer Qwen4 1M context window (Activity: 386): A Reddit post claims Qwen4 models will support a 1M token context window, citing a qwen-code GitHub PR: QwenLM/qwen-code#15762 . The post says Qwen4-27B was not listed there but is expected to be announced at Apsara Netherlands, while Qwen4-Max appears to have a date shown as October 1st / November 1st , likely a placeholder due to inconsistency. Commenters were mainly optimistic: one noted that 262k context in Qwen/QFN was already useful but that they have been “spoiled by 1M ,” and another expressed anticipation for Qwen4 27B as a potential major upgrade. Users highlight that a 1M context window is a major requested upgrade over Qwen/QFN 262k context , with one commenter noting the architecture has improved enough that they can realistically fit/use the longer context locally or in their workflow. There is speculation around upcoming Qwen4 model variants , especially Qwen4 27B as a hoped-for substantial upgrade and qwen4-omni-120b-think from a PR, which one commenter interprets as potentially being a new Flash-style model. One commenter requests a better Q38FN release focused less on scale and more on cleaner training data , pruning “useless artifacts,” and replacing them with higher-quality world knowledge, emphasizing dataset curation as a path to quality gains. Debunking Cohere's claim of Qwen 3.8 Flash Next uploading to Alibaba remote URL (Activity: 1461): The post argues that Cohere’s Qwen 3.8 Flash Next “phone-home” claim is overstated because their published HF traces allegedly prefill the model with a 2,323 -token prefix ending just before a URL, effectively turning the model into a constrained URL-completion generator rather than demonstrating autonomous network intent. It further notes Cohere’s CEO told The Register they had “no evidence” the behavior was deliberate, and that it appeared in fewer than 1 / 100,000 calls, while the original prompt was vague and likely to induce hallucinated detection-rule artifacts. Commenters largely framed the incident as a reminder to sandbox LLM agents and treat generated or retrieved code as untrusted/malicious by default. Several commenters viewed Cohere’s disclosure as marketing/propaganda or a bad-faith attack on Qwen/Alibaba rather than a conclusive security finding. A commenter emphasized that regardless of whether Cohere’s specific remote-upload claim is valid, agent harnesses should treat untrusted code from humans, companies, or LLMs as malware . They specifically called out users who “YOLO” permission prompts and argued agents should be run in proper sandboxes to prevent unintended network/file-system access. Someone built a 32-bit RISC-V CPU directly inside Qwen's model weights so it can execute instructions internaly! (Activity: 1045): A project called Qwenputer modifies Qwen3.5-4B weights/layers to embed a virtual 32-bit RISC-V CPU-like execution path inside the model forward pass, with write-up, model, and demo available at divagr.com/blog/qwenputer , Hugging Face , and ModelScope . Commenters noted the key mechanism appears to be native tool execution: when Qwen emits a <tool_call> such as calc , put , get , or list , added “computer layers” intercept it during the forward pass, run code on the virtual RISC-V processor, and synthesize the <tool_response> token-by-token internally. The main technical skepticism is that this may be an inefficient novelty form of tool calling rather than a fundamentally new execution paradigm, though one commenter suggested the extreme sandboxing could have security advantages. Another commenter preferred the inverse direction: implementing Qwen weights directly in chip circuitry, while noting current approaches are prohibitively expensive. Commenters clarified that the project appears to be closer to native/intercepted tool execution than arbitrary “CPU reasoning” inside normal token generation. The linked model card says Qwen emits a <tool_call> such as calc , put , get , or list ; custom “computer layers” intercept it during the forward pass, execute it on a virtual 32-bit RISC-V processor, and write back a <tool_response> token-for-token ( Hugging Face ). The main technical skepticism was that this may be an inefficient novelty compared with conventional external tool calling. One possible advantage raised was sandboxing/security : because execution happens inside a constrained virtual RISC-V environment embedded in the model pipeline, tool behavior may be more isolated than normal host-side tool execution. 3. Artificial Analysis Index v5 Benchmark Fallout Artificial Analysis Intelligence Index v5 (major update) (Activity: 960): Artificial Analysis updated its Intelligence Index to v5, described as a major methodology change; the post notes that 60% of the index now depends on private test sets or held-out answers, limiting reproducibility. The new ranking reportedly expands the open-vs-closed gap from 3 to 12 points: Kimi K3.1 Pro is the top “open weights” model at 46 despite weights not yet being released, while released-weight models DeepSeek V4.1 Flash 1017 and GLM-5.3 lead at 32 , below Claude Haiku 5.5 at 36 and 26 points behind the overall leader. Commenters were skeptical of the timing and methodology, arguing that benchmark definitions tend to shift when open-weight models approach closed-frontier performance. Some also speculated, without evidence, that the update’s timing could be related to Anthropic’s IPO narrative. Several commenters focused on benchmark methodology drift , arguing that the Artificial Analysis Intelligence Index v5 update appears to widen the measured gap between open-weight and closed models shortly after open models had approached frontier scores. The technically relevant concern is that changing benchmark composition or weighting can materially alter model rankings, but the thread did not provide concrete metric deltas, task-level breakdowns, or reproducible evidence. One commenter specifically referenced Kimi K3.1 Pro as an example of an open model allegedly getting close to frontier performance before the scoring rules changed. However, the discussion did not include benchmark scores, eval categories, or comparisons against specific closed models, so the claim remains a methodological critique rather than a data-backed analysis. AA is getting ridiculous now. Zero open weights in the Most Attractive Quadrant. (Activity: 519): The post criticizes Artificial Analysis (AA) Index v5.0 because its Most Attractive Quadrant/Zone reportedly contains zero open-weight models, unlike earlier versions that placed DeepSeek, GLM, Kimi, and Qwen closer to the attractive/Pareto frontier. The author notes scores may have been mid-update and links a manually populated AA chart for comparison, but argues the resulting intelligence/efficiency view is still systematically sparse for open-weight models: AA chart . A top comment cites an animation claiming the AA transition from 4.1 to 4.3 caused OpenAI scores to jump disproportionately while other models stayed roughly proportional, leading some users to distrust the aggregate index and prefer subsidiary benchmarks. Commenters allege AA’s index changes may be biased toward closed/proprietary vendors, with speculation about investor-facing optics or IPO incentives; others jokingly suggest it is better for open-weight models to remain under-hyped. A commenter points to an animation comparing AA versions 4.1 to 4.3 , arguing that the chart methodology appears unstable because OpenAI’s position jumps sharply upward while other models remain roughly proportional . They say this discontinuity made them discount the benchmark’s reliability. Several users question AA’s “cost per task” estimates, saying observed API usage does not match the chart. One example claims DeepSeek V4.1 Flash and GPT Sol deliver similar practical output, but GPT Sol costs “five times as much at least” rather than the roughly 2x implied by the graph; another reports GLM 5.3 Flash completing a task for $0.09 while Astra allegedly cost around $20 for comparable work. One technical criticism targets model placement quality: Terra is described as suspiciously high-ranked because, in user testing, it allegedly fails basic instruction-following by claiming completion after only partial work. This suggests the benchmark may overweight narrow eval performance or under-detect task completion failures. Less Technical AI Subreddit Recap /r/Singularity, /r/Oobabooga, /r/MachineLearning, /r/OpenAI, /r/ClaudeAI, /r/StableDiffusion, /r/ChatGPT, /r/ChatGPTCoding, /r/aivideo, /r/aivideo 1. Gemini 4 Carbon Frontier Benchmarks Gemini 4 Carbon (Activity: 2434): The image is a benchmark comparison table attributed in the post to @GoogleDeepMind on X, highlighting Gemini 4 Carbon against Gemini 4 Argon, GPT-6 Astra, Claude Opus 5.5, and Claude Fable 5.1. It claims Gemini 4 Carbon leads across many technical categories, including coding, agentic computer use, multimodal understanding, long context, science/math, and cybersecurity, with top scores on benchmarks such as AA Index , SWE-sweep , Terminal-Bench , Agents’ Last Exam , GraphWalks , RiemannBench , and SEC-bench Pro . No methodology, dataset versions, or independent validation are provided in the Reddit text, so the table is best read as a claimed vendor-style benchmark summary rather than a reproducible evaluation. Commenters note that despite apparent model improvements, Gemini 4 Carbon is reportedly not publicly available and may be limited to select “cyber crews,” with no release date mentioned. This limits independent benchmarking or validation of any claimed performance gains. Alphabet introducing Gemini 4 Carbon, next frontier model. (Activity: 1588): A Reddit post claims Alphabet/Google is introducing Gemini 4 Carbon as its next frontier model and references benchmarks, but the provided excerpt contains no benchmark numbers, tasks, methodology, model card, release notes, or source link to technically validate the claim. Top comments are largely skeptical/frustrated about Google’s model cadence and access: users complain that Gemini 3.1 Pro has lingered without updates, Argon was short-lived or hard to access, and they want 3.1 deprecated or replaced. Some commenters focused on severe access/rate-limit constraints around recent Gemini preview models, with one claiming users “can’t even get 3 prompts with Argon” and another exaggerating availability as “ 1 prompt per week.” While not benchmark-oriented, the thread implies that model rollout capacity and quota policy may be a practical blocker even before evaluating a new frontier model like Gemini 4 Carbon . One substantive defense of a delayed launch argued that frontier-model releases need time for infrastructure security hardening , especially after recently discovered cybersecurity issues. The commenter suggested immediate release would give software infrastructure “zero time to react and patch,” increasing exposure to bad actors during deployment. 2. Claude Code Quota and Token Regression Reports Claude Code usage exploded 8x today. Anthropic confirmed service errors consume our paid limits — and they won't compensate users (Activity: 2418): A Claude Pro user reports anomalous Claude Code quota depletion on Oct. 27, with local ccusage totals rising from a prior recorded-day average of 161M total tokens / 303K output tokens / $41.17 API-equivalent cost to 1.306B total tokens / 7.97M output tokens / $493.04 —roughly 8.1x , 26.3x , and 12x respectively ( attached graph ). Anthropic support allegedly confirmed two resolved Claude Sonnet 5.5 elevated-error incidents that day, stated service-error retries “do count toward usage limits,” confirmed the user’s Pro usage was affected, and said retry/incident usage cannot be refunded, credited, or compensated. Commenters framed this as a serious billing/quota-accounting failure: one Max-plan user claimed their $200 plan consumed 70% in one day versus 10–15% normally, while others criticized Anthropic’s refusal to compensate. A minority comment suggested occasional resets or limit increases may be Anthropic’s implicit mitigation, but no concrete policy details were provided. Multiple users reported a sharp apparent increase in Claude Code quota consumption: one $200 Max plan user said a typical day previously used only ~10–15% of weekly allowance but consumed 70% in a single day, while another Pro user reported 2% weekly usage spent on just 2 questions totaling about 250K tokens over 4 minutes . A user analyzing 5-hour limits claimed the effective cap appeared lower than expected and shared a screenshot showing unexpectedly fast limit exhaustion: https://preview.redd.it/wdut6kwym2yh1.png?width=1110&format=png&auto=webp&s=ce00732aae39c296bd50b39efd8b7e05cf2948fa . Another commenter estimated quota burn was roughly 2x–5x faster than normal even with “carefully controlled” context, suggesting either accounting changes, service-error token billing, or anomalous metering behavior. Claude is performing 3.8x poorer compared to last week based on my claude code token analysis (Activity: 1411): The image is a dark-themed token-usage comparison table for Claude Code / Opus 5.5 showing the poster’s claimed regression: this week consumed 65% of the weekly quota while producing only 2.04M output tokens vs 11.94M last week, with “output per 1% limit” falling from 119K to 31K and “weighted usage per 1,000 output tokens” rising from 78K to 296K —interpreted as ~ 3.8× worse efficiency. In context, the post attributes this to possible Claude Code harness/orchestration changes: subagents rereading parent context, taking more steps, spawning more often, overlapping file reads, and degrading especially when subagent context exceeds ~ 350K tokens. Image Commenters report similar unexplained quota burn and criticize Anthropic for silent harness changes, including alleged removal of foreground subagents and limits on autonomous new-session starts. One commenter frames the issue as likely split between model quality and the Claude Code harness , suggesting harness version changes may explain increased token use. Several commenters distinguish between Claude the model and Claude Code’s harness , arguing that recent token regressions may stem from harness/version changes rather than model quality alone. One commenter suggests querying Claude Code about harness changes by version, claiming this explains increased token usage, while another reports weekly Premium usage rising from roughly 15% to 33% with no workflow change. A commenter reports undocumented behavioral changes in Claude Code orchestration: subagents allegedly can no longer run in the foreground, and a session can no longer autonomously start a new session unless the turn was initiated by a user message. They characterize these as silent workflow-breaking changes that affect automation/session-management patterns. One user provides an error-pattern analysis from four Claude Code sessions, listing 26 instances where Claude admitted mistakes within 24 hours . The examples suggest repeated issues with unverified assumptions, overstated counts, circular answers, failure to check logs/build state, and changing previously approved decisions—potentially indicating degraded agent reliability or context-management behavior. 3. Claude Opus 5.5 Math Breakthrough Claims How big a deal is this? Claude Opus 5.5: \"If these hold up, this is the biggest single day in the history of math and theoretical computer science.\" (Activity: 1406): The post claims Claude Opus 5.5 produced results that, if valid, would be historically significant for mathematics/theoretical CS; the linked Reddit gallery could not be verified because Reddit returned 403 Forbidden. Technical discussion centers on alleged progress in high-level open problems, including comments referencing Yang–Mills/QFT foundations and a curated open-problem tracker, ProofAtlas , whose maintainer claims 6 problems were resolved “yesterday,” including 4 in the top 100 , with partial progress on problem #3 ; they also claim an OpenAI Oct. 6 release resolved 90 problems, including 10 in the top 100 , with partial progress on #2 . Commenters are treating the key issue as not the specific theorem but whether an AI system can reliably solve problems at this complexity level with enough correctness guarantees. One QCD researcher characterized a proof of Yang–Mills-related foundations as extraordinary, while noting that a full mass gap proof would be even more field-changing. A commenter working in QCD framed the claimed result as potentially foundational for quantum field theory , noting that Yang–Mills/QFT foundations have historically been mathematically incomplete despite producing extremely precise experimentally verified predictions. They specifically highlighted that a proof of Yang–Mills would be remarkable, and that proving the mass gap would be an even more consequential milestone. One commenter linked a maintained tracker of major math problems, ProofAtlas open problems , claiming that 6 listed problems were resolved in one day, including 4 in the top 100 , with partial progress on problem #3 . They also claimed OpenAI’s Oct. 6 release resolved 90 problems, including 10 in the top 100 , plus partial progress on problem #2 , implying a measurable acceleration in AI-assisted mathematical research output. Another technically oriented thread argued that the key issue is not the specific theorem but whether AI systems can reliably solve problems at this complexity level with sufficient expected correctness. The commenter connected this to recursive self-improvement, suggesting that AI-driven advances in chip design , software development , and mathematics/computer science may form feedback loops that improve future AI capabilities. Internal Claude research model also independently refuted the Exponential Time Hypothesis on October 16, with 14M output tokens and no human input. (Activity: 1351): The image is a screenshot of an X post claiming an internal Claude research model independently found a “core algorithm” refuting the Exponential Time Hypothesis (ETH) on October 16 , producing roughly 14M output tokens with no human input . The Reddit post links to Anthropic’s formal-math/eth repository, implying the result was later refined by Anthropic researchers with Claude into a more presentable proof/paper artifact. Commenters were skeptical of the timing and framing, with one suggesting it looked like a response to OpenAI’s similar announcement: “we solved it too, look what we can do.” Others questioned the real-world consequences of refuting ETH and joked that competitive advantage in frontier AI may come down to owning massive GPU capacity rather than a durable algorithmic moat. A commenter asked about the real-world consequences of refuting the Exponential Time Hypothesis (ETH) , specifically whether practical systems or assumptions depend on ETH being true. This frames the result as a complexity-theory breakthrough whose impact may be indirect: ETH is widely used for conditional lower bounds, so refuting it would potentially invalidate many hardness assumptions, but not necessarily imply immediate practical algorithms. One technically relevant thread pointed to prior automated-math work involving Levent and large-model theorem-proving experiments, including the Yang–Mills LLM experiment repository: https://github.com/ethanwsussman/Yang--Mills-LLM-experiment . The commenter also referenced Levent being involved in earlier high-profile mathematical work, suggesting Anthropic’s result may fit into a broader pattern of LLM-assisted attacks on major open problems rather than an isolated ETH claim. Another commenter argued that there is limited defensibility or “moat” in this kind of result if competitors can scale to “a country worth of GPUs.” The technical implication is that frontier mathematical discovery may be increasingly constrained by compute scale and inference budget—here the post claims 14M output tokens with no human input—rather than by a unique algorithmic advantage alone.",
+      "author": "swyx .ai",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
     {
       "id": "x:4727a6bbd7e25f150246",
       "source_type": "x",
@@ -2772,45 +2862,6 @@
       }
     },
     {
-      "id": "reddit:f0f3fceec6da179ed748",
-      "source_type": "reddit",
-      "source_name": "r/wallstreetbets",
-      "title": "DXYZ: maybe the cheapest way to get Anthropic exposure before they list",
-      "url": "https://www.reddit.com/r/wallstreetbets/comments/1xi08x7/dxyz_maybe_the_cheapest_way_to_get_anthropic/",
-      "published_at": "2026-10-28T20:54:13+00:00",
-      "collected_at": "2026-10-29T00:00:55.450348+00:00",
-      "body": "TLDR: Anthropic's S-1 released on Monday and the numbers were surprisingly good by most accounts. Many thought an S-1 would never get released (see: yung Karp on CNBC ) Destiny Tech100 (DXYZ) is a closed-end fund (CEF) that holds Anthropic, OpenAI, and SpaceX, and it trades at about $27-28 against a last filed NAV of $34.30. If you mark Anthropic at the $1.5-2T that Anthropic is rumoured to list at, the NAV is closer to $37-39. The fund is shit in a lot of ways (high fees and dilution history), but there is a real discount there. My re*arded position is at the bottom. What Anthropic’s S-1 showed us Highlights: Revenue: $16.3B in H1 2026 Compare that to $4.6B for all of 2025. Q2 alone was $11.6B, up from $4.7B in Q1. Q2 operating income: +$974M. Almost nobody expected Anthropic to be profitable (except maybe Gavin Baker ) $131.7B in cash and short-term investments This is before the IPO raises (reportedly) up to ~$100B more. This is enough money to buy any of the bottom 300 companies in the S&P 500. Nvidia reported to invest $10B of that ( link ) ARR was reported at $65B+ as of end of July (Bloomberg, from an investor update, not the S-1). Expected to be $76B+, will have to wait for S-1/A and October revenue to know for sure Ticker ANT on Nasdaq rumoured to trade ahead of US Thanksgiving (November 26) ( src ) The S-1 doesn't have a price range yet. Reports put the target valuation at $1.8-2T , vs $965B in the May round. There's a GAAP net loss of $80.7B in H1 2026, but that's mostly non-cash fair-value changes on convertible notes (whatever that means). What’s missing Q3 numbers, run-rate revenue, raise size, and price range. All of these will be filled in when the S-1/A releases at the start of the IPO roadshow (likely November 9 at the latest) DXYZ holdings Holding % of portfolio (6/30) Cash / T-bills 57.3% Anthropic 14.4% (biggest holding) SpaceX (3 SPVs, now marked to SPCX) 10.6% OpenAI 2.6% OpenEvidence, Shield AI, ~30 others the rest NAV math The listed $34.30 NAV is stale, once you re-mark it: Anthropic valuation Anthropic stake value Est. NAV/share DXYZ at $27 = June 30 mark $235.7M $34.30 (last filing) -21% $1.5T $325.7M ~$37.12 -26% $2T $434.2M ~$39.36 -30% This model also marks OpenAI at a ~$1.25T valuation and SpaceX at the live SPCX price (which is down ~15% vs the June mark, so it's a drag here). Anthropic is only ~14% of the portfolio. Going from the June mark to $2T adds about $4/share to NAV. Bull case S-1/A catalyst a few weeks away This will come with actual pricing details, valuation they’re seeking, and raise size. Nobody actually knows what valuation Anthropic will seek here, but so far response has been good. They may seek 2T Likely that people just won't get an ANT allocation DXYZ is one of a few tickers with Anthropic on the books and trades at a discount. Brokers gave retail almost no allocations for SPCX ( example )). Should drive demand for proxies ahead of IPO. The ATM firehose should be off Destiny sold 17.2M shares at ~$41.82 in Q2 ($715M) through a $1B at-the-market (ATM) offering. Closed-end funds can't issue new shares below NAV without shareholder approval, so they won’t dump on you while it trades at a discount Half the fund is T-bills Roughly $750M+ of cash (after the August buys) against a ~$1.3B market cap. OpenAI exposure OpenAI is reportedly targeting a ~$1.25T valuation, and DXYZ just invested another $150M in OAI Bear case Fees are pretty bad Total expense ratio is 4.53% (2.5% management fee plus other costs) Float is much much bigger than in May That $715M of ATM issuance means ~17M more shares. Went from ~30M shares to ~47M shares (see 424B3 filing ) It's optionable now Lots of the degen demand that used to bid up the shares goes into the options chain instead. The NAV discount can just stay that way… This would be historically rare for DXYZ but it is definitely possible. Lockups Even if the Anthropic stake is good, SPV holders probably won’t be able to sell on day one. The S-1 shows unlocks across 20+ windows over about a year. Position Uhhhh it’s pretty degenerate: 1,112 DXYZ Dec 18 $30 calls @ $2.23. I had a position on DXYZ in August and wished it was bigger when it pumped from 20-35, maybe this is a revenge trade ¯\\_(ツ)_/¯ there's probably a better way to structure a position with this thesis DISCLAIMER I am genuinely stupid Sources Anthropic S-1 coverage: Fortune, Oct 27 , Yahoo Finance live, Oct 26 Run-rate: Bloomberg Gov, Aug 18 DXYZ holdings and NAV: Destiny Tech100 fund page , CEF Connect ATM sales and OpenAI buy: 424B3, Aug 28 NAV model: stocks.bolewood.com/dxyz (estimates only, not an official website) submitted by /u/beholdthemoldman [link] [comments]",
-      "author": "/u/beholdthemoldman",
-      "symbols": [
-        "NVDA"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "transport": "rss",
-        "listing": "dd",
-        "flair": "",
-        "requested_flair": "",
-        "requested_flairs": [
-          "DD"
-        ],
-        "sort": "top",
-        "time_filter": "day",
-        "feed_rank": 1,
-        "image_urls": [
-          "https://external-preview.redd.it/KBZ723cxXgb_52vY5uV3G7F35FzbiU08AonhFImaHRw.jpeg?width=140&height=105&auto=webp&s=2fa4563f5ad3994b8f53f0a097fa6bbc46bf03a5"
-        ],
-        "images": [
-          {
-            "url": "https://external-preview.redd.it/KBZ723cxXgb_52vY5uV3G7F35FzbiU08AonhFImaHRw.jpeg?width=140&height=105&auto=webp&s=2fa4563f5ad3994b8f53f0a097fa6bbc46bf03a5",
-            "path": "data/media/reddit/reddit-image-reddit-f0f3fceec6da179ed748-1.jpeg",
-            "mime_type": "image/jpeg",
-            "bytes": 4642
-          }
-        ]
-      }
-    },
-    {
       "id": "x:7368075d7401fcca1272",
       "source_type": "x",
       "source_name": "@DratchCap",
@@ -3226,6 +3277,256 @@
         "investor_type": "technology_investor",
         "coverage": "technology, software and internet equity ideas",
         "engagement_score": 85
+      }
+    },
+    {
+      "id": "price:c590f1c27d8af8cff17a",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 涨幅前十 2026-10-28",
+      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
+      "published_at": "2026-10-28T20:00:00+00:00",
+      "collected_at": "2026-10-30T00:02:27.544717+00:00",
+      "body": "1. ORCL close 144.539993; previous 130.529999; change 10.7332%\n2. CRWV close 63.93; previous 59.57; change 7.3191%\n3. NBIS close 182.339996; previous 170.470001; change 6.9631%\n4. CORZ close 15.0; previous 14.265; change 5.1525%\n5. RDWR close 37.16; previous 35.5; change 4.6761%\n6. AVPT close 17.200001; previous 16.459999; change 4.4958%\n7. PICS close 7.9; previous 7.59; change 4.0843%\n8. EEFT close 61.150002; previous 59.009998; change 3.6265%\n9. CXM close 6.91; previous 6.68; change 3.4431%\n10. FRSH close 15.38; previous 14.9; change 3.2215%",
+      "author": "",
+      "symbols": [
+        "ORCL",
+        "CRWV",
+        "NBIS",
+        "CORZ",
+        "RDWR",
+        "AVPT",
+        "PICS",
+        "EEFT",
+        "CXM",
+        "FRSH"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "gainers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-10-28",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "ORCL",
+            "price_date": "2026-10-28",
+            "close": 144.539993,
+            "previous_close": 130.529999,
+            "change_amount": 14.009995,
+            "change_percentage": 10.7332,
+            "url": "https://finance.yahoo.com/quote/ORCL"
+          },
+          {
+            "ticker": "CRWV",
+            "price_date": "2026-10-28",
+            "close": 63.93,
+            "previous_close": 59.57,
+            "change_amount": 4.360001,
+            "change_percentage": 7.3191,
+            "url": "https://finance.yahoo.com/quote/CRWV"
+          },
+          {
+            "ticker": "NBIS",
+            "price_date": "2026-10-28",
+            "close": 182.339996,
+            "previous_close": 170.470001,
+            "change_amount": 11.869995,
+            "change_percentage": 6.9631,
+            "url": "https://finance.yahoo.com/quote/NBIS"
+          },
+          {
+            "ticker": "CORZ",
+            "price_date": "2026-10-28",
+            "close": 15.0,
+            "previous_close": 14.265,
+            "change_amount": 0.735,
+            "change_percentage": 5.1525,
+            "url": "https://finance.yahoo.com/quote/CORZ"
+          },
+          {
+            "ticker": "RDWR",
+            "price_date": "2026-10-28",
+            "close": 37.16,
+            "previous_close": 35.5,
+            "change_amount": 1.66,
+            "change_percentage": 4.6761,
+            "url": "https://finance.yahoo.com/quote/RDWR"
+          },
+          {
+            "ticker": "AVPT",
+            "price_date": "2026-10-28",
+            "close": 17.200001,
+            "previous_close": 16.459999,
+            "change_amount": 0.740002,
+            "change_percentage": 4.4958,
+            "url": "https://finance.yahoo.com/quote/AVPT"
+          },
+          {
+            "ticker": "PICS",
+            "price_date": "2026-10-28",
+            "close": 7.9,
+            "previous_close": 7.59,
+            "change_amount": 0.31,
+            "change_percentage": 4.0843,
+            "url": "https://finance.yahoo.com/quote/PICS"
+          },
+          {
+            "ticker": "EEFT",
+            "price_date": "2026-10-28",
+            "close": 61.150002,
+            "previous_close": 59.009998,
+            "change_amount": 2.140003,
+            "change_percentage": 3.6265,
+            "url": "https://finance.yahoo.com/quote/EEFT"
+          },
+          {
+            "ticker": "CXM",
+            "price_date": "2026-10-28",
+            "close": 6.91,
+            "previous_close": 6.68,
+            "change_amount": 0.23,
+            "change_percentage": 3.4431,
+            "url": "https://finance.yahoo.com/quote/CXM"
+          },
+          {
+            "ticker": "FRSH",
+            "price_date": "2026-10-28",
+            "close": 15.38,
+            "previous_close": 14.9,
+            "change_amount": 0.48,
+            "change_percentage": 3.2215,
+            "url": "https://finance.yahoo.com/quote/FRSH"
+          }
+        ]
+      }
+    },
+    {
+      "id": "price:0e4df2e08c7b501e1c79",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 跌幅前十 2026-10-28",
+      "url": "https://finance.yahoo.com/markets/stocks/losers/",
+      "published_at": "2026-10-28T20:00:00+00:00",
+      "collected_at": "2026-10-30T00:02:27.544717+00:00",
+      "body": "1. FFIV close 365.529999; previous 459.359985; change -20.4262%\n2. DBD close 58.07; previous 66.68; change -12.9124%\n3. INTA close 40.34; previous 42.950001; change -6.0768%\n4. FTNT close 174.080002; previous 185.0; change -5.9027%\n5. TYL close 360.899994; previous 378.619995; change -4.6802%\n6. JOYY close 75.410004; previous 79.089996; change -4.6529%\n7. DUOL close 135.210007; previous 141.309998; change -4.3167%\n8. PPLI close 35.75; previous 37.290001; change -4.1298%\n9. YMM close 8.08; previous 8.42; change -4.038%\n10. Z close 30.77; previous 32.049999; change -3.9938%",
+      "author": "",
+      "symbols": [
+        "FFIV",
+        "DBD",
+        "INTA",
+        "FTNT",
+        "TYL",
+        "JOYY",
+        "DUOL",
+        "PPLI",
+        "YMM",
+        "Z"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "losers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-10-28",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "FFIV",
+            "price_date": "2026-10-28",
+            "close": 365.529999,
+            "previous_close": 459.359985,
+            "change_amount": -93.829987,
+            "change_percentage": -20.4262,
+            "url": "https://finance.yahoo.com/quote/FFIV"
+          },
+          {
+            "ticker": "DBD",
+            "price_date": "2026-10-28",
+            "close": 58.07,
+            "previous_close": 66.68,
+            "change_amount": -8.610001,
+            "change_percentage": -12.9124,
+            "url": "https://finance.yahoo.com/quote/DBD"
+          },
+          {
+            "ticker": "INTA",
+            "price_date": "2026-10-28",
+            "close": 40.34,
+            "previous_close": 42.950001,
+            "change_amount": -2.610001,
+            "change_percentage": -6.0768,
+            "url": "https://finance.yahoo.com/quote/INTA"
+          },
+          {
+            "ticker": "FTNT",
+            "price_date": "2026-10-28",
+            "close": 174.080002,
+            "previous_close": 185.0,
+            "change_amount": -10.919998,
+            "change_percentage": -5.9027,
+            "url": "https://finance.yahoo.com/quote/FTNT"
+          },
+          {
+            "ticker": "TYL",
+            "price_date": "2026-10-28",
+            "close": 360.899994,
+            "previous_close": 378.619995,
+            "change_amount": -17.720001,
+            "change_percentage": -4.6802,
+            "url": "https://finance.yahoo.com/quote/TYL"
+          },
+          {
+            "ticker": "JOYY",
+            "price_date": "2026-10-28",
+            "close": 75.410004,
+            "previous_close": 79.089996,
+            "change_amount": -3.679993,
+            "change_percentage": -4.6529,
+            "url": "https://finance.yahoo.com/quote/JOYY"
+          },
+          {
+            "ticker": "DUOL",
+            "price_date": "2026-10-28",
+            "close": 135.210007,
+            "previous_close": 141.309998,
+            "change_amount": -6.099991,
+            "change_percentage": -4.3167,
+            "url": "https://finance.yahoo.com/quote/DUOL"
+          },
+          {
+            "ticker": "PPLI",
+            "price_date": "2026-10-28",
+            "close": 35.75,
+            "previous_close": 37.290001,
+            "change_amount": -1.540001,
+            "change_percentage": -4.1298,
+            "url": "https://finance.yahoo.com/quote/PPLI"
+          },
+          {
+            "ticker": "YMM",
+            "price_date": "2026-10-28",
+            "close": 8.08,
+            "previous_close": 8.42,
+            "change_amount": -0.34,
+            "change_percentage": -4.038,
+            "url": "https://finance.yahoo.com/quote/YMM"
+          },
+          {
+            "ticker": "Z",
+            "price_date": "2026-10-28",
+            "close": 30.77,
+            "previous_close": 32.049999,
+            "change_amount": -1.279999,
+            "change_percentage": -3.9938,
+            "url": "https://finance.yahoo.com/quote/Z"
+          }
+        ]
       }
     },
     {
@@ -9249,256 +9550,6 @@
         "investor_type": "technology_investor",
         "coverage": "technology and internet equity ideas",
         "engagement_score": 29
-      }
-    },
-    {
-      "id": "price:ed2154bc572d66b4f4d6",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 涨幅前十 2026-10-27",
-      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
-      "published_at": "2026-10-27T20:00:00+00:00",
-      "collected_at": "2026-10-29T00:01:35.219901+00:00",
-      "body": "1. NBIS close 170.470001; previous 153.270004; change 11.222%\n2. RDWR close 35.5; previous 32.299999; change 9.9071%\n3. PDFS close 44.23; previous 40.82; change 8.3537%\n4. CRWV close 59.57; previous 55.189999; change 7.9362%\n5. SECZ close 8.16; previous 7.59; change 7.5099%\n6. DOCN close 106.389999; previous 99.529999; change 6.8924%\n7. FSLY close 27.370001; previous 25.610001; change 6.8723%\n8. CDNS close 343.079987; previous 322.170013; change 6.4904%\n9. ADEA close 22.700001; previous 21.43; change 5.9263%\n10. RXT close 2.87; previous 2.71; change 5.9041%",
-      "author": "",
-      "symbols": [
-        "NBIS",
-        "RDWR",
-        "PDFS",
-        "CRWV",
-        "SECZ",
-        "DOCN",
-        "FSLY",
-        "CDNS",
-        "ADEA",
-        "RXT"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "gainers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-10-27",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "NBIS",
-            "price_date": "2026-10-27",
-            "close": 170.470001,
-            "previous_close": 153.270004,
-            "change_amount": 17.199997,
-            "change_percentage": 11.222,
-            "url": "https://finance.yahoo.com/quote/NBIS"
-          },
-          {
-            "ticker": "RDWR",
-            "price_date": "2026-10-27",
-            "close": 35.5,
-            "previous_close": 32.299999,
-            "change_amount": 3.200001,
-            "change_percentage": 9.9071,
-            "url": "https://finance.yahoo.com/quote/RDWR"
-          },
-          {
-            "ticker": "PDFS",
-            "price_date": "2026-10-27",
-            "close": 44.23,
-            "previous_close": 40.82,
-            "change_amount": 3.41,
-            "change_percentage": 8.3537,
-            "url": "https://finance.yahoo.com/quote/PDFS"
-          },
-          {
-            "ticker": "CRWV",
-            "price_date": "2026-10-27",
-            "close": 59.57,
-            "previous_close": 55.189999,
-            "change_amount": 4.380001,
-            "change_percentage": 7.9362,
-            "url": "https://finance.yahoo.com/quote/CRWV"
-          },
-          {
-            "ticker": "SECZ",
-            "price_date": "2026-10-27",
-            "close": 8.16,
-            "previous_close": 7.59,
-            "change_amount": 0.57,
-            "change_percentage": 7.5099,
-            "url": "https://finance.yahoo.com/quote/SECZ"
-          },
-          {
-            "ticker": "DOCN",
-            "price_date": "2026-10-27",
-            "close": 106.389999,
-            "previous_close": 99.529999,
-            "change_amount": 6.860001,
-            "change_percentage": 6.8924,
-            "url": "https://finance.yahoo.com/quote/DOCN"
-          },
-          {
-            "ticker": "FSLY",
-            "price_date": "2026-10-27",
-            "close": 27.370001,
-            "previous_close": 25.610001,
-            "change_amount": 1.76,
-            "change_percentage": 6.8723,
-            "url": "https://finance.yahoo.com/quote/FSLY"
-          },
-          {
-            "ticker": "CDNS",
-            "price_date": "2026-10-27",
-            "close": 343.079987,
-            "previous_close": 322.170013,
-            "change_amount": 20.909973,
-            "change_percentage": 6.4904,
-            "url": "https://finance.yahoo.com/quote/CDNS"
-          },
-          {
-            "ticker": "ADEA",
-            "price_date": "2026-10-27",
-            "close": 22.700001,
-            "previous_close": 21.43,
-            "change_amount": 1.27,
-            "change_percentage": 5.9263,
-            "url": "https://finance.yahoo.com/quote/ADEA"
-          },
-          {
-            "ticker": "RXT",
-            "price_date": "2026-10-27",
-            "close": 2.87,
-            "previous_close": 2.71,
-            "change_amount": 0.16,
-            "change_percentage": 5.9041,
-            "url": "https://finance.yahoo.com/quote/RXT"
-          }
-        ]
-      }
-    },
-    {
-      "id": "price:d6739f24a37256a25a58",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 跌幅前十 2026-10-27",
-      "url": "https://finance.yahoo.com/markets/stocks/losers/",
-      "published_at": "2026-10-27T20:00:00+00:00",
-      "collected_at": "2026-10-29T00:01:35.219901+00:00",
-      "body": "1. PICS close 7.59; previous 8.78; change -13.5535%\n2. INTA close 42.950001; previous 47.150002; change -8.9077%\n3. GWRE close 169.149994; previous 183.960007; change -8.0507%\n4. EEFT close 59.009998; previous 63.950001; change -7.7248%\n5. AGYS close 115.809998; previous 123.449997; change -6.1887%\n6. HUBS close 250.789993; previous 263.98999; change -5.0002%\n7. SABR close 1.56; previous 1.64; change -4.8781%\n8. SPSC close 86.239998; previous 90.559998; change -4.7703%\n9. JOYY close 79.089996; previous 82.989998; change -4.6994%\n10. SNAP close 6.08; previous 6.34; change -4.1009%",
-      "author": "",
-      "symbols": [
-        "PICS",
-        "INTA",
-        "GWRE",
-        "EEFT",
-        "AGYS",
-        "HUBS",
-        "SABR",
-        "SPSC",
-        "JOYY",
-        "SNAP"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "losers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-10-27",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "PICS",
-            "price_date": "2026-10-27",
-            "close": 7.59,
-            "previous_close": 8.78,
-            "change_amount": -1.19,
-            "change_percentage": -13.5535,
-            "url": "https://finance.yahoo.com/quote/PICS"
-          },
-          {
-            "ticker": "INTA",
-            "price_date": "2026-10-27",
-            "close": 42.950001,
-            "previous_close": 47.150002,
-            "change_amount": -4.200001,
-            "change_percentage": -8.9077,
-            "url": "https://finance.yahoo.com/quote/INTA"
-          },
-          {
-            "ticker": "GWRE",
-            "price_date": "2026-10-27",
-            "close": 169.149994,
-            "previous_close": 183.960007,
-            "change_amount": -14.810013,
-            "change_percentage": -8.0507,
-            "url": "https://finance.yahoo.com/quote/GWRE"
-          },
-          {
-            "ticker": "EEFT",
-            "price_date": "2026-10-27",
-            "close": 59.009998,
-            "previous_close": 63.950001,
-            "change_amount": -4.940002,
-            "change_percentage": -7.7248,
-            "url": "https://finance.yahoo.com/quote/EEFT"
-          },
-          {
-            "ticker": "AGYS",
-            "price_date": "2026-10-27",
-            "close": 115.809998,
-            "previous_close": 123.449997,
-            "change_amount": -7.639999,
-            "change_percentage": -6.1887,
-            "url": "https://finance.yahoo.com/quote/AGYS"
-          },
-          {
-            "ticker": "HUBS",
-            "price_date": "2026-10-27",
-            "close": 250.789993,
-            "previous_close": 263.98999,
-            "change_amount": -13.199997,
-            "change_percentage": -5.0002,
-            "url": "https://finance.yahoo.com/quote/HUBS"
-          },
-          {
-            "ticker": "SABR",
-            "price_date": "2026-10-27",
-            "close": 1.56,
-            "previous_close": 1.64,
-            "change_amount": -0.08,
-            "change_percentage": -4.8781,
-            "url": "https://finance.yahoo.com/quote/SABR"
-          },
-          {
-            "ticker": "SPSC",
-            "price_date": "2026-10-27",
-            "close": 86.239998,
-            "previous_close": 90.559998,
-            "change_amount": -4.32,
-            "change_percentage": -4.7703,
-            "url": "https://finance.yahoo.com/quote/SPSC"
-          },
-          {
-            "ticker": "JOYY",
-            "price_date": "2026-10-27",
-            "close": 79.089996,
-            "previous_close": 82.989998,
-            "change_amount": -3.900002,
-            "change_percentage": -4.6994,
-            "url": "https://finance.yahoo.com/quote/JOYY"
-          },
-          {
-            "ticker": "SNAP",
-            "price_date": "2026-10-27",
-            "close": 6.08,
-            "previous_close": 6.34,
-            "change_amount": -0.26,
-            "change_percentage": -4.1009,
-            "url": "https://finance.yahoo.com/quote/SNAP"
-          }
-        ]
       }
     },
     {
@@ -15551,24 +15602,6 @@
       }
     },
     {
-      "id": "rss:8184dd05ab28ca25e4e7",
-      "source_type": "rss",
-      "source_name": "Mobile Dev Memo",
-      "title": "Agentic commerce is a mirage (part 5)",
-      "url": "https://mdm.co/agentic-commerce-is-a-mirage-part-5/",
-      "published_at": "2026-10-26T17:38:40+00:00",
-      "collected_at": "2026-10-27T00:00:54.666697+00:00",
-      "body": "Walmart has introduced Agent Profiles and a Gateway interface to manage third-party AI agents. These tools route external requests through Walmart’s internal agent, Sparky, while enforcing strict data usage limits and maintaining control over the checkout process to preserve primary customer relationships and advertising revenue.",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://mobiledevmemo.com/",
-        "publication_platform": "wordpress",
-        "section": "transaction_ideas"
-      }
-    },
-    {
       "id": "x:cdb02ac26afbc7549a29",
       "source_type": "x",
       "source_name": "@ren_stocks",
@@ -16011,25 +16044,6 @@
       }
     },
     {
-      "id": "substack:80da7dc35a322ddc8fa5",
-      "source_type": "substack",
-      "source_name": "MBI Deep Dives",
-      "title": "Intuitive Surgical: The Long Road to Everyday Surgery",
-      "url": "https://mbideepdives.substack.com/p/intuitive-surgical-the-long-road",
-      "published_at": "2026-10-26T16:18:15+00:00",
-      "collected_at": "2026-10-27T00:00:50.253827+00:00",
-      "body": "**Programming Note:** MBI Deep Dives will be off tomorrow, but I will be back on Wednesday.\n\nI know AI is all the rage these days, but it was a nice break to spend some time studying a business whose customers are hospitals and surgeons. Its story starts, fittingly, in an operating room.\n\nIn March 1997, two surgeons named Jacques Himpens and Guy-Bernard Cadière removed a patient’s gallbladder from a console a few feet away, moving two handles while a prototype robot the engineers had nicknamed “Mona” moved the instruments inside the abdomen. It was the first robot-assisted operation on a human being, and the company that built the robot had only a dozen employees. It is bit of an irony that its very first case was a [cholecystectomy](https://en.wikipedia.org/wiki/Cholecystectomy), the same benign, high-volume, but cost-sensitive procedure that is relevant for its growth debate today.\n\nAlmost three decades since that first operation, Intuitive Surgical does over **10,000 procedures a day** on more than 12,000 systems.\n\nThe technology was born in a government-funded lab. In the 1980s, a biomedical engineer named Philip Green at [SRI International](https://sri.com/press/story/75-years-of-innovation-the-robotic-surgeon-teleoperator-system-and-method-with-telepresence) in Menlo Park started working on “telepresence” surgery, with the Department of Defense putting up some of the money on the theory that a surgeon in a tent could one day operate on a soldier at the front. Not much came out of the battlefield idea, but by the mid-1990s the lab had a working prototype and no plan to commercialize it. In 1995, a surgeon-entrepreneur named Fred Moll, along with Rob Younge and John Freund, licensed the SRI technology and incorporated Intuitive Surgical. Two of the early engineering hires in 1996 were a Caltech PhD named Gary Guthart, who had worked on the SRI project, and a Stanford mechanical engineer named Dave Rosa, who joined in March 1996 as the company’s [ninth employee](https://investor.intuitivesurgical.com/news-releases/news-release-details/intuitive-announces-ceo-transition-effective-july-1-2025/). **Both would later become CEO.** Lonnie Smith ran the company from 1997 through 2009, Guthart took over in 2010, and Rosa succeeded him in July 2025.\n\nBack in 1999, Intuitive had only [$10.2 Million](https://www.sec.gov/Archives/edgar/data/1035267/000089161800001640/0000891618-00-001640.txt) of revenue and didn’t even have FDA clearance yet. It still filed to go public in 2000, hoping to sell 8 Million shares at [$11-13](https://www.sec.gov/Archives/edgar/data/1035267/000089161800002910/0000891618-00-002910.txt) per share, but the IPO market had soured after the Nasdaq peaked in March, and in May, just as it set that price range, its only robotic rival, Computer Motion, sued it for patent infringement. **The [IPO](https://www.sec.gov/Archives/edgar/data/1035267/000089161800003361/0000891618-00-003361-0001.txt) was cut to 5 Million shares at just $9 per share**. Adjusted for splits, that IPO price was actually $2 per share, so at $452 today an IPO investor has compounded at ~23% a year for the last 26 years.\n\n[![Image 1: chart](https://substackcdn.com/image/fetch/$s_!OZis!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4fd975ff-6f24-4b14-a79d-1e713103fd5f_2400x1240.png)](https://substackcdn.com/image/fetch/$s_!OZis!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4fd975ff-6f24-4b14-a79d-1e713103fd5f_2400x1240.png)\n\nSource: KoyFin (MBI Deep Dives readers get 20% discount; just click **[here](https://app.koyfin.com/?via=abdullah)**)\n\nThe first pivotal moment was the elimination of that rival. Computer Motion had beaten Intuitive to market with AESOP, a voice-controlled camera holder, and had a competing multi-arm system called ZEUS. The lawsuit it filed just before the IPO turned into three years of the two companies suing each other over patents. After a trial in August 2002, a Delaware [jury](https://www.sec.gov/Archives/edgar/data/1035267/000089161803001487/f88817ore10vk.txt) found that AESOP and ZEUS infringed a patent Intuitive had licensed from IBM, and three months later, with both companies burning cash, they [agreed to merge](https://www.sec.gov/Archives/edgar/data/0001035267/000089161803001169/f88310exv99w1.txt). As a result, **the foundational patent estate of surgical robotics ended up in one company**. Perhaps not surprisingly, the very next year following the merger in 2004 Intuitive reported its first full year of [profit](https://www.sec.gov/Archives/edgar/data/1035267/000119312505022183/dex991.htm).\n\nWhat followed was the [prostatectomy](https://en.wikipedia.org/wiki/Prostatectomy) decade which, in retrospect, may have been a surprise even for Intuitive. Their 2000 [prospectus](https://www.sec.gov/Archives/edgar/data/1035267/000089161800003361/0000891618-00-003361-0001.txt) listed gallbladder, hernia, hysterectomy and cardiac as the target procedures and did not even mention the prostate once. The robot’s real selling point turned out to be not dexterity over laparoscopy but less trauma than open surgery. [Laparoscopy](https://my.clevelandclinic.org/health/procedures/4819-laparoscopy) is the “keyhole” approach, in which the surgeon operates through a few small incisions with long, rigid instruments while watching a camera feed on a screen. I will come back to how it compares with the robot later. Prostatectomy, deep in the pelvis where those rigid instruments struggle, was the operation where open surgery hurt the most. Urologists adopted da Vinci for it faster than any procedure before or since, taking its share of US prostatectomies from near zero to north of 80% within a decade, and gynecology followed.\n\nGuthart became CEO in early 2010. Then came the second pivotal moment, and this time, it was a bad one for Intuitive. In February 2013, a [JAMA study](https://jamanetwork.com/journals/jama/fullarticle/1653522) of 264,000 hysterectomies found robotic surgery cost $2,189 more per case than laparoscopy with no difference in complications; in March, the president of the American College of Obstetricians and Gynecologists put out a [statement](https://www.wbur.org/news/2013/03/15/ob-gyns-beware-marketing-hype-on-robotic-hysterectomy) telling patients to “separate the marketing hype from the reality”; in July, the FDA issued a [warning letter](https://ofnisystems.com/media/ucm363260.pdf) over adverse-event reporting. Benign gynecology growth stalled, and system sales fell following these controversies. Investors also started wondering whether the robot was worth what hospitals were paying for it.\n\nIntuitive’s answer was to keep shipping product: the fourth-generation [da Vinci Xi](https://isrg.intuitive.com/news-releases/news-release-details/intuitive-surgical-announces-new-da-vincir-xitm-surgical-system) in 2014, which reopened multi-quadrant general surgery; the single-port [da Vinci SP](https://investor.intuitivesurgical.com/news-releases/news-release-details/intuitive-surgical-announces-innovative-single-port-platform-da) in 2018; and [Ion](https://investor.intuitivesurgical.com/news-releases/news-release-details/u-s-fda-grants-clearance-ion-intuitive), a robotic bronchoscope for lung biopsy, in 2019. In 2016 many investors worried about a “patent cliff” as the original patents expired and a dozen challengers announced robots. However, a decade later most of those challengers are now gone. The pandemic cut procedure growth to just 1% in 2020, but then growth came roaring back.\n\nIn mid-2025, Rosa became only the third CEO in Intuitive’s history. Intuitive will do ~$12 Billion of revenue this year, 84% of which is recurring, at a non-GAAP operating margin of ~40% which is the kind of margin profile appropriate for a company as dominant as Intuitive is in its lane!\n\nIn the rest of this Deep Dive, I will start with a **Business Overview**, in which I explain how one da Vinci system turns into three revenue streams and what the unit economics look like from **both** Intuitive’s and the hospital’s side of the table.\n\nThen I walk through the **TAM**, and how Intuitive’s own “23 Million, 20 Million, 9 Million” framing maps to a bottom-up build of the procedure pools.\n\nThe third section covers **competitive dynamics**: how Intuitive became a de facto monopoly, what the moat consists of, where the holes are, and whether competitive intensity is rising.\n\nThen I cover **management, capital allocation and incentives**. And finally, as usual, I finish with the model and the valuation, with my usual question: what has to be true for me to earn ~10% IRR? This time I have built the model around that question in a slightly different way, which I explain there.\n\nThe rest of this Deep Dive will be behind the paywall.\n\n_Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on **[70](https://mbideepdives.substack.com/p/deep-dives)+** companies. The daily is just how I think out loud between the Deep Dives!_",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://mbideepdives.substack.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas",
-        "transport": "public_reader_fallback"
-      }
-    },
-    {
       "id": "x:318636aade49df8d00e4",
       "source_type": "x",
       "source_name": "@aleabitoreddit",
@@ -16160,25 +16174,6 @@
         "investor_type": "semiconductor_engineer_investor",
         "coverage": "memory, HBM, networking and ASIC supply chains",
         "engagement_score": 60
-      }
-    },
-    {
-      "id": "substack:4d60e9669a54174f10a4",
-      "source_type": "substack",
-      "source_name": "Clouded Judgement",
-      "title": "Anthropic: Benchmarking the S-1 Data",
-      "url": "https://cloudedjudgement.substack.com/p/anthropic-benchmarking-the-s-1-data",
-      "published_at": "2026-10-26T15:58:04+00:00",
-      "collected_at": "2026-10-27T00:00:46.532692+00:00",
-      "body": "[![Image 1](https://substackcdn.com/image/fetch/$s_!efJ_!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fee45769c-764e-4a95-a20a-93167db8365a_672x440.png)](https://substackcdn.com/image/fetch/$s_!efJ_!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fee45769c-764e-4a95-a20a-93167db8365a_672x440.png)\n\nRecently Anthropic their [initial S1 statement](https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm). A S-1 is a document companies file with the SEC in preparation for listing their shares on an exchange like the NYSE or NASDAQ. The document contains a plethora of information on the company including a general overview, up to date financials, risk factors to the business, cap table highlights and much more. The purpose of the detailed information is to help investors (both institutional and retail) make informed investment decisions. There’s a lot of info to digest, so in the sections below I’ll try and pull out the relevant financial information and benchmark it against current cloud businesses. As far as an expected timeline - typically companies launch their roadshow ~2-3 weeks after filing their initial S-1 (the roadshow launches with an updated S-1 that contains a price range). After the roadshow launch there’s typically ~1.5 weeks before the stock starts trading. So we’re looking at roughly ~4 weeks before any retail investor can buy the stock.\n\n**Anthropic Overview:**\n\nFrom the S-1: “For the first time in history, intelligence is something humans can build. The cognitive capability to reason, analyze, synthesize, decide, and create is producible at scale and accessible on demand. We believe this abundance of AI will rapidly transform every sector of the global economy in ways greater than the impact of industrialization, electricity, semiconductors, and the internet. AI that truly delivers on its potential—with the risks well managed—could significantly accelerate global growth and dramatically improve quality of life for people around the world.\n\nAnthropic was founded in 2021 by a team of researchers responsible for many of the breakthroughs that define AI. We are first and foremost a research lab—our mission is the responsible development and maintenance of advanced AI for the long-term benefit of humanity. This mission directs our focus—along with our talent and culture, our frontier and safety research, our approach to compute, and our enterprise strategy, it is one of the core advantages that set us apart. These advantages enable us to continuously advance frontier AI and shape the standards for its safe and responsible development. Our frontier AI, Claude, is delivered to customers through our models, platform, and applications. Claude has experienced the fastest enterprise adoption of any technology in history, as demonstrated by revenue growing from $0 at commercial launch in the first quarter of 2023 to $[not filled in yet] for the three months ended September 30, 2026. This rapid and growing adoption generates two self-reinforcing dynamics—an improvement loop that advances Claude and an investment loop that helps fund our continued research in frontier AI**.”**\n\n**Models**\n\nFrom the S-1: **“**We are building at every layer of frontier AI. Our Claude model family provides the underlying intelligence. Our Claude Platform makes that intelligence available as a set of composable primitives that developers and enterprises can assemble into their own solutions. Our applications draw on those same primitives, packaged into products customers can deploy directly. Because we build these layers cohesively, improvements at any layer compound across the stack and benefit our customers. We believe this integrated approach has made us a partner of choice for customers transforming their business through AI. Customers can adopt, govern, and scale our technology immediately, and each new primitive and application we release expands the range of workflows they can run on Claude.”\n\n“The Claude model family is currently composed of four model classes: Mythos (including Fable), Opus, Sonnet, and Haiku. Our model classes can be used individually for certain tasks or in combination with one another. They offer broad flexibility to choose the ideal performance, cost, and speed for each use case. All models support text, code, and multimodal inputs.\n\n*   _Mythos (including Fable)_. Our most capable model class, delivering frontier performance across all domains and solving problems AI has not reliably handled before, especially in coding and long-running agentic tasks. Given its advanced capabilities in sensitive areas like software vulnerability discovery and biology, we deploy this underlying model in two distinct configurations. Fable is generally available and runs with our production safeguards, which block or limit performance on certain sensitive topics, including by routing requests to a less capable Claude model. Mythos runs with safeguards calibrated for vetted organizations and individuals doing cybersecurity and life sciences work, and is available through our trusted-access programs, including our Cyber Verification Program. We first made the class available in April 2026 as Claude Mythos Preview through Project Glasswing, made Fable 5 generally available and offered Mythos 5 to Project Glasswing participants in June 2026, and released Mythos 5.1 and Fable 5.1 in September 2026.\n\n•_Opus._ Our powerful workhorse model class for reasoning-intensive tasks. Our most recent Opus release, Claude Opus 5.5, is designed to serve as the enterprise daily driver, powering agents that run projects end to end and advancing capabilities across agentic coding, computer use, and knowledge work. Opus models consistently rank among leading models on key industry benchmarks.\n\n•_Sonnet._ Our versatile model class for everyday tasks, providing a balance of performance, cost, and speed for the widest set of general-purpose use cases, including high-volume sub-agents in multi-agent orchestration setups.\n\n•_Haiku._ Our lowest-cost and fastest model class. Haiku models are designed for high-volume workloads like customer service agents and large-scale document processing.\n\n[![Image 2](https://substackcdn.com/image/fetch/$s_!G2dE!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9b5a3ddc-2118-4b09-9c8e-c0995e5df57e_1892x998.png)](https://substackcdn.com/image/fetch/$s_!G2dE!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9b5a3ddc-2118-4b09-9c8e-c0995e5df57e_1892x998.png)\n\n**Platform**\n\nFrom the S-1**: “**Our platform unifies frontier intelligence with the harnesses, connectors, governance, and orchestration that are all required to put that intelligence into production. As customers build on the primitives we provide, Claude becomes an integral part of their data, workflows, and institutional knowledge, and the relationship deepens with each integration. We open our platform to all builders because we believe enabling a wide range of companies to build on Claude generates more innovation and value than we could create on our own.”\n\n**Applications**\n\nFrom the S-1: “We build first-party applications to demonstrate where frontier models are heading and to deliver fully integrated solutions where we have a distinct viewpoint on the workflow. Applications like Claude Code and Claude Cowork are early examples of what the future of agentic work might look like; they put our latest AI capabilities directly into the hands of users while accelerating the market’s understanding of AI’s possibilities. Because our research and product teams work side by side, new model capabilities inform our products and customer feedback on those products informs our research priorities. This allows us to build products for where we believe model capabilities are going, not just where they are today. For example, we designed Claude Code around the agentic coding capabilities we expected our models to achieve, which positioned it to scale rapidly as those capabilities arrived. We have taken a similar approach with Claude Cowork.\n\nWe also design our products to close the gap between what Claude can do and how fully customers use it, which we believe is important to helping customers realize the value of frontier intelligence. Rather than requiring customers to learn how the underlying models work, we build products that allow them to interact with Claude as they would with a colleague, simply and naturally, so they can adopt new capabilities as they become available. We believe that as we extend the frontier and broaden our application surfaces, customers realize value faster, embed Claude more deeply into their operations, and increasingly rely on us as a primary provider for their AI transformation.”\n\n*   _**Claude Code**._ A coding agent, available as a terminal tool, desktop app, web interface, and mobile app, with native integrations for GitHub and popular IDEs (Integrated Development Environments). Claude Code handles multi-step software development tasks—planning, writing, editing, testing, debugging, and committing code—across large codebases with sustained context and supports parallel agent sessions, so a single developer can keep multiple tasks moving in parallel.\n\n*   _**Claude Cowork**._ A knowledge work agent on desktop, web, and mobile, built on Claude Code’s agentic architecture. Users describe a task in plain language and Claude breaks it into steps and completes them across local files, connected apps, Chrome, and the desktop itself, clicking and typing through native applications when no integration exists. It returns finished documents, spreadsheets, presentations, and organized folders, with no terminal or code required. An open-source plugin system lets users install or build packages bundling skills, data connectors, and workflows.\n\n•_**Claude.ai.**_ Our flagship conversational product, available on desktop, web, and mobile. Claude.ai is the broadest entry point to Claude, available to enterprises, teams, and individuals, offering access across our Claude model family with support for file uploads, projects for persistent context across conversations, memory, web search, and artifacts for real-time code and document rendering.\n\nClaude.ai delivers top-of-funnel demand generation for enterprise adoption. In September 2026, we began merging Claude Cowork and Claude.ai into a unified application, such that any request is automatically handled using the appropriate tools, drawing on Claude Cowork’s capabilities.\n\n•_**Claude Security**._ A defensive cybersecurity product, available in public beta to Claude Enterprise customers, that puts frontier vulnerability detection and patching into the hands of security teams. Claude Security reasons about code the way a security researcher does, tracing data flows and examining how components interact across a codebase to uncover complex, context-dependent\n\nvulnerabilities that pattern-based scanners can miss. Each finding is surfaced with a confidence rating, severity assessment, and reproduction steps. Users can move directly into Claude Code to review and apply the proposed patch, compressing the time from scan to fix.\n\n•_**Claude Tag**_. A collaborative agent that works alongside teams in productivity tools like Slack where users tag Claude into any channel or thread and delegate work in plain language. With the context of the surrounding conversation, enterprise software tools, shared documents, and channel-scoped memory, Claude returns answers, drafts, analyses, and pull requests directly in-thread, operating as an ambient teammate that knows when to proactively join the conversation. Claude Tag brings Claude into the multiplayer workflows where teams already coordinate, extending adoption from individuals to entire organizations.\n\n•_**Claude Design**._ Enables users to create polished designs, prototypes, presentations, and other visual work through natural language conversation and direct editing. Claude Design extends our platform into visual and creative work, broadening the range of professional tasks for which designers, marketers, founders, and go-to-market professionals can utilize Claude.\n\n•_**Claude Science**_. An AI workbench for scientific research that brings literature analysis, data processing, and manuscript preparation into a single desktop environment. Researchers describe an analysis in plain language, and Claude Science queries more than 60 scientific databases to complete it end-to-\n\nend. Claude Science executes computationally intensive workloads on a lab’s own machines, institutional computing clusters, or on-demand cloud resources, without requiring researchers to manage the underlying infrastructure. It returns publication-ready figures and manuscripts—with natively rendered scientific outputs, fully reproducible code, agent-powered verification, and traceable results. Claude Science extends Claude into scientific research, putting frontier capabilities directly in the hands of researchers working on some of the world’s hardest problems.”\n\n**Financial Model**\n\nFrom the S-1: “Our financial model is built on four primary drivers that define the trajectory of our results:\n\n•_**Adoption of Claude**._ The advancing intelligence and capabilities of each successive version of a Claude model drive the diffusion of Claude across the global economy. As new customers adopt Claude and existing customers expand their usage into new workflows, our revenue grows.\n\n•_**Compute Efficiency**._ We are focused on increasing the intelligence produced and revenue generated per dollar of compute invested and have delivered significant efficiency improvements.\n\n•_**Operating Efficiency**._ Our high talent density, efficient go-to-market, and how extensively our teams leverage Claude in their work help to drive improved operating margin, Adjusted Operating Margin, and revenue per employee.\n\n•_**Compute Investments**._ Investing in compute is critical to support our long-term growth, and we intend to continue making substantial investments in compute.\n\nThe drivers of our financial model materialize on different timelines. The adoption of Claude and associated revenue growth, compute efficiency, and operating efficiency have each increased rapidly over time. Compute is procured and committed in advance and the expense is incurred as it is brought online and added to our fungible pool, often in large, discrete steps. The fungible pool can support all workloads dynamically, including research, model development, serving customers, and internal usage of Claude. As a result, there is a lag between when investment is committed and when the full revenue associated with such investment is realized.\n\nThis dynamic has produced a financial model in which our operating margin and Adjusted Operating Margin for the nine months ended September 30, 2026 have expanded significantly year over year. As significant incremental compute is brought online in future periods, the associated expense will be recognized in advance of the full revenue that the compute will ultimately support, and we expect operating margin and Adjusted Operating Margin may compress in those periods. At our current stage, this cycle is an inherent aspect of our business and will cause operating margins to fluctuate from period to period, at times meaningfully, even if the underlying economics of the business continue to improve.\n\nIn addition, the majority of our compute is contracted under multi-year commitments that we typically procure 12 to 18 months in advance of availability. When customer demand or research needs exceed this long-term capacity, we procure short-term compute, which typically carries a higher cost per unit of compute. We expect our use of short-term compute to increase in the near term and to in turn compress our operating margin and Adjusted Operating Margin as a result.”\n\n[![Image 3](https://substackcdn.com/image/fetch/$s_!HawW!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb0b676c3-4613-4dad-abd6-a2697b088f38_1378x704.png)](https://substackcdn.com/image/fetch/$s_!HawW!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb0b676c3-4613-4dad-abd6-a2697b088f38_1378x704.png)\n\n**How Anthropic Generates Revenue**\n\nFrom the S-1: “Pay-for-intelligence, our consumption-based revenue model, is our primary revenue model and currently represents the substantial majority of our total revenue. Under this model, customers pay for usage, which is metered in tokens and priced according to the model selected. Our pay-for-intelligence revenue is primarily generated from customers building applications incorporating Claude or utilizing our first-party applications. In addition, we offer certain of our applications on a subscription basis, serving both enterprises and prosumers. Under this model, customers pay a subscription fee for a specified level of usage and capabilities during the subscription term, which is generally 12 months or less.\n\nDepending on the model, platform, or applications chosen by our customers, they enter into pay-for- intelligence pricing, subscription-based pricing, or both. For example, when subscribers approach or exhaust the usage capacity included in their tier, they may utilize a higher subscription tier or purchase more intelligence directly, creating a seamless bridge from subscription to incremental pay-for-intelligence revenue.\n\nA growing number of enterprise customers agree to non-cancelable annual or multi-year contracts with minimum spend commitments in exchange for a committed price list. These contracts result primarily in consumption-based revenue.”\n\nThe data shown below depicts how the Anthropic data compares to the operating metrics of current public SaaS businesses.\n\nHere’s a summary of their financial output:\n\n[![Image 4](https://substackcdn.com/image/fetch/$s_!kdqf!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9101abf7-854c-488d-ac56-bab9598b452e_2240x2334.png)](https://substackcdn.com/image/fetch/$s_!kdqf!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9101abf7-854c-488d-ac56-bab9598b452e_2240x2334.png)\n\n**Last Twelve Months (LTM) Revenue**\n\nAnthropic did over $19b LTM revenue (for period ending June 30th)\n\n[![Image 5](https://substackcdn.com/image/fetch/$s_!pOTp!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa9a51766-a7c2-4dc6-8300-b64c71e4e512_1990x864.png)](https://substackcdn.com/image/fetch/$s_!pOTp!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa9a51766-a7c2-4dc6-8300-b64c71e4e512_1990x864.png)\n\n**Quarterly YoY Revenue Growth Trends**\n\nHere’s a fun one. Including because of how ridiculous the chart looks. Anthropic grew 1,368% YoY in Q2. Here’s how that compares to the public cloud universe\n\n[![Image 6](https://substackcdn.com/image/fetch/$s_!129x!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3e48b9d-59ce-4c99-8823-e3f4fead5470_1344x704.png)](https://substackcdn.com/image/fetch/$s_!129x!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3e48b9d-59ce-4c99-8823-e3f4fead5470_1344x704.png)\n\n**Gross Margin**\n\nAnthropic had 85% gross margins in the 6 months ending June 30, 2026. This would put them sixth highest on the chart. What is graphed is last 12 months\n\n[![Image 7](https://substackcdn.com/image/fetch/$s_!gOW6!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fca94d1b5-8c98-4abd-b27c-2ef149b06140_1972x924.png)](https://substackcdn.com/image/fetch/$s_!gOW6!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fca94d1b5-8c98-4abd-b27c-2ef149b06140_1972x924.png)\n\n**LTM GAAP Operating Margin**\n\nAnthropic’s LTM operating margins were (34%). However, it has been trending up. In Q2 ‘26 it was 8%\n\n[![Image 8](https://substackcdn.com/image/fetch/$s_!r02S!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbd3b65af-8f24-445a-8f35-aea34081fb80_1980x864.png)](https://substackcdn.com/image/fetch/$s_!r02S!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbd3b65af-8f24-445a-8f35-aea34081fb80_1980x864.png)\n\n**LTM FCF Margin**\n\nAnthropic had 11% FCF margins over the last 12 months and 21% FCF margins over the last 6 months\n\n[![Image 9](https://substackcdn.com/image/fetch/$s_!rLXy!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb4b421fb-b301-4b84-8230-5bf3eecb76ec_1974x888.png)](https://substackcdn.com/image/fetch/$s_!rLXy!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb4b421fb-b301-4b84-8230-5bf3eecb76ec_1974x888.png)\n\nThe information presented in this newsletter is the opinion of the author and does not necessarily reflect the view of any other person or entity, including Altimeter Capital Management, LP (”Altimeter”). The information provided is believed to be from reliable sources but no liability is accepted for any inaccuracies. This is for informational purposes and should not be construed as an investment recommendation or legal advice. Past performance is no guarantee of future performance. Altimeter is an investment adviser registered with the U.S. Securities and Exchange Commission. Registration does not imply a certain level of skill or training. Altimeter and its clients trade in public securities and have made and/or may make investments in or investment decisions relating to the companies referenced herein. The views expressed herein are those of the author and not of Altimeter or its clients, which reserve the right to make investment decisions or engage in trading activity that would be (or could be construed as) consistent and/or inconsistent with the views expressed herein.\n\n**This post and the information presented are intended for informational purposes only.** The views expressed herein are the author’s alone and do not constitute an offer to sell, or a recommendation to purchase, or a solicitation of an offer to buy, any security, nor a recommendation for any investment product or service or legal advice. While certain information contained herein has been obtained from sources believed to be reliable, neither the author nor any of his employers or their affiliates have independently verified this information, and its accuracy and completeness cannot be guaranteed. Accordingly, no representation or warranty, express or implied, is made as to, and no reliance should be placed on, the fairness, accuracy, timeliness or completeness of this information. The author and all employers and their affiliated persons assume no liability for this information and no obligation to update the information or analysis contained herein in the future.\n\n[Leave a comment](https://cloudedjudgement.substack.com/p/anthropic-benchmarking-the-s-1-data/comments)",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://cloudedjudgement.substack.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas",
-        "transport": "public_reader_fallback"
       }
     },
     {
@@ -17747,24 +17742,6 @@
         "investor_type": "technology_investor",
         "coverage": "technology and internet equity ideas",
         "engagement_score": 14
-      }
-    },
-    {
-      "id": "substack:329c66cbafd20e0e8497",
-      "source_type": "substack",
-      "source_name": "TSOH Investment Research",
-      "title": "“Our Strategy Is Unchanged”",
-      "url": "https://thescienceofhitting.com/p/netflix-our-strategy-is-unchanged",
-      "published_at": "2026-10-26T10:31:14+00:00",
-      "collected_at": "2026-10-27T00:00:51.318243+00:00",
-      "body": "Note: Review 5+ years of NFLX research and trades on the TSOH website Subscribe now From “ Netflix: This Is When It All Matters ” (April 2022): “A key part of any long-term investment is partnering with an honest and able management team; while this period is a major bump in the road, I’m confident that Netflix management will adjust and find a way to win in the years ahead.” That update was published following Netflix’s Q1 FY22 results , at a time when sequential subscriber growth had come to a standstill. For a company that led structural change in the media industry over the prior 10+ years, this presented previously unexperienced financial pressures, with revenue growth falling below 10% in each of the next six quarters. It coincided with profit headwinds, as TTM operating margins contracted more than 400 basis points over the next two years. The stock, which traded at ~$60 per share at the end of 2021, was below $20 per share six months later (split adjusted). Netflix was a first mover in DTC streaming, but legacy media companies had responded – and Mr. Market was convinced tougher times were coming. That pessimistic take proved well overstated, as reflected in various KPIs. A notable example is operating income, which has compounded at >20% over the past five years, to ~$16.1 billion in FY26e. (At ~$66 per share, or an EV of ~$285 billion, Netflix is trading at a mid-teens NTM EV/EBIT multiple.) Another is revenue growth, which returned to the double-digits in Q4 FY23 and has remained there ever since. That period was undoubtedly a tough one for Netflix – but management responded and proved the naysayers wrong. Those with the ability to see beyond near term challenges were ultimately well rewarded, with a trough to peak stock price increase of >7x off the lows. While the above revenue chart provides some relative context for the following statement (i.e. what we’re seeing today doesn’t rival 2H FY22), there’s a clear sense that Netflix is facing another period of heightened competitive intensity. That viewpoint has been exacerbated by their uncharacteristic decision to pursue a >$80 billion acquisition , along with struggles in the near term to reaccelerate engagement trends . More recently, they announced layoffs affecting ~6% of their workforce, including their Chief Content Officer and the head of their film division . As management admits , current growth rates are falling short of what they aspire to. Some cracks have emerged in Netflix’s business, and they will need to be addressed. That brings us to the opening comment from co-CEO Ted Sarandos during the Q&A session of the company’s Q3 FY26 earnings call . When pressed on an evolution in Netflix’s strategy, he said the following: “Our strategy is unchanged. It always has been, and it continues to be, to combine best-in-class entertainment with industry-leading discovery, global distribution, and the best possible monetization. We want to be the must-have entertainment service, the first one members check for a great series or film and the last service they’d ever canceled. The anchor of that strategy are Netflix originals. Differentiated, exclusive, ambitious, professionally produced series, films, and live events. We’ve oriented the market to expect something great and new to watch every week, so we have to always deliver on quality and quantity. Live events… drive new membership, they add fuel to our ad revenues, they please our existing members, and they enhance the value of Netflix… We pair exclusive programming with a broad offering of third-party programming, including second run titles… In addition, we look to new ways to bring third-party content onto the service, like we just did with TF1 in France , where we ingest a full network of programming… Roughly 95% of our spend and nearly all of our revenue is focused on that core, where we see a long runway for growth… The core is the critical growth engine.” Sarandos can be a bit hardheaded about how it’s labeled (“unchanged”), but that’s beside the point. What’s become clear - and importantly what I think management also now recognizes - is that Netflix needs to make changes on the margin to more effectively execute against its long-standing strategy. Own The Core Despite persistent effort by the legacy media companies over the past 5+ years to try and close the gap, Netflix has sustained a massive global scale advantage. The company is on track for FY26e revenues of >$51 billion, which is roughly equal to the combined global DTC revenues generated by Disney, HBO Max, Paramount+, and Peacock. After years of significant investment, they all remain distant competitors to Netflix – less so in the U.S., but crucially in terms of global scale . (A reminder that Netflix generates about 50 hours of monthly viewership per average global member household, from which they generate only ~$0.25 in revenue per global viewership hour.) On the other hand, the entertainment industry is evolving, with rising adoption for newer formats like user-generated content and short-form video. While I believe Netflix is largely holding its own in the narrower market of traditional TV shows and movies (albeit with near term volatility in a hit-driven business), its position in these newer formats rounds to zero. The media industry is evolving – to the benefit of YouTube and Meta, and at the expense of Netflix. While I can appreciate efforts in video podcasts and with select YouTube creators , the critical priority for Netflix is to own their core opportunity: professionally produced movies and TV shows, documentaries, stand-up comedy, and live events. I don’t think the answer is to try and replicate YouTube. Instead, it’s to adjust their tactics to become a better Netflix. One area where this has become clear is theatrical releases. Management has been somewhat resistant to industry-standard windowing – and on occasion, that has impacted the talent they could work with . First, I’d argue with the premise that a theatrical window materially diminishes the value of a movie on a streaming service (see “Project Hail Mary”, a nice winner for Amazon Prime Video after raking in nearly $700 million at the box office). Instead, I’d bet the opposite is true: movies with a theatrical run often have improved awareness and are viewed somewhat differently (being of higher quality) upon landing on a streaming service. But even if Netflix management still disagrees, I think we’re past the point where that matters: for top talent, they need to acquiesce on this issue. I suspect incoming Chief Content Officer Peter Rice will push for this to change, and it’s an important one. (“ We need better execution [on our U.S. content]… We had some solid doubles and triples - but other territories count on some of those U.S. titles being home runs so they travel around the world. We’re focusing on execution .”) Another example is a more traditional release schedule for their “highest-quality” TV shows, à la certain HBO shows; again, I think there’s a certain level of awareness and perception improvement associated with this model (as opposed to dropping an entire season at once). These adjustments can improve Netflix’s relationship with talent and its perceived value / quality among viewers; these are changes that management now seems open to. In addition to those tweaks on Netflix originals, I was encouraged by two of the content licensing deals announced this quarter (with Disney and Globo ). This is more of Netflix’s bread-and-butter, and it’s an area that has been in some flux over the years depending on the level of commitment that the various media companies have made to DTC at points in time. I continue to believe that this is a sustainable source of important supply, either through licensing or a more significant commitment (M&A). Effective execution here, which is rooted in the sustainable competitive advantages of industry leading scale and global reach, remains critical to Netflix’s long-term success. Beyond these factors, I think the severity of Netflix’s current business challenges have started to be overstated. The stock getting cut in half from the mid-2025 highs has as much to do with the more optimistic assumptions the valuation implied / required as it does with anything in management’s near-term control. Mr. Market was optimistic, and now he’s somewhat less so. Admittedly, Netflix cannot pull (to the same degree) some of the key levers that they did in 2022 , most notably the password sharing crackdown and the ad-supported (AVOD) tier. At the same time, this business will report FY26e revenue and EBIT growth of ~13% and ~22%, respectively. Netflix continues to operate from a position of strength, and it does so with a large TAM ahead; with effective execution, I think the stock will generate solid returns from here. Management’s actions suggest they agree: the company repurchased a record $4.8 billion of stock during the third quarter ( at an average cost of ~$75 per share ), bringing the trailing 12-month tally to ~$12.9 billion. As a result, Netflix’s diluted share count has declined by >3% over the past year. Conclusion The below graphic details all of my Netflix trades since I first bought the stock in January 2022 . While I naturally wish that I would have bought more aggressively in mid-to-late 2022, and trimmed / sold more aggressively in mid-2025, I’ve done an effective job to date of not being overly influenced by Mr. Market’s wildly changing views on Netflix over the past five years. As a result, I’ve generated attractive returns on this investment, at least thus far. Read more",
-      "author": "TSOH Investment Research",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://thescienceofhitting.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas"
       }
     },
     {
