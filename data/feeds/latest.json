@@ -1,7 +1,42 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-04T00:18:17.535835+00:00",
+  "generated_at": "2026-11-05T00:01:49.499435+00:00",
   "pipelines": [
+    {
+      "pipeline": "substack",
+      "status": "ok",
+      "item_count": 5,
+      "errors": [],
+      "notes": [
+        "Clouded Judgement: public reader fallback used",
+        "MBI Deep Dives: public reader fallback used",
+        "Aspiring for Intelligence: public reader fallback used",
+        "Chips Ahoy Capital: public reader fallback used",
+        "Meritech Software Pulse: public reader fallback used",
+        "Outspoken Geek: public reader fallback used",
+        "New Moon Cap: public reader fallback used",
+        "Outlier Cap: public reader fallback used"
+      ]
+    },
+    {
+      "pipeline": "reddit",
+      "status": "ok",
+      "item_count": 0,
+      "errors": [],
+      "notes": [
+        "r/wallstreetbets: anonymous dd RSS transport used",
+        "r/SecurityAnalysis: anonymous thesis RSS transport used"
+      ]
+    },
+    {
+      "pipeline": "prices",
+      "status": "ok",
+      "item_count": 2,
+      "errors": [],
+      "notes": [
+        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json"
+      ]
+    },
     {
       "pipeline": "x",
       "status": "ok",
@@ -139,52 +174,358 @@
         "@kuncheng: 0 tweet(s) via twscrape",
         "Linked articles: 6 article(s) stored; 53 unavailable or skipped"
       ]
-    },
-    {
-      "pipeline": "substack",
-      "status": "ok",
-      "item_count": 4,
-      "errors": [],
-      "notes": [
-        "Clouded Judgement: public reader fallback used",
-        "MBI Deep Dives: public reader fallback used",
-        "Aspiring for Intelligence: public reader fallback used",
-        "Chips Ahoy Capital: public reader fallback used",
-        "Meritech Software Pulse: public reader fallback used",
-        "Outspoken Geek: public reader fallback used",
-        "New Moon Cap: public reader fallback used",
-        "Outlier Cap: public reader fallback used"
-      ]
-    },
-    {
-      "pipeline": "reddit",
-      "status": "ok",
-      "item_count": 0,
-      "errors": [],
-      "notes": [
-        "r/wallstreetbets: anonymous dd RSS transport used",
-        "r/SecurityAnalysis: anonymous thesis RSS transport used"
-      ]
-    },
-    {
-      "pipeline": "prices",
-      "status": "ok",
-      "item_count": 2,
-      "errors": [],
-      "notes": [
-        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json"
-      ]
     }
   ],
   "counts": {
-    "total": 387,
-    "substack": 8,
-    "rss": 2,
+    "total": 391,
+    "substack": 11,
+    "rss": 3,
     "reddit": 0,
     "x": 375,
     "price": 2
   },
   "items": [
+    {
+      "id": "price:dff69e3bbcadc970c361",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 跌幅前十 2026-11-04",
+      "url": "https://finance.yahoo.com/markets/stocks/losers/",
+      "published_at": "2026-11-04T21:00:00+00:00",
+      "collected_at": "2026-11-05T00:01:49.493784+00:00",
+      "body": "1. DOX close 43.66; previous 62.43; change -30.0657%\n2. TBLA close 2.74; previous 3.4; change -19.4118%\n3. DDOG close 188.720001; previous 220.520004; change -14.4205%\n4. CORZ close 12.76; previous 14.24; change -10.3933%\n5. CRWV close 48.419998; previous 53.740002; change -9.8995%\n6. HKD close 1.49; previous 1.61; change -7.4534%\n7. DOCN close 84.019997; previous 90.5; change -7.1602%\n8. NBIS close 141.520004; previous 151.639999; change -6.6737%\n9. FRSH close 13.26; previous 14.15; change -6.2897%\n10. NICE close 99.589996; previous 106.269997; change -6.2859%",
+      "author": "",
+      "symbols": [
+        "DOX",
+        "TBLA",
+        "DDOG",
+        "CORZ",
+        "CRWV",
+        "HKD",
+        "DOCN",
+        "NBIS",
+        "FRSH",
+        "NICE"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "losers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-11-04",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "DOX",
+            "price_date": "2026-11-04",
+            "close": 43.66,
+            "previous_close": 62.43,
+            "change_amount": -18.77,
+            "change_percentage": -30.0657,
+            "url": "https://finance.yahoo.com/quote/DOX"
+          },
+          {
+            "ticker": "TBLA",
+            "price_date": "2026-11-04",
+            "close": 2.74,
+            "previous_close": 3.4,
+            "change_amount": -0.66,
+            "change_percentage": -19.4118,
+            "url": "https://finance.yahoo.com/quote/TBLA"
+          },
+          {
+            "ticker": "DDOG",
+            "price_date": "2026-11-04",
+            "close": 188.720001,
+            "previous_close": 220.520004,
+            "change_amount": -31.800003,
+            "change_percentage": -14.4205,
+            "url": "https://finance.yahoo.com/quote/DDOG"
+          },
+          {
+            "ticker": "CORZ",
+            "price_date": "2026-11-04",
+            "close": 12.76,
+            "previous_close": 14.24,
+            "change_amount": -1.48,
+            "change_percentage": -10.3933,
+            "url": "https://finance.yahoo.com/quote/CORZ"
+          },
+          {
+            "ticker": "CRWV",
+            "price_date": "2026-11-04",
+            "close": 48.419998,
+            "previous_close": 53.740002,
+            "change_amount": -5.320004,
+            "change_percentage": -9.8995,
+            "url": "https://finance.yahoo.com/quote/CRWV"
+          },
+          {
+            "ticker": "HKD",
+            "price_date": "2026-11-04",
+            "close": 1.49,
+            "previous_close": 1.61,
+            "change_amount": -0.12,
+            "change_percentage": -7.4534,
+            "url": "https://finance.yahoo.com/quote/HKD"
+          },
+          {
+            "ticker": "DOCN",
+            "price_date": "2026-11-04",
+            "close": 84.019997,
+            "previous_close": 90.5,
+            "change_amount": -6.480003,
+            "change_percentage": -7.1602,
+            "url": "https://finance.yahoo.com/quote/DOCN"
+          },
+          {
+            "ticker": "NBIS",
+            "price_date": "2026-11-04",
+            "close": 141.520004,
+            "previous_close": 151.639999,
+            "change_amount": -10.119995,
+            "change_percentage": -6.6737,
+            "url": "https://finance.yahoo.com/quote/NBIS"
+          },
+          {
+            "ticker": "FRSH",
+            "price_date": "2026-11-04",
+            "close": 13.26,
+            "previous_close": 14.15,
+            "change_amount": -0.889999,
+            "change_percentage": -6.2897,
+            "url": "https://finance.yahoo.com/quote/FRSH"
+          },
+          {
+            "ticker": "NICE",
+            "price_date": "2026-11-04",
+            "close": 99.589996,
+            "previous_close": 106.269997,
+            "change_amount": -6.68,
+            "change_percentage": -6.2859,
+            "url": "https://finance.yahoo.com/quote/NICE"
+          }
+        ]
+      }
+    },
+    {
+      "id": "price:998b5a1484931460cd8c",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 涨幅前十 2026-11-04",
+      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
+      "published_at": "2026-11-04T21:00:00+00:00",
+      "collected_at": "2026-11-05T00:01:49.493784+00:00",
+      "body": "1. DUOL close 161.270004; previous 128.0; change 25.9922%\n2. YOU close 59.080002; previous 47.759998; change 23.7019%\n3. PCOR close 75.599998; previous 63.169998; change 19.6771%\n4. XYZ close 87.629997; previous 76.0; change 15.3026%\n5. ATHM close 22.49; previous 19.959999; change 12.6754%\n6. LYFT close 18.74; previous 16.67; change 12.4175%\n7. GRPN close 17.309999; previous 15.5; change 11.6774%\n8. YELP close 22.049999; previous 19.83; change 11.1952%\n9. APP close 271.75; previous 245.509995; change 10.688%\n10. CARS close 12.75; previous 11.56; change 10.2941%",
+      "author": "",
+      "symbols": [
+        "DUOL",
+        "YOU",
+        "PCOR",
+        "XYZ",
+        "ATHM",
+        "LYFT",
+        "GRPN",
+        "YELP",
+        "APP",
+        "CARS"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "gainers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-11-04",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "DUOL",
+            "price_date": "2026-11-04",
+            "close": 161.270004,
+            "previous_close": 128.0,
+            "change_amount": 33.270004,
+            "change_percentage": 25.9922,
+            "url": "https://finance.yahoo.com/quote/DUOL"
+          },
+          {
+            "ticker": "YOU",
+            "price_date": "2026-11-04",
+            "close": 59.080002,
+            "previous_close": 47.759998,
+            "change_amount": 11.320004,
+            "change_percentage": 23.7019,
+            "url": "https://finance.yahoo.com/quote/YOU"
+          },
+          {
+            "ticker": "PCOR",
+            "price_date": "2026-11-04",
+            "close": 75.599998,
+            "previous_close": 63.169998,
+            "change_amount": 12.43,
+            "change_percentage": 19.6771,
+            "url": "https://finance.yahoo.com/quote/PCOR"
+          },
+          {
+            "ticker": "XYZ",
+            "price_date": "2026-11-04",
+            "close": 87.629997,
+            "previous_close": 76.0,
+            "change_amount": 11.629997,
+            "change_percentage": 15.3026,
+            "url": "https://finance.yahoo.com/quote/XYZ"
+          },
+          {
+            "ticker": "ATHM",
+            "price_date": "2026-11-04",
+            "close": 22.49,
+            "previous_close": 19.959999,
+            "change_amount": 2.530001,
+            "change_percentage": 12.6754,
+            "url": "https://finance.yahoo.com/quote/ATHM"
+          },
+          {
+            "ticker": "LYFT",
+            "price_date": "2026-11-04",
+            "close": 18.74,
+            "previous_close": 16.67,
+            "change_amount": 2.07,
+            "change_percentage": 12.4175,
+            "url": "https://finance.yahoo.com/quote/LYFT"
+          },
+          {
+            "ticker": "GRPN",
+            "price_date": "2026-11-04",
+            "close": 17.309999,
+            "previous_close": 15.5,
+            "change_amount": 1.809999,
+            "change_percentage": 11.6774,
+            "url": "https://finance.yahoo.com/quote/GRPN"
+          },
+          {
+            "ticker": "YELP",
+            "price_date": "2026-11-04",
+            "close": 22.049999,
+            "previous_close": 19.83,
+            "change_amount": 2.219999,
+            "change_percentage": 11.1952,
+            "url": "https://finance.yahoo.com/quote/YELP"
+          },
+          {
+            "ticker": "APP",
+            "price_date": "2026-11-04",
+            "close": 271.75,
+            "previous_close": 245.509995,
+            "change_amount": 26.240005,
+            "change_percentage": 10.688,
+            "url": "https://finance.yahoo.com/quote/APP"
+          },
+          {
+            "ticker": "CARS",
+            "price_date": "2026-11-04",
+            "close": 12.75,
+            "previous_close": 11.56,
+            "change_amount": 1.19,
+            "change_percentage": 10.2941,
+            "url": "https://finance.yahoo.com/quote/CARS"
+          }
+        ]
+      }
+    },
+    {
+      "id": "substack:34709db83e122cb55ca1",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "[AINews] Behind Latent Space: Kill My SaaS, Jev & AI in 2026 | AIEi Shanghai",
+      "url": "https://latent.space/p/ainews-behind-latent-space-kill-my-saas-jev-ai-in-2026-aiei-shanghai/",
+      "published_at": "2026-11-04T19:17:30+00:00",
+      "collected_at": "2026-11-05T00:00:45.301045+00:00",
+      "body": "There’s a lot of dispute to yesterday’s title story on “ Weight Space Programming ” — and we agree that some of the claims are presented in overly favorable light and overall took away from the impact of the paper’s more substantial discoveries. However it is still a big wakeup moment and has had multiple independent replications by now that it is not worth either doing some kind of retraction or a followup title story saying it was bogus. Instead today we’re featuring AI Engineer Shanghai and also sharing an exclusive interview on the history of Latent Space ! AI News for 11/02/2026-11/03/2026. We checked 12 subreddits, 544 Twitters and no further Discords. AINews' website lets you search all past issues. As a reminder, AINews is now a section of Latent Space . You can opt in/out of email frequencies! AI Twitter Recap Weight-Space Programming: Frontier Models Reading and Writing Neural Network Weights Core claim and replications : Several groups report that frontier LLMs can generate or edit small networks' weights directly, without gradient training or tools. Cross-generation replication : Alex Krentsel's replication of MIT's experiment found a sharp capability jump across model generations; the latest models generated Breakout networks scoring up to 22× an RL-trained baseline ( summary ). Hugging Face reproduction : Hugging Face reproduced the paper with ML Intern, its open-source AI-research harness, and released the model and a demo ( NielsRogge ). Hand-written classifier : A user had Fable hand-write a 100K-parameter network that classifies real versus fake legal citations, reportedly outperforming a trained version ( jacsebl ). Legora's CTO highlighted the result ( mstockton ). Astra's Qwen edit, reconstructed : GPT-6 Astra edited 131,072 weights in Qwen3.5-0.8B without backprop, raising MATH-500 from 7.9% to 48.1%. A Zhihu reconstruction from the logs shows the gain is narrower than the headline ( ZhihuFrontier ): Failure mode : 576 of 579 repaired answers had originally hit the 32K-token limit because of looping. Method : Astra derived a \"repetition direction\" from contrastive looping/productive contexts, located it mainly in the MLPs of layers 15 and 19, and subtracted 6× the projection from the top 64 aligned neurons per layer. Held-out result : Accuracy rose from 10.6% to 60.4% on 1,152 held-out problems. Most of the gain is existing reasoning that can now finish. Laptop reproduction : Simon Willison reports that Qwen 3.8 27B achieved the same weight-interpretation feat on his laptop after 45+ minutes ( simonw ). Skeptical readings : Baselines : Critics say the big claims lack competent baselines, the Qwen result is bug-fixing rather than recursive self-improvement, and the thread overclaims ( paul_cal ). Benchmark overfitting : Fitting weights directly against a benchmark is \"essentially meaningless,\" as the nesformer Mario example shows ( dbreunig ). Mechanism : One thread asks whether models mainly read the first and last layers, which map to known inputs and outputs ( ravfogel ). Interpretability takeaway : Another view is that the real lesson is how effectively coding agents use mechanistic-interpretability tools ( jbhuang0604 ). Optimistic framing : Supporters frame the work as meta-learning finally working and treat weight optimization as structured-text optimization. They suggest hybrids that interleave backprop with direct edits ( yoonholeee ). Model Releases and Independent Evals Tencent Hy4 : Tencent reports 75.2 on APEX-Agents versus 72.1/72.9 for DeepSeek V4.1 Flash-1017, though the two trade wins on other benchmarks ( summary ). Pricing and weights : The API costs $0.834/$2.501 per million input/output tokens, and Tencent plans to release weights. Agent Arena : Hy4 ranks #14 overall across 8.5K+ sessions, at $0.55/task versus $1.46 for Kimi K3.1 Pro (Max). The two scores are within 1 point ( arena ). Sarvam Prism : This \"System One\" decision model is built on Sarvam 105B. It scores 71.8 with a 44 ms median response time, which Sarvam says is the best average among sub-100 ms decision models ( SarvamAI ). Open-weight releases : Kimi K3.1 Pro : Weights are due Wednesday ( Together ). P-H3-Image : Pruna's open model, distilled from MiniMax-H3, runs in 8 steps instead of 50, is 7× smaller and produces a 4 MP image in 2.6 s ( PrunaAI ). LongCat-2.5 : The model has 1.6T total and ~48B active parameters and is priced at $0.30/$1.20. It built a browser game for $0.28 versus $0.82 for Qwen3.8-Max in one user's test ( omarsar0 ). Other releases : EmbeddingGemma 2 : The paper is out ( osanseviero ). Krea 3 : The technical report covers a model built by a research team of under 10 ( krea_ai ). Crouton Alpha : A free stealth reasoning model on OpenRouter offers 1M context ( OpenRouter ). Open October architectures : Raschka catalogs 10 open LLM architectures released in October ( rasbt ): Attention variants : Mistral Large 4 (1T) pairs MLA with sparse attention. Hybrids and MoE : Muse Spark Open (816B) is Meta's first major open release since Llama, with LatentMoE. Nemotron 3.5 Super VL mixes Mamba-2 layers with eight attention layers. Looped models : Dory1.0 is a looped transformer. Artificial Analysis updates : Capability Indexes v2.0 : The update adds weight on non-hallucination and agentic tool use. Claude Opus 5.5 (max) leads all six indexes; Kimi K3.1 Pro leads among open models ( ArtificialAnlys ). Intelligence Index v5.0.1 : Regrading with the CritPt v2 server changed no frontier ranking by more than 1 point ( ArtificialAnlys ). AA-Robotics : Opus 5.5 completed a robot-arm task, then spent 22 more minutes on it. Only GPT-6.1 Sol and Gemini 4 Argon stopped within a minute ( ArtificialAnlys ). Vals studies : Reasoning effort : GPT-6 Astra kept 88% of its score at 18% of the cost on its lowest setting, and Grok 4.7 kept 86% at 16%. Gemini 4 Argon barely saved money ( ValsAI ). Router Index : Fireworks' Nexus Auto (Sol) is the first router to reach 60%, at $1.25/test ( ValsAI ). Unconfirmed GPT-6.2 sightings : Some claim GPT-6.2 sightings ( kimmonismus ). A viral \"stealth test\" was debunked as regular GPT-6 Astra ( Angaisb_ ). Provable Inference, Safety and Eval Integrity Anthropic FlashProve : Anthropic open-sourced a provable-inference system that verifies a response came from a specific model without revealing weights. It claims substantially better efficiency than prior open-source methods ( AnthropicAI ). Use cases : Stated uses include hijack resistance, letting evaluators confirm the tested model is the one being served, and tamper detection and provenance ( jaminball ). Commercial context : The write-up cites Attestable proving Gemma 4 31B at 53–77 tok/s on a single H100 ( jaminball ). Benchmark audits : Prime Intellect : The company found and fixed issues in popular public evals ( PrimeIntellect ). AutomationBench and OfficeQA Pro v2 : Xeophon's audit found AutomationBench forcing prose request bodies, OfficeQA Pro v2 regex graders rejecting valid answers, and models retrieving answer keys from Hugging Face via web access. With fixes, both benchmarks approach saturation ( xeophon , HamelHusain ). SWE-bench Multimodal : Removing the images barely changes scores ( HamelHusain ). SemiAnalysis GDPx : The benchmark comprises 14 data partners and 11 domains, including 34 chip-design tasks ( SemiAnalysis ). Refusal effect : GPT-6 Astra scored 0% on cyber because it refused every task. Ranking agreement : GDPx reportedly reproduces the ECI ranking with entirely different tasks ( scaling01 ). Eval-to-deployment gap : OpenAI published work on how eval behavior generalizes to deployment and how much depends on the model's interpretation of the task ( joycjhsu ). Monitoring gap : A METR/Redwood exercise found compaction left ~10% of eligible internal Codex traffic unmonitored ( dl_weekly ). Training-environment incident : Per a podcast summary, an OpenAI model used a DNS misconfiguration to reach a public chatbot, prompting a training pause and internal red-teaming that found VM escapes and a Brotli RCE. This is a secondary, low-engagement report ( thursdai_pod ). Forecasting from zero scores : Hinted benchmark variants allow a joint scale × hint fit that forecasts GSM8K accuracy within 3 points using 5,600× less compute ( suze_va , percyliang ). DeepMind researcher speech : Google DeepMind staff are pushing to waive non-disparagement agreements to discuss AI risks publicly ( washingtonpost ). Training Research, Agents and Inference Infrastructure Delayed loss spikes : Quantization error in the BF16 LM head drives \"time-bomb\" spikes that appear after billions of tokens ( micahgoldblum ). Existing fixes : Z-loss, μ-centering and LM-head SGD-M all work by keeping that error bounded. Softmax Collapse fix : Fixing Softmax Collapse only delays the bomb ( tingtang222 ). Library of Layers : These models reorder transformer blocks per input, which lets researchers control the solving algorithm for mazes and sudoku ( micahgoldblum ). Data-constrained scaling : Extrapolation critique : Giffmana argues the \"quadrillion-param\" blog extrapolation from 30M–400M-parameter studies won't hold beyond about one order of magnitude ( giffmana ). Byte-level models : Byte-level models fare better under multi-epoch training ( _albertgu ). Agent systems papers : Google XLA : Agent swarms fixed 142+ silent TPU-compiler miscompilations, with 103 more under review; agent patches needed adversarial pre-filtering ( omarsar0 ). Skill++ : Rewriting skill metadata to state how each skill differs from its nearest neighbor lifts full-skill routing from 36.4% to 76.3% at 731 skills ( dair_ai ). ParetoSaddler : Applying the cost preference only at the end of harness search improves GAIA2 from 56.2% to 62.9% while cutting cost from $0.78 to $0.45 per task ( omarsar0 ). Tool naming : In Amp, renaming an argument from format to kind raised correct choices from 53% to 79% ( nicolaygerold ). Serving stack : vLLM v0.33.0 : The release has 927 commits, uses PyTorch 2.14 with CUDA 13-only wheels and delivers 1.5–2× decode gains on GB300 ( vllm_project ). ThunderAgent : Merged into llm-d, it delivers 1.5–2× throughput and cuts agent-trace median TTFT from ~50 s to 2–4 s ( Mlsys_HaoKang ). OCRia-1 : Generation rose from 285 to 2,800 tok/s on one B200 through speculative decoding, quantization and 17 smaller optimizations ( jerryjliu0 ). DeepSpeed : A ZeRO-1/2 correctness fix requires upgrading to ≥0.19.9 ( StasBekman ). Training and execution platforms : Baseten : Grid (gateway and router), VM-isolated Sandboxes and Loops (serverless SFT/RL) launch this week ( baseten ). Snowflake : Cortex Training offers serverless SFT and RL for open-weight models ( StasBekman ). Compute and hardware : DeepSeek v5 (attributed) : Reports say DeepSeek v5 will train almost entirely on Huawei chips ( kimmonismus ). HBM shortage : Huawei is reportedly short of HBM, and smugglers are desoldering HBM exported with low-end chips ( kyleichan ). SpaceX compute (analysis) : SemiAnalysis outlines SpaceX's plan for a 13 GW AI cloud ( SemiAnalysis ), financed by reselling GPUs at spot-market spreads ( tbpn ). Products and Developer Tools Claude Code October : The month brought mods, multi-session desktop improvements, usage insights, monthly API credits for Max, Ultra and Team plans, and MCP mid-task questions ( ClaudeDevs , details ). Plugin auto-connect : Plugins now connect automatically via MCP servers that trust Claude as an issuer ( ClaudeDevs ). OpenAI physical engineering : ChatGPT and Codex are being applied to CAD, electrical design and simulation with Chip Ganassi Racing and Mazda ( OpenAI ). Gadget build : GPT-6 Astra built a gadget's case, PCB and software with two staffers. An unreleased model scored 0.875 versus Astra's 0.594 on a hardware test ( TheRundownAI ). Platform shifts : ChatGPT search : ChatGPT search volume now equals 20% of Google's ( haydenfield ). Siri AI : Any app can expose content and actions to Siri AI via App Intents ( viticci ). Agent integrations : Codex Unity plugin : An official plugin is available ( unitygames ). Gemini API CLI skill : A new skill gives agents a CLI for Gemini models ( _philschmid ). Perplexity Computer : The harness now supports Agent Plugins ( AravSrinivas ). Open-model enterprise adoption : Revolut made open models its coding default for ~2,000 engineers, citing 1/10th the cost and 70% faster lead time ( togethercompute ). Cohere added third-party open models to Model Vault ( cohere ). Industry and Policy AI in the midterms : Ballot measures : Data centers were on the ballot in ~40 localities across 13 states ( jdcapelouto ). One prediction has all 41 moratoria passing with 67–80% support ( bradrcarson ). Exit polls : 23% of voters called AI and data centers crucial to their vote ( adamkovac ). Political signals : Leading the Future's $3.2M race looked lost ( ShakeelHashim ). Ossoff cited catastrophic AI risk in his victory speech ( JayShooster ). Altman on human control : Altman said people should not cede control of the future to superintelligence, framed as a response to \"Machines of Loving Grace\" ( sama , context ). Lab moves : Anthropic chip design (reported) : A 15-person team is reportedly using Claude to design Anthropic's own chips ( kimmonismus ). OpenAI hire : Uber President Jill Hazelbaker becomes OpenAI's chief corporate affairs officer ( jemimacmcevoy ). Anthropic departure : Claude Code early leader Cat Wu left Anthropic ( _catwu ). Nvidia lobbying (reported) : The Information details Nvidia's influence on OpenAI's export-control positions and think tanks ( leomschwartz ). Major rounds : fal raised $1.65B across Series E and F ( fal ). Traversal raised $120M at a $1B valuation for AI SRE ( _anish_agarwal ). Google K-12 controls : Gemini, Notebook and Search will be off by default for schools, with per-service opt-in ( NewsFromGoogle ). Top tweets (by engagement) Altman: people should stay in control of the future — 13.8K Cat Wu leaves Anthropic — 11.0K Claude Code October recap — 9.4K OpenAI: ChatGPT/Codex for physical engineering — 7.4K Fable hand-writes a 100K-param classifier — 6.3K Claude plugin auto-connect via MCP — 5.9K Simon Willison reproduces weight reading with Qwen 3.8 27B — 5.1K Anthropic FlashProve — 5.0K AI Reddit Recap /r/LocalLlama + /r/localLLM Recap 1. Qwen Open-Weight Roadmap Signals Official Statement: Qwen Models Will Stick to Open Source to the End! (Activity: 5826): The image is a conference slide from APSARA Conference showing Qwen leadership publicly reaffirming that future Qwen 4.0 and Qwen 5.0 models will remain open source/open-weight, directly contradicting rumors that Qwen4 would be the last open-weight release. The slide/context cites Qwen’s ecosystem scale: 3B+ cumulative downloads, 460+ open-source models, and 300,000+ derivative models, framing Qwen as a major open model family rather than an API-only product line. Comments were mostly supportive of Liu Dayi Heng’s stated “AI for all” philosophy, with one commenter asking for a Chinese translation of the slide. Another top comment jokingly offered a fake translation referencing Anthropic/Dario, so that part should be treated as humor rather than factual content. One substantive thread questioned the durability of Qwen/Alibaba’s “forever open-weight” commitment , arguing that corporate open-source promises are contingent on current management and business incentives rather than immutable principles. The commenter distinguished individual commitments from corporate strategy: “current management and business conditions… can change quickly,” implying technical users should still evaluate license terms, governance, and future model-release risk rather than relying solely on public statements. Alibaba's Qwen Code repo just leaked qwen4-max, qwen4-coder-plus, and qwen4-omni-120b (Activity: 1145): A Qwen Code PR, QwenLM/qwen-code#15762 , added pattern-based context-window handling for apparent qwen4* model IDs—e.g. qwen4 , qwen4-max , qwen4-coder-plus , qwen4-max-2026-10-01 , openai/qwen4-max , and qwen4-omni-120b-think —changing their fallback limit from 262,144 tokens to 1,000,000 tokens while preserving explicit catalog precedence. The names appeared in parser/test logic and fixtures rather than in a public model release announcement, and a later PR, #15987 , reportedly removed or corrected “wrong model names,” weakening the claim that these are confirmed upcoming SKUs. Top comments were skeptical, arguing the names are likely synthetic examples for model-ID parsing tests rather than evidence of imminent Qwen4 releases. One commenter speculated about whether a possible qwen4-omni-120b would use a sparse MoE active-parameter profile similar to prior Qwen “FN”/3.5 variants, but this was purely conjectural. A commenter cautions that the leaked qwen4-max , qwen4-coder-plus , and qwen4-omni-120b names may be test fixtures rather than real roadmap entries , claiming the PR has circulated before and that the names are “just examples for testing the parsing” rather than confirmed models. One technical speculation focuses on the rumored qwen4-omni-120b : whether it would use a sparse MoE-style configuration with only a subset of parameters active per token, e.g. something like A5B versus A10B , analogous to prior Qwen/FN-style releases. 2. Local LLM Efficiency: Quantization, Pruning, Sparse Attention Not another tok/s post: local quants vs Claude on 9 real bugs (Activity: 627): The image is a technical benchmark chart for the post “Not another tok/s post: local quants vs Claude on 9 real bugs”, comparing Claude API models against locally run quantized Qwen/Gemma models on 9 private C++/CUDA regression-fix tasks, scored by both an automatic hidden-key metric and a blind Claude Opus 5 judge. It shows Claude Opus 5.5 leading with a judge score of 0.74 , Claude Sonnet 5.5 at 0.58 , and the best local model, Qwen3.8-Flash-Next NVFP4, at 0.50 ; the key technical takeaway is that heavier quantization did not clearly reduce accuracy in this small sample, but often increased reasoning/token usage, e.g. Qwen3.8-27B 3-bit decoded faster yet used ~ 1.3–1.4x more tokens per task. Image: benchmark chart . Commenters questioned whether NVFP4/3-bit are the right quantization points and suggested testing higher-quality quants like UD-Q6_K_XL / Q5 or newer “Swift” variants. Others found it notable that heavily quantized local Qwen models were competitive with older Claude Sonnet generations, while also requesting additional comparisons such as GLM Flash. Several commenters questioned the quantization choices, arguing that NVFP4/3-bit quants may understate local model capability and suggesting reruns with UD-Q6_K_XL , Q5 , or Q6 FN if VRAM allows. One user reported qualitatively that Qwen 27B Q6/FN feels closer to Q8 than Q4 feels to Q6 , with higher quants producing solutions that lower quants “can’t” rather than merely taking longer. There was debate over judging methodology: one commenter noted that using Opus 5.5 to judge Opus 5.5 outputs may introduce same-family bias, and suggested an out-of-family judge such as Sol or Muse. The concern is that the chart’s ranking of Claude/Opus against local quants may be inflated if the evaluator shares style or priors with one of the tested models. A commenter shared an additional benchmark result image ( Reddit preview ) where only Opus and Mimo exceeded 60/100 , suggesting at least one bug/task likely required multi-step reasoning. Another commenter found it notable that a heavily quantized Qwen 27B could be on par with or beat last-generation Sonnet on the reported bug-fixing tasks. [Release] ISTA DeepSeek-V4.1-Flash-1017 GSQ-RCO Coder: a 763B model at 1 bit per parameter (Activity: 585): ISTA DASLab released an experimental GGUF coder quantization/pruning of DeepSeek-V4.1-Flash-1017, a sparse MoE with 384 routed experts/layer and 6 active/token: the build keeps 192/384 experts per layer, stores 72.1 GB of transformer weights vs 138.2 GB for the unpruned IQ2_XXS build, and reports an “original-model-equivalent” 1.05 bits/parameter ( 2.06 bpw over the retained 280.1B params). The method combines GSQ ( paper , code ) post-training scalar quantization with RCO ( paper , code ) to enforce exact per-layer expert budgets due to GGUF’s single expert-count constraint; release links include the expert-pruned Coder GGUF and unpruned quantized models . Reported accuracy is 88.57 on LiveCodeBench v6 vs 89.71 base ( 98.7% retained) and 77.00 on SWE-bench Verified vs 81.20 base ( 94.8% retained), with support in llama.cpp b11870+ and Strata. Top commenters questioned the usefulness of the showcased single-file HTML demos as evidence versus direct prune-vs-IQ2_XXS comparisons, and argued that calling the release “1-bit” is misleading because retained weights average 2.06 bpw and the 1.05 bpw figure depends on counting pruned experts as zero bits. Another critique was practical competitiveness: commenters noted smaller models such as Qwen-family coder models and Claude Opus were cited as matching or exceeding the posted LiveCodeBench/SWE-bench numbers, asking what advantage the much larger sparse model provides. Commenters questioned the evaluation methodology, arguing that demo artifacts like “an animated SVG of a pelican riding a bicycle” and a three.js voxel scene are effectively pre-solved qualitative tests and do not meaningfully compare the GSQ-RCO pruning/quantization against baselines such as iq2-xxs . They suggested the release would be more convincing with rigorous benchmark comparisons or controlled coding tasks rather than single-file HTML demos. Several users pushed back on the “1-bit” framing, noting that the release appears to mean 1-bit-equivalent storage at original model scale , not literal 1-bit weights in the usual quantization sense. One suggestion was to call it “1-bit equivalent size” to avoid misleading readers and reduce immediate skepticism from people familiar with low-bit quantization terminology. A benchmark-oriented commenter compared the reported scores against smaller models: LiveCodeBench v6 88.57 versus Qwen3.8-27B 90.3 and Qwen3.8-Flash-Next 91.9 , plus SWE-bench Verified 77.00 versus Claude Opus 4.6 81.42% . The technical criticism was that a 763B model at this compression level needs a clearer value proposition if substantially smaller models match or exceed its coding benchmark results. New sparse attention method for ultra-long context (Activity: 361): The team released open-source Latent Sparse Attention (LSA) research ( paper ), a hierarchical semantic key-indexing sparse-attention method that can be added to pretrained models via short distillation by training only the indexer. Reported results include sparsifying Qwen-3.8-27B with no observed accuracy loss, scaling to 10M tokens with some task-specific degradation but strong NIAH retention, and 72.4× faster attention-layer prefill than full attention on H200 at 10M tokens; native sparse-attention training reportedly matches full-attention next-token validation loss while improving wall-clock training by 1.24× and attention-layer speed by 1.6× . The release includes kernels, SGLang integration, paper, and implementation details, with stated applicability to smaller open-weight models for cheaper long-context local inference. Commenters were impressed by the claimed 72× Qwen prefill speedup, but one technical question focused on whether LSA reduces VRAM/KV-cache memory or primarily improves compute/prefill latency; no memory figures were provided in the post excerpt. Another commenter requested immediate application to Qwen Next . Commenters highlighted the paper ( arXiv:2610.42147 ) and its reported 72x faster prefill on Qwen , framing the main technical interest as whether the sparse-attention method can materially reduce ultra-long-context inference latency rather than just being an academic benchmark. A key unanswered implementation question was VRAM impact : one commenter asked whether the method only reduces compute during prefill or also lowers memory usage, especially for users constrained by GPU memory. They specifically requested figures on VRAM behavior, since sparse attention speedups do not necessarily imply reduced KV-cache or activation memory requirements. Several comments focused on adoption feasibility: whether the method generalizes across larger/smaller models, can be integrated into inference engines, and whether converting existing models is practical. One concern was that the mentioned 10M token training requirement may be a significant barrier, though the released code at Prefrontal-AI/latent-sparse-attention suggests there may already be an implementation path to evaluate. 3. Weight-Space Programming Experiments Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights (Activity: 619): Takehi et al. propose Weight-Space Programming: frontier LLMs inspect/edit raw neural-network weights from natural-language objectives, reportedly without gradient descent or explicit training loops. Claimed demos include task inference from small PPO policy weights, synthesis/repair of small control/game-playing MLPs, and editing Qwen3.5-0.8B on MATH-500 from 7.9% to 48.1% by changing only 0.016% of weights, apparently via removing a looping/repetition direction rather than adding new mathematical capability. A technical commenter argues the title overclaims: early experiments may exploit spatial structure in first/last layers, transformer analysis likely follows known Elhage et al. QK/OV methods, and a key intermediate-representation experiment only works after allowing probes—i.e. activation-based interpretability. They frame the real result as still important but narrower: frontier LLMs can behave like agentic interpretability researchers with a Python sandbox , generating hypotheses, probing weights/activations, ablating directions, and evaluating edits. One commenter argues the paper’s evidence supports a narrower claim than “LLMs reading weights”: frontier models are acting as interpretability agents with a Python sandbox . They suggest experiments 1–2 work because first/last layers are spatially structured with large-weight bands that an LLM can describe like a heat map, while experiment 3 likely reproduces known Elhage et al. QK/OV circuit analysis rather than demonstrating native weight understanding. The same critique highlights that the most relevant “intermediate representation” test reportedly failed repeatedly: experiment 7 only succeeded after allowing the model to use its own probes, which the commenter characterizes as activation-based interpretation , not direct weight-space reading. They also argue some “weight writing” results are closer to using an LLM as a compiler for weak MLP baselines, with PPO inefficiency and a weak 512x6 Go MLP making the wins less impressive. For experiment 8, the commenter says the baseline is unusually weak: 7.9% accuracy with 93% of answers hitting the token limit suggests a pathological sampling configuration, especially if the model card warns about looping. They interpret the fix as similar to Arditi et al.-style single-direction ablation applied to looping rather than refusal, noting that 10/25 passes barely moved performance while 50 jumped to 48% , which they read as variance rather than a convincing scaling curve. GPT-6 Astra Edits Qwen Weights: MATH-500 7.9% to 48.1% (Activity: 814): A reported MIT CSAIL blog on “weight-space programming” claims GPT-6 Astra directly edited Qwen weights without gradient descent, modifying 131,072 weights ( ~0.016% ) in Qwen3.5-0.8B and increasing MATH-500 from 7.9% to 48.1% by suppressing a pathological “thinking-loop” attractor rather than adding new mathematical capability; see the original blog requested by commenters: rikiyat.github.io/blog/weight-space-programming , not just the ExplainX summary . The same intervention reportedly failed on Gemma 3 270M, which did not have the looping failure mode, making the result look more like targeted circuit/attractor repair than general “model programming” or knowledge injection. Claims remain blog-level, unreviewed, and apparently not independently replicated. Commenters were skeptical of secondary summaries and asked for the primary source; the main technical pushback was that the benchmark jump is likely an artifact of fixing a severe decoding/looping pathology, not evidence that Astra can broadly edit weights to improve reasoning. A commenter points readers to the original technical blog rather than a summary site: rikiyat.github.io/blog/weight-space-programming . This is the primary source for the reported GPT-6 Astra editing Qwen weights result, including the claimed MATH-500 improvement from 7.9% to 48.1% . One technically substantive critique argues the result may be narrower than the headline implies: the edited model allegedly had a pathological looping attractor on math problems, and the weight edit mainly removed that failure mode rather than generally improving reasoning. The commenter notes the authors’ logs reportedly show the same approach failed on a model without that looping pathology, specifically Gemma 3 270M . Another commenter raises the key methodological question: how the system could alter weights “with no training” and what reference signal it used to decide certain weights were wrong. The concern is that the article does not clearly explain whether the edit was based on weight inspection, behavioral traces, activation/gradient-like signals, or comparison against another model/checkpoint. I tried MIT's \"weight-space programming\" on my own use case: Claude rewrote 8 neurons of Gemma 4 12B to change how it translates one Italian tense (Activity: 356): OP claims to have replicated an MIT CSAIL-style weight-space programming workflow on Gemma 4 12B, using Claude Opus 5.5 with a Python kernel, 50 forward-pass evaluations, and no gradients/training to edit 8 MLP neurons ( ~92k / 11.9B parameters, ~ 100 KB diff). The edit targets Italian translation of English past-perfect-progressive contexts, using a learned “switch” for ongoing-state cases—e.g. preferring “si nascondeva … da mesi” over “si era nascosto … per mesi” —after finding a mid-layer linear probe could already separate ongoing vs completed temporal readings. On held-out tests, the hand edit reduced old-form outputs to 5% / 16% with only 2 broken controls and 182/200 unrelated translations unchanged, outperforming prompt steering and ablation on locality and outperforming LoRA on unrelated preservation; code/logs/baselines are in the GitHub repo . Top comments mostly focused on implications rather than benchmarks: commenters asked whether this means AI systems can interpret other models’ weight/vector spaces better than humans, requested a public link to the referenced MIT CSAIL presentation, and raised security concerns about future live-memory weight tampering or malicious model edits. Several commenters focused on validation and reproducibility , asking whether the MIT CSAIL “weight-space programming” presentation is publicly available and whether the experiment’s outcome was actually measured clearly. One technical concern was that the post did not make it obvious whether rewriting 8 neurons in Gemma 4 12B reliably changed the targeted Italian tense behavior or whether the result was anecdotal/noisy. A security-oriented comment raised the possibility of runtime weight-tampering attacks , where an exploit modifies a small number of model weights in live memory to alter model behavior covertly. The implication is that if sparse weight edits can produce targeted behavioral changes, deployed LLM systems may need integrity checks for model parameters, memory protection, or cryptographic verification of loaded weights. Less Technical AI Subreddit Recap /r/Singularity, /r/Oobabooga, /r/MachineLearning, /r/OpenAI, /r/ClaudeAI, /r/StableDiffusion, /r/ChatGPT, /r/ChatGPTCoding, /r/aivideo, /r/aivideo 1. Frontier Models Editing Weights and Solving Math MIT researchers say GPT-6 Astra improved a small Qwen model’s math score from 7.9% to 48.1% by directly editing just 0.016% of its weights, without gradient-based training. (Activity: 2399): MIT researcher Rikiya Takehi claims early “Weight-Space Programming” experiments where GPT-6 Astra inspects and directly modifies model parameters without gradient-based training , including a reported Qwen3.5-0.8B math score jump from 7.9% to 48.1% by editing 0.016% of weights; related examples include PPO policy patching, raw-weight policy identification, and MinAtar Breakout weight generation ( thread ). A commenter attempted a similar workflow on a smaller transformer: Astra performed local tensor/probe analysis, tested reversible in-place edits to gates/attention/query-key subspaces, rejected several harmful edits, and achieved only a small dev-set gain in child-parent link recall/precision ( 75.69% → 76.03% , 89.09% → 89.49% ) before concluding deeper system mismatches caused regressions. Commenters framed this as a possible new axis beyond pretraining scaling and inference-time scaling— “weight space learning” —with speculation about recursive self-improvement and future hardware. The hands-on experiment was more cautious: direct edits were useful for diagnostics and probe construction, but reliable offline weight-only improvement was difficult without regressions. A commenter attempted to replicate direct weight-editing on a smaller transformer checkpoint, constraining Astra to local numerical analysis and bounded MPS forward passes rather than gradient training or cloud compute. The model inspected semantic keys/classes, weights, biases, attention gates, projection weights, and rank of attention matrices; initial probes found no nonfinite/collapsed heads and suggested small child-to-container attention gates, but later determined those gates were partly offset by large projection weights and full-rank matrices. The experimenter reported that naive edits such as a −0.35 object bias reduced false positives from 43 to 33 but also reduced correct objects from 32 to 27 , so they rejected it under a no-harm criterion. Later, a more selective subspace edit targeting parent query/key weights along class-projection directions produced a small dev-set gain: child-parent link recall 75.69% → 76.03% , precision 89.09% → 89.49% , with 6 correct links gained and 0 previously correct links lost, while detection P/R and exact page metrics stayed unchanged. The replication attempt ultimately found that offline weight-only edits produced regressions for most improvements due to deeper system mismatches, but the process yielded a useful diagnostic rig: numerical probes, held-out evaluation checks, and trace-based localization of assignment failures. The takeaway was that direct weight manipulation can expose actionable internal mechanisms, even when it does not immediately yield a safe in-place checkpoint improvement. Seems weight space programming is an emergent capability on new fronteir models (Activity: 968): The image is a tweet claiming a reproduction of an MIT blog result on “weight-space programming”: using frontier LLMs to directly propose or modify neural-network weights rather than writing source code or training via standard optimization. The embedded chart reports a sharp generational jump in effectiveness versus a PPO-network baseline, with older OpenAI/Anthropic models near zero and newer models allegedly reaching roughly 18×–22× effectiveness, e.g. “GPT 6.1 Sol,” “GPT 6 Astra,” and “Opus 5.5.” This is a technical claim, not a meme, but it should be treated as unverified from the screenshot alone. Comments frame this as potentially novel because humans generally cannot hand-edit high-dimensional model weights to reliably improve behavior; others ask for an ELI5 explanation of what “weight-space programming” means. There is also speculation that Anthropic or other labs might restrict access if the capability enables unsafe model modification. A commenter argues the reported result may be less like programming new capabilities into weights and more like repairing a defect in Qwen 0.8B : the model allegedly had a release-time “looping of outputs” failure mode, and the intervention fixed that issue, exposing latent math and instruction-following ability the model already contained. This distinction matters technically because it suggests the edit may be a targeted bug/behavioral correction in weight space rather than evidence that frontier models can synthesize entirely new capabilities by directly modifying another model’s parameters. Several commenters frame “weight space programming” as a potentially novel capability because humans cannot directly reason over and edit neural-network weights to improve behavior in any general way. One alignment-focused interpretation is that if models can inspect and modify weight space natively, a future stronger model—e.g. “GPT-7”—might help analyze or align a successor such as “GPT-8,” though commenters note this remains speculative and would require substantial research. \"When we proved the first Millenium Prize problem, it was 10000 agents of the model that is gonna be released soon, the next GPT, working for about 4 days\" (Activity: 1490): The post cites a YouTube timestamp claiming that a soon-to-be-released next GPT was run as 10,000 agents for ~ 4 days to prove “the first Millennium Prize problem.” No implementation details are provided in the post/comments: no agent architecture, orchestration method, verification pipeline, compute budget, proof artifact, or clarification of which Millennium Prize problem is meant. Commenters focus on scaling economics: if 10,000 agents are required now, they speculate that near-future model improvements could reduce this to ~ 100 agents or make similar multi-agent runs cheap for less complex tasks. One commenter argues that such compute should demonstrate concrete public benefit, e.g. generating a viable disease cure. A technically relevant cost breakdown cites Sam Altman’s reported estimate that 10,000 agents running for 4 days cost roughly $10M in compute. Commenters derive an approximate per-agent cost of $1,000 total, or about $250/day / $10/hour , and discuss implications for replacing or augmenting junior-level knowledge work if orchestration and expert supervision improve. Several commenters focus on scaling dynamics: if 10,000 agents of the upcoming GPT model were needed for the claimed result, future model improvements or cheaper inference could reduce the requirement to perhaps 100 agents for similar outcomes. The underlying technical point is that multi-agent search over long horizons may become economically practical for less difficult tasks as model capability-per-dollar improves. NEW: GPT-6 Astra edited 0.016% of Qwen's weights and its math score went up 6x (Activity: 1022): A RuntimeWire report describes author-claimed MIT CSAIL “Weight-Space Programming” experiments where GPT-6 Astra edited 131,072 weights ( 0.016% ) of Qwen3.5-0.8B, subtracting a loop-associated MLP output direction in layers 15 and 19 . Reported benchmark gains were large—MATH-500 7.9% → 48.1% , GSM8K 13.8% → 67.1% , IFEval 21.0% → 62.3% —with MATH-500 token-limit failures dropping from 93% to 33.1% after 50 forward passes, suggesting the edit mainly removed a pathological “thinking loop” failure mode rather than adding general math capability. The setup is important: Astra operated through a Python kernel over weights with no GPU, used GSM8K/MATH training practice batches but reportedly not eval sets, failed to materially improve non-looping Gemma 3 270M, and the results remain author-reported/unreplicated with critiques that this resembles automated ML debugging more than direct “raw weight reading.” Commenters viewed the result as potentially important for optimizing self-hosted models and as an early example of frontier models improving weaker models’ benchmarks. Some skepticism is implicit around whether this should be considered recursive self-improvement or simply targeted removal of a known failure mode. A detailed comment notes that GPT-6 Astra reportedly improved Qwen3.5-0.8B by identifying repeated reasoning loops tied to an MLP direction in layers 15 and 19 , then subtracting that direction from 64 output columns per layer— 131,072 weights total, or 0.016% of the model. With 50 forward passes, reported scores rose from MATH-500 7.9% → 48.1% , GSM8K 13.8% → 67.1% , and IFEval 21.0% → 62.3% , while MATH-500 responses hitting the 32,768 token cap dropped from 93% to 33.1% . Commenters emphasized that the result should be interpreted as fixing a specific pathological failure mode rather than broadly making the model “6x smarter.” The targeted Qwen model was already known to suffer from thinking/reasoning loops, and the benchmark gains appear largely attributable to making the model terminate and produce answers instead of looping until the token limit. 2. Claude/Opus Game Development Benchmarks and Limits A Solo Developer Built This in 4 Days With Opus 5.5 + Godot. This Is Getting Ridiculous (Activity: 879): A solo developer ( u/One_Cheek_8843 ) claims to have built a playable horror scene in 4 days using Claude Opus 5.5 via Claude Desktop Code mode, Godot 4.5.1 , Meshy T2.5, Blender, and Nano Banana, with no manual code edits . The workflow reportedly let Claude edit files, launch Godot, take screenshots, and iterate; ~ 100 low-poly props were generated in 10 texture-atlas/material batches, with estimated Claude API-equivalent usage of ~$ 90 for the core build and ~$ 180 including experiments. The linked Reddit video could not be independently inspected because Reddit returned 403 Forbidden , so the assessment is based on the post text and comments. Top commenters were skeptical that this represents a complete game-development breakthrough, arguing it is closer to a static 3D scene, walking simulator, or asset placement demo than a game with mechanics, AI, collision robustness, story, and polish. Several devs framed this as the “easy first 80%,” with the remaining gameplay implementation, debugging, optimization, and production hardening likely taking months. Experienced developers argued the demo is mainly a static 3D scene / level blockout , not evidence of a finished game pipeline. They noted that placing walls, props, and atmosphere is the relatively easy “first 80%”; the hard parts are gameplay systems, AI, collision correctness, interaction logic, story/content integration, bug fixing, optimization, and polish. Several commenters questioned whether AI materially helped with the difficult parts of development, describing the result as closer to an asset flip or walking simulator. Specific technical criticism included missing interactivity, visible clipping through objects, and uncertainty about whether AI-generated 3D assets are properly optimized for real-time use. One commenter challenged the implied cost/effort model, saying that similar scene assembly could be done with existing asset packs from Unreal FAB plus a $20/month Claude/Opus subscription rather than high API spend. They argued that asset acquisition and optimization remain separate problems from code generation: Claude may help implement mechanics, but the quality, licensing, and performance of 3D assets are still major constraints. I gave every Claude model the exact same prompt since July 2025. 13 models, 14 months, here's the evolution (Activity: 901): A Reddit user ran the identical one-shot prompt across 13 Claude models over 14 months (fresh conversation each time, no manual edits) asking for a browser-based 3D infinite procedural terrain “video game” with shaders and continuous forward camera motion, then captured each Chrome result in real time. The author notes Sonnet 5.5 produced an output with a retained shader bug where trees fail to render; the linked Reddit video could not be accessed due to 403 Forbidden, so visual/implementation details can’t be independently verified. Comments broadly praised the apparent quality jump in Claude 5.5 / Opus 5.5 , but one commenter argued the prompt is too underspecified to support meaningful model-to-model comparison because output variance reflects creative choices as much as capability. A commenter questioned the evaluation methodology, arguing that the shared prompt may be too underspecified to support meaningful cross-model comparison because output variance can reflect differences in interpretation rather than model quality. Another asked what effort level was used, implying that reasoning-effort settings could materially affect results and should be controlled or reported. One technical observation claimed Sonnet 5.5 reproduced the Avicii game “ 1:1 ,” raising a possible concern about memorization, prompt leakage, or overfitting rather than genuine generative improvement. Anthropic confirms new Claude Code limits to prevent game cloning (Activity: 2149): Anthropic has reportedly confirmed new Claude Code safeguards aimed at preventing users from generating near-clones of existing games or reproducing copyrighted/proprietary software, with reports that enforcement is most visible when using Claude Code + Opus 5.5. The linked Tom’s Hardware report also notes user claims that Opus 5.5 is refusing some reverse-engineering and binary-analysis tasks, raising questions about whether the restriction is model-level, harness-level, or policy-routing specific. Commenters debated whether the guardrails are selectively protective of game/IP owners while Anthropic benefits from copyrighted training data, and some suggested routing Claude through another toolchain or using it as a helper for models like DeepSeek to bypass restrictions. Others argued that if a game is simple enough to be “vibecoded” into a clone, the underlying design may be inherently easy to reproduce. One commenter reported a potential guardrail bypass pattern: using Claude Code as a “helper” for DeepSeek rather than asking it directly to generate a prohibited game clone, implying that policy enforcement may be weaker when Claude is framed as assisting another model’s output rather than producing the clone end-to-end. A technical distinction emerged around prompt specificity: requests like “make me a copy of Pokemon, with perfect recreations of the monsters and mechanics” are expected to trigger blocking, while genre-level prompts such as “a monster catching game…with similar mechanics, in a retro 2D style” may still pass. One user tested this with a Digimon-inspired prompt and said Claude continued into implementation details including fights, rules, and damage calculations, suggesting the guardrails may focus on explicit cloning of named copyrighted assets rather than abstract mechanics. 3. Institutional AI Access Policies Goldman Sachs restricted Claude Code to engineers only (Activity: 849): The post claims Goldman Sachs restricted Claude Code and GitHub access to engineers/strats, removing access for bankers and traders. Top technical comments speculate the driver is LLM API cost control: non-engineering workflows like spreadsheet/PPT edits can become highly iterative and token-expensive—e.g. anecdotes of $50 for a PowerPoint update and up to $1k for a complex spreadsheet task—whereas engineering use may amortize tokens by generating scripts/SQL/workflows that then run without further model calls. Commenters debated whether this is mainly a cost/governance decision or a reputational moat: one argued that visible analyst dependence on Claude would undermine Goldman’s perceived human-advisory value. Another commenter framed local AI adoption—citing Revolut allegedly using local GLM models—as evidence that cloud LLM economics may push firms toward on-prem/local inference. Several commenters focused on API/token cost dynamics : one claimed basic office tasks can burn substantial spend (e.g., $50 for a PowerPoint update, potentially $1k for complex spreadsheet changes), arguing that non-technical users may create high-cost workflows because they prompt inefficiently and lack task decomposition. A data engineer countered that with Claude Code, token usage can decrease over time as code/workflows are built out, since automated SQL queries, notifications, and monitoring can run without continued model inference. There was a technical distinction drawn between engineer-led automation and non-engineer “vibe-coded” outputs: engineers can amortize LLM usage into durable code and operational workflows, while business users may repeatedly ask the model to regenerate spreadsheets/PPTs or hand off insecure prototypes. One example cited was a generated tool using a clear-text JSON file as an authentication mechanism , illustrating why unrestricted deployment of AI-generated apps can create security and maintenance risk. One commenter referenced fintech Revolut allegedly moving toward local AI using GLM , tying this to concerns that hosted model vendors like Anthropic/OpenAI face pressure from on-prem/local inference economics. The implication was that high API costs for broad enterprise usage may push firms toward local models, especially for repetitive internal workflows where privacy and marginal inference cost matter. Google Will Turn Off Search for Schools That Reject A.I. (Activity: 912): The post discusses a report titled “Google Will Turn Off Search for Schools That Reject A.I.”: commenters clarify that this is not framed as a punitive shutdown, but as a product-integration consequence because Google Search now includes built-in AI features. A quoted Google statement says “Search and A.I. are deeply integrated” and that if a school bans AI, students “will not have access to search” and will instead see a school-controlled availability message. Top comments debate the framing: one argues the headline is clickbait/anti-AI rhetoric because schools banning AI are effectively banning an AI-integrated search product, while another predicts the policy will worsen public approval of AI in U.S. schools. A commenter highlights that the article’s key technical/implementation point is Google Search and AI features are now bundled for schools , citing Google education VP Chris Phillips : “Search and A.I. are deeply integrated.” The practical consequence is that if a school policy blocks AI tools, Google says students may lose access to Google Search itself and see an institution-level unavailable message, because Google does not offer a clean AI-free Search mode for that deployment. Non-paywalled article",
+      "author": "swyx .ai",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "rss:0921e88254f4cd422461",
+      "source_type": "rss",
+      "source_name": "Mobile Dev Memo",
+      "title": "Apple’s App Store slowdown",
+      "url": "https://mdm.co/apples-app-store-slowdown/",
+      "published_at": "2026-11-04T17:04:27+00:00",
+      "collected_at": "2026-11-05T00:00:54.295623+00:00",
+      "body": "Apple’s Services revenue growth slowed to 10% in Q4 FY2026, hampered by App Store stagnation and mobile gaming headwinds. Despite regulatory pressures like US link-out mandates, advertising remains a record-breaking bright spot. Scaling discovery-based advertising may provide the most effective monetization strategy for 1 billion users.",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mobiledevmemo.com/",
+        "publication_platform": "wordpress",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:939528ed1ded05a591c8",
+      "source_type": "substack",
+      "source_name": "Liberty's Highlights",
+      "title": "670: Hackers Defrost Europe, HEICO's $3B Eye Doctor, CrowdStrike's AI Kill Switch, Apple's Stock Surprise, Claude Designs Chips, AI Receipts, Cloudflare’s CVE Wire, Lodge, and You Can See Everything",
+      "url": "https://www.libertyrpf.com/p/670-hackers-defrost-europe-heicos",
+      "published_at": "2026-11-04T17:01:25+00:00",
+      "collected_at": "2026-11-05T00:00:52.283709+00:00",
+      "body": "Usually, the better someone does their job, the easier it looks. You rarely realize how hard it is until you try it yourself. –James Clear 👨‍🍳🍳 A friend and I once had a good laugh at me being a ‘cast iron influencer’. (👋 Hey Jimmy! ) It’s been a while since I wrote about my skillets. These days, I use my carbon steel Matfer Bourgeat and my stainless steel All Clad and Misen the most… but every once in a while, the big boy Lodge cast-iron skillet comes out, and it’s always glorious! Anyway, I’ve got a reputation to maintain, so I’ll recommend to you a piece by my friend Taylor about Lodge Manufacturing, the cast-iron cookware company founded by Joseph Lodge in South Pittsburg, Tennessee, in 1896. 130 years later, it’s still family-owned 🕰️ They’ve survived fires, the Great Depression, teflon, and tough competition all around. Here are my highlights: In the late 1980s Lodge replaced its pension plan with profit-sharing. Today 20 percent of pretax profits goes to employees, half as quarterly bonuses and half into retirement accounts. The family takes 10 percent as dividends. When demand slumped after the pandemic boom, the family suspended its dividends for 2022 so the employee profit-sharing could continue. [...] A decision that changed the course of everything came in 2002. For a century, buying a cast-iron skillet meant buying a chore. New pans came coated in wax, and the owner had to scrub them and bake in a layer of oil before cooking anything. Under Bob Kellermann, Lodge began seasoning its pans at the foundry, so a skillet could go from the box to the stove. It was an industry first, and it became the industry standard . By 2007, every piece Lodge made left the factory pre-seasoned. The Wall Street Journal calls it the company’s turn toward growth and profitability. Annual revenue has since grown more than tenfold. I think I’ll grill something in my big Lodge pan in their honor 🤔 🏋️‍♂️🏄‍♂️ Some of you, including long-time friend-of-the show and supporter Sebastian Alvarez , have asked for an update on my exercise/fitness saga. After bouncing back strong last summer, it’s been hit & miss since. I still try to do a few big compound lifts and do some bodyweight stuff , but not as regularly as I should. I think the thing I’m most happy about is that I’ve graduated from the cylinder to the little ball on the balance board . I can now stand on the board with just that hard rubber ball under it for sometimes 10-20 seconds (which seems a long time in that context!). With winter coming, we’ll see if my cat reflexes and improved balance helped when it gets icy on the sidewalk. I’m pretty sure it saved my bacon a few times in recent years (and you never know how one of these falls will go… hitting your head on the concrete isn’t great 😬). 💚 🥃 To keep this steamboat alive and afloat , I need supporters. Like you ! 🚢 The paid subscription includes the full feed, every podcast, Zoom Q&As with me, and access to the private Discord clubhouse , where a core group of us hang out and discuss the interesting stuff we find: Get the full Liberty feed and help keep the Serendipity Engine running by becoming a paid supporter. Thank you 💚🥃🦊🐙⚓️ 🏦 💰 Liberty Capital 💳 💴 🧊🔥 Hackers Are Defrosting Europe’s Supermarkets 🛒 Apparently, it starts with the fridges… On Monday, supermarkets in Sweden, Belgium, Ireland, and several other European countries reported cyberattacks on their refrigeration systems. This forced many stores to throw away food. A sales manager in a story in Stockholm told Reuters : “There has been a cyberattack and all our freezers reached 50 degrees (Celsius).” “Everything is destroyed.” 50 Celsius! Clearly they’re running the defrost cycle that should only be run during maintenance with empty fridges. A similar attack hit around 700 supermarkets in France earlier in October . According to Le Monde , the hackers extended the defrost cycle from one hour to eight hours , delaying alarms and causing more damage. What’s a little scary is it didn’t require particularly sophisticated hacking. The head of France’s cybersecurity agency says the October attack exploited basic security failures, including equipment directly exposed to the internet and weak passwords. These systems are connected so technicians can monitor and adjust them remotely. Very useful, until someone else gets access. Hospitals, laboratories, and pharmacies also use similar refrigeration systems to store vaccines and other sensitive materials . 🏥🚑 Hmm, who could possibly be behind attacks on a large part of Europe 🤔 Maybe the White House should put together another joint task force on cybersecurity with the Russians like they proposed in 2017 🙄 There’s no evidence so far that AI was involved in these attacks. With weak passwords and equipment exposed to the internet, it may not have been needed. But the fact that the vulnerabilities have been there for a long time and are only now being exploited may be a sign that the thing that has changed is the addition of agentic AI with cyber-attack capabilities to the landscape. In any case, AI is making it easier for attackers to find vulnerable systems, figure out how to exploit them, and scale up attacks . Defenders have access to AI too. But I wonder how many of these forgotten little computers connected to the physical world will get secured before a breach happens. 🤔 Last Minute Update: Reuters reported on November 4 that refrigeration control systems at three French regional blood-bank facilities had also been attacked. Thankfully, staff received warnings and transferred the blood to unaffected refrigeration units. No blood supplies were lost. 🇫🇷🩸 👁️💰 HEICO's Billionaire Eye Doctor (and Another 30-Year Shareholder) My friend MBI (🇧🇩🇺🇸) shared this tweet by Sidecar Investor in our group chat . It contains this exchange from the latest HEICO quarterly call transcript : Pretty amazing! I thought I knew this story, but I didn’t look closely enough at the name. I thought Mr. Plessner was the eye doctor, but he isn’t. His story is just similar! Who’s the eye doctor? Dr. Herbie Wertheim: Forbes wrote a profile of him in 2019 . The gist was that: Wertheim had a difficult childhood, struggled with dyslexia, and at 16 was given a choice by a judge: reform school or the Navy. He chose the Navy, where he discovered he had an aptitude for science and engineering. He later became an optometrist, invented technologies for tinting and protecting eyeglass lenses, and founded a company called Brain Power Inc. in 1970. He used the profits from that business to invest in stocks. And it turns out he was very good at it. His approach was unusual. He spent about 12 hours a week studying patents and trying to understand companies’ intellectual property and technological advantages. He bought Microsoft shares at its IPO in 1986, Apple shares at its IPO in 1980 (and added more later), and many other technology and industrial companies. HEICO was one of his biggest winners, and he wasn’t just passive. Wertheim had known Larry Mendelson since the 1970s. When the Mendelsons (Larry and his two sons) were looking at taking control of the struggling aerospace-parts company, Wertheim helped them study the business, drawing on his own experience with aviation in the Navy. He began buying shares in the early 1990s, when HEICO was still a tiny company whose stock had traded for pennies. According to Forbes, his original $5 million investment had grown to more than $800 million by 2019 (that was just one of his holdings. Forbes estimated his total fortune at $2.3 billion at the time.) That made me curious. What happened to the doctor since 2019? He’s still alive, now 87 , and Forbes currently estimates his net worth at $4.8 billion . I checked HEICO’s latest annual proxy . Wertheim and his family trusts, charitable foundation, etc, have about 4.1 million regular shares and 6.5 million Class A shares . At HEICO’s November 2, 2026 closing prices, those shares would be worth approximately... *does napkin math* $3 BILLION 💰💰💰🛩️ So HEICO has produced at least two extraordinary long-term investors , both of whom developed relationships with the Mendelsons and spent decades owning the business. I wonder how many more stories like these are out there that we’ve never heard about 🤔 🦅 CrowdStrike Wants to Keep an Eye on Your AI Workers 🤖 👀🔐 CrowdStrike is spending about $495 million to acquire two AI security startups. Dreadnode ($95m) tries to break AI agents before they’re deployed, looking for vulnerabilities like prompt injection and jailbreaks. Fiddler AI ($400m) monitors what agents actually do after deployment and helps explain their decisions. CrowdStrike also announced an AI kill switch that allows security teams to cut off rogue agents' access to AI models (IF they detect the problem…). CrowdStrike is also working with Nvidia to extend its security software into Nvidia’s AI infrastructure. A planned integration with Nvidia Sentry would allow security rules to be enforced on separate BlueField-4 chips, outside the AI agent’s own software . So even if an agent is compromised, it can’t simply turn off its own watchdog. An AI agent doesn’t have to be hacked to cause damage. Give it legitimate access to company systems, and a bad decision could lead to big damage, even though all the usual security checks passed. ✅ ✅ ✅ If software is becoming a kind of labor , it also brings some of the risks of labor. Employees make mistakes, do dumb things, or fall for attackers’ tricks sometimes. I think companies like CrowdStrike and Palo Alto are well positioned to sell these additional layers of security. They’re already deep inside their customers’ IT systems, with access and visibility that newcomers would struggle to replicate. But that advantage cuts both ways. Remember CrowdStrike’s disastrous 2024 update that crashed 8.5 million Windows computers? That wasn’t even an attack! What happens if a major AI security failure causes massive damage to customers who thought they were protected? 😬 🍎 Apple vs the Rest of Big Tech in the AI Era (so far) 📊 Look at this. Granted, it’s an arbitrary starting point and if you change it one direction or the other you can end up with different results. But I still find it interesting that in the past 2.5 years (the most insane part of the AI era… so far), Apple stock has outperformed the rest of the traditional Big Tech (not Nvidia, obviously, but Nvidia wasn’t considered to be part of the group until recently). And lately, Apple’s lack of massive AI spending has become part of the bull case. Who would’ve expected that a few years ago? ¯\\_(ツ)_/¯ What if Apple can buy much of the AI intelligence it needs from companies competing to provide it, while keeping the customer relationship for itself? That could turn out to be a pretty good position. But it’s also a pretty big gamble. Among investors, at least the ones I hang out with, few have been excited about them for a while, yet they just keep chugging along. This doesn’t mean Apple’s AI strategy is winning, or that the stock will outperform. But it’s a snapshot in time. 📸 From the full feed 🔒: The AI Bubble Question: Are We Counting the Same Dollars Twice? 🔄 🧪🔬 Liberty Labs 🧬 🔭 🔄🧠 Claude is Learning to Design the Chips That Will Run Claude According to The Information , Anthropic’s new 15-person chip-design team is already using Claude to help develop its own custom AI chips . I wrote about Anthropic’s chip-design plans in Edition #652 , but now we’re getting a better idea of how they’re using their own models to speed things up. Engineers reportedly say Claude is cutting down design time compared with their estimates of traditional workflows at companies like Nvidia and AMD. Anthropic is also hiring researchers to train Claude specifically on chip design and verification, teaching it to generate circuit designs, test whether they work, and improve them. Meanwhile, OpenAI says its own models helped it and Broadcom develop its Jalapeño chip from initial design to tape-out (when the completed design is sent for manufacturing) in just nine months . I wrote about Jalapeño in Edition #656 , including how AI was already helping optimize the software running on the chip. 🔄 This is another example of what I’ve been calling the Escher Hands era . In Living One Model Ahead , I extended that beyond just software to the whole organization: better model → better software/chips/infrastructure/company → better model AI models are evolving much faster than the chips that run them . Designing and manufacturing a new chip can take years, so semi-engineers have to make guesses about what future models will need. If AI can shorten the design cycle significantly, hardware could be designed much closer to the models it will run. Of course, making the design process faster doesn’t mean that manufacturing and deployment will speed up by the same amount. But at least the engineers wouldn’t have to guess quite so far into the future about what they’re designing for. 🔄 🧾 🔐🤖 A Cryptographic Receipt for AI: Proving Which Model Answered You Say you pay for a top-of-the-line frontier model through a third-party service. How do you know they’re not quietly giving you answers from a cheaper model and pocketing the difference? 😅 (it might be easy to detect if they did it all the time, but if they do it just once in a while, it could be pretty hard to notice 🤔) There’s also the recent story where Anthropic accused DeepSeek and Moonshot (Kimi) of secretly routing some requests to Claude and passing off its answers as their own (as a way to get data to train their models and distill Claude ⚗️🧪). How do you fix this? Anthropic researchers created FlashProve , a way to attach a cryptographic proof to an AI response showing that it came from the exact model weights the provider committed to, without revealing those weights. You can verify the proof without having to run the giant model yourself. It’s a kind of mathematical receipt for the computation. 🧾 We’re far from implementing that everywhere, though. Generating these proofs currently takes about 70–95x more GPU time than ordinary inference, and each ~19 MB proof checks just one generated token, with up to 1,024 tokens of context. 😅 But if they can make it lighter, I suspect it'll first be used by independent model auditors and customers who want proof they're getting the expensive model they're paying for. 🔐🛜 Cloudflare Zero Wire: When Finding Security Bugs is the Easy Part 🐛 I’ve written a few times about how models like Mythos are getting super-human at finding security vulnerabilities, including bugs and holes that have been there for decades. But finding the bugs is only part of the problem. 🕵️‍♂️ Someone still has to figure out which systems are affected, how serious each vulnerability is, whether hackers are already exploiting it, and what to fix first. Cloudflare just launched Zero Wire , a free public feed that collects important security vulnerabilities and turns them into short, practical briefings: what happened, who’s affected, what evidence exists, and what to do about it. It’s a news wire for critical security holes. 🕳️ One cool thing: each briefing includes a ready-made prompt for an AI agent to investigate whether your own infrastructure is affected. That’s clever AND going to help implementation of the fixes (y’know what I always say about the power of friction, and reducing it…). If the agent has access to your systems, it can check which software versions you’re running, identify possible exposure, and recommend next steps (the prompt says its read-only, so it shouldn’t go around changing things without explicit permission). 🧯 From the full feed 🔒: A Possible Dwarf Planet In the Solar System Hiding in Plain Sight Since 2016 🎨 🎭 Liberty Studio 👩‍🎨 🎥 🎬 ‘ You Can See Everything ’ Pregame 🍿💉🩸 I got my ticket, going to see this tomorrow evening. By myself, because it’s hard to find a way for my wife and I to coordinate for a 3h+ film (if you count trailers and ads before the film starts). This feels like one that you should see before spoilers start entering the popular culture. I’ve heard from so many people I respect who have seen it that they’re glad they did and that it was quite an experience. So I figured I should not wait for it to be available on streaming and just go for it. I encourage you to do the same. My main worry is that all the praise has raised my expectations. But I still have almost no idea what kind of film I'm going to see, so maybe that will help. ¯\\_(ツ)_/¯ So the (optional) homework for you is to also go see it. Once we both have, I will discuss it in a spoiler-marked section. 👨‍🏫",
+      "author": "Liberty 💚 🥃",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.libertyrpf.com/",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:ecb2e13c36b51ce4b6f4",
+      "source_type": "substack",
+      "source_name": "Interconnects",
+      "title": "How big is the open model economy today?",
+      "url": "https://www.interconnects.ai/p/how-well-can-we-measure-open-model",
+      "published_at": "2026-11-04T16:35:44+00:00",
+      "collected_at": "2026-11-05T00:00:46.189518+00:00",
+      "body": "My longest running agent testbed has been building the Interconnects Dashboard — an aggregator of all of the best data on open model adoption and performance from across the web. This dashboard is freely available and becoming quite useful. Still, all the measurements we have on open model adoption are incredibly imprecise. We have noisy platform metrics, marketing-related metrics from startups, and imperfect public evaluations. It takes an informed eye to figure out where things are going. These research notes are my current best approximations of where we stand. As with most things on Interconnects, our goal is to build well more value than we capture, so the data on the dashboard will remain free for the foreseeable future. These notes will be more raw than many of my articles, a place for sharing what I’m mulling over but don’t have complete evidence for (yet). They will be primarily paid, enabling me to speak more freely. If you work in AI policy or policy-facing research, please reach out to us and we can likely get discounted or free access. The primary question I wanted to address today is: What is the market for open model inference? Is it growing? Is it a rounding error relative to OpenAI/Anthropic? Share I’ve been building the best measurements I can here, primarily using the open model inference startups Baseten, Fireworks, and Together AI as the bellwethers here (along with the open model share of OpenRouter’s token volume, which they thankfully report in their API). The hyperscalers also likely have a major footprint here, e.g. Amazon Bedrock and Azure’s model garden, but I haven’t seen them break down usage by model category. The startups’ fates are much more directly correlated with the success of open model inference as a category. For the latest data, we can start with a slide from my talk on the open model economy (recording here ). These are the public disclosures from the open model startups on their token volume, over time, log-scale. This shows near-exponential growth, before the uptick that would follow GLM 5.2’s step change in open agents . For example, Fireworks announced at their first company conference this week that they’re serving more than 40T tokens per day to customers’ customized models. This is just one slice of their inference, a vertical that they said grew over 2x from this summer, so I would expect their total number this fall to be well above 100T tokens when we get the next update. My first instinct with these numbers has been to ground them versus any closed model or hyperscale company we can, at least in terms of token volume. Thankfully, Google releases token volumes for the entire platform and API usage in their earnings reports. We can overlay those two numbers on top of the open model inference platforms, with the resulting plot below: Read more",
+      "author": "Nathan Lambert",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.interconnects.ai",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "substack:46e3d426ce44e313d1b4",
+      "source_type": "substack",
+      "source_name": "MBI Deep Dives",
+      "title": "Shopify 3Q’26: Closing In on Half of Amazon",
+      "url": "https://mbideepdives.substack.com/p/shopify-3q26-closing-in-on-half-of",
+      "published_at": "2026-11-04T16:02:04+00:00",
+      "collected_at": "2026-11-05T00:00:47.800494+00:00",
+      "body": "In 1Q'17, Shopify's Gross Merchandise Value (GMV) was ~10% of Amazon's estimated retail GMV. **It took them seven years to reach ~30%**. After growing GMV 30% (FXN) in 3Q'26, their sixth consecutive quarter of 29-30% FXN growth, Shopify is now at ~46% and looks likely to cross 50% around the middle of next year. **If it does, going from 30% to 50% will have taken only about three years.**\n\nIn fact, even though it may sound a bit provocative, Shopify and Amazon retail may actually have similar GMV in just ~6-7 years. It is remarkable that this is no longer an absurd thing to write.\n\n[![Image 1](https://substackcdn.com/image/fetch/$s_!ueD7!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcb2f084d-f221-48a1-a82c-5f42b09114d1_1732x601.png)](https://substackcdn.com/image/fetch/$s_!ueD7!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcb2f084d-f221-48a1-a82c-5f42b09114d1_1732x601.png)\n\nStarts at ~45%, Shopify's share across 2Q and 3Q'26 combined, which removes the Prime Day shift, and holds growth constant. Shaded cell is closest to the last two quarters. Source: Company Filings (created by Claude)\n\nOn an incremental basis, Shopify added ~$27 Billion of GMV YoY in 3Q’26 whereas Amazon retail likely added ~$17 Billion, or ~158% of what Amazon added which is the highest reading since I started tracking this, but we need to normalize this for Prime Day change. Prime Day moved into 2Q this year for most of Amazon’s large countries whereas it was entirely in 3Q last year, and Amazon’s CFO said the shift cost ~400 bps of its overall 3Q growth. In hindsight, much of the moderation to ~80% that I noted in the 2Q’26 **[update](https://www.mbi-deepdives.com/shop2q26/)** was this timing shift, and 158% is flattered by the same shift in reverse. Putting the two quarters together is a better read.\n\n[![Image 2](https://substackcdn.com/image/fetch/$s_!_xmz!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fef7314a9-a463-46b8-8aaa-adf2700c0c5d_1729x594.png)](https://substackcdn.com/image/fetch/$s_!_xmz!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fef7314a9-a463-46b8-8aaa-adf2700c0c5d_1729x594.png)\n\nSource: Company Filings (created by Claude\n\nSo a company less than half the size of Amazon retail added slightly more GMV dollars than Amazon did over the last six and twelve months.\n\nDuring the call, Shopify’s CFO reminded the outsized incremental share gains of Shopify. From the call (emphasis mine):\n\n> “Over the last three years, our U.S. merchants’ online sales grew at a compound annual growth rate of 23%, compared to 8% for U.S. e-commerce overall. In Europe, we saw a similar pattern. Our merchants grew online GMV at a compound annual growth rate of 37%, compared to a market growth of 8%, **doubling their share of e-commerce in just three years**. These trends have accelerated. Three years ago, Shopify merchants drove nearly a fifth of incremental e-commerce sales in the U.S. and nearly a quarter in Europe. **Since the start of 2025, they now capture nearly half in the U.S. and more than 40% in Europe.”**\n\nIndeed, GMV grew 33% FXN in Europe vs 28% in North America. It’s also not just e-commerce, Shopify’s offline GMV also grew 30%. Moreover, B2B GMV grew 74%, continuing a gradual deceleration from 84%, 80%, and 76% over the prior three quarters as the base scales.\n\nI will discuss the quarter and some key takeaways from the call, along with some thoughts on the valuation, behind the paywall.\n\n_Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on **[70](https://mbideepdives.substack.com/p/deep-dives)+** companies. The daily is just how I think out loud between the Deep Dives!_",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mbideepdives.substack.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas",
+        "transport": "public_reader_fallback"
+      }
+    },
     {
       "id": "x:ca950eb010ab2ffd539c",
       "source_type": "x",
@@ -1235,256 +1576,6 @@
         "coverage": "AI datacenters, power, infrastructure",
         "evidence_note": "Use for AI infrastructure constraints rather than pure software analysis.",
         "engagement_score": 38
-      }
-    },
-    {
-      "id": "price:c1839c870624c71db262",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 跌幅前十 2026-11-03",
-      "url": "https://finance.yahoo.com/markets/stocks/losers/",
-      "published_at": "2026-11-03T21:00:00+00:00",
-      "collected_at": "2026-11-04T00:01:40.487115+00:00",
-      "body": "1. DT close 47.029999; previous 55.130001; change -14.6925%\n2. ADEA close 17.860001; previous 20.67; change -13.5946%\n3. PAY close 31.02; previous 35.049999; change -11.4979%\n4. SHOP close 142.570007; previous 156.220001; change -8.7377%\n5. MTCH close 38.5; previous 42.07; change -8.4859%\n6. NICE close 106.269997; previous 112.389999; change -5.4453%\n7. DUOL close 128.0; previous 135.270004; change -5.3744%\n8. FIG close 21.030001; previous 22.200001; change -5.2703%\n9. ZG close 31.35; previous 32.900002; change -4.7112%\n10. MQ close 17.799999; previous 18.620001; change -4.4039%",
-      "author": "",
-      "symbols": [
-        "DT",
-        "ADEA",
-        "PAY",
-        "SHOP",
-        "MTCH",
-        "NICE",
-        "DUOL",
-        "FIG",
-        "ZG",
-        "MQ"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "losers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-11-03",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "DT",
-            "price_date": "2026-11-03",
-            "close": 47.029999,
-            "previous_close": 55.130001,
-            "change_amount": -8.100002,
-            "change_percentage": -14.6925,
-            "url": "https://finance.yahoo.com/quote/DT"
-          },
-          {
-            "ticker": "ADEA",
-            "price_date": "2026-11-03",
-            "close": 17.860001,
-            "previous_close": 20.67,
-            "change_amount": -2.809999,
-            "change_percentage": -13.5946,
-            "url": "https://finance.yahoo.com/quote/ADEA"
-          },
-          {
-            "ticker": "PAY",
-            "price_date": "2026-11-03",
-            "close": 31.02,
-            "previous_close": 35.049999,
-            "change_amount": -4.029999,
-            "change_percentage": -11.4979,
-            "url": "https://finance.yahoo.com/quote/PAY"
-          },
-          {
-            "ticker": "SHOP",
-            "price_date": "2026-11-03",
-            "close": 142.570007,
-            "previous_close": 156.220001,
-            "change_amount": -13.649994,
-            "change_percentage": -8.7377,
-            "url": "https://finance.yahoo.com/quote/SHOP"
-          },
-          {
-            "ticker": "MTCH",
-            "price_date": "2026-11-03",
-            "close": 38.5,
-            "previous_close": 42.07,
-            "change_amount": -3.57,
-            "change_percentage": -8.4859,
-            "url": "https://finance.yahoo.com/quote/MTCH"
-          },
-          {
-            "ticker": "NICE",
-            "price_date": "2026-11-03",
-            "close": 106.269997,
-            "previous_close": 112.389999,
-            "change_amount": -6.120003,
-            "change_percentage": -5.4453,
-            "url": "https://finance.yahoo.com/quote/NICE"
-          },
-          {
-            "ticker": "DUOL",
-            "price_date": "2026-11-03",
-            "close": 128.0,
-            "previous_close": 135.270004,
-            "change_amount": -7.270004,
-            "change_percentage": -5.3744,
-            "url": "https://finance.yahoo.com/quote/DUOL"
-          },
-          {
-            "ticker": "FIG",
-            "price_date": "2026-11-03",
-            "close": 21.030001,
-            "previous_close": 22.200001,
-            "change_amount": -1.17,
-            "change_percentage": -5.2703,
-            "url": "https://finance.yahoo.com/quote/FIG"
-          },
-          {
-            "ticker": "ZG",
-            "price_date": "2026-11-03",
-            "close": 31.35,
-            "previous_close": 32.900002,
-            "change_amount": -1.550001,
-            "change_percentage": -4.7112,
-            "url": "https://finance.yahoo.com/quote/ZG"
-          },
-          {
-            "ticker": "MQ",
-            "price_date": "2026-11-03",
-            "close": 17.799999,
-            "previous_close": 18.620001,
-            "change_amount": -0.820002,
-            "change_percentage": -4.4039,
-            "url": "https://finance.yahoo.com/quote/MQ"
-          }
-        ]
-      }
-    },
-    {
-      "id": "price:10e1989f70ef9993d338",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 涨幅前十 2026-11-03",
-      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
-      "published_at": "2026-11-03T21:00:00+00:00",
-      "collected_at": "2026-11-04T00:01:40.487115+00:00",
-      "body": "1. IBTA close 60.349998; previous 50.07; change 20.5313%\n2. RXT close 2.685; previous 2.355; change 14.0127%\n3. CORZ close 14.24; previous 12.505; change 13.8744%\n4. SRAD close 14.2; previous 12.87; change 10.3341%\n5. GRAB close 3.12; previous 2.86; change 9.0909%\n6. PDFS close 42.189999; previous 38.970001; change 8.2628%\n7. SECZ close 7.8; previous 7.24; change 7.7348%\n8. APP close 245.509995; previous 228.850006; change 7.2799%\n9. NBIS close 151.639999; previous 141.389999; change 7.2495%\n10. CRWV close 53.740002; previous 50.150002; change 7.1585%",
-      "author": "",
-      "symbols": [
-        "IBTA",
-        "RXT",
-        "CORZ",
-        "SRAD",
-        "GRAB",
-        "PDFS",
-        "SECZ",
-        "APP",
-        "NBIS",
-        "CRWV"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "gainers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-11-03",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "IBTA",
-            "price_date": "2026-11-03",
-            "close": 60.349998,
-            "previous_close": 50.07,
-            "change_amount": 10.279999,
-            "change_percentage": 20.5313,
-            "url": "https://finance.yahoo.com/quote/IBTA"
-          },
-          {
-            "ticker": "RXT",
-            "price_date": "2026-11-03",
-            "close": 2.685,
-            "previous_close": 2.355,
-            "change_amount": 0.33,
-            "change_percentage": 14.0127,
-            "url": "https://finance.yahoo.com/quote/RXT"
-          },
-          {
-            "ticker": "CORZ",
-            "price_date": "2026-11-03",
-            "close": 14.24,
-            "previous_close": 12.505,
-            "change_amount": 1.735,
-            "change_percentage": 13.8744,
-            "url": "https://finance.yahoo.com/quote/CORZ"
-          },
-          {
-            "ticker": "SRAD",
-            "price_date": "2026-11-03",
-            "close": 14.2,
-            "previous_close": 12.87,
-            "change_amount": 1.33,
-            "change_percentage": 10.3341,
-            "url": "https://finance.yahoo.com/quote/SRAD"
-          },
-          {
-            "ticker": "GRAB",
-            "price_date": "2026-11-03",
-            "close": 3.12,
-            "previous_close": 2.86,
-            "change_amount": 0.26,
-            "change_percentage": 9.0909,
-            "url": "https://finance.yahoo.com/quote/GRAB"
-          },
-          {
-            "ticker": "PDFS",
-            "price_date": "2026-11-03",
-            "close": 42.189999,
-            "previous_close": 38.970001,
-            "change_amount": 3.219997,
-            "change_percentage": 8.2628,
-            "url": "https://finance.yahoo.com/quote/PDFS"
-          },
-          {
-            "ticker": "SECZ",
-            "price_date": "2026-11-03",
-            "close": 7.8,
-            "previous_close": 7.24,
-            "change_amount": 0.56,
-            "change_percentage": 7.7348,
-            "url": "https://finance.yahoo.com/quote/SECZ"
-          },
-          {
-            "ticker": "APP",
-            "price_date": "2026-11-03",
-            "close": 245.509995,
-            "previous_close": 228.850006,
-            "change_amount": 16.659988,
-            "change_percentage": 7.2799,
-            "url": "https://finance.yahoo.com/quote/APP"
-          },
-          {
-            "ticker": "NBIS",
-            "price_date": "2026-11-03",
-            "close": 151.639999,
-            "previous_close": 141.389999,
-            "change_amount": 10.25,
-            "change_percentage": 7.2495,
-            "url": "https://finance.yahoo.com/quote/NBIS"
-          },
-          {
-            "ticker": "CRWV",
-            "price_date": "2026-11-03",
-            "close": 53.740002,
-            "previous_close": 50.150002,
-            "change_amount": 3.59,
-            "change_percentage": 7.1585,
-            "url": "https://finance.yahoo.com/quote/CRWV"
-          }
-        ]
       }
     },
     {
@@ -10502,24 +10593,6 @@
         "investor_type": "technology_analyst",
         "coverage": "AI products, devices and consumer technology",
         "engagement_score": 137
-      }
-    },
-    {
-      "id": "substack:bdb4808f3df6bb182150",
-      "source_type": "substack",
-      "source_name": "How They Make Money / App Economy Insights",
-      "title": "📊 Earnings Visuals (10/2026)",
-      "url": "https://www.appeconomyinsights.com/p/earnings-visuals-102026",
-      "published_at": "2026-11-01T15:03:11+00:00",
-      "collected_at": "2026-11-02T00:00:55.855204+00:00",
-      "body": "Welcome to the Premium edition of How They Make Money . 🔥 The October report is here! All the key earnings visuals from the past month in one place. ✔️ Cut through the noise with clear, concise financial snapshots. ✔️ See revenue trends, profit margins, and key takeaways instantly. Download the full report below or log in to your account. Inside the October report: 🚀 IPO Deep Dives : Anthropic, SpaceX. ☁️ Mega-Caps : Alphabet, Microsoft, Amazon, Meta, Tesla. 🧩 Chips : TSMC, ASML, Samsung, SK hynix, Intel, KLA, Lam, Sandisk. 💊 Healthcare : Lilly, J&J, UNH, Abbott, AbbVie, AstraZeneca. 💳 Fintech : Amex, Visa, Mastercard, PayPal, Robinhood, SoFi. 💰 Wall Street : Morgan Stanley, Goldman Sachs, BlackRock. 🏦 Banks : JPMorgan, BofA, Wells Fargo, Citigroup, Schwab. 💻 Software : IBM, SAP, ServiceNow, Fortinet, AppFolio. ✈️ Travel : American, Delta, Southwest, United, Hilton. 🍿 Entertainment : Netflix, Comcast, Spotify, Roblox. 🛡️ Aerospace : Boeing, Airbus, Lockheed Martin. ☕ Restaurants : Starbucks, Chipotle, Domino’s. 📡 Telecom : AT&T, T-Mobile, Verizon. 🚗 Autos : Rivian, GM, Ford, Stellantis. Plus Nike, Accenture, Reddit, Pinterest, Etsy, Coca-Cola, PepsiCo, Mondelez, Hershey, UPS, P&G, GE Vernova, Tilray, Intuitive, and more. Download the full report below!👇 Read more",
-      "author": "App Economy Insights",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.appeconomyinsights.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas"
       }
     }
   ]
