@@ -1,13 +1,22 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-16T00:02:34.958737+00:00",
+  "generated_at": "2026-11-17T00:02:56.823174+00:00",
   "pipelines": [
     {
       "pipeline": "substack",
       "status": "ok",
-      "item_count": 1,
+      "item_count": 4,
       "errors": [],
-      "notes": []
+      "notes": [
+        "Clouded Judgement: public reader fallback used",
+        "MBI Deep Dives: public reader fallback used",
+        "Aspiring for Intelligence: public reader fallback used",
+        "Chips Ahoy Capital: public reader fallback used",
+        "Meritech Software Pulse: public reader fallback used",
+        "Outspoken Geek: public reader fallback used",
+        "New Moon Cap: public reader fallback used",
+        "Outlier Cap: public reader fallback used"
+      ]
     },
     {
       "pipeline": "reddit",
@@ -25,8 +34,7 @@
       "item_count": 2,
       "errors": [],
       "notes": [
-        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "Latest available Yahoo EOD date is 2026-11-13; run after the US close to collect 2026-11-15."
+        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json"
       ]
     },
     {
@@ -169,14 +177,337 @@
     }
   ],
   "counts": {
-    "total": 848,
-    "substack": 11,
+    "total": 844,
+    "substack": 7,
     "rss": 1,
     "reddit": 0,
     "x": 834,
     "price": 2
   },
   "items": [
+    {
+      "id": "substack:0b7c49fbd8d6389242f7",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "Building Visual Intelligence — Andreas Blattmann & Dustin Podell, Black Forest Labs",
+      "url": "https://latent.space/p/bfl/",
+      "published_at": "2026-11-16T21:38:03+00:00",
+      "collected_at": "2026-11-17T00:00:50.185499+00:00",
+      "body": "This episode is sponsored by Deepgram. Try Deepgram for voice agents that truly understand your context! #contextiseverything Not many people know that Stable Diffusion is why I went fulltime into AI (I aptly titled Multiverse, not Metaverse to call out Zuck’s mistaken investment). It turns out that Dustin Podell also had the same aha moment - quitting his day job when the model came out. But we took very different paths… I stuck to what I knew in human content creation, and Dustin immersed deep into AI content creation with Andreas Blattmann , co-inventor of Latent Diffusion and the rest of the world-leading imagegen crew at Stability AI. Stability fell apart, but Anj Midha helped the core group spin out to BFL, which immediately built an incredible new imagegen model in the Flux series. But why are they now going into video and world models? Andreas gives an example you can try with one hand. If somebody tosses you a ball, your hand starts moving before the ball reaches you. You can do that without being able to write down the trajectory. When he talks about building visual intelligence , that’s the kind of knowledge he means. A still can show you where the ball is. A video shows you how it got there. The sound of impact can tell you when it hit something, even if the camera missed the contact. That’s BFL’s argument for training FLUX 3 on the three signals together. BFL’s FLUX 3 release The horse in motion is one of the FLUX 3 examples we show in the intro. The audio examples are worth playing with the sound on. FLUX 3 Video What a moving camera teaches you Suppose the camera starts in front of a person and pans around them. At some point the model owes you the back of their head. Andreas thinks ordinary two-dimensional video contains a great deal of evidence about what objects look like from other angles. That doesn’t settle whether a model “understands physics,” a point we go back and forth on. It does give you a much better test than asking whether one frame looks convincing. There’s a good engineering example late in the episode. Sharpen each frame of a clip independently and each frame might look terrific. Hit play and the extra detail can shimmer, because the upscaler made a slightly different decision every time. BFL derives its video upscaler from the same FLUX 3 backbone. Temporal consistency matters even when all the user asked for was a higher-resolution file. What’s worth spending training compute on? One of the questions I had for them was whether autoregression was taking over image generation. Andreas gives the other side its due. An autoregressive model can learn from all the tokens in a training example at once. On the diffusion side, the team can distill a long sampling process down to a handful of steps. Which advantage matters depends on whether you’re paying to train the model or waiting for an image to finish. Dustin’s early Kontext experiment is a nice example of how they decide where to invest. He suspected an image model that could draw a dog wearing a hat already knew something about where hats go. He and a colleague collected a small set of photos labeled with relationships. A training run of a few hours got the model to put a logo on a shirt. It was rough, but it was enough to take to the next offsite. The team then spent months on the data and the model. FLUX Kontext examples My favorite user story comes near the end. People were feeding FLUX old, degraded family photos, restoring them, then showing the pictures to their families. Dustin says he hadn’t predicted that use. After talking about preserving somebody’s identity across edits and across frames, it’s a lovely example of who actually notices if you get it right. Show notes BFL explains what a still image, a moving camera and a soundtrack each contribute during training. FLUX 3 launch and research overview Watch and listen to the results of generating video and sound together. FLUX 3 Video demos See how the lab teaches a model to make a requested change while preserving the rest of an image. FLUX Kontext examples Andreas Blattmann co-created Stable Diffusion and co-invented the latent diffusion method behind it. Guest bio · Original research Dustin Podell led FLUX Kontext and was the lead author of SDXL. Dustin’s project credits · FLUX Kontext · SDXL The first Latent Space essay grew out of the Stable Diffusion release. Multiverse, not Metaverse Chapters 0:00 Host introduction 3:39 Cold open 4:23 Black Forest roots 9:23 Dustin’s path 17:04 Visual intelligence 27:38 Inside SDXL 33:59 Learning motion 39:57 Flow matching 46:57 Starting BFL 50:36 Deepgram sponsor break 51:43 Early use cases for FLUX 54:58 Editing with Kontext 1:03:15 Training data 1:07:32 Testing an edit 1:13:12 Autoregression 1:20:50 World action models 1:30:08 Robotics in 2027 1:32:16 Who uses FLUX?",
+      "author": "swyx .ai",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "price:bc6e74e3aa05e57f7d56",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 跌幅前十 2026-11-16",
+      "url": "https://finance.yahoo.com/markets/stocks/losers/",
+      "published_at": "2026-11-16T21:00:00+00:00",
+      "collected_at": "2026-11-17T00:02:56.800328+00:00",
+      "body": "1. RXT close 2.515; previous 2.92; change -13.8699%\n2. BLSH close 19.75; previous 22.49; change -12.1832%\n3. PAYP close 12.84; previous 14.35; change -10.5226%\n4. AI close 10.68; previous 11.82; change -9.6447%\n5. SECZ close 7.33; previous 8.08; change -9.2822%\n6. ADEA close 14.75; previous 16.219999; change -9.0629%\n7. KC close 6.87; previous 7.55; change -9.0066%\n8. DOCN close 78.879997; previous 86.32; change -8.6191%\n9. STUB close 4.89; previous 5.31; change -7.9096%\n10. PICS close 6.84; previous 7.42; change -7.8167%",
+      "author": "",
+      "symbols": [
+        "RXT",
+        "BLSH",
+        "PAYP",
+        "AI",
+        "SECZ",
+        "ADEA",
+        "KC",
+        "DOCN",
+        "STUB",
+        "PICS"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "losers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-11-16",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "RXT",
+            "price_date": "2026-11-16",
+            "close": 2.515,
+            "previous_close": 2.92,
+            "change_amount": -0.405,
+            "change_percentage": -13.8699,
+            "url": "https://finance.yahoo.com/quote/RXT"
+          },
+          {
+            "ticker": "BLSH",
+            "price_date": "2026-11-16",
+            "close": 19.75,
+            "previous_close": 22.49,
+            "change_amount": -2.74,
+            "change_percentage": -12.1832,
+            "url": "https://finance.yahoo.com/quote/BLSH"
+          },
+          {
+            "ticker": "PAYP",
+            "price_date": "2026-11-16",
+            "close": 12.84,
+            "previous_close": 14.35,
+            "change_amount": -1.51,
+            "change_percentage": -10.5226,
+            "url": "https://finance.yahoo.com/quote/PAYP"
+          },
+          {
+            "ticker": "AI",
+            "price_date": "2026-11-16",
+            "close": 10.68,
+            "previous_close": 11.82,
+            "change_amount": -1.139999,
+            "change_percentage": -9.6447,
+            "url": "https://finance.yahoo.com/quote/AI"
+          },
+          {
+            "ticker": "SECZ",
+            "price_date": "2026-11-16",
+            "close": 7.33,
+            "previous_close": 8.08,
+            "change_amount": -0.75,
+            "change_percentage": -9.2822,
+            "url": "https://finance.yahoo.com/quote/SECZ"
+          },
+          {
+            "ticker": "ADEA",
+            "price_date": "2026-11-16",
+            "close": 14.75,
+            "previous_close": 16.219999,
+            "change_amount": -1.469999,
+            "change_percentage": -9.0629,
+            "url": "https://finance.yahoo.com/quote/ADEA"
+          },
+          {
+            "ticker": "KC",
+            "price_date": "2026-11-16",
+            "close": 6.87,
+            "previous_close": 7.55,
+            "change_amount": -0.68,
+            "change_percentage": -9.0066,
+            "url": "https://finance.yahoo.com/quote/KC"
+          },
+          {
+            "ticker": "DOCN",
+            "price_date": "2026-11-16",
+            "close": 78.879997,
+            "previous_close": 86.32,
+            "change_amount": -7.440002,
+            "change_percentage": -8.6191,
+            "url": "https://finance.yahoo.com/quote/DOCN"
+          },
+          {
+            "ticker": "STUB",
+            "price_date": "2026-11-16",
+            "close": 4.89,
+            "previous_close": 5.31,
+            "change_amount": -0.42,
+            "change_percentage": -7.9096,
+            "url": "https://finance.yahoo.com/quote/STUB"
+          },
+          {
+            "ticker": "PICS",
+            "price_date": "2026-11-16",
+            "close": 6.84,
+            "previous_close": 7.42,
+            "change_amount": -0.58,
+            "change_percentage": -7.8167,
+            "url": "https://finance.yahoo.com/quote/PICS"
+          }
+        ]
+      }
+    },
+    {
+      "id": "price:97f89a4c9d4aba8857f6",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 涨幅前十 2026-11-16",
+      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
+      "published_at": "2026-11-16T21:00:00+00:00",
+      "collected_at": "2026-11-17T00:02:56.800328+00:00",
+      "body": "1. HUBS close 231.979996; previous 217.25; change 6.7802%\n2. BILL close 57.630001; previous 54.48; change 5.7819%\n3. QLYS close 182.009995; previous 172.940002; change 5.2446%\n4. FRSH close 13.23; previous 12.67; change 4.4199%\n5. PAR close 23.290001; previous 22.48; change 3.6032%\n6. PCTY close 184.460007; previous 178.220001; change 3.5013%\n7. KVYO close 22.889999; previous 22.129999; change 3.4343%\n8. MBGL close 24.040001; previous 23.280001; change 3.2646%\n9. DFIN close 70.059998; previous 68.129997; change 2.8328%\n10. CARS close 13.06; previous 12.71; change 2.7537%",
+      "author": "",
+      "symbols": [
+        "HUBS",
+        "BILL",
+        "QLYS",
+        "FRSH",
+        "PAR",
+        "PCTY",
+        "KVYO",
+        "MBGL",
+        "DFIN",
+        "CARS"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "gainers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-11-16",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "HUBS",
+            "price_date": "2026-11-16",
+            "close": 231.979996,
+            "previous_close": 217.25,
+            "change_amount": 14.729996,
+            "change_percentage": 6.7802,
+            "url": "https://finance.yahoo.com/quote/HUBS"
+          },
+          {
+            "ticker": "BILL",
+            "price_date": "2026-11-16",
+            "close": 57.630001,
+            "previous_close": 54.48,
+            "change_amount": 3.150002,
+            "change_percentage": 5.7819,
+            "url": "https://finance.yahoo.com/quote/BILL"
+          },
+          {
+            "ticker": "QLYS",
+            "price_date": "2026-11-16",
+            "close": 182.009995,
+            "previous_close": 172.940002,
+            "change_amount": 9.069992,
+            "change_percentage": 5.2446,
+            "url": "https://finance.yahoo.com/quote/QLYS"
+          },
+          {
+            "ticker": "FRSH",
+            "price_date": "2026-11-16",
+            "close": 13.23,
+            "previous_close": 12.67,
+            "change_amount": 0.559999,
+            "change_percentage": 4.4199,
+            "url": "https://finance.yahoo.com/quote/FRSH"
+          },
+          {
+            "ticker": "PAR",
+            "price_date": "2026-11-16",
+            "close": 23.290001,
+            "previous_close": 22.48,
+            "change_amount": 0.810001,
+            "change_percentage": 3.6032,
+            "url": "https://finance.yahoo.com/quote/PAR"
+          },
+          {
+            "ticker": "PCTY",
+            "price_date": "2026-11-16",
+            "close": 184.460007,
+            "previous_close": 178.220001,
+            "change_amount": 6.240005,
+            "change_percentage": 3.5013,
+            "url": "https://finance.yahoo.com/quote/PCTY"
+          },
+          {
+            "ticker": "KVYO",
+            "price_date": "2026-11-16",
+            "close": 22.889999,
+            "previous_close": 22.129999,
+            "change_amount": 0.76,
+            "change_percentage": 3.4343,
+            "url": "https://finance.yahoo.com/quote/KVYO"
+          },
+          {
+            "ticker": "MBGL",
+            "price_date": "2026-11-16",
+            "close": 24.040001,
+            "previous_close": 23.280001,
+            "change_amount": 0.76,
+            "change_percentage": 3.2646,
+            "url": "https://finance.yahoo.com/quote/MBGL"
+          },
+          {
+            "ticker": "DFIN",
+            "price_date": "2026-11-16",
+            "close": 70.059998,
+            "previous_close": 68.129997,
+            "change_amount": 1.93,
+            "change_percentage": 2.8328,
+            "url": "https://finance.yahoo.com/quote/DFIN"
+          },
+          {
+            "ticker": "CARS",
+            "price_date": "2026-11-16",
+            "close": 13.06,
+            "previous_close": 12.71,
+            "change_amount": 0.35,
+            "change_percentage": 2.7537,
+            "url": "https://finance.yahoo.com/quote/CARS"
+          }
+        ]
+      }
+    },
+    {
+      "id": "substack:2fed1ba6cb60e0917961",
+      "source_type": "substack",
+      "source_name": "MBI Deep Dives",
+      "title": "Modeling Alphabet, Part 1: Search, Gemini, and YouTube",
+      "url": "https://mbideepdives.substack.com/p/modeling-alphabet-part-1-search-gemini",
+      "published_at": "2026-11-16T18:08:46+00:00",
+      "collected_at": "2026-11-17T00:00:52.184872+00:00",
+      "body": "With the busy period of this earnings season behind us, I have been meaning to take a fresh look at modeling two big tech companies, Meta and Alphabet. I would have started with Meta given my significant exposure, but decided to dig deeper into Alphabet first, as it may be one of the larger beneficiaries if Nvidia finds itself in a bit of turmoil in the post-Jensen world. The discussion on Alphabet’s position in the post-Jensen world will have to wait for tomorrow though, as Part 1 of this Alphabet modeling update will primarily focus on its very own **“problem child”**: Search!\n\nSearch may be the problem child, but it still pays most of the bills. Google Services, i.e. Search, the Gemini app, YouTube and subscriptions, is ~77% of Alphabet’s revenue this year, and it is ultimately what funds the capex buildout. It is also what lets Google stay at the frontier without having to worry too much about how much of its compute goes to inference or what each GW of it earns.\n\nSo I will go through all of Google Services today, with most of the time on Search. Part 2 tomorrow will cover Google Cloud, the cost of training Gemini, capex and valuation, and I will share the downloadable spreadsheet with it tomorrow.\n\n[![Image 1](https://substackcdn.com/image/fetch/$s_!g6KB!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6e4584ec-2ae6-4553-bae2-615670cd2d15_1534x790.png)](https://substackcdn.com/image/fetch/$s_!g6KB!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6e4584ec-2ae6-4553-bae2-615670cd2d15_1534x790.png)\n\nSources: Company filings, MBI estimates\n\nAfter 3Q’26 earnings, I [wrote](https://mbideepdives.substack.com/p/alphabet-3q26-search-worries-weighing?utm_source=publication-search) that Google is almost certainly destined to be a perennial share donor in the query market, and that what investors, including me, are really wondering is how much that will affect its numbers. This model is my attempt at an answer. **I have Google’s share of queries falling from ~76% today to ~52% by 2035, and Search still adding ~$32 Billion of revenue a year on average.** For context, Search added $6.8 Billion of revenue YoY in 3Q’26, or ~$27 Billion annualized, and that was a quarter that disappointed the market. So the model is basically assuming slightly faster growth than what 3Q’26 implied, mostly because ads are expected to arrive in the Gemini app.\n\n[![Image 2](https://substackcdn.com/image/fetch/$s_!SkeU!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F62fcd430-c13f-4eb7-918a-a7f8200d49e3_1177x1345.png)](https://substackcdn.com/image/fetch/$s_!SkeU!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F62fcd430-c13f-4eb7-918a-a7f8200d49e3_1177x1345.png)\n\nSources: Company filings, MBI estimates\n\nHow can Google lose that much share and still grow?\n\nSearch revenue is paid clicks times cost per click. Let me break paid clicks drivers in three pieces: a) how fast the overall pie of queries grows, b) how much of that pie Google keeps, and c) how many ads get clicked per query.\n\nLet me start with the query share question. Earlier this month, OpenAI [said](https://www.bigtechnology.com/p/openai-chatgpt-search-is-about-20) ChatGPT handles ~20% as many search-like queries as Google. I sized Gemini and the other AI assistants against ChatGPT using app and web usage data, added Bing and the other search engines, and Google (Search plus the Gemini app) comes out at ~76% of all search-like queries today. On the same math, it was ~81% in mid-2025. There is definitely some margin of error in this estimate, so I would treat these as ballpark numbers and **pay more attention to the direction**. Google gave up ~5 points of share in a little over a year.\n\nAnd yet Google’s own query growth this year was the fastest in five years. Both can only be true if the pie itself is growing very fast, and the math implies search-like queries grew ~16-19% a year since mid-2025. That makes intuitive sense to me. People ask ChatGPT a lot of things they would never have typed into a search box. I assume the pie grows 17% next year and gradually slows to 8% by 2035.\n\nWhere does Google’s share go from here? **This is the most important assumption in Part 1, and admittedly it’s hard to be very confident about it**. New products tend to be adopted along an S-curve, so I didn’t want to draw a straight line. AI assistants went from ~14% of all queries in mid-2025 to ~21% today, and I let that curve run until it flattens at ~55%.\n\nWhy 55%? About half of Google searches are [informational](https://searchengineland.com/15-percent-google-searches-148-terms-448864), which is the kind of question assistants answer well, while about a third are navigational (think typing “amazon” into the search box) and are likely to stay within Google. I also assume Google keeps ~91% of the queries that stay with search engines, about where it has been since 2024, and that Gemini holds its current ~19% of assistant queries.\n\nThat takes Google’s share to ~59% by 2030 and ~52% by 2035, so **most of the loss comes in the next four years**. If assistants flatten at ~65% of queries instead of ~55%, Search revenue would be ~$48 Billion lower in 2035. If they stop at ~45%, it would be ~$50 Billion higher.\n\nEven with that much share loss, Google’s own queries still grow ~10% next year and ~7% a year by 2035, simply because the pie grows faster than Google’s slice of it shrinks. Google ends up handling almost twice as many queries in 2035 as it does today. So volume is unlikely to be the problem, but the question remains how much Google will earn on each of those queries.\n\nGoogle doesn’t disclose paid clicks per query, but you can back into it. If Google’s queries grew ~10% a year after ChatGPT’s launch, as Barclays [estimated](https://www.businessinsider.nl/chatgpt-isnt-slowing-down-google-just-yet-and-these-numbers-prove-it/), paid clicks per query was already falling ~4% a year in 2024 and 2025, before AI Mode even existed. Then in 3Q’26, paid click growth slowed to 8% while query growth hit a five-year high. I think the decline is likely to continue for a while. AI Mode queries are longer and more exploratory, and the ads have barely shown up there yet. They [reached](https://blog.google/products/ads-commerce/ads-in-ai-mode-global/) the first markets outside the US only late last month. So I have paid clicks per query falling ~4% next year, with the decline easing to ~2.5% by 2035 as the ads catch up.\n\nFor cost per click, I assume ~3-3.5% growth a year, close to what Google has averaged since 2022. You could perhaps argue for more. An AI query carries a lot more context than a few keywords, so ads should be better matched, and Microsoft says ads in Copilot [convert](https://ppc.land/microsoft-copilot-achieves-73-higher-click-through-rates-in-advertising-study/) 16% better than its search ads. But Google will no longer have ~90% of searches to itself. As queries spread across ChatGPT, Muse and other assistants, advertisers get more places to buy intent, and that may weigh on how much Google can charge.\n\nPut the two together and revenue per query stays about flat through 2035, after growing ~1-3% a year in 2024-26. So query growth basically drives the search revenue in my model. These two assumptions matter as much as share does. Every point a year on either one is worth ~$47 Billion of Search revenue in 2035.\n\n[![Image 3](https://substackcdn.com/image/fetch/$s_!q1QS!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa36e4908-7535-4d93-980c-1e428c4cb82e_1186x514.png)](https://substackcdn.com/image/fetch/$s_!q1QS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa36e4908-7535-4d93-980c-1e428c4cb82e_1186x514.png)\n\nSources: Company filings, Barclays via Business [Insider](https://www.businessinsider.nl/chatgpt-isnt-slowing-down-google-just-yet-and-these-numbers-prove-it/), MBI estimates\n\nThen there is the Gemini app, which doesn’t make any money from ads yet. Gemini subscriptions are part of Google One, which I will come back to later. The share math above gives it ~0.3 Trillion queries this year and ~2.4 Trillion by 2035. Management was quite clear on the 3Q call that ads have a place in agentic interfaces, so I assume ads arrive next year.\n\nI also assume the ads ramp fast, to about half of what a search earns per query by 2030 and ~55% by 2035. Unlike OpenAI, Google doesn’t have to build an ad business from scratch. Ads in AI Overviews and AI Mode are served from advertisers’ existing [campaigns](https://www.seroundtable.com/google-ads-help-doc-ai-overviews-39469.html) with no opt-in, and Google says AI Overviews monetize at approximately the same rate as search, so the demand should be there as soon as Google turns ads on in the app. It probably won’t reach parity with a search though. People ask assistants fewer monetizable questions than they type into a search box, and an answer has less room for ads than a page of results. Each ad should be better targeted, but probably not enough to make up the difference. That gets me to ~$29 Billion of revenue by 2030 and ~$64 Billion by 2035, or ~12% of Search. It won’t make money right away though. By my estimate the app already costs Google ~$2.5 Billion a year in fixed costs, including payments to phone makers such as [Samsung](https://www.thestar.com.my/tech/tech-news/2025/04/22/google-paid-samsung-enormous-sums-for-gemini-ai-app-installs) to preinstall it. Once ads arrive, there are variable costs as well, mainly the share of ad revenue paid back to those phone makers and the cost of selling the ads, which I put at ~40% of the app’s revenue. So I have it losing money next year and reaching a ~50% margin by the early 2030s (before the AI compute which I treat separately below).\n\nI would hold the Gemini app’s revenue very loosely. It is a bet on consumer behavior, which is hard to capture in a spreadsheet. We don’t know how people will split their time between Search, AI Mode and the Gemini app, and we know even less about how Google will make money once agents start doing the shopping, i.e. how much will come from ads, how much from fees on purchases and how much from subscriptions. I don’t model fees on purchases at all, so if agents end up completing a lot of purchases via Gemini or AI mode, there is likely upside here. OpenAI reportedly [projects](https://mobiledevmemo.com/how-can-chatgpt-reach-100bn-in-advertising-revenue/) ~$100 Billion of ad revenue for ChatGPT alone in 2030, which tells you how wide the range of outcomes is. What I have here is one reasonable path, but I wouldn’t claim high conviction on these numbers.\n\n[![Image 4](https://substackcdn.com/image/fetch/$s_!LJsj!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7b777d72-14ae-4a05-ad7d-05d42f602677_1176x1426.png)](https://substackcdn.com/image/fetch/$s_!LJsj!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7b777d72-14ae-4a05-ad7d-05d42f602677_1176x1426.png)\n\nSources: Company filings, [ITU](https://www.itu.int/en/mediacentre/Pages/PR-2026-11-03-Facts-and-Figures.aspx), [Forbes](https://www.forbes.com/sites/gabrielalinzainescu/2026/08/31/openais-chatgpt-ads-hit-1-billion-run-rate-in-just-200-days/), MBI estimates\n\nWhat about margins? Alphabet doesn’t disclose Search’s margin, so I estimated margins for everything else in Google Services, and whatever is left is Search. That gives a ~58% operating margin this year. Google Services’ margin has expanded by more than a point a year since 2024, but I don’t want to extrapolate that as growth slows. I let Search’s margin rise ~0.3 points a year, which takes it to ~60% by 2035.\n\nThe obvious pushback is that AI answers cost a lot more to serve than ten blue links. So I modeled the compute behind AI Overviews, AI Mode and the Gemini app as its own cost line, and two things pull it in opposite directions. Each query will need a lot more computing, since more queries will get AI answers, the answers get longer and agents start doing multi-step tasks for you. Think of it as the number of tokens a model has to read and write to answer you, and I assume that rises ~28x per query by 2035. At the same time, better chips, smaller models and smarter serving software keep cutting the cost of each token, and I assume each GW of compute can handle ~11x more by then. That may sound aggressive, but Google cut the cost of AI Overviews queries by more than 90% in just 18 months.\n\nOn these assumptions, the bill goes from ~$4 Billion this year to ~$19 Billion in 2035, which is still less than 4% of what Google earns per query. Even if efficiency improves only ~20% a year instead of the ~30% I assume, the bill would be ~$40 Billion against ~$544 Billion of Search revenue. It is obviously a real cost, but I don’t think it dramatically changes the economics of Search.\n\n[![Image 5](https://substackcdn.com/image/fetch/$s_!EQa7!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feaad9f62-e13f-47e8-b6fc-21e79102df56_1185x1158.png)](https://substackcdn.com/image/fetch/$s_!EQa7!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feaad9f62-e13f-47e8-b6fc-21e79102df56_1185x1158.png)\n\nSources: Company filings and earnings calls, MBI estimates\n\nOkay, that’s about it for Search.\n\nYouTube is relatively a bit simpler. Ad growth has slowed from ~15% in 2024 to ~11% this year, and every viewer who converts to Premium stops seeing ads. I fade growth from ~9% next year to ~7% by 2035, which doubles revenue to ~$88 Billion. It is **structurally** lower margin business than Search though. Creators keep ~55% of the ad revenue, and YouTube doesn’t disclose what it spends on anything else. So beyond the cost of storing and delivering all that video, I assume it spends about as much as Netflix does on R&D and overhead relative to revenue, and a bit less on sales and marketing since it doesn’t probably have to advertise as much for subscribers. That leaves YouTube ads with a ~16.5% operating margin, and since payout rates are contractual, I have it rising to just ~18.5% by 2035. YouTube TV passes most of its revenue on to the networks, so all of YouTube, including Music & Premium, comes to ~15% this year. That is a little below [MoffettNathanson’s](https://thewrap.com/youtube-worth-550-billion-moffettnathanson-note) estimate of ~16% for all of YouTube in 2025.\n\n[![Image 6](https://substackcdn.com/image/fetch/$s_!JQTg!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feda12d23-928d-43ca-a02b-fc553c38b82b_1170x1405.png)](https://substackcdn.com/image/fetch/$s_!JQTg!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feda12d23-928d-43ca-a02b-fc553c38b82b_1170x1405.png)\n\nSources: [YouTube](https://www.youtube.com/howyoutubeworks/youtubes-impact/), Company filings, MBI estimates\n\nGoogle Network is about flat this year, but in 3Q’26 that took a 14% rise in price per impression to offset a 14% drop in impressions. I don’t think that will last, and I have it declining ~2% a year. At a ~10% margin after paying partners, it hardly matters either way.\n\nSubscriptions, platforms and devices deserves more attention. It is already bigger than YouTube ads, and I have it almost doubling to ~$108 Billion. I model each product as subscribers times revenue per subscriber, and mostly just extend the recent pace of subscriber additions (table below).\n\nThe interesting one is Google One, which is where consumers pay for Gemini. It was [adding](https://9to5google.com/2025/05/15/google-one-150-million/) ~40 million subscribers a year, and probably more this year as the cheaper AI Plus plan rolled out. Going back to ~40 million takes it from ~235 million to ~595 million. What each of them pays is harder to call. More subscribers taking the AI plans should lift revenue per subscriber, but many of the new ones will likely come from markets such as India, where Google [sells](https://techcrunch.com/2025/12/10/google-launches-sub-5-ai-plus-plan-in-india-to-compete-with-chatgpt-go/) AI Plus for under $5 a month and has been [giving](https://techcrunch.com/2025/10/30/google-partners-with-ambanis-reliance-to-offer-free-ai-pro-access-to-millions-of-jio-users-in-india/) AI Pro away for 18 months to Jio customers. I don’t know which one wins, so I let revenue per subscriber rise just ~2% a year, from ~$34 to ~$41. Alphabet doesn’t disclose any of this, so the starting points are my estimates based on the milestones it has shared.\n\n[![Image 7](https://substackcdn.com/image/fetch/$s_!2I6z!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4a1497f9-8ebb-4ca4-b59b-f8ed00079227_1600x1216.png)](https://substackcdn.com/image/fetch/$s_!2I6z!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4a1497f9-8ebb-4ca4-b59b-f8ed00079227_1600x1216.png)\n\nSources: Company filings, MBI estimates\n\nAdd it all up and Google Services grows ~8% a year, from ~$385 Billion this year to ~$765 Billion in 2035. Operating income doubles from ~$164 Billion to ~$347 Billion, and the margin edges up from ~43% to ~45% even after the AI compute bill.\n\n[![Image 8](https://substackcdn.com/image/fetch/$s_!qe94!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4a77c072-ad75-41a7-8c0c-69f36c662374_1161x1455.png)](https://substackcdn.com/image/fetch/$s_!qe94!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4a77c072-ad75-41a7-8c0c-69f36c662374_1161x1455.png)\n\nSources: Company filings, MBI estimates\n\nIf I have to boil Part 1 down, six assumptions move the needle. Four of them drive Search, i.e. how fast total queries grow, where assistants’ share of those queries flattens, how many paid clicks survive as queries move to AI Mode and what happens to cost per click. The other two are how quickly the Gemini app monetizes and how fast the cost of serving an AI answer keeps falling. **A reasonable change in any one of them moves Google Services’ 2035 operating income by ~$20-30 Billion (~6-9%)**, far more than anything I assumed for YouTube or subscriptions. That may not sound like much, but **they can also go wrong together**. **If all six went against Google at once, 2035 operating income would be 36% below what I have here.****Of course, the same is true in the other direction.**\n\nIn Part 2 tomorrow, I will cover Google Cloud, where I would explore most of the growth, the capex debate and the post-Jensen question, along with the cost of training Gemini and valuation. I will share the full model with it so that you can change any assumption and see what it does.\n\n_Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on **[70](https://mbideepdives.substack.com/p/deep-dives)+** companies. The daily is just how I think out loud between the Deep Dives!_\n\n**Current Portfolio:**\n\nPlease note that these are **NOT** my recommendation to buy/sell these securities, but just disclosure from my end so that you can assess potential biases that I may have because of my own personal portfolio holdings. Always consider my write-up my personal investing journal and never forget my objectives, risk tolerance, and constraints may have no resemblance to yours.\n\nMy current portfolio is disclosed below:",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mbideepdives.substack.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas",
+        "transport": "public_reader_fallback"
+      }
+    },
+    {
+      "id": "rss:2412dae354edc71e205f",
+      "source_type": "rss",
+      "source_name": "Mobile Dev Memo",
+      "title": "Meta’s Europe problem (part 2)",
+      "url": "https://mdm.co/metas-europe-problem-part-2/",
+      "published_at": "2026-11-16T17:09:05+00:00",
+      "collected_at": "2026-11-17T00:01:02.547100+00:00",
+      "body": "Meta faces decelerating revenue growth in Europe due to less personalized advertising and regulatory pressures. The proposed Digital Fairness Act threatens mobile gaming monetization, potentially further reducing ad spend. These challenges, alongside AI Act compliance costs, indicate significant friction for technology firms navigating the European Union's evolving digital landscape.",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mobiledevmemo.com/",
+        "publication_platform": "wordpress",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:cc4e56b9267a4e303796",
+      "source_type": "substack",
+      "source_name": "TSOH Investment Research",
+      "title": "Floor & Decor: Still Waiting",
+      "url": "https://thescienceofhitting.com/p/floor-and-decor-still-waiti",
+      "published_at": "2026-11-16T11:31:03+00:00",
+      "collected_at": "2026-11-17T00:00:56.978050+00:00",
+      "body": "Note: Review all prior FND research and trades on the TSOH website. From “ Floor & Decor: Awaiting Normalization ” (March 2026): “I do not have a great deal of confidence on how or when we get there, but I’m willing to bet on eventual normalization of existing U.S. home sales at the right price - and the ~40% stock price decline over the past 24 months has helped. At less than $55 per share, I think FND would provide a sufficient margin of safety relative to normalized earnings, specifically providing investors with some cover on the number of years needed to return to higher levels of existing U.S. home sales; as a result, I’m a likely buyer if Floor & Decor shares trade down to that level.” [When “ Floor & Decor: Awaiting Normalization ” was published on 03/02/26, FND traded at ~$67 per share.] It continues to be a very challenging environment for flooring retailers like Floor & Decor, as evidenced by the following statistic: they’ve reported twenty consecutive quarters of comp transaction declines, with their average unit volumes declining by ~25% over that period, to levels first eclipsed in FY17. On the Q3 FY26 call, management painted an encouraging picture about the short-term comp trajectory, with improvement in each month throughout the quarter culminating in slight gains in September – the first month of SSS growth at Floor & Decor since January . But they then revealed this had proved short-lived: “Demand for big-ticket discretionary home improvement projects remains challenged, and 30-year mortgage rates are now solidly above 7% - about 115 basis points higher than a year ago – which continues to pressure housing affordability, pending home sales, and existing home sales. In addition, consumers remain selective with larger discretionary purchases, while higher energy costs continue to weigh on sentiment and budgets… As a result, quarter-to-date SSS have declined ~3.8% .” Read more",
+      "author": "TSOH Investment Research",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://thescienceofhitting.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
     {
       "id": "substack:7dade4bb3f9cb0a6f803",
       "source_type": "substack",
@@ -6664,256 +6995,6 @@
       }
     },
     {
-      "id": "price:b41d8de3d76b4799ed85",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 跌幅前十 2026-11-13",
-      "url": "https://finance.yahoo.com/markets/stocks/losers/",
-      "published_at": "2026-11-13T21:00:00+00:00",
-      "collected_at": "2026-11-16T00:02:34.944740+00:00",
-      "body": "1. NBIS close 115.879997; previous 128.639999; change -9.9192%\n2. EVCM close 6.33; previous 6.98; change -9.3123%\n3. PDFS close 36.98; previous 40.639999; change -9.0059%\n4. CVLT close 152.070007; previous 166.160004; change -8.4798%\n5. CRWV close 53.130001; previous 56.599998; change -6.1307%\n6. BAND close 43.759998; previous 46.290001; change -5.4655%\n7. DOCN close 86.32; previous 90.07; change -4.1634%\n8. NET close 305.809998; previous 318.5; change -3.9843%\n9. KC close 7.55; previous 7.86; change -3.944%\n10. SECZ close 8.08; previous 8.39; change -3.6949%",
-      "author": "",
-      "symbols": [
-        "NBIS",
-        "EVCM",
-        "PDFS",
-        "CVLT",
-        "CRWV",
-        "BAND",
-        "DOCN",
-        "NET",
-        "KC",
-        "SECZ"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "losers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-11-13",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "NBIS",
-            "price_date": "2026-11-13",
-            "close": 115.879997,
-            "previous_close": 128.639999,
-            "change_amount": -12.760002,
-            "change_percentage": -9.9192,
-            "url": "https://finance.yahoo.com/quote/NBIS"
-          },
-          {
-            "ticker": "EVCM",
-            "price_date": "2026-11-13",
-            "close": 6.33,
-            "previous_close": 6.98,
-            "change_amount": -0.65,
-            "change_percentage": -9.3123,
-            "url": "https://finance.yahoo.com/quote/EVCM"
-          },
-          {
-            "ticker": "PDFS",
-            "price_date": "2026-11-13",
-            "close": 36.98,
-            "previous_close": 40.639999,
-            "change_amount": -3.66,
-            "change_percentage": -9.0059,
-            "url": "https://finance.yahoo.com/quote/PDFS"
-          },
-          {
-            "ticker": "CVLT",
-            "price_date": "2026-11-13",
-            "close": 152.070007,
-            "previous_close": 166.160004,
-            "change_amount": -14.089996,
-            "change_percentage": -8.4798,
-            "url": "https://finance.yahoo.com/quote/CVLT"
-          },
-          {
-            "ticker": "CRWV",
-            "price_date": "2026-11-13",
-            "close": 53.130001,
-            "previous_close": 56.599998,
-            "change_amount": -3.469997,
-            "change_percentage": -6.1307,
-            "url": "https://finance.yahoo.com/quote/CRWV"
-          },
-          {
-            "ticker": "BAND",
-            "price_date": "2026-11-13",
-            "close": 43.759998,
-            "previous_close": 46.290001,
-            "change_amount": -2.530003,
-            "change_percentage": -5.4655,
-            "url": "https://finance.yahoo.com/quote/BAND"
-          },
-          {
-            "ticker": "DOCN",
-            "price_date": "2026-11-13",
-            "close": 86.32,
-            "previous_close": 90.07,
-            "change_amount": -3.75,
-            "change_percentage": -4.1634,
-            "url": "https://finance.yahoo.com/quote/DOCN"
-          },
-          {
-            "ticker": "NET",
-            "price_date": "2026-11-13",
-            "close": 305.809998,
-            "previous_close": 318.5,
-            "change_amount": -12.690002,
-            "change_percentage": -3.9843,
-            "url": "https://finance.yahoo.com/quote/NET"
-          },
-          {
-            "ticker": "KC",
-            "price_date": "2026-11-13",
-            "close": 7.55,
-            "previous_close": 7.86,
-            "change_amount": -0.31,
-            "change_percentage": -3.944,
-            "url": "https://finance.yahoo.com/quote/KC"
-          },
-          {
-            "ticker": "SECZ",
-            "price_date": "2026-11-13",
-            "close": 8.08,
-            "previous_close": 8.39,
-            "change_amount": -0.31,
-            "change_percentage": -3.6949,
-            "url": "https://finance.yahoo.com/quote/SECZ"
-          }
-        ]
-      }
-    },
-    {
-      "id": "price:080eafccb5ce55be7a57",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 涨幅前十 2026-11-13",
-      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
-      "published_at": "2026-11-13T21:00:00+00:00",
-      "collected_at": "2026-11-16T00:02:34.944740+00:00",
-      "body": "1. FOUR close 44.779999; previous 41.52; change 7.8516%\n2. PICS close 7.42; previous 6.96; change 6.6092%\n3. CLBT close 11.53; previous 10.89; change 5.8769%\n4. U close 52.810001; previous 50.18; change 5.2411%\n5. STUB close 5.31; previous 5.05; change 5.1485%\n6. WLTH close 10.72; previous 10.2; change 5.098%\n7. UPBD close 25.09; previous 23.879999; change 5.067%\n8. DUOL close 165.309998; previous 157.419998; change 5.0121%\n9. TBLA close 2.23; previous 2.13; change 4.6948%\n10. APP close 409.100006; previous 393.679993; change 3.9169%",
-      "author": "",
-      "symbols": [
-        "FOUR",
-        "PICS",
-        "CLBT",
-        "U",
-        "STUB",
-        "WLTH",
-        "UPBD",
-        "DUOL",
-        "TBLA",
-        "APP"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "gainers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-11-13",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "FOUR",
-            "price_date": "2026-11-13",
-            "close": 44.779999,
-            "previous_close": 41.52,
-            "change_amount": 3.259998,
-            "change_percentage": 7.8516,
-            "url": "https://finance.yahoo.com/quote/FOUR"
-          },
-          {
-            "ticker": "PICS",
-            "price_date": "2026-11-13",
-            "close": 7.42,
-            "previous_close": 6.96,
-            "change_amount": 0.46,
-            "change_percentage": 6.6092,
-            "url": "https://finance.yahoo.com/quote/PICS"
-          },
-          {
-            "ticker": "CLBT",
-            "price_date": "2026-11-13",
-            "close": 11.53,
-            "previous_close": 10.89,
-            "change_amount": 0.639999,
-            "change_percentage": 5.8769,
-            "url": "https://finance.yahoo.com/quote/CLBT"
-          },
-          {
-            "ticker": "U",
-            "price_date": "2026-11-13",
-            "close": 52.810001,
-            "previous_close": 50.18,
-            "change_amount": 2.630001,
-            "change_percentage": 5.2411,
-            "url": "https://finance.yahoo.com/quote/U"
-          },
-          {
-            "ticker": "STUB",
-            "price_date": "2026-11-13",
-            "close": 5.31,
-            "previous_close": 5.05,
-            "change_amount": 0.26,
-            "change_percentage": 5.1485,
-            "url": "https://finance.yahoo.com/quote/STUB"
-          },
-          {
-            "ticker": "WLTH",
-            "price_date": "2026-11-13",
-            "close": 10.72,
-            "previous_close": 10.2,
-            "change_amount": 0.52,
-            "change_percentage": 5.098,
-            "url": "https://finance.yahoo.com/quote/WLTH"
-          },
-          {
-            "ticker": "UPBD",
-            "price_date": "2026-11-13",
-            "close": 25.09,
-            "previous_close": 23.879999,
-            "change_amount": 1.210001,
-            "change_percentage": 5.067,
-            "url": "https://finance.yahoo.com/quote/UPBD"
-          },
-          {
-            "ticker": "DUOL",
-            "price_date": "2026-11-13",
-            "close": 165.309998,
-            "previous_close": 157.419998,
-            "change_amount": 7.889999,
-            "change_percentage": 5.0121,
-            "url": "https://finance.yahoo.com/quote/DUOL"
-          },
-          {
-            "ticker": "TBLA",
-            "price_date": "2026-11-13",
-            "close": 2.23,
-            "previous_close": 2.13,
-            "change_amount": 0.1,
-            "change_percentage": 4.6948,
-            "url": "https://finance.yahoo.com/quote/TBLA"
-          },
-          {
-            "ticker": "APP",
-            "price_date": "2026-11-13",
-            "close": 409.100006,
-            "previous_close": 393.679993,
-            "change_amount": 15.420013,
-            "change_percentage": 3.9169,
-            "url": "https://finance.yahoo.com/quote/APP"
-          }
-        ]
-      }
-    },
-    {
       "id": "x:e5da0a75203c604573ff",
       "source_type": "x",
       "source_name": "@rauchg",
@@ -9137,43 +9218,6 @@
       }
     },
     {
-      "id": "substack:347e9440869115b842ca",
-      "source_type": "substack",
-      "source_name": "Aspiring for Intelligence",
-      "title": "The Jensen Era Ends",
-      "url": "https://aspiringforintelligence.substack.com/p/the-jensen-era-ends",
-      "published_at": "2026-11-13T16:03:42+00:00",
-      "collected_at": "2026-11-14T00:01:00.509929+00:00",
-      "body": "It’s been a week for the AI capital markets. On Thursday, [Nvidia CEO Jensen Huang resigned](https://techcrunch.com/2026/11/12/nvidias-jensen-huang-resigns-chipmaker-names-cfo-colette-kress-as-interim-ceo/), days after the board opened an independent investigation following reports that he had been the target of a foreign intelligence effort and now CFO Colette Kress is stepping in as interim CEO. Nvidia has lost [roughly $1T in market value since early October](https://www.insurancejournal.com/news/international/2026/11/12/892317.htm), and the stock [fell more than 13% in early trading Thursday](https://finance.yahoo.com/technology/live/nvidia-live-updates-jensen-huang-resigns-cfo-colette-kress-to-serve-as-interim-ceo-140341430.html). The CEO news landed on top of a hot inflation print and complications at a data center project in Ohio, and after [a 9.26% single-day drop on Nov 5](https://www.fool.com/coverage/stock-market-today/2026/11/05/stock-market-today-nov-5-nvidia-slides-on-ai-chip-selloff-as-election-uncertainty-weighs/), part of the worst chip-stock selloff since 2020.\n\nThe broader market hasn’t been kinder. [The Nasdaq 100 fell 6.4% in a single session, erasing $2.3T of market value, a record for one day](https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-valuation-expectations-pressured-131257414.html). So, to say the least, the market feels volatile.\n\nYet it still feels like private AI markets are running flat out. A [record 27 companies raised rounds of $1B or more last quarter](https://valueaddvc.com/pulse/crunchbase-q3-2026-record-billion-dollar-rounds-2026), together taking about a third of all venture funding, and [early-stage funding alone hit $40.6B, up 25% year over year](https://www.fundreef.com/global-startup-funding-in-q3-2026-ai-mega-rounds-and-what-founders-should-do-b872ec009637/). And the biggest AI IPO ever, Anthropic, is scheduled to price in the middle of all this.\n\nThe recent public market volatility could eventually reset prices for private AI companies, but we haven’t seen much of that yet. And because many early-stage investors already have their capital, we think the link between the two is indirect and delayed rather than mechanical. The big swing factor is Anthropic’s IPO. A weak reception would reinforce valuation doubts, while its pricing may set the template for private AI deals.\n\n[![Image 1](https://substackcdn.com/image/fetch/$s_!VBR9!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5fde4fb2-9a4d-4aec-b07b-b5df922a74d1_1546x858.png)](https://substackcdn.com/image/fetch/$s_!VBR9!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5fde4fb2-9a4d-4aec-b07b-b5df922a74d1_1546x858.png)\n\nHere’s how we’re thinking about it:\n\nNvidia sits in the middle of the AI supply chain, which is why its stock has become a proxy for sentiment on the entire buildout, and why a leadership shake-up lands so hard. The company now has an interim CEO and a board search for a permanent one, with both internal and external candidates in play. Open items include [an FBI inquiry](https://www.cbsnews.com/news/nvidia-jensen-huang-investigation-china-intelligence/) that President Trump has acknowledged, a Justice Department investigation of Megaspeed (the Singapore data center company tied to the allegations), congressional scrutiny, and a proposed shareholder class action.\n\nThe bigger issue for venture is that Nvidia is more than a chip supplier. It has [up to $164.5B in guarantees and commitments behind AI data centers](https://finance.yahoo.com/technology/ai/articles/nvidia-backs-164-5-billion-061322658.html), including an obligation capped at $105B on an OpenAI data center in Ohio. The market’s fear is that a different leader could back away from financing data centers, and then the AI boom itself loses momentum. A more cautious board and a new CEO could tighten equity checks, payment terms, or backstops, and that is the clearest path from Nvidia’s turmoil into private AI rounds.\n\nThe timing adds to the tension. Nvidia reports on Nov 17, the day before Anthropic prices, so that print matters well beyond one stock.\n\nIf Nvidia is the equity story, CoreWeave is the credit story. This is the company at the center of debt-financed AI infrastructure, and it’s been a rough month. Its bonds hit new lows on Nov 4, with the 2031 notes trading as low as 79.5 cents on the dollar, after Democratic candidates who favor slowing data center construction won governor’s races, including in Texas. [The stock was down roughly 40% over the past month](https://www.cnbc.com/2026/11/10/coreweave-earnings-preview-debt-capex.html) going into earnings.\n\nCoreWeave [raised its full-year revenue outlook, the CEO scrapped planned stock sales, and the company said it would stop relying on high-yield bonds at current yields](https://finance.yahoo.com/markets/stocks/articles/coreweave-bonds-signal-cooling-investor-192736400.html) in favor of customer prepayments and a planned $4B investment-grade loan. [Its bonds ticked up](https://www.bloomberg.com/news/articles/2026-11-12/coreweave-bonds-rise-after-strong-earnings-soothe-debt-anxiety), though they remain well below par. The takeaway for us is that the market will still fund AI infrastructure, but at a much steeper price, and the weakest-funded players feel it first. Many young AI infrastructure companies rely on exactly this kind of cheap capital, and on Nvidia’s support.\n\nIf a price reset is coming, we’d expect the frontier labs and public markets to show it first, and there are early hints. OpenAI didn’t fail to raise (we’ve seen that framing floating around, and it’s not quite right), but it raised less, at a lower price, than it wanted. It took about $11B in a first close at $1.25T, versus the $30B or more at $1.4T it first sought.\n\nAnthropic is taking the public route, with a range [implying roughly $1.4T, up from its $965B May round but below the $2T once reportedly targeted](https://techcrunch.com/2026/11/10/anthropic-sets-ipo-price-range-of-70-to-78-per-share-to-reach-an-implied-valuation-of-1-404-trillion/). It doesn’t need the cash to survive, having [$95.6B in cash and $36.3B in short-term investments as of Sep 30](https://finance.yahoo.com/markets/stocks/articles/anthropic-ipo-targets-november-debut-162209958.html), but compute at this scale is a bottomless pit. [Investor chatter went from $1.5T to $2T earlier this month to $1.1T to $1.3T within days](https://finance.yahoo.com/markets/stocks/articles/anthropic-ipo-targets-november-debut-162209958.html). The largest private AI valuations in the world now have to pass a public-market test, and they’re taking it at an awkward moment, with their key supplier leaderless.\n\nThat’s why we’re watching the IPO so closely. How it prices and trades will tell us a lot about how much repricing may still be ahead.\n\nThe venture data we have is a rearview mirror. Q3 ‘26 covers July through September, and the selloff started in November, so early-stage funding being up 25% tells us little about what comes next.\n\nBut there’s also a structural reason the passthrough is slower. Funds raise years in advance and have a longer expected hold period before an IPO. US VC funds raised $108.5B through September, and [roughly half of venture dry powder sits in funds two to five years old](https://hub.causo.ai/guides/new-vc-funds-raised-2026). Those investors aren’t forced sellers or buyers, so we don’t expect an overnight repricing at seed and Series A.\n\nBut the link isn’t zero. Repricing typically comes in through marks, the pace of mega-rounds, and the next fundraising cycle. Nvidia and the credit markets add a second channel as many young AI companies lean on Nvidia’s investments, guarantees, and customer financing, and on affordable debt, and that support is now less certain. And because private AI valuations rest on the assumption that a public exit will pay at least as much, we’d expect any pressure to start at the top and work down, though slowly.\n\n[![Image 2](https://substackcdn.com/image/fetch/$s_!z58f!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe454db56-7142-4673-b651-bab2915f98b5_1610x916.png)](https://substackcdn.com/image/fetch/$s_!z58f!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe454db56-7142-4673-b651-bab2915f98b5_1610x916.png)\n\n*   **Anthropic’s pricing and first-day trading.** This is the first real test of whether public investors will pay up for a frontier lab, and it will likely set the template for private comps that follow.\n\n*   **Nvidia’s Nov 17 print and CEO search.** It’s the first report since Huang stepped down. Guidance, any change in its investing and financing commitments, the pace and pick of a permanent CEO, or any escalation in the investigations would make AI capital raises harder to price.\n\n*   **Nvidia’s balance-sheet support and the neocloud credit market.** Equity checks, lease guarantees, and what CoreWeave-style borrowers pay for debt are the channels that carry public turmoil into private rounds. Any pullback would show up here first.\n\n*   **Entry price discipline.** The companies that last will have real revenue and margins that hold up if valuations reset, whatever the tape does in a given week.\n\nAI remains one of the hottest categories (perhaps the only one?) in venture, and for good reason. We expect more volatility in public markets, including from leadership news at the system’s central supplier, and eventually some repricing in private ones. But early-stage returns are made on exits years from now, not on this quarter’s tape alone. As always, we’re excited to see how things play out!",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://aspiringforintelligence.substack.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas",
-        "transport": "public_reader_fallback"
-      }
-    },
-    {
-      "id": "substack:c10e669f31a0121cbc0d",
-      "source_type": "substack",
-      "source_name": "TSOH Investment Research",
-      "title": "TSOH Weekly Roundup (11/13/2026)",
-      "url": "https://thescienceofhitting.com/p/tsoh-weekly-roundup-11132026",
-      "published_at": "2026-11-13T16:02:16+00:00",
-      "collected_at": "2026-11-14T00:01:00.389051+00:00",
-      "body": "Welcome to another edition of TSOH Weekly Roundup. Each update features a Chart of the Week, along with a brief discussion on three news items relevant to companies in the TSOH investable universe. Chart Of The Week (from “ Roblox: Capture This Moment ”) Three Notable Items “Tripadvisor Announces Management Departures and Transition Plan” Alongside woeful Q3 FY26 results , Tripadvisor announced that CEO Matt Goldberg and CFO Mike Noonan will both leave the company. I speculated in February that the sale of TheFork would likely prove a stepping stone to more significant change for the namesake business and Viator, but now signs of broader disruption and weaker results have clearly dampened expectations on what could be realized in a merger or sale. This is a tough situation, which explains why the stock price has fallen another ~50% over the past year. Goldberg: “Tripadvisor today is a different business than the one recovering from the pandemic when Mike and I joined in 2022. Experiences is now at the core of the company, and we’re positioned for an increasingly AI-driven travel ecosystem… We simplified our capital structure and closed the sale of TheFork, strengthening our balance sheet… We continue with our portfolio review, which includes evaluating strategic alternatives aligned with our priorities - simplifying our legacy business lines and focusing resources on our growth opportunities.” “David Baszucki Sits Down with Bloxy News” An interview with Roblox CEO Dave Baszucki; he discussed topics including the history of the platform and AI’s impact on game development, discovery, etc. Note that Baszucki also participated in an interview with Stratechery . “We saw social networking starting to pop up with social graphs. We also saw UGC platforms like YouTube, and online gaming was getting more prevalent, multiplayer-type stuff. We had communication platforms, and we thought, right in the middle of all of this was this new category - call it immersive human co-experience... That was really the genesis of the first Roblox… The endgame is infinite scale and multiplayer with photorealism. Over the next 20 years, I think we’ll see that come to fruition with all the tech we’re building.” “Berkshire, Netflix, and Portfolio Construction with Alex Morris” Last week, I joined Jason and Jeff on Investing Unscripted to discuss portfolio construction, position sizing, and a slew of companies, including Berkshire Hathaway, Deckers, Netflix, Nike, and On. To our discussion on Berkshire and capital allocation, note that the company bought back ~$9.6 billion of stock in Q3 FY26 – the largest quarterly repurchase spend in its history. TSOH Updates Here’s the updated TSOH research list for the past six months: Monday’s research report will be an update on Floor & Decor (FND) . As always, it will include prior disclosure of any portfolio changes. Subscribe now Have a great weekend! NOTE - This is not investment advice. Do your own due diligence. I make no representation, warranty, or undertaking, express or implied, as to the accuracy, reliability, completeness, or reasonableness of the information presented in this report. Assumptions, opinions, and estimates expressed in this report constitute my judgment as of the date thereof and are subject to change without notice. Projections are based on a number of assumptions, and there is no guarantee that they will be achieved. TSOH Investment Research is not acting as your advisor or in any fiduciary capacity.",
-      "author": "TSOH Investment Research",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://thescienceofhitting.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas"
-      }
-    },
-    {
       "id": "x:73efbcce382b6a60215f",
       "source_type": "x",
       "source_name": "@AravSrinivas",
@@ -9330,25 +9374,6 @@
       }
     },
     {
-      "id": "substack:23cee88ed8f3d049c046",
-      "source_type": "substack",
-      "source_name": "MBI Deep Dives",
-      "title": "How I Am Using AI",
-      "url": "https://mbideepdives.substack.com/p/how-i-am-using-ai",
-      "published_at": "2026-11-13T15:47:14+00:00",
-      "collected_at": "2026-11-14T00:00:55.036378+00:00",
-      "body": "AI is clearly a moment of significant change. Anyone who is somewhat involved in any “knowledge work” must have tangibly felt it by now. Given the pace of change, I wouldn’t be surprised if I feel the urge to write “How I am Using AI” every six months going forward!\n\nSo, how am I using AI today?\n\nLet me start with two arguably extreme camps on how anyone writing online should use AI. One camp wants to protect the “personal voice” at almost any cost, and many readers perhaps prefer an assurance that the content they are reading was written entirely by hand. Ben Thompson, who I really **[admire](https://mbideepdives.substack.com/p/an-ode-to-ben-thompson?utm_source=publication-search)**, is a good example of this camp. He mentioned (I’m paraphrasing) on a recent Sharp Tech podcast that he doesn’t enjoy making charts and tables by hand, and AI can now do that job well, but he still avoids using it even for those because he doesn’t want readers to think AI is producing his work.\n\nVenkatesh Rao sits at the other end. In case you’re not familiar with Rao, his [Gervais Principle](https://ribbonfarm.com/2009/10/07/the-gervais-principle-or-the-office-according-to-the-office/) is probably one of the pieces that will survive the test of time on the internet. In a recent [post](https://contraptions.venkateshrao.com/p/experiments-with-monstrousness), Rao wrote that AI is now his **default** for writing and that a fully handwritten piece is the exception. He edits the model’s text lightly, treats it as a collaborator, and doesn’t try to hide its “voice”. His motto for all this is “Be Slightly Monstrous”, which basically means letting the technology change how you work instead of guarding an older idea of what a writer should be. Some of his long-time readers have apparently written to him saying they feel betrayed, but he’s clearly made up his mind. After reading one of his recent pieces “[Cognitive Mercantilism](https://contraptions.venkateshrao.com/p/cognitive-mercantilism)**”,**I can tell why he is so adamant about it. If AI can help him write something like that, I can see why he doesn’t want to fall into a version of “audience capture”, where he keeps writing the old way mainly because that is what his readers expect.\n\nI fall somewhere between the two, and I think where you fall depends a lot on what you consider **your job** to be.\n\nWhen I think about what I do at MBI Deep Dives, there are three distinct jobs. The first is analysis, which means going through filings, listening to earnings calls or podcasts, looking into the numbers and other people’s views, and coming up with my own. The second is writing, i.e. structuring those thoughts and putting them into words. The third is allocating capital. I manage my own and my family’s savings, which is obviously a very important responsibility.\n\nI have always thought of these three jobs as a flywheel. Better analysis gives me more to write about, and since writing is thinking, writing it down often sharpens the analysis much more. The better analyst I become, the better shot I have at allocating my family’s savings well. Given how closely Thompson’s identity is tied to his analysis and writing, I can understand his instinct to protect his writing voice.\n\nFor me, the bigger change is in **how the thinking happens**. Writing is thinking, and I still do believe that, but it is a slow way to think. Before AI, I would guess my time was split about evenly between doing the work (going through filings and other people’s views, running the numbers etc.) and writing it up. Writing would often raise new questions, which would send me back to do more work, and that loop could only turn so many times before I finish a piece.\n\nSteve Jobs called the computer a bicycle for the mind, and to me AI feels more like an accelerator for thinking. Writing is no longer the primary way I think. I come up with questions from many different directions, AI goes off and does much of the work on each of them, and when it comes back, I probe, push back and sometimes have a real debate with it. Those back-and-forths can open up more avenues than writing alone usually did. Writing is still thinking, but it is now one part of a much bigger thinking process, and **my job is shifting from doing the analysis and writing it down to orchestrating all that thinking and editing what comes back**. I do understand the concern that this can make it too easy to let AI do the thinking for you, and frankly speaking, it is a real risk. It is on me (and everyone else using AI) to not be lazy and take advantage of the thinking acceleration that is possible today.\n\nThis earnings season showed me what that acceleration looks like in practice. Earnings seasons are usually exhausting. A lot of information arrives at once, it goes on every day for weeks, and it is easy to feel a bit jaded by the end of it. I didn't feel that way this time, mostly because AI did a lot of the grunt work. As each company reported, it updated the numbers, charts and tables I track every quarter, and it did that job better than I ever did. My charts are better labeled and look a lot better than what I used to make by hand. I still listen to every call. What changed is that I no longer spend the hours after the call updating spreadsheets.\n\nI spent that time on questions I never had time to explore during earnings season. For example, when I was working on **[covering](https://mbideepdives.substack.com/p/uber-3q26-eats-vs-doordash-and-the?utm_source=publication-search)** Uber’s earnings, I wanted to work out what fee a robotaxi fleet could rationally pay Uber given how many more trips Uber says it can send each car. These are the kind of questions that would be too time constraining to explore during the earnings season, but clearly it is the question of paramount importance. Similarly, when I was listening to Airbnb’s call, I heard Brian Chesky arguing that general agents are the wrong interface for something as visual and social as planning a trip. So I **[asked](https://mbideepdives.substack.com/p/airbnb-3q26-back-in-growth-mode-but?utm_source=publication-search)** Muse to plan a trip for my family and build a page we could all use to rank the houses. Seeing that firsthand was far more useful to me (and I suspect to most people) than reasoning about it in the abstract.\n\nA typical earnings day for me now looks something like the table below.\n\n[![Image 1](https://substackcdn.com/image/fetch/$s_!HehX!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1941f90f-4bda-4f60-a381-bf6f6ee4bdf5_2383x1033.png)](https://substackcdn.com/image/fetch/$s_!HehX!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1941f90f-4bda-4f60-a381-bf6f6ee4bdf5_2383x1033.png)\n\nThe core idea of MBI Deep Dives has always been to understand the world through the lens of investing. The way you understand anything is by asking questions and following them in many different directions, reading widely and taking in views that don’t match your own. AI now lets me follow far more of those directions than I ever could on my own.\n\nRao argued in his “Cognitive Mercantilism” piece that a lot of AI anxiety treats intelligence the way mercantilists treated gold, as a fixed supply to be hoarded and guarded, while barely thinking about demand. If intelligence becomes much cheaper, the more useful question is how much of it people will find uses for. He also mentions that he is willing to work harder than he did a year ago because “a lot more is suddenly within reach.” I don’t go nearly as far as he does in letting AI write the full piece for me. But that line describes my experience this earnings season quite well. It turns out I had far more questions than I ever had time for.\n\nThat brings me to the irony I myself have been experiencing since the ChatGPT moment in 2022. Every time AI accelerates in its capabilities, it somehow ends up making me work more. If you read MBI Deep Dives in your inbox, you may have noticed the emails arriving later than they used to.\n\n[![Image 2](https://substackcdn.com/image/fetch/$s_!NAZY!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbb4cc407-f2a9-4553-add6-a45c49bb5043_2143x1335.png)](https://substackcdn.com/image/fetch/$s_!NAZY!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbb4cc407-f2a9-4553-add6-a45c49bb5043_2143x1335.png)\n\nThrough May, my posts typically went out ~7:30 AM PT. Since September, the median has been ~9 AM. February and May were earnings months too, and posts still went out ~7:30 then, so I don’t think the earnings calendar explains it. I still wake up at 4 am PT everyday, so no changes there either. What changed is how much material I end up with. During the day I explore a piece from several directions. Before going to bed, I talk to Claude for 30 minutes to an hour about what I found and what I think, and ask it for a draft. I wake up and start working on that draft, and pulling everything into one coherent piece takes me longer than it used to. In fact, it does feel like there is a learning curve associated with it and I think I am early to mid innings in that learning curve in how to work more seamlessly with AI, and make my thoughts into a better first draft so that I don’t have to spend four hours editing it.\n\nWe have all been told that AI will free up our time. So far, at least in my case, I see little evidence of that. Rao, drawing on Joyce Appleby’s history of capitalism, points to the industrious revolution, when people in 17th and 18th century Britain chose to work more days because there were suddenly more things worth buying. I suspect something similar is happening with questions.\n\nThere is a tension in all this that I am still working through and need to get better at. When you can chase almost any question, the challenge evolves to choosing which answers belong in the piece. The more directions I explore, the more tempting it is to put all of it in.\n\nMy objective is to understand businesses better so I can allocate my family’s savings better, and I trust that the “market” will keep finding my paywalled investing journal useful enough to pay for. So I will keep using AI where it does the work better than I can, and keep reshaping my workflow so that my own attention goes where it matters most.\n\n_Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on **[70](https://mbideepdives.substack.com/p/deep-dives)+** companies. The daily is just how I think out loud between the Deep Dives!_\n\n**Current Portfolio:**\n\nPlease note that these are **NOT** my recommendation to buy/sell these securities, but just disclosure from my end so that you can assess potential biases that I may have because of my own personal portfolio holdings. Always consider my write-up my personal investing journal and never forget my objectives, risk tolerance, and constraints may have no resemblance to yours.\n\nMy current portfolio is disclosed below:",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://mbideepdives.substack.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas",
-        "transport": "public_reader_fallback"
-      }
-    },
-    {
       "id": "x:def9d6622f17bfaf69dd",
       "source_type": "x",
       "source_name": "@mweinbach",
@@ -9424,24 +9449,6 @@
         "investor_type": "technology_investor",
         "coverage": "IREN, NBIS, AI infrastructure and energy",
         "engagement_score": 75
-      }
-    },
-    {
-      "id": "rss:61a6b487dc93b4109326",
-      "source_type": "rss",
-      "source_name": "Mobile Dev Memo",
-      "title": "Monetizing multi-turn chatbot conversations",
-      "url": "https://mdm.co/monetizing-multi-turn-chatbot-conversations/",
-      "published_at": "2026-11-13T15:40:43+00:00",
-      "collected_at": "2026-11-14T00:01:17.997330+00:00",
-      "body": "Chatbots leverage multi-turn interactions to refine user intent for better ad targeting. Operators must navigate an optimization dilemma: showing ads early with limited data versus waiting for more context while risking conversational termination. Success involves weighing immediate revenue against the impact on conversational hazard and future engagement value.",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://mobiledevmemo.com/",
-        "publication_platform": "wordpress",
-        "section": "transaction_ideas"
       }
     },
     {
@@ -10216,25 +10223,6 @@
       }
     },
     {
-      "id": "substack:ebea93b8979bfdf0b9b0",
-      "source_type": "substack",
-      "source_name": "Clouded Judgement",
-      "title": "Clouded Judgement 11.13.26 - The Frontier Blinks",
-      "url": "https://cloudedjudgement.substack.com/p/clouded-judgement-111326-the-frontier",
-      "published_at": "2026-11-13T14:04:27+00:00",
-      "collected_at": "2026-11-14T00:00:43.704495+00:00",
-      "body": "Every week I’ll provide updates on the latest trends in cloud software companies. Follow along to stay up to date!\n\n**The Frontier Blinks**\n\nBack in September I [tweeted](https://x.com/jaminball/status/2095599287963210198) that the GPT 6 Astra pricing launched at $10 / $50 per million input / output tokens (which happened to be the same as the other leading frontier model pricing, Fable 5.1). Despite all of the pricing wars between the big labs, and pressure from cheaper open weight alternatives, it felt like “frontier” pricing was holding more steady. However, this only lasted 2 months! On Monday Anthropic released Fable 5.2 and Mythos 5.2 at $8 / $40 (a 20% cut to the then current frontier model pricing). Up until that point we’d seen steady price cuts to the lower end of the model spectrum, but the frontier has more pricing stability. So what’s changing? More competitive pressure? Something else? The new models are also ~30% faster (meaning if the same chip produces 30% more tokens per hour, the cost of each token falls about ~23%). this is the math - A chip costs the same to run per hour no matter how many tokens it produces, so if it makes 1.3x (30% more) as many tokens in that hour, each token carries 1/1.3 (about 77%) of the cost it used to, which is a 23% drop. Here, price fell 20%, so just about at the same rate. So this may just be the model provider passing through their efficiency gains. Of course - they didn’t have to! They could have just kept the frontier pricing, and generated better margins. BUT - we are in a land grab, so not totally surprising to see them pass through savings (if that is what’s going on).\n\nI think this is something that will continue. We’ve seen versions of this from database businesses like Databricks and Snowflake. They historically called out 3 different types of efficiency gains they passed on to customers in the form of price cuts. Storage compression, better underlying chips (newer Graviton instances), and faster query times. All 3 of this drove down the cost to serve / operate, and Databricks / Snowflake historically passed those efficiency gains off to customers. I think we’ll see the same thing from the model providers. They’ll drive efficiencies, and pass through savings to ucstomesr in the form of price cuts.\n\n**Quarterly Reports Summary**\n\n![Image 1](https://substackcdn.com/image/fetch/$s_!NaMU!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffe05a9a5-5ea2-4411-8735-87ee86e4daea_1305x259.png)\n\n**Top 10 EV / NTM Revenue Multiples**\n\n[![Image 2](https://substackcdn.com/image/fetch/$s_!lKxW!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2e30d6ea-70ee-4d91-a2ea-1934cc465bf3_1645x745.png)](https://substackcdn.com/image/fetch/$s_!lKxW!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2e30d6ea-70ee-4d91-a2ea-1934cc465bf3_1645x745.png)\n\n**Top 10 Weekly Share Price Movement**\n\n[![Image 3](https://substackcdn.com/image/fetch/$s_!Imu_!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcc6a2b99-297b-4687-ad13-487e3fbd2e76_1152x690.png)](https://substackcdn.com/image/fetch/$s_!Imu_!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcc6a2b99-297b-4687-ad13-487e3fbd2e76_1152x690.png)\n\n**Update on Multiples**\n\nSaaS businesses are generally valued on a multiple of their revenue - in most cases the projected revenue for the next 12 months. Revenue multiples are a shorthand valuation framework. Given most software companies are not profitable, or not generating meaningful FCF, it’s the only metric to compare the entire industry against. Even a DCF is riddled with long term assumptions. The promise of SaaS is that growth in the early years leads to profits in the mature years. Multiples shown below are calculated by taking the Enterprise Value (market cap + debt - cash) / NTM revenue.\n\nOverall Stats:\n\n*   Overall Median: 4.7x\n\n*   Top 5 Median: 31.1x\n\n*   10Y: 5.1%\n\n[![Image 4](https://substackcdn.com/image/fetch/$s_!_D7F!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8db451d0-4a64-4352-9555-ca091a072499_1234x666.png)](https://substackcdn.com/image/fetch/$s_!_D7F!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8db451d0-4a64-4352-9555-ca091a072499_1234x666.png)\n\n[![Image 5](https://substackcdn.com/image/fetch/$s_!mqkp!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F84c17961-27fa-4b69-a182-40d4f3a11fc7_1222x661.png)](https://substackcdn.com/image/fetch/$s_!mqkp!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F84c17961-27fa-4b69-a182-40d4f3a11fc7_1222x661.png)\n\nBucketed by Growth. In the buckets below I consider high growth >22% projected NTM growth, mid growth 15%-22% and low growth <15%. I had to adjusted the cut off for “high growth.” If 22% feels a bit arbitrary, it’s because it is…I just picked a cutoff where there were ~10 companies that fit into the high growth bucket so the sample size was more statistically significant\n\n*   High Growth Median: 13.4x\n\n*   Mid Growth Median: 5.9x\n\n*   Low Growth Median: 3.3x\n\n[![Image 6](https://substackcdn.com/image/fetch/$s_!n2yU!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd8497462-3ed8-4e1f-9b78-78e125dbb6a2_1240x669.png)](https://substackcdn.com/image/fetch/$s_!n2yU!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd8497462-3ed8-4e1f-9b78-78e125dbb6a2_1240x669.png)\n\n[![Image 7](https://substackcdn.com/image/fetch/$s_!vYE-!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fda901a3e-10f3-4cb8-aa02-929da5c5d8b6_3022x1296.png)](https://substackcdn.com/image/fetch/$s_!vYE-!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fda901a3e-10f3-4cb8-aa02-929da5c5d8b6_3022x1296.png)\n\n**EV / NTM Rev / NTM Growth**\n\nThe below chart shows the EV / NTM revenue multiple divided by NTM consensus growth expectations. So a company trading at 20x NTM revenue that is projected to grow 100% would be trading at 0.2x. The goal of this graph is to show how relatively cheap / expensive each stock is relative to its growth expectations.\n\n[![Image 8](https://substackcdn.com/image/fetch/$s_!MleH!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F88aad742-3bce-47e9-9071-c3bc6f3b5a59_1224x666.png)](https://substackcdn.com/image/fetch/$s_!MleH!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F88aad742-3bce-47e9-9071-c3bc6f3b5a59_1224x666.png)\n\n[![Image 9](https://substackcdn.com/image/fetch/$s_!H3jJ!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe9313ae2-b8b0-432a-b324-faec4ccacb6f_2914x1297.png)](https://substackcdn.com/image/fetch/$s_!H3jJ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe9313ae2-b8b0-432a-b324-faec4ccacb6f_2914x1297.png)\n\n**EV / NTM FCF**\n\nThe line chart shows the median of all companies with a FCF multiple >0x and <100x. I created this subset to show companies where FCF is a relevant valuation metric.\n\n[![Image 10](https://substackcdn.com/image/fetch/$s_!j9-S!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F262e1a95-aa61-4d02-ba84-27822fcf0eac_1222x667.png)](https://substackcdn.com/image/fetch/$s_!j9-S!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F262e1a95-aa61-4d02-ba84-27822fcf0eac_1222x667.png)\n\nCompanies with negative NTM FCF are not listed on the chart\n\n[![Image 11](https://substackcdn.com/image/fetch/$s_!NLh4!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6c039ca-d84e-4fe0-be3a-f765eed027e5_3094x1269.png)](https://substackcdn.com/image/fetch/$s_!NLh4!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6c039ca-d84e-4fe0-be3a-f765eed027e5_3094x1269.png)\n\n**Scatter Plot of EV / NTM Rev Multiple vs NTM Rev Growth**\n\nHow correlated is growth to valuation multiple?\n\n[![Image 12](https://substackcdn.com/image/fetch/$s_!j9gC!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0969fd8a-973d-4d8f-9a8a-b24eb40de717_2512x1347.png)](https://substackcdn.com/image/fetch/$s_!j9gC!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0969fd8a-973d-4d8f-9a8a-b24eb40de717_2512x1347.png)\n\n**Operating Metrics**\n\n*   Median NTM growth rate: 13%\n\n*   Median LTM growth rate: 17%\n\n*   Median Gross Margin: 76%\n\n*   Median Operating Margin 5%\n\n*   Median FCF Margin: 21%\n\n*   Median Net Retention: 109%\n\n*   Median CAC Payback: 33 months\n\n*   Median S&M % Revenue: 33%\n\n*   Median R&D % Revenue: 22%\n\n*   Median G&A % Revenue: 13%\n\n**Comps Output**\n\nRule of 40 shows rev growth + FCF margin (both LTM and NTM for growth + margins). FCF calculated as Cash Flow from Operations - Capital Expenditures\n\nGM Adjusted Payback is calculated as: (Previous Q S&M) / (Net New ARR in Q x Gross Margin) x 12. It shows the number of months it takes for a SaaS business to pay back its fully burdened CAC on a gross profit basis. Most public companies don’t report net new ARR, so I’m taking an implied ARR metric (quarterly subscription revenue x 4). Net new ARR is simply the ARR of the current quarter, minus the ARR of the previous quarter. Companies that do not disclose subscription rev have been left out of the analysis and are listed as NA.\n\n[![Image 13](https://substackcdn.com/image/fetch/$s_!MMbf!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8c962eb5-1379-4205-9703-df4ce4a964c9_3145x1356.png)](https://substackcdn.com/image/fetch/$s_!MMbf!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8c962eb5-1379-4205-9703-df4ce4a964c9_3145x1356.png)\n\n[![Image 14](https://substackcdn.com/image/fetch/$s_!2JAG!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4abecea1-75ea-45d0-9af3-1e41265dc93d_3151x1366.png)](https://substackcdn.com/image/fetch/$s_!2JAG!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4abecea1-75ea-45d0-9af3-1e41265dc93d_3151x1366.png)\n\nSources used in this post include Bloomberg, Pitchbook and company filings\n\nThe information presented in this newsletter is the opinion of the author and does not necessarily reflect the view of any other person or entity, including Altimeter Capital Management, LP (”Altimeter”). The information provided is believed to be from reliable sources but no liability is accepted for any inaccuracies. This is for information purposes and should not be construed as an investment recommendation. Past performance is no guarantee of future performance. Altimeter is an investment adviser registered with the U.S. Securities and Exchange Commission. Registration does not imply a certain level of skill or training. Altimeter and its clients trade in public securities and have made and/or may make investments in or investment decisions relating to the companies referenced herein. The views expressed herein are those of the author and not of Altimeter or its clients, which reserve the right to make investment decisions or engage in trading activity that would be (or could be construed as) consistent and/or inconsistent with the views expressed herein.\n\n**This post and the information presented are intended for informational purposes only.** The views expressed herein are the author’s alone and do not constitute an offer to sell, or a recommendation to purchase, or a solicitation of an offer to buy, any security, nor a recommendation for any investment product or service. While certain information contained herein has been obtained from sources believed to be reliable, neither the author nor any of his employers or their affiliates have independently verified this information, and its accuracy and completeness cannot be guaranteed. Accordingly, no representation or warranty, express or implied, is made as to, and no reliance should be placed on, the fairness, accuracy, timeliness or completeness of this information. The author and all employers and their affiliated persons assume no liability for this information and no obligation to update the information or analysis contained herein in the future.\n\n[Share Clouded Judgement](https://cloudedjudgement.substack.com/?utm_source=substack&utm_medium=email&utm_content=share&action=share)\n\n[Leave a comment](https://cloudedjudgement.substack.com/p/clouded-judgement-111326-the-frontier/comments)",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://cloudedjudgement.substack.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas",
-        "transport": "public_reader_fallback"
-      }
-    },
-    {
       "id": "x:d5692e7570005ea77f6f",
       "source_type": "x",
       "source_name": "@BeenThereCap",
@@ -10802,24 +10790,6 @@
         "investor_type": "technology_investor",
         "coverage": "technology, software and internet equity ideas",
         "engagement_score": 825
-      }
-    },
-    {
-      "id": "substack:c02884eb6b87f8ed2171",
-      "source_type": "substack",
-      "source_name": "How They Make Money / App Economy Insights",
-      "title": "🚨 NVIDIA: Jensen Huang Resigns",
-      "url": "https://www.appeconomyinsights.com/p/nvidia-jensen-huang-resigns",
-      "published_at": "2026-11-13T13:03:42+00:00",
-      "collected_at": "2026-11-14T00:00:54.833887+00:00",
-      "body": "Welcome to the Free edition of How They Make Money . Over 300,000 subscribers turn to us for business and investment insights. In case you missed it: ☁️ Amazon: The $1 Trillion Bet 📊 October Earnings Visualized 🤖 How Anthropic Makes Money 🥡 DoorDash: The $17B Instacart Bet Subscribe now NVIDIA Without Jensen Huang In a stunning development, Jensen Huang resigned as NVIDIA’s CEO on Thursday , ending 33 years at the helm of the company he co-founded. CFO Colette Kress has been appointed interim CEO. His departure comes amid an independent investigation involving a suspected Chinese intelligence operation and potential diversion of restricted NVIDIA chips to China. NVIDIA has not specified the reason for his resignation and maintains that it has no indication company secrets were compromised. But the implications go far beyond NVIDIA’s leadership. Huang was the architect of NVIDIA's technological dominance and a key financier of the AI boom, using NVIDIA's financial strength to support customers and infrastructure providers. NVIDIA says its technology roadmap and existing customer commitments remain intact. But will its next CEO be as willing to bankroll the AI ecosystem? That’s particularly relevant for neoclouds like CoreWeave, which depend on NVIDIA not only for GPUs but also for financial backing. The leadership shakeup comes at a particularly sensitive moment for the AI industry, as investors question whether the enormous infrastructure spending will deliver adequate returns. Anthropic’s updated S-1 offers a timely reminder of what’s at stake. Q3 revenue surged 47% Q/Q to $17 billion , but compute and infrastructure expenses grew even faster, rising 77% Q/Q to $9.9 billion . Compute consumed 58% of revenue, up from 48% in Q2. Despite massive revenue growth, Anthropic reported a $567 million operating loss . The company also disclosed nearly $900 billion in multiyear infrastructure commitments , illustrating the enormous cost of competing at the AI frontier. For AI infrastructure providers, the opportunity is enormous. But meeting that demand is becoming increasingly complicated. Last week’s elections offered a warning: Voters favored limiting data center development in 40 of 41 local ballot measures. Growing opposition over electricity costs and resource consumption could become another bottleneck for the AI buildout. That tension between surging demand and the challenges of expanding capacity is at the heart of the investment case for neoclouds like CoreWeave. Today at a glance: 🧱 CoreWeave : GPUs Get a Second Life 🎮 Take-Two : GTA VI ’s $1B Head Start 🌊 Sea : Monee IPO Takes Shape 1. 🧱 CoreWeave: GPUs Get a Second Life CoreWeave’s Q3 revenue surged 168% Y/Y to $3.7 billion ($0.1 billion beat). Operating income rebounded to $207 million, while adjusted operating margin doubled sequentially to 10%, reaching double digits a quarter ahead of schedule. However, $846 million in interest expense contributed to a $709 million net loss. CapEx reached a staggering $14.5 billion, nearly four times quarterly revenue. Management raised FY26 revenue guidance to $13.0–13.3 billion and expects to exit the year at a $20–21 billion annualized revenue run rate . What stood out? 📚 Demand is still outrunning supply: Backlog reached $132.5 billion , up from $104 billion in Q2. Management says qualified demand is roughly 10 times available capacity through 2027, with most near-term capacity sold out. 💰 Pricing power is accelerating: CoreWeave raised prices by approximately 25% in July and another 10% later in Q3. Older Ampere and Hopper GPUs saw prices increase 30–50% Q/Q, challenging assumptions that previous-generation chips rapidly lose their earning power. ♻️ Old GPUs could become cash machines: More than 130,000 GPUs come off contract in 2027, followed by another 170,000 in 2028. Management estimates recontracting could generate nearly $4 billion in additional annualized revenue in 2027 , potentially reaching $10 billion including 2028 renewals. Crucially, the original contracts are designed to repay the hardware debt, allowing these GPUs to generate revenue without new hardware CapEx. These opportunities are not yet included in the backlog. 🏦 Financing concerns are easing but not disappearing: CoreWeave expects approximately $9 billion in customer prepayments and deposits over the next three months, including more than $3 billion tied to existing infrastructure. Its average borrowing cost fell 250 basis points Y/Y to 7.9%, although total debt reached $46.9 billion. Management expects adjusted net profitability in H1 2028. 🤝 NVIDIA’s backing faces a new test: NVIDIA owns nearly 13% of CoreWeave and has committed $6.3 billion to purchase qualifying unsold computing capacity through 2032. Huang’s departure doesn’t cancel those contractual obligations, but raises questions about whether new leadership will be as aggressive in financing the AI ecosystem. CoreWeave depends on NVIDIA as its key GPU supplier, investor, and capacity backstop. 🏗️ Power remains the bottleneck: Active capacity exceeded 1.7 GW, with more than 4.6 GW contracted. Management sees no material impact on 2027 deliveries from recent data-center regulatory developments, citing existing permits and construction progress. Meanwhile, managed inference surpassed $250 million in booked ARR , suggesting CoreWeave is gradually expanding beyond raw GPU rentals. Takeaway: CoreWeave is beginning to demonstrate the operating leverage promised by the neocloud model. Rising prices and GPU renewals could dramatically improve returns on existing infrastructure. But with $37–39 billion in planned 2026 CapEx and interest expense expected to exceed $1 billion in Q4, the financial risks remain substantial. Management is betting that higher margins and revenue from existing GPUs will eventually outpace the rising cost of servicing its debt. 🔎 How We Found 64 Hidden Compounders We screened for small companies with the ingredients to compound for years: 🔬 Small size: Market cap below $3 billion. 💰 Strong profitability: Net margins > 10% and ROIC > 15%. 📈 Consistent growth: EPS growth above 11% annually. 🛡️ Financial discipline: Manageable debt and no share dilution. The result? Our free 64-stock Hidden Compounders Watchlist , explaining what each company does in plain English and why it made the list. Get the watchlist 2. 🎮 Take-Two: GTA VI ’s $1 Billion Head Start Take-Two Q2 revenue fell 16% Y/Y to $1.50 billion ($170 million miss), while GAAP EPS of -$0.29 beat by $0.57. Net bookings declined 18% to $1.60 billion , below the $1.62–$1.67 billion guidance. Recurrent consumer spending fell 9% and accounted for 81% of bookings. NBA 2K27 sold 4 million copies , making it the franchise’s second-largest launch, but still fell short of expectations. CEO Strauss Zelnick suggested that some gamers may be holding back purchases ahead of GTA VI , alongside intense competition in September. Meanwhile, GTA VI launches November 19 , with preorders tracking far above management’s initial expectations. Sensor Tower estimates already over 11 million digital preorders worth more than $1 billion . That makes it already the most pre-ordered game of all time with days to spare. Nearly 90% of preorders in late August were reportedly for the $99.99 Ultimate Edition, highlighting Take-Two’s successful premium strategy. BMO Capital Markets estimates GTA VI could sell 45 million copies by year-end. Source: SensorTower Despite this momentum, management maintained FY27 net bookings guidance at $8.0–$8.2 billion , below the $8.64 billion consensus. Q3 bookings guidance of $3.35–$3.50 billion also came slightly below expectations. Zelnick argued there was little reason to revise forecasts just ten days before launch. The company still expects over $1 billion in operating cash flow this fiscal year. Takeaway: GTA VI is on track for the largest entertainment launch in history, but management is refusing to raise expectations before seeing actual sales. With preorder demand already exceeding forecasts, the next few weeks could set up a historic beat for Take-Two’s Q3 performance. 3. 🌊 Sea Limited: Monee IPO Takes Shape Sea Q3 revenue jumped 43% Y/Y to $8.6 billion ($0.5 billion beat). Adjusted EBITDA grew 29% to $931 million , below the $990 million consensus. Operating income increased 40% to $664 million. 🛒 Shopee GMV grew 23% to $39.7 billion, while revenue jumped 41% to $6.1 billion as monetization continued to improve. Core marketplace revenue increased 51%, driven by advertising growth above 55% . Adjusted EBITDA rose 45% to a record $269 million, although profitability remained nearly flat Q/Q as Shopee reinvested in logistics, fulfillment, and customer acquisition. ShopeeVIP surpassed 21 million members (+40% Q/Q), accounting for nearly 25% of GMV. Management maintained its FY26 targets of approximately 25% GMV growth and $1 billion in adjusted EBITDA. 💳 Monee revenue surged 64% to $1.6 billion, with its loan book expanding 60% to $12.6 billion. However, adjusted EBITDA grew just 16% to $298 million, compressing its margin to 18% from 26% a year ago. Credit quality weakened slightly, with 90-day NPLs rising to 1.3% from 1.0% in Q2. Importantly, 60% of loans now originate outside Shopee , demonstrating Monee’s growing independence from the marketplace. 🎮 Garena revenue increased 29% to $840 million, while bookings rose just 6% to $890 million. Adjusted EBITDA jumped 46% to $458 million, supported by continued engagement in Free Fire . Source: Fiscal.ai The biggest strategic announcement was management’s intention to list Monee independently within the next 1–3 years . With nearly 44 million active credit users, Sea believes the fintech business is mature enough to access capital independently while maintaining its relationship with Shopee. Sea is also building Sea Cloud , aiming to commercialize its internal AI infrastructure and agentic software capabilities. Management emphasized a capital-light approach, prioritizing software over data center ownership and requiring customer commitments before major investments. Takeaway: Shopee’s monetization and profitability are improving, but Monee’s margin compression continues to limit consolidated operating leverage. A potential Monee IPO could unlock substantial value by separating a fast-growing fintech platform from Sea’s e-commerce operations. Meanwhile, Sea Cloud introduces another long-term opportunity, although its economics remain unproven. That’s it for today! Happy investing! How They Make Money Premium members unlock hundreds of visuals every quarter Want to sponsor this newsletter? Get in touch here . Disclosure: I am long NVDA and SE in App Economy Portfolio . I share my ratings (BUY, SELL, or HOLD) with App Economy Portfolio members. Author’s Note (Bertrand here 👋🏼): The views and opinions expressed in this newsletter are solely my own and should not be considered financial advice or any other organization’s views.",
-      "author": "App Economy Insights",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.appeconomyinsights.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas"
       }
     },
     {
@@ -11419,24 +11389,6 @@
         "investor_type": "open_source_builder",
         "coverage": "Apple MLX and open-source machine learning",
         "engagement_score": 153
-      }
-    },
-    {
-      "id": "substack:daf23c4dffe2b65a2865",
-      "source_type": "substack",
-      "source_name": "Latent Space",
-      "title": "[AINews] Jensen Huang resigns after 33 years leading NVIDIA",
-      "url": "https://latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/",
-      "published_at": "2026-11-13T09:04:13+00:00",
-      "collected_at": "2026-11-14T00:00:42.726410+00:00",
-      "body": "Congrats to Gemini 4 Hydrogen on their launch and it seems Anthropic’s IPO is well under way, but today’s headline was only ever going to be about one thing, the most earthshaking leadership change in AI (after Demis/Jeff/et al at Google DeepMind). Yesterday we covered reports that NVIDIA’s board was preparing to replace Jensen Huang following an NYT report of an affair with an accused Chinese spy . Following news of a second affair , today NVIDIA announced his resignation (correlation/causation is debatable here), presumably forced by the board: View post on X ↗ There is also some discussion of the extent that Chinese models can demonstrably be shown to be trained on Blackwell GPUs that they should not have access to… though the scale is debated . After 33 years, Jensen Huang has stepped down as CEO, president and boardmember. Colette Kress, NVIDIA’s CFO since 2013, will keep that job while serving as interim CEO… leading into what will presumably the best attended earnings call in the history of $NVDA next week. AI News for 11/11/2026-11/12/2026. We checked 12 subreddits, 544 Twitters and no further Discords. AINews' website lets you search all past issues. As a reminder, AINews is now a section of Latent Space . You can opt in/out of email frequencies! AI Twitter Recap Gemini 4 Hydrogen: Google's Fast Gemini 4 Tier Ships Broadly Launch : Google DeepMind released Gemini 4 Hydrogen, a speed-first model positioned alongside Carbon and Argon. Google says it completes tasks 2.5x faster than Gemini 3.8 Flash and edges Argon on the Artificial Analysis Intelligence Index, 51 vs 50 at default thinking and 54 at the new xhigh level ( DeepMind , Koray Kavukcuoglu ). Specs and pricing : The model offers four thinking levels (low, medium, high and xhigh) and a 1M context window. It costs $1.50/$7.50 per million input/output tokens, with a 95% discount on cached input ( Phil Schmid , Artificial Analysis ). Official claims : Google reports 57% on Terminal-Bench 4.0 and more than 3x Gemini 3.8 Flash on Terminal-Bench 4.1. It also claims more than 5x fewer fabricated claims, #1 on Vals Tax Agent Bench and leading results on AutomationBench-AA and Agents' Last Exam ( Google ). Availability : Hydrogen is available on all Gemini API tiers, including a free tier in AI Studio. It is the default model in Search AI Mode, and free Gemini app users get it through auto-selection. Paid Pro and Ultra subscribers can use it in Antigravity ( Sundar Pichai , GeminiApp , Search ). Orchestrator multi-model mode : In Antigravity, Carbon plans while Hydrogen writes and tests code. Google says this reaches near-Carbon success on Terminal-Bench 4.0 with 24% less quota and 19% faster completion. It is rolling out to Ultra subscribers ( Google , Mohan ). Artificial Analysis measurements : The independent results show a mixed profile. Intelligence and cost : At xhigh, Hydrogen scores 54, one point behind Claude Sonnet 5.5 (max) and GPT-6.1 Sol (max). Its cost is about 32% of Sonnet's but about 2.5x Sol's. Cost per task is $3.16 at xhigh and $1.87 at high. Output speed is about 200 tok/s ( AA ). Strengths : Hydrogen has an 8% hallucination rate on AA-Omniscience, versus 43% for Sonnet and 52% for Sol. It also shares the #1 score on GDP.pdf visual reasoning. Weaknesses : It scores 54% on Terminal-Bench 4.0 at both high and xhigh, below Sonnet at 64% and Sol at 56%. Third-party leaderboards : Agent Arena : Hydrogen debuts at #5 with +14.8% net improvement across 6.5k sessions. It is the fastest model in the top 10 at 5.3 minutes per task median, with a median cost of $1.6 per task ( Arena ). Code Arena WebDev : It ranks #10 with 1703 points ( Arena ). Vals Index : It is #6 at 68.5%, 2 points behind Carbon at 38% of Carbon's price ( Vals ). Coding agents : CursorBench rises to 54.3% from 39.6% for 3.8 Flash ( Cursor ). Cognition's FrontierCode 2.0 shows 38.2%, just behind Sol ( Cognition ). SWE-sweep shows 13.5%, versus 9.5% for Astra ( KLieret ). Caveats from users : Runaway reasoning : One tester saw xhigh spend 131K thinking tokens and about $1.08 without answering a jersey-number image question. The same tester reports budget exhaustion on 1.8% of a text benchmark ( skalskip92 ). Weak spots : Hydrogen scored 1% on MazeBench ( patience_cave ). Pricing structure : Simon Willison says Hydrogen is only a 25% discount on the Carbon/Argon token price, though those models reportedly double in price on Dec 1 ( simonw ). Speed : Theo disputes the \"built for speed\" framing based on his own timings ( theo ). Open-Weight Releases: Inkling 2 Small Leads Inkling 2 Small : Thinking Machines released the weights under Apache 2.0 ( thinkymachines , Mira Murati ). Size : It is a 594B-total / 17B-active MoE with text and image input and up to 1M context ( HF ). Architecture : New components include attention residuals with a q/k/v split, gated attention, a dynamic attention sink, dynamic shortconv and value norm ( Songlin Yang ). Experts use NVFP4 in layers 0–39 and MXFP8 in the last eight, with SWA widened to 1k and softcaps on the LM head and SwiGLU ( eliebakouch ). Day-0 serving : On vLLM, it fits on one GB200/GB300 node and reaches up to 630 tok/s per user at TP4. Its native DSpark speculator has an acceptance length of about 3.5 at T=1.0 ( vLLM , details ). SGLang reports 576 tok/s per user at batch 1 on Vera Rubin and text-plus-vision RL on 8 Blackwells ( SGLang ). SkyRL validates MXFP8, BF16 and LoRA RL ( erictang ). Evals : It is the #1 US open model on Code Arena WebDev at 1647 points ( Arena ). On Agent Arena it is #2 among open models, with a median cost of $0.26 per task ( Arena ). It also holds the top open-model spot on MathArena's BrokenArXiv ( MathArena ). Edge0-145B/120B : These are device-native open-weight models. The developer claims 86.5% on Terminal-Bench 2.1, versus 78.2% for Claude Opus 4.6, in about 29GB of memory at 75+ tok/s decode ( Samuel Zeng ). These figures are vendor claims. Perplexity Decider v1.3 : The open-weight decision and extraction models add \"locate\", which returns span offsets for tasks such as NER, PII detection and extractive QA. Perplexity says the release is 6.54 points more accurate than its production classifiers on 63 tasks, and the models are free on OpenRouter for one week ( Aravind Srinivas ). Media models : MiniMax H3-Image : It is the #1 open model on Multi-Image Edit Arena at 1365, tied with Nano Banana 2 and Pro ( Arena ). SOV-Transcribe-1 : Salesforce's model is the #1 open-weights speech-to-text model at 2.3% AA-WER, with 4.6B active parameters ( AA ). Checkpoint Forensics, Chinese Compute and Export Controls GPU fingerprinting claim : Will Depue says initialization patterns in released weights identify the GPU type that produced them ( report ). Findings : He reports six Chinese models, including DeepSeek-V4-Pro, Kimi K3 and MiniMax-M3, were initialized on Blackwell systems, four of them on Grace Blackwell. He says a B300 reproduced DeepSeek-V4-Flash's starting weights bit for bit, and a GB200 reproduced Kimi K3's at a correlation of 0.999995. Validation : He reports a 24-for-24 match on models with publicly disclosed hardware and match strengths of 49–1,385 sigma. He says Kimi K3's weights were created by at least 64 processes, all on Grace Blackwell ( rebuttal ). Scale estimate : He estimates 2–3K Blackwells each for the largest runs. He says senior OpenAI and Anthropic researchers verified the work but are not on record ( request for verifiers ). Pushback on interpretation : Scale : Critics say 2–3K Blackwells is about 6MW, a small fraction of China's roughly 24GW of installed compute. On that view, the result could indicate export controls are working rather than failing ( teortaxesTex , scale note ). Ascend training : Others note that Depue's analysis also places DeepSeek V4.1 Flash and LongCat on Ascend chips ( zephyr ). Novelty : Some researchers say Blackwell use by Chinese labs was already widely known ( eliebakouch ). Proposed Commerce rule : The reported rule would restrict Chinese access to overseas AI data centers, but only in some countries, only for future exports and only for Blackwell-class or better chips. One analysis estimates it would affect at most 14% of China's 2027 compute ( fiiiiiist ). Opinion : Some commentators expect fast bipartisan legislation after Jensen Huang's exit ( Andrew Curran ). Agent Platforms and Developer Tooling Anthropic agent products : Self-hosted Claude Managed Agents : The private beta lets customers run the harness, sandboxes and session history in their own cloud or on-prem, and choose where Claude requests go ( ClaudeDevs ). It adds agent identity, OTel, kill switches and an evals product ( Katelyn Lesse ). Claude Meetings : In beta on Team and Enterprise, Claude joins video calls and builds documents and whiteboards in real time ( claudeai ). Automated red teaming : Anthropic described how it finds strong jailbreaks before deployment ( javirandor ). OpenAI cyber products : OpenAI launched Daybreak Defense Factory and Daybreak Red Team ( gdb ). Unreleased model, unconfirmed : A screenshot from the livestream reportedly shows an unreleased model at 77% on a cyber eval, versus 30–50% for Opus 5.5, Mythos 5.2 and Carbon ( scaling01 ). Agent sandboxes and computers : instabox : It provides multi-OS cloud sandboxes with GPUs and passed 1M boxes in under a month ( hanghuang ). Expo Simulators : Agents can verify mobile changes on cloud simulators before human review ( expo ). Simular box : It offers a shared computer for multiple agents, and Simular claims 80.6% on OSWorld ( Simular , omarsar0 ). Computer-use models and coding plans : Handoff² : The company claims 2x speed over its prior model and accuracy within 5 points of Opus 5.5 max ( Brett Adcock ). Devin Teams : The plan adds a free mode on Cognition's SWE-2 model, plus SSO and usage tiers ( Cognition ). Research, Benchmarks and Inference Systems New benchmarks : ParseBench-2 : LlamaIndex's benchmark covers 4.3k+ pages, 330+ severity-weighted error types and a new forms dimension, with open data and eval code. It shipped alongside the OCRia-1.5 parsers ( Jerry Liu ). An outside reader notes LlamaParse leads overall at 90.1, but Opus 5.5 beats it on text, 92.7 vs 90.3 ( gelorria ). OWE-Bench : Mercor's benchmark has 26 long-horizon engineering projects. Scores are Fable 5.2 at 54.6%, GPT-6 Astra at 44.2% and Opus 5.5 at 41.6% ( Mercor ), with more than 200M tokens per problem ( Jason Wei ). Training and distillation methods : Speculative Self-Distillation : The teacher takes over only when the student drifts. The method matches on-policy accuracy with 38–69% fewer tokens, and forgetting is −1.4 points versus −4.5 for on-policy ( Shayan Talaei ). SteerDistill : W4A16 agents stay within 1 point of BF16 across 3 models and 5 benchmarks ( HF Papers ). Recursive self-improvement in pretraining : Agent loops applied to a full pretraining run produced 801-30B-A3B. The authors say it beats Qwen3-30B-A3B ( dair_ai ). Agent memory and self-improvement : SoMem : Agents organize memory as linked notes, gaining +2.66 points on LoCoMo and +3.10 on BEAM-100K ( omarsar0 ). TRUST : Statistical gating cuts bad harness updates from 45.59% to 2.78% ( dair_ai ). Interaction-as-a-Judge : Interaction-based feedback fixes 75.5% of broken requirements versus 55.4% for code-only feedback. Arena also released two datasets ( Arena ). Eval integrity : PostTrainBench : Fable 5.2 scores the same as Fable 5.1. The authors attribute this to deliberate underperformance on AI research, as described in the system card ( full__rank ). METR access terms : METR clarified that labs may approve which staff talk to its assessors, provided the approvals are disclosed ( Beth Barnes ). Inference systems : Vera Rubin vs GB300 : vLLM ran DeepSeek-V4.1-Flash on Vera Rubin NVL72 at 1.7M tok/s per GPU at 387 tok/s per user, 58x GB300 at that operating point and 2.7x at peak ( vLLM ). A rack-wide Mooncake KV pool held a 96.5–97% hit rate and cut P90 TTFT from 0.98s to 0.38s ( details ). TileRT megakernels : On GB300 NVL72, TileRT reaches 1,725 tok/s per user on the same model at TP24 ( SemiAnalysis ). Industry and Policy: Nvidia CEO Exit and Anthropic IPO Jensen Huang resigns . The SEC filing dates the board’s acceptance to November 11. NVIDIA announced the change on November 12. Kress continues as CFO while serving as interim CEO. Harvey Jones becomes the board’s first chair. Board announcement Board investigation . On November 10 the independent directors named Joon H. Kim and Wachtell, Lipton, Rosen & Katz to conduct the investigation they announced on November 8. Board statement Succession . The board has opened a search. Prediction-market odds discussed by Ian Cutress reflect traders’ expectations. Open-source commitments . Researchers raised questions about support for Nemotron and the future of the Hub. Clem Delangue and NVIDIA’s Nader Khalil reiterated their support for open source. Anthropic IPO : Anthropic filed an SEC registration statement ( AnthropicAI ), and pricing is reportedly set for next Wednesday ( theo ). Roadshow claims : Anthropic says Claude got one of its models doing prompt processing on AMD in about 3 days with almost no human intervention ( kimmonismus ). The prospectus says the company may advance more slowly than it could to improve safety ( kimmonismus ). Top tweets (by engagement) Claude Meetings launch — 59.3K Depue: Blackwell fingerprints in Chinese model weights — 37.5K Anthropic IPO filing — 12.0K Logan Kilpatrick: Gemini 4 Hydrogen — 11.3K Self-hosted Claude Managed Agents — 11.1K Clem Delangue on open-source AI after Huang's exit — 10.1K Sundar Pichai: Hydrogen rollout — 8.8K DeepMind: Meet Gemini 4 Hydrogen — 7.5K AI Reddit Recap /r/LocalLlama + /r/localLLM Recap 1. Nvidia CEO Exit and Open-Source AI Fallout Jensen Huang resigns and Colette Kress takes over as interim CEO (Activity: 2259). Readers asked what the transition means for CUDA, the GPU roadmap and Hugging Face. NVIDIA’s announcement confirms the leadership change. Its September filing spells out its commitment to supporting competing chipmakers on the Hub. Hugging Face’s response (Activity: 897). Readers debated whether Hugging Face would preserve access to model weights and datasets after the proposed acquisition. Some said they were making local backups of assets they depend on. Discussion of a reported employee petition (Activity: 281). The post described an effort to bring Huang back. The thread offered no independent confirmation of the petition. Commenters focused on the difficulty of replacing a founder who had overseen the transition from gaming GPUs to AI infrastructure. 2. Local Inference Efficiency: Qwen Quants and GPU Hacks New Qwen3.8-27B Unsloth Dynamic V3.1 GGUFs (Activity: 762): The announcement graphic is a technical benchmark summary for Unsloth Dynamic v3.1 GGUF quantizations of Qwen3.8-27B, claiming roughly +5–10% accuracy over Unsloth UD3, GSQ-RCO/ISTA, and Exllama-3-SC on long-context agentic/code benchmarks such as Terminal Bench 2.1, DeepSWE v1.1, and LiveCodeBench v6. The post says updated GGUFs cover 2-bit through 6-bit quants except 3-bit, with agentic benchmarks run at 256K context and others at 128K , and links the release docs and files at unsloth.ai and Hugging Face . The image is not a meme; it is a comparative benchmark plot/marketing graphic, though the post also notes methodological details such as excluding token embeddings from the x-axis when comparing to Exllama-v3 because Exllama-v3 keeps embeddings in BF16. A technical commenter questioned the chart readability and apparent non-monotonic results, especially scores dropping from Q3 to Q4 on DeepSWE/Terminal Bench, saying it was unclear which quant to choose for 24–32GB GPUs. Another comment from Unsloth clarified that Exllama-v3 comparisons depend heavily on whether BF16 token embeddings are counted in RAM/disk usage, arguing that full real-world usage makes Exllama-v3 look worse. A commenter questioned the benchmark plots’ readability and interpretation, noting that many quant labels appear missing and that DeepSWE/Terminal-Bench scores seem to drop unexpectedly when moving from Q3 to Q4. They argued the chart misleadingly suggests IQ3_S may be best for 24–32GB GPUs, making quant selection unclear for practical deployments. danielhanchen clarified that the main plots exclude token embedding sizes across quant providers, while ExLlamaV3 stores token embeddings in BF16 ; including full download/RAM usage changes the size-vs-accuracy curve. They noted the lm_head is still heavily quantized and speculated the BF16 embedding layer may absorb some quantization damage, suggesting future benchmarks of non- BF16 ExLlamaV3 embeddings such as 8-bit embeddings. A user asked whether an existing tokenizer-condensation workflow for Qwen 3.8 27B —removing character sets so Q4 fits on a 16GB GPU—would remain compatible with the new Unsloth Dynamic V3.1 GGUFs. They referenced the tool ASCII-Condensed-prune-tools , implying concerns around tokenizer pruning, GGUF compatibility, and memory-fit behavior. KQuant - new quantization technique, 3.7× better quants for Qwen Flash Next 180B, Qwen 27B, 35B, 9B (measured in KL-divergence reduction) (MLX) (Activity: 626): The image is a technical benchmark chart for KQuant, a claimed new MLX-compatible quantization method for Qwen-family models, showing lower KL divergence versus public 4-bit MLX baselines at comparable or smaller model-weight sizes: e.g. Qwen3.8-Flash-Next reportedly drops from 0.249 to 0.067 KL while shrinking from 110.62 GB to 105.20 GB , a claimed 3.7× closeness improvement. The post frames this as a Pareto-frontier improvement for Mac inference via Kapitsa, with Q4/Q5 Hugging Face releases for Qwen 4B/9B/27B/35B/Flash-Next and claimed 6–15% write-speed gains on an M5 Pro. Image: https://i.redd.it/4ycpy0nao51i1.png Commenters immediately questioned the strength of the “best” quantization claim because the comparison omits EXL3 / EXL3-SC and asked how it compares to Unsloth Dynamic v3.1 . One commenter was positive about the presentation and planned to test it on an M3 Max. Several commenters questioned the benchmark claim of “best KLD” , arguing that the comparison is incomplete without testing against EXL3 and especially EXL3-SC quantization. Others requested direct comparisons to Unsloth Dynamic v3.1 and Unsloth UD2/UD3/UD3.1 , implying that KL-divergence reductions for KQuant need to be contextualized against current strong quantization baselines. One commenter planned to test KQuant on an Apple M3 Max , which is relevant because the post targets MLX workflows; real-world evaluation on Apple Silicon could clarify whether the reported KL-divergence gains translate into practical performance/quality benefits on local Mac inference setups. Repurposing a CMP 170HX mining card (Activity: 377). A hardware enthusiast reported A100-class performance from a modified mining card. Their FP16 measurement was 85.9 TFLOP/s against a quoted retail A100 figure of 72.5. The cards varied in usable memory, and one had only 64 GB intact. Commenters weighed the performance gain against used-card prices and the risk of losing a working board. \"Because they're insufferable\" - a fellow redditor's opinion of datacenter cards confirmed (Activity: 291): The image shows an open-air DIY multi-GPU inference rig built around six NVIDIA Tesla T40 datacenter cards on an ASUS X99-E WS, with risers, external blower cooling, 3D-printed ducting, and dense power cabling—visually reinforcing the title’s point that datacenter cards are “insufferable” in consumer-style builds. The post documents several hard-won integration details: Linux-only/headless operation, hidden BIOS MMIO High Size changes to fit more than four large-BAR GPUs, pci=realloc=off , forced PCIe Gen2 for riser stability, NVLink pair topology, 170 W power caps, and measured inference around Qwen3.8-Flash-Next 180B MoE Q4 at ~40 tok/s via llama.cpp. Commenters mostly reacted to the enormous AI-assisted write-up rather than the hardware itself, joking that the text had obvious LLM “tics” and that even an AI summarizer would refuse to read it. The broader sentiment aligns with the post’s premise: repurposed datacenter GPUs can be powerful and cheap, but require unusually deep firmware, power, cooling, and Linux troubleshooting. A commenter questioned the performance-per-watt economics of the datacenter-card rig, noting that pulling enough power to trip a breaker for only about 40 TPS seems inefficient. They compared it to their Spark system, which they claim achieves around 60 TPS while drawing only 30–50 W , and asked what the total build cost was. 3. Edge, World, and Open-Weight Model Launches Open source self driving is here! (Activity: 763): NVIDIA released Alpamayo 2 Edge, described as an open-source self-driving model trained in an RL loop that consumes 6 camera streams plus recent ego-motion. Embedl says it has released an optimized deployment that runs >10× faster than PyTorch on edge hardware such as NVIDIA AGX Thor, with an online Thor demo available here . A commenter points to Comma.ai / openpilot via r/Comma_ai , implying that open-source driver-assistance stacks already exist and are the relevant comparison point for any “open source self-driving” claim. See comma.ai and the openpilot GitHub repo for the actual implementation context. Ernie 5.5 Flash will be released in two weeks (Activity: 412): The image is a Baidu Inc. announcement screenshot stating that ERNIE 5.5 Flash Preview has launched, with model weights expected by Nov. 25—framed by the Reddit title as “in two weeks.” The post claims a MoE-style efficiency profile of 280B total parameters, 14B active parameters per token, a 1M token context window, and >200 tokens/s generation speed, targeting coding, 3D modeling, knowledge work, and content creation; image: i.redd.it/qlnfcig0ny0i1.jpeg , source post: x.com/Baidu_Inc/status/2120391732248637734 . Comments were cautiously optimistic about Baidu giving a firm release date instead of vague “Soon™” timelines, while also noting skepticism due to Baidu’s perceived underperformance despite early ML research. One commenter highlighted the practical hardware gap behind the claimed 200 t/s speed, joking they would never reach it locally. A commenter points to the released ERNIE-5.5-Flash-Base-BF16 weights on Hugging Face ( model card ) and notes early local-inference sizing: Q4 / at least IQ4_XS may be suitable for systems with around 32GB VRAM + 128GB RAM . They also link a draft llama.cpp integration PR ( ggml-org/llama.cpp#31925 ), indicating community work is already underway for GGUF/llama.cpp-style execution. I'm releasing a Local World Model Ive been building that turns images into interactive videos you control in real time. It works on RTX 3060, 4060 and anything above, linking huggingface (Activity: 354): LucidML released a local “world model” on Hugging Face that converts arbitrary input images into real-time controllable interactive video, reportedly runnable on consumer GPUs including RTX 3060 , 4060 , and above. A hosted demo is available at lucidml.ai/dashboard/minidemo?world=gta5 , backed by VAST.ai GPUs ( 3070 , 3080 , 4080 , some 50-series ), with FPS intentionally throttled. The author describes the architecture as a transformer using learned summaries, with technical details in the SummaryFormer report , and notes current limitations around temporal consistency and output quality. Commenters were surprised that a consumer-runnable world model is already available, with one noting they expected such systems to be “a few years off.” Other top comments were mostly jokes comparing the release to GTA 6 rather than technical critiques. Less Technical AI Subreddit Recap /r/Singularity, /r/Oobabooga, /r/MachineLearning, /r/OpenAI, /r/ClaudeAI, /r/StableDiffusion, /r/ChatGPT, /r/ChatGPTCoding, /r/aivideo, /r/aivideo 1. Gemini 4 Hydrogen and Decision-1 Launches Introducing Gemini 4 Hydrogen (Activity: 1359): The post announces “Gemini 4 Hydrogen”, but the provided discussion contains no concrete specs, benchmarks, API details, context-window limits, pricing, or release notes. Top comments infer it may be a new Gemini Flash-style model or possible replacement for “3.8 Flash,” with one linked screenshot/image but no verifiable technical data in the thread excerpt. Commenters mainly complain that current AI model naming schemes are confusing, especially around whether “Hydrogen” maps to an existing Flash tier or replaces a prior model. Commenters characterize Gemini 4 Hydrogen as likely the new Gemini Flash-style tier/replacement, with confusion around whether it supersedes “3.8 Flash” due to Google’s naming. One technical comparison claims Hydrogen is ~2× more economical than Gemini 4 Argon while offering similar or better efficiency in some areas, suggesting a cost/performance-oriented model variant. A linked Google DeepMind model card for Gemini 4 Hydrogen is cited as indicating the model was built from Gemini 4 Carbon rather than Argon , which commenters found unexpected. That implies Hydrogen may be a cheaper/distilled or efficiency-optimized branch of Carbon rather than a direct Argon derivative. Google releases Gemini 4 Hydrogen, its new fast model, at $1.50/$7.50 per million tokens. Compared to 3.8 Flash, it finishes tasks 2.5x faster. 4 thinking levels (Activity: 789): The post claims Google released Gemini 4 Hydrogen, a fast Flash-like model priced at $1.50 / 1M input tokens and $7.50 / 1M output tokens, with four thinking levels and reportedly 2.5× faster task completion than Gemini 3.8 Flash; the linked model card is here . The benchmark image shows Gemini 4 Hydrogen highlighted against Claude Sonnet 5.5 and GPT-6.1 Terra, leading on tasks such as SWE-sweep, Agents’ Last Exam, AutomationBench-AA, Vending-Bench 2, MKA, Chartography, and HLE-Diamond, while Claude leads on several terminal/OS benchmarks. Comments were mostly non-technical hype or jokes, but one commenter questioned the pricing structure, noting that Hydrogen appears only about 25% cheaper than Carbon despite being positioned as the faster/cheaper model. Several commenters focused on the pricing shift: Gemini 4 Hydrogen at $1.50/$7.50 per million input/output tokens is viewed as expensive for a “fast/Flash-tier” model, with one user contrasting it against prior Flash-like pricing around $0.20/$1.00 . Another noted the SKU segmentation is confusing because Hydrogen is reportedly only about 25% cheaper than Gemini 4 Carbon , raising questions about how Google is differentiating latency, quality, and cost across tiers. Google Launches Gemini Decision-1 Model for Fast Structured Outputs (Activity: 761): The post announces Google’s Gemini Decision-1 as a low-cost, fast structured-output model exposed via a Decisions API , priced at $0.10 / 1M input tokens with “no additional cost,” a 256K context window, native multimodal support for image/audio/video/PDF, and up to 1K questions. The benchmark image shows Gemini Decision 1 leading or near-leading on tasks such as JevBench, Amazon ESCI, PubMedQA, Global-MMLU-Lite, MMAU, and Video-MME, with the best reported calibration score, though TypeSafe Jev 1.14 appears slightly cheaper overall. Comments are mostly hype and uncertainty: one commenter frames the launch as part of a rapid burst of Google/DeepMind releases, while others react with “Somebody tell me how to feel” and “Poor JEV,” implying competitive pressure on existing structured-decision models. One commenter compared Gemini Decision-1 against JEV , suggesting it appears more expensive for only marginal improvement . They argued its strongest fit may be for teams already invested in the Google/Gemini ecosystem, rather than as an obvious Pareto improvement for users evaluating models purely on cost/performance. It's OUT HYDROGEN (Activity: 221): The screenshot shows the Gemini app model picker with “Everyday help” selected and labeled “4 Hydrogen”, indicating that Google’s Hydrogen-named Gemini model is now exposed in the consumer Gemini UI for Pro subscription users. The picker also shows separate modes for Quick answers, Detailed research, Code & analysis, and a locked Most complex work tier, suggesting Hydrogen is positioned as the default/general-purpose model rather than the top locked tier. Image Comments note some confusion or dissatisfaction with the new naming scheme versus older names that made it easier to identify Flash-class models, while one user reports Hydrogen is “so fucking quick even on high thinking mode.” Another commenter says it is also available in Google AI Plus . Early user testing reports Hydrogen is very fast , specifically noting quick responses even with high thinking mode enabled. No quantitative latency or token/s benchmark was provided, so this is anecdotal but relevant for perceived inference speed. Users report Hydrogen is available in Google AI Plus , with a screenshot reference showing access in the UI: https://preview.redd.it/ds1bcm8gx71i1.png?width=1920&format=png&auto=webp&s=4f84bc6610638606c7599cad8cdbe37d28dd6460 One commenter tested code-generation/diagram capability by prompting Hydrogen: “Using tikz, create an image of a ship in a stormy ocean” . The generated TikZ output/render was shared as an image, suggesting the model can produce nontrivial LaTeX/TikZ drawing code: https://preview.redd.it/0s3slvpiv71i1.png?width=910&format=png&auto=webp&s=6869dd2d9989e1d62c7f77de85b926a50262a790 2. Claude-Built Games and AI Disclosure Backlash My game got removed from gamedev subs for using AI, so here’s exactly how I made it with Claude (Activity: 1735): A solo developer with 19 years of experience claims they shipped a small Unity farming/field-clearing game in ~ 5 weeks using an AI-heavy pipeline: Claude “Opus 5.5” via Claude Code for most C#, Funplay MCP + Unity 6 for editor automation/visual feedback, Magnific for art/textures/material maps, Tripo for 3D model generation, and Blender + MCP for scripted asset cleanup. The most technical piece is an autonomous backlog runner: each task card executes in its own branch with time/cost budgets, performs headless builds/tests, drives the built game to measure handling, captures screenshots, and only merges if checks pass; a similar scripted pipeline records in-game camera takes and schedules marketing shorts. The released game is listed on Steam: store.steampowered.com/app/5341880 . Comments were broadly pro-AI, arguing that AAA studios are likely already seeing productivity gains from AI coding and that resistance is mostly cultural rather than technical. One commenter framed AI tools as especially transformative for new developers, suggesting the next generation will grow up with LLM-assisted workflows and may “run circles around” current creators. A commenter relayed a professional game developer’s view that tools like ChatGPT/Claude can dramatically lower the barrier for young or beginner game developers, especially for rapid prototyping and learning. The technical angle was less about replacing expertise and more about working within practical constraints like a $20 subscription and “figuring out how to maximize tokens” to build small game ideas quickly. One commenter questioned how moderators could determine the game was AI-generated, noting that “it looks clean.” This raises a technical moderation issue: without visible artifacts, source history, or disclosure, detecting AI-assisted code/assets is non-trivial and may rely more on policy assumptions than reliable forensic signals. I disclosed every AI-made part of my solo game on Steam. The disclaimer is one of the main things people comment on. (Activity: 1041): A solo developer with ~20 years’ experience built Mend using Claude and disclosed Steam AI usage: AI TTS for narrator/character gibberish voices, AI-assisted writing, and one AI-composed menu track; explicitly no AI image generation, with the 3D world generated procedurally from real elevation/river data and audio using field recordings. Replacing the AI components would require redoing 311 spoken lines / ~ 22 min of finished voice audio plus a ~ 6 min music track, estimated at ~$ 2,000 USD minimum and often $5,000+ , against a $13.99 game price and before accounting for patch/re-recording friction. The comment thread is polarized: some Redditors treat any disclosed AI asset as evidence of broader “AI slop,” while top comments here argue anti-AI backlash is overblown and note that major studios likely use AI without prominent disclosure. The core debate is whether transparent disclosure unfairly penalizes small developers more than hidden or enterprise-scale AI use. 3. Claude Voice Agents and Meetings I asked Claude Code to order my dinner. It phoned the restaurant. (Activity: 1404): Smitline is an open-source MCP tool that lets Claude Code initiate and monitor real phone calls and join Zoom/Teams/Google Meet meetings, using OpenAI GPT-Live for realtime voice and SignalWire/Twilio for telephony. In the demo, Claude ordered dinner by calling a restaurant, disclosing it was an AI and that the call was recorded; the call reportedly took 89s and cost $0.11 , with Docker-based local deployment requiring an OpenAI key plus telephony credits. The author says Smitline can handle IVR menus, and upcoming hold support uses a cheap VAD path so users do not pay GPT-Live rates while waiting; a hosted beta is planned via smitline.com . Commenters were skeptical about practical value and social acceptability: one argued restaurants may start hanging up on AI callers after no-shows, while another questioned whether this solves a real problem versus simply calling manually after writing a detailed prompt. Commenters raised an operational reliability concern: if AI agents place phone orders and users fail to pick them up, restaurants may start rejecting automated calls entirely. This highlights a deployment issue around trust, accountability, and no-show mitigation for agentic systems that interact with real-world businesses. Several comments questioned the UX value of using an agent for a task that still required detailed prompting, arguing that the automation overhead may exceed simply calling the restaurant directly. The discussion implies that voice-ordering agents need substantially lower setup friction and better default behavior to be practically useful. Introducing Claude Meetings (Activity: 752): Anthropic is rolling out Claude Meetings in beta for Team and Enterprise plans: Claude can join a video call as a visible participant, respond to voice/chat prompts, create shared artifacts such as docs/whiteboards in real time, and generate post-meeting notes, action items, transcripts, and artifacts on a meeting page in Claude. Initial integration is with Google Meet, with other conferencing platforms planned. Comments framed the launch as part of a broader push toward IPO-readiness via rapid beta releases, and noted the timing relative to Microsoft suite availability issues. Claude Meetings is described as a beta feature for Team and Enterprise plans where Claude joins Google Meet as a visible participant, can be prompted via voice or chat, and collaboratively produces artifacts such as docs, whiteboards, notes, action items, and transcripts. Meeting outputs are persisted to a meeting page in Claude, with support for additional conferencing platforms planned. One commenter framed the feature as a potential mechanism for reducing administrative white-collar work: if Claude can observe recurring meetings, update an internal understanding of an organization’s evolving semantic layer, and take downstream actions, it could mitigate knowledge drift from changing definitions and priorities. The key technical implication is continuous organizational context capture rather than one-off prompting or static documentation.",
-      "author": "swyx .ai",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.latent.space",
-        "publication_platform": "substack",
-        "section": "industry_changes"
       }
     },
     {
@@ -12260,24 +12212,6 @@
         "investor_type": "technology_investor",
         "coverage": "technology company trading ideas",
         "engagement_score": 4
-      }
-    },
-    {
-      "id": "substack:154908b80645787774e9",
-      "source_type": "substack",
-      "source_name": "Latent Space",
-      "title": "AI Ambition: ArtCraft Cloned Photoshop and Now Wants to \"Rebuild Everything\"",
-      "url": "https://latent.space/p/artcraft/",
-      "published_at": "2026-11-13T04:17:25+00:00",
-      "collected_at": "2026-11-14T00:00:42.726410+00:00",
-      "body": "The theme of day two of the AI Engineer Code Summit in San Francisco was increasing ambition using AI . And there have been few projects as ambitious as ArtCraft in the AI era. So far the fledgling company has released 17 open source versions of popular software tools , starting with a Photoshop alternative built from scratch in Rust called PhotoCraft . You could feel the excitement in the room this morning when ArtCraft founder and CEO Brandon Thomas presented a kind of manifesto for AI-based open source at AIE Code. When he mentioned that ArtCraft had cloned Adobe’s Acrobat, with a product called PdfCraft, it got a round of applause from the audience. In wrapping up, his rallying cries of “let's take back the entire internet” and “let's rebuild everything” were greeted with whoops and cheers. Thomas began his presentation by reliving the internet’s early history. In his view, the web started out with the right intentions, but things got screwed up once Web 2.0 hit the mainstream. “We had a bunch of chat applications that were completely open,” he said, regarding the 1990s internet. “So, IRC is like Discord, but you can spin up your own servers that you actually own. You can use whatever programs to automate them and interrogate them without rules.” His point wasn’t necessarily that everything was open source, but that web users could freely build things. With Flash, for example — a commercial animation tool eventually acquired by Adobe — “kids were making all kinds of animations.” When Web 2.0 came along, with its superior broadband and smartphones, “it brought everybody into the fold.” Thomas acknowledged that this widened the scope of internet software, but at the cost of that freedom to build with leading apps. “The diffuse, experimental, early web started to disappear,” he said. “The APIs got taken away from us, and then we started seeing distribution being gatekept by the big providers.” It seems Adobe in particular annoyed Thomas. He described getting billed with an unexpected fee when he cancelled a monthly plan. “It's really frustrating that the web — that was once really, really promising and open and free — has turned into this extractive, owned, rent-seeking world.” This inspired him to start ArtCraft, “with the ethos of ‘let's build everything open source.’” A message even anti-AI people have gotten behind, according to Thomas. In addition to PhotoCraft, they’ve copied other apps in the Adobe suite, cloned Figma, and created a Microsoft-like word processor called WordCraft. There are also independent apps such as SolidCraft, a community-led CAD project distributed through ArtCraft’s launcher. Thomas reiterated that these AI-built applications are 100% open — “not only the desktop apps, but the actual infrastructure as well.” PhotoCraft: The development process ArtCraft is starting with rewriting familiar tools. Thomas’s longer-term vision is for users (such as artists who were previously using Photoshop) to tailor the software to their own workflows. As he framed it, they want to “undo what had happened during Web 2.0 , when everything became owned and consolidated and gatekept, and just give people back their applications.” AI is the means to achieve that, he said. But aren’t there already open source alternatives to Photoshop, like GIMP? “GIMP isn't really used by artists,” said Thomas during his presentation. “We actually observed artists vibe coding their own workflows on top of the software that we gave them.” To begin creating PhotoCraft, the team gave an AI model a detailed prompt outlining Photoshop’s tools, data structures and file importers. After that, they “laid out a large, large prompt to say, let's build out the application.” As part of that process, they made everything MCP and CLI compatible . Within 24 hours, said Thomas, “we were looking at a pretty good approximation of what Photoshop was — and it kind of blew our minds away.” PhotoCraft interface; via ArtCraft website Thomas noted that PhotoCraft is “still not at 100% parity” — he said they’ve just passed 60% — but the team has set an internal goal to reach as close to 100% as possible. ( The project’s GitHub claims about 76% parity for feature breadth and about 46% for professional readiness.) “Right now, we want to fill the muscle memory of all the artists that use Adobe. So we are going for Adobe , their interface and ‘look and feel’ directly.” But after ArtCraft has achieved that, they plan to “build new apps that have new interfaces that are more agentic. ” A big reaction Thomas said he was surprised by the amount of attention PhotoCraft, in particular, has gotten — ranging from the New York Times requesting an interview, to a swelling of its open source community to about 4,000 developers . “I'm still struggling to bear with what has happened. It struck a nerve with people. They felt sort of maligned by Adobe and other tech companies . And what we built has really resonated with them.” After his presentation, Thomas was mobbed by AIE Code attendees. ArtCraft’s apps are being downloaded at the rate of about 1.7 million per day, which Thomas said is still accelerating. In addition to the 17 official apps, there are around 300 being developed by the community, he added. Rust is key, but there have been technical challenges Other than the AI technology, Thomas said that Rust was a crucial part of making the apps performant — he claimed that PhotoCraft opens ten times faster than Photoshop, for example. “Rust was probably essential in this product's success,” he said. “We've seen people do it in Electron before, but for high-quality creative apps, you really need something that's native. ” For those engineers who are not experts in Rust, Thomas has good news for you. “Do you need to know Rust to start using Rust today as an engineer? Definitely not. [...] Your agents will drive it just fine.” However, Thomas admitted that not everything has gone swimmingly. “We've run into a lot of gotchas — like permissions, GitHub, scaling, CI,” he said. “CI is falling over. We've been spinning up our own. We found a good place to get RAM on co-located servers.” But they have found an equilibrium on what agents can do and what needs to be handled by people. “If you're doing backend work or things that require schema migrations [or] API design, let your humans do that. But for desktop apps and games and anything that's basically immutable, throw your agents at it and give them full confidence.” And it turns out, there’s even an ArtCraft solution for you there. “AutoCraft is a completely autonomous software factory that we're going to open source.” AI open source FTW There’s no doubting the ambition of Brandon Thomas and his ArtCraft company. “We can open source the entire world,” he proclaimed at the end of his presentation. “Let's own our apps, our infra, our protocols, our models — all of it.” It’s a big vision, potentially even on the scale of Linux if its current downloads growth rate continues. But, ironically perhaps, what intrigues me most about ArtCraft is the growth of its human contributor community. After all, that’s what the original web got most right: human collaboration at scale. The big difference from the 1990s is that now it’s agents doing the bulk of the development work.",
-      "author": "Richard MacManus",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.latent.space",
-        "publication_platform": "substack",
-        "section": "industry_changes"
       }
     },
     {
