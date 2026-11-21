@@ -1,7 +1,42 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-20T04:48:39.966961+00:00",
+  "generated_at": "2026-11-21T00:02:27.235401+00:00",
   "pipelines": [
+    {
+      "pipeline": "substack",
+      "status": "ok",
+      "item_count": 7,
+      "errors": [],
+      "notes": [
+        "Clouded Judgement: public reader fallback used",
+        "MBI Deep Dives: public reader fallback used",
+        "Aspiring for Intelligence: public reader fallback used",
+        "Chips Ahoy Capital: public reader fallback used",
+        "Meritech Software Pulse: public reader fallback used",
+        "Outspoken Geek: public reader fallback used",
+        "New Moon Cap: public reader fallback used",
+        "Outlier Cap: public reader fallback used"
+      ]
+    },
+    {
+      "pipeline": "reddit",
+      "status": "error",
+      "item_count": 0,
+      "errors": [
+        "r/wallstreetbets: RSS=Client error '404 Not Found' for url 'https://www.reddit.com/r/wallstreetbets/search.rss?restrict_sr=1&sort=top&t=day&q=flair%3A%22DD%22'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404; JSON=Client error '403 Blocked' for url 'https://www.reddit.com/r/wallstreetbets/search.json?q=flair%3A%22DD%22&restrict_sr=1&sort=top&t=day&limit=20&raw_json=1'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+        "r/SecurityAnalysis: RSS=Client error '404 Not Found' for url 'https://www.reddit.com/r/SecurityAnalysis/search.rss?restrict_sr=1&sort=top&t=day&q=flair%3A%22Thesis%22%20OR%20flair%3A%22Short%20Thesis%22'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404; JSON=Client error '403 Blocked' for url 'https://www.reddit.com/r/SecurityAnalysis/search.json?q=flair%3A%22Thesis%22+OR+flair%3A%22Short+Thesis%22&restrict_sr=1&sort=top&t=day&limit=10&raw_json=1'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+      ],
+      "notes": []
+    },
+    {
+      "pipeline": "prices",
+      "status": "ok",
+      "item_count": 2,
+      "errors": [],
+      "notes": [
+        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json"
+      ]
+    },
     {
       "pipeline": "x",
       "status": "ok",
@@ -139,52 +174,395 @@
         "@kuncheng: 0 tweet(s) via twscrape",
         "Linked articles: 25 article(s) stored; 118 unavailable or skipped"
       ]
-    },
-    {
-      "pipeline": "substack",
-      "status": "ok",
-      "item_count": 3,
-      "errors": [],
-      "notes": [
-        "Clouded Judgement: public reader fallback used",
-        "MBI Deep Dives: public reader fallback used",
-        "Aspiring for Intelligence: public reader fallback used",
-        "Chips Ahoy Capital: public reader fallback used",
-        "Meritech Software Pulse: public reader fallback used",
-        "Outspoken Geek: public reader fallback used",
-        "New Moon Cap: public reader fallback used",
-        "Outlier Cap: public reader fallback used"
-      ]
-    },
-    {
-      "pipeline": "reddit",
-      "status": "error",
-      "item_count": 0,
-      "errors": [
-        "r/wallstreetbets: RSS=Client error '404 Not Found' for url 'https://www.reddit.com/r/wallstreetbets/search.rss?restrict_sr=1&sort=top&t=day&q=flair%3A%22DD%22'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404; JSON=Client error '403 Blocked' for url 'https://www.reddit.com/r/wallstreetbets/search.json?q=flair%3A%22DD%22&restrict_sr=1&sort=top&t=day&limit=20&raw_json=1'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
-        "r/SecurityAnalysis: RSS=Client error '404 Not Found' for url 'https://www.reddit.com/r/SecurityAnalysis/search.rss?restrict_sr=1&sort=top&t=day&q=flair%3A%22Thesis%22%20OR%20flair%3A%22Short%20Thesis%22'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404; JSON=Client error '403 Blocked' for url 'https://www.reddit.com/r/SecurityAnalysis/search.json?q=flair%3A%22Thesis%22+OR+flair%3A%22Short+Thesis%22&restrict_sr=1&sort=top&t=day&limit=10&raw_json=1'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
-      ],
-      "notes": []
-    },
-    {
-      "pipeline": "prices",
-      "status": "ok",
-      "item_count": 2,
-      "errors": [],
-      "notes": [
-        "Yahoo Finance EOD closes collected for 203 SaaS/software/Internet tickers; rolling state keeps 3 trading day(s) at /home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json"
-      ]
     }
   ],
   "counts": {
-    "total": 953,
-    "substack": 10,
-    "rss": 1,
+    "total": 955,
+    "substack": 13,
+    "rss": 0,
     "reddit": 0,
     "x": 940,
     "price": 2
   },
   "items": [
+    {
+      "id": "substack:b185934b78bd61e82ca4",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "The War Against Slop and an Emerging Weapon to Fight it: Formal Verification",
+      "url": "https://latent.space/p/formal-verification/",
+      "published_at": "2026-11-20T21:18:41+00:00",
+      "collected_at": "2026-11-21T00:00:50.253077+00:00",
+      "body": "The word of the year in the AI industry over 2026 has been “slop” — meaning low-quality output from a large language model. And with so much code being AI-generated now, avoiding slop has become a daily concern for software engineers. So how to do that? One way is to use formal verification systems , which use mathematical proofs and logic to verify the correctness of software or hardware. With AI’s growing prowess at solving math problems , there’s now a number of AI companies offering formal verification systems. They include Harmonic , Theorem , Axiom Math , and a new entrant called &Truth (pronounced ‘and truth’). In this article we’ll look at some of the approaches these companies are taking. How formal verification is used in software and AI today In order to better understand the landscape of formal verification systems, we spoke to one of its leading proponents: Clark Barrett , &Truth’s co-founder and co-CEO. He’s also Corbel Professor (Research) of Computer Science at Stanford and was the co-creator of cvc5 , a popular automated reasoning engine used in formal verification. Without getting too in the weeds, cvc5 is what’s called a “solver” for satisfiability modulo theories (SMT) , which Barrett says is widely used in companies like Amazon. For instance, cvc5 is used for specification analysis and test generation in Kiro , Amazon’s agentic development environment. “It's been fun to see my tools go from a good idea in the lab to cvc5 is now called billions of times a day in production pipelines at Amazon,” Barrett told us. Via a 2022 paper about cvc5 co-authored by Clark Barrett. When AI coding agent companies talk about “verifying” their work, it typically means agents running tests, critiquing their own output, or having another AI model judge it. So I asked Barrett how far short of real verification does that fall? “The main difference is really just, how do you know when you're done,” he replied. “So if you're testing, patching, scanning — using all these existing tools — they're quite good. I mean, they find a ton of problems. They raise those issues. But you're never quite sure, did I find all of them [the issues] or is there one more lurking there that my tool can't find?” &Atlas, the first tool of &Truth; it’s “a map of the world’s open-source code, starting with code written in the C programming language.” Lean’s role in formal verification &Truth builds on Lean , an open-source programming language and proof assistant . The company combines AI with automated reasoning techniques to construct proofs that Lean can check. Lean is a language used by frontier models to solve all manner of supremely difficult math problems . For instance, just this week GPT-6.2 Astra produced what Vals believes is “the first Lean proof of Smoktunowicz’s Gap Theorem.” Vals added that Anthropic also used Lean to formalize Fermat’s Last Theorem, a project of 13 million lines. The latest big math news is a report that Anthropic mathematician Levent Alpöge claims he used Claude to prove the 167-year-old Riemann hypothesis — and he posted the proof in Lean . Example of Lean code; via Lean project website &Truth is building what it calls a “verification machine” on top of the Lean framework, with the ambition of reading code “in any language, proving whether it satisfies precisely stated requirements , and enabling humans to trust it without having to understand every line.” “What Lean does is it just checks that you didn't make a mistake,” explained Barrett. “So you can think of it as a very sophisticated checker for mathematics.” This has implications for model training too. Axiom Math uses formal verification to provide correctness feedback for training its mathematical reasoning systems, with proof attempts helping improve future models. In an interview with Latent Space in June , Axiom CEO Carina Hong made the point that formal verification — and what Lean enables — isn’t just a defensive measure. “Formal verification, or verified AI, to us it's not just about handling or kicking out the lousiness, the hallucinations, the mistakes. It's about scaling brilliance. It's about super-intelligence.” Axiom develops AxiomProver , an AI system that generates Lean proofs, alongside AXLE , its toolkit for exploring, validating, and manipulating those proofs. Harmonic’s Aristotle , an “ automated theorem prover ”, uses Lean heavily in its offering. “Inside Aristotle, AI writes the proofs and Lean checks every step of them, so a result never rests on the AI being right,” states the company on its website. Harmonic’s workflow Cybersecurity and LLM-scaled formal verification Given the heightened level of paranoia about cybersecurity these days — some might say in the days leading up to AGI — formal verification systems seem like they’re needed more than ever. And Barrett confirmed that cybersecurity is a key focus for &Truth. “One really powerful use case for our technology is going through all the C code in the world, whether it be open source or closed source, and trying to ensure that it's memory safe. And then if it's not memory safe, we can point to: here's a problem with this piece of code, you need to fix it so that it's safe.” Security is also a focus of Theorem , one of &Truth’s competitors. “Verification is the only defense that holds while adversaries scale,” Theorem states on its homepage. Theorem’s proof-efficiency eval : “KB of machine code verified per hour on our proof-efficiency eval, by model release date, with 95% intervals.” Theorem has also collaborated with Anthropic on this topic, resulting in a blog post entitled “ LLMs are making formal software verification feasible at a much larger scale .” One of the more encouraging notes in the post is that formal verification, although currently token-expensive, is starting to get more token-efficient. On a set of 36 small verification tasks, Anthropic reported that Opus 5.5 reached a 50% solve rate using about 40% fewer tokens than Opus 5. This trend is expected to continue as more models are “trained on long verification tasks.” Theorem and Anthropic describe “LLM-scaled formal verification” as a promising approach to providing security guarantees at a previously impractical scale. Anthropic diagram: “from code to a machine-checked guarantee”; in this case using Rocq rather than Lean. The “veri-coding” experience for developers Lastly, how does formal verification fit into a developer’s workflow? On its website, &Truth states that developers will move from vibe-coding to “veri-coding” — meaning the verification layer is part of the workflow. “If you've got your verification machine connected to your agent, you can still say, ‘hey, I want you to build this,’ said Barrett. “Maybe there's a little bit of work to really nail down with the agent what the specification is of what you want to build. But then the agent can go under the hood, collaborate with the formal [verification] tool, and essentially what you'll see is almost no difference except your code will work the first time.” The idea, then, is that more of the developer’s time will be spent on spec writing and reviewing than on coding or reviewing code. Verify all the outcomes While I was finishing up this article, I came across this tweet by Cognition dev rel Nader Dabit: Whether the term “outcome engineering” sticks or not, he’s onto something in terms of where we are with coding. When you just tell your team of agents what you want and they go ahead and build it, you (the human developer) need a way to check the correctness of what your agents deliver. If companies like &Truth, Harmonic, Theorem and Axiom Math have their way, formal verification could become an increasingly practical way to check those outcomes.",
+      "author": "Richard MacManus",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
+    {
+      "id": "price:ccde010b5450d429dcd8",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 涨幅前十 2026-11-20",
+      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
+      "published_at": "2026-11-20T21:00:00+00:00",
+      "collected_at": "2026-11-21T00:02:27.208915+00:00",
+      "body": "1. EVCM close 6.43; previous 6.0; change 7.1667%\n2. KVYO close 22.24; previous 21.299999; change 4.4131%\n3. PICS close 5.02; previous 4.85; change 3.5052%\n4. MNDY close 72.160004; previous 69.900002; change 3.2332%\n5. DBD close 51.860001; previous 50.27; change 3.1629%\n6. FICO close 694.309998; previous 677.640015; change 2.46%\n7. INTA close 43.450001; previous 42.43; change 2.404%\n8. UPBD close 25.440001; previous 24.870001; change 2.2919%\n9. BOX close 43.889999; previous 43.080002; change 1.8802%\n10. DOX close 41.18; previous 40.5; change 1.679%",
+      "author": "",
+      "symbols": [
+        "EVCM",
+        "KVYO",
+        "PICS",
+        "MNDY",
+        "DBD",
+        "FICO",
+        "INTA",
+        "UPBD",
+        "BOX",
+        "DOX"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "gainers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-11-20",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "EVCM",
+            "price_date": "2026-11-20",
+            "close": 6.43,
+            "previous_close": 6.0,
+            "change_amount": 0.43,
+            "change_percentage": 7.1667,
+            "url": "https://finance.yahoo.com/quote/EVCM"
+          },
+          {
+            "ticker": "KVYO",
+            "price_date": "2026-11-20",
+            "close": 22.24,
+            "previous_close": 21.299999,
+            "change_amount": 0.940001,
+            "change_percentage": 4.4131,
+            "url": "https://finance.yahoo.com/quote/KVYO"
+          },
+          {
+            "ticker": "PICS",
+            "price_date": "2026-11-20",
+            "close": 5.02,
+            "previous_close": 4.85,
+            "change_amount": 0.17,
+            "change_percentage": 3.5052,
+            "url": "https://finance.yahoo.com/quote/PICS"
+          },
+          {
+            "ticker": "MNDY",
+            "price_date": "2026-11-20",
+            "close": 72.160004,
+            "previous_close": 69.900002,
+            "change_amount": 2.260002,
+            "change_percentage": 3.2332,
+            "url": "https://finance.yahoo.com/quote/MNDY"
+          },
+          {
+            "ticker": "DBD",
+            "price_date": "2026-11-20",
+            "close": 51.860001,
+            "previous_close": 50.27,
+            "change_amount": 1.59,
+            "change_percentage": 3.1629,
+            "url": "https://finance.yahoo.com/quote/DBD"
+          },
+          {
+            "ticker": "FICO",
+            "price_date": "2026-11-20",
+            "close": 694.309998,
+            "previous_close": 677.640015,
+            "change_amount": 16.669983,
+            "change_percentage": 2.46,
+            "url": "https://finance.yahoo.com/quote/FICO"
+          },
+          {
+            "ticker": "INTA",
+            "price_date": "2026-11-20",
+            "close": 43.450001,
+            "previous_close": 42.43,
+            "change_amount": 1.02,
+            "change_percentage": 2.404,
+            "url": "https://finance.yahoo.com/quote/INTA"
+          },
+          {
+            "ticker": "UPBD",
+            "price_date": "2026-11-20",
+            "close": 25.440001,
+            "previous_close": 24.870001,
+            "change_amount": 0.57,
+            "change_percentage": 2.2919,
+            "url": "https://finance.yahoo.com/quote/UPBD"
+          },
+          {
+            "ticker": "BOX",
+            "price_date": "2026-11-20",
+            "close": 43.889999,
+            "previous_close": 43.080002,
+            "change_amount": 0.809998,
+            "change_percentage": 1.8802,
+            "url": "https://finance.yahoo.com/quote/BOX"
+          },
+          {
+            "ticker": "DOX",
+            "price_date": "2026-11-20",
+            "close": 41.18,
+            "previous_close": 40.5,
+            "change_amount": 0.68,
+            "change_percentage": 1.679,
+            "url": "https://finance.yahoo.com/quote/DOX"
+          }
+        ]
+      }
+    },
+    {
+      "id": "price:cbd7002b691b2cd49230",
+      "source_type": "price",
+      "source_name": "Yahoo Finance",
+      "title": "SaaS / software / Internet 跌幅前十 2026-11-20",
+      "url": "https://finance.yahoo.com/markets/stocks/losers/",
+      "published_at": "2026-11-20T21:00:00+00:00",
+      "collected_at": "2026-11-21T00:02:27.208915+00:00",
+      "body": "1. RXT close 1.9; previous 2.31; change -17.7489%\n2. NBIS close 81.309998; previous 96.919998; change -16.1061%\n3. HKD close 1.0; previous 1.19; change -15.9664%\n4. CORZ close 11.33; previous 13.36; change -15.1946%\n5. BAND close 34.25; previous 39.950001; change -14.2678%\n6. DOCN close 66.760002; previous 77.089996; change -13.3999%\n7. PDFS close 30.440001; previous 35.0; change -13.0286%\n8. INTU close 270.440002; previous 310.019989; change -12.7669%\n9. CRWV close 39.509998; previous 44.91; change -12.0241%\n10. FSLY close 14.91; previous 16.860001; change -11.5658%",
+      "author": "",
+      "symbols": [
+        "RXT",
+        "NBIS",
+        "HKD",
+        "CORZ",
+        "BAND",
+        "DOCN",
+        "PDFS",
+        "INTU",
+        "CRWV",
+        "FSLY"
+      ],
+      "engagement": {},
+      "metadata": {
+        "section": "transaction_ideas",
+        "market_mover_type": "losers",
+        "market_session": "regular_close_end_of_day",
+        "price_date": "2026-11-20",
+        "comparison": "current close vs previous stored trading-day close",
+        "retention_trading_days": 3,
+        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
+        "records": [
+          {
+            "ticker": "RXT",
+            "price_date": "2026-11-20",
+            "close": 1.9,
+            "previous_close": 2.31,
+            "change_amount": -0.41,
+            "change_percentage": -17.7489,
+            "url": "https://finance.yahoo.com/quote/RXT"
+          },
+          {
+            "ticker": "NBIS",
+            "price_date": "2026-11-20",
+            "close": 81.309998,
+            "previous_close": 96.919998,
+            "change_amount": -15.610001,
+            "change_percentage": -16.1061,
+            "url": "https://finance.yahoo.com/quote/NBIS"
+          },
+          {
+            "ticker": "HKD",
+            "price_date": "2026-11-20",
+            "close": 1.0,
+            "previous_close": 1.19,
+            "change_amount": -0.19,
+            "change_percentage": -15.9664,
+            "url": "https://finance.yahoo.com/quote/HKD"
+          },
+          {
+            "ticker": "CORZ",
+            "price_date": "2026-11-20",
+            "close": 11.33,
+            "previous_close": 13.36,
+            "change_amount": -2.03,
+            "change_percentage": -15.1946,
+            "url": "https://finance.yahoo.com/quote/CORZ"
+          },
+          {
+            "ticker": "BAND",
+            "price_date": "2026-11-20",
+            "close": 34.25,
+            "previous_close": 39.950001,
+            "change_amount": -5.700001,
+            "change_percentage": -14.2678,
+            "url": "https://finance.yahoo.com/quote/BAND"
+          },
+          {
+            "ticker": "DOCN",
+            "price_date": "2026-11-20",
+            "close": 66.760002,
+            "previous_close": 77.089996,
+            "change_amount": -10.329994,
+            "change_percentage": -13.3999,
+            "url": "https://finance.yahoo.com/quote/DOCN"
+          },
+          {
+            "ticker": "PDFS",
+            "price_date": "2026-11-20",
+            "close": 30.440001,
+            "previous_close": 35.0,
+            "change_amount": -4.559999,
+            "change_percentage": -13.0286,
+            "url": "https://finance.yahoo.com/quote/PDFS"
+          },
+          {
+            "ticker": "INTU",
+            "price_date": "2026-11-20",
+            "close": 270.440002,
+            "previous_close": 310.019989,
+            "change_amount": -39.579987,
+            "change_percentage": -12.7669,
+            "url": "https://finance.yahoo.com/quote/INTU"
+          },
+          {
+            "ticker": "CRWV",
+            "price_date": "2026-11-20",
+            "close": 39.509998,
+            "previous_close": 44.91,
+            "change_amount": -5.400002,
+            "change_percentage": -12.0241,
+            "url": "https://finance.yahoo.com/quote/CRWV"
+          },
+          {
+            "ticker": "FSLY",
+            "price_date": "2026-11-20",
+            "close": 14.91,
+            "previous_close": 16.860001,
+            "change_amount": -1.950001,
+            "change_percentage": -11.5658,
+            "url": "https://finance.yahoo.com/quote/FSLY"
+          }
+        ]
+      }
+    },
+    {
+      "id": "substack:17a64f1c49d6bf0c2de7",
+      "source_type": "substack",
+      "source_name": "MBI Deep Dives",
+      "title": "Key Man Risk",
+      "url": "https://mbideepdives.substack.com/p/key-man-risk",
+      "published_at": "2026-11-20T17:18:05+00:00",
+      "collected_at": "2026-11-21T00:00:55.002096+00:00",
+      "body": "Thanks to Jensen Huang, “key man risk” is perhaps a top of mind concern among many investors over the last week. For a solo entrepreneur like me, I have actually been thinking about this for a while since this risk is pretty close to home at MBI Deep Dives. I did wonder what would happen to MBI Deep Dives if I got hit by a proverbial bus. I actually had a conversation about this with my wife and I already let her know the “next steps”.\n\nWhile I certainly hope she would not have to think about these steps decades into the future, let me share with all of you as well what I would like to happen if the “key man” behind MBI Deep Dives is no longer around.\n\nMy wife would reach out to three or four friends (who are investors by profession) she knows I trust, and those friends would interview five to ten analysts. Whoever they pick would take over MBI Deep Dives and run it going forward, and in return they would pay 20% royalties to my family.\n\nMBI Deep Dives is obviously not the only place where I think about key man risk. Since I manage my own and my family’s savings, I think about it for every business I own. By now everyone knows what happened at Nvidia, so I won’t repeat the saga here. I find it more interesting to think through how much of a company’s value really comes from the person running it.\n\nEd Catmull, the co-founder of Pixar, was quite influential in shaping my philosophy on this topic. Catmull wrote in an HBR [essay](https://hbr.org/2008/09/how-pixar-fosters-collective-creativity) back in 2008:\n\n> A few years ago, I had lunch with the head of a major motion picture studio, who declared that his central problem was not finding good people—it was finding good ideas. Since then, when giving talks, I’ve asked audiences whether they agree with him. Almost always there’s a 50/50 split, which has astounded me because I couldn’t disagree more with the studio executive. His belief is rooted in a misguided view of creativity that exaggerates the importance of the initial idea in creating an original product. And it reflects a profound misunderstanding of how to manage the large risks inherent in producing breakthroughs.\n\nHe went further in _[Creativity, Inc.](https://www.amazon.com/clp/0804127441?lv=shuf&channelId=500)_, where he wrote that in all his years of asking that question, only one person had pointed out that it was a false choice. To him, the answer was obvious. “Ideas come from people. Therefore, people are more important than ideas.”\n\nIndeed, I think that is why key man risk is real even at companies with tens of thousands of employees. We like to talk about strategy as if it were the output of a purely rational, scientific process, but companies are not run by AI, at least not yet. They are run by people whose beliefs, philosophy, personal quirks, and life experiences shape how they see the world, and in turn what they decide. **When the person at the top changes, the ideas sometimes change with them.**\n\nMeta, my largest position, is arguably just as exposed to this as Nvidia was. Ironically, you could perhaps make the case that Meta’s stock would go up if Mark Zuckerberg left in the near term. Why? Well, let’s look at Microsoft. Frontier models are arguably a much more immediate risk to Microsoft’s business than to Meta’s. Meta’s family of apps is further away from that risk vector as of today, although I doubt it can stay immune forever. And yet Satya Nadella has largely chosen not to pursue training frontier models himself, and the market seems to prefer that decision a lot more. If the company more exposed to the risk has decided to sit out the frontier race, the case for a manager-led Meta doing the same looks even stronger. So if someone like Nadella took over Meta, stopped pursuing frontier models and shut down Reality Labs, Meta would be a lot more profitable in the near term, and perhaps after the initial dip in the stock post-Zuckerberg exit, pod shop analysts would be salivating at the rapid upward estimate revisions for the next couple of years.\n\nI am not sure I believe it would be the right reaction over the long term for Meta.\n\nWhen I first went through Facebook’s “red book” a few years ago, the following page made me pause. From the very early days, Zuckerberg has been skeptical about having a five-year plan. He was only sure about the next six months, but counter-intuitively he was also quite adamant about the next 30 years! If you remember this, it is easier to understand why Meta seems to frantically pivot from one thing to another as they navigate towards the future.\n\n[![Image 1](https://substackcdn.com/image/fetch/$s_!r1lW!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F189365ef-2d66-49da-b5ca-5d0c76918b08_1200x920.jpeg)](https://substackcdn.com/image/fetch/$s_!r1lW!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F189365ef-2d66-49da-b5ca-5d0c76918b08_1200x920.jpeg)\n\nSource: Facebook’s Little Red [Book](https://v1.benbarry.com/project/facebooks-book) (2012)\n\nI think that 30-year view is also why Zuckerberg keeps insisting that Meta is a **technology** company. The catch is that almost everything we take for granted in modern life was once cutting-edge technology. So the only way to remain a technology company for decades is to stay at the bleeding edge every step of the way, and in Zuckerberg’s mind, I suspect that is what frontier models and Reality Labs are for. Unfortunately, our spreadsheets are mostly built for the next five years, and it can be exhausting for investors and analysts to keep up with all the twists and turns as Zuckerberg reshuffles priorities every six months to position Meta for the next 30 years.\n\nI’m sure Zuckerberg himself would agree at this point that he scaled the Reality Labs bet way too much way too soon, and it has become a real blemish on his track record. The scale of capex required to stay in the frontier model race, without the commensurate frontier intelligence-driven revenue, also makes the current bet a bit uncomfortable for investors and creates a sense of déjà vu. And of course a bet, by definition, may not pay off on **any** time horizon. Still, I think Zuckerberg deserves the benefit of the doubt. Very few CEOs are willing, or able, to make long-term bold bets at all.\n\nOwning Meta is ultimately a bet on Zuckerberg’s long-term vision. Given his singular importance and voting power, I have tried to observe and take into account how he carries himself in his personal life. From what we can see, Zuckerberg comes across as a family man. But I don’t know him, none of us really do, and who knows…it could be a public facade. Talking about any of this feels a bit like gossip, and yet admittedly, I have always paid some attention to it.\n\nA while back I asked on Twitter how comfortable people would be owning a trillion-dollar business when almost nothing is publicly known about the CEO’s partner or spouse. I was thinking of Tim Cook. At the time, the internet had very little on his relationships, past or present, which surprised me for someone that prominent. The blowback was severe enough that I deleted the tweet (something I almost never do), and most of it was some version of “why do you care who sleeps with whom?” I understand where that comes from, and it is certainly Cook’s prerogative. But I am surprised that we don’t even want to acknowledge that it’s a bit unusual. To me it said something about how **personal** the privacy mantra is for Cook. Even when he mentioned a partner at his Apple farewell party in August, The Information [reported](https://www.theinformation.com/articles/apple-ceos-farewell-tributes-unusually-personal-tim-cook) that he referred to him only by his first name.\n\nI have long suspected that the animosity between Apple and Meta reflects Cook’s personal conviction on privacy as much as any business logic, and I wondered what the relationship would look like with someone else running Apple. We may be starting to find out. Six weeks after John Ternus took over as CEO, Apple and Meta [announced](https://www.cnbc.com/2026/10/15/apple-meta-partner-ai.html) a collaboration to run Meta’s open-weight model on Macs, and Zuckerberg thanked Ternus by name. It’s too early to know but I find it hard to picture that exchange during the Cook years.\n\nCook is not the only CEO whose personal life I have paid attention to. Airbnb was a large position for me until recently, and one thing that gave me a tinge of discomfort (that I haven’t written about before) was that Brian Chesky is single. He has spoken openly about feeling isolated after Airbnb went public, and in a 2023 [interview](https://www.youtube.com/watch?v=ia6Di_ytiSE) he said one of his biggest regrets would be not starting a family. It is healthy that a CEO can talk about his mental health struggle, and I wouldn’t want that to change. But Chesky is 45, and finding a partner and building a family are big questions in anyone’s life. I would rather my CEOs’ headspace not be clogged by such existential questions.\n\nThe pushback I got on that tweet was essentially that a CEO’s personal life is irrelevant to shareholders. Frankly speaking, I can imagine many people reacting very harshly about me pointing out Chesky’s marital status. The last few weeks should be a pretty good counterexample why I probably want to care while allocating my **personal capital** to these companies. You are free to ignore and decide that these things are completely irrelevant to a company’s long-term value. Of course, I know you could convincingly argue that Huang’s personal failings weren’t the “true” reasons he had to resign. But clearly those very failings gave his critics ample ammunition to use against him.\n\nIf people really are more important than ideas, then key man risk is probably very difficult to avoid, especially for companies operating at the cutting edge of technology. **The same person whose 30-year view I am betting on is the person whose absence, or whose mistakes, would hurt the most.** MBI Deep Dives has the same problem on a much smaller scale. I can’t make that risk go away, but I can at least have a plan for it. Well, whether that plan works will remain unknown to me…by design!\n\n_Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on **[70](https://mbideepdives.substack.com/p/deep-dives)+** companies. The daily is just how I think out loud between the Deep Dives!_\n\n**Current Portfolio:**\n\nPlease note that these are **NOT** my recommendation to buy/sell these securities, but just disclosure from my end so that you can assess potential biases that I may have because of my own personal portfolio holdings. Always consider my write-up my personal investing journal and never forget my objectives, risk tolerance, and constraints may have no resemblance to yours.\n\nMy current portfolio is disclosed below:",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://mbideepdives.substack.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas",
+        "transport": "public_reader_fallback"
+      }
+    },
+    {
+      "id": "substack:db2e8235b19a2f8a2fe1",
+      "source_type": "substack",
+      "source_name": "Liberty's Highlights",
+      "title": "674: Nvidia: How Do You Keep Engineers Who Don’t Need the Money?, Gemini 4 Neon: Google Strikes Back, AI Reinvents Bureaucracy in 12 Days, TSMC Considers Memory, Do Wolves Bark?, and The Dragon Prince",
+      "url": "https://www.libertyrpf.com/p/674-nvidia-how-do-you-keep-engineers",
+      "published_at": "2026-11-20T16:16:32+00:00",
+      "collected_at": "2026-11-21T00:01:00.793497+00:00",
+      "body": "I arise in the morning torn between a desire to improve the world and a desire to enjoy the world. This makes it hard to plan the day. —E.B. White, From a 1969 New York Times interview What a beautiful creature. Wish him luck, boys. 🛀💭 🐺🐕 A random question popped into my head recently: if all dogs descend from wolves, why have I never heard a wolf bark? Wolves howl in every nature documentary. Dogs howl too, sometimes, but they mostly bark at the doorbell, squirrels, whatever. Do wolves even bark? Or did humans selectively breed barking into dogs as an ancient early-warning system? 🤔 So I looked it up. 🔍 Turns out wolves do bark, just rarely as adults : a 2025 paper in The Anatomical Record notes that barks make up only around 2% of adult wolf ‘vocalizations.’ And mostly brief alarm or threat calls, not the more repetitive barking we’re used to. The surprising part is that wolf pups bark much more often (by about four weeks old, they may already bark at noises outside the den), and then it fades as howling develops. One hypothesis is paedomorphosis (not the greatest word), where domesticated animals retain juvenile traits into adulthood. Why did it stick around? Two main theories : noisy sentinels were useful around early human camps, and selecting for tameness may have dragged juvenile traits along for the ride . ¯\\_(ツ)_/¯ Once the trait became common for dogs, it turned into a flexible tool. On top of threats, barking expanded for play, excitement, and attention-seeking. And we’re pretty decent at telling which is which. In a 2005 playback study , people identified the situation behind recorded barks much better than random chance. And not just people who had a dog. That made little difference. 🐩🐕‍🦺 Dogs are good at understanding human expressions and body language and voice tone. I guess that went both ways, and we co-evolved to understand their barking. ↔️ 💚 🥃 To keep this steamboat alive and afloat , I need supporters. Like you ! 🚢 The paid subscription includes the full feed, every podcast, Zoom Q&As with me, and access to the private Discord clubhouse , where a core group of us hang out and discuss the interesting stuff we find: Get the full Liberty feed and help keep the Serendipity Engine running by becoming a paid supporter. Thank you 💚🥃🦊🐙⚓️ 🏦 💰 Business & Investing 💳 💴 🧠💰 Nvidia’s Talent Problem: What Do You Pay People Who Don’t Need the Money? 💵 According to WIRED , compensation was the most common topic among the roughly 700 questions employees submitted before Nvidia’s first all-hands meeting without Jensen. The second was transparency from the board. CFO and interim CEO Colette Kress announced pay raises and more equity are coming in December instead of March. I can see why they’d want to do this. Nvidia has historically had very low employee turnover. Just 3.7% in fiscal 2026 . And they’re well-paid employees. According to Nvidia’s 2026 proxy , the median got $282,050 in annual total compensation , including equity awards valued when granted (and until recently, the stock has done quite well for them). But the question now is: How much does money matter to longtime Nvidia employees who have already made a fortune from the stock? 🤔 I suspect many of them could retire tomorrow. If they stayed because they love working with Jensen, believe in his vision, and enjoy the culture he built, how much difference is another raise or stock grant going to make? We’ve heard a lot about companies with almost cult-like cultures , like Anthropic, Palantir, or Apple under Steve Jobs. ⛪ What if Nvidia gradually becomes a more normal, boring company without Jensen? How many of those people would still want to stay? More money will probably help retain many, especially after the recent decline in Nvidia’s share price. But the second-most-common question, about transparency from the board, makes me think this isn’t just about compensation. I’m not expecting an exodus. Nvidia still has enormous advantages, fascinating engineering problems to work on, and a deep bench of talented people who helped build the company. But competitors will no doubt seize this moment to try to poach key talent. 🧲 If I was Nvidia, I’d worry about losing a handful of critical engineers and architects , people who know the systems inside out, have years or decades of accumulated knowledge, and are difficult to replace. Nvidia’s Jeff Deans, so to speak. And what if when they leave, it starts making other talented people think about doing the same thing? People are very mimetic like that 🤔 I don’t know how likely it is, but losing five of the wrong people could do more damage than losing hundreds of others. Some of these people may be especially valuable because they know how to make the different parts of Nvidia work together. If someone is the glue between chip architecture, networking, CUDA, and system design, their value isn’t just what they personally know. It’s how much better everyone else works because they're there. I’ll be watching who leaves Nvidia over the coming months, not just how many . 👀 🔁 Déjà vu: Oh, Jensen! Fall From Grace: The World Changed Faster Than Jensen Did 🐜 🇹🇼 Is TSMC About to Get Into Memory? 🤔 Read more",
+      "author": "Liberty 💚 🥃",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.libertyrpf.com/",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:701ef87f793efe6e2a63",
+      "source_type": "substack",
+      "source_name": "TSOH Investment Research",
+      "title": "TSOH Weekly Roundup (11/20/2026)",
+      "url": "https://thescienceofhitting.com/p/tsoh-weekly-roundup-11202026",
+      "published_at": "2026-11-20T16:02:05+00:00",
+      "collected_at": "2026-11-21T00:00:57.466550+00:00",
+      "body": "Welcome to another edition of TSOH Weekly Roundup . Each update features a Chart of the Week, along with a brief discussion on three news items relevant to companies in the TSOH investable universe. Chart Of The Week (from “ Floor & Decor: Still Waiting ”) Three Notable Items “Nick Khan on Turning WWE Into a Global Media Power” Khan: “The luck we had in the WWE deal is that Netflix decided to get into the ad-supported business, and WWE offers 52 weeks of programming a year… Mark Shapiro and Ari Emanuel called [Netflix]… To Bela Bajaria’s credit, she said ‘let’s meet in two days’… They made an offer and we closed the deal .” “Microsoft CEO Satya Nadella goes one-on-one with Jim Cramer” Nadella: “The unfortunate thing is the capabilities are climbing exponentially, but the alignment is nowhere to be found. The mechanistic understanding of exactly how these things work is also not there. That’s why I believe one of the other things that we have to do simultaneously is build a trust system outside of the intelligence system. You can’t give authority to the intelligence, you have to separate it out… You need the trust system to be outside .” “Can Peter Rice Fix Netflix?” “Reed Hastings found about Netflix’s big shake-up the same time everyone else did. The Netflix founder (he officially exited the board over the summer) told a rapt audience at the Masters of Scale Summit in San Francisco that the mass layoffs, the exit of content chief Bela Bajaria and the surprise announcement of Peter Rice as its new head of content caught him just as off guard as the rest of Hollywood. ‘I didn’t know those were coming, and it’s hard because I’d like to be in the fray helping,’ Hastings told the audience.” TSOH Updates Here’s the updated TSOH research list for the past six months: Monday’s research report will be an update on Disney (DIS) . Have a great weekend! NOTE - This is not investment advice. Do your own due diligence. I make no representation, warranty, or undertaking, express or implied, as to the accuracy, reliability, completeness, or reasonableness of the information presented in this report. Assumptions, opinions, and estimates expressed in this report constitute my judgment as of the date thereof and are subject to change without notice. Projections are based on a number of assumptions, and there is no guarantee that they will be achieved. TSOH Investment Research is not acting as your advisor or in any fiduciary capacity.",
+      "author": "TSOH Investment Research",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://thescienceofhitting.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:e909cdaaab349391a8f5",
+      "source_type": "substack",
+      "source_name": "Clouded Judgement",
+      "title": "Clouded Judgement 11.19.26 - Security Armageddon",
+      "url": "https://cloudedjudgement.substack.com/p/clouded-judgement-111926-security",
+      "published_at": "2026-11-20T14:04:02+00:00",
+      "collected_at": "2026-11-21T00:00:51.270547+00:00",
+      "body": "Every week I’ll provide updates on the latest trends in cloud software companies. Follow along to stay up to date!\n\n**Security Armageddon**\n\nThe amount of security incidents and outages has sky rocketed recently. On many of the outages, it’s not always clear if they were in fact just outages, or part of a cyber incident. For now, many of the outages are being described as non-cyber related. Time will tell. The chart below is a pretty clear articulation of the moment we’re in. The chart comes from a Bridgewater report you can find [here](https://www.bridgewater.com/research-and-insights/current-efforts-arent-enough-to-slow-the-ai-cyber-virus)\n\n[![Image 1](https://substackcdn.com/image/fetch/$s_!Ka6F!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0c0d8364-ccef-4009-9ae3-8e6fcffd0e56_1263x1309.png)](https://substackcdn.com/image/fetch/$s_!Ka6F!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0c0d8364-ccef-4009-9ae3-8e6fcffd0e56_1263x1309.png)\n\nFAA full ground stop (only second time after 9/11), Microsoft outage, United Airlines outage, JPMorgan banking failure, NSA classified network going down, etc etc. The list goes on. What’s happening? Is the security Armageddon here??\n\nFor now, I don’t actually think these are all cyber related. BUT - we’re not far off from an actual security armageddon…\n\nHere’s what I think is happening. Historically, vulnerabilities were discovered, and then exploits from those vulnerabilities were discovered. But this took time. Sometimes infinite time. This is the difference - Think of a vulnerability as a weakness in code. An exploit is then using that weakness to take a harmful action (exfiltrate data, steal credentials, etc). And it wasn’t always easy to connect a vulnerability to an actual exploit. The PHP security issue the other week was the perfect example of this. The vulnerability has been known forever, but it was always thought an exploit wasn’t possible. I should add - I’m not sure if I’m using vulnerability / exploit perfectly, but I’ll use them in this context for this article.\n\nSo in summary - there were plenty of known vulnerabilities that people didn’t do anything with because they were thought of as irrelevant. At the same time - when vulnerabilities were discovered, security teams know it would take time for an exploit to emerge. Which meant there was time to come up with a thoughtful patch, and a thoughtful patch plan.\n\nWhat’s happening now with AI:\n\n1.   AI can find vulnerabilities much faster\n\n2.   AI can then turn those vulnerabilities into workable exploits almost instantly\n\nWhat does this mean? It means companies have to RUSH to patch EVERY vulnerability that gets discovered. Odds are, by the time a vulnerability is discovered, an exploit is already available. And every second you have the non-patched software running you’re exposed.\n\nAnd it’s not easy to just “update with the patched library.” There are tons of cascading issues you can introduce by swapping out one piece of code / software for another. Downstream systems break, you don’t catch every version of the old software and are running duplicates, etc. Patch management, especially for larger orgs or bigger IT systems take time and are really hard to be done thoughtfully without introducing new bugs, or, outages.\n\nBut no one has time to be thoughtful anymore. The mantra now is “move fast and break things” because you’d rather get a rushed patch out, suffer some downtime, then be vulnerable to an attack.\n\nWrapping it all up - what I think is happening is every org, large and small, is rushing to patch all the known vulnerabilities, and in the process breaks their systems more frequently which causes outages. I could be wrong, this is just a hunch.\n\nI also think this is just a pre-cursor to the real issue…All of these rushed patches will introduce new weak spots and vulnerabilities. And the attackers will get better and better about exploiting known vulnerabilities. We’re only in the outages portion of the security Armageddon, but unfortunately I think more attacks are coming!\n\n**Quarterly Reports Summary**\n\n![Image 2](https://substackcdn.com/image/fetch/$s_!_sBH!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F66c2ae43-c191-40a3-b143-af6a9d979a50_1465x171.png)\n\n**Top 10 EV / NTM Revenue Multiples**\n\n[![Image 3](https://substackcdn.com/image/fetch/$s_!NLTu!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Faa1fdf83-162c-4a5d-a99f-b9c46f8f807c_1752x751.png)](https://substackcdn.com/image/fetch/$s_!NLTu!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Faa1fdf83-162c-4a5d-a99f-b9c46f8f807c_1752x751.png)\n\n**Top 10 Weekly Share Price Movement**\n\n[![Image 4](https://substackcdn.com/image/fetch/$s_!C69o!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F211dca9b-9c6f-41da-9131-27f5850af5f7_1120x688.png)](https://substackcdn.com/image/fetch/$s_!C69o!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F211dca9b-9c6f-41da-9131-27f5850af5f7_1120x688.png)\n\n**Update on Multiples**\n\nSaaS businesses are generally valued on a multiple of their revenue - in most cases the projected revenue for the next 12 months. Revenue multiples are a shorthand valuation framework. Given most software companies are not profitable, or not generating meaningful FCF, it’s the only metric to compare the entire industry against. Even a DCF is riddled with long term assumptions. The promise of SaaS is that growth in the early years leads to profits in the mature years. Multiples shown below are calculated by taking the Enterprise Value (market cap + debt - cash) / NTM revenue.\n\nOverall Stats:\n\n*   Overall Median: 4.3x\n\n*   Top 5 Median: 29.6x\n\n*   10Y: 5.0%\n\n[![Image 5](https://substackcdn.com/image/fetch/$s_!Sccf!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa5c23ebd-495a-49cd-9cab-76e3c594ef4b_1230x663.png)](https://substackcdn.com/image/fetch/$s_!Sccf!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa5c23ebd-495a-49cd-9cab-76e3c594ef4b_1230x663.png)\n\n[![Image 6](https://substackcdn.com/image/fetch/$s_!oJd6!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff905d0ef-e9f2-4eb5-98d7-08db37f40004_1221x661.png)](https://substackcdn.com/image/fetch/$s_!oJd6!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff905d0ef-e9f2-4eb5-98d7-08db37f40004_1221x661.png)\n\nBucketed by Growth. In the buckets below I consider high growth >22% projected NTM growth, mid growth 15%-22% and low growth <15%. I had to adjusted the cut off for “high growth.” If 22% feels a bit arbitrary, it’s because it is…I just picked a cutoff where there were ~10 companies that fit into the high growth bucket so the sample size was more statistically significant\n\n*   High Growth Median: 12.0x\n\n*   Mid Growth Median: 5.8x\n\n*   Low Growth Median: 3.3x\n\n[![Image 7](https://substackcdn.com/image/fetch/$s_!VtXO!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcc011472-3010-4acd-99bb-e7f1983cd07c_1240x664.png)](https://substackcdn.com/image/fetch/$s_!VtXO!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcc011472-3010-4acd-99bb-e7f1983cd07c_1240x664.png)\n\n[![Image 8](https://substackcdn.com/image/fetch/$s_!7PIn!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F25c9fdda-5111-44c2-949d-d609e404f602_3039x1294.png)](https://substackcdn.com/image/fetch/$s_!7PIn!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F25c9fdda-5111-44c2-949d-d609e404f602_3039x1294.png)\n\n**EV / NTM Rev / NTM Growth**\n\nThe below chart shows the EV / NTM revenue multiple divided by NTM consensus growth expectations. So a company trading at 20x NTM revenue that is projected to grow 100% would be trading at 0.2x. The goal of this graph is to show how relatively cheap / expensive each stock is relative to its growth expectations.\n\n[![Image 9](https://substackcdn.com/image/fetch/$s_!KO5P!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff2646d0e-3615-473c-9d85-fd8a013e918f_1225x669.png)](https://substackcdn.com/image/fetch/$s_!KO5P!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff2646d0e-3615-473c-9d85-fd8a013e918f_1225x669.png)\n\n[![Image 10](https://substackcdn.com/image/fetch/$s_!Fs57!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8ac6e69a-7135-494d-9e1b-0cba3e7107e7_2914x1297.png)](https://substackcdn.com/image/fetch/$s_!Fs57!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8ac6e69a-7135-494d-9e1b-0cba3e7107e7_2914x1297.png)\n\n**EV / NTM FCF**\n\nThe line chart shows the median of all companies with a FCF multiple >0x and <100x. I created this subset to show companies where FCF is a relevant valuation metric.\n\n[![Image 11](https://substackcdn.com/image/fetch/$s_!ft94!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F62b1f500-1162-488a-a036-067d20678648_1216x667.png)](https://substackcdn.com/image/fetch/$s_!ft94!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F62b1f500-1162-488a-a036-067d20678648_1216x667.png)\n\nCompanies with negative NTM FCF are not listed on the chart\n\n[![Image 12](https://substackcdn.com/image/fetch/$s_!kIym!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F746b6f40-94f2-456a-b3e1-780935397a91_3100x1269.png)](https://substackcdn.com/image/fetch/$s_!kIym!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F746b6f40-94f2-456a-b3e1-780935397a91_3100x1269.png)\n\n**Scatter Plot of EV / NTM Rev Multiple vs NTM Rev Growth**\n\nHow correlated is growth to valuation multiple?\n\n[![Image 13](https://substackcdn.com/image/fetch/$s_!Riu-!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7b484984-0de4-4520-8038-b02f1738b050_2515x1345.png)](https://substackcdn.com/image/fetch/$s_!Riu-!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7b484984-0de4-4520-8038-b02f1738b050_2515x1345.png)\n\n**Operating Metrics**\n\n*   Median NTM growth rate: 13%\n\n*   Median LTM growth rate: 17%\n\n*   Median Gross Margin: 76%\n\n*   Median Operating Margin 5%\n\n*   Median FCF Margin: 21%\n\n*   Median Net Retention: 109%\n\n*   Median CAC Payback: 34 months\n\n*   Median S&M % Revenue: 33%\n\n*   Median R&D % Revenue: 22%\n\n*   Median G&A % Revenue: 13%\n\n**Comps Output**\n\nRule of 40 shows rev growth + FCF margin (both LTM and NTM for growth + margins). FCF calculated as Cash Flow from Operations - Capital Expenditures\n\nGM Adjusted Payback is calculated as: (Previous Q S&M) / (Net New ARR in Q x Gross Margin) x 12. It shows the number of months it takes for a SaaS business to pay back its fully burdened CAC on a gross profit basis. Most public companies don’t report net new ARR, so I’m taking an implied ARR metric (quarterly subscription revenue x 4). Net new ARR is simply the ARR of the current quarter, minus the ARR of the previous quarter. Companies that do not disclose subscription rev have been left out of the analysis and are listed as NA.\n\n[![Image 14](https://substackcdn.com/image/fetch/$s_!ac5M!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9e128ee1-50a3-48dc-b14a-130af6352143_3145x1383.png)](https://substackcdn.com/image/fetch/$s_!ac5M!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9e128ee1-50a3-48dc-b14a-130af6352143_3145x1383.png)\n\n[![Image 15](https://substackcdn.com/image/fetch/$s_!dx1Y!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fade6ccf9-2904-4e79-a7da-0e088a04f6c2_3147x1338.png)](https://substackcdn.com/image/fetch/$s_!dx1Y!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fade6ccf9-2904-4e79-a7da-0e088a04f6c2_3147x1338.png)\n\nSources used in this post include Bloomberg, Pitchbook and company filings\n\nThe information presented in this newsletter is the opinion of the author and does not necessarily reflect the view of any other person or entity, including Altimeter Capital Management, LP (”Altimeter”). The information provided is believed to be from reliable sources but no liability is accepted for any inaccuracies. This is for information purposes and should not be construed as an investment recommendation. Past performance is no guarantee of future performance. Altimeter is an investment adviser registered with the U.S. Securities and Exchange Commission. Registration does not imply a certain level of skill or training. Altimeter and its clients trade in public securities and have made and/or may make investments in or investment decisions relating to the companies referenced herein. The views expressed herein are those of the author and not of Altimeter or its clients, which reserve the right to make investment decisions or engage in trading activity that would be (or could be construed as) consistent and/or inconsistent with the views expressed herein.\n\n**This post and the information presented are intended for informational purposes only.** The views expressed herein are the author’s alone and do not constitute an offer to sell, or a recommendation to purchase, or a solicitation of an offer to buy, any security, nor a recommendation for any investment product or service. While certain information contained herein has been obtained from sources believed to be reliable, neither the author nor any of his employers or their affiliates have independently verified this information, and its accuracy and completeness cannot be guaranteed. Accordingly, no representation or warranty, express or implied, is made as to, and no reliance should be placed on, the fairness, accuracy, timeliness or completeness of this information. The author and all employers and their affiliated persons assume no liability for this information and no obligation to update the information or analysis contained herein in the future.\n\n[Share Clouded Judgement](https://cloudedjudgement.substack.com/?utm_source=substack&utm_medium=email&utm_content=share&action=share)\n\n[Leave a comment](https://cloudedjudgement.substack.com/p/clouded-judgement-111926-security/comments)",
+      "author": "",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://cloudedjudgement.substack.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas",
+        "transport": "public_reader_fallback"
+      }
+    },
+    {
+      "id": "substack:22e4799ea9819e96e4b5",
+      "source_type": "substack",
+      "source_name": "How They Make Money / App Economy Insights",
+      "title": "🤖 NVIDIA: Life After Jensen",
+      "url": "https://www.appeconomyinsights.com/p/nvidia-life-after-jensen",
+      "published_at": "2026-11-20T13:03:04+00:00",
+      "collected_at": "2026-11-21T00:00:54.740152+00:00",
+      "body": "Welcome to the Free edition of How They Make Money . Over 300,000 subscribers turn to us for business and investment insights. In case you missed it: 📊 October Earnings Visuals ☁️ Amazon: The $1 Trillion Bet 🤖 How Anthropic Makes Money 🚀 SpaceX + Tesla: One Musk Empire? Subscribe now Life after Jensen For the first time in 33 years, Jensen Huang is no longer running NVIDIA. He resigned last week following revelations of extramarital affairs, including one with a former executive of Singapore-based Megaspeed, an NVIDIA customer under investigation for potential violations of US chip export restrictions. The controversy raises serious questions about corporate governance and national security. The SEC has reportedly opened an investigation into NVIDIA's disclosures. CFO Colette Kress has stepped in as interim CEO, and the board has established a new committee dedicated to export controls. NVIDIA started as a company selling graphics cards to gamers. Today, its products are considered critical to national security. Washington increasingly expects NVIDIA to police where its chips ultimately end up, much like banks or defense contractors are expected to comply with sanctions and export restrictions. Few founders have been as closely associated with their company’s success. Jensen shaped NVIDIA’s culture, its technology roadmap, its relationships with the world’s largest companies, and even US industrial policy. His departure comes at a pivotal moment. AI infrastructure spending is reaching unprecedented levels, competition is intensifying, and NVIDIA is putting more of its own capital at risk to finance the buildout. Can NVIDIA dominate the AI economy without the man who saw it coming? Let’s dive in. Today at a glance: NVIDIA’s Q3 FY27 Business highlights Key quotes from the call What to watch moving forward 1. NVIDIA Q3 FY27 NVIDIA’s fiscal year ends in January, so the October quarter was Q3 FY27. Data Center revenue crossed $100 billion for the first time, as illustrated below. Income statement: Revenue +103% Y/Y to $115.8 billion ($7.1 billion beat). Data Center +110% Y/Y to $107.6 billion. Edge Computing +42% Y/Y to $8.2 billion. Gross margin was 75% (+1pp Y/Y). Operating margin was 67% (+4pp Y/Y). Non-GAAP EPS was $2.68 ($0.21 beat). Cash flow: Operating cash flow +103% Y/Y to $48.3 billion. Free cash flow +98% Y/Y to $43.8 billion. Balance sheet: Cash and debt securities: $53.5 billion. Public equity investments: $44.2 billion. Private investments: $65.5 billion. Debt: $32.4 billion. Q4 FY27 Guidance: Revenue +12% Q/Q and +91% Y/Y to $130.0 billion ($5.1 billion beat). Gross margin of 71%-72%. Guidance assumes no Data Center compute revenue from China. Q4 benefits from an additional week. So, what to make of all this? 📈 Growth remains extraordinary: NVIDIA added nearly $20 billion in sequential revenue, its largest quarterly increase in absolute dollars to date. Revenue more than doubled Y/Y for the second consecutive quarter. ☁️ Hyperscale growth reaccelerates: Hyperscale revenue rose 23% Q/Q to $60.1 billion, while AI Clouds, Industrial, and Enterprise grew 18% Q/Q to $47.4 billion. Demand remains strong across both customer groups. ⚡ Rubin hits the ground running: Vera Rubin generated nearly $20 billion in revenue in its first quarter of production shipments, making it the fastest product ramp in NVIDIA’s history. Demand for previous generations remains strong. 📉 Margins are holding up better than expected: Gross margin stayed near 75% despite soaring memory costs. Management expects margins to bottom in Q4 at 71%-72% before recovering to 72%-73% in FY28. 💰 Record shareholder returns: NVIDIA returned $28.1 billion to shareholders, including $22.1 billion in buybacks. The board added $150 billion to its share repurchase authorization in September, with $227 billion still available at quarter-end. 🔮 FY28 outlook raised: Q4 guidance calls for another $14 billion in sequential revenue growth. In addition, management now expects ~75% revenue growth in FY28, up from 70% previously and off a higher FY27 base. Big picture: NVIDIA’s leadership is in turmoil, but its operating performance remains exceptional. These results largely reflect decisions made under Jensen. The real test of NVIDIA without him is still ahead. 2. Business highlights 🏭 AI factories in a box At GTC Berlin in October, NVIDIA unveiled DSX POD, a blueprint for modular AI factories built inside shipping containers. Partners assemble and test Rubin systems, networking, power distribution, and liquid cooling before delivering them to customers. NVIDIA says this approach can cut on-site deployment time from six months to just 14 days , assuming the site has the necessary utilities. Partners include Dell, HPE, Lenovo, Schneider Electric, and Vertiv, with the first deployments expected in early 2027. NVIDIA previously went from selling individual chips to selling entire racks. It’s now standardizing how customers build entire AI factories. The sooner customers can generate revenue from their infrastructure, the sooner they can reinvest in additional capacity. 🧠 NVIDIA goes after the CPU market The rise of agentic AI is creating a new growth opportunity for NVIDIA. While GPUs run AI models, CPUs handle many of the tasks that agents perform between model interactions, such as executing code, retrieving data, and using external tools. In October, Oracle announced plans to make 150,000 NVIDIA Vera CPUs available across its cloud regions, with OpenAI among its first customers. This week, NVIDIA also unveiled a rack-scale system featuring 192 Vera CPUs designed for scientific workloads like climate modeling and molecular simulations. NVIDIA is increasingly competing with AMD and Intel in the server CPU market. Management expects CPU revenue to more than double in FY28 , with agentic AI driving extraordinary demand. 🤝 If you can’t beat them, connect them NVIDIA is finding ways to benefit from the proliferation of custom AI chips . Earlier this month, the company announced a partnership with South Korean chip designer Rebellions and SK Telecom. Using NVIDIA’s NVLink Fusion technology, Rebellions plans to integrate its own AI accelerators into NVIDIA’s rack architecture. As cloud providers and governments develop their own AI chips, NVIDIA can still sell networking components and extend its technology's reach. In other words, NVIDIA doesn’t need to win every chip socket to win the data center. 3. Key quotes from the earnings call Check out the earnings call transcript on Fiscal.ai here . Chairman Harvey Jones: On the CEO search: “The NVIDIA board unanimously accepted his resignation and does not intend to reinstate Jensen as CEO. [...] We’re going to look into internal candidates as well as external candidates. The board appreciates that we’re living in a world where the advanced silicon technologies and national security dynamics are making major changes in our marketplace. Our new CEO will have to navigate those waters very carefully.” Jensen publicly expressed his willingness to return as CEO just hours before the earnings call. The board’s response was unequivocal. Even if Jensen is ultimately cleared of any involvement in chip smuggling, his personal misconduct and strained relationship with Washington could make a comeback politically untenable. The next CEO will need to be as comfortable dealing with Washington as with Silicon Valley and Taiwan. That could favor a very different leadership profile from Jensen’s. According to Bloomberg, Arm CEO Rene Haas, who previously spent seven years at NVIDIA, is among the candidates approached. Interim CEO Colette Kress: On supply chain relationships: “I see right now the leadership even from TSMC that was in our offices just this week, also fully engaged in helping us. We’ve secured memory, we’ve secured advanced packaging.” NVIDIA has supply agreements extending through the end of the decade, and its purchase commitments jumped from $279 billion to $390 billion in three months. Whatever happens to Jensen’s personal relationships with suppliers, much of NVIDIA’s near-term capacity is already secured. On financing the AI buildout: “As the market matures and additional sources of capital become available, we are rigorously evaluating future investments, commitments, and guarantees.” Kress indicated that NVIDIA would prioritize financing its suppliers’ capacity expansion and helping select customers secure land, power, and data center facilities. She also committed to returning all excess free cash flow, net of strategic investments, to shareholders. We could be entering a new era of capital allocation at NVIDIA. At the end of Q3, NVIDIA had $118 billion in financial guarantees and $32 billion in commitments associated with neocloud agreements. On GPU rental prices: “Token prices have fallen nearly 60% since May, accelerating token usage and demand for compute. As a result, GPU rental prices are rising across generations. Hopper GPUs have recontracted at up to twice their original price under the multi-year agreements, while the B300 rates have risen more than 60% since their introduction.” Older GPUs are becoming more valuable even as newer generations deliver dramatic efficiency gains. This is Jevons paradox playing out in real time: cheaper intelligence is stimulating more demand for compute. So far, technological obsolescence hasn’t been the problem many feared. 4. What to watch next NVDA is down nearly 40% from its peak. The stock trades at only about 10x forward earnings , well below the multiple it commanded earlier in the AI boom and well below the rest of US Big Tech. Source: Fiscal.ai In semiconductors, a low P/E can sometimes signal peak earnings rather than a bargain. At the current valuation, the market appears increasingly skeptical of NVIDIA's ability to sustain its extraordinary profitability. Was NVIDIA’s past growth artificially boosted by Chinese demand, whether through illegal chip diversion or previously legal remote access to overseas data centers? NVIDIA has been supply-constrained for much of the AI boom, so many of those chips would likely have found buyers elsewhere. Despite tighter US export controls introduced this week, NVIDIA raised its FY28 growth outlook. The bigger financial risk may be regulatory penalties rather than a near-term shortfall in demand. Here’s what I’m watching: 👤 Life after Jensen: NVIDIA’s CUDA ecosystem and technology roadmap aren’t going away. However, talent retention is an immediate concern, with management reportedly bringing forward pay raises and equity grants to reassure employees. Jensen himself was part of NVIDIA’s moat. As Ben Thompson put it, he was “a one-person coordination function,” convincing Asian suppliers to commit enormous resources to the AI buildout. Internally, Jensen famously had 60 direct reports, allowing NVIDIA to operate at startup speed despite its enormous scale. Can the company preserve these advantages without its founder? 💰 A more disciplined NVIDIA? Jensen was reportedly already reconsidering NVIDIA's aggressive financing strategy before his departure. New leadership could accelerate that shift. But NVIDIA’s financial support for neoclouds served a strategic purpose: fostering alternatives to the hyperscalers developing their own AI chips. A more conservative approach could reduce NVIDIA’s financial risk while inadvertently strengthening its biggest competitors. With nearly $110 billion in public and private equity investments, NVIDIA is increasingly exposed to the AI cycle through both its income statement and its balance sheet. ☁️ Google becomes a chip vendor: TPU systems sales were already a meaningful contributor to Google Cloud’s Q3 growth, with a more substantial revenue ramp expected in 2027. Google’s partnership with Oracle will make TPUs available through another hyperscaler for the first time. NVIDIA’s customers increasingly have access to competing silicon without designing their own chips or switching cloud providers. Google is also lowering the software barriers to adopting its chips, partnering with Meta to develop TorchTPU, an open-source solution that enables native PyTorch support. Meanwhile, Anthropic just raised a record $81 billion in its IPO at a $1.5 trillion valuation. Its prospectus offers a glimpse into the road ahead for the AI industry. The company has committed to approximately $901 billion in future spending , almost entirely related to compute and infrastructure, including $452 billion by the end of 2030. Crucially, Anthropic’s compute strategy spans four chip platforms: AWS Trainium, Google TPUs, NVIDIA GPUs, and AMD GPUs. The company is even using Claude to accelerate the adoption of new chip architectures. AI itself is lowering the barriers to adopting competing silicon, challenging NVIDIA’s software moat. The infrastructure opportunity keeps getting bigger, but NVIDIA’s dominance is far from guaranteed. 📉 The bear case is that Jensen’s departure erodes NVIDIA’s advantages in supply chain management, innovation, and ecosystem development just as custom silicon gains traction. 📈 The bull case is that NVIDIA has built an enduring computing platform, and the expansion of the AI economy more than offsets any loss of market share. At today’s depressed valuation, management no longer needs to deliver quite as extraordinary a future to generate attractive shareholder returns. That’s it for today! Happy investing! How They Make Money Premium members unlock hundreds of visuals every quarter Want to sponsor this newsletter? Get in touch here . Disclosure: I am long AMD, AMZN, META, MSFT, NVDA, GOOG, and TSM in App Economy Portfolio . I share my ratings (BUY, SELL, or HOLD) with App Economy Portfolio members. Author’s Note (Bertrand here 👋🏼): The views and opinions expressed in this newsletter are solely my own and should not be considered financial advice or any other organization’s views.",
+      "author": "App Economy Insights",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.appeconomyinsights.com/about",
+        "publication_platform": "substack",
+        "section": "transaction_ideas"
+      }
+    },
+    {
+      "id": "substack:fd920042af6a9bd9416e",
+      "source_type": "substack",
+      "source_name": "Latent Space",
+      "title": "[AINews] Anthropic successfully completes largest IPO in history, valued at $1.5T",
+      "url": "https://latent.space/p/ainews-anthropic-successfully-completes-largest-ipo-in-history-valued-at-1-5t/",
+      "published_at": "2026-11-20T07:12:24+00:00",
+      "collected_at": "2026-11-21T00:00:50.253077+00:00",
+      "body": "As we previewed on our Know Before You IPO pod , Anthropic set its IPO price at $83 and today $ANT closed at $97.17, up 17% from the offering price ( drifting -5% to $92.60 after the close) . The $81.3B offering overtook SpaceX's June IPO as the largest in history. Dario and Daniela ( Dario’s remarks , Founders’ letter ) used the occasion to say Anthropic would pace training and deployment based on whether it could keep its systems safe and under human control. Their Class F shares carry 50.1% of voting power on most shareholder matters. Expect the lockup expiries to weigh on the stock price as about a trillion dollars of shares free up over the next year, while Anthropic has to keep the world’s top model ... for now . AI News for 11/18/2026–11/19/2026. We checked 12 subreddits and 544 accounts on X . Search past issues in the AINews archive . AI Twitter Recap Anthropic listed on Nasdaq under $ANT, priced at $83, and opened 34% higher, putting it near a $2T valuation. Listing: Anthropic rang the Nasdaq opening bell ( @kimmonismus , @yacinelearning ). The official account posted a media-only launch item that drew by far the day's highest engagement ( @AnthropicAI ). Opening trade: $ANT opened at $111.50 , which is $28.50 (34.3%) above the $83 IPO price ( @TheRundownAI , @kimmonismus ). Pre-open indications were up ~32% at ~$110 ( @kimmonismus ). Record raise: The $81.3B raised beats SpaceX's $75B (June) as the largest IPO ever ( @TheRundownAI ). Net proceeds: Expected net proceeds are $104.8B including a concurrent private placement. Fully diluted valuation was ~$2T at the open ( @kimmonismus ). AMD investment: AMD agreed to invest $2.5B in Anthropic alongside the IPO. The same morning, AMD fell after a Hunterbrook report that a US-blacklisted Chinese server maker kept shipping newer AMD firmware ( @kimmonismus , source ). CEO statement: Dario Amodei published IPO remarks with a strong safety commitment (details below) ( @AnthropicAI ). Employee wealth: The average employee could be worth >$40M , per SEC filings and investors ( @kimmonismus ). Anthropic's 5,300 founders and employees are now worth more than the bottom third of US households, about 45M families ( @SteveRattner ). Dario Amodei's IPO remarks (official position) Personal framing: Dario and Daniela lost their father to a disease that became curable a few years later. Dario cited CRISPR's decades-long path from discovery to treatment. Core thesis: Powerful AI working with humans \"could compress a century of scientific and medical progress into a decade.\" He stressed that only early results exist so far. Named risks: Misuse by individuals or nation-states, economic disruption, and loss of control. Listed safety work includes bio/cyber safeguards, alignment training, and interpretability (\"like an X-ray\"). Key commitment: \"We will pace the training and deployment of AI systems, taking as long as is necessary to have confidence that they are safe and will remain under human control. We will not bend to either business or political pressure.\" Strategic framing: The IPO \"only strengthens our resolve.\" He restated the \"race to the top,\" which should work \"regardless of whether Anthropic is winning or losing at any given time\" ( @AnthropicAI ). Financials and data points from the S-1 and analysts Low cash burn: Anthropic raised ~$140B and still holds ~$132B on the balance sheet. That implies it \"burnt like under $10 billion\" to get here, per Tanay Jaipuria (Wing VC) on Latent Space. He called the burn the S-1's biggest surprise, \"in a positive way\" ( @FounderClipsHQ ). Bear math from FT Unhedged: A 20% return on ~$1T of compute commitments, at a 40% operating margin and 17% tax, requires ~$602B/yr revenue . That exceeds Alphabet ($471B) and Apple ($478B), and equals two-thirds of the $908B earned by all 76 software/IT companies in the S&P 1500 ( @rohanpaul_ai ). Use of proceeds: Proceeds are slated largely for data center leasing, which makes SpaceXSI (the Colossus landlord) an indirect beneficiary ( @kimmonismus ). A critic noted that Elon \"rented them an entire Colossus cluster\" despite past attacks on Anthropic ( @LinusMixson ). Google's stake: Google owns 13.7% of Anthropic stock ( @NielsRogge ). Teortaxes argued Google could still \"fumble this by continuing to reinforce Anthropic with TPUs\" ( @teortaxesTex ). After-tax reality check: The median employee likely takes home closer to ~$5M after taxes than the ~$50M headline figures suggest ( @futurenomics ). Product standing on IPO day: Anthropic is #1 lab on Code Arena WebDev, with Claude Fable 5.2 at 1824 , +27 over the next lab ( @arena ). Arena also posted a lineage visual from Opus 4.5 to Opus 5.5 Max ( @arena ). Investors and backstory Dustin Moskovitz: The EA funder and major Democratic donor made a critical early bet but is reportedly unhappy, with deep worries about the IPO and fights with Altman, Zuckerberg and Musk ( @teddyschleifer ). The report says Dario and Daniela haven't spoken to him in over a year, and he no longer speaks to Zuckerberg, Altman or Holden Karnofsky ( @teortaxesTex ). Wealth-pledge jokes: Sarcastic takes followed on the giving-away-wealth theme ( @scaling01 ), including \"the real winners of the day are factory farmed chickens\" ( @shakoistsLog ). Sol Bier (small VC): He credits LPs including GM pension for backing him as an unproven manager. He thanked ICONIQ, Coatue and Lightspeed for backing Anthropic \"after the worst stretch in growth investing history\" ( @solbier1 ). Former Anthropic researcher Karina Nguyen recalls him as \"the only VC I've met who understood scaling laws\" ( @karinanguyen ). Aravind Srinivas also vouched for him ( @AravSrinivas ). Other investor posts: General Catalyst framed the company as founded by \"seven people... on a contrarian idea: the safest way to build AI is also the best way\" ( @generalcatalyst ). Altimeter posted congratulations ( @AltimeterCap ). Sarah Guo nodded to Yasmin Razavi's \"victory in total silence\" ( @saranormous ). Retail access: On the eve of the IPO, Sarah Guo's No Priors with Robinhood CEO Vlad Tenev discussed retail access to private upside ( @saranormous , ep ). Company traits: Founded in 2021, the \"first Neolab IPO\" is coding-focused, has no image or video models, and \"not a single cofounder has left\" ( @Yuchenj_UW ). An early Claude was demoed as a Slack bot about 4 years ago ( @iScienceLuvr ). Opinions: bullish / celebratory Best business ever: One take called it \"by far the best business in the history of capitalism to date,\" built \"while building and deploying AI responsibly\" without racing to the bottom ( @MillionInt ). RSI thesis: Anthropic could become more valuable than Alphabet and Meta. Since \"only few companies [will reach] RSI,\" holding ANT makes sense ( @ arohan , @ arohan , @ arohan ). Scaling01 added that \"Anthropic is certainly taking off\" ( @scaling01 ) and \"so fun when the market finally prices in RSI\" ( @scaling01 ). He also joked about \"a 10% discount for a share of the future lightcone\" ( @scaling01 , @scaling01 ). Customer endorsement: Perplexity's CEO said \"Opus 5.5 remains the best model in the industry by a good margin\" ( @AravSrinivas ). The ad: The IPO ad was widely praised, even by critics. One called it \"mind blowingly great\" ( @cloneofsimo ). Teortaxes wrote \"main character energy... I could see Shockley authorizing this ad\" ( @teortaxesTex ). Retail enthusiasm: One user went \"all-in\" with 2 months' salary ( @stablequan , @stablequan ). Another switched subscriptions to Claude as a new shareholder ( @AishvarR ). Generic congratulations: @c_valenzuelab , @reach_vb , @gojira , @fabianstelzer , @arunv30 , @iScienceLuvr , @tarstarr . Social jokes: Friends joked about the new wealth ( @imjaredz , @imjaredz , @kelin_online , @kimmonismus , @scaling01 , @dejavucoder ). Opinions: critical / conditional Open science: Clem Delangue hopes $ANT brings \"more open science and open-source AI\" to \"fight concentration of power, capabilities and wealth\" ( @ClementDelangue ). Competitors: Aidan Gomez hopes Anthropic \"adjusts its strategy to support a healthy community of competitors and a diversity of different ideologies\" ( @aidangomez ). Motives: Jeremy Howard's caricature: \"Anthropic: rule world because no-one else is worthy... that's why I want Google to win\" ( @jeremyphoward ). Teortaxes: Product quality \"further indicts Anthropic\" ( @teortaxesTex ). \"If Ant was based in China, Dario would be Mao's strongest soldier\" ( @teortaxesTex , clarification ). \"Anthropic might need another path to existence... Dario despises [Jensen, Elon, Sam]\" ( @teortaxesTex ). Personnel loss matters little to lab valuations because Claude can onboard staff ( @teortaxesTex , @teortaxesTex ). Anti-Anthropic camp: A defender mocked the \"MisAnthropic Statement\" as weak ( @LinusMixson ). A creator went viral explaining an \"NVIDIA vs Anthropic conspiracy\" ( @digitlartifacts ). Post-IPO drift: \"Do you see them completely change their philosophy after IPO?\" ( @TheTuringPost ). Others noted RSI and x-risk now being discussed on CNBC ( @goodside ), and a request to ship Model 4 or Opus 5.6 \"to celebrate\" ( @kimmonismus ). Neutral: \"so what am i supposed to think of the ant ipo?\" ( @badlogicgames ). Another observer noted that \"the world loves forgetting saudi aramco exists\" ( @imaanxsultan ). The competitive-timing debate (Gemini 4 Neon, GPT-6.2) Timing: Google shipped a cheap, near-Opus-class coding model, Gemini 4 Neon, \"right as anthropic is about to ipo\" ( @DeepDishEnjoyer ). Theo: \"might buy Google stock instead of Ant tomorrow\" (with a not-financial-advice disclaimer) ( @theo , @theo ). A joke that \"$ANT just lost 10%\" on an open Qwen adapter ( @art_zucker ). A user lamenting how many ANT shares their Claude token spend could have bought ( @nptacek ). ThursdAI covered \"$ANT IPO, JensenGate & Gemini NEON\" ( @thursdai_pod ). \"OpenAI lost\" thesis (kimmonismus): The IPO set a public valuation benchmark and absorbed capital OpenAI would want next year. OpenAI's GPT-6.2 release two days earlier was, in this view, likely an attempt to undercut the IPO and was perceived as weak. On this reading, many still see Opus 5.5 and Fable 5.2 as best despite Astra leading in science ( @kimmonismus ). Rebuttal (VraserX): Secondary-market buying doesn't fund Anthropic; only the offering does. Capital is not a fixed pool, and a hot IPO may lift appetite for an OpenAI listing. Intent-to-undercut is speculation. X sentiment is not enterprise revenue. A $2T valuation is future expectations that become a liability if growth or margins disappoint. OpenAI benefits from the enthusiasm without quarterly scrutiny ( @VraserX ). Counter-reply: Kimmonismus restated \"battle, not the war.\" The markets price the future, and the GPT-6.2 release visibly failed to dent the IPO ( @kimmonismus , @kimmonismus ). Capability read: Scaling01 still believes \"Anthropic and OpenAI are further ahead behind closed doors\" ( @scaling01 ). Teortaxes said Anthropic is \"obviously... further ahead internally.\" He also questioned why Anthropic's \"Model 4\" is \"not that far above Mythos 5.2\" despite reporting greater internal acceleration than OpenAI ( @teortaxesTex , @teortaxesTex ). Gemini 4 Neon launch and frontier model reception Lineup and pricing: Google's Gemini 4 family has three models: Carbon at $4/$20 per 1M tokens for the hardest long-horizon work. Neon at $3/$15, positioned as the daily driver for coding and agents. Hydrogen at $1.50/$7.50 for speed. Neon and Hydrogen add an xhigh effort level ( @NewsFromGoogle , @_philschmid ). Artificial Analysis: Neon and Hydrogen occupy the whole cost and time Pareto frontier within the family. The Intelligence Index ranges from 27 at $0.29/task (Hydrogen low) to 61 at $6.44/task (Neon xhigh). Carbon barely varies across effort levels ( @ArtificialAnlys , thread ). Independent evals: Cognition FrontierCode 2.0: 46.2%, within 1 point of Opus 5.5 at ~1/3 the cost ($4.38/task) ( @cognition ). Vals RSI Index: #4. A full run cost $475, vs $1,536 for Fable 5.2 and $1,647 for Opus 5.5 ( @ValsAI , cost ). Scaling01 criticized the index as only 4 tasks, single runs, and noisy ( @scaling01 ). Parallel web research: top score and up to 10x cheaper than the next best ( @p0 ). Humanity's Sixth Sense (Scale): the Gemini 4 family took the top 3 spots ( @ScaleAILabs ). 105 replanted bugs: Neon xhigh 63, Astra max 62.7, Fable 5.2 max 58 ( @PawelHuryn ). KernelBench-Mega: #1 after a 9.5h run, with one grid-sync audit caveat ( @elliotarledge ). Cyber evals: found subtle vulnerabilities with fewer tokens ( @karinanguyen ). AA-Accuracy: on par, but weaker on non-hallucination, \"a smaller model/lower precision smell\" ( @teortaxesTex ). Practitioner reactions: Jeremy Howard: \"best model they, or indeed anyone, has ever made,\" and great for teaching ( @jeremyphoward ). Prefer it over Opus 5.5 as a daily driver ( @aicodeking , @s_scardapane ). Most human-sounding writing model ( @blader ). Pleasant to work with and polite ( @theo , @theo ), plus a pelican effort-level comparison ( @simonw ). Pushback: expensive against subscription limits, with $4.6 spent on 15M tokens for a metaball demo ( @teortaxesTex ), and jargon-heavy outputs ( @johnowhitaker ). Lineage speculation: Neon reportedly derives from Hydrogen and Carbon, with Carbon from Argon and Argon from the unreleased Helium ( @willcb ). Teortaxes guesses Matryoshka-style distillation plus more RL ( @teortaxesTex ). \"Google is back\" narrative: Demis Hassabis responded to Sholto Douglas's apology ( @demishassabis ). The Gemini RL team pinned SemiAnalysis's \"Gemini is Cooked\" piece on their desks ( @SemiAnalysis_ ). Scaling01 estimates Google is now only 1–2 months behind ( @scaling01 ). Other Google launches: Genie 4 world model in the Gemini API: 720p, 24fps, WASD control, 48kHz audio, via WebRTC/WebSocket on the new Live Interactions API ( @_philschmid , @OfficialLoganK ). Tool Retrieval in the Gemini API ( @googledevs ). Computer use in the Gemini Mac app ( @GeminiApp ). Willow quantum contextuality result: magic square game won 98.3% of the time vs a classical limit of 88.9%, on up to 105 qubits ( @sundarpichai ). GPT-6.2 Astra/Sol reception: Arena: Astra Max scores Coding Index 1338 (#3) at $4.75/task, 62% cheaper than GPT-6 Astra; Sol is on the Agent Arena Pareto frontier at $0.90/task ( @arena , @ml_angelopoulos ). UX complaints: Jeremy Howard reverted Solveit to pre-6.2 models ( @jeremyphoward ), and Theo posted a viral \"waiter\" parable about intent misreading ( @theo ). Defenders say it is strong for 3D and game work once its quirks are handled ( @dzhng , @benjamin_warner ). In the Responses API, history should be appended rather than edited to preserve reasoning items ( @OpenAIDevs ). Vals says OpenAI remediated autonomous-weapons targeting misalignment in Astra; Neon and Fable 5.2 still exhibit it ( @ValsAI ). Microsoft Ignite: MAI Code 2 claims 96% of Opus 5.5 at 5% of the cost, alongside GitHub Fusion orchestration, Decision-1.1 router, and Autopilot always-on agent ( @kimmonismus ). Azure Cobalt 200, a 132-core Arm chip for agent workloads ( @kimmonismus ). GPT-Live-1.1 in the API with a $0.02/min standby mode vs the standard $0.05 ( @OpenAIDevs ). Open models, adapters and local inference HF harness-hub LoRA adapters for Qwen3.8-27B (~300MB, Apache 2.0, trained with TRL AsyncGRPOTrainer + OpenEnv): OpenCode adapter: SWE-bench Pro hard 35.3→51.0, Terminal-Bench 2.1 46.4→52.4, median turns 48→13 ( @TeksEdge ). Hermes adapter, thinking off: SWE-bench Pro hard 29.4→43.1 and TB2.1 44.7→58.8, matching base xhigh with 3.5–4.4x fewer tokens ( @yb2698 , @nathanhabib1011 ). Real-task validation: a raycaster FPS built in 2h on an M5 Pro, where the base model failed ( @aartiles24 ). MLX builds reach 156 tok/s ( @ParisMichalas ). DaisyRose-27B (RadixArk): RL-only post-train of Qwen3.8-27B on 1,200 agent tasks, 18 days on 144 H200s. TB2.1 went 73.0→75.5. Q4_K_M is 17.3GB with the MTP head retained ( @TeksEdge ). Marin Mochi (535B-A23B): Latent MoE with an extra RMSNorm. 3:1 sliding-window/global gated GQA, partial RoPE locally and NoPE globally. Short convolutions and exclusive self-attention ( @rasbt ). Tencent Hy4: Base model: 770B MoE with 49B active and 1M context ( @HuggingPapers ). Hy4-flash (220B, 512 experts/16 active) runs on 1×3090 + 64GB RAM at 54–68 tok/s and reaches 251 tok/s on 4×3090. It uses runtime abliteration via a 4MB refusal-direction file ( @superalesha ). Other open model releases: OVH Olala mini 7A1B: European, new architecture, CPU-runnable ( @OVHcloud ). PAN 2 world model with weights, inference and training code, Apache 2.0 ( @IFM_AI ). Apple Depth Pro 2 ( @_akhaliq ). Tessera-small: a 47.6M masked-diffusion pixel-art model ( @RisingSayak ). Jeveration: single-pass image generation from a frozen VLM, 78ms on H200 ( @multimodalart , @a_uselis ). Qwen4-Max: 2.4T MoE, 71B active ( @togethercompute ). Local runtimes and inference: Unsloth Desktop on AMD XDNA 2 NPUs, claiming 2–4x less energy per token ( @UnslothAI ). QuixiInfer runs DeepSeek-V4.1-Flash on a single 5090 at 25–30 tok/s with 256k context ( @QuixiAI ). An OpenClaw setting to keep reasoning content raised its score 44% ( @joelniklaus ). Open-weights advocacy: ibab argued that models trained on the commons should be returned to the commons ( @ibab ). Agents, RSI and evals research OpenAI AI-for-research transparency blog: Experiments per experimenter improved only ~1.68x. The nanoGPT speedrun is a weak \"hardest\" ECI task. The 35% unassisted job-launch success rate is puzzling ( @eliebakouch ). A detailed rebuttal on acceleration metrics: agent workdays grew 9–16x and swarms of 8+ agents went from 1.9% to 35.8% ( @scaling01 ). Neel Nanda praised the transparency ( @NeelNanda5 ). A diminishing-returns framing: agent uplift should exceed the spend multiple ( @testingham ). alphaXiv agent preprint server: ~1,000 agents from 35 labs produced 936 papers over 12 weeks and formed their own journal. They beat humans on rigor (9.0 vs 7.0, AI-judged), while humans won on novelty ( @askalphaxiv , @SRSchmidgall ). Self-improving harnesses: Google GUARD: 80.8% on 43 SDK tasks, +6.28 over Meta-Harness with 54.5% fewer tokens ( @omarsar0 ). Safe Personal RSI gate rejected 20/21 risky updates ( @dair_ai ). Perplexity Brain self-writing skills: in an 8-week RCT, tool failures fell 11% and dissatisfied threads fell 7.6% ( @AravSrinivas ). ML-engineering agents: Meta MLE agents ran 1,097 experiments and accepted 325, with +0.23% live search volume ( @dair_ai ). MIT/NVIDIA QDA agent-designed quantization recovered 98.3% of FP8 at NVFP4 on GLM-5.3-Flash ( @omarsar0 ). AutoRLBench: agents detect unhealthy runs 82.6% of the time but find the root cause only 28.2% ( @ZhihuFrontier ). Benchmarks and RSI essays: RCTBench: 3 of 9 models reached 1,000 guests in RollerCoaster Tycoon 2 ( @ValsAI ). Reward-hack defenses are fragile, broken by a comma-vs-space change ( @guidelabsai ). Stripe open-sourced integration evals ( @emilygsands ). ParseBench-2 for document parsing ( @jerryjliu0 ). DeepMind's Tim Genewein essay lays out four paths from AGI to ASI ( @TheRundownAI ). Representation learning: SADL loss cuts JEPA collapse from 50% to 0% ( @DavidSunok47 ). JEPA latent maps ( @mengyer ). Goodfire neuron-pole atlas covering 10M neuron poles in Qwen3.6 ( @GoodfireAI ). Ops: OpenAI's Codex Performance Factory ran 1,700+ regression investigations and found 600+ root causes in ~3 months ( @OpenAIDevs ). Compute, policy and security Chip exports: BIS approved ~900K H200/MI325X chips for China. Over 30% went to designated Chinese Military Companies, and every license was rated \"low\" diversion risk ( @ChrisRMcGuire ). Kimi dropped a $150M Blackwell lease in Indonesia ( @jukan05 ). ByteDance/Samsung and Kunlun chip projects halted ( @jukan05 ). Nvidia is in talks to buy Inception (diffusion LLMs) for >$500M after Jensen Huang's departure ( @steph_palazzolo ). Datacenter physical limits (SemiAnalysis): A filled GB300 NVL72 weighs 1,590kg and loads ~22kPa, vs the 7–12kPa TIA-942 standard ( @SemiAnalysis_ ). The Texas governor-elect backs a datacenter permit moratorium, which could mean an 8–12 month freeze ( @SemiAnalysis_ ). Infra results: Lambda co-packaged optics on 10K+ Blackwell Ultra GPUs: same throughput, up to 10% lower pod latency, 15°C cooler ( @LambdaAPI ). Baseten WavePP: up to 2.9x prefill throughput ( @baseten ). Epoch: GB300 delivers ~25x H100 inference capacity with only 2.5x the FLOP/s ( @dl_weekly ). DiLoCo on MaxText uses 65x less bandwidth ( @Ar_Douillard ). Security incidents: Bridgewater is managing money on a 1-in-3 chance of an economically destabilizing cyberattack within a year ( @RyanFedasiuk ). Dragos seeded 2M canaries, exposing 3 compromised providers and ZDR violations ( @hdmoore ). Prime Intellect compromised, per an OpenRouter disclosure ( @theo ). European Commission hacked via ARTEX ( @AndrewCurran_ ). Counterpoint: AI outages mostly reflect defenders patching ( @random_walker ). Sakana launched a Security Research Group ( @hardmaru ). Demand signal: The Stripe AI Index shows aggregate +103% YoY and median +41%, cooling to ~80% annualized ( @emilygsands ). AI Reddit Recap /r/LocalLlama + /r/localLLM Recap 1. Open-Source Audio Models for Local Speech Workflows New voice isolation model from Inworld (Activity: 860): Inworld released an Apache-2.0 voice isolation model on Hugging Face , with a demo HF Space . It supports 48 kHz audio and ships two variants: a 64M offline/non-streaming model using 8s chunks and a 58M real-time model using 20ms chunks, trained on roughly 10k hours of audio. The post emphasizes it is an isolation model, not a speech enhancement/restoration system like Resemble Enhance; one commenter reported successful cleanup of a degraded voice recording when combining it with an NVIDIA restoration model. Commenters were interested in how it compares with NVIDIA’s recently released commercially friendly NVIDIA-NemotronLabs-RE-USE model for restoration/enhancement-style workflows. There was also practical enthusiasm around use cases such as removing background audience/laugh tracks and salvaging old personal recordings. A commenter linked NVIDIA NemotronLabs RE-USE , a recently released commercially friendly restoration/enhancement model on Hugging Face: https://huggingface.co/nvidia/NVIDIA-NemotronLabs-RE-USE . They raised the technical comparison question of how Inworld’s voice-isolation model performs against NVIDIA’s model on the same denoising/restoration tasks. One user shared a comparison of Inworld vs NVIDIA Nemotron RE-USE vs Sidon : https://youtu.be/pnaCz0dZf9I . They noted that the 1GB Sidon model \"enhances the audio spectrum and elevates the voice\" while running quickly on CPU, and claimed Sidon outperformed NVIDIA Nemotron RE-USE on difficult real-world recordings such as far-field smartphone voice memos captured in a noisy car. A technically relevant caveat was raised about evaluation data: the demo appears to use synthetic noise added on top , which may not reflect naturally degraded audio with muffling, reverberation, distance, and complex background noise. The commenter suggested practical post-processing strategies such as overlaying outputs from multiple models or retaining some background noise to preserve perceived authenticity. Kitten-TTS-2 Pico, Nano, Mini: SOTA super-tiny Apache 2.0 TTS, up to 16 languages (Pico is just 4 MB) (Activity: 471): KittenML released Kitten-TTS-2 code and weights under Apache 2.0, with three very small multilingual TTS checkpoints: Pico ~7M params / 4 MB / 8 languages , Nano ~17M / 8.8 MB / 8 languages , and Mini ~80M / 48 MB / 16 languages . The project claims Pico runs faster than real time on a single smartphone CPU thread, targeting Raspberry Pi/phone-class deployment; resources include GitHub , an HF demo , and HF weights for Pico , Nano , and Mini . Early testing feedback says English/German quality is good, but punctuation/prosody handling may be weak: it reportedly “ran everything together into a single sentence” and mostly ignored commas/full stops. One commenter asked whether voice cloning is supported; the post does not indicate cloning support. A user testing English and German reported generally good audio quality, but found the model nearly ignored punctuation: commas and full stops were mostly not reflected in prosody, causing text to be spoken as one continuous sentence. This suggests sentence-boundary handling or punctuation-to-prosody modeling may be a practical weakness despite the small model size. One commenter compared it with Kokoro for pronunciation of New Zealand town names , saying Kokoro frequently mispronounces them while Kitten-TTS-2 handled them “surprisingly well.” They also noted interest in future Mandarin support and more varied male voice timbres, especially younger/playful voices rather than deeper male presets. AudioGhost v1.2: remove any sound from audio or video by typing what it is (local, open source, built on Meta's SAM-Audio) (Activity: 454): AudioGhost v1.2 is a local, open-source web app around Meta’s SAM-Audio that separates/removes user-described sounds from audio/video via text prompts, e.g. “background music” or “dog barking,” with export to WAV / FLAC / MP3 or video with a recomposed soundtrack ( GitHub ). The update adds multi-sound extraction into separate tracks with mute/solo/volume controls, timeline positive/negative guidance, persistent sessions, a generated “everything else” stem instead of subtraction, and claims 4–6x speedup over the initial release. The author removed SAM-Audio’s auxiliary ImageBind, CLAP, and judge models, avoiding ~ 25 GB of downloads and reducing VRAM needs to “a bit over 4 GB ” for the small model on NVIDIA GPUs, at the cost of lower/less stable quality versus the full official pipeline; macOS currently runs CPU-only. Commenters highlighted the practical limitation that the project appears NVIDIA-first, frustrating AMD users. Others compared it to tools like MVSEP , noting the appeal of arbitrary text-conditioned separation, but raised concerns about SAM-Audio quality on hard cases such as overlapping same-gender multi-speaker extraction even with time-window hints. AMD users noted a practical deployment limitation: the project appears to list Nvidia under requirements, implying CUDA dependency and likely no straightforward ROCm/AMD GPU path. This is a key adoption blocker for local inference workflows on non-Nvidia hardware. One commenter compared the underlying Meta SAM-Audio approach against a difficult real-world speaker-extraction case: 3–4 overlapping male speakers, even when providing per-speaker time windows. They reported SAM-Audio was not “garbage” but failed to produce sufficiently clean cuts, raising the question of whether AudioGhost improves multi-speaker separation quality beyond the base model. Several users framed AudioGhost against existing separation tools such as MVSEP , open-source source-separation models, and HTDemucs , asking whether text-prompted arbitrary sound removal can handle less-common targets like dog barking, instrument stems, or general noise cleanup. The technically relevant concern is whether a prompt-conditioned separator can generalize beyond fixed stem classes and potentially replace specialized music/audio denoising pipelines like Adobe Podcast or Demucs-style models. 2. Tencent Hy4-flash Local Deployment tencent/Hy4-flash · Hugging Face (Activity: 501): Tencent released tencent/Hy4-flash on Hugging Face as a cost-focused Hy-family MoE-style model with 220B total parameters, including 64B Engram parameters, and only 12B active parameters per token. Commenters clarified this as roughly 156B + 64B n-gram/Engram capacity, with native text+image input, text generation, and up to a 1M token context window; one comparison cited Qwen Flash Next at 125B + 51B n-gram parameters with 6B active parameters. Commenters were positive about seeing a new sub- 250B total-parameter model with Engram support, though the comparison to Qwen Flash Next highlights that Hy4-flash trades a larger active-parameter footprint for its Tencent Hy architecture/features. Hy4-flash is described as a 220B total-parameter multimodal model with 64B Engram/n-gram parameters and only 12B active parameters per token, supporting text+image input, text generation, and up to a 1M token context window. One commenter breaks this down as roughly 156B core parameters plus 64B n-gram parameters, comparing it to Qwen Flash Next at 125B + 51B n-gram parameters but only 6B active parameters. A technical concern raised is runtime memory footprint under 4-bit quantization if the Engram/n-gram table can be stored on SSD rather than fully resident in RAM/VRAM. This implies interest in separating dense/MoE weights from retrieval-style n-gram storage to make the 220B total footprint more practical for local inference. Commenters place Hy4-flash in the same rough local-inference capability class as Qwen Flash Next and DeepSeek-style flash/MoE models , but note that practical local use may depend on whether expert offloading can be made to work. The key implementation challenge is likely keeping only the 12B active-per-token path resident or efficiently streamed while handling the much larger inactive expert/Engram parameter pool. Hy4-flash quants are down from 70 to 49 GB, run on a 64Gb vRAM (Activity: 337): A new Atomic.Chat quant of Tencent Hy4-flash reduces in-memory weights from Tencent GGUF builds’ ~ 72–105 GB to 49.1 GB , targeting 64 GB VRAM systems by quantizing routed experts to ~ 2.3 bpw while keeping non-expert weights at Q8_0 . Hy4-flash is a 220B -parameter multimodal MoE: 155.5B network params with 512 routed experts / 16 active per token / 11.3B active params, plus a 63.5B -param Engram bigram/trigram embedding table stored separately and streamed from SSD; Tencent/AngelSlim GGUFs remain preferable for 96–128 GB hosts ( AngelSlim/Hy4-flash-GGUF ). Commenters frame Hy4-flash as better suited to communication and document work, while Qwen Flash Next/QFN is viewed as stronger for coding and agentic coding; one notes Hy4’s creators do not position it as a coding model, making it a “hard skip” for developer-focused use. Another commenter suggests the 49 GB build may make the model viable on consumer setups with 16+64 GB memory/VRAM, especially for users seeking a non-Qwen-style alternative. Commenters compared Hy4 Flash against Qwen Flash Next (QFN) and suggested a workload split: QFN for coding/agentic coding , while Hy4 may be better suited to communication and document-centric tasks. One commenter noted that Hy4 is reportedly not positioned by its creators as a coding model, making it a poor fit for developers despite the reduced quant size. A user reported hands-on coding results where Qwen Flash Next ud-q4 substantially outperformed Hy4 Flash via the free OpenCode version: QFN completed tasks, while Hy4 allegedly claimed completion but inserted stubs, left bugs, and behaved “lazy.” This is a qualitative benchmark, but it directly flags implementation reliability issues for coding workflows. The reduced Hy4 quant size from roughly 70 GB to 49 GB was seen as potentially enabling execution on systems with around 64 GB VRAM or hybrid memory setups such as 16+64 GB . One commenter compared the target niche to a Q3.8FN -style model that avoids “Qwen-ese,” while mentioning Nemotron 3.5 Bolt as only a modest improvement in that role. 3. Local-First Vision and Document AI Tools Goes further with Koharu, the local-first manga translator with AI agents built in! (Activity: 470): Koharu is a local-first manga translation/editor app ( GitHub , MIT/Apache-2.0) rebuilt with a Photoshop/Clip Studio-like GPU-rendered canvas, direct page lettering, character-level text styling, reshaped text frames, layers/history, lasso/marquee selection, Generative Fill, and a Remove brush. It runs LLMs in-process via llama.cpp —defaulting to Index-Translate 9B, with support for Gemma 4, Qwen 3.x, LFM3, or external Ollama/LM Studio—and uses LaMa or FLUX.3 Klein / Qwen-Image through stable-diffusion.cpp for inpainting, with CUDA/ROCm/Metal/Vulkan support and claimed throughput of ~ 1s/page after model load. An integrated agent can proofread/fix pages and is exposed via MCP, enabling control from tools like Claude Code or Codex. Commenters highlighted a common failure mode in AI manga translation: per-page translation loses plot/character-name consistency, suggesting chapter-level context, rolling summaries, or project notes to preserve continuity. Another user requested restoring CPU execution for Koharu-managed models because limited VRAM prevents keeping both the app’s models and a separate llama.cpp translation model loaded simultaneously. A commenter highlights a common failure mode in AI manga translation: per-page translation loses global context , causing inconsistent character names and nonsensical plot continuity. They suggest letting Koharu ingest the full chapter and maintain a project-level notes/summary file, similar to modern chat harnesses using context-window management or compacted summaries, to improve translation consistency across chapters. Another technical concern is resource scheduling for local models: one user says they miss the ability to run Koharu-handled models on CPU , because their GPU VRAM is insufficient to keep Koharu’s models and a separate translation model loaded simultaneously. Their current workaround is repeatedly restarting Koharu so they can load the translation model via llama.cpp , implying a need for better CPU/GPU placement controls or model unloading. Cloudflare releases the weights of Clairic, its AI that reads invoices and receipts (Activity: 298): Cloudflare released Clairic model weights for AI-based invoice/receipt reading, with the original announcement at blog.cloudflare.com/open-clairic . Commenters identify the released models as post-trained Qwen-based variants—notably Qwen 3.8-27B and Qwen 3.5-9B —and note the Apache 2.0 license as important for on-prem / in-house deployment in regulated environments such as banking, where documents cannot be sent to external APIs. Commenters preferred linking the original Cloudflare source rather than secondary summaries, and raised interest in multilingual performance—especially whether the Qwen base makes Turkish/non-English invoices viable. Commenters clarified that Clairic is based on post-trained Qwen models , specifically Qwen 3.8-27B and 3.5-9B , rather than being a model trained entirely from scratch. They also pointed readers to Cloudflare’s original technical announcement: https://blog.cloudflare.com/open-clairic . A technical licensing/deployment point raised was that Clairic being Apache 2.0 and runnable in-house is significant for regulated sectors such as banks, where invoices and receipts often cannot be sent to third-party APIs. One commenter also noted that because the base model is Qwen , Turkish and other non-English invoice handling may be plausible, though they asked whether anyone had tested multilingual invoice extraction yet. Less Technical AI Subreddit Recap /r/Singularity, /r/Oobabooga, /r/MachineLearning, /r/OpenAI, /r/ClaudeAI, /r/StableDiffusion, /r/ChatGPT, /r/ChatGPTCoding, /r/aivideo, /r/aivideo 1. Gemini 4 Neon Launch and Vertex Access Introducing Gemini 4 Neon. (Activity: 1472): The post announces “Gemini 4 Neon” and points readers to a benchmarks thread ( Reddit link ) plus an attached benchmark screenshot ( image ). The provided text does not include model-card details, architecture, context length, pricing, release channel, or numeric benchmark scores, so the technically verifiable content is limited to the announcement and linked benchmark artifacts. Top comments focus less on benchmark methodology and more on Google’s release velocity , describing the cadence as “rapid fire” and “crazy.” One commenter speculates that internal leadership/safety dynamics involving Demis Hassabis and Larry Page may be influencing the pace, but this is unsupported conjecture rather than technical evidence. Yep! Gemini 4 Neon is up on the Vertex! (Activity: 305): The image is a Google Vertex AI configuration screen showing an “API connection successful!” banner with region set to global and the model field listing gemini-4-neon , suggesting the model is visible/usable in Vertex before an official launch. The post claims Gemini 4 Neon will be priced at $3/M input tokens and $15/M output tokens, making it cheaper than the upcoming Dec. 1 pricing for Argon/Carbon at $4/M input and $20/M output. Commenters questioned Google’s model naming scheme, saying names like Neon/Argon/Carbon do not clearly communicate model size or tier compared with Anthropic’s Opus/Haiku or OpenAI-style naming. Others speculated about censorship and complained that Google may be discounting its best model while older models suffer from high demand, 429 errors, and perceived quality drops. Users note Google’s Gemini variant naming is opaque compared with Anthropic’s Opus/Haiku size tiers or OpenAI’s apparent size progression, making it hard to infer whether Neon , Hydrogen , Argon , or Carbon is larger or more capable without memorization or external docs. One commenter reports early hands-on impressions via FF 5.6 : Gemini 4 Neon produces strong NSFW prose and is faster than Argon and Carbon , but slower than Hydrogen . They also describe it as more lightly censored than expected, but weaker in reasoning/roleplay coherence than Argon , Carbon 4 , Opus 5.5 , and possibly Hydrogen . A pricing/capacity concern is raised: Google allegedly discounted its best model by 50% while not discounting weaker models, driving demand toward Argon and Carbon and causing degraded availability/quality, including 429 rate-limit errors and perceived quality drops. 2. China’s Open-Source and Domestic AI Stack Xi Jinping Called to Support Open-Source (Activity: 2295): Xi Jinping’s first appearance at China’s World AI Conference framed open-source AI as part of China’s global AI governance strategy: open models as public goods, training/seminars for developing countries ( 5,000 slots over five years), and cooperation centers with blocs including ASEAN, the Arab League, African Union, CELAC, SCO, and BRICS. The doctrine contrasts China’s preferred “openness and win-win cooperation” with perceived U.S.-led restrictions, while also calling for human control and governance mechanisms for AI loss-of-control risks. Top commenters argued that state-backed open source could undercut the business models of closed U.S. AI firms if Chinese models become “reasonably close” in capability, even without matching frontier systems. Others viewed the strategy as a sophisticated geopolitical move: using open models, training programs, and technical standards as soft power and influence infrastructure. Commenters framed China’s open-model push as an AI foreign-policy strategy , where open weights and tooling function as public goods, model training ecosystems create soft power, and technical standards become a mechanism for geopolitical influence. One commenter argued this could undermine the business model of closed US AI labs if Chinese-backed open models get “reasonably close” in capability rather than fully matching frontier systems. A technically specific counterpoint noted that China has reportedly imposed export controls on frontier open-source AI models , citing thresholds of ≥10^26 FLOPs or ≥2T parameters . According to the linked Cloud Security Alliance note, such model weights/code may no longer leave China or be newly open-sourced without MOFCOM review, while already-public releases remain exempt: https://labs.cloudsecurityalliance.org/research/csa-research-note-china-ai-export-controls-announcement-48-2/ DeepSeek V5 could make history as the first major AI model fully trained on Huawei Ascend 950 chips (Activity: 625): The image ( link ) is a symbolic/anime-style illustration, not a technical diagram: it depicts a “Huawei Ascend 950” data-center throne scene to represent the claim that DeepSeek V5 may be trained primarily or entirely on Huawei Ascend 950 accelerators. The post cites a Chinese media report claiming DeepSeek and Huawei are preparing an Ascend-based training stack—potentially involving CUDA alternatives, low-level operator work, TileLang, and inter-chip communication optimizations—which would be significant if it enables frontier-scale training on domestic Chinese AI hardware rather than only inference. Commenters are skeptical about feasibility and timelines, with one joking that training might finish in “2040,” while another argues U.S. export restrictions may have accelerated China’s domestic AI hardware/software ecosystem by forcing labs toward Huawei and other local stacks. One commenter also questions novelty, asking whether LongCat had already done native Huawei pretraining. Commenters questioned the premise that DeepSeek V5 would be the first major model fully trained on Huawei hardware, citing LongCat as a possible prior example of “full native pretraining on Huawei” . The thread did not provide concrete run details such as chip generation, cluster size, token count, or training throughput, so the claim remains an unresolved technical comparison point. A substantive theme was that U.S. export controls may have accelerated China’s domestic AI compute stack by forcing labs toward Huawei Ascend rather than NVIDIA. One commenter argued Ascend chips do not need to match NVIDIA peak performance if they are “good enough” and available at scale, comparing the dynamic to AMD/Intel alternatives where supply and ecosystem investment can offset lower per-chip performance. Another technical-adjacent claim was that advances in non-ASML lithography could eventually improve Chinese accelerator manufacturing, with a commenter referencing a Japanese machine intended to compete with ASML EUV systems. The discussion framed lithography access as a potential long-term bottleneck for Huawei Ascend-class chips, though no specific tool vendor, node target, or production timeline was provided. 3. AI-Built Worlds and Sim-to-Real Systems ETH Zurich researchers use reinforcement learning to teach a 5-ton John Deere loader to perform wheelies, balance on two wheels, navigate 75 cm obstacles, and land safely. The AI transferred directly from simulation to the real machine without further training. (Activity: 1448): ETH Zurich researchers reportedly trained a reinforcement-learning controller in simulation to command a 5-ton John Deere loader through highly dynamic maneuvers: wheelies, two-wheel balancing, traversal of 75 cm obstacles, and controlled landing. The key technical claim is zero-shot sim-to-real transfer: the policy was deployed on the physical machine without additional real-world training , implying unusually strong dynamics modeling, domain randomization, or robustness in the simulator-to-hardware pipeline. The only technically relevant comment highlights that the work likely depends on very high-fidelity physics simulation; other top comments are mostly jokes/speculation about LLMs and self-driving cars. A commenter highlighted the sim-to-real aspect, noting that transferring a learned controller directly onto a 5-ton John Deere loader likely required very high-fidelity physics simulation . The technical implication is that the reinforcement learning setup must have modeled vehicle dynamics, contacts, balance, and obstacle interactions accurately enough to avoid additional real-world training. A guy used AI to recreate the entire world in minecraft at 1:1 scale. every building on earth, including your house (Activity: 2100): A project at worldcraft.gg claims to use an AI “world-to-Minecraft” generator trained on map data to recreate the Earth in Minecraft at 1:1 scale, including buildings and purportedly furnished interiors; the source post is from @cdngdev on X . Technical skepticism centers on input-data limits: public map/photogrammetry sources often lack clean 3D geometry for residential buildings, and essentially never contain interior layouts/furnishings, implying smaller structures and interiors would need to be inferred, hallucinated, or procedurally generated rather than reconstructed. Top comments are skeptical, with one user noting that even Google Maps has a poor 3D model of their house, so “furnished interiors” are likely generated rather than real. Another commenter argues the claim is less meaningful if the generated world cannot be downloaded or inspected directly. Commenters questioned the input-data plausibility: Google Maps/photogrammetry often lacks clean 3D geometry for ordinary houses , so a claimed 1:1 Minecraft Earth with “furnished interiors” would likely require hallucinated/procedurally generated small buildings rather than reconstruction from real-world data. A technical skepticism point compared the project to Microsoft Flight Simulator , noting MSFS reportedly uses over 2 PB of world texture/terrain data . The commenter argued that storing a block-level Minecraft reconstruction of the entire Earth—plus processing it through AI/API pipelines—would likely require even more storage and compute, making the claim implausible without major compression, procedural generation, or selective detail. A game with a galaxy of 150 million star systems in a 299 kB HTML file (Activity: 1059): Voidstruck is a browser-based procedural space exploration game ( play , GitHub ) implemented as a single 299 kB HTML file with no external assets/libraries, using seeded procedural generation for a claimed 150M star systems, landable planets, synthesized music, bases/mining/upgrades/combat, and offline play. The author says it was built in 4 days with Claude “Fable 5.2” generating code, targets desktop Chrome/Edge with WebGPU, and procedurally generates stars/planets/moons/names and audio at runtime rather than shipping images/models/audio. Comments mainly compare it to a tiny/“Temu” No Man’s Sky , and one commenter clarifies that the small download size is plausible because assets are not preloaded but generated via procedural math at runtime, consuming memory/size only after generation. Another commenter links a separate 184 kB HTML synthesizer/sequencer/riff generator, joking the combined projects would still fit under half a floppy disk. A commenter clarified that the tiny 299 kB HTML size is plausible because the game likely stores procedural generation code and seeds , not precomputed assets: assets are generated at runtime via math when opened or explored, so the download remains small even though generated geometry/textures occupy memory once instantiated. Another commenter linked a related compact project: a full synthesizer, sequencer, and riff generator implemented in 184 kB of HTML, arguing that both projects together would still fit comfortably under floppy-disk-scale storage. Link: https://www.reddit.com/r/ClaudeGameDev/s/8LkPi7Po76 One technically oriented critique asked the author/agents to use JavaScript modules for maintainability, implying that even single-file or agent-generated demos benefit from modular boundaries and import/export structure as complexity grows.",
+      "author": "swyx .ai",
+      "symbols": [],
+      "engagement": {},
+      "metadata": {
+        "publication_url": "https://www.latent.space",
+        "publication_platform": "substack",
+        "section": "industry_changes"
+      }
+    },
     {
       "id": "x:c9e51d45cac0528724db",
       "source_type": "x",
@@ -2449,256 +2827,6 @@
         "investor_type": "open_source_builder",
         "coverage": "Apple MLX and open-source machine learning",
         "engagement_score": 63
-      }
-    },
-    {
-      "id": "price:8bdf6053989dfa9fad52",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 跌幅前十 2026-11-19",
-      "url": "https://finance.yahoo.com/markets/stocks/losers/",
-      "published_at": "2026-11-19T21:00:00+00:00",
-      "collected_at": "2026-11-20T00:01:32.140858+00:00",
-      "body": "1. ZM close 83.82; previous 92.68; change -9.5598%\n2. NBIS close 96.919998; previous 106.959999; change -9.3867%\n3. TWLO close 178.779999; previous 195.929993; change -8.7531%\n4. GRPN close 10.84; previous 11.85; change -8.5232%\n5. PAR close 20.99; previous 22.940001; change -8.5004%\n6. TBLA close 1.85; previous 2.02; change -8.4158%\n7. ESTC close 76.330002; previous 83.010002; change -8.0472%\n8. YELP close 18.559999; previous 19.99; change -7.1536%\n9. PTRN close 18.860001; previous 20.299999; change -7.0936%\n10. HKD close 1.19; previous 1.28; change -7.0312%",
-      "author": "",
-      "symbols": [
-        "ZM",
-        "NBIS",
-        "TWLO",
-        "GRPN",
-        "PAR",
-        "TBLA",
-        "ESTC",
-        "YELP",
-        "PTRN",
-        "HKD"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "losers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-11-19",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "ZM",
-            "price_date": "2026-11-19",
-            "close": 83.82,
-            "previous_close": 92.68,
-            "change_amount": -8.860001,
-            "change_percentage": -9.5598,
-            "url": "https://finance.yahoo.com/quote/ZM"
-          },
-          {
-            "ticker": "NBIS",
-            "price_date": "2026-11-19",
-            "close": 96.919998,
-            "previous_close": 106.959999,
-            "change_amount": -10.040001,
-            "change_percentage": -9.3867,
-            "url": "https://finance.yahoo.com/quote/NBIS"
-          },
-          {
-            "ticker": "TWLO",
-            "price_date": "2026-11-19",
-            "close": 178.779999,
-            "previous_close": 195.929993,
-            "change_amount": -17.149994,
-            "change_percentage": -8.7531,
-            "url": "https://finance.yahoo.com/quote/TWLO"
-          },
-          {
-            "ticker": "GRPN",
-            "price_date": "2026-11-19",
-            "close": 10.84,
-            "previous_close": 11.85,
-            "change_amount": -1.01,
-            "change_percentage": -8.5232,
-            "url": "https://finance.yahoo.com/quote/GRPN"
-          },
-          {
-            "ticker": "PAR",
-            "price_date": "2026-11-19",
-            "close": 20.99,
-            "previous_close": 22.940001,
-            "change_amount": -1.950001,
-            "change_percentage": -8.5004,
-            "url": "https://finance.yahoo.com/quote/PAR"
-          },
-          {
-            "ticker": "TBLA",
-            "price_date": "2026-11-19",
-            "close": 1.85,
-            "previous_close": 2.02,
-            "change_amount": -0.17,
-            "change_percentage": -8.4158,
-            "url": "https://finance.yahoo.com/quote/TBLA"
-          },
-          {
-            "ticker": "ESTC",
-            "price_date": "2026-11-19",
-            "close": 76.330002,
-            "previous_close": 83.010002,
-            "change_amount": -6.68,
-            "change_percentage": -8.0472,
-            "url": "https://finance.yahoo.com/quote/ESTC"
-          },
-          {
-            "ticker": "YELP",
-            "price_date": "2026-11-19",
-            "close": 18.559999,
-            "previous_close": 19.99,
-            "change_amount": -1.43,
-            "change_percentage": -7.1536,
-            "url": "https://finance.yahoo.com/quote/YELP"
-          },
-          {
-            "ticker": "PTRN",
-            "price_date": "2026-11-19",
-            "close": 18.860001,
-            "previous_close": 20.299999,
-            "change_amount": -1.439999,
-            "change_percentage": -7.0936,
-            "url": "https://finance.yahoo.com/quote/PTRN"
-          },
-          {
-            "ticker": "HKD",
-            "price_date": "2026-11-19",
-            "close": 1.19,
-            "previous_close": 1.28,
-            "change_amount": -0.09,
-            "change_percentage": -7.0312,
-            "url": "https://finance.yahoo.com/quote/HKD"
-          }
-        ]
-      }
-    },
-    {
-      "id": "price:46cd00672cca0ee135ba",
-      "source_type": "price",
-      "source_name": "Yahoo Finance",
-      "title": "SaaS / software / Internet 涨幅前十 2026-11-19",
-      "url": "https://finance.yahoo.com/markets/stocks/gainers/",
-      "published_at": "2026-11-19T21:00:00+00:00",
-      "collected_at": "2026-11-20T00:01:32.140858+00:00",
-      "body": "1. YMM close 9.06; previous 8.38; change 8.1146%\n2. PANW close 361.730011; previous 339.920013; change 6.4162%\n3. OKTA close 206.850006; previous 195.610001; change 5.7461%\n4. NTSK close 24.799999; previous 23.504999; change 5.5095%\n5. RBRK close 114.559998; previous 110.0; change 4.1455%\n6. SABR close 1.78; previous 1.71; change 4.0936%\n7. ZS close 205.710007; previous 197.830002; change 3.9832%\n8. AVPT close 16.940001; previous 16.389999; change 3.3557%\n9. S close 24.01; previous 23.34; change 2.8706%\n10. CRWD close 243.460007; previous 237.029999; change 2.7127%",
-      "author": "",
-      "symbols": [
-        "YMM",
-        "PANW",
-        "OKTA",
-        "NTSK",
-        "RBRK",
-        "SABR",
-        "ZS",
-        "AVPT",
-        "S",
-        "CRWD"
-      ],
-      "engagement": {},
-      "metadata": {
-        "section": "transaction_ideas",
-        "market_mover_type": "gainers",
-        "market_session": "regular_close_end_of_day",
-        "price_date": "2026-11-19",
-        "comparison": "current close vs previous stored trading-day close",
-        "retention_trading_days": 3,
-        "rolling_prices_path": "/home/runner/work/idea-research/idea-research/data/prices/rolling_prices.json",
-        "records": [
-          {
-            "ticker": "YMM",
-            "price_date": "2026-11-19",
-            "close": 9.06,
-            "previous_close": 8.38,
-            "change_amount": 0.68,
-            "change_percentage": 8.1146,
-            "url": "https://finance.yahoo.com/quote/YMM"
-          },
-          {
-            "ticker": "PANW",
-            "price_date": "2026-11-19",
-            "close": 361.730011,
-            "previous_close": 339.920013,
-            "change_amount": 21.809998,
-            "change_percentage": 6.4162,
-            "url": "https://finance.yahoo.com/quote/PANW"
-          },
-          {
-            "ticker": "OKTA",
-            "price_date": "2026-11-19",
-            "close": 206.850006,
-            "previous_close": 195.610001,
-            "change_amount": 11.240005,
-            "change_percentage": 5.7461,
-            "url": "https://finance.yahoo.com/quote/OKTA"
-          },
-          {
-            "ticker": "NTSK",
-            "price_date": "2026-11-19",
-            "close": 24.799999,
-            "previous_close": 23.504999,
-            "change_amount": 1.295,
-            "change_percentage": 5.5095,
-            "url": "https://finance.yahoo.com/quote/NTSK"
-          },
-          {
-            "ticker": "RBRK",
-            "price_date": "2026-11-19",
-            "close": 114.559998,
-            "previous_close": 110.0,
-            "change_amount": 4.559998,
-            "change_percentage": 4.1455,
-            "url": "https://finance.yahoo.com/quote/RBRK"
-          },
-          {
-            "ticker": "SABR",
-            "price_date": "2026-11-19",
-            "close": 1.78,
-            "previous_close": 1.71,
-            "change_amount": 0.07,
-            "change_percentage": 4.0936,
-            "url": "https://finance.yahoo.com/quote/SABR"
-          },
-          {
-            "ticker": "ZS",
-            "price_date": "2026-11-19",
-            "close": 205.710007,
-            "previous_close": 197.830002,
-            "change_amount": 7.880005,
-            "change_percentage": 3.9832,
-            "url": "https://finance.yahoo.com/quote/ZS"
-          },
-          {
-            "ticker": "AVPT",
-            "price_date": "2026-11-19",
-            "close": 16.940001,
-            "previous_close": 16.389999,
-            "change_amount": 0.550001,
-            "change_percentage": 3.3557,
-            "url": "https://finance.yahoo.com/quote/AVPT"
-          },
-          {
-            "ticker": "S",
-            "price_date": "2026-11-19",
-            "close": 24.01,
-            "previous_close": 23.34,
-            "change_amount": 0.67,
-            "change_percentage": 2.8706,
-            "url": "https://finance.yahoo.com/quote/S"
-          },
-          {
-            "ticker": "CRWD",
-            "price_date": "2026-11-19",
-            "close": 243.460007,
-            "previous_close": 237.029999,
-            "change_amount": 6.430008,
-            "change_percentage": 2.7127,
-            "url": "https://finance.yahoo.com/quote/CRWD"
-          }
-        ]
       }
     },
     {
@@ -21537,25 +21665,6 @@
       }
     },
     {
-      "id": "substack:7219684c5a48e1de3cd2",
-      "source_type": "substack",
-      "source_name": "MBI Deep Dives",
-      "title": "Modeling Alphabet, Part 2: Cloud, Capex, and Valuation",
-      "url": "https://mbideepdives.substack.com/p/modeling-alphabet-part-2-cloud-capex",
-      "published_at": "2026-11-17T17:07:12+00:00",
-      "collected_at": "2026-11-18T00:00:53.386729+00:00",
-      "body": "In **[Part 1](https://mbideepdives.substack.com/p/modeling-alphabet-part-1-search-gemini)** yesterday, I went through the Google Services segment, especially its “problem child”: Search. Today is about the business that may be Alphabet’s new crown jewel, Google Cloud, along with the cost of training Gemini, capex and what all of it means for the stock. I will also explore what the post-Jensen question may mean for Alphabet.\n\n_Subscribers get the daily journal and five+ years of Deep Dives, i.e. full-length analyses with financial models on **[70](https://mbideepdives.substack.com/p/deep-dives)+** companies. The daily is just how I think out loud between the Deep Dives!_",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://mbideepdives.substack.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas",
-        "transport": "public_reader_fallback"
-      }
-    },
-    {
       "id": "x:166aa64ef8bb35dd1bc8",
       "source_type": "x",
       "source_name": "@OnodaCapital",
@@ -22292,24 +22401,6 @@
         "investor_type": "open_source_builder",
         "coverage": "Apple MLX and open-source machine learning",
         "engagement_score": 70
-      }
-    },
-    {
-      "id": "rss:5fcd170cdc9267c43142",
-      "source_type": "rss",
-      "source_name": "Mobile Dev Memo",
-      "title": "Conditions for agentic commerce",
-      "url": "https://mdm.co/conditions-for-agentic-commerce/",
-      "published_at": "2026-11-17T16:24:00+00:00",
-      "collected_at": "2026-11-18T00:00:59.494579+00:00",
-      "body": "Third-party agentic commerce viability depends on fulfillment structures, advertising risks, and consumer preference clarity. While dominant platforms resist agents to protect advertising revenue and direct relationships, categories like travel and SaaS offer better integration opportunities. Success requires incentive alignment between agents, retailers, and consumer welfare regarding price and delivery.",
-      "author": "",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://mobiledevmemo.com/",
-        "publication_platform": "wordpress",
-        "section": "transaction_ideas"
       }
     },
     {
@@ -23691,24 +23782,6 @@
       }
     },
     {
-      "id": "substack:d89fde1d8ef3b168baa2",
-      "source_type": "substack",
-      "source_name": "Latent Space",
-      "title": "Cloudflare Joins the Jevolution and Labels Itself a Neolab",
-      "url": "https://latent.space/p/cloudflare/",
-      "published_at": "2026-11-17T15:00:00+00:00",
-      "collected_at": "2026-11-18T00:00:51.546244+00:00",
-      "body": "Cloudflare has been one of the essential infrastructure companies of the web for the past decade and a half. But now, it’s turning into a neolab — at least according to a presentation at AI Engineer Code Summit by Michelle Chen , who runs Cloudflare’s AI Platform on the product side. We’ll get into what exactly a neolab is in a minute (the short version: they build models and they’re not called OpenAI or Anthropic). Cloudflare is claiming to be one because it too has begun to launch models. Two System One models , to be precise: Clef and Clairic. As Chen explained in her talk, Clef is a decision model directly inspired by TypeSafe AI’s revolutionary Jev model , while Clairic is a new type of system one model that Cloudflare calls an “extract” model . In an interview with Latent Space after her presentation, Chen hinted that Cloudflare won’t just be producing system one models. There will be large language models, too. “We're not being a neolab [to] only launch system one models, even though it makes sense for our infrastructure. We've kind of entered this Pandora's box now, right? We opened it, now the possibilities are endless.” Chen said it’s “not just system one models, but potentially reasoning models that we've been experimenting with, and other LLMs and whatnot.” However, she added that these probably won’t be pre-trained models built from scratch, like the frontier labs produce. “I don't think that's our focus, but I think we can take existing resources out there and make [them] a lot more efficient and effective.” She noted that “most of our team really just does post-training,” so that will be the focus in model development. What is a neolab and is Cloudflare really one? The term neolab literally means a ‘new lab’ and it was coined last November by Stephanie Palazzolo from The Information, who defined it as “a new generation of research-focused AI startups.” Deedy Das , a partner at Menlo Ventures and an AI influencer, runs a big list of neolabs . It includes companies like Thinking Machines Lab, Poolside, and TypeSafe AI itself. According to Das, neolabs employ elite researchers, spend a lot of compute (“usually to train its own AI model”), don't have significant revenue traction, and they’re typically startups that have raised a lot of money. Deedy Das’ list of neolabs — note that TypeSafe is among the top 20. Cloudflare doesn’t tick at least half of those boxes, since it’s a public company with significant revenue traction . In fact, earlier this month Cloudflare announced record earnings . “The third quarter was Cloudflare's best quarter ever,” said CEO Matthew Prince . “We crossed $3 billion in annualized revenue with revenue of $782 million, up 39% year over year.” So Cloudflare as a “neolab” is pushing the accepted definition. However, as Chen argued in her presentation, building models is part of a natural progression for the company : from infrastructure, to compute (e.g. the Workers platform, including now for agents), to storage, to serving open weight models like Kimi, GLM and DeepSeek (on Workers AI), to now building its own models. Jev as the “east wind” Chen readily admits that Jev inspired Cloudflare’s pivot to building models. Referencing a Chinese proverb, she framed Jev’s arrival in September as “the east wind” that unexpectedly changed how Cloudflare viewed AI models. “And so when the system one and Jev paradigm started coming on board,” Chen said in her presentation, “we were like, this makes so much sense for us to adopt, right? We don't have to send every request to an LLM. We can send some of it to a System One model.” In our conversation, Chen commented on how it took only two weeks for them to build Clef — which is a copy of Jev — whereas it took TypeSafe AI two years to build Jev. She meant that as a compliment for how hard TypeSafe AI worked to create this new type of model. “All credit to TypeSafe, really, for actually attacking this space and inventing something new here , that people could relate to so strongly and be able to use it. And, yeah, we came up with a model super quickly, but they put in a lot of legwork and we knew exactly what the API schema should look like and whatnot.” Cloudflare is, at its core, still an infrastructure company — speed and low latency is its meat and potatoes. The main benefit of System One models, Chen remarked, is that they allow more work to be done by smaller, faster models , where output is measured in milliseconds rather than seconds. Clairic and what extraction models do While Clef was a clone of Jev, Cloudflare soon came up with an original twist on System One with Clairic , launched last month as “the first model in a new class: System One extraction models.” “What Clairic does is it can take unstructured input, and it can extract, compute, estimate and forecast values from those inputs,” Chen explained in her presentation. In our interview, Chen said that her team wanted to use System One principles to find other areas where LLMs were “overkill” and didn’t always return the right answer. One of the problems they settled on was that LLMs don’t always deal well with unstructured input. Because LLMs are autoregressive, Chen explained, they are prone to hallucinate and they sometimes return malformed JSON. “So we used the same System One principles [as Jev/Clef] there, and decided on extraction.” Some examples of system one use cases at Cloudflare. She used the example of an invoice, where an LLM will sometimes get an important detail wrong — like the order number. “When you send it [the order] to an LLM, they're like, wait, I think the order number's three, maybe it's four, maybe it's five. But it's like, the number's right there, you just have to read it! ” So the idea with Clairic is that it will extract a typed value — like a number — from unstructured data, in one forward pass. Why Cloudflare is in the lab now Using the label “neolab” sounds a bit like a marketing gimmick, but it also makes a ton of sense for Cloudflare to produce system one models — and even, in future, reasoning models. “Being a neolab means that we can create what we are missing,” Chen said in her presentation. In our interview, she also mentioned that creating their own models allows Cloudflare to derisk its AI operations. “I think there's a lot of risk in the AI space , because just like Jev was closed source and we couldn't run it, there [are] a lot of models out there [with] maybe regulatory risks coming up, like the Chinese open source models. I think lots of model labs want to actually make money, as well — so enforcing quite expensive licenses.” If you look at Cloudflare’s product page now, it resembles what Amazon’s cloud computing product page looked like at the height of Web 2.0 — i.e. there’s a lot there! But there’s still room for several more models.",
-      "author": "Richard MacManus",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.latent.space",
-        "publication_platform": "substack",
-        "section": "industry_changes"
-      }
-    },
-    {
       "id": "x:7aa2b1f9aa7c19c21b10",
       "source_type": "x",
       "source_name": "@BeenThereCap",
@@ -24261,24 +24334,6 @@
         "investor_type": "open_source_builder",
         "coverage": "Apple MLX and open-source machine learning",
         "engagement_score": 57
-      }
-    },
-    {
-      "id": "substack:7f3be532249611435e77",
-      "source_type": "substack",
-      "source_name": "How They Make Money / App Economy Insights",
-      "title": "💰 Wall Street's Top Stocks in Q3",
-      "url": "https://www.appeconomyinsights.com/p/wall-streets-top-stocks-in-q3-cd7",
-      "published_at": "2026-11-17T13:03:42+00:00",
-      "collected_at": "2026-11-18T00:00:53.096650+00:00",
-      "body": "Welcome to the Premium edition of How They Make Money . Over 300,000 subscribers turn to us for business and investment insights. In case you missed it: 📊 Earnings Visuals (10/2026) 🤖 How Anthropic Makes Money 💻 PRO: Microsoft Azure Hits 48% 🚨 NVIDIA: Jensen Huang Resigns Subscribe now It’s 13F season again! Every quarter, funds managing over $100 million must disclose their portfolios, offering a rare glimpse into the minds of elite investors. The latest 13F filings capture portfolios as of September 30. Of course, a lot has happened since then. At the end of Q3, the AI infrastructure boom was still in full swing. Hyperscalers were pouring billions into data centers, semiconductor stocks were riding a wave of demand, and investors were looking for the next beneficiaries across the supply chain. Fast-forward six weeks, and the picture looks very different. The Democrats swept the midterm elections, voters pushed back against new data centers, and NVIDIA lost its longtime CEO, Jensen Huang, in a stunning leadership shakeup. Meanwhile, the AI trade has suffered a sharp selloff. Concerns about circular financing, the returns on massive AI investments, and persistently high inflation have weighed on valuations. So where were the world’s leading investors putting their money before the turmoil? Were they still piling into AI infrastructure, taking profits, or finding opportunities elsewhere? Let’s find out. Today at a glance: Hedge funds’ strategies Top buys and top holdings in Q3 Fund picks that were not on your bingo card Implications for individual investors 📊 Black Friday: PRO is 40% off for life Get our weekly PRO coverage of the biggest market leaders, with timely earnings breakdowns, KPI tracking, and visuals that help connect the dots. For Black Friday, unlock PRO at $299/year instead of $499/year, and keep that price for as long as your subscription remains active. But don’t wait! The offer ends on Sunday. Go PRO 40% Off Before we dive into 13Fs, a quick reminder: blindly copying hedge fund trades is a terrible strategy. Investing is like shooting 3-pointers. Even Steph Curry, the greatest shooter ever, misses more than half the time. No outcomes are guaranteed, even for the pros. Your behavior matters more than your portfolio. As Peter Lynch said, “Know what you own and why you own it.” Conviction is what helps you hold through volatility. And conviction comes from doing your own work, not borrowing someone else’s. As Ian Cassel puts it: “You can borrow someone else’s stock ideas but you can’t borrow their conviction. […] Do the work so you know when to sell. Do the work so you can hold. Do the work so you can stand alone.” Some limitations of 13F filings: Omit short positions and cash reserves. Offer a partial view , leaving out smaller funds. Exclude many non-US equities , bonds, and commodities. Can be dated , as filings are due up to 45 days after quarter-end. With all this said, let’s see what top funds were buying and holding in Q3. 1. Hedge funds’ strategies Hedge funds are financial powerhouses known for flexible, aggressive strategies designed to beat the market. Here’s what typically shapes their moves: Market conditions : Long in bull markets, defensive in bear markets. Sector trends : Shifts in regulation or consumer behavior steer capital. Fundamentals : Strong earnings, free cash flow, and leadership matter. Macro factors : Rates, inflation, and geopolitics influence positioning. Quant models : Some lean on proprietary algorithms to find an edge. Risk management : Diversification, hedging, and position sizing. Investor sentiment : Fear and greed create mispriced opportunities. Still, it doesn’t always work out. The Global X Guru ETF (GURU), designed to track top hedge fund holdings, has underperformed the S&P 500 since its inception in 2012. And that comparison still leaves out the classic hedge fund fee drag. Source: Fiscal.ai And those fees matter. The classic “2 and 20” model (2% of assets + 20% of gains) can significantly reduce returns. It’s no wonder that many individual investors are opting for simpler, lower-cost strategies. 2. Top holdings and top buys in Q3 Our partners at Fiscal.ai gather the data on Super Investors and visualize their portfolios for you. Pick your favorite investors and see how their holdings have evolved. Source: Fiscal.ai In early 2020, just before the COVID market turmoil, I curated a list of 20 top-performing hedge funds using TipRanks data. The selection focused on alpha relative to the S&P 500, and I also included a few funds frequently featured in my social feeds and podcast rotation. It’s not perfect, but it remains a solid directional filter. Top 5 holdings at the end of September 2026: The 10 stocks below represent nearly half of the top holdings listed: ☁️ Hyperscalers: AMZN, META, GOOG, MSFT. 🤖 AI infrastructure: TSM, NVDA, MU, LRCX. 🚀 Recent IPOs: SPCX, CBRS. Amazon is now the most widely held stock, appearing among the top five holdings of 11 funds, up from nine in Q2. Taiwan Semiconductor follows with nine, unchanged from last quarter. Meta saw the biggest jump, rising from three to nine appearances. Microsoft also gained ground, moving from one to three. Meanwhile, Alphabet fell from eight to four, while NVIDIA held steady at five. Apple remains absent from the top-five holdings, while Tesla appears at Altimeter. Of course, these rankings reflect both portfolio decisions and stock-price movements. A company dropping out of a fund’s top five doesn’t necessarily mean the manager sold shares. The holdings don’t change dramatically from quarter to quarter, so let’s turn to the more actionable insights in the new Q3 movements. Top 5 buys in Q3 Read more",
-      "author": "App Economy Insights",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.appeconomyinsights.com/about",
-        "publication_platform": "substack",
-        "section": "transaction_ideas"
       }
     },
     {
@@ -25120,24 +25175,6 @@
         "investor_type": "semiconductor_engineer_investor",
         "coverage": "memory, HBM, networking and ASIC supply chains",
         "engagement_score": 85
-      }
-    },
-    {
-      "id": "substack:c1563b295603159f87f1",
-      "source_type": "substack",
-      "source_name": "Latent Space",
-      "title": "[AINews] Perplexity hits a $1B revenue run rate, up 4x in 2026",
-      "url": "https://latent.space/p/ainews-perplexity-hits-a-1b-revenue-run-rate-up-4x-in-2026/",
-      "published_at": "2026-11-17T09:24:56+00:00",
-      "collected_at": "2026-11-18T00:00:51.546244+00:00",
-      "body": "Perplexity crossed a $1B annual revenue run rate today , CEO Aravind Srinivas told Semafor at a live event. The Information reported previously under $250M at the start of the year and over $750M by August, with Computer driving some of the growth. At usual agent lab multiples (eg Cognition also crossed $1B , with Cursor crossing $4.6B ), this would roughly mean that Perplexity is now worth $30-50B — if the unit economics hold up. This is a nice bump on the $20B round in September 2025 , and qualifies for our “>$10B fundraise” rule for title stories. Gathering up some recent Perplexity launches for those catching up: Computer. September’s Automations let it pick up recurring tasks where it left off. November’s Teammates take on ongoing jobs. Computer also runs fully locally on supported Macs. Monitor API. Watch a topic or page and get a webhook when something relevant changes. Frontier Research. The new research lab has access to 10,000+ GPUs and plans to publish papers, data, models, and code. Sponsored by Deepgram Deepgram is the voice AI infrastructure behind natural conversation—bringing speech-to-text, text-to-speech, voice-focused LLMs, and agents to teams building with voice AI. For any stack and any tools you already love building with, Deepgram slots in as your foundational voice AI technology. So you have control. And we have the context to listen, understand, and speak like a human. Learn more about the Real-time Context Standard . AI Twitter Recap Qwen4-Max in the wild Friday’s Qwen4-Max preview is now a shipping model. At the highest reasoning setting, Qwen4-Max scored 43 on the Intelligence Index, up from 34. Average cost fell from $10.02 to $3.27 per task. Alibaba cut output pricing from $6 to $4.50 per million tokens, and the model generated about 39% fewer of them. Kimi K3.1 Pro cost $3.68 per index task and scored 67% on Terminal-Bench 4.0 to Qwen’s 48%. Artificial Analysis Inside the model. Alibaba kept the total parameter count at 2.4T and reduced the number active per token by 25% to 71B. The model takes images and text, with a 1M-token context window. Smaller open-weight Qwen4 models are still to come. Alibaba Arena and Vals : Arena ranks it #14 overall on Agent Arena, the top Chinese model, with +7.5% net over 14.7k sessions ( Arena ). WebDev : It placed #6 in Code Arena WebDev at 1750, +74 over its predecessor ( WebDev ). It also placed #6 in Image-to-WebDev, just above Claude Opus 5 and GPT-6 Sol ( I2WebDev ). Vals Index : It is #11 overall, with large gains in coding and finance ( Vals ). Legal-benchmark caveat : On HLAB it gets 95.7% of checklist items right but passes only 21.3% of tasks, and its output tokens rise 3.6x ( HLAB ). Vision results (independent) : Roboflow calls it underwhelming on its VLM benchmark, with Google, OpenAI and Anthropic now far ahead. At high reasoning effort, however, it is ~4.5x faster and ~68% cheaper per image than Qwen3.8-Max ( Roboflow ). Safety, alignment and eval integrity OpenAI embedded assessments : OpenAI is giving Apollo, METR, Transluce and Goodfire internal access to its models and systems ( OpenAI ). Scope by group : Apollo places six evaluators onsite for four months ( Rundown ). METR reviews OpenAI's largest RL run, with access to transcripts, monitor records and checkpoint snapshots ( METR ). Transluce runs a six-week audit of post-training alignment evals, with a fuller follow-up in early 2027 ( Transluce ). Goodfire embeds interpretability researchers to monitor training runs ( Goodfire ). Limits : METR says its scope excludes the misalignment incidents OpenAI has disclosed and is narrower than METR proposed ( scope ). Criticism of the access terms : Critics say the deals fall short of Sam Altman's promise of \"employee-like access.\" Reported gaps : Assessors get no Slack access, OpenAI selects which staff they interview, and they cannot access weights or run training-based elicitation ( Neel Nanda , Alex Mallen ). Former-employee account : Mikita Balesni says assessors cannot quote employees, even anonymously, and some may be barred from publishing on internal-only models ( balesni ). Goodfire acquisition talks : The Information reports OpenAI explored buying the interpretability startup for more than $5B. Goodfire reportedly wanted to stay independent so it could sell to multiple labs ( report ). Other integrity signals : Benchmark contamination : Claude appears to have memorized details of the LinuxArena control eval ( Karvonen ). Incident taxonomy : OpenAI published a v0.1 framework for classifying AI control incidents ( framework ). Disclosure policy : Anthropic is cutting its coordinated disclosure window from 90 to 30 days for high- and critical-severity vulnerabilities ( policy ). Inference systems and agent infrastructure Together moves on from hand-tuned megakernels. Its first design made it into production for one customer. Agents now search for smaller groups of GPU operations to fuse. Together reports 28% higher throughput on Llama 3.2 1B on B200. Engineering writeup DeepSeek V4.1 Flash on Vera Rubin : vLLM with Dynamo on SemiAnalysis's AgentX benchmark shows 63.4x per-chip throughput over GB300 NVL72 at 400 tok/s/user, and 93.3x at 600 ( vLLM ). Batch-1 latency : SGLang-adjacent work reaches ~2,500 tok/s at batch size 1 on TP4, 1.7x its GB300 result ( saltyph ). Baseten reports a similar 1.7x over its 4xB300 numbers ( Baseten ). Agent-driven optimization : An agent shared Engram tables across HBM via NVLink symmetric memory to recover prefix-cache capacity ( Liu ). Another team says agents found optimizations that made its B300 step time 10% faster ( Halex ). Agentic serving research : MIT's Evolving Infra replaces fixed prefill/decode disaggregation with online adaptation. Against NVIDIA Dynamo on up to 256 GB300s, it reports up to 4.1x lower latency and 14x lower P95 TTFT ( Evolving Infra ). Pipeline-parallel prefill : Inferact finds PP2 on MiniMax-M3.1-Flash sustains 23% more requests per GPU than DEP2 at a 2s TTFT target ( Inferact ). Prefix-cache pitfalls : Ollama found that a single system-prompt timestamp or a change in reasoning effort can wipe the cache ( Ollama ). Sandboxes and training : External sandboxes : Simon Willison describes running agents on a Mac while executing their code in WebAssembly, QEMU or Apple Container sandboxes. The pattern includes allow-list proxies and credential replacement ( post ). MLPerf : In MLPerf Training v6.1, a GB300 NVL72 trained GPT-OSS-20B in 19.7 minutes, 2.86x faster than H100 ( Lambda ). One endpoint for open models. Hugging Face Inference Providers now runs on OpenRouter using the same endpoint and token. Hugging Face Research, benchmarks and evals PyBot : A swarm of 1,000 DeepSeek-V4.1-Flash agents spent a week writing a rule-based chatbot with no neural network ( lewtun ). Scale : The agents exchanged ~175k messages and merged ~8k PRs. Result : The bot is 630k lines of Python with zero dependencies and is reported on par with SmolLM-360M on everyday questions. Self-improvement and training : AutoRL : Agents supervising a live RL run lifted Qwen3 on AIME 2024 from 46.67% to 66.67% ( omarsar0 ). Benchmark-gaming caveat : A roundup warns that many self-improving agent gains come from learning the benchmark rather than the task ( TuringPost ). Weight-space programming : Opus 5.5 hand-wrote transformer weights that solved algorithmic tasks with a median of 166 parameters ( dair_ai ). Data curation : DatologyAI published the tech report behind its claimed 6x pretraining compute multiplier ( Datology ). Distillation reproduction : A small-scale replication confirms perturbed-input distillation helps when the student trains from scratch, but finds it hurts when distilling into a pretrained student ( Maini ). New benchmarks : GradeBench : The best frontier model agrees with instructors only 57% of the time when grading handwritten physics answers ( GradeBench ). Time to First Audio : AA's new TTS latency benchmark finds a median of 376 ms for streaming models versus 2.0 s for non-streaming ones ( AA ). SpeedRunBench : Inkling-2-Small cleared SuperTux 1-1 in 1,988 frames, ahead of Opus 5 and GPT-5.6 Sol ( SpeedRunBench ). Science models and developer tools Gemini 4 Carbon : DeepMind says Carbon powered AlphaProof Code agents that verified Signal's cryptographic code. It also spotted wet-lab errors and found 40x more related protein sequences ( details ). Science access : Google expanded free Carbon access for 10,000 scientists through Antigravity ( program ). Context window : Antigravity doubled the context window for Argon, Carbon and Hydrogen, cutting compaction 3.5x per user turn ( Mohan ). User reports (anecdotal) : One researcher says Carbon solved a problem that waves of Astra and Fable attempts had not ( anecdote ). OpenAI for science and health : OpenAI is opening free frontier access to up to 200,000 scientists, with applications from Nov 23 ( program ). Productivity study : OpenAI reports scientists roughly doubled their productivity in a study of 1,800 participants ( study ). Physics showcase : Physicist Nathaniel Craig used GPT-6 Astra to develop a candidate lattice definition of the Standard Model ( blog ). Healthcare : ChatGPT for Healthcare adds computer-use agents and more than 20 plugins ( healthcare ). Claude Code : The desktop app now runs iPhone Duo in the iOS simulator and can fold and unfold the device to test layouts ( ClaudeDevs ). Verification : The team published how it uses cheap tests, benchmarks and end-to-end runs to let Claude verify its own work ( blog ). Unreleased model (unconfirmed) : A \"Silicon 2\" entry spotted in Devin is suspected to be an Anthropic model ( rumor ). Liquid d1.2-ultra : It ranks #1 on AA's Decision Index at $0.042 per M input tokens ( AA ). Sage S2.1 Flash : The open-weight science model reports leading MLE-bench Lite and OfficeQA Pro results ( Sage ). FLUX-mimic-x : A 7B video-action robotics model ranks #1 on RoboLab among real-time models ( mimic ). Unsloth computer use : Local models can now drive desktop apps and game engines through Unsloth ( Unsloth ). Industry and policy Nvidia. The US Commerce and Justice departments issued a joint statement on the Megaspeed investigation. Commerce Financing and M&A : Noeri : Yejin Choi and Carlos Guestrin's continual-learning lab raised $110M ( Choi ). Corma : The cyber-defense model company raised a $125M Series A at a $1B valuation ( Corma ). World Labs : The team is joining AMD ( Fei-Fei Li ). Market data : Anthropic's S-1 shows $16.3B revenue in H1 2026 and compute costs falling from 251% to 48% of revenue ( The Batch ). Enterprise adoption : Databricks reports open-model token share rose from 7.3% to 30.9% in 3.5 months ( summary ). AI Reddit Recap Local models and hardware What fits in 16 GB? Unsloth expects a smaller Qwen4-27B to run in 16 GB. Local users want to see the quantization and how much memory is left for the context window. One developer already splits coding jobs between Opus for specs and a local Qwen3.8-27B for implementation. Memory discussion · Local workflows Hy4 Flash. Tencent’s multimodal model has 224B parameters and activates 12B per token. At $0.070 per million input tokens and $0.281 per million output tokens, it gives developers a cheaper way to try Hy4’s 1M context window. Tencent’s release · Discussion EUROPA. A reported test run on the JUPITER supercomputer trained a roughly 952B-parameter mixture of experts with 32.8B parameters active per token. The local-model community’s question is why the team chose that scale for its first model. Training run and discussion Where do two quantizations diverge? inside-llm loads two GGUFs with the same tokenizer and lets you step through their predictions side by side. Watch the first token where they disagree, then compare the probabilities they assigned to the alternatives. Project · Demo and discussion Basalt’s 770 tokens/sec headline depends on what you generate. The developer reports up to 776 tokens/sec for structured output from Qwen3.8-27B, 262 in chat and 194 for prose. Readers asked for longer quality tests of the 4-bit prefill. Basalt · Benchmark thread An FPGA running Qwen 27B. Valley Semiconductor reports 7.9 tokens/sec on short prompts and about 5.5 in live chat. Its 50 tokens/sec target at 20 W is a projection for a future chip. Live demo · Hardware discussion Agents in use Claude Meetings. A CTO describes inviting Claude into a 30-minute Google Meet. It updated project records in Notion and called the team’s own tools to update bids during the meeting. Field report A Minecraft test for Hydrogen. A developer asked Gemini 4 Hydrogen to recover missing source and build a datapack for 11 Minecraft versions. The agent reportedly launched two graphical clients to test fixes for dropped items and raycasts. Developer’s account What teams hire a harness developer to do. One example from the discussion: a coding agent can propose a change, while the harness decides which repository it may write to, which CI test counts as passing and when a person needs to approve the next step. Claude Code discussion Vision and video Testing a video model’s physics. After a second MiniMax H3 demo, commenters proposed a harder test: describe the scene, leave the outcome out of the prompt and see whether the model predicts what the objects will do. Demo and discussion",
-      "author": "swyx .ai",
-      "symbols": [],
-      "engagement": {},
-      "metadata": {
-        "publication_url": "https://www.latent.space",
-        "publication_platform": "substack",
-        "section": "industry_changes"
       }
     },
     {
