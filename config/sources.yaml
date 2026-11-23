@@ -741,27 +741,6 @@ x:
       coverage: Hugging Face and the open AI ecosystem
       section: industry_changes
 
-    - handle: alexandr_wang
-      name: Alexandr Wang
-      investor_type: ai_company_executive
-      coverage: AI infrastructure and industry strategy
-      section: industry_changes
-    - handle: merettm
-      name: Jakub Pachocki
-      investor_type: ai_researcher
-      coverage: AI research, model capabilities and safety
-      section: industry_changes
-    - handle: polynoamial
-      name: Noam Brown
-      investor_type: ai_researcher
-      coverage: AI reasoning, research and model capabilities
-      section: industry_changes
-    - handle: bindureddy
-      name: Bindu Reddy
-      investor_type: ai_company_executive
-      coverage: AI models, products and industry developments
-      section: industry_changes
-
     # AI decision-makers and company-level infrastructure signals.
     - handle: sama
       name: Sam Altman
