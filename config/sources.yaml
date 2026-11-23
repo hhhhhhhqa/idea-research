@@ -588,15 +588,35 @@ x:
       investor_type: open_source_builder
       coverage: LLM tools, open source and developer workflows
       section: industry_changes
+    - handle: levie
+      name: Aaron Levie
+      investor_type: technology_executive
+      coverage: enterprise software, AI adoption and work transformation
+      section: industry_changes
     - handle: RyanPGreenblatt
       name: Ryan Greenblatt
       investor_type: ai_safety_researcher
       coverage: AI capabilities, evaluations and AI safety
       section: industry_changes
+    - handle: mweinbach
+      name: Max Weinbach
+      investor_type: technology_analyst
+      coverage: AI products, devices and consumer technology
+      section: industry_changes
     - handle: naval
       name: Naval Ravikant
       investor_type: technology_investor
       coverage: technology, AI, startups and capital formation
+      section: industry_changes
+    - handle: leopoldasch
+      name: Leopold Aschenbrenner
+      investor_type: ai_researcher
+      coverage: AI scaling, capabilities and strategic implications
+      section: industry_changes
+    - handle: jimkxa
+      name: Jim Keller
+      investor_type: semiconductor_engineer
+      coverage: processors, systems and AI compute architecture
       section: industry_changes
 
     # Additional AI researchers, academics and frontier-model practitioners.
@@ -788,6 +808,16 @@ x:
       name: Alex Albert
       investor_type: ai_product_builder
       coverage: Claude and AI product development
+      section: industry_changes
+    - handle: rauchg
+      name: Guillermo Rauch
+      investor_type: developer_platform_builder
+      coverage: Vercel, web development and AI applications
+      section: industry_changes
+    - handle: amasad
+      name: Amjad Masad
+      investor_type: developer_platform_builder
+      coverage: Replit and AI coding products
       section: industry_changes
     - handle: joshwoodward
       name: Josh Woodward
